@@ -40,6 +40,7 @@ gh-pages: build
 	rm -rf ./img
 	rm -rf ./js
 	rm -rf ./lib
+	rm -rf ./dist
 	mv gh-pages/* .
 	rm -rf ./*-e
 	rm -rf gh-pages
