@@ -1,0 +1,45 @@
+/* General count styles
+-------------------------------------------------- */
+
+[class*="count"] {
+  display: inline-block;
+  padding: 4px 9px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 13px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 100px;
+}
+
+/* Count modifiers
+-------------------------------------------------- */
+
+/* Overriding styles for counts with modifiers  */
+.count-main,
+.count-positive,
+.count-negative {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+}
+
+/* Main count  */
+.count-main {
+  background-color: #1eafe7;
+  background-image: -webkit-linear-gradient(top, #1eafe7 0, #1a97c8 100%);
+  background-image: linear-gradient(to bottom, #1eafe7 0, #1a97c8 100%);
+}
+
+/* Positive count  */
+.count-positive {
+  background-color: #34ba15;
+  background-image: -webkit-linear-gradient(top, #34ba15 0, #2da012 100%);
+  background-image: linear-gradient(to bottom, #34ba15 0, #2da012 100%);
+}
+
+/* Negative count  */
+.count-negative {
+  background-color: #e71e1e;
+  background-image: -webkit-linear-gradient(top, #e71e1e 0,#c71a1a 100%);
+  background-image: linear-gradient(to bottom, #e71e1e 0, #c71a1a 100%);
+}

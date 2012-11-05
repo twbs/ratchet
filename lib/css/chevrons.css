@@ -1,0 +1,30 @@
+/* Chevrons
+-------------------------------------------------- */
+
+.chevron {
+  display: block;
+  height: 20px;
+}
+
+/* Base styles for both 1/2's of the chevron */
+.chevron:before,
+.chevron:after {
+  position: relative;
+  display: block;
+  width: 12px;
+  height: 4px;
+  background-color: #999;
+  content: '';
+}
+
+/* Position and rotate respective 1/2's of the chevron */
+.chevron:before {
+  top: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.chevron:after {
+  top: 7px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}

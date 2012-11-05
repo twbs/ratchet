@@ -1,0 +1,332 @@
+/* General bar styles
+-------------------------------------------------- */
+
+[class*="bar-"] {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 44px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/* Modifier class to dock any bar below .bar-title */
+.bar-header-secondary {
+  top: 45px;
+}
+
+/* Modifier class to dock any bar to bottom of viewport */
+.bar-footer {
+  bottom: 0;
+}
+
+/* Generic bar for wrapping buttons, segmented controllers, etc. */
+.bar-standard {
+  background-color: #f2f2f2;
+  background-image: -webkit-linear-gradient(top, #f2f2f2 0, #e5e5e5 100%);
+  background-image: linear-gradient(to bottom, #f2f2f2 0, #e5e5e5 100%);
+  border-bottom: 1px solid #aaa;
+  box-shadow: inset 0 1px 1px -1px #fff;
+}
+
+/* Flip border position to top for footer bars */
+.bar-footer.bar-standard,
+.bar-footer-secondary.bar-standard {
+  border-top: 1px solid #aaa;
+  border-bottom-width: 0;
+}
+
+/* Title bar
+-------------------------------------------------- */
+
+/* Bar docked to top of viewport for showing page title and actions */
+.bar-title {
+  top: 0;
+  display: -webkit-box;
+  display: box;
+  background-color: #1eb0e9;
+  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #109adc 100%);
+  background-image: linear-gradient(to bottom, #1eb0e9 0, #109adc 100%);
+  border-bottom: 1px solid #0e5895;
+  box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .8);
+  -webkit-box-orient: horizontal;
+          box-orient: horizontal;
+}
+
+/* Centered text in the .bar-title */
+.bar-title .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0, 0, 0, .5);
+  white-space: nowrap;
+}
+
+.bar-title > a:not([class*="button"]) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Retain specified title color */
+.bar-title .title a {
+  color: inherit;
+}
+
+/* Tab bar
+-------------------------------------------------- */
+
+/* Bar docked to bottom used for primary app navigation */
+.bar-tab {
+  bottom: 0;
+  height: 50px;
+  padding: 0;
+  background-color: #393939;
+  background-image: -webkit-linear-gradient(top, #393939 0, #2b2b2b 100%);
+  background-image: linear-gradient(to bottom, #393939 0, #2b2b2b 100%);
+  border-top: 1px solid #000;
+  border-bottom-width: 0;
+  box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .6);
+}
+
+/* Wrapper for individual tab */
+.tab-inner {
+  display: -webkit-box;
+  display: box;
+  height: 100%;
+  list-style: none;
+  -webkit-box-orient: horizontal;
+          box-orient: horizontal;
+}
+
+/* Navigational tab */
+.tab-item {
+  height: 100%;
+  padding-top: 9px;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+          box-flex: 1;
+}
+
+/* Active state for tab */
+.tab-item.active {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, .5);
+}
+
+/* Icon for tab  */
+.tab-icon {
+  display: block;
+  height: 18px;
+  margin: 0 auto;
+}
+
+/* Label for tab */
+.tab-label {
+  margin-top: 1px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, .3);
+}
+
+/* Buttons in title bars
+-------------------------------------------------- */
+
+/* Generic style for all buttons in .bar-title */
+.bar-title [class*="button"] {
+  position: relative;
+  z-index: 10; /* Places buttons over full width title */
+  font-size: 12px;
+  line-height: 23px;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+  background-color: #1eb0e9;
+  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
+  background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
+  border: 1px solid #0e5895;
+  box-shadow: 0 1px rgba(255, 255, 255, .25);
+  -webkit-box-flex: 0;
+          box-flex: 0;
+}
+
+
+/* Hacky way to right align buttons outside of flex-box system
+   Note: is only absolutely positioned button, would be better if flex-box had an "align right" option */
+.bar-title .title + [class*="button"]:last-child,
+.bar-title .button + [class*="button"]:last-child,
+.bar-title [class*="button"].pull-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* Override standard button active states */
+.bar-title .button:active {
+  color: #fff;
+  background-color: #0876b1;
+}
+
+/* Directional buttons in title bars (thanks to @GregorAdams for solution - http://cssnerd.com/2011/11/30/the-best-pure-css3-ios-style-arrow-back-button/)
+-------------------------------------------------- */
+
+/* Add relative positioning so :before content is positioned properly */
+.bar-title .button-prev,
+.bar-title .button-next {
+  position: relative;
+}
+
+/* Prev/next button base styles */
+.bar-title .button-prev {
+  margin-left: 7px; /* Push over to make room for :before content */
+  border-left: 0;
+  border-bottom-left-radius: 10px 15px;
+  border-top-left-radius: 10px 15px;
+}
+.bar-title .button-next {
+  margin-right: 7px; /* Push over to make room for :before content */
+  border-right: 0;
+  border-top-right-radius: 10px 15px;
+  border-bottom-right-radius: 10px 15px;
+}
+
+/* Pointed part of directional button */
+.bar-title .button-prev:before,
+.bar-title .button-next:before {
+  position: absolute;
+  top: 2px;
+  width: 27px;
+  height: 27px;
+  border-radius: 30px 100px 2px 40px / 2px 40px 30px 100px;
+  content: '';
+  box-shadow: inset 1px 0 #0e5895, inset 0 1px #0e5895;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
+                  mask-image: gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
+}
+.bar-title .button-prev:before {
+  left: -5px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
+  background-image: gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
+  border-left: 1.5px solid rgba(255, 255, 255, .25);
+  -webkit-transform: rotate(-45deg) skew(-10deg, -10deg);
+          transform: rotate(-45deg) skew(-10deg, -10deg);
+}
+.bar-title .button-next:before {
+  right: -5px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
+  background-image: gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
+  border-top: 1.5px solid rgba(255, 255, 255, .25);
+  -webkit-transform: rotate(135deg) skew(-10deg, -10deg);
+          transform: rotate(135deg) skew(-10deg, -10deg);
+}
+
+/* Active states for the directional buttons */
+.bar-title .button-prev:active,
+.bar-title .button-next:active,
+.bar-title .button-prev:active:before,
+.bar-title .button-next:active:before {
+  color: #fff;
+  background-color: #0876b1;
+  background-image: none;
+}
+.bar-title .button-prev:active:before,
+.bar-title .button-next:active:before {
+  content: '';
+}
+.bar-title .button-prev:active:before {
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
+}
+.bar-title .button-next:active:before {
+  box-shadow: inset 0 -3px 3px rgba(0, 0, 0, .2);
+}
+
+/* Block buttons in any bar
+-------------------------------------------------- */
+
+/* Add proper padding and replace buttons normal dropshadow with a shine from bar */
+[class*="bar"] .button-block {
+  padding: 7px 0;
+  margin-bottom: 0;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px rgba(255, 255, 255, .8);
+}
+
+/* Override standard padding changes for .button-blocks */
+[class*="bar"] .button-block:active {
+  padding: 7px 0;
+}
+
+/* Segmented controller in any bar
+-------------------------------------------------- */
+
+/* Remove standard segmented bottom margin */
+[class*="bar-"] .segmented-controller {
+  margin-bottom: 0;
+}
+
+/* Add margins between segmented controllers and buttons */
+[class*="bar-"] .segmented-controller + [class*="button"],
+[class*="bar-"] [class*="button"] + .segmented-controller {
+  margin-left: 5px;
+}
+
+/* Segmented controller in a title bar
+-------------------------------------------------- */
+
+.bar-title .segmented-controller {
+  line-height: 18px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  background-color: #1eb0e9;
+  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
+  background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
+  border: 1px solid #0e5895;
+  border-radius: 3px;
+  box-shadow: 0 1px rgba(255, 255, 255, .25);
+  -webkit-box-flex: 1;
+          box-flex: 1;
+}
+
+/* Set color for tab border and highlight */
+.bar-title .segmented-controller li {
+  border-left: 1px solid #0e5895;
+  box-shadow: inset 1px 0 rgba(255, 255, 255, .25);
+}
+
+/* Remove inset shadow from first tab or one to the right of the active tab  */
+.bar-title .segmented-controller .active + li,
+.bar-title .segmented-controller li:first-child {
+  box-shadow: none;
+}
+
+/* Remove left-hand border from first tab */
+.bar-title .segmented-controller li:first-child {
+  border-left-width: 0;
+}
+
+/* Depressed state (active) */
+.bar-title .segmented-controller li.active {
+  background-color: #0082c4;
+  box-shadow: inset 0 1px 6px rgba(0, 0, 0, .3);
+}
+
+/* Set color of links to white */
+.bar-title .segmented-controller li > a {
+  color: #fff;
+}
+
+
+/* Search forms in standard bar
+-------------------------------------------------- */
+
+/* Position/size search bar within the bar */
+.bar-standard input[type=search] {
+  height: 32px;
+  margin: 0;
+}
