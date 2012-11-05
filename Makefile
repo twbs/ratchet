@@ -30,7 +30,11 @@ gh-pages: build
 	cp -r docs/ gh-pages/
 	cp -r lib gh-pages/lib
 	cp -r dist gh-pages/dist
-	zip -r gh-pages/dist.zip gh-pages/dist
+	cd gh-pages
+	cp -r dist ratchet
+	zip -r ratchet.zip ratchet
+	rm -rf ratchet
+	cd ..
 	git fetch origin
 	git checkout gh-pages
 	sed -i -e 's/\.\.\//\.\//g' gh-pages/index.html
