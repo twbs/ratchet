@@ -171,24 +171,14 @@ a {
   box-sizing: border-box;
 }
 
-/* Modifier class to dock any bar to top of viewport */
-.bar-header {
-  top: 0;
-}
-
-/* Modifier class to dock any bar to bottom of viewport */
-.bar-footer {
-  bottom: 0;
-}
-
 /* Modifier class to dock any bar below .bar-title */
 .bar-header-secondary {
   top: 45px;
 }
 
-/* Modifier class to dock any bar above .bar-tab */
-.bar-footer-secondary {
-  bottom: 51px;
+/* Modifier class to dock any bar to bottom of viewport */
+.bar-footer {
+  bottom: 0;
 }
 
 /* Generic bar for wrapping buttons, segmented controllers, etc. */

@@ -93,6 +93,12 @@
     'slide-out' : 'slide-in',
     'fade'      : 'fade'
   };
+  var bars = {
+    bartab             : '.bar-tab',
+    bartitle           : '.bar-title',
+    barfooter          : '.bar-footer',
+    barheadersecondary : '.bar-header-secondary'
+  }
 
   var cacheReplace = function (data, updates) {
     PUSH.id = data.id;
@@ -176,6 +182,8 @@
   };
 
   var popstate = function (e) {
+    var key;
+    var barElement;
     var activeObj;
     var activeDom;
     var direction;
@@ -219,8 +227,11 @@
 
     if (transitionFromObj.transition) {
       activeObj = extendWithDom(activeObj, '.content', activeDom.cloneNode(true));
-      if (activeObj.titlebar) swapContent(activeObj.titlebar, document.querySelector('.bar-title'));
-      if (activeObj.tabbar)   swapContent(activeObj.tabbar,   document.querySelector('.bar-tab'));
+      for (key in bars) {
+        barElement = document.querySelector(bars[key])
+        if (activeObj[key]) swapContent(activeObj[key], barElement);
+        else if (barElement) barElement.parentNode.removeChild(barElement);
+      }
     }
 
     swapContent(
@@ -239,12 +250,15 @@
   // =======================
 
   var PUSH = function (options) {
+    var key;
     var data = {};
     var xhr  = PUSH.xhr;
 
-    options.container = options.container || document.querySelector('.content');
-    options.titlebar  = options.titlebar  || document.querySelector('.bar-title');
-    options.tabbar    = options.tabbar    || document.querySelector('.bar-tab');
+    options.container = options.container || options.transition ? document.querySelector('.content') : document.body;
+
+    for (key in bars) {
+      options[key] = options[key] || document.querySelector(bars[key]);
+    }
 
     if (xhr && xhr.readyState < 4) {
       xhr.onreadystatechange = noop;
@@ -284,6 +298,8 @@
   // =================
 
   var success = function (xhr, options) {
+    var key;
+    var barElement;
     var data = parseXHR(xhr, options);
 
     if (!data.contents) return locationReplace(options.url);
@@ -291,8 +307,11 @@
     if (data.title) document.title = data.title;
 
     if (options.transition) {
-      if (data.titlebar) swapContent(data.titlebar, document.querySelector('.bar-title'));
-      if (data.tabbar)   swapContent(data.tabbar, document.querySelector('.bar-tab'));
+      for (key in bars) {
+        barElement = document.querySelector(bars[key])
+        if (data[key]) swapContent(data[key], barElement);
+        else if (barElement) barElement.parentNode.removeChild(barElement);
+      }
     }
 
     swapContent(data.contents, options.container, options.transition, function () {
@@ -324,7 +343,9 @@
     var swapDirection;
 
     if (!transition) {
-      container.innerHTML = swap.innerHTML;
+      if (container) container.innerHTML = swap.innerHTML;
+      else if (swap.classList.contains('content')) document.body.appendChild(swap);
+      else document.body.insertBefore(swap, document.querySelector('.content'));
     } else {
       enter  = /in$/.test(transition);
 
@@ -409,17 +430,17 @@
   };
 
   var extendWithDom = function (obj, fragment, dom) {
+    var i;
     var result    = {};
-    var titlebar  = dom.querySelector('.bar-title')
-    var tabbar    = dom.querySelector('.bar-tab');
 
-    for (var i in obj) result[i] = obj[i];
+    for (i in obj) result[i] = obj[i];
 
-    if (titlebar) titlebar.parentNode.removeChild(titlebar);
-    if (tabbar)   tabbar.parentNode.removeChild(tabbar);
+    Object.keys(bars).forEach(function (key) {
+      var el = dom.querySelector(bars[key]);
+      if (el) el.parentNode.removeChild(el);
+      result[key] = el;
+    });
 
-    result.titlebar = titlebar;
-    result.tabbar   = tabbar;
     result.contents = dom.querySelector(fragment);
 
     return result;
