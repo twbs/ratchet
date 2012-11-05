@@ -4,7 +4,7 @@ Prototype mobile apps with simple HTML, CSS and JS components.
 
 ## Getting Started
 
-- Clone the repo `git clone git@github.com:maker/ratchet.git` or just [download]() the bundled CSS and JS
+- Clone the repo `git clone git@github.com:maker/ratchet.git` or just [download](http://maker.github.com/ratchet/ratchet.zip) the bundled CSS and JS
 - [Read the docs](http://maker.github.com/ratchet) to learn about the components and how to get a prototype on your phone
 - We will have example apps to check out very soon!
 
