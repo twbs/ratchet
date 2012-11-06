@@ -7,7 +7,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: #333;
-  background: #fff;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
 }
@@ -36,6 +36,7 @@ h6 {
 
 /* Docs structural styles
 -------------------------------------------------- */
+
 .docs-outer-wrapper {
   position: relative;
 }
