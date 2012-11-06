@@ -16,14 +16,6 @@ body {
 /* Typography
 -------------------------------------------------- */
 
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: bold;
-}
-
 hr {
   height: 0;
   margin: 10px 0 30px;
@@ -359,7 +351,7 @@ h6 {
 .iphone .list a[data-transition="slide-out"] {
   padding: 0;
   display: inline;
-  margin: 0; 
+  margin: 0;
   color: #0882f0;
 }
 
@@ -1074,7 +1066,7 @@ h6 {
 [class*="bar-"] {
   -moz-box-sizing: border-box;
 }
-.bar-title, 
+.bar-title,
 .tab-inner {
   display: -moz-box;
   -moz-box-orient: horizontal;
