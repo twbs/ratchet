@@ -6,6 +6,12 @@
  * ==================================
  */
 
+var clickEvent = 'click';
+if(typeof window.ontouchmove !== 'undefined') {
+  var clickEvent = clickEvent;
+  $('body').removeClass('no-touch');
+}
+
 /* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
@@ -54,7 +60,8 @@
     return popover;
   }
 
-  window.addEventListener('touchend', function (e) {
+  window.addEventListener(clickEvent, function (e) {
+    e.preventDefault();
     var popover = getPopover(e);
 
     if (!popover) return;
@@ -65,9 +72,7 @@
 
     popover.parentNode.appendChild(backdrop);
   });
-
-  window.addEventListener('click', function (e) { if (getPopover(e)) e.preventDefault(); });
-
+  
 }();
 /* ----------------------------------
  * PUSH v1.0.0
@@ -481,8 +486,7 @@
 
   window.addEventListener('touchstart', function () { isScrolling = false; });
   window.addEventListener('touchmove', function () { isScrolling = true; })
-  window.addEventListener('touchend', touchend);
-  window.addEventListener('click', function (e) { if (getTarget(e)) e.preventDefault(); });
+  window.addEventListener(clickEvent, touchend);
   window.addEventListener('popstate', popstate);
 
 }();/* ----------------------------------
@@ -499,7 +503,8 @@
     }
   };
 
-  window.addEventListener("touchend", function (e) {
+  window.addEventListener(clickEvent, function (e) {
+    e.preventDefault();
     var activeTab;
     var activeBody;
     var targetBody;
@@ -529,8 +534,6 @@
 
     targetBody.classList.add(className)
   });
-
-  window.addEventListener('click', function (e) { if (getTarget(e.target)) e.preventDefault(); });
 }();/* ----------------------------------
  * SLIDER v1.0.0
  * Licensed under The MIT License
@@ -642,7 +645,7 @@
 
   window.addEventListener('touchstart', onTouchStart);
   window.addEventListener('touchmove', onTouchMove);
-  window.addEventListener('touchend', onTouchEnd);
+  window.addEventListener(clickEvent, onTouchEnd);
 
 }();
 /* ----------------------------------
@@ -712,7 +715,7 @@
     toggle.classList[(distanceX > (toggleWidth/2 - handleWidth/2)) ? 'add' : 'remove']('active');
   });
 
-  window.addEventListener('touchend', function (e) {
+  window.addEventListener(clickEvent, function (e) {
     if (!toggle) return;
 
     var handle      = toggle.querySelector('.toggle-handle');
