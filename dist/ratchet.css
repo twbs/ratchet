@@ -9,83 +9,7 @@
 /* Hard reset
 -------------------------------------------------- */
 
-html,
-body,
-div,
-span,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-section,
-summary,
-time,
-audio,
-video {
+* {
   padding: 0;
   margin: 0;
   border: 0;
@@ -129,8 +53,8 @@ a {
   background: #fff;
   -webkit-transition-property: top, bottom;
           transition-property: top, bottom;
-  -webkit-transition-duration: .2s, .2s;  
-          transition-duration: .2s, .2s;  
+  -webkit-transition-duration: .2s, .2s;
+          transition-duration: .2s, .2s;
   -webkit-transition-timing-function: linear, linear;
           transition-timing-function: linear, linear;
   -webkit-overflow-scrolling: touch;
@@ -158,9 +82,7 @@ a {
 }
 .bar-header-secondary ~ .content {
   top: 88px;
-}
-
-/* General bar styles
+}/* General bar styles
 -------------------------------------------------- */
 
 [class*="bar-"] {
@@ -542,6 +464,7 @@ a {
   border-bottom-width: 0;
 }
 
+
 /* List dividers
 -------------------------------------------------- */
 
@@ -604,9 +527,7 @@ a {
 
 .list .toggle {
   margin-top: -15px; /* Half height of toggle */
-}
-
-/* Forms
+}/* Forms
 -------------------------------------------------- */
 
 /* Force form elements to inherit font styles */
@@ -725,9 +646,7 @@ select {
   padding-left: 0;
   margin-bottom: 0;
   border-bottom: 0;
-}
-
-/* General button styles
+}/* General button styles
 -------------------------------------------------- */
 
 [class*="button"] {
@@ -847,9 +766,7 @@ select {
   padding-top: 4px;
   padding-bottom: 4px;
   margin-right: 10px;
-}
-
-/* Chevrons
+}/* Chevrons
 -------------------------------------------------- */
 
 .chevron {
@@ -878,9 +795,7 @@ select {
   top: 7px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}
-
-/* General count styles
+}/* General count styles
 -------------------------------------------------- */
 
 [class*="count"] {
@@ -924,9 +839,7 @@ select {
   background-color: #e71e1e;
   background-image: -webkit-linear-gradient(top, #e71e1e 0,#c71a1a 100%);
   background-image: linear-gradient(to bottom, #e71e1e 0, #c71a1a 100%);
-}
-
-/* Segmented controllers
+}/* Segmented controllers
 -------------------------------------------------- */
 
 .segmented-controller {
@@ -987,9 +900,7 @@ select {
 
 .segmented-controller-item.active {
   display: block;
-}
-
-/* Popovers (to be used with popovers.js)
+}/* Popovers (to be used with popovers.js)
 -------------------------------------------------- */
 
 .popover {
@@ -1141,9 +1052,7 @@ select {
   border: 1px solid #000;
   border-radius: 3px;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Slider styles (to be used with sliders.js)
+}/* Slider styles (to be used with sliders.js)
 -------------------------------------------------- */
 
 /* Width/height of slider */
@@ -1172,16 +1081,14 @@ select {
 .slider > ul > li {
   display: inline-block;
   vertical-align: top; /* Ensure that li always aligns to top */
-  width: 100%; 
+  width: 100%;
   height: 100%;
 }
 
 /* Required reset of font-size to same as standard body */
 .slider > ul > li > * {
   font-size: 14px;
-}
-
-/* Toggle styles (to be used with toggles.js)
+}/* Toggle styles (to be used with toggles.js)
 -------------------------------------------------- */
 
 .toggle {
@@ -1246,9 +1153,7 @@ select {
   color: #fff;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
   content: "On";
-}
-
-/* Push styles (to be used with push.js)
+}/* Push styles (to be used with push.js)
 -------------------------------------------------- */
 
 /* Fade animation */
