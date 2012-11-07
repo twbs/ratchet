@@ -8,6 +8,8 @@ Prototype mobile apps with simple HTML, CSS and JS components.
 - [Read the docs](http://maker.github.com/ratchet) to learn about the components and how to get a prototype on your phone
 - We will have example apps to check out very soon!
 
+Take note that our master branch is our active, unstable development branch and that if you're looking to download a stable copy of the repo, check the [tagged downloads](https://github.com/maker/ratchet/tags).
+
 ## Support
 
 Ratchet was developed to support iOS 5+ for iPhone. Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@goRatchet](http://www.twitter.com/goratchet).
