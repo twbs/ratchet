@@ -18,6 +18,15 @@ Ratchet was developed to support iOS 5+ for iPhone. Questions or discussions abo
 
 Please file a Github issue to [report a bug](http://github.com/maker/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/maker/ratchet/blob/master/CONTRIBUTING.md).
 
+## Troubleshooting
+
+A small list of "gotchas" are provided below for developers starting to work with Ratchet
+
+- Ratchet is designed to respond to touch events from a mobile device. In order to use mouse click events (for desktop browsing and testing), you have a few options:
+    - Enable touch event emulation in Chrome (found in the overrides tab in the web inspector preferences)
+    - Use a javascript library like fingerblast.js to emulate touch events (depending on the user agent)
+- Script tags containing javascript will not be executed on pages that are loaded with push.js. If you would like to attach event handlers to elements on other pages, document-level event delegation is a common solution.
+
 ## Future features
 
 Ratchet is just getting started. Here are some of the immediate features we're thinking about:
