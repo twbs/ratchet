@@ -52,6 +52,13 @@
   box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .8);
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
+
+  -webkit-transition-property: translate3d;
+          transition-property: translate3d;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 /* Centered text in the .bar-title */
@@ -95,6 +102,13 @@
   border-top: 1px solid #000;
   border-bottom-width: 0;
   box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .6);
+
+  -webkit-transition-property: translate3d;
+          transition-property: translate3d;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 /* Wrapper for individual tab */

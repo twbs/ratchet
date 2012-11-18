@@ -127,12 +127,12 @@ a {
   left: 0;
   overflow: auto;
   background-color: #fff;
-  -webkit-transition-property: top, bottom;
-          transition-property: top, bottom;
-  -webkit-transition-duration: .2s, .2s;
-          transition-duration: .2s, .2s;
-  -webkit-transition-timing-function: linear, linear;
-          transition-timing-function: linear, linear;
+  -webkit-transition-property: top, bottom, translate3d;
+          transition-property: top, bottom, translate3d;
+  -webkit-transition-duration: .2s, .2s, .2s;
+          transition-duration: .2s, .2s, .2s;
+  -webkit-transition-timing-function: linear, linear, ease-out;
+          transition-timing-function: linear, linear, ease-out;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -212,6 +212,13 @@ a {
   box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .8);
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
+
+  -webkit-transition-property: translate3d;
+          transition-property: translate3d;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 /* Centered text in the .bar-title */
@@ -255,6 +262,13 @@ a {
   border-top: 1px solid #000;
   border-bottom-width: 0;
   box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .6);
+
+  -webkit-transition-property: translate3d;
+          transition-property: translate3d;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
 /* Wrapper for individual tab */
@@ -1257,4 +1271,61 @@ select {
 .content.slide.right {
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
+}/* Shelf
+-------------------------------------------------- */
+/* Exposable shelf docked to the left for primary app navigation */
+.shelf {
+  position: fixed;
+  z-index: 10;
+  box-sizing: border-box;
+
+  top: 0px;
+  left: 0px;
+
+  /* it would be great to use a percentage here for the width, but our
+    hide and show animations are based on -webkit-transform which needs
+    a pixel translation amount */
+  width: 200px;
+  height: 100%;
+
+  background-color: #393939;
+  background-image: -webkit-linear-gradient(top, #393939 0, #2b2b2b 100%);
+  background-image: linear-gradient(to bottom, #393939 0, #2b2b2b 100%);
+  border-top: 1px solid #000;
+  border-bottom-width: 0;
+  box-shadow: inset 0 0px 20px 0px rgba(0, 0, 0, .6);
+
+  /* hide it normally */
+  -webkit-transform: translate3d(-200px, 0, 0);
+          transform: translate3d(-200px, 0, 0);
+
+  -webkit-transition-property: translate3d;
+          transition-property: translate3d;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.shelf.exposed {
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+body.shelf_exposed .bar-title, body.shelf_exposed .content, body.shelf_exposed .bar-tab {
+  -webkit-transform: translate3d(200px, 0, 0);
+          transform: translate3d(200px, 0, 0);
+}
+
+/* Overrides when items are in the shelf */
+.shelf .tab-inner {
+  width: 100%;
+  height: auto;
+  -webkit-box-orient: vertical;
+          box-orient: vertical;
+}
+
+/* Padding all around is now needed when tab items are in a shelf */
+.shelf .tab-item {
+  padding: 20px;
 }
