@@ -1,0 +1,58 @@
+/* Shelf
+-------------------------------------------------- */
+/* Exposable shelf docked to the left for primary app navigation */
+.shelf {
+  position: fixed;
+  z-index: 10;
+  box-sizing: border-box;
+
+  top: 0px;
+  left: 0px;
+
+  /* it would be great to use a percentage here for the width, but our
+    hide and show animations are based on -webkit-transform which needs
+    a pixel translation amount */
+  width: 200px;
+  height: 100%;
+
+  background-color: #393939;
+  background-image: -webkit-linear-gradient(top, #393939 0, #2b2b2b 100%);
+  background-image: linear-gradient(to bottom, #393939 0, #2b2b2b 100%);
+  border-top: 1px solid #000;
+  border-bottom-width: 0;
+  box-shadow: inset 0 0px 20px 0px rgba(0, 0, 0, .6);
+
+  /* hide it normally */
+  -webkit-transform: translate3d(-200px, 0, 0);
+          transform: translate3d(-200px, 0, 0);
+
+  -webkit-transition-property: translate3d;
+          transition-property: translate3d;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.shelf.exposed {
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+body.shelf_exposed .bar-title, body.shelf_exposed .content, body.shelf_exposed .bar-tab {
+  -webkit-transform: translate3d(200px, 0, 0);
+          transform: translate3d(200px, 0, 0);
+}
+
+/* Overrides when items are in the shelf */
+.shelf .tab-inner {
+  width: 100%;
+  height: auto;
+  -webkit-box-orient: vertical;
+          box-orient: vertical;
+}
+
+/* Padding all around is now needed when tab items are in a shelf */
+.shelf .tab-item {
+  padding: 20px;
+}
