@@ -122,14 +122,11 @@ select {
 .input-row label + select {
   float: right;
   width: 65%;
-  margin-bottom: 0;
+  margin-bottom: 2px;
   border-bottom: 0;
 }
 
 .input-row .toggle {
   float: right;
-  margin-top: 3px;
-  padding-left: 0;
-  margin-bottom: 0;
-  border-bottom: 0;
+  vertical-align: middle;
 }
