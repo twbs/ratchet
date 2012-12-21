@@ -78,7 +78,14 @@
 
 !function () {
 
-  var backPane;
+  var backPane, content;
+  
+  var onPaneHidden = function(){
+  	var content = document.querySelector('.content');
+  	backPane.classList.remove('rightPane');
+  	backPane.classList.remove('visible');
+	content.removeEventListener('webkitTransitionEnd', onPaneHidden);
+  };
   
   var findPanes = function (target) {
     var i, panes = document.querySelectorAll('a');
@@ -99,7 +106,7 @@
     return backPane;
   }
 
-  window.addEventListener('touchend', function (e) {
+  window.addEventListener('mouseup', function (e) {
     var backPane = getPane(e),
     	paneSide = e.srcElement.dataset.pane ? e.srcElement.dataset.pane : 'left',
     	body = document.body,
@@ -109,9 +116,7 @@
 	
 	if(paneSide=="left"){
 		if(body.classList.contains('openPaneLeft')){
-			content.addEventListener('webkitTransitionEnd', function(){
-				backPane.classList.remove('visible');
-			});
+			content.addEventListener('webkitTransitionEnd', onPaneHidden);
 			body.classList.remove('openPaneLeft');
 		} else {
 			backPane.classList.add('visible');
@@ -119,16 +124,15 @@
 		}
 	} else {
 		if(body.classList.contains('openPaneRight')){
-			content.addEventListener('webkitTransitionEnd', function(){
-				backPane.classList.remove('rightPane', 'visible');
-			});
+			content.addEventListener('webkitTransitionEnd', onPaneHidden);
 			body.classList.remove('openPaneRight');
 		} else {
-			backPane.classList.add('rightPane', 'visible');
+			backPane.classList.add('rightPane');
+			backPane.classList.add('visible');
 			body.classList.add('openPaneRight');
 		}
 	}
-	
+	content.innerHTML = body.className + ' | '+backPane.className;
   });
 
   window.addEventListener('click', function (e) { if (getPane(e)) e.preventDefault(); });
