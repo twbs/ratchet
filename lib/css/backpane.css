@@ -1,8 +1,10 @@
 /* Back Panes */
 
 .backPane{
-  height:100%;
+	position:fixed;
+	height:100%;
 	width:85%;
+	left:0%;
 	overflow:auto;
 	-webkit-transition-property: top, bottom;
 	transition-property: top, bottom;
@@ -11,6 +13,12 @@
 	-webkit-transition-timing-function: linear, linear;
 	transition-timing-function: linear, linear;
 	-webkit-overflow-scrolling: touch;
+}
+.backPane.visible{
+	z-index:1;
+}
+.content{
+	z-index:2;
 }
 .openPaneLeft .bar-title,
 .openPaneLeft .content,
@@ -22,11 +30,11 @@
 .openPaneRight .bar-tab{
 	-webkit-transform: translateX(-85%);
 }
-.backPane.marginLeft{
-	margin-left:15%;
+.backPane.rightPane{
+	left:15%;
 }
 .bar-title, 
 .content, 
 .bar-tab{
-	-webkit-transition:-webkit-transform 0.3s ease;
+	-webkit-transition:-webkit-transform 2.3s ease;
 }
