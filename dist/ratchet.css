@@ -1232,6 +1232,49 @@ select {
 }/* Push styles (to be used with push.js)
 -------------------------------------------------- */
 
+/* Back Panes */
+
+.backPane{
+	display:none;
+	position:fixed;
+	height:100%;
+	width:85%;
+	left:0%;
+	overflow:auto;
+	-webkit-transition-property: top, bottom;
+	transition-property: top, bottom;
+	-webkit-transition-duration: .2s, .2s;
+	transition-duration: .2s, .2s;
+	-webkit-transition-timing-function: linear, linear;
+	transition-timing-function: linear, linear;
+	-webkit-overflow-scrolling: touch;
+}
+.backPane.visible{
+	display:block;
+	z-index:1;
+}
+.content{
+	z-index:2;
+}
+.openPaneLeft .bar-title,
+.openPaneLeft .content,
+.openPaneLeft .bar-tab{
+	-webkit-transform: translateX(85%);
+}
+.openPaneRight .bar-title,
+.openPaneRight .content,
+.openPaneRight .bar-tab{
+	-webkit-transform: translateX(-85%);
+}
+.backPane.rightPane{
+	left:15%;
+}
+.bar-title, 
+.content, 
+.bar-tab{
+	-webkit-transition:-webkit-transform 0.3s ease;
+}
+
 /* Fade animation */
 .content.fade {
   left: 0;

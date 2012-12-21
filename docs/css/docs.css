@@ -648,6 +648,22 @@ h6 {
   opacity: 1 !important;
 }
 
+/* Backpane examples */
+#backpanesInPhone .bar-title,
+#backpanesInPhone .bar-tab{
+  -webkit-transform:translateX(85%);
+}
+#backpanesInPhone .backPane{
+	display: block;
+	position: absolute;
+	line-height: 500px;
+	text-align: center;
+	font-size: 36px;
+	background: #EEE;
+	color: #999;
+	text-shadow: 0 1px 0 white;
+	}
+
 /* Slider examples */
 .component-example-fullbleed .slider,
 .component-example-fullbleed .slider li,
