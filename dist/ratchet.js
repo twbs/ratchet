@@ -101,7 +101,7 @@
 
   window.addEventListener('touchend', function (e) {
     var backPane = getPane(e),
-      paneSide = e.srcElement.dataset.pane ? e.srcElement.dataset.pane : 'left',
+    	paneSide = e.srcElement.dataset.pane ? e.srcElement.dataset.pane : 'left',
     	body = document.body,
     	content = document.querySelector('.content');
 	
@@ -109,18 +109,22 @@
 	
 	if(paneSide=="left"){
 		if(body.classList.contains('openPaneLeft')){
+			content.addEventListener('webkitTransitionEnd', function(){
+				backPane.classList.remove('visible');
+			});
 			body.classList.remove('openPaneLeft');
 		} else {
+			backPane.classList.add('visible');
 			body.classList.add('openPaneLeft');
 		}
 	} else {
 		if(body.classList.contains('openPaneRight')){
 			content.addEventListener('webkitTransitionEnd', function(){
-				backPane.classList.remove('marginLeft');
+				backPane.classList.remove('rightPane', 'visible');
 			});
 			body.classList.remove('openPaneRight');
 		} else {
-			backPane.classList.add('marginLeft');
+			backPane.classList.add('rightPane', 'visible');
 			body.classList.add('openPaneRight');
 		}
 	}
