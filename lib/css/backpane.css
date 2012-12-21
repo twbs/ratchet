@@ -36,5 +36,5 @@
 .bar-title, 
 .content, 
 .bar-tab{
-	-webkit-transition:-webkit-transform 2.3s ease;
+	-webkit-transition:-webkit-transform 0.3s ease;
 }
