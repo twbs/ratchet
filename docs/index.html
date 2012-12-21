@@ -58,6 +58,7 @@
               <li><a href="#forms">Forms</a></li>
               <li><a href="#toggles">Toggles</a></li>
               <li><a href="#popovers">Popovers</a></li>
+              <li><a href="#backpanes">Back Panes</a></li>
               <li><a href="#sliders">Sliders</a></li>
               <li><a href="#push">Push</a></li>
             </ul>
@@ -973,6 +974,64 @@ document
     &lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
   &lt;/a&gt;
 &lt;/header&gt;
+</pre>
+
+        </article>
+        
+        <!-- Backpanes -->
+        <article class="component" id="backpanes">
+          <h3 class="component-title">Back Panes</h3>
+
+          <div class="component-example">
+              
+			</div>
+
+          <p class="component-description">Back Panes are for sliding the app to the left or right to reveal additional content beneath the app</p>
+
+		<p class="component-description">By default, your selected pane will appear to the left. If you set a data attribute <code>data-pane="right"</code>, your target pane will appear on the right.</p>
+
+<pre class="prettyprint">
+&lt;div id=&quot;myBackPane&quot; class=&quot;backPane&quot;&gt;Content&lt;/div&gt;
+            
+&lt;header class=&quot;bar-title&quot;&gt;
+    &lt;a class=&quot;button&quot; href=&quot;#myBackPane&quot;&gt;Backpane&lt;/a&gt;
+    &lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav class=&quot;bar-tab&quot;&gt;
+  &lt;ul class=&quot;tab-inner&quot;&gt;
+    &lt;li class=&quot;tab-item active&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img class=&quot;tab-icon&quot; src=&quot;img/icon-home.png&quot;&gt;
+        &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;tab-item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img class=&quot;tab-icon&quot; src=&quot;img/icon-profile.png&quot;&gt;
+        &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;tab-item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img class=&quot;tab-icon&quot; src=&quot;img/icon-messages.png&quot;&gt;
+        &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;tab-item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img class=&quot;tab-icon&quot; src=&quot;img/icon-hamburger.png&quot;&gt;
+        &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;tab-item&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;img class=&quot;tab-icon&quot; src=&quot;img/icon-settings.png&quot;&gt;
+        &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 </pre>
 
         </article>
