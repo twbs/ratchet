@@ -132,7 +132,6 @@
 			body.classList.add('openPaneRight');
 		}
 	}
-	content.innerHTML = body.className + ' | '+backPane.className;
   });
 
   window.addEventListener('click', function (e) { if (getPane(e)) e.preventDefault(); });
