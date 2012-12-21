@@ -1,6 +1,7 @@
 /* Back Panes */
 
 .backPane{
+	display:none;
 	position:fixed;
 	height:100%;
 	width:85%;
@@ -15,6 +16,7 @@
 	-webkit-overflow-scrolling: touch;
 }
 .backPane.visible{
+	display:block;
 	z-index:1;
 }
 .content{
