@@ -7,6 +7,45 @@
  */
 
 /* ----------------------------------
+ * MODAL v1.0.0
+ * Licensed under The MIT License
+ * http://opensource.org/licenses/MIT
+ * ---------------------------------- */
+
+!function () {
+  findModals = function ( target ) {
+    var i, 
+        modals = document.querySelectorAll( 'a' );
+
+    for ( ; target && target !== document; target = target.parentNode ) {
+      for ( i = modals.length; i--; ) { if ( modals[i] === target ) return target; }
+    }
+  };
+
+  getModal = function ( event ) {
+    var modal,
+        modalToggle = findModals( event.target );
+
+    if ( !modalToggle || !modalToggle.hash ) return;
+
+    modal = document.querySelector( modalToggle.hash )
+    
+    if ( !modal ) return;
+    return modal;
+  };
+
+  window.addEventListener( 'touchend', function ( event ) {
+    var modal = getModal( event );
+
+    if ( !modal ) return; 
+
+    modal.classList.toggle( 'active' );
+  } );
+
+  window.addEventListener( 'click', function ( event ) { 
+    if ( getModal( event ) ) event.preventDefault();
+  } );
+}();/* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
