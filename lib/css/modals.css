@@ -1,0 +1,37 @@
+/* Modals
+-------------------------------------------------- */
+.modal {
+  position: fixed; top: 0;
+  background-color: #fff;
+  width: 100%;
+
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+
+  -webkit-transition: -webkit-transform .25s ease-in-out, opacity 1ms .25s;
+          transition:         transform .25s ease-in-out, opacity 1ms .25s;
+
+  opacity: 0;
+  overflow: hidden;
+
+  /*  
+      Normally, we'd use '1', … ratchet uses '10'
+      for the title bar, so deal with that.
+  */
+  z-index: 11; 
+
+  min-height: 100%;
+}
+
+/* Modal - When active
+-------------------------------------------------- */
+.modal.active {
+  -webkit-transition: -webkit-transform .25s ease-in-out;
+      transition:     transform: .25 ease-in-out;
+
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+
+  opacity: 1;
+  height: 100%;
+}
