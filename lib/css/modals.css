@@ -23,7 +23,7 @@
 -------------------------------------------------- */
 .modal.active {
   -webkit-transition: -webkit-transform .25s ease-in-out;
-      transition:     transform: .25 ease-in-out;
+          transition:     transform: .25 ease-in-out;
 
   -webkit-transform: translateY(0);
           transform: translateY(0);
