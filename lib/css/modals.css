@@ -8,6 +8,8 @@
 
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
 
   -webkit-transition: -webkit-transform .25s ease-in-out, opacity 1ms .25s;
           transition:         transform .25s ease-in-out, opacity 1ms .25s;
@@ -27,6 +29,8 @@
 
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 
   opacity: 1;
   height: 100%;
