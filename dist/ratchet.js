@@ -13,38 +13,30 @@
  * ---------------------------------- */
 
 !function () {
-  findModals = function ( target ) {
-    var i, 
-        modals = document.querySelectorAll( 'a' );
+  var findModals = function (target) {
+    var i;
+    var modals = document.querySelectorAll('a');
 
-    for ( ; target && target !== document; target = target.parentNode ) {
-      for ( i = modals.length; i--; ) { if ( modals[i] === target ) return target; }
+    for (; target && target !== document; target = target.parentNode) {
+      for (i = modals.length; i--;) { if (modals[i] === target) return target; }
     }
   };
 
-  getModal = function ( event ) {
-    var modal,
-        modalToggle = findModals( event.target );
-
-    if ( !modalToggle || !modalToggle.hash ) return;
-
-    modal = document.querySelector( modalToggle.hash )
+  var getModal = function (event) {
+    var modalToggle = findModals(event.target);
+    if (!modalToggle || !modalToggle.hash) return;
     
-    if ( !modal ) return;
-    return modal;
+    return document.querySelector(modalToggle.hash);
   };
 
-  window.addEventListener( 'touchend', function ( event ) {
-    var modal = getModal( event );
+  window.addEventListener('touchend', function (event) {
+    var modal = getModal(event);
+    if (modal) modal.classList.toggle('active');
+  });
 
-    if ( !modal ) return; 
-
-    modal.classList.toggle( 'active' );
-  } );
-
-  window.addEventListener( 'click', function ( event ) { 
-    if ( getModal( event ) ) event.preventDefault();
-  } );
+  window.addEventListener('click', function (event) { 
+    if (getModal(event)) event.preventDefault();
+  });
 }();/* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
