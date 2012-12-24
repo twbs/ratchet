@@ -24,9 +24,7 @@
 
   var getModal = function (event) {
     var modalToggle = findModals(event.target);
-    if (!modalToggle || !modalToggle.hash) return;
-    
-    return document.querySelector(modalToggle.hash);
+    if (!modalToggle || !modalToggle.hash) return document.querySelector(modalToggle.hash);
   };
 
   window.addEventListener('touchend', function (event) {

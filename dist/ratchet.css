@@ -1136,8 +1136,6 @@ select {
   background-color: #fff;
   width: 100%;
 
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
 
@@ -1157,8 +1155,6 @@ select {
   -webkit-transition: -webkit-transform .25s ease-in-out;
           transition:         transform: .25 ease-in-out;
 
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 
