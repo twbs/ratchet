@@ -14,11 +14,6 @@
 
   opacity: 0;
   overflow: hidden;
-
-  /*  
-      Normally, we'd use '1', … ratchet uses '10'
-      for the title bar, so deal with that.
-  */
   z-index: 11; 
 
   min-height: 100%;
