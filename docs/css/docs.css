@@ -648,6 +648,11 @@ h6 {
   opacity: 1 !important;
 }
 
+/* Modal example */
+.iphone .iphone-content .modal { position: absolute; }
+.iphone .iphone-content .modal .content { margin-top: 44px; }
+.iphone .iphone-content #myModal.active { background: #cecece; }
+
 /* Slider examples */
 .component-example-fullbleed .slider,
 .component-example-fullbleed .slider li,
