@@ -3,31 +3,26 @@
 .modal {
   position: fixed; 
   top: 0;
-  background-color: #fff;
+  opacity: 0;
+  z-index: 11; 
   width: 100%;
-
+  overflow: hidden;
+  min-height: 100%;
+  background-color: #fff;  
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
 
   -webkit-transition: -webkit-transform .25s ease-in-out, opacity 1ms .25s;
           transition:         transform .25s ease-in-out, opacity 1ms .25s;
-
-  opacity: 0;
-  overflow: hidden;
-  z-index: 11; 
-
-  min-height: 100%;
 }
 
 /* Modal - When active
 -------------------------------------------------- */
 .modal.active {
-  -webkit-transition: -webkit-transform .25s ease-in-out;
-          transition:         transform: .25 ease-in-out;
-
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-
   opacity: 1;
   height: 100%;
+  -webkit-transition: -webkit-transform .25s ease-in-out;
+          transition:         transform: .25 ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
