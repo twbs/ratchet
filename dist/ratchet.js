@@ -30,10 +30,6 @@
     var modal = getModal(event);
     if (modal) modal.classList.toggle('active');
   });
-
-  window.addEventListener('click', function (event) { 
-    if (getModal(event)) event.preventDefault();
-  });
 }();/* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
