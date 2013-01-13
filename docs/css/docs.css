@@ -652,7 +652,7 @@ h6 {
 .iphone .iphone-content .modal { position: absolute; }
 .iphone .iphone-content .modal .content { margin-top: 44px; }
 #myModal.active { background: #cecece; }
-#modalsInPhone #iwindow > .button { margin: 10px; }; /* Gives the button some room so it isn't right up against the edge of the iPhone */
+#modalsInPhone #iwindow > .button { margin: 10px; }
 
 /* Slider examples */
 .component-example-fullbleed .slider,
