@@ -649,10 +649,21 @@ h6 {
 }
 
 /* Modal example */
-.iphone .iphone-content .modal { position: absolute; }
-.iphone .iphone-content .modal .content { margin-top: 44px; }
-#myModal.active { background: #cecece; }
-#modalsInPhone #iwindow > .button { margin: 10px; }
+.component-example .modal {
+  left: 0;
+  z-index: 10001;
+}
+.iphone .iphone-content .modal { 
+  position: absolute; 
+}
+.component-example .modal .content,
+.iphone .iphone-content .modal .content { 
+  margin-top: 44px; 
+}
+#modalsInPhone #iwindow > .button { 
+  margin: 10px; 
+}
+
 
 /* Slider examples */
 .component-example-fullbleed .slider,

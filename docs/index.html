@@ -983,8 +983,21 @@ document
           <h3 class="component-title">Modals</h3>
 
           <div class="component-example">
-            
+            <a href="#myModalexample" class="button">Open modal</a>
+            <div id="myModalexample" class="modal">
+              <header class="bar-title">
+                <h1 class="title">Modal</h1>
+                <a class="button" href="#myModalexample">
+                  Close
+                </a>
+              </header>
+              
+              <div class="content content-padded">
+                <p>The contents of my modal</p>
+              </div>
+            </div>
           </div>
+
 
 <pre class="prettyprint">
 &lt;a href=&quot;#myModal&quot; class=&quot;button&quot;&gt;Open modal&lt;/a&gt;
@@ -998,7 +1011,7 @@ document
   &lt;/header&gt;
   
   &lt;div class=&quot;content content-padded&quot;&gt;
-    &lt;p&gt;The contents of my modal&lt;/p&gt;
+    &lt;p&gt;The contents of my modal.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
