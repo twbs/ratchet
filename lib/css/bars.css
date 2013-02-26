@@ -37,6 +37,12 @@
   border-bottom-width: 0;
 }
 
+/* Bars inside the scrollable div */
+.bar-scrolling {
+  position: relative;
+  top: auto;
+}
+
 /* Title bar
 -------------------------------------------------- */
 
