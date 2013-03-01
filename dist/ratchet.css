@@ -1151,7 +1151,7 @@ select {
   opacity: 1;
   height: 100%;
   -webkit-transition: -webkit-transform .25s ease-in-out;
-          transition:         transform: .25 ease-in-out;
+          transition:         transform .25 ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }/* Slider styles (to be used with sliders.js)
