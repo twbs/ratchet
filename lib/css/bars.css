@@ -329,4 +329,16 @@
 .bar-standard input[type=search] {
   height: 32px;
   margin: 0;
+  outline: none;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  -moz-transition: -moz-box-shadow 0.3s;
+  -o-transition: -o-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+.bar-standard input[type=search]:focus,
+.bar-standard input[type=search]:active {
+  -webkit-box-shadow:  0px 0px 5px 1px #4B8CF7;
+  -moz-box-shadow:  0px 0px 5px 1px #4B8CF7;
+  -o-box-shadow:  0px 0px 5px 1px #4B8CF7;
+  box-shadow:  0px 0px 5px 1px #4B8CF7;
 }
