@@ -764,7 +764,7 @@
 }();
 
 /* ----------------------------------
- * PullToRefresh v0.007
+ * PullToRefresh v0.008
  * By Simon Waldherr
  * https://github.com/SimonWaldherr/PullToRefresh
  * Licensed under The MIT License
@@ -806,7 +806,8 @@ var ptr_init = function () {
   }
 
   document.addEventListener('touchstart', function (e) {
-    var parent = e.target, i = 0;
+    var parent = e.target,
+      i = 0;
 
     if (parent.className === undefined) {
       return false;
@@ -870,7 +871,11 @@ var ptr_init = function () {
   });
 
   document.addEventListener('touchmove', function (e) {
-    var parent = e.target, scroll = false, rotate = 90, i = 0, top, scrolldistance, time, insert, inserted;
+    var parent = e.target,
+      scroll = false,
+      rotate = 90,
+      i = 0,
+      top, scrolldistance, time, insert, inserted, ajax, ajaxTimeout, requrl;
 
     if (ptr.scrollable_parent === false) {
       e.preventDefault();
@@ -918,39 +923,49 @@ var ptr_init = function () {
             ptr.eleId = parent.id;
             time = new Date();
 
-            reqwest({
-              url: parent.getAttribute('data-url') + '?rt=' + time.getTime(),
-              type: 'html',
-              method: 'post',
-              data: {
-                usertime: time.getTime()
-              },
-              error: function () {
-                alert('Could not connect');
-                ptr.wrapelement.style.top = '0px';
-                ptr.box.getElementsByClassName('ptr_image')[0].className = ptr.getElementsByClassName('ptr_image')[0].className.replace(' loading', '');
-                ptr.wrapelement.className = ptr.wrapelement.className.replace(' ptr_active', '');
-              },
-              success: function (resp) {
-                ptr.box = document.getElementById(ptr.eleId).getElementsByClassName('ptr_box')[0];
-                insert = document.createElement('div');
-                insert.innerHTML = resp;
-                insert.className = 'ptr_inserted';
+            ajax = (window.ActiveXObject) ? new ActiveXObject("Microsoft.XMLHTTP") : (XMLHttpRequest && new XMLHttpRequest()) || null;
+            ajaxTimeout = window.setTimeout(function () {
+              ajax.abort();
+              console.log("AJAX Timeout Error");
+            }, 6000);
+            ajax.onreadystatechange = function () {
 
-                ptr.wrapelement.insertBefore(insert, ptr.box.nextSibling);
-                ptr.wrapelement.style.top = '0px';
-                ptr.box.getElementsByClassName('ptr_image')[0].className = ptr.box.getElementsByClassName('ptr_image')[0].className.replace(' ptr_loading', '');
-                ptr.wrapelement.className = ptr.wrapelement.className.replace(' ptr_active', '');
-                inserted = document.getElementsByClassName('ptr_inserted')[0];
-                ptr.element.scrollTop = inserted.clientHeight - 51;
-                ptr.wrapelement.getElementsByClassName('ptr_text')[0].innerHTML = '';
-                ptr.box.style.right = '99%';
+              if (ajax.readyState === 4) {
+                if (ajax.status === 200) {
+                  clearTimeout(ajaxTimeout);
+                  //console.log("AJAX-Status: " + ajax.status + " " + ajax.statusText + " at " + time.getTime());
+                  if (ajax.status !== 200) {
+                    console.log("AJAX Response Error");
+                    alert('Could not connect');
+                    ptr.wrapelement.style.top = '0px';
+                    ptr.box.getElementsByClassName('ptr_image')[0].className = ptr.getElementsByClassName('ptr_image')[0].className.replace(' loading', '');
+                    ptr.wrapelement.className = ptr.wrapelement.className.replace(' ptr_active', '');
+                  } else {
+                    ptr.box = document.getElementById(ptr.eleId).getElementsByClassName('ptr_box')[0];
+                    insert = document.createElement('div');
+                    insert.innerHTML = ajax.responseText;
+                    insert.className = 'ptr_inserted';
 
-                ptr.wrapelement.getElementsByClassName('ptr_image')[0].className = ptr.wrapelement.getElementsByClassName('ptr_image')[0].className.replace(' ptr_loading', '');
+                    ptr.wrapelement.insertBefore(insert, ptr.box.nextSibling);
+                    ptr.wrapelement.style.top = '0px';
+                    ptr.box.getElementsByClassName('ptr_image')[0].className = ptr.box.getElementsByClassName('ptr_image')[0].className.replace(' ptr_loading', '');
+                    ptr.wrapelement.className = ptr.wrapelement.className.replace(' ptr_active', '');
+                    inserted = document.getElementsByClassName('ptr_inserted')[0];
+                    ptr.element.scrollTop = inserted.clientHeight - 51;
+                    ptr.wrapelement.getElementsByClassName('ptr_text')[0].innerHTML = '';
+                    ptr.box.style.right = '99%';
 
-                ptr.scrollable_parent = false;
+                    ptr.wrapelement.getElementsByClassName('ptr_image')[0].className = ptr.wrapelement.getElementsByClassName('ptr_image')[0].className.replace(' ptr_loading', '');
+
+                    ptr.scrollable_parent = false;
+                  }
+                }
               }
-            });
+            };
+            requrl = parent.getAttribute('data-url') + '?rt=' + time.getTime();
+            ajax.open("POST", requrl, true);
+            ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            ajax.send();
           }
         } else if (ptr.element.scrollTop !== 0) {
           if (ptr.wrapelement.className.indexOf(' active') !== -1) {
@@ -969,7 +984,9 @@ var ptr_init = function () {
   });
 
   document.addEventListener('touchend', function (e) {
-    var parent = e.target, i = 0, top;
+    var parent = e.target,
+      i = 0,
+      top;
 
     for (i = 0; i < ptr.scrollable_parent; i += 1) {
       parent = parent.parentNode;
@@ -995,6 +1012,7 @@ var ptr_init = function () {
     ptr.scrollable_parent = false;
   });
 };
+
 window.onload = function() {
   ptr_init();
 }
