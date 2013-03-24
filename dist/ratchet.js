@@ -1,6 +1,6 @@
 /**
  * ==================================
- * Ratchet v1.0.0
+ * Ratchet v1.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ==================================
