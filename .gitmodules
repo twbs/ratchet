@@ -1,0 +1,3 @@
+[submodule "submodules/pulltorefresh"]
+	path = submodules/pulltorefresh
+	url = git@github.com:SimonWaldherr/PullToRefresh.git

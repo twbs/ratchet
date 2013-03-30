@@ -10,3 +10,7 @@
 .form-wrapper {
   padding: 10px;
 }
+
+.scrollable {
+  bottom: 50px;
+}
