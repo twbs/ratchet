@@ -93,7 +93,7 @@ html {
 -------------------------------------------------- */
 
 body {
-  position: fixed;
+  overflow: scroll;
   top: 0;
   right: 0;
   bottom: 0;
@@ -112,11 +112,9 @@ a {
 
 /* Wrapper to be used around all content not in .bar-title and .bar-tab */
 .content {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: 100%;
   overflow: auto;
   background-color: #fff;
   -webkit-transition-property: top, bottom;
@@ -146,7 +144,7 @@ a {
   top: 44px;
 }
 .bar-tab ~ .content {
-  bottom: 51px;
+  margin-bottom: 51px;
 }
 .bar-header-secondary ~ .content {
   top: 88px;
