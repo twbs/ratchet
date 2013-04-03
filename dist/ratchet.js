@@ -117,12 +117,13 @@
     'slide-out' : 'slide-in',
     'fade'      : 'fade'
   };
+  
   var bars = {
     bartab             : '.bar-tab',
     bartitle           : '.bar-title',
     barfooter          : '.bar-footer',
     barheadersecondary : '.bar-header-secondary'
-  }
+  };
 
   var cacheReplace = function (data, updates) {
     PUSH.id = data.id;
@@ -509,7 +510,8 @@
   window.addEventListener('click', function (e) { if (getTarget(e)) e.preventDefault(); });
   window.addEventListener('popstate', popstate);
 
-}();/* ----------------------------------
+}();
+/* ----------------------------------
  * TABS v1.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
@@ -525,7 +527,7 @@
 
   window.addEventListener("touchend", function (e) {
     var activeTab;
-    var activeBody;
+    var activeBodies;
     var targetBody;
     var targetTab;
     var className     = 'active';
@@ -547,11 +549,15 @@
 
     if (!targetBody) return;
 
-    activeBody = targetBody.parentNode.querySelector(classSelector);
+    activeBodies = targetBody.parentNode.querySelectorAll(classSelector);
 
-    if (activeBody) activeBody.classList.remove(className);
+    if (activeBodies) {
+      for (var i = 0; i < activeBodies.length; i++){
+        activeBodies[i].classList.remove(className);
+      }
+    }
 
-    targetBody.classList.add(className)
+    targetBody.classList.add(className);
   });
 
   window.addEventListener('click', function (e) { if (getTarget(e.target)) e.preventDefault(); });
