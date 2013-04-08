@@ -158,7 +158,8 @@ a {
 }
 .bar-header-secondary ~ .content {
   top: 88px;
-}/* General bar styles
+}
+/* General bar styles
 -------------------------------------------------- */
 
 [class*="bar-"] {
@@ -489,7 +490,8 @@ a {
 .bar-standard input[type=search] {
   height: 32px;
   margin: 0;
-}/* Lists
+}
+/* Lists
 -------------------------------------------------- */
 
 /* Remove usual bullet styles from list */
@@ -603,7 +605,8 @@ a {
 
 .list .toggle {
   margin-top: -15px; /* Half height of toggle */
-}/* Forms
+}
+/* Forms
 -------------------------------------------------- */
 
 /* Force form elements to inherit font styles */
@@ -723,7 +726,8 @@ select {
   padding-left: 0;
   margin-bottom: 0;
   border-bottom: 0;
-}/* General button styles
+}
+/* General button styles
 -------------------------------------------------- */
 
 [class*="button"] {
@@ -843,7 +847,8 @@ select {
   padding-top: 4px;
   padding-bottom: 4px;
   margin-right: 10px;
-}/* Chevrons
+}
+/* Chevrons
 -------------------------------------------------- */
 
 .chevron {
@@ -872,7 +877,8 @@ select {
   top: 7px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-}/* General count styles
+}
+/* General count styles
 -------------------------------------------------- */
 
 [class*="count"] {
@@ -916,7 +922,8 @@ select {
   background-color: #e71e1e;
   background-image: -webkit-linear-gradient(top, #e71e1e 0,#c71a1a 100%);
   background-image: linear-gradient(to bottom, #e71e1e 0, #c71a1a 100%);
-}/* Segmented controllers
+}
+/* Segmented controllers
 -------------------------------------------------- */
 
 .segmented-controller {
@@ -977,7 +984,8 @@ select {
 
 .segmented-controller-item.active {
   display: block;
-}/* Popovers (to be used with popovers.js)
+}
+/* Popovers (to be used with popovers.js)
 -------------------------------------------------- */
 
 .popover {
@@ -1129,7 +1137,8 @@ select {
   border: 1px solid #000;
   border-radius: 3px;
   -webkit-overflow-scrolling: touch;
-}/* Modals
+}
+/* Modals
 -------------------------------------------------- */
 .modal {
   position: fixed; 
@@ -1155,7 +1164,8 @@ select {
           transition:         transform .25 ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-}/* Slider styles (to be used with sliders.js)
+}
+/* Slider styles (to be used with sliders.js)
 -------------------------------------------------- */
 
 /* Width/height of slider */
@@ -1191,7 +1201,8 @@ select {
 /* Required reset of font-size to same as standard body */
 .slider > ul > li > * {
   font-size: 14px;
-}/* Toggle styles (to be used with toggles.js)
+}
+/* Toggle styles (to be used with toggles.js)
 -------------------------------------------------- */
 
 .toggle {
@@ -1256,7 +1267,8 @@ select {
   color: #fff;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
   content: "On";
-}/* Push styles (to be used with push.js)
+}
+/* Push styles (to be used with push.js)
 -------------------------------------------------- */
 
 /* Fade animation */
