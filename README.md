@@ -16,7 +16,7 @@ Ratchet was developed to support iOS 5+ for iPhone. Questions or discussions abo
 
 ## Reporting bugs & contributing
 
-Please file a Github issue to [report a bug](http://github.com/maker/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/maker/ratchet/blob/master/CONTRIBUTING.md).
+Please file a GitHub issue to [report a bug](http://github.com/maker/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/maker/ratchet/blob/master/CONTRIBUTING.md).
 
 ## Troubleshooting
 
