@@ -18,7 +18,7 @@
     var i;
     var modals = document.querySelectorAll('a');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = modals.length; i--;) { 
+      for (i = modals.length; i--;) {
         if (modals[i] === target) {
           return target;
         }
@@ -53,9 +53,9 @@
   var findPopovers = function (target) {
     var i, popovers = document.querySelectorAll('a');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = popovers.length; i--;) { 
+      for (i = popovers.length; i--;) {
         if (popovers[i] === target) {
-          return target; 
+          return target;
         }
       }
     }
@@ -132,20 +132,20 @@
   // ==================
 
   var isScrolling,
-      maxCacheLength = 20,
-      cacheMapping   = sessionStorage,
-      domCache       = {},
-      transitionMap  = {
-    'slide-in'  : 'slide-out',
-    'slide-out' : 'slide-in',
-    'fade'      : 'fade'
-  },
+    maxCacheLength = 20,
+    cacheMapping = sessionStorage,
+    domCache = {},
+    transitionMap = {
+      'slide-in': 'slide-out',
+      'slide-out': 'slide-in',
+      'fade': 'fade'
+    },
     bars = {
-    bartab             : '.bar-tab',
-    bartitle           : '.bar-title',
-    barfooter          : '.bar-footer',
-    barheadersecondary : '.bar-header-secondary'
-  };
+      bartab: '.bar-tab',
+      bartitle: '.bar-title',
+      barfooter: '.bar-footer',
+      barheadersecondary: '.bar-header-secondary'
+    };
 
   var cacheReplace = function (data, updates) {
     PUSH.id = data.id;
@@ -159,8 +159,8 @@
 
   var cachePush = function () {
     var id = PUSH.id,
-        cacheForwardStack = JSON.parse(cacheMapping.cacheForwardStack || '[]'),
-        cacheBackStack    = JSON.parse(cacheMapping.cacheBackStack    || '[]');
+      cacheForwardStack = JSON.parse(cacheMapping.cacheForwardStack || '[]'),
+      cacheBackStack = JSON.parse(cacheMapping.cacheBackStack || '[]');
 
     cacheBackStack.push(id);
 
@@ -174,15 +174,15 @@
     window.history.pushState(null, '', cacheMapping[PUSH.id].url);
 
     cacheMapping.cacheForwardStack = JSON.stringify(cacheForwardStack);
-    cacheMapping.cacheBackStack    = JSON.stringify(cacheBackStack);
+    cacheMapping.cacheBackStack = JSON.stringify(cacheBackStack);
   };
 
   var cachePop = function (id, direction) {
-    var forward           = direction === 'forward',
-        cacheForwardStack = JSON.parse(cacheMapping.cacheForwardStack || '[]'),
-        cacheBackStack    = JSON.parse(cacheMapping.cacheBackStack    || '[]'),
-        pushStack         = forward ? cacheBackStack    : cacheForwardStack,
-        popStack          = forward ? cacheForwardStack : cacheBackStack;
+    var forward = direction === 'forward',
+      cacheForwardStack = JSON.parse(cacheMapping.cacheForwardStack || '[]'),
+      cacheBackStack = JSON.parse(cacheMapping.cacheBackStack || '[]'),
+      pushStack = forward ? cacheBackStack : cacheForwardStack,
+      popStack = forward ? cacheForwardStack : cacheBackStack;
 
     if (PUSH.id) {
       pushStack.push(PUSH.id);
@@ -190,7 +190,7 @@
     popStack.pop();
 
     cacheMapping.cacheForwardStack = JSON.stringify(cacheForwardStack);
-    cacheMapping.cacheBackStack    = JSON.stringify(cacheBackStack);
+    cacheMapping.cacheBackStack = JSON.stringify(cacheBackStack);
   };
 
   var getCached = function (id) {
@@ -200,7 +200,7 @@
   var getTarget = function (e) {
     var target = findTarget(e.target);
 
-    if (!target || (e.which > 1) || e.metaKey || e.ctrlKey || isScrolling || (location.protocol !== target.protocol) || (location.host     !== target.host) || (!target.hash && /#/.test(target.href)) || (target.hash && target.href.replace(target.hash, '') === location.href.replace(location.hash, '')) || (target.getAttribute('data-ignore') === 'push')) {
+    if (!target || (e.which > 1) || e.metaKey || e.ctrlKey || isScrolling || (location.protocol !== target.protocol) || (location.host !== target.host) || (!target.hash && /#/.test(target.href)) || (target.hash && target.href.replace(target.hash, '') === location.href.replace(location.hash, '')) || (target.getAttribute('data-ignore') === 'push')) {
       return;
     }
 
@@ -221,23 +221,23 @@
     e.preventDefault();
 
     PUSH({
-      url        : target.href,
-      hash       : target.hash,
-      timeout    : target.getAttribute('data-timeout'),
-      transition : target.getAttribute('data-transition')
+      url: target.href,
+      hash: target.hash,
+      timeout: target.getAttribute('data-timeout'),
+      transition: target.getAttribute('data-transition')
     });
   };
 
   var popstate = function (e) {
     var key,
-        barElement,
-        activeObj,
-        activeDom,
-        direction,
-        transition,
-        transitionFrom,
-        transitionFromObj,
-        id = e.state;
+      barElement,
+      activeObj,
+      activeDom,
+      direction,
+      transition,
+      transitionFrom,
+      transitionFromObj,
+      id = e.state;
 
     if (!id || !cacheMapping[id]) {
       return;
@@ -255,7 +255,7 @@
     }
 
     if (direction === 'back') {
-      transitionFrom    = JSON.parse((direction === 'back') ? cacheMapping.cacheForwardStack : cacheMapping.cacheBackStack);
+      transitionFrom = JSON.parse((direction === 'back') ? cacheMapping.cacheForwardStack : cacheMapping.cacheBackStack);
       transitionFromObj = getCached(transitionFrom[transitionFrom.length - 1]);
     } else {
       transitionFromObj = activeObj;
@@ -269,12 +269,12 @@
 
     if (!activeDom) {
       return PUSH({
-        id         : activeObj.id,
-        url        : activeObj.url,
-        title      : activeObj.title,
-        timeout    : activeObj.timeout,
-        transition : transition,
-        ignorePush : true
+        id: activeObj.id,
+        url: activeObj.url,
+        title: activeObj.title,
+        timeout: activeObj.timeout,
+        transition: transition,
+        ignorePush: true
       });
     }
 
@@ -284,18 +284,16 @@
         barElement = document.querySelector(bars[key]);
         if (activeObj[key]) {
           swapContent(activeObj[key], barElement);
-        }
-        else if (barElement) {
+        } else if (barElement) {
           barElement.parentNode.removeChild(barElement);
         }
       }
     }
 
     swapContent(
-      (activeObj.contents || activeDom).cloneNode(true),
+    (activeObj.contents || activeDom).cloneNode(true),
       document.querySelector('.content'),
-      transition
-    );
+      transition);
 
     PUSH.id = id;
 
@@ -308,8 +306,8 @@
 
   var PUSH = function (options) {
     var key,
-        data = {},
-        xhr  = PUSH.xhr;
+      data = {},
+      xhr = PUSH.xhr;
 
     options.container = options.container || options.transition ? document.querySelector('.content') : document.body;
 
@@ -335,16 +333,18 @@
 
     if (!PUSH.id) {
       cacheReplace({
-        id         : +new Date,
-        url        : window.location.href,
-        title      : document.title,
-        timeout    : options.timeout,
-        transition : null
+        id: +new Date,
+        url: window.location.href,
+        title: document.title,
+        timeout: options.timeout,
+        transition: null
       });
     }
 
     if (options.timeout) {
-      options._timeout = setTimeout(function () {  xhr.abort('timeout'); }, options.timeout);
+      options._timeout = setTimeout(function () {
+        xhr.abort('timeout');
+      }, options.timeout);
     }
 
     xhr.send();
@@ -375,11 +375,11 @@
 
     swapContent(data.contents, options.container, options.transition, function () {
       cacheReplace({
-        id         : options.id || +new Date,
-        url        : data.url,
-        title      : data.title,
-        timeout    : options.timeout,
-        transition : options.transition
+        id: options.id || +new Date,
+        url: data.url,
+        title: data.title,
+        timeout: options.timeout,
+        transition: options.transition
       }, options.id);
       triggerStateChange();
     });
@@ -398,18 +398,21 @@
 
   var swapContent = function (swap, container, transition, complete) {
     "use strict";
+
     function fadeContainerEnd() {
       container.removeEventListener('webkitTransitionEnd', fadeContainerEnd);
       swap.classList.add('in');
       swap.addEventListener('webkitTransitionEnd', fadeSwapEnd);
     }
-    function fadeSwapEnd () {
+
+    function fadeSwapEnd() {
       swap.removeEventListener('webkitTransitionEnd', fadeSwapEnd);
       container.parentNode.removeChild(container);
       swap.classList.remove('fade');
       swap.classList.remove('in');
       complete && complete();
     }
+
     function slideEnd() {
       swap.removeEventListener('webkitTransitionEnd', slideEnd);
       swap.classList.remove('slide');
@@ -418,15 +421,15 @@
       complete && complete();
     }
     var enter,
-        containerDirection,
-        swapDirection;
+      containerDirection,
+      swapDirection;
 
     if (!transition) {
       if (container) container.innerHTML = swap.innerHTML;
       else if (swap.classList.contains('content')) document.body.appendChild(swap);
       else document.body.insertBefore(swap, document.querySelector('.content'));
     } else {
-      enter  = /in$/.test(transition);
+      enter = /in$/.test(transition);
 
       if (transition === 'fade') {
         container.classList.add('in');
@@ -455,7 +458,7 @@
 
     if (/slide/.test(transition)) {
       container.offsetWidth; // force reflow
-      swapDirection      = enter ? 'right' : 'left'
+      swapDirection = enter ? 'right' : 'left'
       containerDirection = enter ? 'left' : 'right'
       container.classList.add(containerDirection);
       swap.classList.remove(swapDirection);
@@ -465,7 +468,9 @@
 
   var triggerStateChange = function () {
     var e = new CustomEvent('push', {
-      detail: { state: getCached(PUSH.id) },
+      detail: {
+        state: getCached(PUSH.id)
+      },
       bubbles: true,
       cancelable: true
     });
@@ -476,7 +481,9 @@
   var findTarget = function (target) {
     var i, toggles = document.querySelectorAll('a');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = toggles.length; i--;) { if (toggles[i] === target) return target; }
+      for (i = toggles.length; i--;) {
+        if (toggles[i] === target) return target;
+      }
     }
   };
 
@@ -486,12 +493,14 @@
   };
 
   var parseURL = function (url) {
-    var a = document.createElement('a'); a.href = url; return a;
+    var a = document.createElement('a');
+    a.href = url;
+    return a;
   };
 
   var extendWithDom = function (obj, fragment, dom) {
     var i;
-    var result    = {};
+    var result = {};
 
     for (i = 0; i < obj.length; i += 1) {
       result[i] = obj[i];
@@ -510,9 +519,9 @@
 
   var parseXHR = function (xhr, options) {
     var head,
-        body,
-        data = {},
-        responseText = xhr.responseText;
+      body,
+      data = {},
+      responseText = xhr.responseText;
 
     data.url = options.url;
 
@@ -521,12 +530,12 @@
     }
 
     if (/<html/i.test(responseText)) {
-      head           = document.createElement('div');
-      body           = document.createElement('div');
+      head = document.createElement('div');
+      body = document.createElement('div');
       head.innerHTML = responseText.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0]
       body.innerHTML = responseText.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0]
     } else {
-      head           = body = document.createElement('div');
+      head = body = document.createElement('div');
       head.innerHTML = responseText;
     }
 
@@ -546,10 +555,16 @@
   // Attach PUSH event handlers
   // ==========================
 
-  window.addEventListener('touchstart', function () { isScrolling = false; });
-  window.addEventListener('touchmove', function () { isScrolling = true; })
+  window.addEventListener('touchstart', function () {
+    isScrolling = false;
+  });
+  window.addEventListener('touchmove', function () {
+    isScrolling = true;
+  })
   window.addEventListener('touchend', touchend);
-  window.addEventListener('click', function (e) { if (getTarget(e)) e.preventDefault(); });
+  window.addEventListener('click', function (e) {
+    if (getTarget(e)) e.preventDefault();
+  });
   window.addEventListener('popstate', popstate);
 
 }();
@@ -564,18 +579,20 @@
   var getTarget = function (target) {
     var i, popovers = document.querySelectorAll('.segmented-controller li a');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = popovers.length; i--;) { if (popovers[i] === target) return target; }
+      for (i = popovers.length; i--;) {
+        if (popovers[i] === target) return target;
+      }
     }
   };
 
   window.addEventListener("touchend", function (e) {
     var activeTab,
-        activeBody,
-        targetBody,
-        targetTab,
-        className     = 'active',
-        classSelector = '.' + className,
-        targetAnchor  = getTarget(e.target);
+      activeBody,
+      targetBody,
+      targetTab,
+      className = 'active',
+      classSelector = '.' + className,
+      targetAnchor = getTarget(e.target);
 
     if (!targetAnchor) {
       return;
@@ -609,8 +626,11 @@
     targetBody.classList.add(className);
   });
 
-  window.addEventListener('click', function (e) { if (getTarget(e.target)) e.preventDefault(); });
-}();/* ----------------------------------
+  window.addEventListener('click', function (e) {
+    if (getTarget(e.target)) e.preventDefault();
+  });
+}();
+/* ----------------------------------
  * SLIDER v1.0.0
  * Licensed under The MIT License
  * Adapted from Brad Birdsall's swipe
@@ -620,23 +640,25 @@
 !function () {
   "use strict";
   var pageX,
-      pageY,
-      slider,
-      deltaX,
-      deltaY,
-      offsetX,
-      lastSlide,
-      startTime,
-      resistance,
-      sliderWidth,
-      slideNumber,
-      isScrolling,
-      scrollableArea;
+    pageY,
+    slider,
+    deltaX,
+    deltaY,
+    offsetX,
+    lastSlide,
+    startTime,
+    resistance,
+    sliderWidth,
+    slideNumber,
+    isScrolling,
+    scrollableArea;
 
   var getSlider = function (target) {
     var i, sliders = document.querySelectorAll('.slider ul');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = sliders.length; i--;) { if (sliders[i] === target) return target; }
+      for (i = sliders.length; i--;) {
+        if (sliders[i] === target) return target;
+      }
     }
   }
 
@@ -647,7 +669,7 @@
 
   var setSlideNumber = function (offset) {
     var round = offset ? (deltaX < 0 ? 'ceil' : 'floor') : 'round';
-    slideNumber = Math[round](getScroll() / ( scrollableArea / slider.children.length) );
+    slideNumber = Math[round](getScroll() / (scrollableArea / slider.children.length));
     slideNumber += offset;
     slideNumber = Math.min(slideNumber, 0);
     slideNumber = Math.max(-(slider.children.length - 1), slideNumber);
@@ -658,16 +680,16 @@
 
     if (!slider) return;
 
-    var firstItem  = slider.querySelector('li');
+    var firstItem = slider.querySelector('li');
 
     scrollableArea = firstItem.offsetWidth * slider.children.length;
-    isScrolling    = undefined;
-    sliderWidth    = slider.offsetWidth;
-    resistance     = 1;
-    lastSlide      = -(slider.children.length - 1);
-    startTime      = +new Date;
-    pageX          = e.touches[0].pageX;
-    pageY          = e.touches[0].pageY;
+    isScrolling = undefined;
+    sliderWidth = slider.offsetWidth;
+    resistance = 1;
+    lastSlide = -(slider.children.length - 1);
+    startTime = +new Date;
+    pageX = e.touches[0].pageX;
+    pageY = e.touches[0].pageY;
 
     setSlideNumber(0);
 
@@ -679,8 +701,8 @@
 
     deltaX = e.touches[0].pageX - pageX;
     deltaY = e.touches[0].pageY - pageY;
-    pageX  = e.touches[0].pageX;
-    pageY  = e.touches[0].pageY;
+    pageX = e.touches[0].pageX;
+    pageY = e.touches[0].pageY;
 
     if (typeof isScrolling == 'undefined') {
       isScrolling = Math.abs(deltaY) > Math.abs(deltaX);
@@ -692,8 +714,8 @@
 
     e.preventDefault();
 
-    resistance = slideNumber == 0         && deltaX > 0 ? (pageX / sliderWidth) + 1.25 :
-                 slideNumber == lastSlide && deltaX < 0 ? (Math.abs(pageX) / sliderWidth) + 1.25 : 1;
+    resistance = slideNumber == 0 && deltaX > 0 ? (pageX / sliderWidth) + 1.25 :
+      slideNumber == lastSlide && deltaX < 0 ? (Math.abs(pageX) / sliderWidth) + 1.25 : 1;
 
     slider.style.webkitTransform = 'translate3d(' + offsetX + 'px,0,0)';
   };
@@ -702,8 +724,7 @@
     if (!slider || isScrolling) return;
 
     setSlideNumber(
-      (+new Date) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0
-    );
+    (+new Date) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0);
 
     offsetX = slideNumber * sliderWidth;
 
@@ -711,7 +732,9 @@
     slider.style.webkitTransform = 'translate3d(' + offsetX + 'px,0,0)';
 
     e = new CustomEvent('slide', {
-      detail: { slideNumber: Math.abs(slideNumber) },
+      detail: {
+        slideNumber: Math.abs(slideNumber)
+      },
       bubbles: true,
       cancelable: true
     });
@@ -731,16 +754,18 @@
  * ---------------------------------- */
 
 !function () {
-
-  var start     = {},
-      touchMove = false,
-      distanceX = false,
-      toggle    = false;
+  "use strict";
+  var start = {},
+    touchMove = false,
+    distanceX = false,
+    toggle = false;
 
   var findToggle = function (target) {
     var i, toggles = document.querySelectorAll('.toggle');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = toggles.length; i--;) { if (toggles[i] === target) return target; }
+      for (i = toggles.length; i--;) {
+        if (toggles[i] === target) return target;
+      }
     }
   }
 
@@ -753,12 +778,15 @@
       return;
     }
 
-    var handle      = toggle.querySelector('.toggle-handle'),
-        toggleWidth = toggle.offsetWidth,
-        handleWidth = handle.offsetWidth,
-        offset      = toggle.classList.contains('active') ? (toggleWidth - handleWidth) : 0;
+    var handle = toggle.querySelector('.toggle-handle'),
+      toggleWidth = toggle.offsetWidth,
+      handleWidth = handle.offsetWidth,
+      offset = toggle.classList.contains('active') ? (toggleWidth - handleWidth) : 0;
 
-    start     = { pageX : e.touches[0].pageX - offset, pageY : e.touches[0].pageY };
+    start = {
+      pageX: e.touches[0].pageX - offset,
+      pageY: e.touches[0].pageY
+    };
     touchMove = false;
 
     // todo: probably should be moved to the css
@@ -772,11 +800,11 @@
 
     if (!toggle) return;
 
-    var handle      = toggle.querySelector('.toggle-handle'),
-        current     = e.touches[0],
-        toggleWidth = toggle.offsetWidth,
-        handleWidth = handle.offsetWidth,
-        offset      = toggleWidth - handleWidth;
+    var handle = toggle.querySelector('.toggle-handle'),
+      current = e.touches[0],
+      toggleWidth = toggle.offsetWidth,
+      handleWidth = handle.offsetWidth,
+      offset = toggleWidth - handleWidth;
 
     touchMove = true;
     distanceX = current.pageX - start.pageX;
@@ -796,17 +824,17 @@
 
     handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
 
-    toggle.classList[(distanceX > (toggleWidth/2 - handleWidth/2)) ? 'add' : 'remove']('active');
+    toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
   });
 
   window.addEventListener('touchend', function (e) {
     if (!toggle) return;
 
-    var handle      = toggle.querySelector('.toggle-handle'),
-        toggleWidth = toggle.offsetWidth,
-        handleWidth = handle.offsetWidth,
-        offset      = toggleWidth - handleWidth,
-        slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth/2 - handleWidth/2)));
+    var handle = toggle.querySelector('.toggle-handle'),
+      toggleWidth = toggle.offsetWidth,
+      handleWidth = handle.offsetWidth,
+      offset = toggleWidth - handleWidth,
+      slideOn = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
 
     if (slideOn) {
       handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
@@ -817,7 +845,9 @@
     toggle.classList[slideOn ? 'add' : 'remove']('active');
 
     e = new CustomEvent('toggle', {
-      detail: { isActive: slideOn },
+      detail: {
+        isActive: slideOn
+      },
       bubbles: true,
       cancelable: true
     });
@@ -825,7 +855,7 @@
     toggle.dispatchEvent(e);
 
     touchMove = false;
-    toggle    = false;
+    toggle = false;
   });
 
 }();
