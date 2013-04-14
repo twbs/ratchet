@@ -763,3 +763,888 @@
   });
 
 }();
+
+/* ----------------------------------
+ * lunr v0.2.2
+ * http://lunrjs.com - A bit like Solr, but much smaller and not as bright
+ * Copyright (C) 2013 Oliver Nightingale
+ * Licensed under The MIT License
+ * http://opensource.org/licenses/MIT
+ * ---------------------------------- */
+
+var lunr = function (config) {
+  var idx = new lunr.Index
+
+  idx.pipeline.add(lunr.stopWordFilter, lunr.stemmer)
+
+  if (config) config.call(idx, idx)
+
+  return idx
+}
+
+lunr.version = "0.2.2"
+
+if (typeof module !== 'undefined') {
+  module.exports = lunr
+}
+/*!
+ * lunr.tokenizer
+ * Copyright (C) 2013 Oliver Nightingale
+ */
+
+lunr.tokenizer = function (str) {
+  if (Array.isArray(str)) return str
+
+  var whiteSpaceSplitRegex = /\s+/
+
+  return str.split(whiteSpaceSplitRegex).map(function (token) {
+    return token.replace(/^\W+/, '').replace(/\W+$/, '').toLowerCase()
+  })
+}
+/*!
+ * lunr.Pipeline
+ * Copyright (C) 2013 Oliver Nightingale
+ */
+
+lunr.Pipeline = function () {
+  this._stack = []
+}
+
+lunr.Pipeline.prototype.add = function () {
+  var fns = Array.prototype.slice.call(arguments)
+  Array.prototype.push.apply(this._stack, fns)
+}
+
+lunr.Pipeline.prototype.after = function (existingFn, newFn) {
+  var pos = this._stack.indexOf(existingFn) + 1
+  this._stack.splice(pos, 0, newFn)
+}
+
+lunr.Pipeline.prototype.before = function (existingFn, newFn) {
+  var pos = this._stack.indexOf(existingFn)
+  this._stack.splice(pos, 0, newFn)
+}
+
+lunr.Pipeline.prototype.remove = function (fn) {
+  var pos = this._stack.indexOf(fn)
+  this._stack.splice(pos, 1)
+}
+
+lunr.Pipeline.prototype.run = function (tokens) {
+  var out = [],
+      tokenLength = tokens.length,
+      stackLength = this._stack.length
+
+  for (var i = 0; i < tokenLength; i++) {
+    var token = tokens[i]
+
+    for (var j = 0; j < stackLength; j++) {
+      token = this._stack[j](token, i, tokens)
+      if (token === void 0) break
+    };
+
+    if (token !== void 0) out.push(token)
+  };
+
+  return out
+}
+
+/*!
+ * lunr.Vector
+ * Copyright (C) 2013 Oliver Nightingale
+ */
+
+lunr.Vector = function (elements) {
+  this.elements = elements
+
+  for (var i = 0; i < elements.length; i++) {
+    if (!(i in this.elements)) this.elements[i] = 0
+  }
+}
+
+lunr.Vector.prototype.magnitude = function () {
+  if (this._magnitude) return this._magnitude
+
+  var sumOfSquares = 0,
+      elems = this.elements,
+      len = elems.length,
+      el
+
+  for (var i = 0; i < len; i++) {
+    el = elems[i]
+    sumOfSquares += el * el
+  };
+
+  return this._magnitude = Math.sqrt(sumOfSquares)
+}
+
+lunr.Vector.prototype.dot = function (otherVector) {
+  var elem1 = this.elements,
+      elem2 = otherVector.elements,
+      length = elem1.length,
+      dotProduct = 0
+
+  for (var i = 0; i < length; i++) {
+    dotProduct += elem1[i] * elem2[i]
+  };
+
+  return dotProduct
+}
+
+lunr.Vector.prototype.similarity = function (otherVector) {
+  return this.dot(otherVector) / (this.magnitude() * otherVector.magnitude())
+}
+
+lunr.Vector.prototype.toArray = function () {
+  return this.elements
+}
+/*!
+ * lunr.SortedSet
+ * Copyright (C) 2013 Oliver Nightingale
+ */
+
+lunr.SortedSet = function () {
+  this.length = 0
+  this.elements = []
+}
+
+lunr.SortedSet.prototype.add = function () {
+  Array.prototype.slice.call(arguments).forEach(function (element) {
+    if (~this.elements.indexOf(element)) return
+    this.elements.splice(this.locationFor(element), 0, element)
+  }, this)
+
+  this.length = this.elements.length
+}
+
+lunr.SortedSet.prototype.toArray = function () {
+  return this.elements.slice()
+}
+
+lunr.SortedSet.prototype.map = function (fn, ctx) {
+  return this.elements.map(fn, ctx)
+}
+
+lunr.SortedSet.prototype.forEach = function (fn, ctx) {
+  return this.elements.forEach(fn, ctx)
+}
+
+lunr.SortedSet.prototype.indexOf = function (elem, startIndex) {
+  return this.elements.indexOf(elem, startIndex)
+}
+
+lunr.SortedSet.prototype.locationFor = function (elem, start, end) {
+  var start = start || 0,
+      end = end || this.elements.length,
+      sectionLength = end - start,
+      pivot = start + Math.floor(sectionLength / 2),
+      pivotElem = this.elements[pivot]
+
+  if (sectionLength <= 1) {
+    if (pivotElem > elem) return pivot
+    if (pivotElem < elem) return pivot + 1
+  }
+
+  if (pivotElem < elem) return this.locationFor(elem, pivot, end)
+  if (pivotElem > elem) return this.locationFor(elem, start, pivot)
+}
+
+lunr.SortedSet.prototype.intersect = function (otherSet) {
+  var intersectSet = new lunr.SortedSet,
+      i = 0, j = 0,
+      a_len = this.length, b_len = otherSet.length,
+      a = this.elements, b = otherSet.elements
+
+  while (true) {
+    if (i > a_len - 1 || j > b_len - 1) break
+
+    if (a[i] === b[j]) {
+      intersectSet.add(a[i]);
+      i++;
+      j++;
+      continue;
+    }
+
+    if (a[i] < b[j]) {
+      i++;
+      continue;
+    }
+
+    if (a[i] > b[j]) {
+      j++;
+      continue;
+    }
+  };
+
+  return intersectSet
+}
+
+lunr.SortedSet.prototype.clone = function () {
+  var clone = new lunr.SortedSet
+
+  clone.elements = this.toArray()
+  clone.length = clone.elements.length
+
+  return clone
+}
+
+lunr.SortedSet.prototype.union = function (otherSet) {
+  var longSet, shortSet, unionSet
+
+  if (this.length >= otherSet.length) {
+    longSet = this; 
+    shortSet = otherSet;
+  } else {
+    longSet = otherSet;
+    shortSet = this;
+  }
+
+  unionSet = longSet.clone()
+
+  unionSet.add.apply(unionSet, shortSet.toArray())
+
+  return unionSet
+}
+/*!
+ * lunr.Index
+ * Copyright (C) 2013 Oliver Nightingale
+ */
+
+lunr.Index = function () {
+  this._fields = []
+  this._ref = 'id'
+  this.pipeline = new lunr.Pipeline
+  this.documentStore = new lunr.Store
+  this.tokenStore = new lunr.TokenStore
+  this.corpusTokens = new lunr.SortedSet
+}
+
+lunr.Index.prototype.field = function (fieldName, opts) {
+  var opts = opts || {},
+      field = { name: fieldName, boost: opts.boost || 1 }
+
+  this._fields.push(field)
+  return this
+}
+
+lunr.Index.prototype.ref = function (refName) {
+  this._ref = refName
+  return this
+}
+
+lunr.Index.prototype.add = function (doc) {
+  var docTokens = {},
+      allDocumentTokens = new lunr.SortedSet,
+      docRef = doc[this._ref]
+
+  this._fields.forEach(function (field) {
+    var fieldTokens = this.pipeline.run(lunr.tokenizer(doc[field.name]))
+
+    docTokens[field.name] = fieldTokens
+    lunr.SortedSet.prototype.add.apply(allDocumentTokens, fieldTokens)
+  }, this)
+
+  this.documentStore.set(docRef, allDocumentTokens)
+  lunr.SortedSet.prototype.add.apply(this.corpusTokens, allDocumentTokens.toArray())
+
+  for (var i = 0; i < allDocumentTokens.length; i++) {
+    var token = allDocumentTokens.elements[i]
+    var tf = this._fields.reduce(function (memo, field) {
+      var tokenCount = docTokens[field.name].filter(function (t) { return t === token }).length,
+          fieldLength = docTokens[field.name].length
+
+      return memo + (tokenCount / fieldLength * field.boost)
+    }, 0)
+
+    this.tokenStore.add(token, { ref: docRef, tf: tf })
+  };
+}
+
+lunr.Index.prototype.remove = function (doc) {
+  var docRef = doc[this._ref],
+      docTokens = this.documentStore.get(docRef)
+
+  this.documentStore.remove(docRef)
+
+  docTokens.forEach(function (token) {
+    this.tokenStore.remove(token, docRef)
+  }, this)
+}
+
+lunr.Index.prototype.update = function (doc) {
+  this.remove(doc)
+  this.add(doc)
+}
+
+lunr.Index.prototype.idf = function (term) {
+  var documentFrequency = Object.keys(this.tokenStore.get(term)).length
+
+  if (documentFrequency === 0) {
+    return 1
+  } else {
+    return 1 + Math.log(this.tokenStore.length / documentFrequency)
+  }
+}
+
+lunr.Index.prototype.search = function (query) {
+  var queryTokens = this.pipeline.run(lunr.tokenizer(query)),
+      queryArr = new Array (this.corpusTokens.length),
+      documentSets = [],
+      fieldBoosts = this._fields.reduce(function (memo, f) { return memo + f.boost }, 0)
+
+  if (!queryTokens.some(lunr.TokenStore.prototype.has, this.tokenStore)) return []
+
+  queryTokens
+    .forEach(function (token, i, tokens) {
+      var tf = 1 / tokens.length * this._fields.length * fieldBoosts,
+          self = this
+
+      var set = this.tokenStore.expand(token).reduce(function (memo, key) {
+        var pos = self.corpusTokens.indexOf(key),
+            idf = self.idf(key),
+            exactMatchBoost = (key === token ? 10 : 1),
+            set = new lunr.SortedSet
+
+        // calculate the query tf-idf score for this token
+        // applying an exactMatchBoost to ensure these rank
+        // higher than expanded terms
+        if (pos > -1) queryArr[pos] = tf * idf * exactMatchBoost
+
+        // add all the documents that have this key into a set
+        Object.keys(self.tokenStore.get(key)).forEach(function (ref) { set.add(ref) })
+
+        return memo.union(set)
+      }, new lunr.SortedSet)
+
+      documentSets.push(set)
+    }, this)
+
+  var documentSet = documentSets.reduce(function (memo, set) {
+    return memo.intersect(set)
+  })
+
+  var queryVector = new lunr.Vector (queryArr)
+
+  return documentSet
+    .map(function (ref) {
+      return { ref: ref, score: queryVector.similarity(this.documentVector(ref)) }
+    }, this)
+    .sort(function (a, b) {
+      return b.score - a.score
+    })
+}
+
+lunr.Index.prototype.documentVector = function (documentRef) {
+  var documentTokens = this.documentStore.get(documentRef),
+      documentTokensLength = documentTokens.length,
+      documentArr = new Array (this.corpusTokens.length)
+
+  for (var i = 0; i < documentTokensLength; i++) {
+    var token = documentTokens.elements[i],
+        tf = this.tokenStore.get(token)[documentRef].tf,
+        idf = this.idf(token)
+
+    documentArr[this.corpusTokens.indexOf(token)] = tf * idf
+  };
+
+  return new lunr.Vector (documentArr)
+}
+/*!
+ * lunr.Store
+ * Copyright (C) 2013 Oliver Nightingale
+ */
+
+lunr.Store = function () {
+  this.store = {}
+  this.length = 0
+}
+
+lunr.Store.prototype.set = function (id, tokens) {
+  this.store[id] = tokens
+  this.length = Object.keys(this.store).length
+}
+
+lunr.Store.prototype.get = function (id) {
+  return this.store[id]
+}
+
+lunr.Store.prototype.has = function (id) {
+  return id in this.store
+}
+
+lunr.Store.prototype.remove = function (id) {
+  if (!this.has(id)) return
+
+  delete this.store[id]
+  this.length--
+}
+
+/*!
+ * lunr.stemmer
+ * Copyright (C) 2013 Oliver Nightingale
+ * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
+ */
+
+lunr.stemmer = (function(){
+  var step2list = {
+      "ational" : "ate",
+      "tional" : "tion",
+      "enci" : "ence",
+      "anci" : "ance",
+      "izer" : "ize",
+      "bli" : "ble",
+      "alli" : "al",
+      "entli" : "ent",
+      "eli" : "e",
+      "ousli" : "ous",
+      "ization" : "ize",
+      "ation" : "ate",
+      "ator" : "ate",
+      "alism" : "al",
+      "iveness" : "ive",
+      "fulness" : "ful",
+      "ousness" : "ous",
+      "aliti" : "al",
+      "iviti" : "ive",
+      "biliti" : "ble",
+      "logi" : "log"
+    },
+
+    step3list = {
+      "icate" : "ic",
+      "ative" : "",
+      "alize" : "al",
+      "iciti" : "ic",
+      "ical" : "ic",
+      "ful" : "",
+      "ness" : ""
+    },
+
+    c = "[^aeiou]",          // consonant
+    v = "[aeiouy]",          // vowel
+    C = c + "[^aeiouy]*",    // consonant sequence
+    V = v + "[aeiou]*",      // vowel sequence
+
+    mgr0 = "^(" + C + ")?" + V + C,               // [C]VC... is m>0
+    meq1 = "^(" + C + ")?" + V + C + "(" + V + ")?$",  // [C]VC[V] is m=1
+    mgr1 = "^(" + C + ")?" + V + C + V + C,       // [C]VCVC... is m>1
+    s_v = "^(" + C + ")?" + v;                   // vowel in stem
+
+  return function (w) {
+    var   stem,
+      suffix,
+      firstch,
+      re,
+      re2,
+      re3,
+      re4;
+
+    if (w.length < 3) { return w; }
+
+    firstch = w.substr(0,1);
+    if (firstch == "y") {
+      w = firstch.toUpperCase() + w.substr(1);
+    }
+
+    // Step 1a
+    re = /^(.+?)(ss|i)es$/;
+    re2 = /^(.+?)([^s])s$/;
+
+    if (re.test(w)) { w = w.replace(re,"$1$2"); }
+    else if (re2.test(w)) { w = w.replace(re2,"$1$2"); }
+
+    // Step 1b
+    re = /^(.+?)eed$/;
+    re2 = /^(.+?)(ed|ing)$/;
+    if (re.test(w)) {
+      var fp = re.exec(w);
+      re = new RegExp(mgr0);
+      if (re.test(fp[1])) {
+        re = /.$/;
+        w = w.replace(re,"");
+      }
+    } else if (re2.test(w)) {
+      var fp = re2.exec(w);
+      stem = fp[1];
+      re2 = new RegExp(s_v);
+      if (re2.test(stem)) {
+        w = stem;
+        re2 = /(at|bl|iz)$/;
+        re3 = new RegExp("([^aeiouylsz])\\1$");
+        re4 = new RegExp("^" + C + v + "[^aeiouwxy]$");
+        if (re2.test(w)) {  w = w + "e"; }
+        else if (re3.test(w)) { re = /.$/; w = w.replace(re,""); }
+        else if (re4.test(w)) { w = w + "e"; }
+      }
+    }
+
+    // Step 1c
+    re = /^(.+?)y$/;
+    if (re.test(w)) {
+      var fp = re.exec(w);
+      stem = fp[1];
+      re = new RegExp(s_v);
+      if (re.test(stem)) { w = stem + "i"; }
+    }
+
+    // Step 2
+    re = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/;
+    if (re.test(w)) {
+      var fp = re.exec(w);
+      stem = fp[1];
+      suffix = fp[2];
+      re = new RegExp(mgr0);
+      if (re.test(stem)) {
+        w = stem + step2list[suffix];
+      }
+    }
+
+    // Step 3
+    re = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/;
+    if (re.test(w)) {
+      var fp = re.exec(w);
+      stem = fp[1];
+      suffix = fp[2];
+      re = new RegExp(mgr0);
+      if (re.test(stem)) {
+        w = stem + step3list[suffix];
+      }
+    }
+
+    // Step 4
+    re = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
+    re2 = /^(.+?)(s|t)(ion)$/;
+    if (re.test(w)) {
+      var fp = re.exec(w);
+      stem = fp[1];
+      re = new RegExp(mgr1);
+      if (re.test(stem)) {
+        w = stem;
+      }
+    } else if (re2.test(w)) {
+      var fp = re2.exec(w);
+      stem = fp[1] + fp[2];
+      re2 = new RegExp(mgr1);
+      if (re2.test(stem)) {
+        w = stem;
+      }
+    }
+
+    // Step 5
+    re = /^(.+?)e$/;
+    if (re.test(w)) {
+      var fp = re.exec(w);
+      stem = fp[1];
+      re = new RegExp(mgr1);
+      re2 = new RegExp(meq1);
+      re3 = new RegExp("^" + C + v + "[^aeiouwxy]$");
+      if (re.test(stem) || (re2.test(stem) && !(re3.test(stem)))) {
+        w = stem;
+      }
+    }
+
+    re = /ll$/;
+    re2 = new RegExp(mgr1);
+    if (re.test(w) && re2.test(w)) {
+      re = /.$/;
+      w = w.replace(re,"");
+    }
+
+    // and turn initial Y back to y
+
+    if (firstch == "y") {
+      w = firstch.toLowerCase() + w.substr(1);
+    }
+
+    return w;
+  }
+})();
+/*!
+ * lunr.stopWordFilter
+ * Copyright (C) 2013 Oliver Nightingale
+ */
+
+lunr.stopWordFilter = function (token) {
+  var stopWords = [
+    "a",
+    "able",
+    "about",
+    "across",
+    "after",
+    "all",
+    "almost",
+    "also",
+    "am",
+    "among",
+    "an",
+    "and",
+    "any",
+    "are",
+    "as",
+    "at",
+    "be",
+    "because",
+    "been",
+    "but",
+    "by",
+    "can",
+    "cannot",
+    "could",
+    "dear",
+    "did",
+    "do",
+    "does",
+    "either",
+    "else",
+    "ever",
+    "every",
+    "for",
+    "from",
+    "get",
+    "got",
+    "had",
+    "has",
+    "have",
+    "he",
+    "her",
+    "hers",
+    "him",
+    "his",
+    "how",
+    "however",
+    "i",
+    "if",
+    "in",
+    "into",
+    "is",
+    "it",
+    "its",
+    "just",
+    "least",
+    "let",
+    "like",
+    "likely",
+    "may",
+    "me",
+    "might",
+    "most",
+    "must",
+    "my",
+    "neither",
+    "no",
+    "nor",
+    "not",
+    "of",
+    "off",
+    "often",
+    "on",
+    "only",
+    "or",
+    "other",
+    "our",
+    "own",
+    "rather",
+    "said",
+    "say",
+    "says",
+    "she",
+    "should",
+    "since",
+    "so",
+    "some",
+    "than",
+    "that",
+    "the",
+    "their",
+    "them",
+    "then",
+    "there",
+    "these",
+    "they",
+    "this",
+    "tis",
+    "to",
+    "too",
+    "twas",
+    "us",
+    "wants",
+    "was",
+    "we",
+    "were",
+    "what",
+    "when",
+    "where",
+    "which",
+    "while",
+    "who",
+    "whom",
+    "why",
+    "will",
+    "with",
+    "would",
+    "yet",
+    "you",
+    "your"
+  ]
+
+  if (stopWords.indexOf(token) === -1) return token
+}
+/*!
+ * lunr.stemmer
+ * Copyright (C) 2013 Oliver Nightingale
+ * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
+ */
+
+lunr.TokenStore = function () {
+  this.root = { docs: {} }
+  this.length = 0
+}
+
+lunr.TokenStore.prototype.add = function (token, doc, root) {
+  var root = root || this.root,
+      key = token[0],
+      rest = token.slice(1)
+
+  if (!(key in root)) root[key] = {docs: {}}
+
+  if (rest.length === 0) {
+    root[key].docs[doc.ref] = doc
+    this.length += 1
+    return
+  } else {
+    return this.add(rest, doc, root[key])
+  }
+}
+
+lunr.TokenStore.prototype.has = function (token, root) {
+  var root = root || this.root,
+      key = token[0],
+      rest = token.slice(1)
+
+  if (!(key in root)) return false
+
+  if (rest.length === 0) {
+    return true
+  } else {
+    return this.has(rest, root[key])
+  }
+}
+
+lunr.TokenStore.prototype.getNode = function (token, root) {
+  var root = root || this.root,
+      key = token[0],
+      rest = token.slice(1)
+
+  if (!(key in root)) return {}
+
+  if (rest.length === 0) {
+    return root[key]
+  } else {
+    return this.getNode(rest, root[key])
+  }
+}
+
+lunr.TokenStore.prototype.get = function (token, root) {
+  return this.getNode(token, root).docs || {}
+}
+
+lunr.TokenStore.prototype.remove = function (token, ref, root) {
+  var root = root || this.root,
+      key = token[0],
+      rest = token.slice(1)
+
+  if (!(key in root)) return
+
+  if (rest.length === 0) {
+    delete root[key].docs[ref]
+  } else {
+    return this.remove(rest, ref, root[key])
+  }
+}
+
+lunr.TokenStore.prototype.expand = function (token, memo) {
+  var root = this.getNode(token),
+      docs = root.docs || {},
+      memo = memo || []
+
+  if (Object.keys(docs).length) memo.push(token)
+
+  Object.keys(root)
+    .forEach(function (key) {
+      if (key === 'docs') return
+
+      memo.concat(this.expand(token + key, memo))
+    }, this)
+
+  return memo;
+}
+/*!
+ * lunr.ratchetintegration
+ * Copyright (C) 2013 Simon Waldherr
+ */
+
+var searchindexes = new Array();
+
+function indexList(listid, searchid) {
+  var lunrid = 'lid'+searchindexes.length,
+  listeles = document.getElementById(listid).getElementsByTagName('li'),
+  text;
+
+  if(document.getElementById(searchid).hasAttribute('data-lid') !== 1) {
+    document.getElementById(searchid).setAttribute('data-lid', lunrid);
+
+    searchindexes[lunrid] = lunr(function() {
+      this.field('text');
+    })
+
+    for(var i = 0; i < listeles.length; i++) {
+      if(listeles[i].hasAttribute('data-noindex') !== true) {
+        if(typeof listeles[i].innerText !== 'undefined') {
+          if(listeles[i].innerText.length > 2) {
+            text = {"text" : listeles[i].innerText, "id" : i}
+            searchindexes[lunrid].add(text);
+          }
+        }
+      }
+    }
+  }
+}
+
+function searchList(listid, searchid, searchstring) {
+  var lunrid = document.getElementById(searchid).getAttribute('data-lid'),
+  listeles = document.getElementById(listid).getElementsByTagName('li'),
+  found = searchindexes[lunrid].search(searchstring),
+  foundbool, score;
+  
+  for(var i = 0; i < listeles.length; i++) {
+    if(searchstring.length > 1) {
+      foundbool = false;
+      score = 0;
+      for(var j = 0; j < found.length; j++) {
+        if(parseInt(found[j].ref) === i) {
+          foundbool = true;
+          score = found[j].score;
+        }
+      }
+      if(listeles[i].hasAttribute('data-noindex') !== true) {
+        if(foundbool) {
+          if(score > 0.3) {
+            listeles[i].style.opacity = 1;
+          } else {
+            listeles[i].style.opacity = 0.5;
+          }
+          //listeles[i].style.backgroundColor = '#e1dac7';
+          //listeles[i].style.opacity = 1;
+          listeles[i].style.display = 'list-item';
+        } else {
+          //listeles[i].style.backgroundColor = '#f5bca3';
+          //listeles[i].style.opacity = 0.5;
+          listeles[i].style.display = 'none';
+        }
+      }
+    } else {
+      listeles[i].style.opacity = 1;
+      listeles[i].style.display = 'list-item';
+    }
+  }
+}
