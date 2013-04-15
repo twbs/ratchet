@@ -551,7 +551,7 @@
 
     activeBodies = targetBody.parentNode.querySelectorAll(classSelector);
 
-    for (var i = 0; i < activeBodies.length; i++){
+    for (var i = 0; i < activeBodies.length; i++) {
       activeBodies[i].classList.remove(className);
     }
 
