@@ -140,7 +140,7 @@ a {
   padding: 10px;
 }
 
-/* Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
+/* Pad top/bottom of content so it doesn't hide behind .bar-title, .bar-header-secondary, .bar-footer, and .bar-tab.
    Note: For these to work, content must come after both bars in the markup */
 .bar-title ~ .content {
   top: 44px;
@@ -150,4 +150,7 @@ a {
 }
 .bar-header-secondary ~ .content {
   top: 88px;
+}
+.bar-footer ~ .content {
+  bottom: 44px;
 }
