@@ -71,7 +71,12 @@
 
     if (!anchor || !anchor.hash) return;
 
-    popover = document.querySelector(anchor.hash);
+    try{
+      popover = document.querySelector(anchor.hash);
+    }
+    catch {
+      popover = {}
+    }
 
     if (!popover || !popover.classList.contains('popover')) return;
 
