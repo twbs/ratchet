@@ -28,9 +28,13 @@
 
   window.addEventListener('touchend', function (event) {
     var modal = getModal(event);
-    if (modal) modal.classList.toggle('active');
+    if (modal) {
+      event.preventDefault();
+      modal.classList.toggle('active');
+    }
   });
-}();/* ----------------------------------
+}();
+/* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
@@ -117,12 +121,13 @@
     'slide-out' : 'slide-in',
     'fade'      : 'fade'
   };
+  
   var bars = {
     bartab             : '.bar-tab',
     bartitle           : '.bar-title',
     barfooter          : '.bar-footer',
     barheadersecondary : '.bar-header-secondary'
-  }
+  };
 
   var cacheReplace = function (data, updates) {
     PUSH.id = data.id;
@@ -509,7 +514,8 @@
   window.addEventListener('click', function (e) { if (getTarget(e)) e.preventDefault(); });
   window.addEventListener('popstate', popstate);
 
-}();/* ----------------------------------
+}();
+/* ----------------------------------
  * TABS v1.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
