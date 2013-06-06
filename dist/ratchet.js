@@ -137,13 +137,14 @@
 
     var cacheForwardStack = JSON.parse(cacheMapping.cacheForwardStack || '[]');
     var cacheBackStack    = JSON.parse(cacheMapping.cacheBackStack    || '[]');
+    var pushCacheAsObject = JSON.parse(cacheMapping[PUSH.id]          || '[]');
 
     cacheBackStack.push(id);
 
     while (cacheForwardStack.length)               delete cacheMapping[cacheForwardStack.shift()];
     while (cacheBackStack.length > maxCacheLength) delete cacheMapping[cacheBackStack.shift()];
 
-    window.history.pushState(null, '', cacheMapping[PUSH.id].url);
+    window.history.pushState(null, '', pushCacheAsObject.url);
 
     cacheMapping.cacheForwardStack = JSON.stringify(cacheForwardStack);
     cacheMapping.cacheBackStack    = JSON.stringify(cacheBackStack);
@@ -300,7 +301,7 @@
 
     if (!PUSH.id) {
       cacheReplace({
-        id         : +new Date,
+        id         : new Date(),
         url        : window.location.href,
         title      : document.title,
         timeout    : options.timeout,
@@ -415,15 +416,18 @@
       containerDirection = enter ? 'left' : 'right'
       container.classList.add(containerDirection);
       swap.classList.remove(swapDirection);
-      swap.addEventListener('webkitTransitionEnd', slideEnd);
 
-      function slideEnd() {
+      var slideEnd = function () {
         swap.removeEventListener('webkitTransitionEnd', slideEnd);
         swap.classList.remove('slide');
         swap.classList.remove(swapDirection);
         container.parentNode.removeChild(container);
         complete && complete();
       }
+
+
+      swap.addEventListener('webkitTransitionEnd', slideEnd);
+      swap.addEventListener('transitionend', slideEnd); // firefox      
     }
   };
 
@@ -491,7 +495,8 @@
     }
 
     data.title = head.querySelector('title');
-    data.title = data.title && data.title.innerText.trim();
+    // data.title.innerText doesn't exist in Firefox's JS implementation
+    data.title = data.title && data.title.text.trim();
 
     if (options.transition) data = extendWithDom(data, '.content', body);
     else data.contents = body;
