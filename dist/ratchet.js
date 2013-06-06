@@ -301,7 +301,7 @@
 
     if (!PUSH.id) {
       cacheReplace({
-        id         : new Date(),
+        id         : +new Date,
         url        : window.location.href,
         title      : document.title,
         timeout    : options.timeout,
@@ -417,7 +417,7 @@
       container.classList.add(containerDirection);
       swap.classList.remove(swapDirection);
 
-      var slideEnd = function () {
+      function slideEnd () {
         swap.removeEventListener('webkitTransitionEnd', slideEnd);
         swap.classList.remove('slide');
         swap.classList.remove(swapDirection);
