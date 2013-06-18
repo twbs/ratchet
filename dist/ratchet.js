@@ -577,6 +577,7 @@
   var slideNumber;
   var isScrolling;
   var scrollableArea;
+  var hasMoved;
 
   var getSlider = function (target) {
     var i, sliders = document.querySelectorAll('.slider ul');
@@ -626,6 +627,7 @@
     deltaY = e.touches[0].pageY - pageY;
     pageX  = e.touches[0].pageX;
     pageY  = e.touches[0].pageY;
+    hasMoved = true;
 
     if (typeof isScrolling == 'undefined') {
       isScrolling = Math.abs(deltaY) > Math.abs(deltaX);
@@ -644,7 +646,7 @@
   };
 
   var onTouchEnd = function (e) {
-    if (!slider || isScrolling) return;
+    if (!slider || isScrolling || !hasMoved) return;
 
     setSlideNumber(
       (+new Date) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0
@@ -662,6 +664,7 @@
     });
 
     slider.parentNode.dispatchEvent(e);
+    hasMoved = false
   };
 
   window.addEventListener('touchstart', onTouchStart);
