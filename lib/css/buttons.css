@@ -106,7 +106,7 @@
   margin-left: 4px;
   text-shadow: none;
   background-color: rgba(0, 0, 0, .2);
-  box-shadow: inset 0 1px 1px -1px #000000, 0 1px 1px -1px #fff;
+  
 }
 
 /* Position counts within block level buttons
