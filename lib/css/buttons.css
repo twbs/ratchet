@@ -13,13 +13,13 @@
   vertical-align: top;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0, .5);
   border-radius: 3px;
 }
 
 /* Active */
 [class*="button"]:active {
-  background-image: none;
+  background-color: #333;
 }
 
 /* Button modifiers
@@ -34,33 +34,36 @@
 
 /* Main button */
 .button-main {
-  background-color: #1eafe7;
-  border: 1px solid #117aaa;
+  color: #007aff;
+  border: 1px solid #007aff;
 }
 
 /* Positive button  */
 .button-positive {
-  background-color: #4cd964;
-  border: 1px solid #278f0f;
+  color: #4cd964;
+  border: 1px solid #4cd964;
 }
 
 /* Negative button  */
 .button-negative {
-  background-color: #e71e1e;
+  color: #e71e1e;
   border: 1px solid #b51a1a;
 }
 
 /* Active state for buttons with modifiers */
+[class*="button"]:active,
 .button-main:active,
 .button-positive:active,
 .button-negative:active {
   color: #fff;
 }
 .button-main:active {
-  background-color: #0876b1;
+  color: #fff;
+  background-color: #007aff;
 }
 .button-positive:active {
-  background-color: #298f11;
+  color: #fff;
+  background-color: #4cd964;
 }
 .button-negative:active {
   background-color: #b21a1a;
@@ -84,7 +87,6 @@
   padding-bottom: 2px;
   margin-right: -4px;
   margin-left: 4px;
-  text-shadow: none;
   background-color: rgba(0, 0, 0, .1);
 }
 

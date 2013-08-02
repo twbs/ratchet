@@ -129,9 +129,7 @@
   font-weight: 400;
   line-height: 29px;
   color: #007aff;
-  background: transparent; /* Will remove after the buttons refactor.  */
   border: 0;
-  box-shadow: none; /* Will remove after the buttons refactor.  */
   -webkit-box-flex: 0;
           box-flex: 0;
 }
@@ -159,7 +157,6 @@
 [class*="bar"] .button-block {
   padding: 7px 0;
   margin-bottom: 0;
-  box-shadow: none; /* Will remove after the buttons refactor.  */
 }
 
 /* Override standard padding changes for .button-blocks */
@@ -186,7 +183,7 @@
 
 .bar-title .segmented-controller {
   line-height: 18px;
-  background-color: transparent;
+  background-color: transparent; /* Will remove after the segmented-controller refactor.  */
   background-image: none; /* Will remove after the segmented-controller refactor.  */
   border: 1px solid #007aff;
   border-radius: 3px;
