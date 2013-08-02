@@ -58,13 +58,9 @@
   top: -1px;
   padding-top: 6px;
   padding-bottom: 6px;
-  font-size: 12px;
   font-weight: bold;
   line-height: 18px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
   background-color: #f8f8f8;
-  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #eee 100%);
-  background-image: linear-gradient(to bottom, #f8f8f8 0, #eee 100%);
   border-top: 1px solid rgba(0, 0, 0, .1);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4);
