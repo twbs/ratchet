@@ -10,25 +10,16 @@
   line-height: 18px;
   color: #333;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   vertical-align: top;
   cursor: pointer;
-  background-color: #f8f8f8;
-  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #d4d4d4 100%);
-  background-image: linear-gradient(to bottom, #f8f8f8 0, #d4d4d4 100%);
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, .3);
   border-radius: 3px;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px 2px rgba(0, 0, 0, .05);
 }
 
 /* Active */
 [class*="button"]:active {
-  padding-top: 5px;
-  padding-bottom: 3px;
-  color: #333;
-  background-color: #ccc;
   background-image: none;
-  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
 }
 
 /* Button modifiers
@@ -39,30 +30,23 @@
 .button-positive,
 .button-negative {
   color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
 
 /* Main button */
 .button-main {
   background-color: #1eafe7;
-  background-image: -webkit-linear-gradient(top, #1eafe7 0, #1a97c8 100%);
-  background-image: linear-gradient(to bottom, #1eafe7 0, #1a97c8 100%);
   border: 1px solid #117aaa;
 }
 
 /* Positive button  */
 .button-positive {
-  background-color: #34ba15;
-  background-image: -webkit-linear-gradient(top, #34ba15 0, #2da012 100%);
-  background-image: linear-gradient(to bottom, #34ba15 0, #2da012 100%);
+  background-color: #4cd964;
   border: 1px solid #278f0f;
 }
 
 /* Negative button  */
 .button-negative {
   background-color: #e71e1e;
-  background-image: -webkit-linear-gradient(top, #e71e1e 0,#c71a1a 100%);
-  background-image: linear-gradient(to bottom, #e71e1e 0, #c71a1a 100%);
   border: 1px solid #b51a1a;
 }
 
@@ -90,10 +74,6 @@
   font-size: 16px;
 }
 
-/* Active state for block level buttons */
-.button-block:active {
-  padding: 12px 0;
-}
 
 /* Counts in buttons
 -------------------------------------------------- */
@@ -105,8 +85,7 @@
   margin-right: -4px;
   margin-left: 4px;
   text-shadow: none;
-  background-color: rgba(0, 0, 0, .2);
-  box-shadow: inset 0 1px 1px -1px #000000, 0 1px 1px -1px #fff;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 /* Position counts within block level buttons
