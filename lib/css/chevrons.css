@@ -19,12 +19,12 @@
 
 /* Position and rotate respective 1/2's of the chevron */
 .chevron:before {
-  top: 4px;
+  top: 5px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .chevron:after {
-  top: 8px;
+  top: 9px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }

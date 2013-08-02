@@ -183,38 +183,8 @@
 
 .bar-title .segmented-controller {
   line-height: 18px;
-  background-color: transparent; /* Will remove after the segmented-controller refactor.  */
-  background-image: none; /* Will remove after the segmented-controller refactor.  */
-  border: 1px solid #007aff;
-  border-radius: 3px;
   -webkit-box-flex: 1;
           box-flex: 1;
-}
-
-/* Set color for tab border and highlight */
-.bar-title .segmented-controller li {
-  border-left: 1px solid #007aff;
-}
-
-/* Remove left-hand border from first tab */
-.bar-title .segmented-controller li:first-child {
-  border-left-width: 0;
-}
-
-/* Depressed state (active) */
-.bar-title .segmented-controller li.active {
-  background-color: #007aff;
-  box-shadow: none; /* Will remove after the segmented-controller refactor.  */
-}
-
-/* Set color of links to blue */
-.bar-title .segmented-controller li > a {
-  color: #007aff;
-  text-shadow: none; /* Will remove after the segmented-controller refactor.  */
-}
-/* Set color of links to blue */
-.bar-title .segmented-controller li.active > a {
-  color: #fff;
 }
 
 
