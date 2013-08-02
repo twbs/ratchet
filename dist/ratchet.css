@@ -107,13 +107,13 @@ body {
   bottom: 0;
   left: 0;
   font: 14px/1.25 "Helvetica Neue", sans-serif;
-  color: #222;
+  color: #000;
   background-color: #fff;
 }
 
 /* Universal link styling */
 a {
-  color: #0882f0;
+  color: #007aff;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes the dark touch outlines on links */
 }
@@ -126,7 +126,7 @@ a {
   bottom: 0;
   left: 0;
   overflow: auto;
-  background-color: #fff;
+  background-color: #efeff4;
   -webkit-transition-property: top, bottom;
           transition-property: top, bottom;
   -webkit-transition-duration: .2s, .2s;
@@ -151,13 +151,13 @@ a {
 /* Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
    Note: For these to work, content must come after both bars in the markup */
 .bar-title ~ .content {
-  top: 44px;
+  padding-top: 44px;
 }
 .bar-tab ~ .content {
-  bottom: 51px;
+  padding-bottom: 51px;
 }
 .bar-header-secondary ~ .content {
-  top: 88px;
+  padding-top: 88px;
 }/* General bar styles
 -------------------------------------------------- */
 
@@ -168,26 +168,19 @@ a {
   z-index: 10;
   height: 44px;
   padding: 5px;
+  background-color: rgba(248,248,248,.98);
+  border-bottom: 1px solid #adadad;
   box-sizing: border-box;
 }
 
 /* Modifier class to dock any bar below .bar-title */
 .bar-header-secondary {
-  top: 45px;
+  top: 44px;
 }
 
 /* Modifier class to dock any bar to bottom of viewport */
 .bar-footer {
   bottom: 0;
-}
-
-/* Generic bar for wrapping buttons, segmented controllers, etc. */
-.bar-standard {
-  background-color: #f2f2f2;
-  background-image: -webkit-linear-gradient(top, #f2f2f2 0, #e5e5e5 100%);
-  background-image: linear-gradient(to bottom, #f2f2f2 0, #e5e5e5 100%);
-  border-bottom: 1px solid #aaa;
-  box-shadow: inset 0 1px 1px -1px #fff;
 }
 
 /* Flip border position to top for footer bars */
@@ -205,11 +198,6 @@ a {
   top: 0;
   display: -webkit-box;
   display: box;
-  background-color: #1eb0e9;
-  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #109adc 100%);
-  background-image: linear-gradient(to bottom, #1eb0e9 0, #109adc 100%);
-  border-bottom: 1px solid #0e5895;
-  box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .8);
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
 }
@@ -221,12 +209,11 @@ a {
   left: 0;
   display: block;
   width: 100%;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 44px;
-  color: #fff;
+  color: #000;
   text-align: center;
-  text-shadow: 0 -1px rgba(0, 0, 0, .5);
   white-space: nowrap;
 }
 
@@ -249,12 +236,8 @@ a {
   bottom: 0;
   height: 50px;
   padding: 0;
-  background-color: #393939;
-  background-image: -webkit-linear-gradient(top, #393939 0, #2b2b2b 100%);
-  background-image: linear-gradient(to bottom, #393939 0, #2b2b2b 100%);
-  border-top: 1px solid #000;
+  border-top: 1px solid #adadad;
   border-bottom-width: 0;
-  box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .6);
 }
 
 /* Wrapper for individual tab */
@@ -277,11 +260,6 @@ a {
           box-flex: 1;
 }
 
-/* Active state for tab */
-.tab-item.active {
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, .5);
-}
-
 /* Icon for tab  */
 .tab-icon {
   display: block;
@@ -292,10 +270,12 @@ a {
 /* Label for tab */
 .tab-label {
   margin-top: 1px;
-  font-size: 10px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 1px rgba(0, 0, 0, .3);
+  font-size: 11px;
+  font-weight: 400;
+  color: #929292;
+}
+.tab-item.active .tab-label {
+ color: #007aff;
 }
 
 /* Buttons in title bars
@@ -305,15 +285,11 @@ a {
 .bar-title [class*="button"] {
   position: relative;
   z-index: 10; /* Places buttons over full width title */
-  font-size: 12px;
-  line-height: 23px;
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-  background-color: #1eb0e9;
-  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
-  background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
-  border: 1px solid #0e5895;
-  box-shadow: 0 1px rgba(255, 255, 255, .25);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  color: #007aff;
+  border: 0;
   -webkit-box-flex: 0;
           box-flex: 0;
 }
@@ -331,81 +307,7 @@ a {
 
 /* Override standard button active states */
 .bar-title .button:active {
-  color: #fff;
-  background-color: #0876b1;
-}
-
-/* Directional buttons in title bars (thanks to @GregorAdams for solution - http://cssnerd.com/2011/11/30/the-best-pure-css3-ios-style-arrow-back-button/)
--------------------------------------------------- */
-
-/* Add relative positioning so :before content is positioned properly */
-.bar-title .button-prev,
-.bar-title .button-next {
-  position: relative;
-}
-
-/* Prev/next button base styles */
-.bar-title .button-prev {
-  margin-left: 7px; /* Push over to make room for :before content */
-  border-left: 0;
-  border-bottom-left-radius: 10px 15px;
-  border-top-left-radius: 10px 15px;
-}
-.bar-title .button-next {
-  margin-right: 7px; /* Push over to make room for :before content */
-  border-right: 0;
-  border-top-right-radius: 10px 15px;
-  border-bottom-right-radius: 10px 15px;
-}
-
-/* Pointed part of directional button */
-.bar-title .button-prev:before,
-.bar-title .button-next:before {
-  position: absolute;
-  top: 2px;
-  width: 27px;
-  height: 27px;
-  border-radius: 30px 100px 2px 40px / 2px 40px 30px 100px;
-  content: '';
-  box-shadow: inset 1px 0 #0e5895, inset 0 1px #0e5895;
-  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
-                  mask-image: gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
-}
-.bar-title .button-prev:before {
-  left: -5px;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
-  background-image: gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
-  border-left: 1.5px solid rgba(255, 255, 255, .25);
-  -webkit-transform: rotate(-45deg) skew(-10deg, -10deg);
-          transform: rotate(-45deg) skew(-10deg, -10deg);
-}
-.bar-title .button-next:before {
-  right: -5px;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
-  background-image: gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
-  border-top: 1.5px solid rgba(255, 255, 255, .25);
-  -webkit-transform: rotate(135deg) skew(-10deg, -10deg);
-          transform: rotate(135deg) skew(-10deg, -10deg);
-}
-
-/* Active states for the directional buttons */
-.bar-title .button-prev:active,
-.bar-title .button-next:active,
-.bar-title .button-prev:active:before,
-.bar-title .button-next:active:before {
-  color: #fff;
-  background-color: #0876b1;
-  background-image: none;
-}
-.bar-title .button-prev:active:before,
-.bar-title .button-next:active:before {
-  content: '';
-}
-.bar-title .button-prev:active:before {
-  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
-}
-.bar-title .button-next:active:before {
-  box-shadow: inset 0 -3px 3px rgba(0, 0, 0, .2);
+  opacity: .8;
 }
 
 /* Block buttons in any bar
@@ -415,7 +317,6 @@ a {
 [class*="bar"] .button-block {
   padding: 7px 0;
   margin-bottom: 0;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px rgba(255, 255, 255, .8);
 }
 
 /* Override standard padding changes for .button-blocks */
@@ -442,43 +343,8 @@ a {
 
 .bar-title .segmented-controller {
   line-height: 18px;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-  background-color: #1eb0e9;
-  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
-  background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
-  border: 1px solid #0e5895;
-  border-radius: 3px;
-  box-shadow: 0 1px rgba(255, 255, 255, .25);
   -webkit-box-flex: 1;
           box-flex: 1;
-}
-
-/* Set color for tab border and highlight */
-.bar-title .segmented-controller li {
-  border-left: 1px solid #0e5895;
-  box-shadow: inset 1px 0 rgba(255, 255, 255, .25);
-}
-
-/* Remove inset shadow from first tab or one to the right of the active tab  */
-.bar-title .segmented-controller .active + li,
-.bar-title .segmented-controller li:first-child {
-  box-shadow: none;
-}
-
-/* Remove left-hand border from first tab */
-.bar-title .segmented-controller li:first-child {
-  border-left-width: 0;
-}
-
-/* Depressed state (active) */
-.bar-title .segmented-controller li.active {
-  background-color: #0082c4;
-  box-shadow: inset 0 1px 6px rgba(0, 0, 0, .3);
-}
-
-/* Set color of links to white */
-.bar-title .segmented-controller li > a {
-  color: #fff;
 }
 
 
@@ -549,13 +415,9 @@ a {
   top: -1px;
   padding-top: 6px;
   padding-bottom: 6px;
-  font-size: 12px;
   font-weight: bold;
   line-height: 18px;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
   background-color: #f8f8f8;
-  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #eee 100%);
-  background-image: linear-gradient(to bottom, #f8f8f8 0, #eee 100%);
   border-top: 1px solid rgba(0, 0, 0, .1);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4);
@@ -735,25 +597,16 @@ select {
   line-height: 18px;
   color: #333;
   text-align: center;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   vertical-align: top;
   cursor: pointer;
-  background-color: #f8f8f8;
-  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #d4d4d4 100%);
-  background-image: linear-gradient(to bottom, #f8f8f8 0, #d4d4d4 100%);
-  border: 1px solid rgba(0, 0, 0, .3);
-  border-radius: 3px;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px 2px rgba(0, 0, 0, .05);
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-radius: 4px;
 }
 
 /* Active */
 [class*="button"]:active {
-  padding-top: 5px;
-  padding-bottom: 3px;
-  color: #333;
-  background-color: #ccc;
-  background-image: none;
-  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
+  background-color: #333;
 }
 
 /* Button modifiers
@@ -764,44 +617,40 @@ select {
 .button-positive,
 .button-negative {
   color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
 
 /* Main button */
 .button-main {
-  background-color: #1eafe7;
-  background-image: -webkit-linear-gradient(top, #1eafe7 0, #1a97c8 100%);
-  background-image: linear-gradient(to bottom, #1eafe7 0, #1a97c8 100%);
-  border: 1px solid #117aaa;
+  color: #007aff;
+  border: 1px solid #007aff;
 }
 
 /* Positive button  */
 .button-positive {
-  background-color: #34ba15;
-  background-image: -webkit-linear-gradient(top, #34ba15 0, #2da012 100%);
-  background-image: linear-gradient(to bottom, #34ba15 0, #2da012 100%);
-  border: 1px solid #278f0f;
+  color: #4cd964;
+  border: 1px solid #4cd964;
 }
 
 /* Negative button  */
 .button-negative {
-  background-color: #e71e1e;
-  background-image: -webkit-linear-gradient(top, #e71e1e 0,#c71a1a 100%);
-  background-image: linear-gradient(to bottom, #e71e1e 0, #c71a1a 100%);
+  color: #e71e1e;
   border: 1px solid #b51a1a;
 }
 
 /* Active state for buttons with modifiers */
+[class*="button"]:active,
 .button-main:active,
 .button-positive:active,
 .button-negative:active {
   color: #fff;
 }
 .button-main:active {
-  background-color: #0876b1;
+  color: #fff;
+  background-color: #007aff;
 }
 .button-positive:active {
-  background-color: #298f11;
+  color: #fff;
+  background-color: #4cd964;
 }
 .button-negative:active {
   background-color: #b21a1a;
@@ -815,10 +664,6 @@ select {
   font-size: 16px;
 }
 
-/* Active state for block level buttons */
-.button-block:active {
-  padding: 12px 0;
-}
 
 /* Counts in buttons
 -------------------------------------------------- */
@@ -829,9 +674,7 @@ select {
   padding-bottom: 2px;
   margin-right: -4px;
   margin-left: 4px;
-  text-shadow: none;
-  background-color: rgba(0, 0, 0, .2);
-  box-shadow: inset 0 1px 1px -1px #000000, 0 1px 1px -1px #fff;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 /* Position counts within block level buttons
@@ -857,8 +700,8 @@ select {
   position: relative;
   display: block;
   width: 12px;
-  height: 4px;
-  background-color: #999;
+  height: 3px;
+  background-color: #c7c7cc;
   content: '';
 }
 
@@ -869,7 +712,7 @@ select {
           transform: rotate(45deg);
 }
 .chevron:after {
-  top: 7px;
+  top: 9px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }/* General count styles
@@ -894,28 +737,21 @@ select {
 .count-positive,
 .count-negative {
   color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
 
 /* Main count  */
 .count-main {
   background-color: #1eafe7;
-  background-image: -webkit-linear-gradient(top, #1eafe7 0, #1a97c8 100%);
-  background-image: linear-gradient(to bottom, #1eafe7 0, #1a97c8 100%);
 }
 
 /* Positive count  */
 .count-positive {
-  background-color: #34ba15;
-  background-image: -webkit-linear-gradient(top, #34ba15 0, #2da012 100%);
-  background-image: linear-gradient(to bottom, #34ba15 0, #2da012 100%);
+  background-color: #4cd964;
 }
 
 /* Negative count  */
 .count-negative {
   background-color: #e71e1e;
-  background-image: -webkit-linear-gradient(top, #e71e1e 0,#c71a1a 100%);
-  background-image: linear-gradient(to bottom, #e71e1e 0, #c71a1a 100%);
 }/* Segmented controllers
 -------------------------------------------------- */
 
@@ -926,14 +762,10 @@ select {
   overflow: hidden;
   font-size: 12px;
   font-weight: bold;
-  text-shadow: 0 1px rgba(255, 255, 255, .5);
   list-style: none;
-  background-color: #f8f8f8;
-  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #d4d4d4 100%);
-  background-image: linear-gradient(to bottom, #f8f8f8 0, #d4d4d4 100%);
-  border: 1px solid #aaa;
-  border-radius: 3px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 1px rgba(255, 255, 255, .8);
+  background-color: transparent;
+  border: 1px solid #007aff;
+  border-radius: 4px;
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
 }
@@ -943,8 +775,7 @@ select {
   overflow: hidden;
   text-align: center;
   white-space: nowrap;
-  border-left: 1px solid #aaa;
-  box-shadow: inset 1px 0 rgba(255, 255, 255, .5);
+  border-left: 1px solid #007aff;
   -webkit-box-flex: 1;
           box-flex: 1;
 }
@@ -955,20 +786,22 @@ select {
   padding: 8px 16px;
   overflow: hidden;
   line-height: 15px;
-  color: #333;
+  color: #007aff;
   text-overflow: ellipsis;
 }
 
 /* Remove border-left and shadow from first section */
 .segmented-controller li:first-child {
   border-left-width: 0;
-  box-shadow: none;
 }
 
 /* Active segment of controller */
 .segmented-controller li.active {
-  background-color: #ccc;
-  box-shadow: inset 0 1px 5px rgba(0, 0, 0, .3);
+  background-color: #007aff;
+}
+/* Set color of links to white */
+.segmented-controller li.active > a {
+  color: #fff;
 }
 
 .segmented-controller-item {
@@ -1196,24 +1029,11 @@ select {
 
 .toggle {
   position: relative;
-  width: 75px;
+  width: 45px;
   height: 28px;
-  background-color: #eee;
-  border: 1px solid #bbb;
+  background-color: #fff;
+  border: 2px solid #e6e6e6;
   border-radius: 20px;
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, .1);
-}
-
-/* Text indicating "on" or "off". Default is "off" */
-.toggle:before {
-  position: absolute;
-  right: 13px;
-  font-weight: bold;
-  line-height: 28px;
-  color: #777;
-  text-shadow: 0 1px #fff;
-  text-transform: uppercase;
-  content: "Off";
 }
 
 /* Sliding handle */
@@ -1225,37 +1045,22 @@ select {
   width: 28px;
   height: 28px;
   background-color: #fff;
-  background-image: -webkit-linear-gradient(top, #fff 0, #f2f2f2 100%);
-  background-image: linear-gradient(to bottom, #fff 0, #f2f2f2 100%);
-  border: 1px solid rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, .1);
   border-radius: 100px;
+  box-shadow: 0 3px 3px rgba(0,0,0,.08);
   -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
                   transition: transform 0.1s ease-in-out, border 0.1s ease-in-out;
 }
 
 /* Active state for toggle */
 .toggle.active {
-  background-color: #19a8e4;
-  background-image: -webkit-linear-gradient(top, #088cd4 0, #19a8e4 100%);
-  background-image: linear-gradient(to bottom, #088cd4 0, #19a8e4 100%);
-  border: 1px solid #096c9d;
-  box-shadow: inset 0 0 15px rgba(255, 255, 255, .25);
+  background-color: #4cd964;
+  border: 1px solid #4cd964;
 }
 
 /* Active state for toggle handle */
 .toggle.active .toggle-handle {
-  border-color: #0a76ad;
-  -webkit-transform: translate3d(48px,0,0);
-          transform: translate3d(48px,0,0);
-}
-
-/* Change "off" to "on" for active state */
-.toggle.active:before {
-  right: auto;
-  left: 15px;
-  color: #fff;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
-  content: "On";
+  border-color: #4cd964;
 }/* Push styles (to be used with push.js)
 -------------------------------------------------- */
 
