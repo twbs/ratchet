@@ -99,13 +99,13 @@ body {
   bottom: 0;
   left: 0;
   font: 14px/1.25 "Helvetica Neue", sans-serif;
-  color: #222;
+  color: #000;
   background-color: #fff;
 }
 
 /* Universal link styling */
 a {
-  color: #0882f0;
+  color: #007aff;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes the dark touch outlines on links */
 }
@@ -118,7 +118,7 @@ a {
   bottom: 0;
   left: 0;
   overflow: auto;
-  background-color: #fff;
+  background-color: #efeff4;
   -webkit-transition-property: top, bottom;
           transition-property: top, bottom;
   -webkit-transition-duration: .2s, .2s;
@@ -143,11 +143,11 @@ a {
 /* Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
    Note: For these to work, content must come after both bars in the markup */
 .bar-title ~ .content {
-  top: 44px;
+  padding-top: 44px;
 }
 .bar-tab ~ .content {
-  bottom: 51px;
+  padding-bottom: 51px;
 }
 .bar-header-secondary ~ .content {
-  top: 88px;
+  padding-top: 88px;
 }
