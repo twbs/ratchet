@@ -149,7 +149,9 @@
 }
 
 /* Override standard button active states */
-.bar-title .button:active {
+.bar-title .button:active,
+.bar-title .button-prev:active,
+.bar-title .button-next:active {
   color: #007aff;
   background-color: transparent;
   opacity: .3;
@@ -157,11 +159,6 @@
 
 /* Directional buttons in title bars
 -------------------------------------------------- */
-
-/* Add relative positioning so :before content is positioned properly */
-.bar-title .button-prev {
-  display: block; !important;
-}
 
 .bar-title .button-prev:before,
 .bar-title .button-prev:after,
