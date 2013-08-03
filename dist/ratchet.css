@@ -168,7 +168,7 @@ a {
   z-index: 10;
   height: 44px;
   padding: 5px;
-  background-color: rgba(248,248,248,.98);
+  background-color: rgba(247,247,247,.98);
   border-bottom: 1px solid #adadad;
   box-sizing: border-box;
 }
@@ -285,11 +285,14 @@ a {
 .bar-title [class*="button"] {
   position: relative;
   z-index: 10; /* Places buttons over full width title */
+  padding-left: 5px;
+  padding-right: 5px;
   font-size: 16px;
   font-weight: 400;
   line-height: 29px;
   color: #007aff;
   border: 0;
+  transition: opacity .2s linear;
   -webkit-box-flex: 0;
           box-flex: 0;
 }
@@ -307,7 +310,75 @@ a {
 
 /* Override standard button active states */
 .bar-title .button:active {
-  opacity: .8;
+  color: #007aff;
+  background-color: transparent;
+  opacity: .3;
+}
+
+/* Directional buttons in title bars
+-------------------------------------------------- */
+
+/* Add relative positioning so :before content is positioned properly */
+.bar-title .button-prev {
+  display: block; !important;
+}
+
+.bar-title .button-prev:before,
+.bar-title .button-prev:after,
+.bar-title .button-next:before,
+.bar-title .button-next:after {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 3px;
+  background-color: #007aff;
+  content: '';
+}
+
+/* Prev/next button base styles */
+.bar-title .button-prev {
+  padding-left: 20px; /* Push over to make room for chevrons */
+}
+.bar-title .button-next {
+  padding-right: 20px; /* Push over to make room for chevrons */
+}
+
+/* Position the chevrons horizontally */
+.bar-title .button-prev:before,
+.bar-title .button-prev:after {
+  left: 0;
+}
+.bar-title .button-next:before,
+.bar-title .button-next:after {
+  right: 0;
+}
+
+/* Position the chevrons vertically */
+.bar-title .button-prev:before, 
+.bar-title .button-next:before {
+  top: 12px;
+}
+.bar-title .button-prev:after, 
+.bar-title .button-next:after {
+  top: 21px;
+}
+
+/* Rotate the chevrons */
+.bar-title .button-prev:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.bar-title .button-prev:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.bar-title .button-next:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.bar-title .button-next:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 /* Block buttons in any bar
@@ -607,6 +678,7 @@ select {
 /* Active */
 [class*="button"]:active {
   background-color: #333;
+  transition: background-color .2s linear;
 }
 
 /* Button modifiers
@@ -798,6 +870,7 @@ select {
 /* Active segment of controller */
 .segmented-controller li.active {
   background-color: #007aff;
+  transition: background-color .2s linear;
 }
 /* Set color of links to white */
 .segmented-controller li.active > a {

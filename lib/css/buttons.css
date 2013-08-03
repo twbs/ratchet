@@ -20,6 +20,7 @@
 /* Active */
 [class*="button"]:active {
   background-color: #333;
+  transition: background-color .2s linear;
 }
 
 /* Button modifiers

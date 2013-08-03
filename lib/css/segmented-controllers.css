@@ -44,6 +44,7 @@
 /* Active segment of controller */
 .segmented-controller li.active {
   background-color: #007aff;
+  transition: background-color .2s linear;
 }
 /* Set color of links to white */
 .segmented-controller li.active > a {
