@@ -309,7 +309,9 @@ a {
 }
 
 /* Override standard button active states */
-.bar-title .button:active {
+.bar-title .button:active,
+.bar-title .button-prev:active,
+.bar-title .button-next:active {
   color: #007aff;
   background-color: transparent;
   opacity: .3;
@@ -317,11 +319,6 @@ a {
 
 /* Directional buttons in title bars
 -------------------------------------------------- */
-
-/* Add relative positioning so :before content is positioned properly */
-.bar-title .button-prev {
-  display: block; !important;
-}
 
 .bar-title .button-prev:before,
 .bar-title .button-prev:after,
@@ -573,7 +570,6 @@ input[type="color"],
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(0, 0, 0, .1);
   -webkit-appearance: none;
   box-sizing: border-box;
   outline: none;
@@ -583,7 +579,9 @@ input[type="color"],
 input[type=search] {
   height: 34px;
   font-size: 14px;
-  border-radius: 30px;
+  border-radius: 6px;
+  border-width: 0;
+  background-color: rgba(0,0,0,.11);
 }
 
 /* Allow text area's height to grow larger than a normal input */
@@ -678,7 +676,7 @@ select {
 /* Active */
 [class*="button"]:active {
   background-color: #333;
-  transition: background-color .2s linear;
+  transition: background-color .1s linear;
 }
 
 /* Button modifiers
@@ -1128,7 +1126,7 @@ select {
 /* Active state for toggle */
 .toggle.active {
   background-color: #4cd964;
-  border: 1px solid #4cd964;
+  border: 2px solid #4cd964;
 }
 
 /* Active state for toggle handle */

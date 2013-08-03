@@ -35,7 +35,6 @@ input[type="color"],
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 3px;
-  box-shadow: 0 1px 1px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(0, 0, 0, .1);
   -webkit-appearance: none;
   box-sizing: border-box;
   outline: none;
@@ -45,7 +44,9 @@ input[type="color"],
 input[type=search] {
   height: 34px;
   font-size: 14px;
-  border-radius: 30px;
+  border-radius: 6px;
+  border-width: 0;
+  background-color: rgba(0,0,0,.11);
 }
 
 /* Allow text area's height to grow larger than a normal input */
