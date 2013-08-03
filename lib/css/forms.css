@@ -46,7 +46,7 @@ input[type=search] {
   font-size: 14px;
   border-radius: 6px;
   border-width: 0;
-  background-color: rgba(0,0,0,.11);
+  background-color: rgba(0,0,0,.1);
 }
 
 /* Allow text area's height to grow larger than a normal input */
