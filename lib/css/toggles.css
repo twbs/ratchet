@@ -29,7 +29,7 @@
 /* Active state for toggle */
 .toggle.active {
   background-color: #4cd964;
-  border: 1px solid #4cd964;
+  border: 2px solid #4cd964;
 }
 
 /* Active state for toggle handle */
