@@ -9,7 +9,7 @@
   height: 44px;
   padding: 5px;
   background-color: rgba(247,247,247,.98);
-  border-bottom: 1px solid #adadad;
+  border-bottom: 1px solid rgba(0,0,0,.3);
   box-sizing: border-box;
 }
 
@@ -76,7 +76,7 @@
   bottom: 0;
   height: 50px;
   padding: 0;
-  border-top: 1px solid #adadad;
+  border-top: 1px solid rgba(0,0,0,.3);
   border-bottom-width: 0;
 }
 
