@@ -1,6 +1,6 @@
 /**
  * ==================================
- * Ratchet v1.0.1
+ * Ratchet v1.0.2
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ==================================
@@ -558,7 +558,7 @@
 
   window.addEventListener('click', function (e) { if (getTarget(e.target)) e.preventDefault(); });
 }();/* ----------------------------------
- * SLIDER v1.0.0
+ * SLIDER v1.0.1
  * Licensed under The MIT License
  * Adapted from Brad Birdsall's swipe
  * http://opensource.org/licenses/MIT
@@ -581,7 +581,7 @@
   var scrollableArea;
 
   var getSlider = function (target) {
-    var i, sliders = document.querySelectorAll('.slider ul');
+    var i, sliders = document.querySelectorAll('.slider > ul');
     for (; target && target !== document; target = target.parentNode) {
       for (i = sliders.length; i--;) { if (sliders[i] === target) return target; }
     }

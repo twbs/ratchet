@@ -6,7 +6,7 @@ build:
 	mkdir -p dist
 	cat lib/css/base.css lib/css/bars.css lib/css/lists.css lib/css/forms.css lib/css/buttons.css lib/css/chevrons.css lib/css/counts.css lib/css/segmented-controllers.css lib/css/popovers.css lib/css/modals.css lib/css/sliders.css lib/css/toggles.css lib/css/push.css > ./dist/ratchet.tmp.css
 	cat lib/js/*.js > ./dist/ratchet.tmp.js
-	@echo "/**\n * ==================================\n * Ratchet v1.0.1\n * Licensed under The MIT License\n * http://opensource.org/licenses/MIT\n * ==================================\n */\n" > ./dist/copywrite.txt
+	@echo "/**\n * ==================================\n * Ratchet v1.0.2\n * Licensed under The MIT License\n * http://opensource.org/licenses/MIT\n * ==================================\n */\n" > ./dist/copywrite.txt
 	cat ./dist/copywrite.txt ./dist/ratchet.tmp.js  > ./dist/ratchet.js
 	cat ./dist/copywrite.txt ./dist/ratchet.tmp.css > ./dist/ratchet.css
 	rm  ./dist/ratchet.tmp.css ./dist/ratchet.tmp.js ./dist/copywrite.txt

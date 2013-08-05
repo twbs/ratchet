@@ -1,6 +1,6 @@
 /**
  * ==================================
- * Ratchet v1.0.1
+ * Ratchet v1.0.2
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ==================================
@@ -436,7 +436,7 @@ a {
 /* Pad each list item and add dividers */
 .list li {
   position: relative;
-  padding: 20px 60px 20px 10px; /* Given extra right padding to accomodate counts, chevrons or buttons */
+  padding: 11px 60px 11px 10px; /* Given extra right padding to accomodate counts, chevrons or buttons */
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -450,7 +450,7 @@ a {
   position: relative;
   display: block;
   padding: inherit;
-  margin: -20px -60px -20px -10px;
+  margin: -11px -60px -11px -10px;
   color: inherit;
 }
 
@@ -734,6 +734,11 @@ select {
   font-size: 16px;
 }
 
+
+/* Make button elements go full width when given .button-block class */
+button.button-block {
+  width: 100%;
+}
 
 /* Counts in buttons
 -------------------------------------------------- */

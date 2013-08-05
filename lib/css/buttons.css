@@ -79,6 +79,11 @@
 }
 
 
+/* Make button elements go full width when given .button-block class */
+button.button-block {
+  width: 100%;
+}
+
 /* Counts in buttons
 -------------------------------------------------- */
 
