@@ -1,4 +1,4 @@
-# Ratchet
+# Ratchet v1.0.2
 
 Prototype mobile apps with simple HTML, CSS and JS components.
 
@@ -28,23 +28,6 @@ A small list of "gotchas" are provided below for designers and developers starti
 - Script tags containing javascript will not be executed on pages that are loaded with push.js. If you would like to attach event handlers to elements on other pages, document-level event delegation is a common solution.
 - Ratchet uses XHR requests to fetch additional pages inside the application. Due to security concerns, modern browsers prevent XHR requests when opening files locally (aka using the file:/// protocol); consequently, Ratchet does not work when opened directly as a file.
     - A common solution to this is to simply serve the files from a local server. One convenient way to achieve this is to run ```python -m SimpleHTTPServer <port>``` to serve up the files in the current directory to ```http://localhost:<port>```
-
-## Future features
-
-Ratchet is just getting started. Here are some of the immediate features we're thinking about:
-
-- Shelf (exposable left hand navigation a la Path or Facebook)
-- Gridviews
-- Notifications
-- Slide control
-- More list views options
-- Improved active states (especially for lists)
-- Docking list dividers
-- Touch library for richer touch events (swipes, long press, etc)
-- Autocomplete
-- Hiding title bar (hides with scroll)
-
-Even these are just the short-term goals though. We eventually want to extend Ratchet beyond the prototying for iPhone and create HTML/CSS/JS components for iPad and Android devices. Our dream is that Ratchet becomes the best way to create mobile experiences with web standard languages.
 
 ## Authors
 
