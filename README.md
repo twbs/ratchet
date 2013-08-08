@@ -34,7 +34,7 @@ A small list of "gotchas" are provided below for designers and developers starti
 Dave Gamache
 
 - http://twitter.com/dhg
-- http://github.com/dhgamache
+- http://github.com/dhg
 
 Connor Sears
 
