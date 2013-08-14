@@ -169,7 +169,8 @@ a {
   height: 44px;
   padding: 5px;
   background-color: rgba(247,247,247,.98);
-  border-bottom: 1px solid rgba(0,0,0,.3);
+  box-shadow: 0 0px 1px rgba(0,0,0,.85);
+  /*border-bottom: 1px solid rgba(0,0,0,.3);*/
   box-sizing: border-box;
 }
 
@@ -186,8 +187,9 @@ a {
 /* Flip border position to top for footer bars */
 .bar-footer.bar-standard,
 .bar-footer-secondary.bar-standard {
-  border-top: 1px solid #aaa;
-  border-bottom-width: 0;
+  /*border-top: 1px solid #aaa;
+  border-bottom-width: 0;*/
+  box-shadow: 0 0px 1px rgba(0,0,0,.85);
 }
 
 /* Title bar
@@ -236,8 +238,9 @@ a {
   bottom: 0;
   height: 50px;
   padding: 0;
-  border-top: 1px solid rgba(0,0,0,.3);
-  border-bottom-width: 0;
+  /*border-top: 1px solid rgba(0,0,0,.3);
+  border-bottom-width: 0;*/
+  box-shadow: 0 0px 1px rgba(0,0,0,.85);
 }
 
 /* Wrapper for individual tab */
