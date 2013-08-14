@@ -1,4 +1,4 @@
-# Ratchet v1.0.2
+# Ratchet v2.0 WIP
 
 Prototype mobile apps with simple HTML, CSS and JS components.
 
