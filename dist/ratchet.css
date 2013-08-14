@@ -1137,6 +1137,8 @@ button.button-block {
 /* Active state for toggle handle */
 .toggle.active .toggle-handle {
   border-color: #4cd964;
+  -webkit-transform: translate3d(17px,0,0);
+          transform: translate3d(17px,0,0);
 }/* Push styles (to be used with push.js)
 -------------------------------------------------- */
 
