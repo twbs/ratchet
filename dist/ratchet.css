@@ -774,7 +774,7 @@ button.button-block {
 .chevron:after {
   position: relative;
   display: block;
-  width: 12px;
+  width: 10px;
   height: 3px;
   background-color: #c7c7cc;
   content: '';
@@ -782,12 +782,12 @@ button.button-block {
 
 /* Position and rotate respective 1/2's of the chevron */
 .chevron:before {
-  top: 5px;
+  top: 6px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .chevron:after {
-  top: 9px;
+  top: 8px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }/* General count styles
