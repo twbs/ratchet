@@ -334,10 +334,10 @@ a {
 
 /* Prev/next button base styles */
 .bar-title .button-prev {
-  padding-left: 20px; /* Push over to make room for chevrons */
+  padding-left: 22px; /* Push over to make room for chevrons */
 }
 .bar-title .button-next {
-  padding-right: 20px; /* Push over to make room for chevrons */
+  padding-right: 22px; /* Push over to make room for chevrons */
 }
 
 /* Position the chevrons horizontally */
