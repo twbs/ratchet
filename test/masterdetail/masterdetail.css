@@ -1,0 +1,17 @@
+.masterDetail .master, .masterDetail .detail {
+	height:100%;
+	overflow:hidden;
+}
+.masterDetail .bar-title{
+	position: static;
+}
+.masterDetail .master {
+	position:absolute;
+	width:299px;
+	left:0;
+}
+.masterDetail .detail{
+	position:absolute;
+	left:300px;
+	right:0;
+}
