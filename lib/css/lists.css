@@ -3,7 +3,6 @@
 
 /* Remove usual bullet styles from list */
 .list {
-  margin-bottom: 10px;
   list-style: none;
   background-color: #fff;
 }
@@ -11,7 +10,8 @@
 /* Pad each list item and add dividers */
 .list li {
   position: relative;
-  padding: 11px 60px 11px 10px; /* Given extra right padding to accomodate counts, chevrons or buttons */
+  padding: 11px 60px 11px 0; /* Given extra right padding to accomodate counts, chevrons or buttons */
+  margin-left: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -20,12 +20,17 @@
   border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
+/* Remove the border from the last list item*/
+.list li:last-child {
+  border-bottom: 0;
+}
+
 /* If a list of links, make sure the child <a> takes up full list item tap area (want to avoid selecting child buttons though) */
 .list li > a:not([class*="button"]) {
   position: relative;
   display: block;
   padding: inherit;
-  margin: -11px -60px -11px -10px;
+  margin: -11px -60px -11px 0;
   color: inherit;
 }
 
@@ -58,6 +63,8 @@
   top: -1px;
   padding-top: 6px;
   padding-bottom: 6px;
+  padding-left: 15px; 
+  margin-left: 0;
   font-weight: bold;
   line-height: 18px;
   background-color: #f8f8f8;
