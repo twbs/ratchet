@@ -10,23 +10,20 @@ module.exports = function(grunt) {
         distPath: 'dist/'
     },
     
-    banner: '/*!\n' +
-              '* Ratchet v<%= pkg.version %> by @connors, @dhg, and @fat\n' +
-              '* Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-              '* Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
-              '*\n' +
-              '* Designed and built by @connors, @dhg, and @fat.\n' +
-              '*/\n',
+    banner: '/*\n' +
+            '* =====================================================\n' +
+            '* Ratchet v<%= pkg.version %>\n' +
+            '* Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            '* Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+            '*\n' +
+            '* Designed and built by @connors, @dhg, and @fat.\n' +
+            '* =====================================================\n' +
+            '*/\n',
+
     
     sass: {
         options: {
-          banner: '/**\n' +
-                  '* ==================================\n' +
-                  '* Ratchet v2.0.0\n' +
-                  '* Licensed under The MIT License\n' +
-                  '* http://opensource.org/licenses/MIT\n' +
-                  '* ==================================\n' +
-                  '*/\n',
+          banner: '<%= banner %>',
         },
         dist: {
             files: {
