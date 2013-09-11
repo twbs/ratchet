@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     // Metadata.
     meta: {
-        srcPath: 'lib/sass/',
+        srcPath: 'lib/',
         distPath: 'dist/'
     },
     
@@ -19,7 +19,23 @@ module.exports = function(grunt) {
             '* Designed and built by @connors, @dhg, and @fat.\n' +
             '* =====================================================\n' +
             '*/\n',
-
+    
+    concat: {
+      options: {
+        banner: '<%= banner %><%= jqueryCheck %>'
+      },
+      ratchet: {
+        src: [
+          '<%= meta.srcPath %>js/modals.js',
+          '<%= meta.srcPath %>js/popover.js',
+          '<%= meta.srcPath %>js/push.js',
+          '<%= meta.srcPath %>js/segmented-controllers.js',
+          '<%= meta.srcPath %>js/sliders.js',
+          '<%= meta.srcPath %>js/toggles.js'
+        ],
+        dest: '<%= meta.distPath %><%= pkg.name %>.js'
+      }
+    },
     
     sass: {
         options: {
@@ -27,7 +43,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                '<%= meta.distPath %>ratchet.css': '<%= meta.srcPath %>ratchet.scss'
+                '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss'
             }
         }
     },
@@ -43,12 +59,12 @@ module.exports = function(grunt) {
   });
 
   // Load the plugin that provides the "uglify" task.
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Default task(s).
-  //grunt.registerTask('default', ['uglify']);
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['sass', 'concat']);
+  grunt.registerTask('build', ['sass', 'concat']);
 
 };
