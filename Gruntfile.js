@@ -19,13 +19,30 @@ module.exports = function(grunt) {
         dest: 'build/<%= pkg.name %>.min.js'
       }
     }
+
+    sass: {
+      dist : {
+        files: [{
+        expand: true,
+        cwd: 'ratchet',
+        src: ['lib/scss/*.scss'],
+        dest: 'dist',
+        ext: '.css'
+      }]
+      }
+    }
+
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  
+
   // Default task(s).
   grunt.registerTask('default', ['uglify']);
 
 };
+
+grunt.loadNpmTasks('grunt-contrib-sass');
+
+grunt.registerTask('default', ['sass']);

@@ -1,26 +1,33 @@
 {
-    "name": "ratchet"
-  , "version": "2.0.0"
-  , "devDependencies": {
-      "grunt": "~0.4.1",
-      "grunt-contrib-jshint": "~0.6.3",
-      "grunt-contrib-nodeunit": "~0.2.0",
-      "grunt-contrib-uglify": "~0.2.2"
-  }
-  , "keywords": ["ratchet", "css", "ios", "prototype"]
-  , "homepage": "http://maker.github.com/ratchet/"
-  , "author": "Connor Sears, Dave Gamache, and Jacob Thornton"
-  , "repository": {
-      "type": "git"
-    , "url": "https://github.com/maker/ratchet.git"
-  }
-  , "bugs": {
-      "url": "https://github.com/maker/ratchet/issues"
-  }
-  , "licenses": [
+  "name": "ratchet",
+  "version": "2.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-sass": "~0.5.0"
+  },
+  "keywords": [
+    "ratchet",
+    "css",
+    "ios",
+    "prototype"
+  ],
+  "homepage": "http://maker.github.com/ratchet/",
+  "author": "Connor Sears, Dave Gamache, and Jacob Thornton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maker/ratchet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maker/ratchet/issues"
+  },
+  "licenses": [
     {
-        "type": "MIT"
-      , "url": "http://www.opensource.org/licenses/MIT"
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
     }
-   ]
+  ]
 }
