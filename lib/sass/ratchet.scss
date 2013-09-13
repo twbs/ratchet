@@ -1,4 +1,7 @@
+ // Base CSS & Reset
  @import "base.scss";
+
+ // Components
  @import "bars.scss";
  @import "lists.scss";
  @import "forms.scss";
@@ -7,6 +10,8 @@
  @import "counts.scss";
  @import "segmented-controllers.scss";
  @import "popovers.scss";
+
+ // Javascript components
  @import "modals.scss";
  @import "sliders.scss";
  @import "toggles.scss";
