@@ -22,7 +22,7 @@ module.exports = function(grunt) {
     
     concat: {
       options: {
-        banner: '<%= banner %><%= jqueryCheck %>'
+        banner: '<%= banner %>'
       },
       ratchet: {
         src: [
