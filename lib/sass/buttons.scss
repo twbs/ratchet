@@ -35,8 +35,8 @@
 
 // Main button
 .button-main {
-  color: #007aff;
-  border: 1px solid #007aff;
+  color: $app-color;
+  border: 1px solid $app-color;
 }
 
 // Positive button
@@ -60,7 +60,7 @@
 }
 .button-main:active {
   color: #fff;
-  background-color: #007aff;
+  background-color: $app-color;
 }
 .button-positive:active {
   color: #fff;

@@ -8,7 +8,7 @@
   z-index: 10;
   height: 44px;
   padding: 5px;
-  background-color: rgba(247,247,247,.98);
+  background-color: $chrome-color;
   box-shadow: 0 0px 1px rgba(0,0,0,.85);
   box-sizing: border-box;
 }
@@ -113,7 +113,7 @@
   color: #929292;
 }
 .tab-item.active .tab-label {
- color: #007aff;
+ color: $app-color;
 }
 
 /* Buttons in title bars
@@ -128,7 +128,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 29px;
-  color: #007aff;
+  color: $app-color;
   border: 0;
   transition: opacity .2s linear;
   -webkit-box-flex: 0;
@@ -150,7 +150,7 @@
 .bar-title .button:active,
 .bar-title .button-prev:active,
 .bar-title .button-next:active {
-  color: #007aff;
+  color: $app-color;
   background-color: transparent;
   opacity: .3;
 }
@@ -166,7 +166,7 @@
   display: block;
   width: 15px;
   height: 3px;
-  background-color: #007aff;
+  background-color: $app-color;
   content: '';
 }
 

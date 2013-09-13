@@ -10,7 +10,7 @@
   font-weight: bold;
   list-style: none;
   background-color: transparent;
-  border: 1px solid #007aff;
+  border: 1px solid $app-color;
   border-radius: 4px;
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
@@ -21,7 +21,7 @@
   overflow: hidden;
   text-align: center;
   white-space: nowrap;
-  border-left: 1px solid #007aff;
+  border-left: 1px solid $app-color;
   -webkit-box-flex: 1;
           box-flex: 1;
 }
@@ -32,7 +32,7 @@
   padding: 8px 16px;
   overflow: hidden;
   line-height: 15px;
-  color: #007aff;
+  color: $app-color;
   text-overflow: ellipsis;
 }
 
@@ -43,7 +43,7 @@
 
 // Active segment of controller
 .segmented-controller li.active {
-  background-color: #007aff;
+  background-color: $app-color;
   transition: background-color .2s linear;
 }
 // Set color of links to white

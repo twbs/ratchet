@@ -1,19 +1,22 @@
- // Base CSS & Reset
- @import "base.scss";
+// Variables
+$app-color: #007aff;
+$chrome-color: rgba(247,247,247,.98);
 
- // Components
- @import "bars.scss";
- @import "lists.scss";
- @import "forms.scss";
- @import "buttons.scss";
- @import "chevrons.scss";
- @import "counts.scss";
- @import "segmented-controllers.scss";
- @import "popovers.scss";
+// Base CSS & Reset
+@import "base.scss";
 
- // Javascript components
- @import "modals.scss";
- @import "sliders.scss";
- @import "toggles.scss";
- @import "push.scss";
- 
+// Components
+@import "bars.scss";
+@import "lists.scss";
+@import "forms.scss";
+@import "buttons.scss";
+@import "chevrons.scss";
+@import "counts.scss";
+@import "segmented-controllers.scss";
+@import "popovers.scss";
+
+// Javascript components
+@import "modals.scss";
+@import "sliders.scss";
+@import "toggles.scss";
+@import "push.scss";
