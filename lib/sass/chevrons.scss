@@ -6,7 +6,7 @@
   height: 20px;
 }
 
-/* Base styles for both 1/2's of the chevron */
+// Base styles for both 1/2's of the chevron
 .chevron:before,
 .chevron:after {
   position: relative;
@@ -17,7 +17,7 @@
   content: '';
 }
 
-/* Position and rotate respective 1/2's of the chevron */
+// Position and rotate respective 1/2's of the chevron
 .chevron:before {
   top: 6px;
   -webkit-transform: rotate(45deg);

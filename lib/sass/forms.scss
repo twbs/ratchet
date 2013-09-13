@@ -1,7 +1,7 @@
 /* Forms
 -------------------------------------------------- */
 
-/* Force form elements to inherit font styles */
+// Force form elements to inherit font styles
 input,
 textarea,
 button,
@@ -10,7 +10,7 @@ select {
   font-size: inherit;
 }
 
-/* Stretch inputs/textareas to full width and add height to maintain a consistent baseline */
+// Stretch inputs/textareas to full width and add height to maintain a consistent baseline
 select,
 textarea,
 input[type="text"],
@@ -40,7 +40,7 @@ input[type="color"],
   outline: none;
 }
 
-/* Fully round search input */
+// Fully round search input
 input[type=search] {
   height: 34px;
   font-size: 14px;
@@ -49,12 +49,12 @@ input[type=search] {
   background-color: rgba(0,0,0,.1);
 }
 
-/* Allow text area's height to grow larger than a normal input */
+// Allow text area's height to grow larger than a normal input
 textarea {
   height: auto;
 }
 
-/* Style select button to look like part of the Ratchet's style */
+// Style select button to look like part of the Ratchet's style
 select {
   height: auto;
   font-size: 14px;
@@ -66,16 +66,16 @@ select {
 
 
 /* Input groups (cluster multiple inputs together into a single group)
--------------------------------------------------- */
+---------------------------------------------------------------------- */
 
-/* Reset from initial form setup styles */
+// Reset from initial form setup styles
 .input-group {
   width: auto;
   height: auto;
   padding: 0;
 }
 
-/* Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input */
+// Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input
 .input-group input {
   margin-bottom: 0;
   background-color: transparent;
@@ -85,7 +85,7 @@ select {
   box-shadow: none;
 }
 
-/* Remove bottom border on last input to avoid double bottom border */
+// Remove bottom border on last input to avoid double bottom border
 .input-group input:last-child {
   border-bottom-width: 0;
 }
@@ -93,26 +93,26 @@ select {
 /* Input groups with labels
 -------------------------------------------------- */
 
-/* To use labels with input groups, wrap a label and an input in an .input-row */
+// To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
   overflow: hidden;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
-/* Remove bottom border on last input-row to avoid double bottom border */
+// Remove bottom border on last input-row to avoid double bottom border
 .input-row:last-child {
   border-bottom-width: 0;
 }
 
-/* Labels get floated left with a set percentage width */
+// Labels get floated left with a set percentage width
 .input-row label {
   float: left;
   width: 25%;
-  padding: 11px 10px 9px 13px; /* Optimizing the baseline for mobile. */
+  padding: 11px 10px 9px 13px; // Optimizing the baseline for mobile.
   font-weight: bold;
 }
 
-/* Actual inputs float to right of labels and also have a set percentage */
+// Actual inputs float to right of labels and also have a set percentage
 .input-row label + input {
   float: right;
   width: 65%;

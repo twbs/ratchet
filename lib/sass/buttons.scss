@@ -17,7 +17,7 @@
   border-radius: 4px;
 }
 
-/* Active */
+// Active
 [class*="button"]:active {
   background-color: #333;
   transition: background-color .1s linear;
@@ -26,32 +26,32 @@
 /* Button modifiers
 -------------------------------------------------- */
 
-/* Overriding styles for buttons with modifiers  */
+// Overriding styles for buttons with modifiers
 .button-main,
 .button-positive,
 .button-negative {
   color: #fff;
 }
 
-/* Main button */
+// Main button
 .button-main {
   color: #007aff;
   border: 1px solid #007aff;
 }
 
-/* Positive button  */
+// Positive button
 .button-positive {
   color: #4cd964;
   border: 1px solid #4cd964;
 }
 
-/* Negative button  */
+// Negative button
 .button-negative {
   color: #e71e1e;
   border: 1px solid #b51a1a;
 }
 
-/* Active state for buttons with modifiers */
+// Active state for buttons with modifiers
 [class*="button"]:active,
 .button-main:active,
 .button-positive:active,
@@ -70,7 +70,7 @@
   background-color: #b21a1a;
 }
 
-/* Block level buttons (full width buttons) */
+// Block level buttons (full width buttons)
 .button-block {
   display: block;
   padding: 11px 0 13px;
@@ -78,8 +78,7 @@
   font-size: 16px;
 }
 
-
-/* Make button elements go full width when given .button-block class */
+// Make button elements go full width when given .button-block class
 button.button-block {
   width: 100%;
 }
@@ -87,7 +86,7 @@ button.button-block {
 /* Counts in buttons
 -------------------------------------------------- */
 
-/* Generic styles for all counts within buttons */
+// Generic styles for all counts within buttons
 [class*="button"] [class*="count"] {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -96,9 +95,9 @@ button.button-block {
   background-color: rgba(0, 0, 0, .1);
 }
 
-/* Position counts within block level buttons
-   Note: These are absolutely positioned so that text of button isn't "pushed" by count and always
-   stays at true center of button */
+// Position counts within block level buttons
+// Note: These are absolutely positioned so that text of button isn't "pushed" by count and always
+// stays at true center of button
 .button-block [class*="count"] {
   position: absolute;
   right: 0;

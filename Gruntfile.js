@@ -3,28 +3,67 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*!\n' +
-              '* Ratchet v<%= pkg.version %> by @connors, @dhg, and @fat\n' +
-              '* Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-              '* Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
-              '*\n' +
-              '* Designed and built by @connors, @dhg, and @fat.\n' +
-              '*/\n',
-    uglify: {
+
+    // Metadata.
+    meta: {
+        srcPath: 'lib/',
+        distPath: 'dist/'
+    },
+    
+    banner: '/*\n' +
+            '* =====================================================\n' +
+            '* Ratchet v<%= pkg.version %>\n' +
+            '* Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            '* Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+            '*\n' +
+            '* Designed and built by @connors, @dhg, and @fat.\n' +
+            '* =====================================================\n' +
+            '*/\n',
+    
+    concat: {
       options: {
-        banner: ''
+        banner: '<%= banner %><%= jqueryCheck %>'
       },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+      ratchet: {
+        src: [
+          '<%= meta.srcPath %>js/modals.js',
+          '<%= meta.srcPath %>js/popover.js',
+          '<%= meta.srcPath %>js/push.js',
+          '<%= meta.srcPath %>js/segmented-controllers.js',
+          '<%= meta.srcPath %>js/sliders.js',
+          '<%= meta.srcPath %>js/toggles.js'
+        ],
+        dest: '<%= meta.distPath %><%= pkg.name %>.js'
       }
+    },
+    
+    sass: {
+        options: {
+          banner: '<%= banner %>',
+        },
+        dist: {
+            files: {
+                '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss'
+            }
+        }
+    },
+ 
+    watch: {
+        scripts: {
+            files: [
+                '<%= meta.srcPath %>/**/*.scss'
+            ],
+            tasks: ['sass']
+        }
     }
   });
 
   // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
-
+  grunt.registerTask('default', ['sass', 'concat']);
+  grunt.registerTask('build', ['sass', 'concat']);
 };
