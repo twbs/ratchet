@@ -15,24 +15,24 @@
 /* Count modifiers
 -------------------------------------------------- */
 
-/* Overriding styles for counts with modifiers  */
+// Overriding styles for counts with modifiers
 .count-main,
 .count-positive,
 .count-negative {
   color: #fff;
 }
 
-/* Main count  */
+// Main count
 .count-main {
   background-color: #1eafe7;
 }
 
-/* Positive count  */
+// Positive count
 .count-positive {
   background-color: #4cd964;
 }
 
-/* Negative count  */
+// Negative count
 .count-negative {
   background-color: #e71e1e;
 }

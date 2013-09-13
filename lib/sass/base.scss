@@ -83,7 +83,7 @@ video {
   border: 0;
 }
 
-/* Prevents iOS text size adjust after orientation change, without disabling (Thanks to @necolas) */
+// Prevents iOS text size adjust after orientation change, without disabling (Thanks to @necolas)
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -102,14 +102,14 @@ body {
   background-color: #fff;
 }
 
-/* Universal link styling */
+// Universal link styling
 a {
   color: #007aff;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes the dark touch outlines on links */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes the dark touch outlines on links
 }
 
-/* Wrapper to be used around all content not in .bar-title and .bar-tab */
+// Wrapper to be used around all content not in .bar-title and .bar-tab
 .content {
   position: fixed;
   top: 0;
@@ -127,20 +127,20 @@ a {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Hack to force all relatively and absolutely positioned elements still render while scrolling
-   Note: This is a bug for "-webkit-overflow-scrolling: touch" */
+// Hack to force all relatively and absolutely positioned elements still render while scrolling
+// Note: This is a bug for "-webkit-overflow-scrolling: touch"
 .content > * {
   -webkit-transform: translateZ(0px);
           transform: translateZ(0px);
 }
 
-/* Utility wrapper to pad in components like forms, block buttons and segmented-controllers so they're not full-bleed */
+// Utility wrapper to pad in components like forms, block buttons and segmented-controllers so they're not full-bleed
 .content-padded {
   padding: 10px;
 }
 
-/* Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
-   Note: For these to work, content must come after both bars in the markup */
+// Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
+// Note: For these to work, content must come after both bars in the markup
 .bar-title ~ .content {
   padding-top: 44px;
 }

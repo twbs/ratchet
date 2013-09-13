@@ -16,7 +16,7 @@
           box-orient: horizontal;
 }
 
-/* Section within controller */
+// Section within controller
 .segmented-controller li {
   overflow: hidden;
   text-align: center;
@@ -26,7 +26,7 @@
           box-flex: 1;
 }
 
-/* Link that fills each section */
+// Link that fills each section
 .segmented-controller li > a {
   display: block;
   padding: 8px 16px;
@@ -36,17 +36,17 @@
   text-overflow: ellipsis;
 }
 
-/* Remove border-left and shadow from first section */
+// Remove border-left and shadow from first section
 .segmented-controller li:first-child {
   border-left-width: 0;
 }
 
-/* Active segment of controller */
+// Active segment of controller
 .segmented-controller li.active {
   background-color: #007aff;
   transition: background-color .2s linear;
 }
-/* Set color of links to white */
+// Set color of links to white
 .segmented-controller li.active > a {
   color: #fff;
 }

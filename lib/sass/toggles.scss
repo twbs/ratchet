@@ -10,7 +10,7 @@
   border-radius: 20px;
 }
 
-/* Sliding handle */
+// Sliding handle
 .toggle-handle {
   position: absolute;
   top: -1px;
@@ -26,13 +26,13 @@
                   transition: transform 0.1s ease-in-out, border 0.1s ease-in-out;
 }
 
-/* Active state for toggle */
+// Active state for toggle
 .toggle.active {
   background-color: #4cd964;
   border: 2px solid #4cd964;
 }
 
-/* Active state for toggle handle */
+// Active state for toggle handle
 .toggle.active .toggle-handle {
   border-color: #4cd964;
   -webkit-transform: translate3d(17px,0,0);

@@ -10,32 +10,29 @@
   padding: 5px;
   background-color: rgba(247,247,247,.98);
   box-shadow: 0 0px 1px rgba(0,0,0,.85);
-  /*border-bottom: 1px solid rgba(0,0,0,.3);*/
   box-sizing: border-box;
 }
 
-/* Modifier class to dock any bar below .bar-title */
+// Modifier class to dock any bar below .bar-title
 .bar-header-secondary {
   top: 44px;
 }
 
-/* Modifier class to dock any bar to bottom of viewport */
+// Modifier class to dock any bar to bottom of viewport
 .bar-footer {
   bottom: 0;
 }
 
-/* Flip border position to top for footer bars */
+// Flip border position to top for footer bars
 .bar-footer.bar-standard,
 .bar-footer-secondary.bar-standard {
-  /*border-top: 1px solid #aaa;
-  border-bottom-width: 0;*/
   box-shadow: 0 0px 1px rgba(0,0,0,.85);
 }
 
 /* Title bar
 -------------------------------------------------- */
 
-/* Bar docked to top of viewport for showing page title and actions */
+// Bar docked to top of viewport for showing page title and actions
 .bar-title {
   top: 0;
   display: -webkit-box;
@@ -44,7 +41,7 @@
           box-orient: horizontal;
 }
 
-/* Centered text in the .bar-title */
+// Centered text in the .bar-title 
 .bar-title .title {
   position: absolute;
   top: 0;
@@ -65,7 +62,7 @@
   height: 100%;
 }
 
-/* Retain specified title color */
+//Retain specified title color
 .bar-title .title a {
   color: inherit;
 }
@@ -73,17 +70,15 @@
 /* Tab bar
 -------------------------------------------------- */
 
-/* Bar docked to bottom used for primary app navigation */
+// Bar docked to bottom used for primary app navigation
 .bar-tab {
   bottom: 0;
   height: 50px;
   padding: 0;
-  /*border-top: 1px solid rgba(0,0,0,.3);
-  border-bottom-width: 0;*/
   box-shadow: 0 0px 1px rgba(0,0,0,.85);
 }
 
-/* Wrapper for individual tab */
+// Wrapper for individual tab
 .tab-inner {
   display: -webkit-box;
   display: box;
@@ -93,7 +88,7 @@
           box-orient: horizontal;
 }
 
-/* Navigational tab */
+// Navigational tab
 .tab-item {
   height: 100%;
   padding-top: 9px;
@@ -103,14 +98,14 @@
           box-flex: 1;
 }
 
-/* Icon for tab  */
+// Icon for tab
 .tab-icon {
   display: block;
   height: 18px;
   margin: 0 auto;
 }
 
-/* Label for tab */
+// Label for tab
 .tab-label {
   margin-top: 1px;
   font-size: 11px;
@@ -124,10 +119,10 @@
 /* Buttons in title bars
 -------------------------------------------------- */
 
-/* Generic style for all buttons in .bar-title */
+// Generic style for all buttons in .bar-title
 .bar-title [class*="button"] {
   position: relative;
-  z-index: 10; /* Places buttons over full width title */
+  z-index: 10; // Places buttons over full width title
   padding-left: 5px;
   padding-right: 5px;
   font-size: 16px;
@@ -141,8 +136,8 @@
 }
 
 
-/* Hacky way to right align buttons outside of flex-box system
-   Note: is only absolutely positioned button, would be better if flex-box had an "align right" option */
+// Hacky way to right align buttons outside of flex-box system
+// Note: is only absolutely positioned button, would be better if flex-box had an "align right" option
 .bar-title .title + [class*="button"]:last-child,
 .bar-title .button + [class*="button"]:last-child,
 .bar-title [class*="button"].pull-right {
@@ -151,7 +146,7 @@
   right: 5px;
 }
 
-/* Override standard button active states */
+// Override standard button active states
 .bar-title .button:active,
 .bar-title .button-prev:active,
 .bar-title .button-next:active {
@@ -175,15 +170,15 @@
   content: '';
 }
 
-/* Prev/next button base styles */
+// Prev/next button base styles
 .bar-title .button-prev {
-  padding-left: 22px; /* Push over to make room for chevrons */
+  padding-left: 22px; // Push over to make room for chevrons
 }
 .bar-title .button-next {
-  padding-right: 22px; /* Push over to make room for chevrons */
+  padding-right: 22px; // Push over to make room for chevrons
 }
 
-/* Position the chevrons horizontally */
+// Position the chevrons horizontally
 .bar-title .button-prev:before,
 .bar-title .button-prev:after {
   left: 0;
@@ -193,7 +188,7 @@
   right: 0;
 }
 
-/* Position the chevrons vertically */
+// Position the chevrons vertically
 .bar-title .button-prev:before, 
 .bar-title .button-next:before {
   top: 12px;
@@ -203,7 +198,7 @@
   top: 21px;
 }
 
-/* Rotate the chevrons */
+// Rotate the chevrons
 .bar-title .button-prev:before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -224,13 +219,13 @@
 /* Block buttons in any bar
 -------------------------------------------------- */
 
-/* Add proper padding and replace buttons normal dropshadow with a shine from bar */
+// Add proper padding and replace buttons normal dropshadow with a shine from bar
 [class*="bar"] .button-block {
   padding: 7px 0;
   margin-bottom: 0;
 }
 
-/* Override standard padding changes for .button-blocks */
+// Override standard padding changes for .button-blocks
 [class*="bar"] .button-block:active {
   padding: 7px 0;
 }
@@ -238,12 +233,12 @@
 /* Segmented controller in any bar
 -------------------------------------------------- */
 
-/* Remove standard segmented bottom margin */
+// Remove standard segmented bottom margin
 [class*="bar-"] .segmented-controller {
   margin-bottom: 0;
 }
 
-/* Add margins between segmented controllers and buttons */
+// Add margins between segmented controllers and buttons
 [class*="bar-"] .segmented-controller + [class*="button"],
 [class*="bar-"] [class*="button"] + .segmented-controller {
   margin-left: 5px;
@@ -262,7 +257,7 @@
 /* Search forms in standard bar
 -------------------------------------------------- */
 
-/* Position/size search bar within the bar */
+// Position/size search bar within the bar
 .bar-standard input[type=search] {
   height: 32px;
   margin: 0;

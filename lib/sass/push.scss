@@ -1,7 +1,7 @@
 /* Push styles (to be used with push.js)
 -------------------------------------------------- */
 
-/* Fade animation */
+// Fade animation 
 .content.fade {
   left: 0;
   opacity: 0;
@@ -11,13 +11,13 @@
 .content.fade.in {
   opacity: 1;
 }
-
-/* Slide animation */
+// Slide animation iOS7
 .content.slide {
+  -webkit-transition-timing-function: cubic-bezier(.1, .7, .1, 1); //Thanks to @c2prods
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
- -webkit-transition: -webkit-transform .25s ease-in-out;
-         transition:         transform .25s ease-in-out;
+  -webkit-transition: -webkit-transform .25s ease-in-out;
+          transition:         transform .25s ease-in-out;
 }
 .content.slide.left {
   -webkit-transform: translate3d(-100%, 0, 0);
