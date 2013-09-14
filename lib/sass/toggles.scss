@@ -1,5 +1,6 @@
-/* Toggle styles (to be used with toggles.js)
--------------------------------------------------- */
+//
+// Toggle styles (to be used with toggles.js)
+// --------------------------------------------------
 
 .toggle {
   position: relative;
@@ -8,33 +9,33 @@
   background-color: #fff;
   border: 2px solid #e6e6e6;
   border-radius: 20px;
-}
 
-// Sliding handle
-.toggle-handle {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  z-index: 2;
-  width: 28px;
-  height: 28px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, .1);
-  border-radius: 100px;
-  box-shadow: 0 3px 3px rgba(0,0,0,.08);
-  -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
-                  transition: transform 0.1s ease-in-out, border 0.1s ease-in-out;
-}
+  // Sliding handle
+  .toggle-handle {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 100px;
+    box-shadow: 0 3px 3px rgba(0,0,0,.08);
+    -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
+                    transition: transform 0.1s ease-in-out, border 0.1s ease-in-out;
+  }
 
-// Active state for toggle
-.toggle.active {
-  background-color: #4cd964;
-  border: 2px solid #4cd964;
-}
+  // Active state for toggle
+  &.active {
+    background-color: #4cd964;
+    border: 2px solid #4cd964;
+  }
 
-// Active state for toggle handle
-.toggle.active .toggle-handle {
-  border-color: #4cd964;
-  -webkit-transform: translate3d(17px,0,0);
-          transform: translate3d(17px,0,0);
+  // Active state for toggle handle
+  &.active .toggle-handle {
+    border-color: #4cd964;
+    -webkit-transform: translate3d(17px,0,0);
+            transform: translate3d(17px,0,0);
+  }
 }

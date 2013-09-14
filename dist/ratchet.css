@@ -346,102 +346,72 @@ a {
   height: 32px;
   margin: 0; }
 
-/* Table views
--------------------------------------------------- */
 .table-view {
   list-style: none;
   background-color: #fff; }
-
-.table-view li {
-  position: relative;
-  padding: 11px 60px 11px 0;
-  margin-left: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-
-.table-view li:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
-
-.table-view li:last-child {
-  border-bottom: 0; }
-
-.table-view li > a:not([class*="button"]) {
-  position: relative;
-  display: block;
-  padding: inherit;
-  margin: -11px -60px -11px 0;
-  color: inherit; }
-
-/* Inset table view
--------------------------------------------------- */
-.table-view.inset {
-  width: auto;
-  margin-right: 10px;
-  margin-left: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-  box-sizing: border-box; }
-
-.table-view.inset li:first-child {
-  border-top-width: 0; }
-
-.table-view.inset li:last-child {
-  border-bottom-width: 0; }
-
-/* table view dividers
--------------------------------------------------- */
-.table-view .table-view-divider {
-  position: relative;
-  top: -1px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 15px;
-  margin-left: 0;
-  font-weight: bold;
-  line-height: 18px;
-  background-color: #f8f8f8;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4); }
-
-/* Rounding first divider on inset lists and remove border on the top */
-.table-view.inset .table-view-divider:first-child {
-  top: 0;
-  border-top-width: 0;
-  border-radius: 6px 6px 0 0; }
-
-/* Rounding last divider on inset table views */
-.table-view.inset .table-view-divider:last-child {
-  border-radius: 0 0 6px 6px; }
-
-/* Right-aligned subcontent in table views (chevrons, buttons, counts and toggles)
--------------------------------------------------- */
-.table-view .chevron,
-.table-view [class*="button"],
-.table-view [class*="count"],
-.table-view .toggle {
-  position: absolute;
-  top: 50%;
-  right: 10px; }
-
-/* Position chevrons/counts vertically centered on the right in table view items */
-.table-view .chevron,
-.table-view [class*="count"] {
-  margin-top: -10px;
-  /* Half height of chevron */ }
-
-/* Push count over if there's a sibling chevron */
-.table-view .chevron + [class*="count"] {
-  right: 30px; }
-
-/* Position buttons vertically centered on the right in table view items */
-.table-view [class*="button"] {
-  left: auto;
-  margin-top: -14px;
-  /* Half height of button */ }
-
-.table-view .toggle {
-  margin-top: -15px;
-  /* Half height of toggle */ }
+  .table-view li {
+    position: relative;
+    padding: 11px 60px 11px 0;
+    margin-left: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .table-view li:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .table-view li:last-child {
+    border-bottom: 0; }
+  .table-view li > a:not([class*="button"]) {
+    position: relative;
+    display: block;
+    padding: inherit;
+    margin: -11px -60px -11px 0;
+    color: inherit; }
+  .table-view.inset {
+    width: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    box-sizing: border-box; }
+    .table-view.inset li:first-child {
+      border-top-width: 0; }
+    .table-view.inset li:last-child {
+      border-bottom-width: 0; }
+  .table-view .table-view-divider {
+    position: relative;
+    top: -1px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    margin-left: 0;
+    font-weight: bold;
+    line-height: 18px;
+    background-color: #f8f8f8;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Rounding first divider on inset lists and remove border on the top */
+    /* Rounding last divider on inset table views */ }
+    .table-view .table-view-divider :first-child {
+      top: 0;
+      border-top-width: 0;
+      border-radius: 6px 6px 0 0; }
+    .table-view .table-view-divider :last-child {
+      border-radius: 0 0 6px 6px; }
+  .table-view .chevron,
+  .table-view [class*="button"],
+  .table-view [class*="count"],
+  .table-view .toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px; }
+  .table-view .chevron,
+  .table-view [class*="count"] {
+    margin-top: -10px; }
+  .table-view .chevron + [class*="count"] {
+    right: 30px; }
+  .table-view [class*="button"] {
+    left: auto;
+    margin-top: -14px; }
+  .table-view .toggle {
+    margin-top: -15px; }
 
 /* Forms
 -------------------------------------------------- */
@@ -875,8 +845,6 @@ button.button-block {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
-/* Slider styles (to be used with sliders.js)
--------------------------------------------------- */
 .slider,
 .slider > li {
   width: 100%;
@@ -885,25 +853,20 @@ button.button-block {
 .slider {
   overflow: hidden;
   background-color: #000; }
+  .slider > ul {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    -webkit-transition: all 0 linear;
+    transition: all 0 linear; }
+    .slider > ul > li {
+      display: inline-block;
+      vertical-align: top;
+      width: 100%;
+      height: 100%; }
+      .slider > ul > li > * {
+        font-size: 14px; }
 
-.slider > ul {
-  position: relative;
-  font-size: 0;
-  white-space: nowrap;
-  -webkit-transition: all 0 linear;
-  transition: all 0 linear; }
-
-.slider > ul > li {
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
-  height: 100%; }
-
-.slider > ul > li > * {
-  font-size: 14px; }
-
-/* Toggle styles (to be used with toggles.js)
--------------------------------------------------- */
 .toggle {
   position: relative;
   width: 45px;
@@ -911,29 +874,26 @@ button.button-block {
   background-color: #fff;
   border: 2px solid #e6e6e6;
   border-radius: 20px; }
-
-.toggle-handle {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  z-index: 2;
-  width: 28px;
-  height: 28px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 100px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
-  -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
-  transition: transform 0.1s ease-in-out, border 0.1s ease-in-out; }
-
-.toggle.active {
-  background-color: #4cd964;
-  border: 2px solid #4cd964; }
-
-.toggle.active .toggle-handle {
-  border-color: #4cd964;
-  -webkit-transform: translate3d(17px, 0, 0);
-  transform: translate3d(17px, 0, 0); }
+  .toggle .toggle-handle {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
+    -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out, border 0.1s ease-in-out; }
+  .toggle.active {
+    background-color: #4cd964;
+    border: 2px solid #4cd964; }
+  .toggle.active .toggle-handle {
+    border-color: #4cd964;
+    -webkit-transform: translate3d(17px, 0, 0);
+    transform: translate3d(17px, 0, 0); }
 
 /* Push styles (to be used with push.js)
 -------------------------------------------------- */
