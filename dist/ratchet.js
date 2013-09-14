@@ -527,7 +527,7 @@
 
   window.addEventListener("touchend", function (e) {
     var activeTab;
-    var activeBody;
+    var activeBodies;
     var targetBody;
     var targetTab;
     var className     = 'active';
@@ -549,11 +549,13 @@
 
     if (!targetBody) return;
 
-    activeBody = targetBody.parentNode.querySelector(classSelector);
+    activeBodies = targetBody.parentNode.querySelectorAll(classSelector);
 
-    if (activeBody) activeBody.classList.remove(className);
+    for (var i = 0; i < activeBodies.length; i++) {
+      activeBodies[i].classList.remove(className);
+    }
 
-    targetBody.classList.add(className)
+    targetBody.classList.add(className);
   });
 
   window.addEventListener('click', function (e) { if (getTarget(e.target)) e.preventDefault(); });
