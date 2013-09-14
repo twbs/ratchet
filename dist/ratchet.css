@@ -378,9 +378,6 @@ a {
   margin-left: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.table-view li:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
 .table-view li:last-child {
   border-bottom: 0;
 }

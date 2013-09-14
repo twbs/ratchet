@@ -12,13 +12,8 @@
     padding: 11px 60px 11px 0; // Given extra right padding to accomodate counts, chevrons or buttons
     margin-left: 15px;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-    
-    // Give top border to first list items
-    &:first-child {
-      border-top: 1px solid rgba(0, 0, 0, .1);
-    }
 
-    // Remove the border from the last list item
+    // Remove the border from the last table view item
     &:last-child {
       border-bottom: 0;
     }
