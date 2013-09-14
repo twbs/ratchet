@@ -346,34 +346,34 @@ a {
   height: 32px;
   margin: 0; }
 
-/* Lists
+/* Table views
 -------------------------------------------------- */
-.list {
+.table-view {
   list-style: none;
   background-color: #fff; }
 
-.list li {
+.table-view li {
   position: relative;
   padding: 11px 60px 11px 0;
   margin-left: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-.list li:first-child {
+.table-view li:first-child {
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
-.list li:last-child {
+.table-view li:last-child {
   border-bottom: 0; }
 
-.list li > a:not([class*="button"]) {
+.table-view li > a:not([class*="button"]) {
   position: relative;
   display: block;
   padding: inherit;
   margin: -11px -60px -11px 0;
   color: inherit; }
 
-/* Inset list
+/* Inset table view
 -------------------------------------------------- */
-.list.inset {
+.table-view.inset {
   width: auto;
   margin-right: 10px;
   margin-left: 10px;
@@ -381,15 +381,15 @@ a {
   border-radius: 6px;
   box-sizing: border-box; }
 
-.list.inset li:first-child {
+.table-view.inset li:first-child {
   border-top-width: 0; }
 
-.list.inset li:last-child {
+.table-view.inset li:last-child {
   border-bottom-width: 0; }
 
-/* List dividers
+/* table view dividers
 -------------------------------------------------- */
-.list .list-divider {
+.table-view .table-view-divider {
   position: relative;
   top: -1px;
   padding-top: 6px;
@@ -404,42 +404,42 @@ a {
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4); }
 
 /* Rounding first divider on inset lists and remove border on the top */
-.list.inset .list-divider:first-child {
+.table-view.inset .table-view-divider:first-child {
   top: 0;
   border-top-width: 0;
   border-radius: 6px 6px 0 0; }
 
-/* Rounding last divider on inset lists */
-.list.inset .list-divider:last-child {
+/* Rounding last divider on inset table views */
+.table-view.inset .table-view-divider:last-child {
   border-radius: 0 0 6px 6px; }
 
-/* Right-aligned subcontent in lists (chevrons, buttons, counts and toggles)
+/* Right-aligned subcontent in table views (chevrons, buttons, counts and toggles)
 -------------------------------------------------- */
-.list .chevron,
-.list [class*="button"],
-.list [class*="count"],
-.list .toggle {
+.table-view .chevron,
+.table-view [class*="button"],
+.table-view [class*="count"],
+.table-view .toggle {
   position: absolute;
   top: 50%;
   right: 10px; }
 
-/* Position chevrons/counts vertically centered on the right in list items */
-.list .chevron,
-.list [class*="count"] {
+/* Position chevrons/counts vertically centered on the right in table view items */
+.table-view .chevron,
+.table-view [class*="count"] {
   margin-top: -10px;
   /* Half height of chevron */ }
 
 /* Push count over if there's a sibling chevron */
-.list .chevron + [class*="count"] {
+.table-view .chevron + [class*="count"] {
   right: 30px; }
 
-/* Position buttons vertically centered on the right in list items */
-.list [class*="button"] {
+/* Position buttons vertically centered on the right in table view items */
+.table-view [class*="button"] {
   left: auto;
   margin-top: -14px;
   /* Half height of button */ }
 
-.list .toggle {
+.table-view .toggle {
   margin-top: -15px;
   /* Half height of toggle */ }
 
@@ -837,7 +837,7 @@ button.button-block {
 
 /* Lists in popovers
 -------------------------------------------------- */
-.popover .list {
+.popover .table-view {
   width: auto;
   max-height: 250px;
   margin-right: 0;
