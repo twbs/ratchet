@@ -1,5 +1,6 @@
-/* General bar styles
--------------------------------------------------- */
+//
+// Bars
+// --------------------------------------------------
 
 [class*="bar-"] {
   position: fixed;
@@ -29,8 +30,8 @@
   box-shadow: 0 0px 1px rgba(0,0,0,.85);
 }
 
-/* Title bar
--------------------------------------------------- */
+// Nav bar
+// --------------------------------------------------
 
 // Bar docked to top of viewport for showing page title and actions
 .bar-title {
@@ -67,8 +68,8 @@
   color: inherit;
 }
 
-/* Tab bar
--------------------------------------------------- */
+// Tab bar
+// --------------------------------------------------
 
 // Bar docked to bottom used for primary app navigation
 .bar-tab {
@@ -116,8 +117,8 @@
  color: $app-color;
 }
 
-/* Buttons in title bars
--------------------------------------------------- */
+// Buttons in nav bars
+// --------------------------------------------------
 
 // Generic style for all buttons in .bar-title
 .bar-title [class*="button"] {
@@ -155,8 +156,8 @@
   opacity: .3;
 }
 
-/* Directional buttons in title bars
--------------------------------------------------- */
+// Directional buttons in nav bars
+// --------------------------------------------------
 
 .bar-title .button-prev:before,
 .bar-title .button-prev:after,
@@ -216,8 +217,8 @@
           transform: rotate(-45deg);
 }
 
-/* Block buttons in any bar
--------------------------------------------------- */
+// Block buttons in all bars
+// --------------------------------------------------
 
 // Add proper padding and replace buttons normal dropshadow with a shine from bar
 [class*="bar"] .button-block {
@@ -230,8 +231,8 @@
   padding: 7px 0;
 }
 
-/* Segmented controller in any bar
--------------------------------------------------- */
+// Segmented controller in all bars
+// --------------------------------------------------
 
 // Remove standard segmented bottom margin
 [class*="bar-"] .segmented-controller {
@@ -244,8 +245,8 @@
   margin-left: 5px;
 }
 
-/* Segmented controller in a title bar
--------------------------------------------------- */
+// Segmented controller in a nav bars
+// --------------------------------------------------
 
 .bar-title .segmented-controller {
   line-height: 18px;
@@ -254,8 +255,8 @@
 }
 
 
-/* Search forms in standard bar
--------------------------------------------------- */
+// Search forms in standard bar
+// --------------------------------------------------
 
 // Position/size search bar within the bar
 .bar-standard input[type=search] {

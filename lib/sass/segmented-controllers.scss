@@ -1,5 +1,6 @@
-/* Segmented controllers
--------------------------------------------------- */
+//
+// Segmented controllers
+// --------------------------------------------------
 
 .segmented-controller {
   display: -webkit-box;
@@ -14,47 +15,47 @@
   border-radius: 4px;
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
-}
 
-// Section within controller
-.segmented-controller li {
-  overflow: hidden;
-  text-align: center;
-  white-space: nowrap;
-  border-left: 1px solid $app-color;
-  -webkit-box-flex: 1;
-          box-flex: 1;
-}
+  // Section within controller
+  li {
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    border-left: 1px solid $app-color;
+    -webkit-box-flex: 1;
+            box-flex: 1;
+    
+    // Link that fills each section
+    > a {
+      display: block;
+      padding: 8px 16px;
+      overflow: hidden;
+      line-height: 15px;
+      color: $app-color;
+      text-overflow: ellipsis;
+    }
 
-// Link that fills each section
-.segmented-controller li > a {
-  display: block;
-  padding: 8px 16px;
-  overflow: hidden;
-  line-height: 15px;
-  color: $app-color;
-  text-overflow: ellipsis;
-}
+    // Remove border-left and shadow from first section
+    &:first-child {
+      border-left-width: 0;
+    }
 
-// Remove border-left and shadow from first section
-.segmented-controller li:first-child {
-  border-left-width: 0;
-}
+    // Active segment of controller
+    &.active {
+      background-color: $app-color;
+      transition: background-color .2s linear;
 
-// Active segment of controller
-.segmented-controller li.active {
-  background-color: $app-color;
-  transition: background-color .2s linear;
-}
-// Set color of links to white
-.segmented-controller li.active > a {
-  color: #fff;
-}
+      // Set color of links to white
+      > a {
+        color: #fff;
+      }
+    }
+  }
+  .segmented-controller-item {
+    display: none;
 
-.segmented-controller-item {
-  display: none;
-}
-
-.segmented-controller-item.active {
-  display: block;
+    &.active {
+      display: block;
+    }
+  }
 }

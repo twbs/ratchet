@@ -1,5 +1,6 @@
-/* Popovers (to be used with popovers.js)
--------------------------------------------------- */
+//
+// Popovers (to be used with popovers.js)
+// --------------------------------------------------
 
 .popover {
   position: fixed;
@@ -101,8 +102,8 @@
   background-color: #0876b1;
 }
 
-/* Popover animation
--------------------------------------------------- */
+// Popover animation
+// --------------------------------------------------
 
 .popover.visible {
   opacity: 1;
@@ -110,8 +111,8 @@
           transform: translate3d(0, 0, 0);
 }
 
-/* Backdrop (used as invisible touch escape)
--------------------------------------------------- */
+// Backdrop (used as invisible touch escape)
+// --------------------------------------------------
 
 .backdrop {
   position: fixed;
@@ -122,8 +123,8 @@
   z-index: 10;
 }
 
-/* Block level buttons in popovers
--------------------------------------------------- */
+// Block level buttons in popovers
+// --------------------------------------------------
 
 // Positioning and giving darker border to look sharp against dark popover
 .popover .button-block {
@@ -136,8 +137,8 @@
   margin-bottom: 0;
 }
 
-/* Lists in popovers
--------------------------------------------------- */
+// Table views in popovers
+// --------------------------------------------------
 
 .popover .table-view {
   width: auto;

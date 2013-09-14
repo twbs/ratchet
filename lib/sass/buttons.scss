@@ -1,5 +1,6 @@
-/* General button styles
--------------------------------------------------- */
+//
+// Buttons
+// --------------------------------------------------
 
 [class*="button"] {
   position: relative;
@@ -15,16 +16,16 @@
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, .5);
   border-radius: 4px;
+
+  // Active
+  &:active {
+    background-color: #333;
+    transition: background-color .1s linear;
+  }
 }
 
-// Active
-[class*="button"]:active {
-  background-color: #333;
-  transition: background-color .1s linear;
-}
-
-/* Button modifiers
--------------------------------------------------- */
+// Buttons modifiers
+// --------------------------------------------------
 
 // Overriding styles for buttons with modifiers
 .button-main,

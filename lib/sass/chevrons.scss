@@ -1,30 +1,31 @@
-/* Chevrons
--------------------------------------------------- */
+//
+// Chevrons
+// --------------------------------------------------
 
 .chevron {
   display: block;
   height: 20px;
-}
 
-// Base styles for both 1/2's of the chevron
-.chevron:before,
-.chevron:after {
-  position: relative;
-  display: block;
-  width: 10px;
-  height: 3px;
-  background-color: #c7c7cc;
-  content: '';
-}
+  // Base styles for both halves of the chevron
+  &:before,
+  &:after {
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 3px;
+    background-color: #c7c7cc;
+    content: '';
+  }
 
-// Position and rotate respective 1/2's of the chevron
-.chevron:before {
-  top: 6px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.chevron:after {
-  top: 8px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  // Position and rotate respective halves of the chevron
+  &:before {
+    top: 6px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  &:after {
+    top: 8px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
 }

@@ -1,5 +1,6 @@
-/* Forms
--------------------------------------------------- */
+//
+// Forms
+// --------------------------------------------------
 
 // Force form elements to inherit font styles
 input,
@@ -65,8 +66,8 @@ select {
 }
 
 
-/* Input groups (cluster multiple inputs together into a single group)
----------------------------------------------------------------------- */
+// Input groups (cluster multiple inputs together into a single group)
+// -------------------------------------------------------------------
 
 // Reset from initial form setup styles
 .input-group {
@@ -90,8 +91,9 @@ select {
   border-bottom-width: 0;
 }
 
-/* Input groups with labels
--------------------------------------------------- */
+// Input groups with labels
+// --------------------------------------------------
+
 
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {

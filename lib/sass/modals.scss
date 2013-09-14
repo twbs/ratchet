@@ -1,5 +1,7 @@
-/* Modals
--------------------------------------------------- */
+//
+// Modals
+// --------------------------------------------------
+
 .modal {
   position: fixed; 
   top: 0;
@@ -13,15 +15,14 @@
           transform: translate3d(0, 100%, 0);
   -webkit-transition: -webkit-transform .25s ease-in-out, opacity 1ms .25s;
           transition:         transform .25s ease-in-out, opacity 1ms .25s;
-}
 
-/* Modal - When active
--------------------------------------------------- */
-.modal.active {
-  opacity: 1;
-  height: 100%;
-  -webkit-transition: -webkit-transform .25s ease-in-out;
-          transition:         transform .25 ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  // Active modal
+  &.active {
+    opacity: 1;
+    height: 100%;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+            transition:         transform .25 ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }

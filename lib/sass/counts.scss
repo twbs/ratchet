@@ -1,5 +1,6 @@
-/* General count styles
--------------------------------------------------- */
+//
+// Counts
+// --------------------------------------------------
 
 [class*="count"] {
   display: inline-block;
@@ -12,15 +13,8 @@
   border-radius: 100px;
 }
 
-/* Count modifiers
--------------------------------------------------- */
-
-// Overriding styles for counts with modifiers
-.count-main,
-.count-positive,
-.count-negative {
-  color: #fff;
-}
+// Count modifiers
+// --------------------------------------------------
 
 // Main count
 .count-main {

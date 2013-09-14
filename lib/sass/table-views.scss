@@ -12,25 +12,25 @@
     padding: 11px 60px 11px 0; // Given extra right padding to accomodate counts, chevrons or buttons
     margin-left: 15px;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-  }
+    
+    // Give top border to first list items
+    &:first-child {
+      border-top: 1px solid rgba(0, 0, 0, .1);
+    }
 
-  // Give top border to first list items
-  li:first-child {
-    border-top: 1px solid rgba(0, 0, 0, .1);
-  }
+    // Remove the border from the last list item
+    &:last-child {
+      border-bottom: 0;
+    }
 
-  // Remove the border from the last list item
-  li:last-child {
-    border-bottom: 0;
-  }
-
-  // If a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
-  li > a:not([class*="button"]) {
-    position: relative;
-    display: block;
-    padding: inherit;
-    margin: -11px -60px -11px 0;
-    color: inherit;
+    // If a it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
+    > a:not([class*="button"]) {
+      position: relative;
+      display: block;
+      padding: inherit;
+      margin: -11px -60px -11px 0;
+      color: inherit;
+    }
   }
 
 
@@ -72,14 +72,14 @@
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 
     /* Rounding first divider on inset lists and remove border on the top */
-    :first-child {
+    &:first-child {
       top: 0;
       border-top-width: 0;
       border-radius: 6px 6px 0 0;
     }
 
     /* Rounding last divider on inset table views */
-    :last-child {
+    &:last-child {
       border-radius: 0 0 6px 6px;
     }
   }
@@ -105,7 +105,7 @@
 
   // Push count over if there's a sibling chevron
   .chevron + [class*="count"] {
-  right: 30px;
+    right: 30px;
   }
 
   // Position buttons vertically centered on the right in table view items
