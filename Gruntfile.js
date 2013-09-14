@@ -40,6 +40,7 @@ module.exports = function(grunt) {
     sass: {
         options: {
           banner: '<%= banner %>',
+          style: 'expanded',
         },
         dist: {
             files: {

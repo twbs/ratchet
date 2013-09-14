@@ -71,14 +71,14 @@
     border-top: 1px solid rgba(0, 0, 0, .1);
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 
-    /* Rounding first divider on inset lists and remove border on the top */
+    // Rounding first divider on inset lists and remove border on the top
     &:first-child {
       top: 0;
       border-top-width: 0;
       border-radius: 6px 6px 0 0;
     }
 
-    /* Rounding last divider on inset table views */
+    // Rounding last divider on inset table views
     &:last-child {
       border-radius: 0 0 6px 6px;
     }
