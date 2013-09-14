@@ -327,8 +327,8 @@ h6 {
 }
 
 /* Mad override to avoid it being styled like the block level link */
-.component-example .list a[data-transition="slide-out"],
-.iphone .list a[data-transition="slide-out"] {
+.component-example .table-view a[data-transition="slide-out"],
+.iphone .table-view a[data-transition="slide-out"] {
   padding: 0;
   display: inline;
   margin: 0;
@@ -505,27 +505,27 @@ h6 {
 }
 
 /* List examples */
-.component-example .list {
+.component-example .table-view {
   margin-left: 0;
   margin-right: 0;
   background-color: #fff;
 }
 
-.component-example .list li {
+.component-example .table-view li {
   padding-right: 70px;
   padding-left: 20px;
 }
 
-.component-example .list.inset {
+.component-example .table-view.inset {
   margin: 0;
 }
 
-.iphone .list .segmented-controller-item,
-.component-example .list .segmented-controller-item {
+.iphone .table-view .segmented-controller-item,
+.component-example .table-view .segmented-controller-item {
   border-bottom-width: 0;
 }
 
-.iphone .list {
+.iphone .table-view {
   margin-left: 0;
   margin-right: 0;
 }
@@ -553,7 +553,7 @@ h6 {
   overflow: hidden;
 }
 
-#push .component-example .list {
+#push .component-example .table-view {
   border-left: 1px solid rgba(0, 0, 0, .1);
   border-right: 1px solid rgba(0, 0, 0, .1);
 }
@@ -673,7 +673,7 @@ h6 {
 }
 
 /* Give inset components in the iphone correct margin */
-.iphone .list.inset,
+.iphone .table-view.inset,
 #segmentedControllersInPhone .segmented-controller,
 #formsInPhone form,
 #formsWithInputGroupInPhone form,
@@ -681,7 +681,7 @@ h6 {
   margin: 10px;
 }
 
-#pushInPhone .list {
+#pushInPhone .table-view {
   margin-top: 44px;
 }
 
@@ -1101,7 +1101,7 @@ input[type="color"],
 }
 
 /* lists.css */
-.list.inset  {
+.table-view.inset  {
   -moz-box-sizing: border-box;
 }
 
