@@ -18,18 +18,23 @@
 
   // Slide animation iOS7
   &.slide {
+    -webkit-transition-timing-function: cubic-bezier(.1, .7, .1, 1); //Thanks to @c2prods
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform .25s ease-in-out;
-            transition:         transform .25s ease-in-out;
-    -webkit-transition-timing-function: cubic-bezier(.1, .7, .1, 1); //Thanks to @c2prods
+    -webkit-transition: -webkit-transform .3s;
+            transition:         transform .3s;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    z-index: 2;
 
     &.left {
-      -webkit-transform: translate3d(-100%, 0, 0);
-              transform: translate3d(-100%, 0, 0);
+      z-index: 1;
+      box-shadow: none;
+      -webkit-transform: translate3d(-60%, 0, 0); // Creates the parallax effect
+              transform: translate3d(-60%, 0, 0);
     }
 
     &.right {
+      z-index: 3;
       -webkit-transform: translate3d(100%, 0, 0);
               transform: translate3d(100%, 0, 0);
     }
