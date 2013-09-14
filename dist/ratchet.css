@@ -94,8 +94,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Base styles
--------------------------------------------------- */
 body {
   position: fixed;
   top: 0;
@@ -419,8 +417,6 @@ a {
   background-color: #f8f8f8;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  /* Rounding first divider on inset lists and remove border on the top */
-  /* Rounding last divider on inset table views */
 }
 .table-view .table-view-divider:first-child {
   top: 0;
@@ -627,8 +623,6 @@ button.button-block {
   width: 100%;
 }
 
-/* Counts in buttons
--------------------------------------------------- */
 [class*="button"] [class*="count"] {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -731,10 +725,11 @@ button.button-block {
 .segmented-controller li.active > a {
   color: #fff;
 }
-.segmented-controller .segmented-controller-item {
+
+.segmented-controller-item {
   display: none;
 }
-.segmented-controller .segmented-controller-item.active {
+.segmented-controller-item.active {
   display: block;
 }
 

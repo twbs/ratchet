@@ -51,11 +51,12 @@
       }
     }
   }
-  .segmented-controller-item {
-    display: none;
+}
 
-    &.active {
-      display: block;
-    }
+.segmented-controller-item {
+  display: none;
+
+  &.active {
+    display: block;
   }
 }
