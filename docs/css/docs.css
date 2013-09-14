@@ -3,9 +3,7 @@
 
 body {
   position: static !important; /* Overrides the fixed positioning of body in Ratchet */
-  font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
@@ -58,7 +56,6 @@ h6 {
   padding: 10px 0;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 0 5px rgba(0,0,0,.1);
 }
 
 .docs-masthead .docs-inner-wrapper {
@@ -189,10 +186,8 @@ h6 {
 .docs-header {
   height: 530px;
   margin-top: 60px;
-  background-color: #02122b;
-  background-image: url(../img/header-bg.jpg);
+  background-color: #fff;
   background-size: cover;
-  box-shadow: inset 0 0 10px rgba(0,0,0,.6);
 }
 
 .docs-header-text {
@@ -201,9 +196,8 @@ h6 {
   top: 140px;
   width: 800px;
   margin: 0 auto;
-  color: #fff;
+  color: #333;
   text-align: center;
-  text-shadow: 0 0 5px #000;
   -webkit-animation: fadeintext 2s;
      -moz-animation: fadeintext 2s;
 }
@@ -221,36 +215,22 @@ h6 {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   text-decoration: none;
   line-height: 1;
   background-color: #f26629; /* Old browsers */
-  background-image: -moz-linear-gradient(top,  #f95e0c 0%, #e53003 100%); /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f95e0c), color-stop(100%,#e53003)); /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top,  #f95e0c 0%,#e53003 100%); /* Chrome10+,Safari5.1+ */
-  background-image: -o-linear-gradient(top,  #f95e0c 0%,#e53003 100%); /* Opera 11.10+ */
-  background-image: -ms-linear-gradient(top,  #f95e0c 0%,#e53003 100%); /* IE10+ */
-  background-image: linear-gradient(to bottom,  #f95e0c 0%,#e53003 100%); /* W3C */
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 5px 5px rgba(0,0,0,.2);
 }
 
 .docs-btn:hover {
   color: #fff;
   background-color: #ff7234; /* Old browsers */
-  background-image: -moz-linear-gradient(top,  #f95e0c 0%, #cd2a02 100%); /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f95e0c), color-stop(100%,#cd2a02)); /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top,  #f95e0c 0%,#cd2a02 100%); /* Chrome10+,Safari5.1+ */
-  background-image: -o-linear-gradient(top,  #f95e0c 0%,#cd2a02 100%); /* Opera 11.10+ */
-  background-image: -ms-linear-gradient(top,  #f95e0c 0%,#cd2a02 100%); /* IE10+ */
-  background-image: linear-gradient(to bottom,  #f95e0c 0%,#cd2a02 100%); /* W3C */
 }
 
 .docs-btn:active {
   padding: 19px 40px 17px;
   background-color: #cd2a02;
   background-image: none;
-  box-shadow: inset 0 0 5px rgba(0,0,0,.4);
+  box-shadow: inset 0 0 5px rgba(0,0,0,.15);
 }
 
 /* Styles for the social media buttons */
@@ -260,7 +240,6 @@ h6 {
   left: 0;
   right: 0;
   padding: 20px 0;
-  background-color: rgba(0,0,0,.3);
   -webkit-animation: fadeinsocial 2.5s;
      -moz-animation: fadeinsocial 2.5s;
 }
