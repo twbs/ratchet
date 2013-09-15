@@ -320,8 +320,8 @@
       }
 
       if (/slide/.test(transition)) {
-        swap.classList.add(enter ? 'right' : 'left');
-        swap.classList.add('slide');
+        swap.classList.add('sliding-in', enter ? 'right' : 'left');
+        swap.classList.add('slide', enter ? 'top' : 'bottom');
         container.classList.add('slide');
       }
 
@@ -359,7 +359,7 @@
 
       function slideEnd() {
         swap.removeEventListener('webkitTransitionEnd', slideEnd);
-        swap.classList.remove('slide');
+        swap.classList.remove('slide', 'bottom', 'top', 'sliding-in');
         swap.classList.remove(swapDirection);
         container.parentNode.removeChild(container);
         complete && complete();

@@ -18,19 +18,28 @@
 
   // Slide animation iOS7
   &.slide {
-    -webkit-transition-timing-function: cubic-bezier(.1, .7, .1, 1); //Thanks to @c2prods
+    z-index: 2;
+    -webkit-transition-timing-function: cubic-bezier(.1, .7, .1, 1); // Inspired by @c2prods
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform .3s;
-            transition:         transform .3s;
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    z-index: 2;
+    -webkit-transition: -webkit-transform 400ms;
+            transition:         transform 400ms;
+
+    &.sliding-in.top,
+    &.right:not([class*="sliding-in"]) {
+      -webkit-animation-name: fadeOverlay;
+              animation-name: fadeOverlay;
+      -webkit-animation-duration: 400ms;
+    }
+
+    &.right:not([class*="sliding-in"]) {
+      -webkit-animation-direction: reverse;
+    }
 
     &.left {
       z-index: 1;
-      box-shadow: none;
-      -webkit-transform: translate3d(-60%, 0, 0); // Creates the parallax effect
-              transform: translate3d(-60%, 0, 0);
+      -webkit-transform: translate3d(-20%, 0, 0); // Creates the parallax effect
+              transform: translate3d(-20%, 0, 0);
     }
 
     &.right {
@@ -39,4 +48,9 @@
               transform: translate3d(100%, 0, 0);
     }
   }
+}
+
+@-webkit-keyframes fadeOverlay {
+  from { box-shadow: 0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0); }
+  to   { box-shadow: 0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1); }
 }
