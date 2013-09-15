@@ -25,7 +25,7 @@
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
 
-    &.sliding-in.top,
+    &.sliding-in,
     &.right:not([class*="sliding-in"]) {
       -webkit-animation-name: fadeOverlay;
               animation-name: fadeOverlay;
