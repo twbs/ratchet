@@ -559,54 +559,40 @@ select {
   vertical-align: top;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-[class*="button"]:active {
-  background-color: #333;
-  transition: background-color .1s linear;
-}
-
-.button-main,
-.button-positive,
-.button-negative {
+[class*="button"]:active, [class*="button"].button-filled {
   color: #fff;
+  background-color: #333;
+  transition: opacity .1s linear, background-color .1s linear;
+}
+[class*="button"]:active:active, [class*="button"].button-filled:active {
+  opacity: .6;
 }
 
 .button-main {
   color: #007aff;
   border: 1px solid #007aff;
 }
+.button-main:active, .button-main.button-filled {
+  background-color: #007aff;
+}
 
 .button-positive {
   color: #4cd964;
   border: 1px solid #4cd964;
 }
-
-.button-negative {
-  color: #e71e1e;
-  border: 1px solid #b51a1a;
-}
-
-[class*="button"]:active,
-.button-main:active,
-.button-positive:active,
-.button-negative:active {
-  color: #fff;
-}
-
-.button-main:active {
-  color: #fff;
-  background-color: #007aff;
-}
-
-.button-positive:active {
-  color: #fff;
+.button-positive:active, .button-positive.button-filled {
   background-color: #4cd964;
 }
 
-.button-negative:active {
-  background-color: #b21a1a;
+.button-negative {
+  color: #dd524d;
+  border: 1px solid #dd524d;
+}
+.button-negative:active, .button-negative.button-filled {
+  background-color: #dd524d;
 }
 
 .button-block {

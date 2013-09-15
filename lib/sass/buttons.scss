@@ -14,61 +14,56 @@
   vertical-align: top;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, .5);
+  border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 4px;
 
   // Active
-  &:active {
+  &:active,
+  &.button-filled  {
+    color: #fff;
     background-color: #333;
-    transition: background-color .1s linear;
+    transition: opacity .1s linear, background-color .1s linear;
+
+    &:active {
+      opacity: .6;
+    }
   }
 }
 
 // Buttons modifiers
 // --------------------------------------------------
 
-// Overriding styles for buttons with modifiers
-.button-main,
-.button-positive,
-.button-negative {
-  color: #fff;
-}
-
 // Main button
 .button-main {
   color: $app-color;
   border: 1px solid $app-color;
+
+  &:active,
+  &.button-filled {
+    background-color: $app-color;
+  }
 }
 
 // Positive button
 .button-positive {
   color: #4cd964;
   border: 1px solid #4cd964;
+
+  &:active,
+  &.button-filled {
+    background-color: #4cd964;
+  }
 }
 
 // Negative button
 .button-negative {
-  color: #e71e1e;
-  border: 1px solid #b51a1a;
-}
+  color: #dd524d;
+  border: 1px solid #dd524d;
 
-// Active state for buttons with modifiers
-[class*="button"]:active,
-.button-main:active,
-.button-positive:active,
-.button-negative:active {
-  color: #fff;
-}
-.button-main:active {
-  color: #fff;
-  background-color: $app-color;
-}
-.button-positive:active {
-  color: #fff;
-  background-color: #4cd964;
-}
-.button-negative:active {
-  background-color: #b21a1a;
+  &:active,
+  &.button-filled {
+    background-color: #dd524d;
+  }
 }
 
 // Block level buttons (full width buttons)
