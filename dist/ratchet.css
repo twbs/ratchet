@@ -739,41 +739,26 @@ button.button-block {
   width: 280px;
   padding: 5px;
   margin-left: -146px;
-  background-color: #555;
-  background-image: -webkit-linear-gradient(top, #555555 5%, #555555 6%, #111111 30%);
-  background-image: linear-gradient(to bottom, #555555 5%, #555555 6%, #111111 30%);
-  border: 1px solid #111;
+  background-color: rgba(247, 247, 247, 0.98);
   border-radius: 6px;
   opacity: 0;
-  box-shadow: inset 0 1px 1px -1px white, 0 3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
   -webkit-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
-.popover:before,
 .popover:after {
   position: absolute;
+  top: -19px;
   left: 50%;
   width: 0;
   height: 0;
-  content: '';
-}
-
-.popover:before {
-  top: -20px;
-  margin-left: -21px;
-  border-right: 21px solid transparent;
-  border-bottom: 21px solid #111;
-  border-left: 21px solid transparent;
-}
-
-.popover:after {
-  top: -19px;
   margin-left: -20px;
+  content: '';
   border-right: 20px solid transparent;
-  border-bottom: 20px solid #555;
+  border-bottom: 20px solid rgba(247, 247, 247, 0.98);
   border-left: 20px solid transparent;
 }
 
@@ -788,26 +773,23 @@ button.button-block {
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
-  margin: 15px 0;
   font-size: 16px;
-  font-weight: bold;
-  line-height: 12px;
-  color: #fff;
+  font-weight: 500;
+  line-height: 45px;
+  color: #000;
   text-align: center;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
 }
 
 .popover-header [class*="button"] {
   z-index: 25;
-  font-size: 12px;
-  line-height: 22px;
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-  background-color: #454545;
-  background-image: -webkit-linear-gradient(top, #454545 0, #353535 100%);
-  background-image: linear-gradient(to bottom, #454545 0, #353535 100%);
-  border: 1px solid #111;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  color: #007aff;
+  border: 0;
+  transition: opacity .2s linear;
   -webkit-box-flex: 0;
   box-flex: 0;
 }
@@ -821,8 +803,9 @@ button.button-block {
 }
 
 .popover-header .button:active {
-  color: #fff;
-  background-color: #0876b1;
+  color: #007aff;
+  background-color: transparent;
+  opacity: .3;
 }
 
 .popover.visible {
@@ -842,7 +825,6 @@ button.button-block {
 
 .popover .button-block {
   margin-bottom: 5px;
-  border: 1px solid #111;
 }
 
 .popover .button-block:last-child {
@@ -857,7 +839,7 @@ button.button-block {
   margin-left: 0;
   overflow: auto;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   -webkit-overflow-scrolling: touch;
 }
@@ -965,9 +947,11 @@ button.button-block {
   -webkit-animation-name: fadeOverlay;
   animation-name: fadeOverlay;
   -webkit-animation-duration: .4s;
+  animation-duration: .4s;
 }
 .content.slide.right:not([class*="sliding-in"]) {
   -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
 .content.slide.left {
   z-index: 1;
