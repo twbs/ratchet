@@ -25,6 +25,7 @@
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
 
+    // Adding the overlay
     &.sliding-in,
     &.right:not([class*="sliding-in"]) {
       -webkit-animation-name: fadeOverlay;
@@ -50,6 +51,7 @@
   }
 }
 
+// Overlay animation for the slide transition
 @-webkit-keyframes fadeOverlay {
   from { box-shadow: 0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0); }
   to   { box-shadow: 0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1); }
