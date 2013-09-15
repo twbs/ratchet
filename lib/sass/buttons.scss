@@ -23,10 +23,9 @@
     color: #fff;
     background-color: #333;
     transition: opacity .1s linear, background-color .1s linear;
-
-    &:active {
-      opacity: .6;
-    }
+  }
+  &.button-filled:active {
+    opacity: .6;
   }
 }
 

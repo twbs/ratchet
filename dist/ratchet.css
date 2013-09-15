@@ -567,7 +567,7 @@ select {
   background-color: #333;
   transition: opacity .1s linear, background-color .1s linear;
 }
-[class*="button"]:active:active, [class*="button"].button-filled:active {
+[class*="button"].button-filled:active {
   opacity: .6;
 }
 
