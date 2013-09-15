@@ -552,8 +552,8 @@ select {
   display: inline-block;
   padding: 4px 12px;
   margin: 0;
-  font-weight: bold;
-  line-height: 18px;
+  font-weight: 500;
+  line-height: 1;
   color: #333;
   text-align: center;
   vertical-align: top;
@@ -562,20 +562,21 @@ select {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-[class*="button"]:active, [class*="button"].button-filled {
+[class*="button"]:active, [class*="button"].active, [class*="button"].button-filled {
   color: #fff;
   background-color: #333;
-  transition: opacity .1s linear, background-color .1s linear;
+  -webkit-transition: background-color .1s linear;
+  transition: background-color .1s linear;
 }
-[class*="button"].button-filled:active {
+[class*="button"]:disabled, [class*="button"].disabled {
   opacity: .6;
 }
 
-.button-main {
+.button-primary {
   color: #007aff;
   border: 1px solid #007aff;
 }
-.button-main:active, .button-main.button-filled {
+.button-primary:active, .button-primary.active, .button-primary.button-filled {
   background-color: #007aff;
 }
 
@@ -583,7 +584,7 @@ select {
   color: #4cd964;
   border: 1px solid #4cd964;
 }
-.button-positive:active, .button-positive.button-filled {
+.button-positive:active, .button-positive.active, .button-positive.button-filled {
   background-color: #4cd964;
 }
 
@@ -591,35 +592,22 @@ select {
   color: #dd524d;
   border: 1px solid #dd524d;
 }
-.button-negative:active, .button-negative.button-filled {
+.button-negative:active, .button-negative.active, .button-negative.button-filled {
   background-color: #dd524d;
 }
 
 .button-block {
   display: block;
-  padding: 11px 0 13px;
+  padding: 12px 0;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
-button.button-block {
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button-block {
   width: 100%;
-}
-
-[class*="button"] [class*="count"] {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-right: -4px;
-  margin-left: 4px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.button-block [class*="count"] {
-  position: absolute;
-  right: 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-right: 10px;
 }
 
 .chevron {
@@ -666,6 +654,22 @@ button.button-block {
 
 .count-negative {
   background-color: #e71e1e;
+}
+
+[class*="button"] [class*="count"] {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-right: -4px;
+  margin-left: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button-block [class*="count"] {
+  position: absolute;
+  right: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-right: 10px;
 }
 
 .segmented-controller {

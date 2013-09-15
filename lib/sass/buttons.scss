@@ -7,8 +7,8 @@
   display: inline-block;
   padding: 4px 12px;
   margin: 0;
-  font-weight: bold;
-  line-height: 18px;
+  font-weight: 500;
+  line-height: 1;
   color: #333;
   text-align: center;
   vertical-align: top;
@@ -17,86 +17,76 @@
   border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 4px;
 
-  // Active
+  // Active & filled button styles
   &:active,
-  &.button-filled  {
+  &.active,
+  &.button-filled {
     color: #fff;
     background-color: #333;
-    transition: opacity .1s linear, background-color .1s linear;
+    -webkit-transition: background-color .1s linear;
+            transition: background-color .1s linear;
   }
-  &.button-filled:active {
+
+  // Disabled styles
+  &:disabled,
+  &.disabled {
     opacity: .6;
   }
 }
 
-// Buttons modifiers
+
+// Other button types
 // --------------------------------------------------
 
-// Main button
-.button-main {
+// Primary button (Default color is blue)
+.button-primary {
   color: $app-color;
   border: 1px solid $app-color;
 
   &:active,
+  &.active,
   &.button-filled {
     background-color: $app-color;
   }
 }
 
-// Positive button
+// Positive button (Default color is green)
 .button-positive {
-  color: #4cd964;
-  border: 1px solid #4cd964;
+  color: $positive-color;
+  border: 1px solid $positive-color;
 
   &:active,
+  &.active,
   &.button-filled {
-    background-color: #4cd964;
+    background-color: $positive-color;
   }
 }
 
-// Negative button
+// Negative button (Default color is red)
 .button-negative {
-  color: #dd524d;
-  border: 1px solid #dd524d;
+  color: $negative-color;
+  border: 1px solid $negative-color;
 
   &:active,
+  &.active,
   &.button-filled {
-    background-color: #dd524d;
+    background-color: $negative-color;
   }
 }
 
 // Block level buttons (full width buttons)
 .button-block {
   display: block;
-  padding: 11px 0 13px;
+  padding: 12px 0;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
-// Make button elements go full width when given .button-block class
-button.button-block {
-  width: 100%;
-}
-
-// Counts in buttons
+// Button overrides
 // --------------------------------------------------
-
-// Generic styles for all counts within buttons
-[class*="button"] [class*="count"] {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-right: -4px;
-  margin-left: 4px;
-  background-color: rgba(0, 0, 0, .1);
-}
-
-// Position counts within block level buttons
-// Note: These are absolutely positioned so that text of button isn't "pushed" by count and always
-// stays at true center of button
-.button-block [class*="count"] {
-  position: absolute;
-  right: 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-right: 10px;
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button-block {
+  width: 100%;
 }

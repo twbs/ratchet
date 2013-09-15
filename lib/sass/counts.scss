@@ -13,6 +13,7 @@
   border-radius: 100px;
 }
 
+
 // Count modifiers
 // --------------------------------------------------
 
@@ -29,4 +30,28 @@
 // Negative count
 .count-negative {
   background-color: #e71e1e;
+}
+
+
+// Counts in buttons
+// --------------------------------------------------
+
+// Generic styles for all counts within buttons
+[class*="button"] [class*="count"] {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-right: -4px;
+  margin-left: 4px;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+// Position counts within block level buttons
+// Note: These are absolutely positioned so that text of button isn't "pushed" by count and always
+// stays at true center of button
+.button-block [class*="count"] {
+  position: absolute;
+  right: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-right: 10px;
 }
