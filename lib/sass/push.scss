@@ -31,10 +31,12 @@
       -webkit-animation-name: fadeOverlay;
               animation-name: fadeOverlay;
       -webkit-animation-duration: .4s;
+              animation-duration: .4s;
     }
 
     &.right:not([class*="sliding-in"]) {
       -webkit-animation-direction: reverse;
+              animation-direction: reverse;
     }
 
     &.left {
