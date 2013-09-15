@@ -27,9 +27,10 @@
             transition: background-color .1s linear;
   }
 
-  // Disabled styles
+  // Disabled styles & filled button active styles
   &:disabled,
-  &.disabled {
+  &.disabled,
+  &.button-filled:active {
     opacity: .6;
   }
 }
