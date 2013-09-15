@@ -568,7 +568,7 @@ select {
   -webkit-transition: background-color .1s linear;
   transition: background-color .1s linear;
 }
-[class*="button"]:disabled, [class*="button"].disabled {
+[class*="button"]:disabled, [class*="button"].disabled, [class*="button"].button-filled:active {
   opacity: .6;
 }
 
