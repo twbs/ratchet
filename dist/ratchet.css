@@ -956,12 +956,12 @@ button.button-block {
 .content.slide {
   z-index: 2;
   -webkit-transition-timing-function: cubic-bezier(0.1, 0.7, 0.1, 1);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   -webkit-transition: -webkit-transform .4s;
   transition: transform .4s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-.content.slide.sliding-in.top, .content.slide.right:not([class*="sliding-in"]) {
+.content.slide.sliding-in, .content.slide.right:not([class*="sliding-in"]) {
   -webkit-animation-name: fadeOverlay;
   animation-name: fadeOverlay;
   -webkit-animation-duration: .4s;
