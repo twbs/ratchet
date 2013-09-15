@@ -958,13 +958,13 @@ button.button-block {
   -webkit-transition-timing-function: cubic-bezier(0.1, 0.7, 0.1, 1);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: transform 400ms;
+  -webkit-transition: -webkit-transform .4s;
+  transition: transform .4s;
 }
 .content.slide.sliding-in.top, .content.slide.right:not([class*="sliding-in"]) {
   -webkit-animation-name: fadeOverlay;
   animation-name: fadeOverlay;
-  -webkit-animation-duration: 400ms;
+  -webkit-animation-duration: .4s;
 }
 .content.slide.right:not([class*="sliding-in"]) {
   -webkit-animation-direction: reverse;

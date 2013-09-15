@@ -20,16 +20,16 @@
   &.slide {
     z-index: 2;
     -webkit-transition-timing-function: cubic-bezier(.1, .7, .1, 1); // Inspired by @c2prods
+    -webkit-transition: -webkit-transform .4s;
+            transition:         transform .4s;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform 400ms;
-            transition:         transform 400ms;
 
     &.sliding-in.top,
     &.right:not([class*="sliding-in"]) {
       -webkit-animation-name: fadeOverlay;
               animation-name: fadeOverlay;
-      -webkit-animation-duration: 400ms;
+      -webkit-animation-duration: .4s;
     }
 
     &.right:not([class*="sliding-in"]) {
