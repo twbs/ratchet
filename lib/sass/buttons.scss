@@ -117,11 +117,21 @@
 
   // Override standard button active states
   .button:active,
-  .button-prev:active,
-  .button-next:active {
+  .button.active
+  .button-prev:active
+  .button-prev.active,
+  .button-next:active
+  .button-next.active,
+  .button-primary:active,
+  .button-primary.active {
     color: $primary-color;
     background-color: transparent;
     opacity: .3;
+  }
+
+  // Primary button in bars
+  .button-primary {
+    font-weight: $font-weight;
   }
 
 

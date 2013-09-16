@@ -28,6 +28,9 @@
       margin: -11px -60px -11px 0;
       color: inherit;
     }
+    > a:not([class*="button"]):active {
+      background-color: #eee;
+    } 
 
     p {
       margin: 0;

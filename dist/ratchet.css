@@ -399,6 +399,9 @@ a {
   margin: -11px -60px -11px 0;
   color: inherit;
 }
+.table-view li > a:not([class*="button"]):active {
+  background-color: #eee;
+}
 .table-view li p {
   margin: 0;
 }
@@ -504,7 +507,6 @@ input[type=search] {
   border-width: 0;
   background-color: rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  transition: text-align 1s linear;
 }
 
 input[type=search]:focus {
@@ -655,11 +657,19 @@ select {
   right: 10px;
 }
 .bar-title .button:active,
-.bar-title .button-prev:active,
-.bar-title .button-next:active {
+.bar-title .button.active
+.button-prev:active
+.button-prev.active,
+.bar-title .button-next:active
+.button-next.active,
+.bar-title .button-primary:active,
+.bar-title .button-primary.active {
   color: #007aff;
   background-color: transparent;
   opacity: .3;
+}
+.bar-title .button-primary {
+  font-weight: 500;
 }
 .bar-title .button-prev:before,
 .bar-title .button-prev:after,
