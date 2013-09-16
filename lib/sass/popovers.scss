@@ -63,7 +63,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 29px;
-  color: $app-color;
+  color: $primary-color;
   border: 0;
   transition: opacity .2s linear;
   -webkit-box-flex: 0;
@@ -82,7 +82,7 @@
 
 // Active state for popover header buttons
 .popover-header .button:active {
-  color: $app-color;
+  color: $primary-color;
   background-color: transparent;
   opacity: .3;
 }

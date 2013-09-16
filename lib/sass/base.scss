@@ -18,7 +18,7 @@ body {
 
 // Universal link styling
 a {
-  color: #007aff;
+  color: $primary-color;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes the dark touch outlines on links
 }

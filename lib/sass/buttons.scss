@@ -7,14 +7,14 @@
   display: inline-block;
   padding: 4px 12px;
   margin: 0;
-  font-weight: 500;
+  font-weight: $font-weight-light;
   line-height: 1;
-  color: #333;
+  color: $default-color;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, .2);
+  border: 1px solid $default-color;
   border-radius: 4px;
 
   // Active & filled button styles
@@ -22,7 +22,7 @@
   &.active,
   &.button-filled {
     color: #fff;
-    background-color: #333;
+    background-color: $default-color;
     -webkit-transition: background-color .1s linear, opacity .1s linear;
             transition: background-color .1s linear, opacity .1s linear;
   }
@@ -41,13 +41,13 @@
 
 // Primary button (Default color is blue)
 .button-primary {
-  color: $app-color;
-  border: 1px solid $app-color;
+  color: $primary-color;
+  border: 1px solid $primary-color;
 
   &:active,
   &.active,
   &.button-filled {
-    background-color: $app-color;
+    background-color: $primary-color;
   }
 }
 
@@ -83,11 +83,123 @@
   font-size: 16px;
 }
 
+// Buttons in nav bars
+// --------------------------------------------------
+
+.bar-title {
+
+  // Generic style for all buttons in .bar-title
+  [class*="button"] {
+    position: relative;
+    z-index: 10; // Places buttons over full width title
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: $bar-base-height;
+    color: $primary-color;
+    border: 0;
+    -webkit-transition: opacity .2s linear;
+            transition: opacity .2s linear;
+    -webkit-box-flex: 0;
+            box-flex: 0;
+  }
+
+  // Hacky way to right align buttons outside of flex-box system
+  // Note: is only absolutely positioned button, would be better if flex-box had an "align right" option
+  .title + [class*="button"]:last-child,
+  .button + [class*="button"]:last-child,
+  [class*="button"].pull-right {
+    position: absolute;
+    top: 0;
+    right: $bar-side-spacing;
+  }
+
+  // Override standard button active states
+  .button:active,
+  .button-prev:active,
+  .button-next:active {
+    color: $primary-color;
+    background-color: transparent;
+    opacity: .3;
+  }
+
+
+  // Directional buttons in nav bars
+  // --------------------------------------------------
+
+  .button-prev:before,
+  .button-prev:after,
+  .button-next:before,
+  .button-next:after {
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 3px;
+    background-color: $primary-color;
+    content: '';
+  }
+
+  // Prev/next button base styles
+  .button-prev {
+    padding-left: $button-directional-padding;
+    margin-left: $button-directional-margin;
+  }
+  .button-next {
+    padding-right: $button-directional-padding;
+    margin-right: $button-directional-margin;
+  }
+
+  // Position the chevrons horizontally
+  .button-prev:before,
+  .button-prev:after {
+    left: 0;
+  }
+  .button-next:before,
+  .button-next:after {
+    right: 0;
+  }
+
+  // Position the chevrons vertically
+  .button-prev:before, 
+  .button-next:before {
+    top: 16px;
+  }
+  .button-prev:after, 
+  .button-next:after {
+    top: 25px;
+  }
+
+  // Rotate the chevrons
+  .button-prev:before,
+  .button-next:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  } 
+  .button-prev:after,
+  .button-next:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+// Block buttons in all bars
+// --------------------------------------------------
+
+// Add proper padding and replace buttons normal dropshadow with a shine from bar
+[class*="bar"] .button-block {
+  padding: 7px 0;
+  margin-top: 6px;
+  margin-bottom: 0;
+
+  &:active {
+    padding: 7px 0;
+  }
+}
+
 // Button overrides
 // --------------------------------------------------
 input[type="submit"],
 input[type="reset"],
-input[type="button"],
-.button-block {
+input[type="button"] {
   width: 100%;
 }

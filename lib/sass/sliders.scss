@@ -17,6 +17,7 @@
   // Inner wrapper for slider (width of all slides together)
   > ul {
     position: relative;
+    padding: 0;
     font-size: 0; // Remove spaces from inline-block children
     white-space: nowrap;
     -webkit-transition: all 0 linear;

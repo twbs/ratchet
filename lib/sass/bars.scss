@@ -7,27 +7,28 @@
   right: 0;
   left: 0;
   z-index: 10;
-  height: 44px;
-  padding: 5px;
+  height: $bar-base-height;
+  padding: 0 $bar-side-spacing;
   background-color: $chrome-color;
-  box-shadow: 0 0px 1px rgba(0,0,0,.85);
+  box-shadow: 0 0 1px rgba(0,0,0,.85);
+
+  // Modifier class to dock any bar below .bar-title
+  &.bar-header-secondary {
+    top: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar to bottom of viewport
+  &.bar-footer {
+    bottom: 0;
+  }
+
+  // Flip border position to top for footer bars
+  &.bar-footer.bar-standard,
+  &.bar-footer-secondary.bar-standard {
+    box-shadow: 0 0 1px rgba(0,0,0,.85);
+  }
 }
 
-// Modifier class to dock any bar below .bar-title
-.bar-header-secondary {
-  top: 44px;
-}
-
-// Modifier class to dock any bar to bottom of viewport
-.bar-footer {
-  bottom: 0;
-}
-
-// Flip border position to top for footer bars
-.bar-footer.bar-standard,
-.bar-footer-secondary.bar-standard {
-  box-shadow: 0 0px 1px rgba(0,0,0,.85);
-}
 
 // Nav bar
 // --------------------------------------------------
@@ -42,30 +43,33 @@
 }
 
 // Centered text in the .bar-title 
-.bar-title .title {
+.title {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
   width: 100%;
+  padding: 0;
+  margin: 0;
   font-size: 18px;
   font-weight: 500;
-  line-height: 44px;
+  line-height: $bar-base-height;
   color: #000;
   text-align: center;
   white-space: nowrap;
 }
 
-.bar-title > a:not([class*="button"]) {
+> a:not([class*="button"]) {
   display: block;
   width: 100%;
   height: 100%;
 }
 
 //Retain specified title color
-.bar-title .title a {
+.title a {
   color: inherit;
 }
+
 
 // Tab bar
 // --------------------------------------------------
@@ -73,7 +77,7 @@
 // Bar docked to bottom used for primary app navigation
 .bar-tab {
   bottom: 0;
-  height: 50px;
+  height: $bar-tab-height;
   padding: 0;
   box-shadow: 0 0px 1px rgba(0,0,0,.85);
 }
@@ -83,6 +87,8 @@
   display: -webkit-box;
   display: box;
   height: 100%;
+  padding: 0;
+  margin: 0;
   list-style: none;
   -webkit-box-orient: horizontal;
           box-orient: horizontal;
@@ -109,155 +115,8 @@
   margin-top: 1px;
   font-size: 11px;
   font-weight: 400;
-  color: #929292;
+  color: $default-color;
 }
 .tab-item.active .tab-label {
- color: $app-color;
-}
-
-// Buttons in nav bars
-// --------------------------------------------------
-
-// Generic style for all buttons in .bar-title
-.bar-title [class*="button"] {
-  position: relative;
-  z-index: 10; // Places buttons over full width title
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 29px;
-  color: $app-color;
-  border: 0;
-  transition: opacity .2s linear;
-  -webkit-box-flex: 0;
-          box-flex: 0;
-}
-
-
-// Hacky way to right align buttons outside of flex-box system
-// Note: is only absolutely positioned button, would be better if flex-box had an "align right" option
-.bar-title .title + [class*="button"]:last-child,
-.bar-title .button + [class*="button"]:last-child,
-.bar-title [class*="button"].pull-right {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-
-// Override standard button active states
-.bar-title .button:active,
-.bar-title .button-prev:active,
-.bar-title .button-next:active {
-  color: $app-color;
-  background-color: transparent;
-  opacity: .3;
-}
-
-// Directional buttons in nav bars
-// --------------------------------------------------
-
-.bar-title .button-prev:before,
-.bar-title .button-prev:after,
-.bar-title .button-next:before,
-.bar-title .button-next:after {
-  position: absolute;
-  display: block;
-  width: 15px;
-  height: 3px;
-  background-color: $app-color;
-  content: '';
-}
-
-// Prev/next button base styles
-.bar-title .button-prev {
-  padding-left: 22px; // Push over to make room for chevrons
-}
-.bar-title .button-next {
-  padding-right: 22px; // Push over to make room for chevrons
-}
-
-// Position the chevrons horizontally
-.bar-title .button-prev:before,
-.bar-title .button-prev:after {
-  left: 0;
-}
-.bar-title .button-next:before,
-.bar-title .button-next:after {
-  right: 0;
-}
-
-// Position the chevrons vertically
-.bar-title .button-prev:before, 
-.bar-title .button-next:before {
-  top: 12px;
-}
-.bar-title .button-prev:after, 
-.bar-title .button-next:after {
-  top: 21px;
-}
-
-// Rotate the chevrons
-.bar-title .button-prev:before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.bar-title .button-prev:after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.bar-title .button-next:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.bar-title .button-next:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-// Block buttons in all bars
-// --------------------------------------------------
-
-// Add proper padding and replace buttons normal dropshadow with a shine from bar
-[class*="bar"] .button-block {
-  padding: 7px 0;
-  margin-bottom: 0;
-}
-
-// Override standard padding changes for .button-blocks
-[class*="bar"] .button-block:active {
-  padding: 7px 0;
-}
-
-// Segmented controller in all bars
-// --------------------------------------------------
-
-// Remove standard segmented bottom margin
-[class*="bar-"] .segmented-controller {
-  margin-bottom: 0;
-}
-
-// Add margins between segmented controllers and buttons
-[class*="bar-"] .segmented-controller + [class*="button"],
-[class*="bar-"] [class*="button"] + .segmented-controller {
-  margin-left: 5px;
-}
-
-// Segmented controller in a nav bars
-// --------------------------------------------------
-
-.bar-title .segmented-controller {
-  line-height: 18px;
-  -webkit-box-flex: 1;
-          box-flex: 1;
-}
-
-
-// Search forms in standard bar
-// --------------------------------------------------
-
-// Position/size search bar within the bar
-.bar-standard input[type=search] {
-  height: 32px;
-  margin: 0;
+  color: $primary-color;
 }

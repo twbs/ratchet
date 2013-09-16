@@ -1,0 +1,36 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Type
+// --------------------------------------------------
+$font-weight: 500;
+$font-weight-bold: 600;
+$font-weight-light: 400;
+
+
+// Colors
+// --------------------------------------------------
+
+// Main theme colors
+$primary-color: #007aff;
+$chrome-color: rgba(247,247,247,.98);
+
+// Action colors
+$default-color:  #929292;
+$positive-color: #4cd964;
+$negative-color: #dd524d;
+
+
+// Bars
+// --------------------------------------------------
+$bar-base-height:  44px;
+$bar-tab-height:   50px;
+$bar-side-spacing: 10px;
+
+
+// Buttons
+// --------------------------------------------------
+$button-directional-padding: 20px;
+$button-directional-margin: -($bar-side-spacing/2);

@@ -1,8 +1,6 @@
 // Variables
-$app-color: #007aff;
-$chrome-color: rgba(247,247,247,.98);
-$positive-color: #4cd964;
-$negative-color: #dd524d;
+@import "variables.scss";
+
 
 // Normalize & Base CSS
 @import "normalize.scss";

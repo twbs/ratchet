@@ -121,3 +121,13 @@ select {
   margin-bottom: 0;
   border-bottom: 0;
 }
+
+
+// Search forms in standard bar
+// --------------------------------------------------
+
+// Position/size search bar within the bar
+.bar-standard input[type=search] {
+  height: 32px;
+  margin: 0;
+}
