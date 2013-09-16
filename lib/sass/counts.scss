@@ -9,7 +9,7 @@
   font-weight: bold;
   line-height: 13px;
   color: #fff;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: $default-color;
   border-radius: 100px;
 }
 
@@ -18,18 +18,18 @@
 // --------------------------------------------------
 
 // Main count
-.count-main {
-  background-color: #1eafe7;
+.count-primary {
+  background-color: $primary-color;
 }
 
 // Positive count
 .count-positive {
-  background-color: #4cd964;
+  background-color: $positive-color;
 }
 
 // Negative count
 .count-negative {
-  background-color: #e71e1e;
+  background-color: $negative-color;
 }
 
 

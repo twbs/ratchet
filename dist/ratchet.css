@@ -734,12 +734,12 @@ input[type="button"] {
   font-weight: bold;
   line-height: 13px;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #929292;
   border-radius: 100px;
 }
 
-.count-main {
-  background-color: #1eafe7;
+.count-primary {
+  background-color: #007aff;
 }
 
 .count-positive {
@@ -747,7 +747,7 @@ input[type="button"] {
 }
 
 .count-negative {
-  background-color: #e71e1e;
+  background-color: #dd524d;
 }
 
 [class*="button"] [class*="count"] {
