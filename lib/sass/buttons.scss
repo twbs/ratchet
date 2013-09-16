@@ -5,7 +5,7 @@
 [class*="button"] {
   position: relative;
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 10px 6px;
   margin: 0;
   font-weight: $font-weight-light;
   line-height: 1;
@@ -93,6 +93,7 @@
     position: relative;
     z-index: 10; // Places buttons over full width title
     padding: 0;
+    margin-top: -5px; // Offsets the bar's vertical padding
     font-size: 16px;
     font-weight: 400;
     line-height: $bar-base-height;
@@ -110,7 +111,7 @@
   .button + [class*="button"]:last-child,
   [class*="button"].pull-right {
     position: absolute;
-    top: 0;
+    top: 5px; // Offsets the bar's vertical padding
     right: $bar-side-spacing;
   }
 
@@ -188,12 +189,7 @@
 // Add proper padding and replace buttons normal dropshadow with a shine from bar
 [class*="bar"] .button-block {
   padding: 7px 0;
-  margin-top: 6px;
-  margin-bottom: 0;
-
-  &:active {
-    padding: 7px 0;
-  }
+  margin-top: 1px;
 }
 
 // Button overrides

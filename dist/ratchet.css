@@ -284,7 +284,7 @@ a {
   left: 0;
   z-index: 10;
   height: 44px;
-  padding: 0 10px;
+  padding: 5px 10px;
   background-color: rgba(247, 247, 247, 0.98);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
 }
@@ -396,6 +396,9 @@ a {
   padding: inherit;
   margin: -11px -60px -11px 0;
   color: inherit;
+}
+.table-view li p {
+  margin: 0;
 }
 .table-view.inset {
   width: auto;
@@ -560,14 +563,14 @@ select {
 }
 
 [class*="bar-"] input[type=search] {
-  height: 32px;
-  margin: 0;
+  height: 29px;
+  margin: 2px 0;
 }
 
 [class*="button"] {
   position: relative;
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 10px 6px;
   margin: 0;
   font-weight: 400;
   line-height: 1;
@@ -624,6 +627,7 @@ select {
   position: relative;
   z-index: 10;
   padding: 0;
+  margin-top: -5px;
   font-size: 16px;
   font-weight: 400;
   line-height: 44px;
@@ -638,7 +642,7 @@ select {
 .bar-title .button + [class*="button"]:last-child,
 .bar-title [class*="button"].pull-right {
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 10px;
 }
 .bar-title .button:active,
@@ -696,11 +700,7 @@ select {
 
 [class*="bar"] .button-block {
   padding: 7px 0;
-  margin-top: 6px;
-  margin-bottom: 0;
-}
-[class*="bar"] .button-block:active {
-  padding: 7px 0;
+  margin-top: 1px;
 }
 
 input[type="submit"],
@@ -775,7 +775,7 @@ input[type="button"] {
   display: -webkit-box;
   display: box;
   padding: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   font-size: 12px;
   font-weight: 400;
@@ -796,7 +796,7 @@ input[type="button"] {
 }
 .segmented-controller li > a {
   display: block;
-  padding: 7px 16px;
+  padding: 6px 16px 7px;
   overflow: hidden;
   line-height: 1;
   color: #007aff;
@@ -821,10 +821,13 @@ input[type="button"] {
 }
 
 [class*="bar-"] .segmented-controller {
-  margin-top: 9px;
-  margin-bottom: 8px;
+  margin: 3px 0;
   -webkit-box-flex: 1;
   box-flex: 1;
+}
+
+.bar-title .segmented-controller {
+  margin-bottom: 4px;
 }
 
 [class*="bar-"] .segmented-controller + [class*="button"],
