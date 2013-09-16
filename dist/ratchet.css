@@ -573,7 +573,7 @@ select {
 [class*="button"] {
   position: relative;
   display: inline-block;
-  padding: 5px 10px 6px;
+  padding: 5px 10px 7px;
   margin: 0;
   font-weight: 400;
   line-height: 1;
