@@ -1056,16 +1056,12 @@ h6 {
 -------------------------------------------------- */
 
 /* Bars.css */
-[class*="bar-"] {
-  -moz-box-sizing: border-box;
-}
 .bar-title,
 .tab-inner {
   display: -moz-box;
   -moz-box-orient: horizontal;
 }
 .tab-item {
-  -moz-box-sizing: border-box;
   -moz-box-flex: 1;
 }
 .bar-title [class*="button"] {
@@ -1073,32 +1069,6 @@ h6 {
 }
 .bar-title .segmented-controller {
   -moz-box-flex: 1;
-}
-
- /* forms.css */
-select,
-textarea,
-input[type="text"],
-input[type=search],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="color"],
-.input-group {
-  -moz-box-sizing: border-box;
-}
-
-/* lists.css */
-.table-view.inset  {
-  -moz-box-sizing: border-box;
 }
 
 /* popovers.css */
