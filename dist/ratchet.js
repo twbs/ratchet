@@ -492,7 +492,7 @@
     }
 
     data.title = head.querySelector('title');
-    data.title = data.title && data.title.innerText && data.title.innerText.trim();
+    data.title = data.title && data.title.innerText.trim();
 
     if (options.transition) data = extendWithDom(data, '.content', body);
     else data.contents = body;
