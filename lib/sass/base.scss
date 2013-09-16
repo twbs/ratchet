@@ -2,6 +2,9 @@
 // Base styles
 // --------------------------------------------------
 
+// Use box sizing on all the things!
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 body {
   position: fixed;
   top: 0;
