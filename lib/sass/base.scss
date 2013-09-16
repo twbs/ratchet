@@ -11,7 +11,9 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  font: 14px/1.25 "Helvetica Neue", sans-serif;
+  font-family: $font-family;
+  font-size: 14px;
+  line-height: 1.25;
   color: #000;
   background-color: #fff;
 }

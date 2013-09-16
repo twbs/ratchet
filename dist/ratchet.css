@@ -229,7 +229,9 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  font: 14px/1.25 "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
   color: #000;
   background-color: #fff;
 }
@@ -420,7 +422,7 @@ a {
   padding-bottom: 6px;
   padding-left: 15px;
   margin-left: 0;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 18px;
   background-color: #f8f8f8;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -551,7 +553,8 @@ select {
   float: left;
   width: 35%;
   padding: 11px 10px 9px 13px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .input-row label + input {

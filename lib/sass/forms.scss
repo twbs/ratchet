@@ -115,7 +115,8 @@ select {
   float: left;
   width: 35%;
   padding: 11px 10px 9px 13px; // Optimizing the baseline for mobile.
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight;
+  font-family: $font-family;
 }
 
 // Actual inputs float to right of labels and also have a set percentage
