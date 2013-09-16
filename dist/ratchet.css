@@ -492,10 +492,12 @@ input[type="color"],
 
 input[type=search] {
   height: 34px;
+  padding: 0 10px;
   font-size: 14px;
   border-radius: 6px;
   border-width: 0;
   background-color: rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 textarea {
@@ -515,6 +517,9 @@ select {
   width: auto;
   height: auto;
   padding: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
 }
 
 .input-group input {
@@ -541,9 +546,9 @@ select {
 
 .input-row label {
   float: left;
-  width: 25%;
+  width: 35%;
   padding: 11px 10px 9px 13px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .input-row label + input {
@@ -554,7 +559,7 @@ select {
   border-bottom: 0;
 }
 
-.bar-standard input[type=search] {
+[class*="bar-"] input[type=search] {
   height: 32px;
   margin: 0;
 }

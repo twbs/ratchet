@@ -43,10 +43,12 @@ input[type="color"],
 // Fully round search input
 input[type=search] {
   height: 34px;
+  padding: 0 10px;
   font-size: 14px;
   border-radius: 6px;
   border-width: 0;
   background-color: rgba(0,0,0,.1);
+  box-sizing: border-box; // Override content-box in normalize
 }
 
 // Allow text area's height to grow larger than a normal input
@@ -73,6 +75,9 @@ select {
   width: auto;
   height: auto;
   padding: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
 }
 
 // Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input
@@ -108,9 +113,9 @@ select {
 // Labels get floated left with a set percentage width
 .input-row label {
   float: left;
-  width: 25%;
+  width: 35%;
   padding: 11px 10px 9px 13px; // Optimizing the baseline for mobile.
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
 
 // Actual inputs float to right of labels and also have a set percentage
@@ -127,7 +132,7 @@ select {
 // --------------------------------------------------
 
 // Position/size search bar within the bar
-.bar-standard input[type=search] {
+[class*="bar-"] input[type=search] {
   height: 32px;
   margin: 0;
 }
