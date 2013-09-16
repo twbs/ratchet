@@ -552,10 +552,9 @@ h6 {
 #blockButtons [class*="button"]:last-child {
   margin-bottom: 0;
 }
-
 #blockButtonsInPhone .button-block {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #push .component-example {
@@ -593,6 +592,9 @@ h6 {
 
 #blockButtonsInPhone [class*="button"] {
   margin-top: 5px;
+}
+#blockButtonsInPhone [class*="button"]:first-child {
+  margin-top: 10px;
 }
 
 /* Counts examples */
