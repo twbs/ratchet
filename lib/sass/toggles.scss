@@ -4,8 +4,8 @@
 
 .toggle {
   position: relative;
-  width: 45px;
-  height: 28px;
+  width: 47px;
+  height: 30px;
   background-color: #fff;
   border: 2px solid #e6e6e6;
   border-radius: 20px;
@@ -28,13 +28,13 @@
 
   // Active state for toggle
   &.active {
-    background-color: #4cd964;
-    border: 2px solid #4cd964;
+    background-color: $positive-color;
+    border: 2px solid $positive-color;
   }
 
   // Active state for toggle handle
   &.active .toggle-handle {
-    border-color: #4cd964;
+    border-color: $positive-color;
     -webkit-transform: translate3d(17px,0,0);
             transform: translate3d(17px,0,0);
   }
