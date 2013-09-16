@@ -657,11 +657,11 @@ select {
   right: 10px;
 }
 .bar-title .button:active,
-.bar-title .button.active
-.button-prev:active
-.button-prev.active,
-.bar-title .button-next:active
-.button-next.active,
+.bar-title .button.active,
+.bar-title .button-prev:active,
+.bar-title .button-prev.active,
+.bar-title .button-next:active,
+.bar-title .button-next.active,
 .bar-title .button-primary:active,
 .bar-title .button-primary.active {
   color: #007aff;

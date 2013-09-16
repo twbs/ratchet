@@ -117,10 +117,10 @@
 
   // Override standard button active states
   .button:active,
-  .button.active
-  .button-prev:active
+  .button.active,
+  .button-prev:active,
   .button-prev.active,
-  .button-next:active
+  .button-next:active,
   .button-next.active,
   .button-primary:active,
   .button-primary.active {
