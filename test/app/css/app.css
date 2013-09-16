@@ -8,5 +8,9 @@
 }
 
 .form-wrapper {
-  padding: 10px;
+  padding: 10px 0;
+}
+
+.form-wrapper [class*="button"] {
+  margin: 0 10px;
 }
