@@ -499,10 +499,16 @@ input[type=search] {
   height: 34px;
   padding: 0 10px;
   font-size: 14px;
+  text-align: center;
   border-radius: 6px;
   border-width: 0;
   background-color: rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  transition: text-align 1s linear;
+}
+
+input[type=search]:focus {
+  text-align: left;
 }
 
 textarea {
