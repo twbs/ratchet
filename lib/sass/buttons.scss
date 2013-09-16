@@ -23,8 +23,8 @@
   &.button-filled {
     color: #fff;
     background-color: #333;
-    -webkit-transition: background-color .1s linear;
-            transition: background-color .1s linear;
+    -webkit-transition: background-color .1s linear, opacity .1s linear;
+            transition: background-color .1s linear, opacity .1s linear;
   }
 
   // Disabled styles & filled button active styles
