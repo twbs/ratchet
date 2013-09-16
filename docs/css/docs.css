@@ -63,6 +63,8 @@ h6 {
 }
 
 .docs-masthead-title {
+  padding: 0;
+  margin: 0;
   font-weight: 700;
   font-size: 21px;
   text-transform: uppercase;
@@ -71,6 +73,8 @@ h6 {
 
 .docs-navigation {
   float: right;
+  padding: 0;
+  margin: 0;
   font-size: 15px;
 }
 
@@ -329,8 +333,8 @@ h6 {
 /* Mad override to avoid it being styled like the block level link */
 .component-example .table-view a[data-transition="slide-out"],
 .iphone .table-view a[data-transition="slide-out"] {
-  padding: 0;
   display: inline;
+  padding: 0;
   margin: 0;
   color: #0882f0;
 }
@@ -353,6 +357,7 @@ h6 {
 }
 
 .section-title {
+  margin: 0;
   font-size: 60px;
   font-weight: 700;
   line-height: 1;
@@ -360,6 +365,7 @@ h6 {
 }
 
 .section-description {
+  margin: 0;
   font-weight: 300;
   font-size: 24px;
   color: #777;
@@ -378,6 +384,8 @@ h6 {
 .steps {
   overflow: hidden;
   padding-top: 40px;
+  padding-left: 0;
+  margin: 0;
 }
 
 .steps .step {
@@ -388,11 +396,13 @@ h6 {
 }
 
 .step-title {
+  margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
 .step-description {
+  margin: 0;
   color: #777;
   margin-bottom: 10px;
 }
