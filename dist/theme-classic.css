@@ -12,7 +12,7 @@
   background-color: rgba(30, 176, 233, 0.98);
 }
 [class*="bar-"].bar-standard, [class*="bar-"].bar-footer-secondary {
-  background-color: rgba(238, 238, 238, 0.98);
+  background-color: rgba(245, 245, 245, 0.98);
 }
 
 .title {
