@@ -1,0 +1,112 @@
+/*
+* =====================================================
+* Ratchet v2.0.0
+* Copyright 2013 Connor Sears, Dave Gamache, and Jacob Thornton
+* Licensed under http://www.opensource.org/licenses/MIT
+*
+* Designed and built by @connors, @dhg, and @fat.
+* =====================================================
+*/
+
+[class*="bar-"] {
+  background-color: rgba(30, 176, 233, 0.98);
+}
+[class*="bar-"].bar-standard, [class*="bar-"].bar-footer-secondary {
+  background-color: rgba(238, 238, 238, 0.98);
+}
+
+.title {
+  color: #fff;
+}
+
+.tab-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tab-item.active .tab-label {
+  color: white;
+}
+
+[class*="button"] {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+[class*="button"]:active, [class*="button"].active, [class*="button"].button-filled {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.button-primary {
+  color: #1eb0e9;
+  border-color: #1eb0e9;
+}
+.button-primary:active, .button-primary.active, .button-primary.button-filled {
+  background-color: #1eb0e9;
+}
+
+.button-positive {
+  color: #34ba15;
+  border-color: #34ba15;
+}
+.button-positive:active, .button-positive.active, .button-positive.button-filled {
+  background-color: #34ba15;
+}
+
+.button-negative {
+  color: #e71e1e;
+  border-color: #e71e1e;
+}
+.button-negative:active, .button-negative.active, .button-negative.button-filled {
+  background-color: #e71e1e;
+}
+
+.bar-title [class*="button"] {
+  color: #fff;
+}
+.bar-title .button:active,
+.bar-title .button.active,
+.bar-title .button-prev:active,
+.bar-title .button-prev.active,
+.bar-title .button-next:active,
+.bar-title .button-next.active,
+.bar-title .button-primary:active,
+.bar-title .button-primary.active {
+  color: #fff;
+}
+.bar-title .button-prev:before,
+.bar-title .button-prev:after,
+.bar-title .button-next:before,
+.bar-title .button-next:after {
+  background-color: #fff;
+}
+
+.segmented-controller {
+  border: -color #1eb0e9;
+}
+.segmented-controller li {
+  border-color: #1eb0e9;
+}
+.segmented-controller li > a {
+  color: #1eb0e9;
+}
+.segmented-controller li.active {
+  background-color: #1eb0e9;
+}
+
+.bar-title .segmented-controller {
+  border-color: #fff;
+}
+.bar-title .segmented-controller li {
+  border-color: #fff;
+}
+.bar-title .segmented-controller li > a {
+  color: #fff;
+}
+.bar-title .segmented-controller li.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+input[type=search] {
+  color: #555;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 17px;
+}
