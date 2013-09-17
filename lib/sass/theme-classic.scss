@@ -14,6 +14,13 @@ $default-color:  rgba(0, 0, 0, .3);
 $positive-color: #34ba15;
 $negative-color: #e71e1e;
 
+// Global
+// --------------------------------------------------
+
+.bar-header-secondary ~ .content {
+  padding-top: 108px;
+}
+
 
 // Bars
 // --------------------------------------------------
@@ -24,6 +31,13 @@ $negative-color: #e71e1e;
   &.bar-footer-secondary {
     background-color: rgba(245,245,245,.98);
   }
+}
+.bar-title {
+  top: 20px;
+  box-shadow: 0 -20px 0 rgba(30,176,233,.98), 0 0 1px rgba(0, 0, 0, 0.85)
+}
+[class*="bar-"].bar-header-secondary {
+  top: 64px;
 }
 .title {
   color: #fff;
