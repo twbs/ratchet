@@ -4,13 +4,15 @@
 
 [class*="count"] {
   display: inline-block;
-  padding: 4px 9px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 13px;
-  color: #fff;
-  background-color: $default-color;
-  border-radius: 100px;
+  color: $default-color;
+
+  &.count-filled {
+    padding: 4px 9px;
+    color: #fff;
+    line-height: 1;
+    background-color: $default-color;
+    border-radius: 100px;
+  }
 }
 
 
@@ -19,39 +21,52 @@
 
 // Main count
 .count-primary {
-  background-color: $primary-color;
+  color: $primary-color;
+
+  &.count-filled {
+    background-color: $primary-color;
+  }
 }
 
 // Positive count
 .count-positive {
-  background-color: $positive-color;
+  color: $positive-color;
+
+  &.count-filled {
+    background-color: $positive-color;
+  }
 }
 
 // Negative count
 .count-negative {
-  background-color: $negative-color;
+  color: $negative-color;
+
+  &.count-filled {
+    background-color: $negative-color;
+  }
 }
 
 
 // Counts in buttons
 // --------------------------------------------------
 
-// Generic styles for all counts within buttons
+// Generic styles for all counts within default buttons
 [class*="button"] [class*="count"] {
+  font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
-  margin-right: -4px;
-  margin-left: 4px;
-  background-color: rgba(0, 0, 0, .1);
+  margin: -2px -4px -2px 4px;
 }
-
+// Styles for filled counts within filled buttons
+.button-filled .count-filled,
+[class*="button"]:active .count-filled {
+  background-color: rgba(0,0,0,.2);
+}
 // Position counts within block level buttons
 // Note: These are absolutely positioned so that text of button isn't "pushed" by count and always
 // stays at true center of button
 .button-block [class*="count"] {
   position: absolute;
   right: 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
   margin-right: 10px;
 }

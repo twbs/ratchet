@@ -753,40 +753,52 @@ input[type="button"] {
 
 [class*="count"] {
   display: inline-block;
+  color: #929292;
+}
+[class*="count"].count-filled {
   padding: 4px 9px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 13px;
   color: #fff;
+  line-height: 1;
   background-color: #929292;
   border-radius: 100px;
 }
 
 .count-primary {
+  color: #007aff;
+}
+.count-primary.count-filled {
   background-color: #007aff;
 }
 
 .count-positive {
+  color: #4cd964;
+}
+.count-positive.count-filled {
   background-color: #4cd964;
 }
 
 .count-negative {
+  color: #dd524d;
+}
+.count-negative.count-filled {
   background-color: #dd524d;
 }
 
 [class*="button"] [class*="count"] {
+  font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
-  margin-right: -4px;
-  margin-left: 4px;
-  background-color: rgba(0, 0, 0, 0.1);
+  margin: -2px -4px -2px 4px;
+}
+
+.button-filled .count-filled,
+[class*="button"]:active .count-filled {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .button-block [class*="count"] {
   position: absolute;
   right: 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
   margin-right: 10px;
 }
 
