@@ -18,7 +18,7 @@
   -webkit-transform: translate3d(0, -15px, 0);
           transform: translate3d(0, -15px, 0);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-                  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+          transition:         transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 // Caret on top of popover using CSS triangles (thanks to @chriscoyier for solution)
