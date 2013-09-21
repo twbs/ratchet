@@ -93,10 +93,10 @@
 }
 
 .segmented-controller {
-  border: -color #1eb0e9;
+  border-color: #1eb0e9;
 }
 .segmented-controller li {
-  border-color: #1eb0e9;
+  border-left-color: #1eb0e9;
 }
 .segmented-controller li > a {
   color: #1eb0e9;
@@ -109,7 +109,7 @@
   border-color: #fff;
 }
 .bar-title .segmented-controller li {
-  border-color: #fff;
+  border-left-color: #fff;
 }
 .bar-title .segmented-controller li > a {
   color: #fff;

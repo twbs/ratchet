@@ -135,10 +135,10 @@ $negative-color: #e71e1e;
 // --------------------------------------------------
 
 .segmented-controller {
-  border:-color $primary-color;
+  border-color: $primary-color;
 
   li {
-    border-color: $primary-color;
+    border-left-color: $primary-color;
 
     // Link that fills each section
     > a {    
@@ -158,7 +158,7 @@ $negative-color: #e71e1e;
   border-color: #fff;
 
   li {
-    border-color: #fff;
+    border-left-color: #fff;
 
     // Link that fills each section
     > a {    
