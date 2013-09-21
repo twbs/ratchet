@@ -242,6 +242,10 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+strong {
+  font-weight: 500;
+}
+
 .content {
   position: fixed;
   top: 0;

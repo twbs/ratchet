@@ -24,6 +24,9 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes the dark touch outlines on links
 }
+strong {
+  font-weight: $font-weight;
+}
 
 // Wrapper to be used around all content not in .bar-title and .bar-tab
 .content {
