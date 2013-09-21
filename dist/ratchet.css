@@ -756,8 +756,9 @@ input[type="button"] {
   color: #929292;
 }
 [class*="count"].count-filled {
-  padding: 4px 9px;
+  padding: 2px 9px;
   color: #fff;
+  font-size: 13px;
   line-height: 1;
   background-color: #929292;
   border-radius: 100px;

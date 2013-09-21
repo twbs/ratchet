@@ -7,8 +7,9 @@
   color: $default-color;
 
   &.count-filled {
-    padding: 4px 9px;
+    padding: 2px 9px;
     color: #fff;
+    font-size: 13px;
     line-height: 1;
     background-color: $default-color;
     border-radius: 100px;
