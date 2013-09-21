@@ -15,7 +15,7 @@
           transform: translate3d(0, 100%, 0);
   -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
           transition:         transform .25s, opacity 1ms .25s;
-  -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
+  -webkit-transition-timing-function: $timing-fuction;
 
   // Active modal
   &.active {
@@ -23,7 +23,7 @@
     height: 100%;
     -webkit-transition: -webkit-transform .25s;
             transition:         transform .25s;
-    -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
+    -webkit-transition-timing-function: $timing-fuction;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }

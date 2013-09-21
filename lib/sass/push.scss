@@ -23,7 +23,7 @@
             transition:         transform .5s;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-    -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
+    -webkit-transition-timing-function: $timing-fuction;
 
     // Adding the overlay
     &.sliding-in,

@@ -35,3 +35,8 @@ $bar-side-spacing: 10px;
 // --------------------------------------------------
 $button-directional-padding: 20px;
 $button-directional-margin: -($bar-side-spacing/2);
+
+
+// Transitions
+// --------------------------------------------------
+$timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
