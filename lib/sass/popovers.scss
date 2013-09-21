@@ -14,7 +14,7 @@
   background-color: $chrome-color;
   border-radius: 6px;
   opacity: 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   -webkit-transform: translate3d(0, -15px, 0);
           transform: translate3d(0, -15px, 0);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
