@@ -979,14 +979,16 @@ input[type="button"] {
   background-color: #fff;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
-  -webkit-transition: -webkit-transform .25s ease-in-out, opacity 1ms .25s;
-  transition: transform .25s ease-in-out, opacity 1ms .25s;
+  -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
+  transition: transform .25s, opacity 1ms .25s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
 }
 .modal.active {
   opacity: 1;
   height: 100%;
-  -webkit-transition: -webkit-transform .25s ease-in-out;
-  transition: transform .25 ease-in-out;
+  -webkit-transition: -webkit-transform .25s;
+  transition: transform .25s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
