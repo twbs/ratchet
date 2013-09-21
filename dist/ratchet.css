@@ -885,7 +885,6 @@ input[type="button"] {
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-
 .popover:after {
   position: absolute;
   top: -19px;
@@ -905,7 +904,6 @@ input[type="button"] {
   height: 34px;
   margin-bottom: 5px;
 }
-
 .popover-header .title {
   position: absolute;
   top: 0;
@@ -918,7 +916,6 @@ input[type="button"] {
   color: #000;
   text-align: center;
 }
-
 .popover-header [class*="button"] {
   z-index: 25;
   font-size: 16px;
@@ -930,7 +927,6 @@ input[type="button"] {
   -webkit-box-flex: 0;
   box-flex: 0;
 }
-
 .popover-header .title + [class*="button"]:last-child,
 .popover-header .button + [class*="button"]:last-child,
 .popover-header [class*="button"].pull-right {
@@ -938,7 +934,6 @@ input[type="button"] {
   top: 5px;
   right: 5px;
 }
-
 .popover-header .button:active {
   color: #007aff;
   background-color: transparent;
