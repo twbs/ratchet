@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       ratchet: {
         src: [
           '<%= meta.srcPath %>js/modals.js',
-          '<%= meta.srcPath %>js/popover.js',
+          '<%= meta.srcPath %>js/popovers.js',
           '<%= meta.srcPath %>js/push.js',
           '<%= meta.srcPath %>js/segmented-controllers.js',
           '<%= meta.srcPath %>js/sliders.js',
