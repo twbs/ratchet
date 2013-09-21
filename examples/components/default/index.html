@@ -13,7 +13,7 @@
 
     <script>
       $(function() {
-        $(window).on('load', function () { new FingerBlast('.content'); });
+        $(window).on('load', function () { new FingerBlast('.body'); });
       });
     </script>
 
@@ -32,7 +32,7 @@
   </head>
 
 <!-- ontouchstart property makes :active/:hover behaviors work on everything -->
-<body ontouchstart="">
+<body class="body" ontouchstart="">
 
   <!-- POPOVER ============================================================ -->
   <div id="myPopover" class="popover">
