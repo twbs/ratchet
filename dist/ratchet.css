@@ -399,9 +399,6 @@ a {
   margin: -11px -60px -11px 0;
   color: inherit;
 }
-.table-view li > a:not([class*="button"]):active {
-  background-color: #eee;
-}
 .table-view li p {
   margin: 0;
 }
