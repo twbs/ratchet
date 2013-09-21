@@ -7,8 +7,8 @@ input,
 textarea,
 button,
 select {
-  font-family: inherit;
-  font-size: inherit;
+  font-family: $font-family-default;
+  font-size: $font-size-default;
 }
 
 // Stretch inputs/textareas to full width and add height to maintain a consistent baseline
@@ -44,7 +44,7 @@ input[type="color"],
 input[type=search] {
   height: 34px;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   border-radius: 6px;
   border-width: 0;
@@ -119,8 +119,8 @@ select {
   float: left;
   width: 35%;
   padding: 11px 10px 9px 13px; // Optimizing the baseline for mobile.
+  font-family: $font-family-default;
   font-weight: $font-weight;
-  font-family: $font-family;
 }
 
 // Actual inputs float to right of labels and also have a set percentage

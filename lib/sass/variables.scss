@@ -5,10 +5,11 @@
 
 // Type
 // --------------------------------------------------
-$font-family: "Helvetica Neue", Helvetica, sans-serif;
+$font-family-default: "Helvetica Neue", Helvetica, sans-serif;
+$font-size-default: 17px;
 $font-weight: 500;
-$font-weight-bold: 700;
 $font-weight-light: 400;
+$line-height-default: 21px;
 
 
 // Colors
@@ -35,6 +36,7 @@ $bar-side-spacing: 10px;
 // --------------------------------------------------
 $button-directional-padding: 20px;
 $button-directional-margin: -($bar-side-spacing/2);
+$button-font-size: 14px;
 
 
 // Transitions

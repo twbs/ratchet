@@ -230,8 +230,8 @@ body {
   bottom: 0;
   left: 0;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.25;
+  font-size: 17px;
+  line-height: 21px;
   color: #000;
   background-color: #fff;
 }
@@ -316,7 +316,7 @@ a {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 44px;
   color: #000;
@@ -426,10 +426,10 @@ a {
   padding-left: 15px;
   margin-left: 0;
   font-weight: 500;
-  line-height: 18px;
   background-color: #f8f8f8;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: .4;
 }
 .table-view .table-view-divider:first-child {
   top: 0;
@@ -466,8 +466,8 @@ input,
 textarea,
 button,
 select {
-  font-family: inherit;
-  font-size: inherit;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
 }
 
 select,
@@ -501,7 +501,7 @@ input[type="color"],
 input[type=search] {
   height: 34px;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   border-radius: 6px;
   border-width: 0;
@@ -561,8 +561,8 @@ select {
   float: left;
   width: 35%;
   padding: 11px 10px 9px 13px;
-  font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 .input-row label + input {
@@ -583,6 +583,7 @@ select {
   display: inline-block;
   padding: 5px 10px 7px;
   margin: 0;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1;
   color: #929292;
@@ -879,7 +880,7 @@ input[type="button"] {
   background-color: rgba(247, 247, 247, 0.98);
   border-radius: 6px;
   opacity: 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   -webkit-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;

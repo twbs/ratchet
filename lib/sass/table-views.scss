@@ -69,10 +69,10 @@
     padding-left: 15px; 
     margin-left: 0;
     font-weight: $font-weight;
-    line-height: 18px;
     background-color: #f8f8f8;
     border-top: 1px solid rgba(0, 0, 0, .1);
     border-bottom: 1px solid rgba(0, 0, 0, .1);
+    opacity: .4;
 
     // Rounding first divider on inset lists and remove border on the top
     &:first-child {
