@@ -31,7 +31,7 @@ input[type="color"],
 .input-group {
   width: 100%;
   height: 40px;
-  padding: 10px;
+  padding: 10px 15px;
   margin-bottom: 10px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, .2);
@@ -118,7 +118,7 @@ select {
 .input-row label {
   float: left;
   width: 35%;
-  padding: 11px 10px 9px 13px; // Optimizing the baseline for mobile.
+  padding: 11px 10px 9px 15px; // Optimizing the baseline for mobile.
   font-family: $font-family-default;
   font-weight: $font-weight;
 }

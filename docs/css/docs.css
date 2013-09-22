@@ -652,7 +652,7 @@ h6 {
   margin-top: 44px; 
 }
 #modalsInPhone #iwindow > .button { 
-  margin: 10px; 
+  margin: 15px; 
 }
 
 
@@ -690,7 +690,7 @@ h6 {
 #formsInPhone form,
 #formsWithInputGroupInPhone form,
 #formsWithInputGroupAndLabelsInPhone form {
-  margin: 10px;
+  margin: 15px;
 }
 
 #formsWithInputGroupInPhone form,
