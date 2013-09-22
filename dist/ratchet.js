@@ -28,9 +28,13 @@
 
   window.addEventListener('touchend', function (event) {
     var modal = getModal(event);
-    if (modal) modal.classList.toggle('active');
+    if (modal) {
+      event.preventDefault();
+      modal.classList.toggle('active');
+    }
   });
-}();/* ----------------------------------
+}();
+/* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
