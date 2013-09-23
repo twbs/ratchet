@@ -73,9 +73,16 @@
     var anchor = findPopovers(e.target);
 
     if (!anchor || !anchor.hash) return;
+    
+    try{
+ 	 	popover = document.querySelector(anchor.hash);
+ 	}
+ 	catch (error) {
+ 		popover = null;
+ 	}
 
-    popover = document.querySelector(anchor.hash);
-
+ 	if (popover == null) return;
+ 	
     if (!popover || !popover.classList.contains('popover')) return;
 
     return popover;
