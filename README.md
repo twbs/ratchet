@@ -12,7 +12,7 @@ Take note that our master branch is our active, unstable development branch and 
 
 ## Support
 
-Ratchet was developed to support iOS 5+ for iPhone. Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@goRatchet](http://www.twitter.com/goratchet).
+Ratchet was developed to support iOS 7+ for iPhone. Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@goRatchet](http://www.twitter.com/goratchet).
 
 ## Reporting bugs & contributing
 
