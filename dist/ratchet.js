@@ -626,6 +626,8 @@
     startTime      = +new Date;
     pageX          = e.touches[0].pageX;
     pageY          = e.touches[0].pageY;
+	deltaX         = 0;
+	deltaY         = 0;
 
     setSlideNumber(0);
 

@@ -118,3 +118,19 @@
     margin-top: -15px; // Half height of toggle
   }
 }
+
+// Table views in popovers
+// --------------------------------------------------
+
+.popover .table-view {
+  width: auto;
+  max-height: 250px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 3px;
+  -webkit-overflow-scrolling: touch;
+}

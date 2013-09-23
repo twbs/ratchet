@@ -210,3 +210,16 @@ input[type="reset"],
 input[type="button"] {
   width: 100%;
 }
+
+// Block level buttons in popovers
+// --------------------------------------------------
+
+// Positioning and giving darker border to look sharp against dark popover
+.popover .button-block {
+  margin-bottom: 5px;
+}
+
+// Remove extra margin on bottom of last button
+.popover .button-block:last-child {
+  margin-bottom: 0;
+}

@@ -85,15 +85,15 @@
     background-color: transparent;
     opacity: .3;
   }
-}
 
-// Popover animation
-// --------------------------------------------------
+  // Popover animation
+  // --------------------------------------------------
 
-.popover.visible {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  &.visible {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
 
 // Backdrop (used as invisible touch escape)
@@ -107,33 +107,4 @@
   left: 0;
   z-index: 10;
   background-color: rgba(0,0,0,.15);
-}
-
-// Block level buttons in popovers
-// --------------------------------------------------
-
-// Positioning and giving darker border to look sharp against dark popover
-.popover .button-block {
-  margin-bottom: 5px;
-}
-
-// Remove extra margin on bottom of last button
-.popover .button-block:last-child {
-  margin-bottom: 0;
-}
-
-// Table views in popovers
-// --------------------------------------------------
-
-.popover .table-view {
-  width: auto;
-  max-height: 250px;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  overflow: auto;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: 3px;
-  -webkit-overflow-scrolling: touch;
 }

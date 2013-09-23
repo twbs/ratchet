@@ -463,6 +463,19 @@ strong {
   margin-top: -15px;
 }
 
+.popover .table-view {
+  width: auto;
+  max-height: 250px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  -webkit-overflow-scrolling: touch;
+}
+
 input,
 textarea,
 button,
@@ -561,7 +574,7 @@ select {
 .input-row label {
   float: left;
   width: 35%;
-  padding: 11px 10px 9px 13px;
+  padding: 11px 10px 9px 15px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 500;
 }
@@ -728,6 +741,14 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   width: 100%;
+}
+
+.popover .button-block {
+  margin-bottom: 5px;
+}
+
+.popover .button-block:last-child {
+  margin-bottom: 0;
 }
 
 .chevron {
@@ -941,8 +962,7 @@ input[type="button"] {
   background-color: transparent;
   opacity: .3;
 }
-
-.popover.visible {
+.popover-header.visible {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -956,27 +976,6 @@ input[type="button"] {
   left: 0;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.15);
-}
-
-.popover .button-block {
-  margin-bottom: 5px;
-}
-
-.popover .button-block:last-child {
-  margin-bottom: 0;
-}
-
-.popover .table-view {
-  width: auto;
-  max-height: 250px;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  overflow: auto;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
-  -webkit-overflow-scrolling: touch;
 }
 
 .modal {
