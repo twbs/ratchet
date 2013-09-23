@@ -9,10 +9,9 @@
   z-index: 20;
   display: none;
   width: 280px;
-  padding: 5px;
   margin-left: -140px;
   background-color: $chrome-color;
-  border-radius: 6px;
+  border-radius: 12px;
   opacity: 0;
   box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   -webkit-transform: translate3d(0, -15px, 0);
@@ -41,6 +40,7 @@
   display: box;
   height: 34px;
   margin-bottom: 5px;
+  box-shadow: 0 0 1px rgba(0,0,0,.85);
 
   // Centered title for popover
   .title {
@@ -94,6 +94,11 @@
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+}
+
+.popover-content {
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 // Backdrop (used as invisible touch escape)

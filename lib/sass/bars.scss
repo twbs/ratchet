@@ -119,3 +119,18 @@
 .tab-item.active .tab-label {
   color: $primary-color;
 }
+
+// Nav bar in popovers
+// --------------------------------------------------
+
+.popover .bar-title {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  border-radius: 12px 12px 0 0;
+  box-shadow: none;
+
+  .title + [class*="button"]:last-child {
+    right: 15px;
+  }
+}

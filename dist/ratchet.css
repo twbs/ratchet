@@ -380,6 +380,17 @@ strong {
   color: #007aff;
 }
 
+.popover .bar-title {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 12px 12px 0 0;
+  box-shadow: none;
+}
+.popover .bar-title .title + [class*="button"]:last-child {
+  right: 15px;
+}
+
 .table-view {
   padding: 0;
   margin: 0;
@@ -470,8 +481,6 @@ strong {
   margin-left: 0;
   overflow: auto;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -896,10 +905,9 @@ input[type="button"] {
   z-index: 20;
   display: none;
   width: 280px;
-  padding: 5px;
   margin-left: -140px;
   background-color: rgba(247, 247, 247, 0.98);
-  border-radius: 6px;
+  border-radius: 12px;
   opacity: 0;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   -webkit-transform: translate3d(0, -15px, 0);
@@ -925,6 +933,7 @@ input[type="button"] {
   display: box;
   height: 34px;
   margin-bottom: 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
 }
 .popover-header .title {
   position: absolute;
@@ -965,6 +974,11 @@ input[type="button"] {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+.popover-content {
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .backdrop {
