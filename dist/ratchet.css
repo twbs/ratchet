@@ -363,6 +363,11 @@ strong {
   -webkit-box-flex: 1;
   box-flex: 1;
 }
+.tab-item .icon {
+  width: 24px;
+  height: 24px;
+  margin-top: -2px;
+}
 
 .tab-label {
   margin-top: -2px;
