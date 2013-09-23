@@ -119,3 +119,15 @@ select {
   margin-bottom: 0;
   border-bottom: 0;
 }
+
+.input-row label + select {
+  float: right;
+  width: 65%;
+  margin-bottom: 2px;
+  border-bottom: 0;
+}
+
+.input-row .toggle {
+  float: right;
+  vertical-align: middle;
+}
