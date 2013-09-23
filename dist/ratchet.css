@@ -917,60 +917,17 @@ input[type="button"] {
 }
 .popover:after {
   position: absolute;
-  top: -19px;
+  top: -15px;
   left: 50%;
   width: 0;
   height: 0;
-  margin-left: -20px;
+  margin-left: -15px;
   content: '';
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid rgba(247, 247, 247, 0.98);
-  border-left: 20px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid rgba(247, 247, 247, 0.98);
+  border-left: 15px solid transparent;
 }
-
-.popover-header {
-  display: -webkit-box;
-  display: box;
-  height: 34px;
-  margin-bottom: 5px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
-}
-.popover-header .title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 45px;
-  color: #000;
-  text-align: center;
-}
-.popover-header [class*="button"] {
-  z-index: 25;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 29px;
-  color: #007aff;
-  border: 0;
-  transition: opacity .2s linear;
-  -webkit-box-flex: 0;
-  box-flex: 0;
-}
-.popover-header .title + [class*="button"]:last-child,
-.popover-header .button + [class*="button"]:last-child,
-.popover-header [class*="button"].pull-right {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
-.popover-header .button:active {
-  color: #007aff;
-  background-color: transparent;
-  opacity: .3;
-}
-.popover-header.visible {
+.popover.visible {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);

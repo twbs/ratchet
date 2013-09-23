@@ -22,68 +22,15 @@
   // Caret on top of popover using CSS triangles (thanks to @chriscoyier for solution)
   &:after {
     position: absolute;
-    top: -19px;
+    top: -15px;
     left: 50%;
     width: 0;
     height: 0;
-    margin-left: -20px;
+    margin-left: -15px;
     content: '';
-    border-right: 20px solid transparent;
-    border-bottom: 20px solid $chrome-color;
-    border-left: 20px solid transparent;
-  }
-}
-
-// Wrapper for a title and buttons
-.popover-header {
-  display: -webkit-box;
-  display: box;
-  height: 34px;
-  margin-bottom: 5px;
-  box-shadow: 0 0 1px rgba(0,0,0,.85);
-
-  // Centered title for popover
-  .title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 45px;
-    color: #000;
-    text-align: center;
-  }
-
-  // Generic style for all buttons in .popover-header
-  [class*="button"] {
-    z-index: 25;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 29px;
-    color: $primary-color;
-    border: 0;
-    transition: opacity .2s linear;
-    -webkit-box-flex: 0;
-            box-flex: 0;
-  }
-
-  // Hacky way to right align buttons outside of flex-box system
-  // Note: is only absolutely positioned button, would be better if flex-box had an "align right" option
-  .title + [class*="button"]:last-child,
-  .button + [class*="button"]:last-child,
-  [class*="button"].pull-right {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-  }
-
-  // Active state for popover header buttons
-  .button:active {
-    color: $primary-color;
-    background-color: transparent;
-    opacity: .3;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid $chrome-color;
+    border-left: 15px solid transparent;
   }
 
   // Popover animation
