@@ -19,7 +19,7 @@
   background-color: rgba(245, 245, 245, 0.98);
 }
 
-.bar-title {
+.bar-nav {
   top: 20px;
   box-shadow: 0 -20px 0 rgba(30, 176, 233, 0.98), 0 0 1px rgba(0, 0, 0, 0.85);
 }

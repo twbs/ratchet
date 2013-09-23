@@ -12,7 +12,7 @@
   background-color: $chrome-color;
   box-shadow: 0 0 1px rgba(0,0,0,.85);
 
-  // Modifier class to dock any bar below .bar-title
+  // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
     top: $bar-base-height;
   }
@@ -34,7 +34,7 @@
 // --------------------------------------------------
 
 // Bar docked to top of viewport for showing page title and actions
-.bar-title {
+.bar-nav {
   top: 0;
   display: -webkit-box;
   display: box;
@@ -42,7 +42,7 @@
           box-orient: horizontal;
 }
 
-// Centered text in the .bar-title 
+// Centered text in the .bar-nav 
 .title {
   position: absolute;
   top: 0;
@@ -123,7 +123,7 @@
 // Nav bar in popovers
 // --------------------------------------------------
 
-.popover .bar-title {
+.popover .bar-nav {
   padding-right: 15px;
   padding-left: 15px;
   border-bottom: 1px solid rgba(0,0,0,.15);

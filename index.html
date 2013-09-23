@@ -49,7 +49,7 @@ layout: default
       <div class="iphone">
         <div class="iphone-content">
           <div id="iwindow">
-            <header class="bar-title">
+            <header class="bar-nav">
               <h1 class="title">Title</h1>
             </header>
           </div>
@@ -62,13 +62,13 @@ layout: default
         <p class="component-description">Title bars are full width and docked to the top of the viewport.</p>
 
         <div class="component-example component-example-fullbleed">
-          <header class="bar-title">
+          <header class="bar-nav">
             <h1 class="title">Title</h1>
           </header>
         </div>
 
 <pre class="prettyprint">
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
 &lt;/header&gt;
 </pre>
@@ -80,7 +80,7 @@ layout: default
         <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
 
         <div class="component-example component-example-fullbleed">
-          <header class="bar-title">
+          <header class="bar-nav">
             <a class="button">
               Left
             </a>
@@ -92,7 +92,7 @@ layout: default
         </div>
 
 <pre class="prettyprint">
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
 Left
 &lt;/a&gt;
@@ -109,7 +109,7 @@ Right
         <p class="component-description">Directional buttons in a title bar should be used for navigational purposes.</p>
 
         <div class="component-example component-example-fullbleed">
-          <header class="bar-title">
+          <header class="bar-nav">
             <a class="button-prev">
               Previous
             </a>
@@ -121,7 +121,7 @@ Right
         </div>
 
 <pre class="prettyprint">
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;a class=&quot;button-prev&quot; href=&quot;#&quot;&gt;
 Previous
 &lt;/a&gt;
@@ -139,7 +139,7 @@ Next
         <p class="component-description">Title bars can also house segmented controllers (with or without accompanying buttons). It all uses flex-box to create perfectly even spacing no matter their labels.</p>
 
         <div class="component-example component-example-fullbleed">
-          <header class="bar-title">
+          <header class="bar-nav">
             <a class="button">
               Left
             </a>
@@ -161,7 +161,7 @@ Next
         </div>
 
 <pre class="prettyprint">
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
 Left
 &lt;/a&gt;
@@ -858,7 +858,7 @@ document
 
       <div class="component-example">
         <div id="popover" class="popover">  
-          <header class="bar-title">
+          <header class="bar-nav">
             <a class="button">
               Left
             </a>
@@ -882,7 +882,7 @@ document
 
 <pre class="prettyprint">
 &lt;div id=&quot;myPopover&quot; class=&quot;popover&quot;&gt;
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
   Left
 &lt;/a&gt;
@@ -907,7 +907,7 @@ document
       <p class="component-description">Popovers are designed to only fire from <a href="#bars">title bars</a>. Set the value of the title href to the id of a popover, like so:</p>
 
 <pre class="prettyprint">
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;a href=&quot;#myPopover&quot;&gt;
 &lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
 &lt;/a&gt;
@@ -923,7 +923,7 @@ document
       <div class="component-example">
         <a href="#myModalexample" class="button">Open modal</a>
         <div id="myModalexample" class="modal">
-          <header class="bar-title">
+          <header class="bar-nav">
             <h1 class="title">Modal</h1>
             <a class="button" href="#myModalexample">
               Close
@@ -941,7 +941,7 @@ document
 &lt;a href=&quot;#myModal&quot; class=&quot;button&quot;&gt;Open modal&lt;/a&gt;
 
 &lt;div id=&quot;myModal&quot; class=&quot;modal&quot;&gt;
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;h1 class=&quot;title&quot;&gt;Modal&lt;/h1&gt;
 &lt;a class=&quot;button&quot; href=&quot;#myModal&quot;&gt;
   Close
@@ -1018,7 +1018,7 @@ document
 &lt;a href=&quot;two.html&quot;&gt;Two&lt;a&gt;
 </pre>
 
-      <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-title and .bar-tab according to their presences in two.html.</p>
+      <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
 
       <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
 
@@ -1030,7 +1030,7 @@ document
       <p class="component-description">A working version of push:</p>
 
       <div class="component-example component-example-fullbleed">
-        <header class="bar-title">
+        <header class="bar-nav">
           <h1 class="title">Push</h1>
         </header>
         <div class="content">
@@ -1046,7 +1046,7 @@ document
       </div>
 
 <pre class="prettyprint push-example">
-&lt;header class=&quot;bar-title&quot;&gt;
+&lt;header class=&quot;bar-nav&quot;&gt;
 &lt;h1 class=&quot;title&quot;&gt;Push&lt;/h1&gt;
 &lt;/header&gt;
 &lt;div class=&quot;content&quot;&gt;
@@ -1090,7 +1090,7 @@ window.addEventListener('push', myFunction);
       <ol class="steps">
           <li class="step">
           <h3 class="step-title">1. Fixed bars come first</h3>
-          <p class="step-description">All fixed bars (<code>.bar-title, .bar-tab, .bar-header-secondary, .bar-footer</code>) should always be the first thing in the <code>&lt;body&gt;</code> of the page. This is really important!</p>
+          <p class="step-description">All fixed bars (<code>.bar-nav, .bar-tab, .bar-header-secondary, .bar-footer</code>) should always be the first thing in the <code>&lt;body&gt;</code> of the page. This is really important!</p>
         </li>
         <li class="step">
           <h3 class="step-title">2. Everything else goes in <code>.content</code></h3>
