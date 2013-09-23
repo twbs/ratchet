@@ -272,7 +272,7 @@ strong {
   padding: 10px;
 }
 
-.bar-title ~ .content {
+.bar-nav ~ .content {
   padding-top: 44px;
 }
 
