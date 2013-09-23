@@ -364,14 +364,8 @@ strong {
   box-flex: 1;
 }
 
-.tab-icon {
-  display: block;
-  height: 18px;
-  margin: 0 auto;
-}
-
 .tab-label {
-  margin-top: 1px;
+  margin-top: -2px;
   font-size: 11px;
   font-weight: 400;
   color: #929292;
@@ -1122,6 +1116,7 @@ input[type="button"] {
 .icon {
   display: inline-block;
   font-family: "Ratchicons", sans-serif;
+  font-size: 24px;
   text-decoration: none;
   line-height: 1;
   cursor: default;
