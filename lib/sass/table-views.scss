@@ -124,11 +124,12 @@
 
 .popover .table-view {
   width: auto;
-  max-height: 250px;
+  max-height: 300px;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
   overflow: auto;
   background-color: #fff;
+  border-radius: 12px;
   -webkit-overflow-scrolling: touch;
 }
