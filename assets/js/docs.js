@@ -110,7 +110,7 @@ $(function() {
           iphone.attr("id", "")
         }
         if (!contentSectionItem.hasClass('informational')) {
-          updateContent(contentSectionItem.find('.prettyprint').not('.js').text())
+          updateContent(contentSectionItem.find('.highlight .html').text())
         }
         break
       }
