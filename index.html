@@ -67,11 +67,11 @@ layout: default
           </header>
         </div>
 
-<pre class="prettyprint">
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
-&lt;/header&gt;
-</pre>
+{% highlight html %}
+<header class="bar-nav">
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
 
       </article>
 
@@ -91,17 +91,17 @@ layout: default
           </header>
         </div>
 
-<pre class="prettyprint">
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
-Left
-&lt;/a&gt;
-&lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
-&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
-Right
-&lt;/a&gt;
-&lt;/header&gt;
-</pre>
+{% highlight html %}
+<header class="bar-nav">
+  <a class="button">
+    Left
+  </a>
+  <h1 class="title">Title</h1>
+  <a class="button">
+    Right
+  </a>
+</header>
+{% endhighlight %}
 
       </article>
       <article class="component">
@@ -120,17 +120,17 @@ Right
           </header>
         </div>
 
-<pre class="prettyprint">
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;a class=&quot;button-prev&quot; href=&quot;#&quot;&gt;
-Previous
-&lt;/a&gt;
-&lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
-&lt;a class=&quot;button-next&quot; href=&quot;#&quot;&gt;
-Next
-&lt;/a&gt;
-&lt;/header&gt;
-</pre>
+{% highlight html %}
+<header class="bar-nav">
+  <a class="button-prev">
+    Previous
+  </a>
+  <h1 class="title">Title</h1>
+  <a class="button-next">
+    Next
+  </a>
+</header>
+{% endhighlight %}
 
       </article>
 
@@ -160,27 +160,27 @@ Next
           </header>
         </div>
 
-<pre class="prettyprint">
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
-Left
-&lt;/a&gt;
-&lt;ul class=&quot;segmented-controller&quot;&gt;
-&lt;li class=&quot;active&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;One&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;a href=&quot;#&quot;&gt;Two&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;a href=&quot;#&quot;&gt;Three&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
-Right
-&lt;/a&gt;
-&lt;/header&gt;
-</pre>
+{% highlight html %}
+<header class="bar-nav">
+  <a class="button">
+    Left
+  </a>
+  <ul class="segmented-controller">
+    <li class="active">
+      <a>One</a>
+    </li>
+    <li>
+      <a>Two</a>
+    </li>
+    <li>
+      <a>Three</a>
+    </li>
+  </ul>
+  <a class="button">
+    Right
+  </a>
+</header>
+{% endhighlight %}
 
       </article>
 
@@ -225,42 +225,42 @@ Right
           </nav>
         </div>
 
-<pre class="prettyprint">
-&lt;nav class=&quot;bar-tab&quot;&gt;
-&lt;ul class=&quot;tab-inner&quot;&gt;
-&lt;li class=&quot;tab-item active&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;span class=&quot;icon icon-share&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
-  &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;tab-item&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;span class=&quot;icon icon-share&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
-  &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;tab-item&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;span class=&quot;icon icon-share&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
-  &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;tab-item&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;span class=&quot;icon icon-share&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
-  &lt;/a&gt;
-&lt;/li&gt;
-&lt;li class=&quot;tab-item&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;
-    &lt;span class=&quot;icon icon-share&quot;&gt;&lt;/span&gt;
-    &lt;div class=&quot;tab-label&quot;&gt;Label&lt;/div&gt;
-  &lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;
-</pre>
+{% highlight html %}
+<nav class="bar-tab">
+  <ul class="tab-inner">
+    <li class="tab-item active">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endhighlight %}
 
       <p class="component-note touch-only"><strong>Note:</strong> Use push.js to actually change content.</p>
     </article>
@@ -291,25 +291,27 @@ Right
           </div>
         </div>
 
-<pre class="prettyprint">
-&lt;!-- Segmented controller in standard bar fixed to top --&gt;
-&lt;nav class=&quot;bar-standard&quot;&gt;
-&lt;ul class=&quot;segmented-controller&quot;&gt;
-&lt;li class=&quot;active&quot;&gt;
-  &lt;a href=&quot;#&quot;&gt;Thing one&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;a href=&quot;#&quot;&gt;Thing two&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;a href=&quot;#&quot;&gt;Thing three&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;
-&lt;div class=&quot;bar-standard bar-header-secondary&quot;&gt;
-&lt;a class=&quot;button-block&quot;&gt;Block level button&lt;/a&gt;
-&lt;/div&gt;
-</pre>
+{% highlight html %}
+<!-- Segmented controller in standard bar fixed to top -->
+<nav class="bar-standard">
+  <ul class="segmented-controller">
+    <li class="active">
+      <a>Thing one</a>
+    </li>
+    <li>
+      <a>Thing two</a>
+    </li>
+    <li>
+      <a>Thing three</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Block button in standard bar fixed below top bar -->
+<div class="bar-standard bar-header-secondary">
+  <a class="button-block">Block level button</a>
+</div>
+{% endhighlight %}
 
     </article>
 
@@ -327,14 +329,14 @@ Right
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;table-view&quot;&gt;
-&lt;li&gt;Item 1&lt;/li&gt;
-&lt;li&gt;Item 2&lt;/li&gt;
-&lt;li class=&quot;table-view-divider&quot;&gt;Divider&lt;/li&gt;
-&lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul class="table-view">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li class="table-view-divider">Divider</li>
+  <li>Item 3</li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -365,28 +367,28 @@ Right
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;table-view&quot;&gt;
-&lt;li&gt;
-&lt;a href=&quot;#&quot;&gt;
-  Item 1
-  &lt;span class=&quot;chevron&quot;&gt;&lt;/span&gt;
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#&quot;&gt;
-  Item 2
-  &lt;span class=&quot;chevron&quot;&gt;&lt;/span&gt;
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#&quot;&gt;
-  Item 3
-  &lt;span class=&quot;chevron&quot;&gt;&lt;/span&gt;
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+ <ul class="table-view">
+  <li>
+    <a>
+      Item 1
+      <span class="chevron"></span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 2
+      <span class="chevron"></span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 3
+      <span class="chevron"></span>
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -401,13 +403,13 @@ Right
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;table-view&quot;&gt;
-&lt;li&gt;Item 1 &lt;span class=&quot;count&quot;&gt;4&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Item 2 &lt;span class=&quot;count&quot;&gt;1&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Item 3 &lt;span class=&quot;count&quot;&gt;5&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul class="table-view">
+  <li>Item 1 <span class="count">4</span></li>
+  <li>Item 2 <span class="count">1</span></li>
+  <li>Item 3 <span class="count">5</span></li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -440,31 +442,31 @@ Right
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;table-view&quot;&gt;
-&lt;li&gt;
-&lt;a href=&quot;#&quot;&gt;
-  Item 1
-  &lt;span class=&quot;chevron&quot;&gt;&lt;/span&gt;
-  &lt;span class=&quot;count&quot;&gt;4&lt;/span&gt;
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#&quot;&gt;
-  Item 2
-  &lt;span class=&quot;chevron&quot;&gt;&lt;/span&gt;
-  &lt;span class=&quot;count&quot;&gt;1&lt;/span&gt;
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#&quot;&gt;
-  Item 3
-  &lt;span class=&quot;chevron&quot;&gt;&lt;/span&gt;
-  &lt;span class=&quot;count&quot;&gt;5&lt;/span&gt;
-&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul class="table-view">
+  <li>
+    <a>
+      Item 1
+      <span class="chevron"></span>
+      <span class="count">4</span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 2
+      <span class="chevron"></span>
+      <span class="count">1</span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 3
+      <span class="chevron"></span>
+      <span class="count">5</span>
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -480,14 +482,14 @@ Right
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;table-view&quot;&gt;
-&lt;li&gt;Item 1 &lt;a class=&quot;button&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Item 2 &lt;a class=&quot;button-primary&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Item 3 &lt;a class=&quot;button-positive&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Item 4 &lt;a class=&quot;button-negative&quot;&gt;Button&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul class="table-view">
+  <li>Item 1 <a class="button">Button</a></li>
+  <li>Item 2 <a class="button-primary">Button</a></li>
+  <li>Item 3 <a class="button-positive">Button</a></li>
+  <li>Item 4 <a class="button-negative">Button</a></li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -517,28 +519,28 @@ Right
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;table-view&quot;&gt;
-&lt;li&gt;
-Item 1
-&lt;div class=&quot;toggle&quot;&gt;
-  &lt;div class=&quot;toggle-handle&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-Item 2
-&lt;div class=&quot;toggle active&quot;&gt;
-  &lt;div class=&quot;toggle-handle&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-Item 3
-&lt;div class=&quot;toggle&quot;&gt;
-  &lt;div class=&quot;toggle-handle&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul class="table-view">
+  <li>
+    Item 1
+    <div class="toggle">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li>
+    Item 2
+    <div class="toggle active">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li>
+    Item 3
+    <div class="toggle">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -555,15 +557,15 @@ Item 3
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;table-view inset&quot;&gt;
-&lt;li&gt;Item 1&lt;/li&gt;
-&lt;li&gt;Item 2&lt;/li&gt;
-&lt;li class=&quot;table-view-divider&quot;&gt;Divider&lt;/li&gt;
-&lt;li&gt;Item 3&lt;/li&gt;
-&lt;li&gt;Item 4&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul class="table-view inset">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li class="table-view-divider">Divider</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -579,12 +581,12 @@ Item 3
         <a class="button-negative">Button</a>
       </div>
 
-<pre class="prettyprint">
-&lt;a class=&quot;button&quot;&gt;Button&lt;/a&gt;
-&lt;a class=&quot;button-primary&quot;&gt;Button&lt;/a&gt;
-&lt;a class=&quot;button-positive&quot;&gt;Button&lt;/a&gt;
-&lt;a class=&quot;button-negative&quot;&gt;Button&lt;/a&gt;
-</pre>
+{% highlight html %}
+<a class="button">Button</a>
+<a class="button-primary">Button</a>
+<a class="button-positive">Button</a>
+<a class="button-negative">Button</a>
+{% endhighlight %}
 
     </article>
 
@@ -598,17 +600,17 @@ Item 3
         <a class="button-negative">Count button<span class="count-negative count-filled">1</span></a>
       </div>
 
-<pre class="prettyprint">
-&lt;a class=&quot;button&quot;&gt;Count button&lt;span class=&quot;count count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;button-primary&quot;&gt;Count button&lt;span class=&quot;count-primary count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;button-positive&quot;&gt;Count button&lt;span class=&quot;count-positive count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;button-negative&quot;&gt;Count button&lt;span class=&quot;count-negative count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
+{% highlight html %}
+<a class="button">Count button<span class="count count-filled">1</span></a>
+<a class="button-primary">Count button<span class="count-primary count-filled">1</span></a>
+<a class="button-positive">Count button<span class="count-positive count-filled">1</span></a>
+<a class="button-negative">Count button<span class="count-negative count-filled">1</span></a>
 
-&lt;a class=&quot;button-filled&quot;&gt;Count button&lt;span class=&quot;count count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;button-filled button-primary&quot;&gt;Count button&lt;span class=&quot;count-primary count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;button-filled button-positive&quot;&gt;Count button&lt;span class=&quot;count-positive count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
-&lt;a class=&quot;button-filled button-negative&quot;&gt;Count button&lt;span class=&quot;count-negative count-filled&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
-</pre>
+<a class="button-filled">Count button<span class="count count-filled">1</span></a>
+<a class="button-filled button-primary">Count button<span class="count-primary count-filled">1</span></a>
+<a class="button-filled button-positive">Count button<span class="count-positive count-filled">1</span></a>
+<a class="button-filled button-negative">Count button<span class="count-negative count-filled">1</span></a>
+{% endhighlight %}
 
     </article>
 
@@ -627,17 +629,17 @@ Item 3
         <a class="button-negative button-block button-filled">Block button</a>
       </div>
 
-<pre class="prettyprint">
-&lt;a class=&quot;button-block&quot;&gt;Block button&lt;/a&gt;
-&lt;a class=&quot;button-primary button-block&quot;&gt;Block button&lt;/a&gt;
-&lt;a class=&quot;button-positive button-block&quot;&gt;Block button&lt;/a&gt;
-&lt;a class=&quot;button-negative button-block&quot;&gt;Block button&lt;/a&gt;
+{% highlight html %}
+<a class="button-block">Block button</a>
+<a class="button-primary button-block">Block button</a>
+<a class="button-positive button-block">Block button</a>
+<a class="button-negative button-block">Block button</a>
 
-&lt;a class=&quot;button-block button-filled&quot;&gt;Block button&lt;/a&gt;
-&lt;a class=&quot;button-primary button-block button-filled&quot;&gt;Block button&lt;/a&gt;
-&lt;a class=&quot;button-positive button-block button-filled&quot;&gt;Block button&lt;/a&gt;
-&lt;a class=&quot;button-negative button-block button-filled&quot;&gt;Block button&lt;/a&gt;
-</pre>
+<a class="button-block button-filled">Block button</a>
+<a class="button-primary button-block button-filled">Block button</a>
+<a class="button-positive button-block button-filled">Block button</a>
+<a class="button-negative button-block button-filled">Block button</a>
+{% endhighlight %}
 
     </article>
 
@@ -671,30 +673,30 @@ Item 3
         </ul>
       </div>
 
-<pre class="prettyprint">
-&lt;ul class=&quot;segmented-controller&quot;&gt;
-&lt;li class=&quot;active&quot;&gt;
-&lt;a href=&quot;#item1&quot;&gt;Thing one&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#item2&quot;&gt;Thing two&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#item3&quot;&gt;Thing three&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class=&quot;inset table-view&quot;&gt;
-&lt;li id=&quot;item1&quot; class=&quot;segmented-controller-item active&quot;&gt;
-Item 1
-&lt;/li&gt;
-&lt;li id=&quot;item2&quot; class=&quot;segmented-controller-item&quot;&gt;
-Item 2
-&lt;/li&gt;
-&lt;li id=&quot;item3&quot; class=&quot;segmented-controller-item&quot;&gt;
-Item 3
-&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul class="segmented-controller">
+  <li class="active">
+    <a href="#item1mobile">Thing one</a>
+  </li>
+  <li>
+    <a href="#item2mobile">Thing two</a>
+  </li>
+  <li>
+    <a href="#item3mobile">Thing three</a>
+  </li>
+</ul>
+<ul class="inset table-view">
+  <li id="item1mobile" class="segmented-controller-item active">
+    Item 1
+  </li>
+  <li id="item2mobile" class="segmented-controller-item">
+    Item 2
+  </li>
+  <li id="item3mobile" class="segmented-controller-item">
+    Item 3
+  </li>
+</ul>
+{% endhighlight %}
 
     </article>
 
@@ -714,17 +716,19 @@ Item 3
         <span class="count-negative count-filled">4</span>
       </div>
 
-<pre class="prettyprint">
-&lt;span class=&quot;count&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;count-primary&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;count-positive&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;count-negative&quot;&gt;4&lt;/span&gt;
 
-&lt;span class=&quot;count count-filled&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;count-primary count-filled&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;count-positive count-filled&quot;&gt;3&lt;/span&gt;
-&lt;span class=&quot;count-negative count-filled&quot;&gt;4&lt;/span&gt;
-</pre>
+{% highlight html %}
+<span class="count">1</span>
+<span class="count-primary">2</span>
+<span class="count-positive">3</span>
+<span class="count-negative">4</span>
+
+<span class="count count-filled">1</span>
+<span class="count-primary count-filled">2</span>
+<span class="count-positive count-filled">3</span>
+<span class="count-negative count-filled">4</span>
+{% endhighlight %}
+
 
     </article>
 
@@ -741,14 +745,14 @@ Item 3
         </form>
       </div>
 
-<pre class="prettyprint">
-&lt;form&gt;
-&lt;input type=&quot;text&quot; placeholder=&quot;Full name&quot;&gt;
-&lt;input type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;
-&lt;textarea rows=&quot;5&quot;&gt;&lt;/textarea&gt;
-&lt;a class=&quot;button-positive button-block button-filled&quot;&gt;Choose existing&lt;/a&gt;
-&lt;/form&gt;
-</pre>
+{% highlight html %}
+<form>
+  <input type="text" placeholder="Full name">
+  <input type="search" placeholder="Search">
+  <textarea rows="5"></textarea>
+  <a class="button-positive button-block button-filled">Choose existing</a>
+</form>
+{% endhighlight %}
 
     </article>
 
@@ -764,15 +768,13 @@ Item 3
         </form>
       </div>
 
-<pre class="prettyprint">
-&lt;form&gt;
-&lt;div class=&quot;input-group&quot;&gt;
-&lt;input type=&quot;text&quot; placeholder=&quot;Full name&quot;&gt;
-&lt;input type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
-&lt;input type=&quot;text&quot; placeholder=&quot;Username&quot;&gt;
-&lt;/div&gt;
-&lt;/form&gt;
-</pre>
+{% highlight html %}
+<form class="input-group">
+  <input type="text" placeholder="Full name">
+  <input type="email" placeholder="Email">
+  <input type="text" placeholder="Username">
+</form>
+{% endhighlight %}
 
     </article>
 
@@ -797,24 +799,22 @@ Item 3
         </form>
       </div>
 
-<pre class="prettyprint">
-&lt;form&gt;
-&lt;div class=&quot;input-group&quot;&gt;
-&lt;div class=&quot;input-row&quot;&gt;
-  &lt;label&gt;Full name&lt;/label&gt;
-  &lt;input type=&quot;text&quot; placeholder=&quot;Mister Ratchet&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;input-row&quot;&gt;
-  &lt;label&gt;Email&lt;/label&gt;
-  &lt;input type=&quot;email&quot; placeholder=&quot;ratchetframework@gmail.com&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;input-row&quot;&gt;
-  &lt;label&gt;Username&lt;/label&gt;
-  &lt;input type=&quot;text&quot; placeholder=&quot;goRatchet&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/form&gt;
-</pre>
+{% highlight html %}
+<form class="input-group">
+  <div class="input-row">
+    <label>Full name</label>
+    <input type="text" placeholder="Mister Ratchet">
+  </div>
+  <div class="input-row">
+    <label>Email</label>
+    <input type="email" placeholder="ratchetframework@gmail.com">
+  </div>
+  <div class="input-row">
+    <label>Username</label>
+    <input type="text" placeholder="goRatchet">
+  </div>
+</form>
+{% endhighlight %}
 
     </article>
 
@@ -832,23 +832,23 @@ Item 3
         </div>
       </div>
 
-<pre class="prettyprint">
-&lt;div class=&quot;toggle active&quot;&gt;
-&lt;div class=&quot;toggle-handle&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;toggle&quot;&gt;
-&lt;div class=&quot;toggle-handle&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+{% highlight html %}
+<div class="toggle active">
+  <div class="toggle-handle"></div>
+</div>
+<div class="toggle">
+  <div class="toggle-handle"></div>
+</div>
+{% endhighlight %}
 
       <p class="component-description">Toggles.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
 
-<pre class="prettyprint js">
+{% highlight js %}
 // Only needed if you want to fire a callback
 document
 .querySelector('#myToggle')
 .addEventListener('toggle', myFunction)
-</pre>
+{% endhighlight %}
 
     </article>
 
@@ -880,39 +880,39 @@ document
         </div>
       </div>
 
-<pre class="prettyprint">
-&lt;div id=&quot;myPopover&quot; class=&quot;popover&quot;&gt;
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
-  Left
-&lt;/a&gt;
-&lt;h3 class=&quot;title&quot;&gt;Popover title&lt;/h3&gt;
-&lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
-  Right
-&lt;/a&gt;
-&lt;/header&gt;
-&lt;ul class=&quot;table-view&quot;&gt;
-&lt;li&gt;Item1&lt;/li&gt;
-&lt;li&gt;Item2&lt;/li&gt;
-&lt;li&gt;Item3&lt;/li&gt;
-&lt;li&gt;Item4&lt;/li&gt;
-&lt;li&gt;Item5&lt;/li&gt;
-&lt;li&gt;Item6&lt;/li&gt;
-&lt;li&gt;Item7&lt;/li&gt;
-&lt;li&gt;Item8&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+{% highlight html %}
+<div id="popover" class="popover">  
+  <header class="bar-nav">
+    <a class="button">
+      Left
+    </a>
+    <h3 class="title">Popover title</h3>
+    <a class="button">
+      Right
+    </a>
+  </header>
+  <ul class="table-view">
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+    <li>Item4</li>
+    <li>Item5</li>
+    <li>Item6</li>
+    <li>Item7</li>
+    <li>Item8</li>
+  </ul>
+</div>
+{% endhighlight %}
 
       <p class="component-description">Popovers are designed to only fire from <a href="#bars">title bars</a>. Set the value of the title href to the id of a popover, like so:</p>
 
-<pre class="prettyprint">
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;a href=&quot;#myPopover&quot;&gt;
-&lt;h1 class=&quot;title&quot;&gt;Title&lt;/h1&gt;
-&lt;/a&gt;
-&lt;/header&gt;
-</pre>
+{% highlight html %}
+<header class="bar-nav">
+  <a href="#myPopover"> 
+    <h1 class="title">Popover title</h3>
+  </a>
+</header>
+{% endhighlight %}
 
     </article>
     
@@ -936,23 +936,21 @@ document
         </div>
       </div>
 
-
-<pre class="prettyprint">
-&lt;a href=&quot;#myModal&quot; class=&quot;button&quot;&gt;Open modal&lt;/a&gt;
-
-&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;&gt;
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;h1 class=&quot;title&quot;&gt;Modal&lt;/h1&gt;
-&lt;a class=&quot;button&quot; href=&quot;#myModal&quot;&gt;
-  Close
-&lt;/a&gt;
-&lt;/header&gt;
-
-&lt;div class=&quot;content content-padded&quot;&gt;
-&lt;p&gt;The contents of my modal.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+{% highlight html %}
+<a href="#myModalexample" class="button">Open modal</a>
+<div id="myModalexample" class="modal">
+  <header class="bar-nav">
+    <h1 class="title">Modal</h1>
+    <a class="button" href="#myModalexample">
+      Close
+    </a>
+  </header>
+  
+  <div class="content content-padded">
+    <p>The contents of my modal</p>
+  </div>
+</div>
+{% endhighlight %}
 
       <p class="component-description">Modals are designed to only fire from links. Set the value of the toggle links href to the id of a modal.</p>
 
@@ -980,31 +978,31 @@ document
         </div>
       </div>
 
-<pre class="prettyprint">
-&lt;div class=&quot;slider&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-  &lt;img src=&quot;assets/img/slide-1.jpg&quot;&gt;
-  &lt;span class=&quot;slide-text&quot;&gt;&larr; Slide me&lt;/span&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;img src=&quot;assets/img/slide-2.jpg&quot;&gt;
-&lt;/li&gt;
-&lt;li&gt;
-  &lt;img src=&quot;assets/img/slide-3.jpg&quot;&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+{% highlight html %}
+<div class="slider" id="mySlider">
+  <ul>
+    <li>
+      <img src="assets/img/slide-1.jpg">
+      <span class="slide-text">&larr; Slide me</span>
+    </li>
+    <li>
+      <img src="assets/img/slide-2.jpg">
+    </li>
+    <li>
+      <img src="assets/img/slide-3.jpg">
+    </li>
+  </ul>
+</div>
+{% endhighlight %}
 
       <p class="component-description">Sliders.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
 
-<pre class="prettyprint js">
+{% highlight js %}
 // Only needed if you want to fire a callback
 document
 .querySelector('#mySlider')
 .addEventListener('slide', myFunction)
-</pre>
+{% endhighlight %}
 
     </article>
 
@@ -1013,19 +1011,19 @@ document
       <h3 class="component-title">Push</h3>
       <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
 
-<pre class="prettyprint js">
-&lt;!-- A one.html link --&gt;
-&lt;a href=&quot;two.html&quot;&gt;Two&lt;a&gt;
-</pre>
+{% highlight html %}
+<!-- A one.html link -->
+<a href="two.html">Two<a>
+{% endhighlight %}
 
       <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
 
       <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
 
-<pre class="prettyprint js">
-&lt;!-- An one.html link that animates to two.html --&gt;
-&lt;a href=&quot;two.html&quot; data-transition=&quot;fade&quot;&gt;Two&lt;a&gt;
-</pre>
+{% highlight html %}
+<!-- An one.html link that animates to two.html -->
+<a href="two.html" data-transition="fade">Two<a>
+{% endhighlight %}
 
       <p class="component-description">A working version of push:</p>
 
@@ -1045,35 +1043,35 @@ document
         </div>
       </div>
 
-<pre class="prettyprint push-example">
-&lt;header class=&quot;bar-nav&quot;&gt;
-&lt;h1 class=&quot;title&quot;&gt;Push&lt;/h1&gt;
-&lt;/header&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;ul class=&quot;table-view&quot;&gt;
-  &lt;li&gt;
-      &lt;a href=&quot;two.html&quot; data-transition=&quot;slide-in&quot;&gt;
-          Go to page 2
-      &lt;/a&gt;
-      &lt;span class=&quot;chevron&quot;&gt;&lt;/span&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+{% highlight html %}
+<header class="bar-nav">
+  <h1 class="title">Push</h1>
+</header>
+<div class="content">
+  <ul class="table-view">
+    <li>
+      <a href="two.html" data-transition="slide-in">
+        Load new page with push
+      </a>
+      <span class="chevron"></span>
+    </li>
+  </ul>
+</div>
+{% endhighlight %}
 
       <p class="component-description">Have a link you don't want to intercepted by push? Try this:</p>
 
-<pre class="prettyprint js">
-&lt;!-- Use data-ignore=&quot;push&quot; to prevent the push.js interception --&gt;
-&lt;a href=&quot;http://www.google.com&quot; data-ignore=&quot;push&quot;&gt;Google&lt;a&gt;
-</pre>
+{% highlight html %}
+<!-- Use data-ignore="push" to prevent the push.js interception -->
+<a href="http://www.google.com" data-ignore="push">Google<a>
+{% endhighlight %}
 
       <p class="component-description">Push.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
 
-<pre class="prettyprint js">
+{% highlight js %}
 // Only needed if you want to fire a callback
 window.addEventListener('push', myFunction);
-</pre>
+{% endhighlight %}
 
     </article>
 

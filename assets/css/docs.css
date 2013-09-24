@@ -465,7 +465,7 @@ h6 {
   margin-top: 13px;
 }
 
-.content-section .prettyprint,
+.content-section .highlight,
 .content-section .instruction-code {
   margin-top: 10px;
   padding: 10px;
@@ -478,9 +478,13 @@ h6 {
   border-radius: 3px;
 }
 
-.prettyprint + .component-description,
+.highlight + .component-description,
 .component-note + .component-description {
   margin-top: 36px;
+}
+
+pre {
+  margin: 0;
 }
 
 /* Content specific styles
@@ -962,7 +966,7 @@ h6 {
     left: 0;
     z-index: 10000;
   }
-  #sliders .prettyprint:not(.js) {
+  #sliders .highlight:not(.js) {
     margin-top: 230px;
   }
 

@@ -15,8 +15,6 @@ $(function() {
   var topCache;
   var eventListeners;
 
-  prettyPrint();
-
   var initialize = function  () {
     currentActive        = 0;
     topCache             = [];
