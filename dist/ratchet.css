@@ -869,6 +869,9 @@ input[type="button"] {
 .segmented-controller li:first-child {
   border-left-width: 0;
 }
+.segmented-controller li:active {
+  background-color: #d5e9ff;
+}
 .segmented-controller li.selected {
   background-color: #007aff;
   transition: background-color .2s linear;

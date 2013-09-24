@@ -41,7 +41,10 @@
       border-left-width: 0;
     }
 
-
+    // Active state of segmented controller
+    &:active {
+      background-color: rgba(213,233,255,1);
+    }
 
     // Selected segment of controller
     &.selected {
