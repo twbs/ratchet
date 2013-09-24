@@ -146,7 +146,7 @@ $negative-color: #e71e1e;
     }
 
     // Active segment of controller
-    &.active {
+    &.selected {
       background-color: $primary-color;
     }
   }
@@ -166,7 +166,7 @@ $negative-color: #e71e1e;
     }
 
     // Active segment of controller
-    &.active {
+    &.selected {
       background-color: rgba(255,255,255,.4);
     }
   }

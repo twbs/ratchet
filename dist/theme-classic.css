@@ -101,7 +101,7 @@
 .segmented-controller li > a {
   color: #1eb0e9;
 }
-.segmented-controller li.active {
+.segmented-controller li.selected {
   background-color: #1eb0e9;
 }
 
@@ -114,7 +114,7 @@
 .bar-title .segmented-controller li > a {
   color: #fff;
 }
-.bar-title .segmented-controller li.active {
+.bar-title .segmented-controller li.selected {
   background-color: rgba(255, 255, 255, 0.4);
 }
 

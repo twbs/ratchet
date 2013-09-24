@@ -41,8 +41,10 @@
       border-left-width: 0;
     }
 
-    // Active segment of controller
-    &.active {
+
+
+    // Selected segment of controller
+    &.selected {
       background-color: $primary-color;
       transition: background-color .2s linear;
 
@@ -57,7 +59,7 @@
 .segmented-controller-item {
   display: none;
 
-  &.active {
+  &.selected {
     display: block;
   }
 }
