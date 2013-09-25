@@ -1,0 +1,59 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Box orient
+@mixin box-orient($orient) {
+  -webkit-box-orient: $orient;
+          box-orient: $orient;
+}
+
+//Box flex
+@mixin box-flex($flex) {
+  -webkit-box-flex: $flex;
+          box-flex: $flex;
+}
+
+// Box shadow
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+
+// Transitions & animations
+// --------------------------------------------------
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-property($property...) {
+  -webkit-transition-property: $property;
+          transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+  -webkit-transition-duration: $duration;
+          transition-duration: $duration;
+}
+@mixin transition-timing-function($function...) {
+  -webkit-transition-timing-function: $function;
+          transition-timing-function: $function;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+          transform: $transform;
+}
+
+@mixin animation-name($name) {
+  -webkit-animation-name: $name;
+          animation-name: $name;
+}
+@mixin animation-duration($duration) {
+  -webkit-animation-duration: $duration;
+          animation-duration: $duration;
+}
+@mixin animation-direction($direction) {
+  -webkit-animation-direction: $direction;
+          animation-direction: $direction;
+}
