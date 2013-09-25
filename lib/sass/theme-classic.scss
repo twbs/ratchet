@@ -1,3 +1,5 @@
+@import "mixins.scss";
+
 //
 // Variable overrides
 // --------------------------------------------------
@@ -34,7 +36,7 @@ $negative-color: #e71e1e;
 }
 .bar-nav {
   top: 20px;
-  box-shadow: 0 -20px 0 rgba(30,176,233,.98), 0 0 1px rgba(0, 0, 0, 0.85)
+  @include box-shadow(0 -20px 0 rgba(30,176,233,.98), 0 0 1px rgba(0, 0, 0, 0.85));
 }
 [class*="bar-"].bar-header-secondary {
   top: 64px;

@@ -21,6 +21,7 @@
 
 .bar-nav {
   top: 20px;
+  -webkit-box-shadow: 0 -20px 0 rgba(30, 176, 233, 0.98), 0 0 1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 -20px 0 rgba(30, 176, 233, 0.98), 0 0 1px rgba(0, 0, 0, 0.85);
 }
 

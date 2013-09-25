@@ -11,20 +11,16 @@
   min-height: 100%;
   overflow: hidden;
   background-color: #fff;  
-  -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
-  -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
-          transition:         transform .25s, opacity 1ms .25s;
-  -webkit-transition-timing-function: $timing-fuction;
+  @include transform(translate3d(0, 100%, 0));
+  @include transition(-webkit-transform .25s, transform .25s, opacity 1ms .25s);
+  @include transition-timing-function($timing-fuction);
 
   // Active modal
   &.active {
     opacity: 1;
     height: 100%;
-    -webkit-transition: -webkit-transform .25s;
-            transition:         transform .25s;
-    -webkit-transition-timing-function: $timing-fuction;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    @include transition(-webkit-transform .25s, transform .25s);
+    @include transition-timing-function($timing-fuction);
+    @include transform(translate3d(0, 0, 0));
   }
 }

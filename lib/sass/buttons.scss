@@ -24,8 +24,9 @@
   &.button-filled {
     color: #fff;
     background-color: $default-color;
-    -webkit-transition: background-color .1s linear, opacity .1s linear;
-            transition: background-color .1s linear, opacity .1s linear;
+    @include transition(background-color, opacity);
+    @include transition-duration(.2s);
+    @include transition-timing-function(linear);
   }
 
   // Disabled styles & filled button active styles
@@ -100,10 +101,8 @@
     line-height: $bar-base-height;
     color: $primary-color;
     border: 0;
-    -webkit-transition: opacity .2s linear;
-            transition: opacity .2s linear;
-    -webkit-box-flex: 0;
-            box-flex: 0;
+    @include transition(opacity .2s linear);
+    @include box-flex(0);
   }
 
   // Hacky way to right align buttons outside of flex-box system
@@ -184,13 +183,11 @@
   // Rotate the chevrons
   .button-prev:before,
   .button-next:after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    @include transform(rotate(-45deg));
   } 
   .button-prev:after,
   .button-next:before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
 }
 

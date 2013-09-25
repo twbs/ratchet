@@ -20,12 +20,10 @@
   // Position and rotate respective halves of the chevron
   &:before {
     top: 6px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
   &:after {
     top: 8px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    @include transform(rotate(-45deg));
   }
 }

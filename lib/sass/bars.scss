@@ -10,7 +10,7 @@
   height: $bar-base-height;
   padding: 5px $bar-side-spacing;
   background-color: $chrome-color;
-  box-shadow: 0 0 1px rgba(0,0,0,.85);
+  @include box-shadow(0 0 1px rgba(0,0,0,.85));
 
   // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
@@ -25,7 +25,7 @@
   // Flip border position to top for footer bars
   &.bar-footer.bar-standard,
   &.bar-footer-secondary.bar-standard {
-    box-shadow: 0 0 1px rgba(0,0,0,.85);
+    @include box-shadow(0 0 1px rgba(0,0,0,.85));
   }
 }
 
@@ -38,8 +38,7 @@
   top: 0;
   display: -webkit-box;
   display: box;
-  -webkit-box-orient: horizontal;
-          box-orient: horizontal;
+  @include box-orient(horizontal);
 }
 
 // Centered text in the .bar-nav 
@@ -79,7 +78,7 @@
   bottom: 0;
   height: $bar-tab-height;
   padding: 0;
-  box-shadow: 0 0px 1px rgba(0,0,0,.85);
+  @include box-shadow(0 0px 1px rgba(0,0,0,.85));
 }
 
 // Wrapper for individual tab
@@ -90,8 +89,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  -webkit-box-orient: horizontal;
-          box-orient: horizontal;
+  @include box-orient(horizontal);
 }
 
 // Navigational tab
@@ -99,8 +97,7 @@
   height: 100%;
   padding-top: 9px;
   text-align: center;
-  -webkit-box-flex: 1;
-          box-flex: 1;
+  @include box-flex(1);
 
   .icon {
     width: 24px;
@@ -128,7 +125,7 @@
   padding-left: 15px;
   border-bottom: 1px solid rgba(0,0,0,.15);
   border-radius: 12px 12px 0 0;
-  box-shadow: none;
+  @include box-shadow(none);
 
   .title + [class*="button"]:last-child {
     right: 15px;

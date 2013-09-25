@@ -14,8 +14,7 @@
   background-color: transparent;
   border: 1px solid $primary-color;
   border-radius: 4px;
-  -webkit-box-orient: horizontal;
-          box-orient: horizontal;
+  @include box-orient(horizontal);
 
   // Section within controller
   li {
@@ -23,8 +22,7 @@
     text-align: center;
     white-space: nowrap;
     border-left: 1px solid $primary-color;
-    -webkit-box-flex: 1;
-            box-flex: 1;
+    @include box-flex(1);
     
     // Link that fills each section
     > a {
@@ -49,7 +47,7 @@
     // Selected segment of controller
     &.selected {
       background-color: $primary-color;
-      transition: background-color .2s linear;
+      @include transition(background-color .2s linear);
 
       // Set color of links to white
       > a {
@@ -74,8 +72,7 @@
 // Remove standard segmented bottom margin
 [class*="bar-"] .segmented-controller {
   margin: 3px 0;
-  -webkit-box-flex: 1;
-          box-flex: 1;
+  @include box-flex(1);
 }
 .bar-nav .segmented-controller {
   margin-bottom: 4px;

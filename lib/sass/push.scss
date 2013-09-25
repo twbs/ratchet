@@ -8,8 +8,7 @@
   &.fade {
     left: 0;
     opacity: 0;
-    -webkit-transition: opacity .2s ease-in-out;
-            transition: opacity .2s ease-in-out;
+    @include transition(opacity .2s ease-in-out);
 
     &.in {
       opacity: 1;
@@ -19,42 +18,35 @@
   // Slide animation iOS7
   &.slide {
     z-index: 2;
-    -webkit-transition: -webkit-transform .5s;
-            transition:         transform .5s;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-transition-timing-function: $timing-fuction;
+    @include transition(-webkit-transform .4s);
+    @include transform(translate3d(0, 0, 0));
+    @include transition-timing-function ($timing-fuction);
 
     // Adding the overlay
     &.sliding-in,
     &.right:not([class*="sliding-in"]) {
-      -webkit-animation-name: fadeOverlay;
-              animation-name: fadeOverlay;
-      -webkit-animation-duration: .4s;
-              animation-duration: .4s;
+      @include animation-name(fadeOverlay);
+      @include animation-duration(.4s);
     }
 
     &.right:not([class*="sliding-in"]) {
-      -webkit-animation-direction: reverse;
-              animation-direction: reverse;
+      @include animation-direction(reverse);
     }
 
     &.left {
       z-index: 1;
-      -webkit-transform: translate3d(-20%, 0, 0); // Creates the parallax effect
-              transform: translate3d(-20%, 0, 0);
+      @include transform(translate3d(-20%, 0, 0)); // Creates the parallax effect
     }
 
     &.right {
       z-index: 3;
-      -webkit-transform: translate3d(100%, 0, 0);
-              transform: translate3d(100%, 0, 0);
+      @include transform(translate3d(100%, 0, 0));
     }
   }
 }
 
 // Overlay animation for the slide transition
 @-webkit-keyframes fadeOverlay {
-  from { box-shadow: 0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0); }
-  to   { box-shadow: 0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1); }
+  from { @include box-shadow(0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0)); }
+  to   { @include box-shadow(0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1)); }
 }
