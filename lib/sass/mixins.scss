@@ -2,6 +2,10 @@
 // Mixins
 // --------------------------------------------------
 
+
+// General
+// --------------------------------------------------
+
 // Box orient
 @mixin box-orient($orient) {
   -webkit-box-orient: $orient;
@@ -21,7 +25,7 @@
 }
 
 
-// Transitions & animations
+// Transitions
 // --------------------------------------------------
 @mixin transition($transition...) {
   -webkit-transition: $transition;
@@ -40,11 +44,17 @@
           transition-timing-function: $function;
 }
 
+
+// Transforms
+// --------------------------------------------------
 @mixin transform($transform) {
   -webkit-transform: $transform;
           transform: $transform;
 }
 
+
+// Animations
+// --------------------------------------------------
 @mixin animation-name($name) {
   -webkit-animation-name: $name;
           animation-name: $name;
