@@ -255,12 +255,6 @@ strong {
   overflow: auto;
   background-color: #efeff4;
   -webkit-overflow-scrolling: touch;
-  -webkit-transition-property: top, bottom;
-  transition-property: top, bottom;
-  -webkit-transition-duration: 0.2s, 0.2s;
-  transition-duration: 0.2s, 0.2s;
-  -webkit-transition-timing-function: linear, linear;
-  transition-timing-function: linear, linear;
 }
 
 .content > * {

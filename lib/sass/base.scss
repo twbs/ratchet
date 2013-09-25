@@ -38,9 +38,6 @@ strong {
   overflow: auto;
   background-color: #efeff4;
   -webkit-overflow-scrolling: touch;
-  @include transition-property(top, bottom);
-  @include transition-duration(.2s, .2s);
-  @include transition-timing-function(linear, linear);
 }
 
 // Hack to force all relatively and absolutely positioned elements still render while scrolling
