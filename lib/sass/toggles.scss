@@ -9,6 +9,10 @@
   background-color: #fff;
   border: 2px solid #e6e6e6;
   border-radius: 20px;
+  @include transition-property(-webkit-transform, box-shadow, border);
+  @include transition-duration(0.3s);
+  @include transition-timing-function(ease-out);
+  @include transform(scale(1));
 
   // Sliding handle
   .toggle-handle {
@@ -29,8 +33,8 @@
 
   // Active state for toggle
   &.active {
-    background-color: $positive-color;
     border: 2px solid $positive-color;
+    @include box-shadow(inset 0 0 0 25px $positive-color);
   }
 
   // Active state for toggle handle
