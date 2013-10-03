@@ -731,7 +731,7 @@
     var handle      = toggle.querySelector('.toggle-handle');
     var current     = e.touches[0];
     var toggleWidth = toggle.offsetWidth;
-    var handleWidth = handle.offsetWidth;
+    var handleWidth = 28;
     var offset      = (toggleWidth - handleWidth) - 2;
 
     touchMove = true;
@@ -754,7 +754,7 @@
 
     var handle      = toggle.querySelector('.toggle-handle');
     var toggleWidth = toggle.offsetWidth;
-    var handleWidth = handle.offsetWidth;
+    var handleWidth = 28;
     var offset      = (toggleWidth - handleWidth) - 2;
     var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth/2 - handleWidth/2)));
 

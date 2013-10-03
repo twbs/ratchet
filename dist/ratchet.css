@@ -1016,8 +1016,8 @@ input[type="button"] {
   box-shadow: inset 0 0 0 0 #e1e1e1;
   -webkit-transition-property: box-shadow, border;
   transition-property: box-shadow, border;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 .toggle .toggle-handle {
   position: absolute;
@@ -1031,10 +1031,10 @@ input[type="button"] {
   border-radius: 100px;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
-  -webkit-transition-property: -webkit-transform, border, width, margin;
-  transition-property: -webkit-transform, border, width, margin;
-  -webkit-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+  -webkit-transition-property: -webkit-transform, border, width;
+  transition-property: -webkit-transform, border, width;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
@@ -1052,7 +1052,8 @@ input[type="button"] {
   transform: translate3d(17px, 0, 0);
 }
 .toggle.active .toggle-handle:active {
-  margin-left: -7px;
+  -webkit-transform: translate3d(10px, 0, 0) !important;
+  transform: translate3d(10px, 0, 0) !important;
 }
 
 .content.fade {
