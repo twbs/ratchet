@@ -25,6 +25,14 @@
 }
 
 
+// Transforms
+// --------------------------------------------------
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+          transform: $transform;
+}
+
+
 // Transitions
 // --------------------------------------------------
 @mixin transition($transition...) {
@@ -42,14 +50,6 @@
 @mixin transition-timing-function($function...) {
   -webkit-transition-timing-function: $function;
           transition-timing-function: $function;
-}
-
-
-// Transforms
-// --------------------------------------------------
-@mixin transform($transform) {
-  -webkit-transform: $transform;
-          transform: $transform;
 }
 
 
