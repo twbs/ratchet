@@ -26,7 +26,7 @@
     border-radius: 100px;
     @include box-shadow(0 3px 3px rgba(0,0,0,.08));
     @include transition-property(-webkit-transform, border, width);
-    @include transition-duration(.2s);
+    @include transition-duration(.1s);
     @include transition-timing-function(ease-in-out);
   }
 

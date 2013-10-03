@@ -1033,8 +1033,8 @@ input[type="button"] {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
   -webkit-transition-property: -webkit-transform, border, width;
   transition-property: -webkit-transform, border, width;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
