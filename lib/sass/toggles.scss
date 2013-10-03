@@ -11,7 +11,7 @@
   border-radius: 20px;
   @include box-shadow(inset 0 0 0 0 #e1e1e1);
   @include transition-property(box-shadow, border);
-  @include transition-duration(.2s);
+  @include transition-duration(.4s);
 
   // Sliding handle
   .toggle-handle {
@@ -22,17 +22,20 @@
     width: 28px;
     height: 28px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 100px;
     @include box-shadow(0 3px 3px rgba(0,0,0,.08));
-    @include transition-property(-webkit-transform, border, width);
-    @include transition-duration(.2s);
+    @include transition-property(-webkit-transform, border, width, margin);
+    @include transition-duration(.1s);
     @include transition-timing-function(ease-in-out);
+  }
+
+  &:active .toggle-handle {
+      width: 35px;
   }
 
   // Active state for toggle
   &.active {
-    //background-color: $positive-color;
     border: 2px solid $positive-color;
     @include box-shadow(inset 0 0 0 30px $positive-color);
   }
@@ -41,5 +44,9 @@
   &.active .toggle-handle {
     border-color: $positive-color;
     @include transform(translate3d(17px,0,0));
+
+    &:active {
+      margin-left: -7px;
+    }
   }
 }
