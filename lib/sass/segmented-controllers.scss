@@ -23,6 +23,7 @@
     white-space: nowrap;
     border-left: 1px solid $primary-color;
     @include box-flex(1);
+    @include transition(background-color .1s linear);
     
     // Link that fills each section
     > a {
@@ -47,7 +48,6 @@
     // Selected segment of controller
     &.selected {
       background-color: $primary-color;
-      @include transition(background-color .2s linear);
 
       // Set color of links to white
       > a {

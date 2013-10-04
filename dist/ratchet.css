@@ -859,6 +859,8 @@ input[type="button"] {
   border-left: 1px solid #007aff;
   -webkit-box-flex: 1;
   box-flex: 1;
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
 }
 .segmented-controller li > a {
   display: block;
@@ -876,8 +878,6 @@ input[type="button"] {
 }
 .segmented-controller li.selected {
   background-color: #007aff;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
 }
 .segmented-controller li.selected > a {
   color: #fff;
