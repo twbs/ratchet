@@ -38,15 +38,15 @@
   &.active {
     border: 2px solid $positive-color;
     @include box-shadow(inset 0 0 0 30px $positive-color);
-  }
 
-  // Active state for toggle handle
-  &.active .toggle-handle {
-    border-color: $positive-color;
-    @include transform(translate3d(17px,0,0));
-
-    &:active {
-      @include transform(translate3d(10px,0,0) !important);
+    .toggle-handle {
+      border-color: $positive-color;
+      @include transform(translate3d(17px,0,0)); 
+    }
+    // Handle when the handle and the container is active
+    &:active .toggle-handle,
+    .toggle-handle:active {
+      @include transform(translate3d(10px,0,0) !important); // Evil important tag is used to overwrite js.
     }
   }
 }
