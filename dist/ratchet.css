@@ -614,16 +614,16 @@ select {
   background-color: transparent;
   border: 1px solid #929292;
   border-radius: 4px;
-}
-[class*="button"]:active, [class*="button"].active, [class*="button"].button-filled {
-  color: #fff;
-  background-color: #929292;
-  -webkit-transition: background-color, opacity;
-  transition: background-color, opacity;
+  -webkit-transition: background-color, opacity, color;
+  transition: background-color, opacity, color;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
+}
+[class*="button"]:active, [class*="button"].active, [class*="button"].button-filled {
+  color: #fff;
+  background-color: #929292;
 }
 [class*="button"]:disabled, [class*="button"].disabled, [class*="button"].button-filled:active {
   opacity: .6;

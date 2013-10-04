@@ -17,6 +17,9 @@
   background-color: transparent;
   border: 1px solid $default-color;
   border-radius: 4px;
+  @include transition(background-color, opacity, color);
+  @include transition-duration(.2s);
+  @include transition-timing-function(linear);
 
   // Active & filled button styles
   &:active,
@@ -24,9 +27,6 @@
   &.button-filled {
     color: #fff;
     background-color: $default-color;
-    @include transition(background-color, opacity);
-    @include transition-duration(.2s);
-    @include transition-timing-function(linear);
   }
 
   // Disabled styles & filled button active styles
