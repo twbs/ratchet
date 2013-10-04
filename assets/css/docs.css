@@ -400,6 +400,7 @@ h6 {
   margin: 0 auto 20px;
   border: 1px solid #ddd;
   border-radius: 45px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,.05);
 }
 .step-icon .icon {
   font-size: 40px;
@@ -408,8 +409,8 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.step-icon .icon-download {
-  margin-top: -5px;
+.step-icon .icon-share {
+  margin-top: -3px;
 }
 
 .step-title {
