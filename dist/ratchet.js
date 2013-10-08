@@ -127,7 +127,7 @@
   
   var bars = {
     bartab             : '.bar-tab',
-    bartitle           : '.bar-title',
+    barnav             : '.bar-nav',
     barfooter          : '.bar-footer',
     barheadersecondary : '.bar-header-secondary'
   };
