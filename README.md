@@ -4,15 +4,15 @@ Prototype mobile apps with simple HTML, CSS and JS components.
 
 ## Getting Started
 
-- Clone the repo `git clone git@github.com:maker/ratchet.git` or just [download](http://maker.github.com/ratchet/ratchet.zip) the bundled CSS and JS
-- [Read the docs](http://maker.github.com/ratchet) to learn about the components and how to get a prototype on your phone
+- Clone the repo `git clone git@github.com:maker/ratchet.git` or just [download](http://maker.github.io/ratchet/ratchet.zip) the bundled CSS and JS
+- [Read the docs](http://maker.github.io/ratchet) to learn about the components and how to get a prototype on your phone
 - We will have example apps to check out very soon!
 
 Take note that our master branch is our active, unstable development branch and that if you're looking to download a stable copy of the repo, check the [tagged downloads](https://github.com/maker/ratchet/tags).
 
 ## Documentation
 
-Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at [http://maker.github.com/ratchet](http://maker.github.com/ratchet). The docs may also be run locally.
+Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at [http://maker.github.io/ratchet](http://maker.github.io/ratchet). The docs may also be run locally.
 
 ### Running documentation locally
 
