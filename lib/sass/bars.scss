@@ -99,22 +99,32 @@
   text-align: center;
   @include box-flex(1);
 
+  .tab-label,
+  .icon {
+    color: $default-color;
+  }
+
+  // Label for tab
+  .tab-label {
+    margin-top: -2px;
+    font-size: 11px;
+    font-weight: 400;
+  }
+  
   .icon {
     width: 24px;
     height: 24px;
     margin-top: -2px;
   }
-}
 
-// Label for tab
-.tab-label {
-  margin-top: -2px;
-  font-size: 11px;
-  font-weight: 400;
-  color: $default-color;
-}
-.tab-item.active .tab-label {
-  color: $primary-color;
+  // Active states for the tab bar
+  &.active,
+  &:active {
+    .tab-label,
+    .icon {
+      color: $primary-color;
+    }
+  }
 }
 
 // Nav bar in popovers
