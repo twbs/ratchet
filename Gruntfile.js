@@ -6,19 +6,19 @@ module.exports = function(grunt) {
 
     // Metadata.
     meta: {
-        srcPath: 'lib/',
-        distPath: 'dist/'
+      srcPath: 'lib/',
+      distPath: 'dist/'
     },
     
     banner: '/*\n' +
-            '* =====================================================\n' +
-            '* Ratchet v<%= pkg.version %>\n' +
-            '* Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            '* Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
-            '*\n' +
-            '* Designed and built by @connors, @dhg, and @fat.\n' +
-            '* =====================================================\n' +
-            '*/\n',
+            ' * =====================================================\n' +
+            ' * Ratchet v<%= pkg.version %>\n' +
+            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+            ' *\n' +
+            ' * Designed and built by @connors, @dhg, and @fat.\n' +
+            ' * =====================================================\n' +
+            ' */\n',
     
     concat: {
       options: {
@@ -38,25 +38,25 @@ module.exports = function(grunt) {
     },
     
     sass: {
-        options: {
-          banner: '<%= banner %>',
-          style: 'expanded',
-        },
-        dist: {
-            files: {
-                '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss',
-                '<%= meta.distPath %>theme-classic.css': '<%= meta.srcPath %>sass/theme-classic.scss'
-            }
+      options: {
+        banner: '<%= banner %>',
+        style: 'expanded',
+      },
+      dist: {
+        files: {
+          '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss',
+          '<%= meta.distPath %>theme-classic.css': '<%= meta.srcPath %>sass/theme-classic.scss'
         }
+      }
     },
  
     watch: {
-        scripts: {
-            files: [
-                '<%= meta.srcPath %>/**/*.scss'
-            ],
-            tasks: ['sass']
-        }
+      scripts: {
+        files: [
+          '<%= meta.srcPath %>/**/*.scss'
+        ],
+        tasks: ['sass']
+      }
     }
   });
 
