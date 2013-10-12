@@ -4,7 +4,7 @@ Prototype mobile apps with simple HTML, CSS and JS components.
 
 ## Getting Started
 
-- Clone the repo `git clone git@github.com:maker/ratchet.git` or just [download](http://maker.github.io/ratchet/ratchet.zip) the bundled CSS and JS
+- Clone the repo `git clone https://github.com/maker/ratchet.git` or just [download](http://maker.github.io/ratchet/ratchet.zip) the bundled CSS and JS
 - [Read the docs](http://maker.github.io/ratchet) to learn about the components and how to get a prototype on your phone
 - We will have example apps to check out very soon!
 
@@ -28,7 +28,7 @@ Ratchet was developed to support iOS 7+ for iPhone. Questions or discussions abo
 
 ## Reporting bugs & contributing
 
-Please file a GitHub issue to [report a bug](http://github.com/maker/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/maker/ratchet/blob/master/CONTRIBUTING.md).
+Please file a GitHub issue to [report a bug](https://github.com/maker/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/maker/ratchet/blob/master/CONTRIBUTING.md).
 
 ## Troubleshooting
 
@@ -43,15 +43,15 @@ A small list of "gotchas" are provided below for designers and developers starti
 
 ## Authors
 
-Dave Gamache
-
-- http://twitter.com/dhg
-- http://github.com/dhg
-
 Connor Sears
 
 - http://twitter.com/connors
 - http://github.com/connors
+
+Dave Gamache
+
+- http://twitter.com/dhg
+- http://github.com/dhg
 
 Jacob Thornton
 
