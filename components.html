@@ -1,0 +1,1053 @@
+---
+layout: default
+title: Ratchet ~ Components
+base_url: "../"
+---
+
+<!-- Banner for Mozilla/IE -->
+<div class="notice-banner">
+  <p><strong>Heads up!</strong> Ratchet components are written only for iPhone, so many are broken in non-Webkit browsers.</p>
+</div>
+
+<!--[if IE]>
+<div class="notice-banner">
+  <p><strong>Heads up!</strong> Ratchet components are written only for iPhone, so many are broken in non-Webkit browsers.</p>
+</div>
+<![endif]-->
+
+<!-- Components -->
+<section class="docs-outer-wrapper content-section section-components">
+  <div class="docs-inner-wrapper">
+    <div class="section-header">
+      <h2 class="section-title">Components</h2>
+      <p class="section-description">Design patterns that serve as basic building blocks.</p>
+    </div>
+    <div class="iphone">
+      <div class="iphone-content">
+        <div id="iwindow">
+          <header class="bar-nav">
+            <h1 class="title">Title</h1>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bars -->
+    <article class="component active" id="bars">
+      <h3 class="component-title">Title bar</h3>
+      <p class="component-description">Title bars are full width and docked to the top of the viewport.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <header class="bar-nav">
+          <h1 class="title">Title</h1>
+        </header>
+      </div>
+
+{% highlight html %}
+<header class="bar-nav">
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
+
+    </article>
+
+    <article class="component">
+      <h3 class="component-title">Title bar with buttons</h3>
+      <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <header class="bar-nav">
+          <a class="button">
+            Left
+          </a>
+          <h1 class="title">Title</h1>
+          <a class="button">
+            Right
+          </a>
+        </header>
+      </div>
+
+{% highlight html %}
+<header class="bar-nav">
+  <a class="button">
+    Left
+  </a>
+  <h1 class="title">Title</h1>
+  <a class="button">
+    Right
+  </a>
+</header>
+{% endhighlight %}
+
+    </article>
+    <article class="component">
+      <h3 class="component-title">Title bar with directional buttons</h3>
+      <p class="component-description">Directional buttons in a title bar should be used for navigational purposes.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <header class="bar-nav">
+          <a class="button-prev">
+            Previous
+          </a>
+          <h1 class="title">Title</h1>
+          <a class="button-next">
+            Next
+          </a>
+        </header>
+      </div>
+
+{% highlight html %}
+<header class="bar-nav">
+  <a class="button-prev">
+    Previous
+  </a>
+  <h1 class="title">Title</h1>
+  <a class="button-next">
+    Next
+  </a>
+</header>
+{% endhighlight %}
+
+    </article>
+
+    <article class="component">
+      <h3 class="component-title">Title bar with segmented controller</h3>
+      <p class="component-description">Title bars can also house segmented controllers (with or without accompanying buttons). It all uses flex-box to create perfectly even spacing no matter their labels.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <header class="bar-nav">
+          <a class="button">
+            Left
+          </a>
+          <ul class="segmented-controller">
+            <li class="selected">
+              <a>One</a>
+            </li>
+            <li>
+              <a>Two</a>
+            </li>
+            <li>
+              <a>Three</a>
+            </li>
+          </ul>
+          <a class="button">
+            Right
+          </a>
+        </header>
+      </div>
+
+{% highlight html %}
+<header class="bar-nav">
+  <a class="button">
+    Left
+  </a>
+  <ul class="segmented-controller">
+    <li class="selected">
+      <a>One</a>
+    </li>
+    <li>
+      <a>Two</a>
+    </li>
+    <li>
+      <a>Three</a>
+    </li>
+  </ul>
+  <a class="button">
+    Right
+  </a>
+</header>
+{% endhighlight %}
+
+    </article>
+
+    <article class="component">
+      <h3 class="component-title">Tab bar</h3>
+      <p class="component-description">Use Ratchicons in the tab bar to represent different sections of your app.</p>
+
+      <div class="component-example component-example-fullbleed">
+        <nav class="bar-tab">
+          <ul class="tab-inner">
+            <li class="tab-item active">
+              <a href="#">
+                <span class="icon icon-share"></span>
+                <div class="tab-label">Label</div>
+              </a>
+            </li>
+            <li class="tab-item">
+              <a href="#">
+                <span class="icon icon-share"></span>
+                <div class="tab-label">Label</div>
+              </a>
+            </li>
+            <li class="tab-item">
+              <a href="#">
+                <span class="icon icon-share"></span>
+                <div class="tab-label">Label</div>
+              </a>
+            </li>
+            <li class="tab-item">
+              <a href="#">
+                <span class="icon icon-share"></span>
+                <div class="tab-label">Label</div>
+              </a>
+            </li>
+            <li class="tab-item">
+              <a href="#">
+                <span class="icon icon-share"></span>
+                <div class="tab-label">Label</div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+{% highlight html %}
+<nav class="bar-tab">
+  <ul class="tab-inner">
+    <li class="tab-item active">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Label</div>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endhighlight %}
+
+    <p class="component-note touch-only"><strong>Note:</strong> Use push.js to actually change content.</p>
+  </article>
+
+  <article class="component">
+      <h3 class="component-title">Standard bars</h3>
+      <p class="component-description">Standard bars are basic fixed elements that can be positioned in 3 places. These can be used to house buttons or segmented controllers (see following examples).</p>
+
+      <div class="component-example component-example-fullbleed">
+        <!-- Segmented controller in standard bar fixed to top -->
+        <nav class="bar-standard">
+          <ul class="segmented-controller">
+            <li class="selected">
+              <a>Thing one</a>
+            </li>
+            <li>
+              <a>Thing two</a>
+            </li>
+            <li>
+              <a>Thing three</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Block button in standard bar fixed below top bar -->
+        <div class="bar-standard bar-header-secondary">
+          <a class="button-block">Block level button</a>
+        </div>
+      </div>
+
+{% highlight html %}
+<!-- Segmented controller in standard bar fixed to top -->
+<nav class="bar-standard">
+  <ul class="segmented-controller">
+    <li class="selected">
+      <a>Thing one</a>
+    </li>
+    <li>
+      <a>Thing two</a>
+    </li>
+    <li>
+      <a>Thing three</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Block button in standard bar fixed below top bar -->
+<div class="bar-standard bar-header-secondary">
+  <a class="button-block">Block level button</a>
+</div>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Table views -->
+  <article class="component" id="table-views">
+    <h3 class="component-title">Table views</h3>
+    <p class="component-description">Table views can be used for organizing data, showing collections of links or a series of controls.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li class="table-view-divider">Divider</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li class="table-view-divider">Divider</li>
+  <li>Item 3</li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">Table view with chevrons</h3>
+    <p class="component-description">Chevrons are created with CSS3, so no image assets are needed. They should be used to indicate that the item is linked.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li>
+          <a>
+            Item 1
+            <span class="chevron"></span>
+          </a>
+        </li>
+        <li>
+          <a>
+            Item 2
+            <span class="chevron"></span>
+          </a>
+        </li>
+        <li>
+          <a>
+            Item 3
+            <span class="chevron"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+ <ul class="table-view">
+  <li>
+    <a>
+      Item 1
+      <span class="chevron"></span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 2
+      <span class="chevron"></span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 3
+      <span class="chevron"></span>
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">Table view with counts</h3>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li>Item 1 <span class="count">4</span></li>
+        <li>Item 2 <span class="count">1</span></li>
+        <li>Item 3 <span class="count">5</span></li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li>Item 1 <span class="count">4</span></li>
+  <li>Item 2 <span class="count">1</span></li>
+  <li>Item 3 <span class="count">5</span></li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">Table view with counts and chevrons</h3>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li>
+          <a>
+            Item 1
+            <span class="chevron"></span>
+            <span class="count">4</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            Item 2
+            <span class="chevron"></span>
+            <span class="count">1</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            Item 3
+            <span class="chevron"></span>
+            <span class="count">5</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li>
+    <a>
+      Item 1
+      <span class="chevron"></span>
+      <span class="count">4</span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 2
+      <span class="chevron"></span>
+      <span class="count">1</span>
+    </a>
+  </li>
+  <li>
+    <a>
+      Item 3
+      <span class="chevron"></span>
+      <span class="count">5</span>
+    </a>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">Table view with buttons</h3>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li>Item 1 <a class="button">Button</a></li>
+        <li>Item 2 <a class="button-primary">Button</a></li>
+        <li>Item 3 <a class="button-positive">Button</a></li>
+        <li>Item 4 <a class="button-negative">Button</a></li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li>Item 1 <a class="button">Button</a></li>
+  <li>Item 2 <a class="button-primary">Button</a></li>
+  <li>Item 3 <a class="button-positive">Button</a></li>
+  <li>Item 4 <a class="button-negative">Button</a></li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">Table view with toggles</h3>
+
+    <div class="component-example component-example-fullbleed">
+      <ul class="table-view">
+        <li>
+          Item 1
+          <div class="toggle">
+            <div class="toggle-handle"></div>
+          </div>
+        </li>
+        <li>
+          Item 2
+          <div class="toggle active">
+            <div class="toggle-handle"></div>
+          </div>
+        </li>
+        <li>
+          Item 3
+          <div class="toggle">
+            <div class="toggle-handle"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view">
+  <li>
+    Item 1
+    <div class="toggle">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li>
+    Item 2
+    <div class="toggle active">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+  <li>
+    Item 3
+    <div class="toggle">
+      <div class="toggle-handle"></div>
+    </div>
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component">
+    <h3 class="component-title">Inset table views</h3>
+
+    <div class="component-example">
+      <ul class="table-view inset">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li class="table-view-divider">Divider</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="table-view inset">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li class="table-view-divider">Divider</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Buttons -->
+  <article class="component" id="buttons">
+    <h3 class="component-title">Buttons</h3>
+    <p class="component-description">Buttons come in four flavors and should be used for user actions.</p>
+
+    <div class="component-example">
+      <a class="button">Button</a>
+      <a class="button-primary">Button</a>
+      <a class="button-positive">Button</a>
+      <a class="button-negative">Button</a>
+    </div>
+
+{% highlight html %}
+<a class="button">Button</a>
+<a class="button-primary">Button</a>
+<a class="button-positive">Button</a>
+<a class="button-negative">Button</a>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component" id="buttonsCounts">
+    <h3 class="component-title">Buttons with counts</h3>
+
+    <div class="component-example">
+      <a class="button">Count button<span class="count count-filled">1</span></a>
+      <a class="button-primary">Count button<span class="count-primary count-filled">1</span></a>
+      <a class="button-positive">Count button<span class="count-positive count-filled">1</span></a>
+      <a class="button-negative">Count button<span class="count-negative count-filled">1</span></a>
+    </div>
+
+{% highlight html %}
+<a class="button">Count button<span class="count count-filled">1</span></a>
+<a class="button-primary">Count button<span class="count-primary count-filled">1</span></a>
+<a class="button-positive">Count button<span class="count-positive count-filled">1</span></a>
+<a class="button-negative">Count button<span class="count-negative count-filled">1</span></a>
+
+<a class="button-filled">Count button<span class="count count-filled">1</span></a>
+<a class="button-filled button-primary">Count button<span class="count-primary count-filled">1</span></a>
+<a class="button-filled button-positive">Count button<span class="count-positive count-filled">1</span></a>
+<a class="button-filled button-negative">Count button<span class="count-negative count-filled">1</span></a>
+{% endhighlight %}
+
+  </article>
+
+  <article class="component" id="blockButtons">
+    <h3 class="component-title">Block buttons</h3>
+
+    <div class="component-example">
+      <a class="button-block">Block button</a>
+      <a class="button-primary button-block">Block button</a>
+      <a class="button-positive button-block">Block button</a>
+      <a class="button-negative button-block">Block button</a>
+
+      <a class="button-block button-filled">Block button</a>
+      <a class="button-primary button-block button-filled">Block button</a>
+      <a class="button-positive button-block button-filled">Block button</a>
+      <a class="button-negative button-block button-filled">Block button</a>
+    </div>
+
+{% highlight html %}
+<a class="button-block">Block button</a>
+<a class="button-primary button-block">Block button</a>
+<a class="button-positive button-block">Block button</a>
+<a class="button-negative button-block">Block button</a>
+
+<a class="button-block button-filled">Block button</a>
+<a class="button-primary button-block button-filled">Block button</a>
+<a class="button-positive button-block button-filled">Block button</a>
+<a class="button-negative button-block button-filled">Block button</a>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Segmented Controller -->
+  <article class="component" id="segmentedControllers">
+    <h3 class="component-title">Segmented controller</h3>
+    <p class="component-description">Created with flex-box so button sizes and spacing are consistent. Content sections that are to be swapped in and out by the controller should all be siblings and have the class "segmented-controller-item". Then, just give each content section an id and point the link in the segmented controller to that id.</p>
+
+    <div class="component-example">
+      <ul class="segmented-controller">
+        <li class="selected">
+          <a href="#item1mobile">Thing one</a>
+        </li>
+        <li>
+          <a href="#item2mobile">Thing two</a>
+        </li>
+        <li>
+          <a href="#item3mobile">Thing three</a>
+        </li>
+      </ul>
+      <ul class="inset table-view">
+        <li id="item1mobile" class="segmented-controller-item selected">
+          Item 1
+        </li>
+        <li id="item2mobile" class="segmented-controller-item">
+          Item 2
+        </li>
+        <li id="item3mobile" class="segmented-controller-item">
+          Item 3
+        </li>
+      </ul>
+    </div>
+
+{% highlight html %}
+<ul class="segmented-controller">
+  <li class="selected">
+    <a href="#item1mobile">Thing one</a>
+  </li>
+  <li>
+    <a href="#item2mobile">Thing two</a>
+  </li>
+  <li>
+    <a href="#item3mobile">Thing three</a>
+  </li>
+</ul>
+<ul class="inset table-view">
+  <li id="item1mobile" class="segmented-controller-item selected">
+    Item 1
+  </li>
+  <li id="item2mobile" class="segmented-controller-item">
+    Item 2
+  </li>
+  <li id="item3mobile" class="segmented-controller-item">
+    Item 3
+  </li>
+</ul>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Counts -->
+  <article class="component" id="counts">
+    <h3 class="component-title">Counts</h3>
+    <p class="component-description">Counts come in four flavors and should be used to indicate "how many" of something there are.</p>
+
+    <div class="component-example">
+      <span class="count">1</span>
+      <span class="count-primary">2</span>
+      <span class="count-positive">3</span>
+      <span class="count-negative">4</span>
+      <span class="count count-filled">1</span>
+      <span class="count-primary count-filled">2</span>
+      <span class="count-positive count-filled">3</span>
+      <span class="count-negative count-filled">4</span>
+    </div>
+
+{% highlight html %}
+<span class="count">1</span>
+<span class="count-primary">2</span>
+<span class="count-positive">3</span>
+<span class="count-negative">4</span>
+
+<span class="count count-filled">1</span>
+<span class="count-primary count-filled">2</span>
+<span class="count-positive count-filled">3</span>
+<span class="count-negative count-filled">4</span>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Forms -->
+  <article class="component" id="forms">
+    <h3 class="component-title">Forms</h3>
+
+    <div class="component-example">
+      <form>
+        <input type="text" placeholder="Full name">
+        <input type="search" placeholder="Search">
+        <textarea rows="5"></textarea>
+        <a class="button-positive button-block button-filled">Choose existing</a>
+      </form>
+    </div>
+
+{% highlight html %}
+<form>
+  <input type="text" placeholder="Full name">
+  <input type="search" placeholder="Search">
+  <textarea rows="5"></textarea>
+  <a class="button-positive button-block button-filled">Choose existing</a>
+</form>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Form with input group -->
+  <article class="component" id="formsWithInputGroup">
+    <h3 class="component-title">Form with input group</h3>
+
+    <div class="component-example">
+      <form class="input-group">
+        <input type="text" placeholder="Full name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Username">
+      </form>
+    </div>
+
+{% highlight html %}
+<form class="input-group">
+  <input type="text" placeholder="Full name">
+  <input type="email" placeholder="Email">
+  <input type="text" placeholder="Username">
+</form>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Form with input group and labels -->
+  <article class="component" id="formsWithInputGroupAndLabels">
+    <h3 class="component-title">Form with input group and labels</h3>
+
+    <div class="component-example">
+      <form class="input-group">
+        <div class="input-row">
+          <label>Full name</label>
+          <input type="text" placeholder="Mister Ratchet">
+        </div>
+        <div class="input-row">
+          <label>Email</label>
+          <input type="email" placeholder="ratchetframework@gmail.com">
+        </div>
+        <div class="input-row">
+          <label>Username</label>
+          <input type="text" placeholder="goRatchet">
+        </div>
+      </form>
+    </div>
+
+{% highlight html %}
+<form class="input-group">
+  <div class="input-row">
+    <label>Full name</label>
+    <input type="text" placeholder="Mister Ratchet">
+  </div>
+  <div class="input-row">
+    <label>Email</label>
+    <input type="email" placeholder="ratchetframework@gmail.com">
+  </div>
+  <div class="input-row">
+    <label>Username</label>
+    <input type="text" placeholder="goRatchet">
+  </div>
+</form>
+{% endhighlight %}
+
+  </article>
+
+  <!-- Toggle -->
+  <article class="component" id="toggles">
+    <h3 class="component-title">Toggles</h3>
+    <p class="component-description">Toggles can be used by sliding or tapping the control.</p>
+
+    <div class="component-example">
+      <div class="toggle active">
+        <div class="toggle-handle"></div>
+      </div>
+      <div class="toggle">
+        <div class="toggle-handle"></div>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="toggle active">
+  <div class="toggle-handle"></div>
+</div>
+<div class="toggle">
+  <div class="toggle-handle"></div>
+</div>
+{% endhighlight %}
+
+    <p class="component-description">Toggles.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
+
+{% highlight js %}
+// Only needed if you want to fire a callback
+document
+.querySelector('#myToggle')
+.addEventListener('toggle', myFunction)
+{% endhighlight %}
+
+  </article>
+
+  <!-- Popovers -->
+  <article class="component" id="popovers">
+    <h3 class="component-title">Popovers</h3>
+
+    <div class="component-example">
+      <div id="popover" class="popover">  
+        <header class="bar-nav">
+          <a class="button">
+            Left
+          </a>
+          <h3 class="title">Popover title</h3>
+          <a class="button">
+            Right
+          </a>
+        </header>
+        <ul class="table-view">
+          <li>Item1</li>
+          <li>Item2</li>
+          <li>Item3</li>
+          <li>Item4</li>
+          <li>Item5</li>
+          <li>Item6</li>
+          <li>Item7</li>
+          <li>Item8</li>
+        </ul>
+      </div>
+    </div>
+
+{% highlight html %}
+<div id="popover" class="popover">  
+  <header class="bar-nav">
+    <a class="button">
+      Left
+    </a>
+    <h3 class="title">Popover title</h3>
+    <a class="button">
+      Right
+    </a>
+  </header>
+  <ul class="table-view">
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+    <li>Item4</li>
+    <li>Item5</li>
+    <li>Item6</li>
+    <li>Item7</li>
+    <li>Item8</li>
+  </ul>
+</div>
+{% endhighlight %}
+
+    <p class="component-description">Popovers are designed to only fire from <a href="#bars">title bars</a>. Set the value of the title href to the id of a popover, like so:</p>
+
+{% highlight html %}
+<header class="bar-nav">
+  <a href="#myPopover"> 
+    <h1 class="title">Popover title</h3>
+  </a>
+</header>
+{% endhighlight %}
+
+  </article>
+  
+  <!-- Modals -->
+  <article class="component" id="modals">
+    <h3 class="component-title">Modals</h3>
+
+    <div class="component-example">
+      <a href="#myModalexample" class="button">Open modal</a>
+      <div id="myModalexample" class="modal">
+        <header class="bar-nav">
+          <h1 class="title">Modal</h1>
+          <a class="button" href="#myModalexample">
+            Close
+          </a>
+        </header>
+        
+        <div class="content content-padded">
+          <p>The contents of my modal</p>
+        </div>
+      </div>
+    </div>
+
+{% highlight html %}
+<a href="#myModalexample" class="button">Open modal</a>
+<div id="myModalexample" class="modal">
+  <header class="bar-nav">
+    <h1 class="title">Modal</h1>
+    <a class="button" href="#myModalexample">
+      Close
+    </a>
+  </header>
+  
+  <div class="content content-padded">
+    <p>The contents of my modal</p>
+  </div>
+</div>
+{% endhighlight %}
+
+    <p class="component-description">Modals are designed to only fire from links. Set the value of the toggle links href to the id of a modal.</p>
+
+  </article>
+
+  <!-- Slider -->
+  <article class="component" id="sliders">
+    <h3 class="component-title">Sliders</h3>
+    <p class="component-description">Can be used with any number of slides with any type of content.</p>
+
+    <div class="component-example component-example-fullbleed">
+      <div class="slider" id="mySlider">
+        <ul>
+          <li>
+            <img src="assets/img/slide-1.jpg">
+            <span class="slide-text">&larr; Slide me</span>
+          </li>
+          <li>
+            <img src="assets/img/slide-2.jpg">
+          </li>
+          <li>
+            <img src="assets/img/slide-3.jpg">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+{% highlight html %}
+<div class="slider" id="mySlider">
+  <ul>
+    <li>
+      <img src="assets/img/slide-1.jpg">
+      <span class="slide-text">&larr; Slide me</span>
+    </li>
+    <li>
+      <img src="assets/img/slide-2.jpg">
+    </li>
+    <li>
+      <img src="assets/img/slide-3.jpg">
+    </li>
+  </ul>
+</div>
+{% endhighlight %}
+
+    <p class="component-description">Sliders.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
+
+{% highlight js %}
+// Only needed if you want to fire a callback
+document
+.querySelector('#mySlider')
+.addEventListener('slide', myFunction)
+{% endhighlight %}
+
+  </article>
+
+  <!-- Push docs -->
+  <article class="component" id="push">
+    <h3 class="component-title">Push</h3>
+    <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
+
+{% highlight html %}
+<!-- A one.html link -->
+<a href="two.html">Two</a>
+{% endhighlight %}
+
+    <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
+
+    <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
+
+{% highlight html %}
+<!-- An one.html link that animates to two.html -->
+<a href="two.html" data-transition="fade">Two</a>
+{% endhighlight %}
+
+    <p class="component-description">A working version of push:</p>
+
+    <div class="component-example component-example-fullbleed">
+      <header class="bar-nav">
+        <h1 class="title">Push</h1>
+      </header>
+      <div class="content">
+        <ul class="table-view">
+          <li>
+            <a href="two.html" data-transition="slide-in">
+              Load new page with push
+            </a>
+            <span class="chevron"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+{% highlight html %}
+<header class="bar-nav">
+  <h1 class="title">Push</h1>
+</header>
+<div class="content">
+  <ul class="table-view">
+    <li>
+      <a href="two.html" data-transition="slide-in">
+        Load new page with push
+      </a>
+      <span class="chevron"></span>
+    </li>
+  </ul>
+</div>
+{% endhighlight %}
+
+    <p class="component-description">Have a link you don't want to intercepted by push? Try this:</p>
+
+{% highlight html %}
+<!-- Use data-ignore="push" to prevent the push.js interception -->
+<a href="http://www.google.com" data-ignore="push">Google<a>
+{% endhighlight %}
+
+    <p class="component-description">Push.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
+
+{% highlight js %}
+// Only needed if you want to fire a callback
+window.addEventListener('push', myFunction);
+{% endhighlight %}
+
+  </article>
+
+  </div>
+</section>

@@ -1,24 +1,24 @@
 <meta charset="utf-8">
-<title>{{ site.name }}</title>
+<title>{{ page.title }}</title>
 <meta name="description" content="{{ site.name }}: {{ site.description }}">
 <meta name="author" content="{{ site.authors }}">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="favicon.ico">
+<link rel="shortcut icon" href="{{ page.base_url }}favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" href="dist/ratchet.css">
-<link rel="stylesheet" href="assets/css/docs.css">
-<link rel="stylesheet" href="assets/css/pygments.css">
+<link rel="stylesheet" href="{{ page.base_url }}dist/ratchet.css">
+<link rel="stylesheet" href="{{ page.base_url }}assets/css/docs.css">
+<link rel="stylesheet" href="{{ page.base_url }}assets/css/pygments.css">
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ page.base_url }}assets/img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ page.base_url }}assets/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ page.base_url }}assets/img/apple-touch-icon-57x57.png">
 
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="dist/ratchet.js"></script>
-<script src="assets/js/docs.js"></script>
-<script src="assets/js/fingerblast.js"></script>
+<script src="{{ page.base_url }}dist/ratchet.js"></script>
+<script src="{{ page.base_url }}assets/js/docs.js"></script>
+<script src="{{ page.base_url }}assets/js/fingerblast.js"></script>
 <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36050008-1']);

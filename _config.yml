@@ -3,4 +3,5 @@ authors: Connor Sears, Dave Gamache, and Jacob Thornton
 description: Prototype iPhone apps with simple HTML, CSS, and JS components.
 url: http://maker.github.io/ratchet
 
-pygments: true
+pygments:  true
+permalink: pretty
