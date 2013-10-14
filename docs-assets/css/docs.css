@@ -40,165 +40,23 @@ h6 {
 }
 
 .docs-inner-wrapper {
-  width: 1000px;
+  width: 1170px;
   margin: 0 auto;
-}
-
-/* Masthead (navigation)
--------------------------------------------------- */
-
-.docs-masthead {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 100;
-  padding: 10px 0;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-.docs-masthead .docs-inner-wrapper {
-  line-height: 40px;
-}
-
-.docs-masthead-title {
-  padding: 0;
-  margin: 0;
-  font-weight: 700;
-  font-size: 21px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
-.docs-navigation {
-  float: right;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-}
-
-.nav-item {
-  position: relative;
-  float: left;
-  margin-right: 30px;
-  list-style: none;
-}
-
-.nav-item:last-child {
-  margin-right: 0;
-}
-
-.nav-item a {
-  position: relative;
-  color: #777;
-  text-decoration: none;
-}
-
-.nav-item a:hover {
-  color: #555;
-}
-
-/* Give the components link a bit more room to fit the caret */
-.nav-item.nav-components {
-  margin-right: 45px;
-}
-
-/* Give the  components link a down caret */
-.nav-components-link:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 0;
-  height: 0;
-  top: 8px;
-  right: -15px;
-  margin-left: -4px;
-  border-right: 4px solid transparent;
-  border-top: 4px solid #777;
-  border-left: 4px solid transparent;
-}
-
-/* The components list dropdown */
-.components-list {
-  position: absolute;
-  display: none;
-  top: 45px;
-  left: -20px;
-  z-index: -1;
-  padding: 10px 0;
-  line-height: 1.1;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.2);
-  border-radius: 3px;
-  box-shadow: 0 0 8px rgba(0,0,0,.05);
-}
-
-.components-list.active {
-  z-index: 100;
-  display: block;
-}
-
-.components-list:before,
-.components-list:after {
-  content: '';
-  position: absolute;
-  left: 30px;
-  width: 0;
-  height: 0;
-}
-
-.components-list:before {
-  top: -11px;
-  margin-left: -11px;
-  border-right: 11px solid transparent;
-  border-bottom: 11px solid rgba(0,0,0,.3);
-  border-left: 11px solid transparent;
-}
-
-.components-list:after {
-  top: -10px;
-  margin-left: -10px;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #fff;
-  border-left: 10px solid transparent;
-}
-
-.components-list li {
-  list-style: none;
-}
-
-.components-list li:last-child {
-  padding-bottom: 0;
-}
-
-.components-list li a {
-  display: block;
-  width: 150px;
-  padding: 10px 20px;
-}
-
-.components-list li a:hover {
-  color: #fff;
-  background-color: #1eb0e9;
 }
 
 /* Jumbo header
 -------------------------------------------------- */
 
 .docs-header {
-  height: 530px;
-  margin-top: 60px;
   background-color: #fafafa;
 }
 
 .docs-header-text {
-  position: relative;
   z-index: 3;
-  top: 140px;
   width: 800px;
   margin: 0 auto;
+  padding-top: 140px;
+  padding-bottom: 150px;
   color: #333;
   text-align: center;
   -webkit-animation: fadeintext 2s;
@@ -206,6 +64,7 @@ h6 {
 }
 
 .docs-header-subtitle {
+  margin-top: 0;
   margin-bottom: 35px;
   font-size: 45px;
   font-weight: 300;
