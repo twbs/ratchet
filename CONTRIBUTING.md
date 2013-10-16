@@ -146,6 +146,8 @@ project:
 If you have any other questions about contributing, please feel free to contact
 us.
 
+**Don't edit files in `dist/`.** You should edit files in `lib/`.
+
 ## Special thanks to @necolas
 
 For writing the original [issue-guidelines](https://github.com/necolas/issue-guidelines/) from which these were adapted.
