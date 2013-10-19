@@ -1,12 +1,12 @@
 //
-// Counts
+// Badges
 // --------------------------------------------------
 
-[class*="count"] {
+[class*="badge"] {
   display: inline-block;
   color: $default-color;
 
-  &.count-filled {
+  &.badge-filled {
     padding: 2px 9px;
     color: #fff;
     font-size: 13px;
@@ -17,32 +17,32 @@
 }
 
 
-// Count modifiers
+// Badge modifiers
 // --------------------------------------------------
 
-// Main count
-.count-primary {
+// Main badge
+.badge-primary {
   color: $primary-color;
 
-  &.count-filled {
+  &.badge-filled {
     background-color: $primary-color;
   }
 }
 
-// Positive count
-.count-positive {
+// Positive badge
+.badge-positive {
   color: $positive-color;
 
-  &.count-filled {
+  &.badge-filled {
     background-color: $positive-color;
   }
 }
 
-// Negative count
-.count-negative {
+// Negative badge
+.badge-negative {
   color: $negative-color;
 
-  &.count-filled {
+  &.badge-filled {
     background-color: $negative-color;
   }
 }
@@ -52,21 +52,21 @@
 // --------------------------------------------------
 
 // Generic styles for all counts within default buttons
-[class*="button"] [class*="count"] {
+[class*="button"] [class*="badge"] {
   font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
   margin: -2px -4px -2px 4px;
 }
 // Styles for filled counts within filled buttons
-.button-filled .count-filled,
-[class*="button"]:active .count-filled {
+.button-filled .badge-filled,
+[class*="button"]:active .badge-filled {
   background-color: rgba(0,0,0,.2);
 }
 // Position counts within block level buttons
-// Note: These are absolutely positioned so that text of button isn't "pushed" by count and always
+// Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
 // stays at true center of button
-.button-block [class*="count"] {
+.button-block [class*="badge"] {
   position: absolute;
   right: 0;
   margin-right: 10px;

@@ -1,12 +1,12 @@
 /*
-* =====================================================
-* Ratchet v2.0.0
-* Copyright 2013 Connor Sears, Dave Gamache, and Jacob Thornton
-* Licensed under http://www.opensource.org/licenses/MIT
-*
-* Designed and built by @connors, @dhg, and @fat.
-* =====================================================
-*/
+ * =====================================================
+ * Ratchet v2.0.0
+ * Copyright 2013 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Licensed under http://www.opensource.org/licenses/MIT
+ *
+ * Designed and built by @connors, @dhg, and @fat.
+ * =====================================================
+ */
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 article,
@@ -788,11 +788,11 @@ input[type="button"] {
   transform: rotate(-45deg);
 }
 
-[class*="count"] {
+[class*="badge"] {
   display: inline-block;
   color: #929292;
 }
-[class*="count"].count-filled {
+[class*="badge"].badge-filled {
   padding: 2px 9px;
   color: #fff;
   font-size: 13px;
@@ -801,40 +801,40 @@ input[type="button"] {
   border-radius: 100px;
 }
 
-.count-primary {
+.badge-primary {
   color: #007aff;
 }
-.count-primary.count-filled {
+.badge-primary.badge-filled {
   background-color: #007aff;
 }
 
-.count-positive {
+.badge-positive {
   color: #4cd964;
 }
-.count-positive.count-filled {
+.badge-positive.badge-filled {
   background-color: #4cd964;
 }
 
-.count-negative {
+.badge-negative {
   color: #dd524d;
 }
-.count-negative.count-filled {
+.badge-negative.badge-filled {
   background-color: #dd524d;
 }
 
-[class*="button"] [class*="count"] {
+[class*="button"] [class*="badge"] {
   font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
   margin: -2px -4px -2px 4px;
 }
 
-.button-filled .count-filled,
-[class*="button"]:active .count-filled {
+.button-filled .badge-filled,
+[class*="button"]:active .badge-filled {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.button-block [class*="count"] {
+.button-block [class*="badge"] {
   position: absolute;
   right: 0;
   margin-right: 10px;
