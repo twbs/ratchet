@@ -400,11 +400,10 @@ strong {
 }
 .table-view li {
   position: relative;
-  padding: 11px 60px 12px 0;
-  margin-left: 15px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e6e6e6' x='0' y='0' width='1' height='0.5'/></svg>");
-  background-repeat: repeat-x;
-  background-position: bottom;
+  padding: 11px 60px 12px 15px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='1'><rect fill='#e6e6e6' x='0' y='0' width='320' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
 }
 .table-view li:last-child {
   background-image: none;
@@ -413,8 +412,11 @@ strong {
   position: relative;
   display: block;
   padding: inherit;
-  margin: -11px -60px -12px 0;
+  margin: -11px -60px -12px -15px;
   color: inherit;
+}
+.table-view li > a:not([class*="button"]):active {
+  background-color: #eee;
 }
 .table-view li p {
   margin: 0;
@@ -439,7 +441,7 @@ strong {
   color: #999;
   font-weight: 500;
   background-color: #fafafa;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e6e6e6' x='0' y='0' width='1' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e6e6e6' x='0' y='0' width='1' height='0.5'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='1'><rect fill='#e6e6e6' x='0' y='0' width='320' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='1'><rect fill='#e6e6e6' x='0' y='0' width='320' height='0.5'/></svg>");
   background-position: top, bottom;
 }
 .table-view .table-view-divider:first-child {

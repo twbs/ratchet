@@ -11,11 +11,10 @@
   // Pad each table view item and add dividers
   li {
     position: relative;
-    padding: 11px 60px 12px 0; // Given extra right padding to accomodate badges, chevrons or buttons. Extra 1px bottom padding given for hairline divider.
-    margin-left: 15px;
+    padding: 11px 60px 12px 15px; // Given extra right padding to accomodate badges, chevrons or buttons. Extra 1px bottom padding given for hairline divider.
     background-image: $hairline;
-    background-repeat: repeat-x;
-    background-position: bottom;
+    background-position: 15px 100%;
+    background-repeat: no-repeat;
 
 
     // Remove the border from the last table view item
@@ -28,8 +27,12 @@
       position: relative;
       display: block;
       padding: inherit;
-      margin: -11px -60px -12px 0;
+      margin: -11px -60px -12px -15px; // Make the entire list item tappable.
       color: inherit;
+
+      &:active {
+        background-color: #eee;
+      }
     }
 
     p {

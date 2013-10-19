@@ -58,11 +58,13 @@
   padding-bottom: 2px;
   margin: -2px -4px -2px 4px;
 }
+
 // Styles for filled badges within filled buttons
 .button-filled .badge-filled,
 [class*="button"]:active .badge-filled {
   background-color: rgba(0,0,0,.2);
 }
+
 // Position badges within block level buttons
 // Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
 // stays at true center of button
