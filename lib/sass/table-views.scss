@@ -22,7 +22,7 @@
       background-image: none;
     }
 
-    // If a it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
+    // If it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
     > a:not([class*="button"]) {
       position: relative;
       display: block;
