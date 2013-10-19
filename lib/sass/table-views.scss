@@ -121,16 +121,18 @@
 // --------------------------------------------------
 
 .table-view-indented .table-view-cell {
-  padding-left: 60px;
-  background-position-x: 60px; // Make room for your left aligned media/icons.
+  padding-left: 59px;
+  background-position-x: 59px; // Make room for your left aligned media/icons.
 
   > a:not([class*="button"]) {
-    margin-left: -60px;
+    margin-left: -59px;
   }
 
   > .pull-left,
   > a:not([class*="button"]) .pull-left {
-    margin-right: 15px;
+    position: absolute;
+    left: 15px;
+    z-index: 1;
   }
 }
 

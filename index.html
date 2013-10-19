@@ -331,19 +331,19 @@ layout: default
 
       <div class="component-example component-example-fullbleed">
         <ul class="table-view">
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li class="table-view-divider">Divider</li>
-          <li>Item 3</li>
+          <li class="table-view-cell">Item 1</li>
+          <li class="table-view-cell">Item 2</li>
+          <li class="table-view-cell table-view-divider">Divider</li>
+          <li class="table-view-cell">Item 3</li>
         </ul>
       </div>
 
 {% highlight html %}
 <ul class="table-view">
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li class="table-view-divider">Divider</li>
-  <li>Item 3</li>
+  <li class="table-view-cell">Item 1</li>
+  <li class="table-view-cell">Item 2</li>
+  <li class="table-view-cell table-view-divider">Divider</li>
+  <li class="table-view-cell">Item 3</li>
 </ul>
 {% endhighlight %}
 
@@ -354,21 +354,24 @@ layout: default
       <p class="component-description">Chevrons are created with CSS3, so no image assets are needed. They should be used to indicate that the item is linked.</p>
 
       <div class="component-example component-example-fullbleed">
-        <ul class="table-view">
-          <li>
+        <ul class="table-view table-view-indented">
+          <li class="table-view-cell">
             <a>
+              <span class="icon icon-share pull-left"></span>
               Item 1
               <span class="chevron"></span>
             </a>
           </li>
-          <li>
+          <li class="table-view-cell">
             <a>
+              <span class="icon icon-share pull-left"></span>
               Item 2
               <span class="chevron"></span>
             </a>
           </li>
-          <li>
+          <li class="table-view-cell">
             <a>
+              <span class="icon icon-share pull-left"></span>
               Item 3
               <span class="chevron"></span>
             </a>
@@ -378,19 +381,19 @@ layout: default
 
 {% highlight html %}
  <ul class="table-view">
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 1
       <span class="chevron"></span>
     </a>
   </li>
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 2
       <span class="chevron"></span>
     </a>
   </li>
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 3
       <span class="chevron"></span>
@@ -406,17 +409,17 @@ layout: default
 
       <div class="component-example component-example-fullbleed">
         <ul class="table-view">
-          <li>Item 1 <span class="badge">4</span></li>
-          <li>Item 2 <span class="badge">1</span></li>
-          <li>Item 3 <span class="badge">5</span></li>
+          <li class="table-view-cell">Item 1 <span class="badge">4</span></li>
+          <li class="table-view-cell">Item 2 <span class="badge">1</span></li>
+          <li class="table-view-cell">Item 3 <span class="badge">5</span></li>
         </ul>
       </div>
 
 {% highlight html %}
 <ul class="table-view">
-  <li>Item 1 <span class="badge">4</span></li>
-  <li>Item 2 <span class="badge">1</span></li>
-  <li>Item 3 <span class="badge">5</span></li>
+  <li class="table-view-cell">Item 1 <span class="badge">4</span></li>
+  <li class="table-view-cell">Item 2 <span class="badge">1</span></li>
+  <li class="table-view-cell">Item 3 <span class="badge">5</span></li>
 </ul>
 {% endhighlight %}
 
@@ -427,21 +430,21 @@ layout: default
 
       <div class="component-example component-example-fullbleed">
         <ul class="table-view">
-          <li>
+          <li class="table-view-cell">
             <a>
               Item 1
               <span class="chevron"></span>
               <span class="badge">4</span>
             </a>
           </li>
-          <li>
+          <li class="table-view-cell">
             <a>
               Item 2
               <span class="chevron"></span>
               <span class="badge">1</span>
             </a>
           </li>
-          <li>
+          <li class="table-view-cell">
             <a>
               Item 3
               <span class="chevron"></span>
@@ -453,21 +456,21 @@ layout: default
 
 {% highlight html %}
 <ul class="table-view">
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 1
       <span class="chevron"></span>
       <span class="badge">4</span>
     </a>
   </li>
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 2
       <span class="chevron"></span>
       <span class="badge">1</span>
     </a>
   </li>
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 3
       <span class="chevron"></span>
@@ -484,19 +487,19 @@ layout: default
 
       <div class="component-example component-example-fullbleed">
         <ul class="table-view">
-          <li>Item 1 <a class="button">Button</a></li>
-          <li>Item 2 <a class="button-primary">Button</a></li>
-          <li>Item 3 <a class="button-positive">Button</a></li>
-          <li>Item 4 <a class="button-negative">Button</a></li>
+          <li class="table-view-cell">Item 1 <a class="button">Button</a></li>
+          <li class="table-view-cell">Item 2 <a class="button-primary">Button</a></li>
+          <li class="table-view-cell">Item 3 <a class="button-positive">Button</a></li>
+          <li class="table-view-cell">Item 4 <a class="button-negative">Button</a></li>
         </ul>
       </div>
 
 {% highlight html %}
 <ul class="table-view">
-  <li>Item 1 <a class="button">Button</a></li>
-  <li>Item 2 <a class="button-primary">Button</a></li>
-  <li>Item 3 <a class="button-positive">Button</a></li>
-  <li>Item 4 <a class="button-negative">Button</a></li>
+  <li class="table-view-cell">Item 1 <a class="button">Button</a></li>
+  <li class="table-view-cell">Item 2 <a class="button-primary">Button</a></li>
+  <li class="table-view-cell">Item 3 <a class="button-positive">Button</a></li>
+  <li class="table-view-cell">Item 4 <a class="button-negative">Button</a></li>
 </ul>
 {% endhighlight %}
 
@@ -507,19 +510,19 @@ layout: default
 
       <div class="component-example component-example-fullbleed">
         <ul class="table-view">
-          <li>
+          <li class="table-view-cell">
             Item 1
             <div class="toggle">
               <div class="toggle-handle"></div>
             </div>
           </li>
-          <li>
+          <li class="table-view-cell">
             Item 2
             <div class="toggle active">
               <div class="toggle-handle"></div>
             </div>
           </li>
-          <li>
+          <li class="table-view-cell">
             Item 3
             <div class="toggle">
               <div class="toggle-handle"></div>
@@ -530,19 +533,19 @@ layout: default
 
 {% highlight html %}
 <ul class="table-view">
-  <li>
+  <li class="table-view-cell">
     Item 1
     <div class="toggle">
       <div class="toggle-handle"></div>
     </div>
   </li>
-  <li>
+  <li class="table-view-cell">
     Item 2
     <div class="toggle active">
       <div class="toggle-handle"></div>
     </div>
   </li>
-  <li>
+  <li class="table-view-cell">
     Item 3
     <div class="toggle">
       <div class="toggle-handle"></div>
@@ -558,21 +561,21 @@ layout: default
 
       <div class="component-example">
         <ul class="table-view inset">
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li class="table-view-divider">Divider</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
+          <li class="table-view-cell">Item 1</li>
+          <li class="table-view-cell">Item 2</li>
+          <li class="table-view-cell table-view-divider">Divider</li>
+          <li class="table-view-cell">Item 3</li>
+          <li class="table-view-cell">Item 4</li>
         </ul>
       </div>
 
 {% highlight html %}
 <ul class="table-view inset">
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li class="table-view-divider">Divider</li>
-  <li>Item 3</li>
-  <li>Item 4</li>
+  <li class="table-view-cell">Item 1</li>
+  <li class="table-view-cell">Item 2</li>
+  <li class="table-view-cell table-view-divider">Divider</li>
+  <li class="table-view-cell">Item 3</li>
+  <li class="table-view-cell">Item 4</li>
 </ul>
 {% endhighlight %}
 
@@ -670,13 +673,13 @@ layout: default
           </li>
         </ul>
         <ul class="inset table-view">
-          <li id="item1mobile" class="segmented-controller-item selected">
+          <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
             Item 1
           </li>
-          <li id="item2mobile" class="segmented-controller-item">
+          <li id="item2mobile" class="table-view-cell segmented-controller-item">
             Item 2
           </li>
-          <li id="item3mobile" class="segmented-controller-item">
+          <li id="item3mobile" class="table-view-cell segmented-controller-item">
             Item 3
           </li>
         </ul>
@@ -695,13 +698,13 @@ layout: default
   </li>
 </ul>
 <ul class="inset table-view">
-  <li id="item1mobile" class="segmented-controller-item selected">
+  <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
     Item 1
   </li>
-  <li id="item2mobile" class="segmented-controller-item">
+  <li id="item2mobile" class="table-view-cell segmented-controller-item">
     Item 2
   </li>
-  <li id="item3mobile" class="segmented-controller-item">
+  <li id="item3mobile" class="table-view-cell segmented-controller-item">
     Item 3
   </li>
 </ul>
@@ -877,14 +880,14 @@ document
             </a>
           </header>
           <ul class="table-view">
-            <li>Item1</li>
-            <li>Item2</li>
-            <li>Item3</li>
-            <li>Item4</li>
-            <li>Item5</li>
-            <li>Item6</li>
-            <li>Item7</li>
-            <li>Item8</li>
+            <li class="table-view-cell">Item1</li>
+            <li class="table-view-cell">Item2</li>
+            <li class="table-view-cell">Item3</li>
+            <li class="table-view-cell">Item4</li>
+            <li class="table-view-cell">Item5</li>
+            <li class="table-view-cell">Item6</li>
+            <li class="table-view-cell">Item7</li>
+            <li class="table-view-cell">Item8</li>
           </ul>
         </div>
       </div>
@@ -901,14 +904,14 @@ document
     </a>
   </header>
   <ul class="table-view">
-    <li>Item1</li>
-    <li>Item2</li>
-    <li>Item3</li>
-    <li>Item4</li>
-    <li>Item5</li>
-    <li>Item6</li>
-    <li>Item7</li>
-    <li>Item8</li>
+    <li class="table-view-cell">Item1</li>
+    <li class="table-view-cell">Item2</li>
+    <li class="table-view-cell">Item3</li>
+    <li class="table-view-cell">Item4</li>
+    <li class="table-view-cell">Item5</li>
+    <li class="table-view-cell">Item6</li>
+    <li class="table-view-cell">Item7</li>
+    <li class="table-view-cell">Item8</li>
   </ul>
 </div>
 {% endhighlight %}
@@ -1042,7 +1045,7 @@ document
         </header>
         <div class="content">
           <ul class="table-view">
-            <li>
+            <li class="table-view-cell">
               <a href="two.html" data-transition="slide-in">
                 Load new page with push
               </a>
@@ -1058,7 +1061,7 @@ document
 </header>
 <div class="content">
   <ul class="table-view">
-    <li>
+    <li class="table-view-cell">
       <a href="two.html" data-transition="slide-in">
         Load new page with push
       </a>

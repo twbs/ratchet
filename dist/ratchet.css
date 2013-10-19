@@ -483,15 +483,17 @@ strong {
 }
 
 .table-view-indented .table-view-cell {
-  padding-left: 60px;
-  background-position-x: 60px;
+  padding-left: 59px;
+  background-position-x: 59px;
 }
 .table-view-indented .table-view-cell > a:not([class*="button"]) {
-  margin-left: -60px;
+  margin-left: -59px;
 }
 .table-view-indented .table-view-cell > .pull-left,
 .table-view-indented .table-view-cell > a:not([class*="button"]) .pull-left {
-  margin-right: 15px;
+  position: absolute;
+  left: 15px;
+  z-index: 1;
 }
 
 .popover .table-view {
