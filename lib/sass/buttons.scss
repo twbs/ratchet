@@ -80,9 +80,9 @@
 // Block level buttons (full width buttons)
 .button-block {
   display: block;
-  padding: 12px 0;
+  padding: 15px 0;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 // Buttons in nav bars
@@ -194,10 +194,11 @@
 // Block buttons in all bars
 // --------------------------------------------------
 
-// Add proper padding and replace buttons normal dropshadow with a shine from bar
+// Add proper padding
 [class*="bar"] .button-block {
   padding: 7px 0;
   margin-top: 1px;
+  font-size: 16px; // Scale down font size to fit in bar.
 }
 
 // Button overrides

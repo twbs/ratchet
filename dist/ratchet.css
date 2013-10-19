@@ -656,9 +656,9 @@ select {
 
 .button-block {
   display: block;
-  padding: 12px 0;
+  padding: 15px 0;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .bar-nav [class*="button"] {
@@ -747,6 +747,7 @@ select {
 [class*="bar"] .button-block {
   padding: 7px 0;
   margin-top: 1px;
+  font-size: 16px;
 }
 
 input[type="submit"],
