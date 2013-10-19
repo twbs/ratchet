@@ -12,9 +12,7 @@
   li {
     position: relative;
     padding: 11px 60px 12px 15px; // Given extra right padding to accomodate badges, chevrons or buttons. Extra 1px bottom padding given for hairline divider.
-    background-image: $hairline;
-    background-position: 15px 100%;
-    background-repeat: no-repeat;
+    @include hairline(#c8c7cc, 320px, 15px, single);
 
 
     // Remove the border from the last table view item
@@ -51,8 +49,7 @@
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 6px;
 
-    // Remove border from first/last standard list items to avoid double border at top/bottom of table views
-    li:first-child,
+    // Remove border from last standard list items to avoid double border at top/bottom of table views
     li:last-child {
       background-image: none;
     }
@@ -71,8 +68,7 @@
     color: #999;
     font-weight: $font-weight;
     background-color: #fafafa;
-    background-image: $hairline, $hairline;
-    background-position: top, bottom;
+    @include hairline(#c8c7cc, 320px, 0, double);
 
     // Rounding first divider on inset lists and remove border on the top
     &:first-child {
