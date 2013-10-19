@@ -9,7 +9,7 @@
   background-color: #fff;
 
   // Pad each table view item and add dividers
-  li {
+  .table-view-cell {
     position: relative;
     padding: 11px 60px 12px 15px; // Given extra right padding to accomodate badges, chevrons or buttons. Extra 1px bottom padding given for hairline divider.
     @include hairline(single, #c8c7cc, 320px, 15px); // Single grey border with a width of 320px and 15px offset.
@@ -114,6 +114,23 @@
 
   .toggle {
     margin-top: -15px; // Half height of toggle
+  }
+}
+
+// Indented table views
+// --------------------------------------------------
+
+.table-view-indented .table-view-cell {
+  padding-left: 60px;
+  background-position-x: 60px; // Make room for your left aligned media/icons.
+
+  > a:not([class*="button"]) {
+    margin-left: -60px;
+  }
+
+  > .pull-left,
+  > a:not([class*="button"]) .pull-left {
+    margin-right: 15px;
   }
 }
 

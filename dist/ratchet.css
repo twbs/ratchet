@@ -278,6 +278,14 @@ strong {
   padding-top: 88px;
 }
 
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
 [class*="bar-"] {
   position: fixed;
   right: 0;
@@ -398,27 +406,27 @@ strong {
   list-style: none;
   background-color: #fff;
 }
-.table-view li {
+.table-view .table-view-cell {
   position: relative;
   padding: 11px 60px 12px 15px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320px' height='1'><rect fill='#c8c7cc' x='0' y='0' width='320px' height='0.5'/></svg>");
   background-position: 15px 100%;
   background-repeat: no-repeat;
 }
-.table-view li:last-child {
+.table-view .table-view-cell:last-child {
   background-image: none;
 }
-.table-view li > a:not([class*="button"]) {
+.table-view .table-view-cell > a:not([class*="button"]) {
   position: relative;
   display: block;
   padding: inherit;
   margin: -11px -60px -12px -15px;
   color: inherit;
 }
-.table-view li > a:not([class*="button"]):active {
+.table-view .table-view-cell > a:not([class*="button"]):active {
   background-color: #eee;
 }
-.table-view li p {
+.table-view .table-view-cell p {
   margin: 0;
 }
 .table-view.inset {
@@ -472,6 +480,18 @@ strong {
 }
 .table-view .toggle {
   margin-top: -15px;
+}
+
+.table-view-indented .table-view-cell {
+  padding-left: 60px;
+  background-position-x: 60px;
+}
+.table-view-indented .table-view-cell > a:not([class*="button"]) {
+  margin-left: -60px;
+}
+.table-view-indented .table-view-cell > .pull-left,
+.table-view-indented .table-view-cell > a:not([class*="button"]) .pull-left {
+  margin-right: 15px;
 }
 
 .popover .table-view {
