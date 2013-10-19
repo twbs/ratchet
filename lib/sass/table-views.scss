@@ -11,13 +11,16 @@
   // Pad each table view item and add dividers
   li {
     position: relative;
-    padding: 11px 60px 11px 0; // Given extra right padding to accomodate counts, chevrons or buttons
+    padding: 11px 60px 12px 0; // Given extra right padding to accomodate badges, chevrons or buttons. Extra 1px bottom padding given for hairline divider.
     margin-left: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    background-image: $hairline;
+    background-repeat: repeat-x;
+    background-position: bottom;
+
 
     // Remove the border from the last table view item
     &:last-child {
-      border-bottom: 0;
+      background-image: none;
     }
 
     // If a it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
@@ -25,7 +28,7 @@
       position: relative;
       display: block;
       padding: inherit;
-      margin: -11px -60px -11px 0;
+      margin: -11px -60px -12px 0;
       color: inherit;
     }
 
@@ -46,11 +49,9 @@
     border-radius: 6px;
 
     // Remove border from first/last standard list items to avoid double border at top/bottom of table views
-    li:first-child {
-      border-top-width: 0;
-    }
+    li:first-child,
     li:last-child {
-      border-bottom-width: 0;
+      background-image: none;
     }
   }
 
@@ -59,22 +60,20 @@
   // --------------------------------------------------
 
   .table-view-divider {
-    position: relative;
-    top: -1px;
     padding-top: 6px;
     padding-bottom: 6px;
-    padding-left: 15px; 
+    padding-left: 15px;
+    margin-top: -1px; // Hides the border of the previous list item  
     margin-left: 0;
+    color: #999;
     font-weight: $font-weight;
-    background-color: #f8f8f8;
-    border-top: 1px solid rgba(0, 0, 0, .1);
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    opacity: .4;
+    background-color: #fafafa;
+    background-image: $hairline, $hairline;
+    background-position: top, bottom;
 
     // Rounding first divider on inset lists and remove border on the top
     &:first-child {
       top: 0;
-      border-top-width: 0;
       border-radius: 6px 6px 0 0;
     }
 
@@ -90,21 +89,21 @@
 
   .chevron,
   [class*="button"],
-  [class*="count"],
+  [class*="badge"],
   .toggle {
     position: absolute;
     top: 50%;
     right: 10px;
   }
 
-  // Position chevrons/counts vertically centered on the right in table view items
+  // Position chevrons/badges vertically centered on the right in table view items
   .chevron,
-  [class*="count"] {
+  [class*="badge"] {
     margin-top: -10px; // Half height of chevron
   }
 
-  // Push count over if there's a sibling chevron
-  .chevron + [class*="count"] {
+  // Push badge over if there's a sibling chevron
+  .chevron + [class*="badge"] {
     right: 30px;
   }
 

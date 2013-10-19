@@ -400,18 +400,20 @@ strong {
 }
 .table-view li {
   position: relative;
-  padding: 11px 60px 11px 0;
+  padding: 11px 60px 12px 0;
   margin-left: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e6e6e6' x='0' y='0' width='1' height='0.5'/></svg>");
+  background-repeat: repeat-x;
+  background-position: bottom;
 }
 .table-view li:last-child {
-  border-bottom: 0;
+  background-image: none;
 }
 .table-view li > a:not([class*="button"]) {
   position: relative;
   display: block;
   padding: inherit;
-  margin: -11px -60px -11px 0;
+  margin: -11px -60px -12px 0;
   color: inherit;
 }
 .table-view li p {
@@ -424,28 +426,24 @@ strong {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 6px;
 }
-.table-view.inset li:first-child {
-  border-top-width: 0;
-}
+.table-view.inset li:first-child,
 .table-view.inset li:last-child {
-  border-bottom-width: 0;
+  background-image: none;
 }
 .table-view .table-view-divider {
-  position: relative;
-  top: -1px;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 15px;
+  margin-top: -1px;
   margin-left: 0;
+  color: #999;
   font-weight: 500;
-  background-color: #f8f8f8;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  opacity: .4;
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e6e6e6' x='0' y='0' width='1' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e6e6e6' x='0' y='0' width='1' height='0.5'/></svg>");
+  background-position: top, bottom;
 }
 .table-view .table-view-divider:first-child {
   top: 0;
-  border-top-width: 0;
   border-radius: 6px 6px 0 0;
 }
 .table-view .table-view-divider:last-child {
@@ -453,17 +451,17 @@ strong {
 }
 .table-view .chevron,
 .table-view [class*="button"],
-.table-view [class*="count"],
+.table-view [class*="badge"],
 .table-view .toggle {
   position: absolute;
   top: 50%;
   right: 10px;
 }
 .table-view .chevron,
-.table-view [class*="count"] {
+.table-view [class*="badge"] {
   margin-top: -10px;
 }
-.table-view .chevron + [class*="count"] {
+.table-view .chevron + [class*="badge"] {
   right: 30px;
 }
 .table-view [class*="button"] {
