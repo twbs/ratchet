@@ -466,7 +466,7 @@ strong {
 }
 .table-view [class*="button"] {
   left: auto;
-  margin-top: -14px;
+  margin-top: -12px;
 }
 .table-view .toggle {
   margin-top: -15px;
@@ -603,9 +603,9 @@ select {
 [class*="button"] {
   position: relative;
   display: inline-block;
-  padding: 5px 10px 7px;
+  padding: 5px 8px;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1;
   color: #929292;
