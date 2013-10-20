@@ -1002,6 +1002,12 @@ input[type="button"] {
   color: #fff;
   border-radius: 3px;
   z-index: 10;
+  -webkit-transition: opacity;
+  transition: opacity;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 .alert .close {
   position: relative;
@@ -1017,6 +1023,9 @@ input[type="button"] {
 }
 .alert .close:active {
   opacity: .6;
+}
+.alert.dismiss {
+  opacity: 0;
 }
 
 .alert-positive {

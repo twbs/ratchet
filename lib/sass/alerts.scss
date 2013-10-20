@@ -11,6 +11,9 @@
   color: #fff;
   border-radius: 3px;
   z-index: 10;
+  @include transition(opacity);
+  @include transition-duration(.5s);
+  @include transition-timing-function(linear);
 
   .close {
     position: relative;
@@ -24,6 +27,10 @@
     &:active {
       opacity: .6;
     }
+  }
+
+  &.dismiss {
+    opacity: 0;
   }
 }
 
