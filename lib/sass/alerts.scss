@@ -12,13 +12,14 @@
   border-radius: 3px;
   z-index: 10;
   @include transition(opacity);
-  @include transition-duration(.5s);
+  @include transition-duration(.2s);
   @include transition-timing-function(linear);
 
   .close {
     position: relative;
     top: -2px;
     float: right;
+    color: inherit;
     cursor: pointer;
     @include transition(opacity);
     @include transition-duration(.2s);

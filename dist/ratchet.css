@@ -1004,8 +1004,8 @@ input[type="button"] {
   z-index: 10;
   -webkit-transition: opacity;
   transition: opacity;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
@@ -1013,6 +1013,7 @@ input[type="button"] {
   position: relative;
   top: -2px;
   float: right;
+  color: inherit;
   cursor: pointer;
   -webkit-transition: opacity;
   transition: opacity;
