@@ -15,8 +15,15 @@
   .close {
     position: relative;
     top: -2px;
-    right: -21px;
-    color: inherit;
+    float: right;
+    cursor: pointer;
+    @include transition(opacity);
+    @include transition-duration(.2s);
+    @include transition-timing-function(linear);
+
+    &:active {
+      opacity: .6;
+    }
   }
 }
 
@@ -32,6 +39,10 @@
 
 // Inline alert
 .alert-inline {
-  position: static;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
   margin: 15px;
 }

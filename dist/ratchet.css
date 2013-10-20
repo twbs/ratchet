@@ -1003,6 +1003,21 @@ input[type="button"] {
   border-radius: 3px;
   z-index: 10;
 }
+.alert .close {
+  position: relative;
+  top: -2px;
+  float: right;
+  cursor: pointer;
+  -webkit-transition: opacity;
+  transition: opacity;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+.alert .close:active {
+  opacity: .6;
+}
 
 .alert-positive {
   background-color: rgba(76, 217, 100, 0.97);
@@ -1013,7 +1028,11 @@ input[type="button"] {
 }
 
 .alert-inline {
-  position: static;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
   margin: 15px;
 }
 
