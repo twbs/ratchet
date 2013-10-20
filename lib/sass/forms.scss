@@ -90,7 +90,7 @@ select {
   border: 0;
   border-radius: 0;
   @include box-shadow(none);
-  @include hairline(single, #c8c7cc, 320px, 15px);
+  @include hairline(single, #c8c7cc, 15px);
 }
 
 // Remove bottom border on last input to avoid double bottom border
@@ -105,7 +105,7 @@ select {
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
   overflow: hidden;
-  @include hairline(single, #c8c7cc, 320px, 15px);
+  @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
 }
 
 // Remove bottom border on last input-row to avoid double bottom border

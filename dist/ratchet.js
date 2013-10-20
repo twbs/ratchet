@@ -30,11 +30,12 @@
   window.addEventListener('touchend', function (event) {
     var modal = getModal(event);
     if (modal) {
-      modal.classList.toggle('active');
+      if (modal && modal.classList.contains('modal')) modal.classList.toggle('active');
       event.preventDefault(); // prevents rewriting url (apps can still use hash values in url)
     }
   });
 }();
+
 /* ----------------------------------
  * POPOVER v1.0.0
  * Licensed under The MIT License
