@@ -11,6 +11,13 @@
   color: #fff;
   border-radius: 3px;
   z-index: 10;
+
+  .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+  }
 }
 
 // Positive alert (Default color is green)
