@@ -537,6 +537,7 @@ input[type="color"],
   height: 40px;
   padding: 10px 15px;
   margin-bottom: 10px;
+  line-height: 21px;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
@@ -584,31 +585,35 @@ select {
   margin-bottom: 0;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320px' height='1'><rect fill='#c8c7cc' x='0' y='0' width='320px' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
 }
 
 .input-group input:last-child {
-  border-bottom-width: 0;
+  background-image: none;
 }
 
 .input-row {
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320px' height='1'><rect fill='#c8c7cc' x='0' y='0' width='320px' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
 }
 
 .input-row:last-child {
-  border-bottom-width: 0;
+  background-image: none;
 }
 
 .input-row label {
   float: left;
   width: 35%;
-  padding: 11px 10px 9px 15px;
+  padding: 10px 15px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 500;
+  line-height: 1.1;
 }
 
 .input-row label + input {
@@ -616,7 +621,7 @@ select {
   width: 65%;
   padding-left: 0;
   margin-bottom: 0;
-  border-bottom: 0;
+  background-image: none;
 }
 
 [class*="bar-"] input[type=search] {
