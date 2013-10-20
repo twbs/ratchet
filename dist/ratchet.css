@@ -409,7 +409,7 @@ strong {
 .table-view .table-view-cell {
   position: relative;
   padding: 11px 60px 12px 15px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='2000' height='0.5'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='1000' height='0.5'/></svg>");
   background-position: 15px 100%;
   background-repeat: no-repeat;
 }
@@ -448,7 +448,7 @@ strong {
   color: #999;
   font-weight: 500;
   background-color: #fafafa;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='2000' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='2000' height='0.5'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='1000' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='1000' height='0.5'/></svg>");
   background-position: 0 100%, 0 0%;
   background-repeat: no-repeat;
 }
@@ -588,7 +588,7 @@ select {
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='2000' height='0.5'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='1000' height='0.5'/></svg>");
   background-position: 15px 100%;
   background-repeat: no-repeat;
 }
@@ -599,7 +599,7 @@ select {
 
 .input-row {
   overflow: hidden;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='2000' height='0.5'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1'><rect fill='#c8c7cc' x='0' y='0' width='1000' height='0.5'/></svg>");
   background-position: 15px 100%;
   background-repeat: no-repeat;
 }
