@@ -36,9 +36,15 @@ $bar-side-spacing: 10px;
 // --------------------------------------------------
 $button-directional-padding: 20px;
 $button-directional-margin: -($bar-side-spacing/2);
-$button-font-size: 14px;
+$button-font-size: 12px;
 
 
 // Transitions
 // --------------------------------------------------
 $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
+
+// Misc
+// --------------------------------------------------
+
+// Hairline dividers (.5px tall for retina devices.)
+$hairline: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='1'><rect fill='#e6e6e6' x='0' y='0' width='320' height='0.5'/></svg>"); // Thanks to @madrobby

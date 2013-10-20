@@ -278,6 +278,14 @@ strong {
   padding-top: 88px;
 }
 
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
 [class*="bar-"] {
   position: fixed;
   right: 0;
@@ -398,23 +406,27 @@ strong {
   list-style: none;
   background-color: #fff;
 }
-.table-view li {
+.table-view .table-view-cell {
   position: relative;
-  padding: 11px 60px 11px 0;
-  margin-left: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 11px 60px 12px 15px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320px' height='1'><rect fill='#c8c7cc' x='0' y='0' width='320px' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
 }
-.table-view li:last-child {
-  border-bottom: 0;
+.table-view .table-view-cell:last-child {
+  background-image: none;
 }
-.table-view li > a:not([class*="button"]) {
+.table-view .table-view-cell > a:not([class*="button"]) {
   position: relative;
   display: block;
   padding: inherit;
-  margin: -11px -60px -11px 0;
+  margin: -11px -60px -12px -15px;
   color: inherit;
 }
-.table-view li p {
+.table-view .table-view-cell > a:not([class*="button"]):active {
+  background-color: #eee;
+}
+.table-view .table-view-cell p {
   margin: 0;
 }
 .table-view.inset {
@@ -424,28 +436,24 @@ strong {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 6px;
 }
-.table-view.inset li:first-child {
-  border-top-width: 0;
-}
 .table-view.inset li:last-child {
-  border-bottom-width: 0;
+  background-image: none;
 }
 .table-view .table-view-divider {
-  position: relative;
-  top: -1px;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 15px;
+  margin-top: -1px;
   margin-left: 0;
+  color: #999;
   font-weight: 500;
-  background-color: #f8f8f8;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  opacity: .4;
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320px' height='1'><rect fill='#c8c7cc' x='0' y='0' width='320px' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320px' height='1'><rect fill='#c8c7cc' x='0' y='0' width='320px' height='0.5'/></svg>");
+  background-position: 0 100%, 0 0%;
+  background-repeat: no-repeat;
 }
 .table-view .table-view-divider:first-child {
   top: 0;
-  border-top-width: 0;
   border-radius: 6px 6px 0 0;
 }
 .table-view .table-view-divider:last-child {
@@ -453,25 +461,39 @@ strong {
 }
 .table-view .chevron,
 .table-view [class*="button"],
-.table-view [class*="count"],
+.table-view [class*="badge"],
 .table-view .toggle {
   position: absolute;
   top: 50%;
   right: 10px;
 }
 .table-view .chevron,
-.table-view [class*="count"] {
+.table-view [class*="badge"] {
   margin-top: -10px;
 }
-.table-view .chevron + [class*="count"] {
+.table-view .chevron + [class*="badge"] {
   right: 30px;
 }
 .table-view [class*="button"] {
   left: auto;
-  margin-top: -14px;
+  margin-top: -12px;
 }
 .table-view .toggle {
   margin-top: -15px;
+}
+
+.table-view-indented .table-view-cell {
+  padding-left: 59px;
+  background-position-x: 59px;
+}
+.table-view-indented .table-view-cell > a:not([class*="button"]) {
+  margin-left: -59px;
+}
+.table-view-indented .table-view-cell > .pull-left,
+.table-view-indented .table-view-cell > a:not([class*="button"]) .pull-left {
+  position: absolute;
+  left: 15px;
+  z-index: 1;
 }
 
 .popover .table-view {
@@ -605,11 +627,11 @@ select {
 [class*="button"] {
   position: relative;
   display: inline-block;
-  padding: 5px 10px 7px;
+  padding: 5px 8px;
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.15;
   color: #929292;
   text-align: center;
   vertical-align: top;
@@ -656,11 +678,23 @@ select {
   background-color: #dd524d;
 }
 
+.button-link {
+  color: #007aff;
+  border: none;
+}
+.button-link:active, .button-link.active {
+  color: #007aff;
+  opacity: .3;
+}
+.button-link.button-filled {
+  background-color: transparent;
+}
+
 .button-block {
   display: block;
-  padding: 12px 0;
+  padding: 15px 0;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .bar-nav [class*="button"] {
@@ -749,6 +783,7 @@ select {
 [class*="bar"] .button-block {
   padding: 7px 0;
   margin-top: 1px;
+  font-size: 16px;
 }
 
 input[type="submit"],

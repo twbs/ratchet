@@ -5,11 +5,11 @@
 [class*="button"] {
   position: relative;
   display: inline-block;
-  padding: 5px 10px 7px;
+  padding: 5px 8px;
   margin: 0;
   font-size: $button-font-size;
   font-weight: $font-weight-light;
-  line-height: 1;
+  line-height: 1.15; // Center button text on the phone.
   color: $default-color;
   text-align: center;
   vertical-align: top;
@@ -77,12 +77,27 @@
   }
 }
 
+// Link button (Buttons that look like links)
+.button-link {
+  color: $primary-color;
+  border: none;
+
+  &:active,
+  &.active {
+    color: $primary-color;
+    opacity: .3;
+  }
+  &.button-filled {
+    background-color: transparent;
+  }
+}
+
 // Block level buttons (full width buttons)
 .button-block {
   display: block;
-  padding: 12px 0;
+  padding: 15px 0;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 // Buttons in nav bars
@@ -194,10 +209,11 @@
 // Block buttons in all bars
 // --------------------------------------------------
 
-// Add proper padding and replace buttons normal dropshadow with a shine from bar
+// Add proper padding
 [class*="bar"] .button-block {
   padding: 7px 0;
   margin-top: 1px;
+  font-size: 16px; // Scale down font size to fit in bar.
 }
 
 // Button overrides
