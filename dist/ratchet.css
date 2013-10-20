@@ -303,9 +303,11 @@ strong {
 [class*="bar-"].bar-footer {
   bottom: 0;
 }
-[class*="bar-"].bar-footer.bar-standard, [class*="bar-"].bar-footer-secondary.bar-standard {
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+[class*="bar-"].bar-footer-secondary {
+  bottom: 44px;
+}
+[class*="bar-"].bar-footer-secondary-tab {
+  bottom: 50px;
 }
 
 .bar-nav {
@@ -346,8 +348,6 @@ strong {
   bottom: 0;
   height: 50px;
   padding: 0;
-  -webkit-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.85);
 }
 
 .tab-inner {
