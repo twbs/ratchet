@@ -631,7 +631,7 @@ select {
   margin: 0;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.15;
   color: #929292;
   text-align: center;
   vertical-align: top;
@@ -676,6 +676,18 @@ select {
 }
 .button-negative:active, .button-negative.active, .button-negative.button-filled {
   background-color: #dd524d;
+}
+
+.button-link {
+  color: #007aff;
+  border: none;
+}
+.button-link:active, .button-link.active {
+  color: #007aff;
+  opacity: .3;
+}
+.button-link.button-filled {
+  background-color: transparent;
 }
 
 .button-block {
