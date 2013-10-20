@@ -1028,11 +1028,7 @@ input[type="button"] {
 }
 
 .alert-inline {
-  position: relative;
-  top: auto;
-  bottom: auto;
-  left: auto;
-  right: auto;
+  position: static;
   margin: 15px;
 }
 
