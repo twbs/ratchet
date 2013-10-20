@@ -3,5 +3,28 @@
 // --------------------------------------------------
 
 .alert {
+  position: fixed;
+  right: 15px;
+  left: 15px;
+  bottom: $bar-tab-height + 15px;
+  padding: 15px;
+  color: #fff;
+  border-radius: 3px;
+  z-index: 10;
+}
 
+// Positive alert (Default color is green)
+.alert-positive {
+  background-color: transparentize($positive-color, .03);
+}
+
+// Negative alert (Default color is red)
+.alert-negative {
+  background-color: transparentize($negative-color, .03);
+}
+
+// Inline alert
+.alert-inline {
+  position: static;
+  margin: 15px;
 }

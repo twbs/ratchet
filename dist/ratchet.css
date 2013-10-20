@@ -993,6 +993,30 @@ input[type="button"] {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
+.alert {
+  position: fixed;
+  right: 15px;
+  left: 15px;
+  bottom: 65px;
+  padding: 15px;
+  color: #fff;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.alert-positive {
+  background-color: rgba(76, 217, 100, 0.97);
+}
+
+.alert-negative {
+  background-color: rgba(221, 82, 77, 0.97);
+}
+
+.alert-inline {
+  position: static;
+  margin: 15px;
+}
+
 .modal {
   position: fixed;
   top: 0;
