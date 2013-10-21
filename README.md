@@ -12,19 +12,19 @@ Take note that our master branch is our active, unstable development branch and 
 
 ## Documentation
 
-Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at [http://maker.github.io/ratchet](http://maker.github.io/ratchet). The docs may also be run locally.
+Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://maker.github.io/ratchet>. The docs may also be run locally.
 
 ### Running documentation locally
 
 1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation).
 2. From the root `/ratchet` directory, run `jekyll serve` in the command line.
-3. Open [http://localhost:4000](http://localhost:4000) in your browser, and boom!
+3. Open <http://localhost:4000> in your browser, and boom!
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
 ## Support
 
-Ratchet was developed to support iOS 7+ for iPhone. Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@goRatchet](http://www.twitter.com/goratchet).
+Ratchet was developed to support iOS 7+ for iPhone. Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@GoRatchet](https://twitter.com/goratchet).
 
 ## Reporting bugs & contributing
 
@@ -45,18 +45,18 @@ A small list of "gotchas" are provided below for designers and developers starti
 
 Connor Sears
 
-- https://twitter.com/connors
-- https://github.com/connors
+- <https://twitter.com/connors>
+- <https://github.com/connors>
 
 Dave Gamache
 
-- https://twitter.com/dhg
-- https://github.com/dhg
+- <https://twitter.com/dhg>
+- <https://github.com/dhg>
 
 Jacob Thornton
 
-- https://twitter.com/fat
-- https://github.com/fat
+- <https://twitter.com/fat>
+- <https://github.com/fat>
 
 
 ## License
