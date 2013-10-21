@@ -36,7 +36,7 @@
 }();
 
 /* ----------------------------------
- * POPOVER v1.0.0
+ * POPOVER v1.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
@@ -75,16 +75,16 @@
     var anchor = findPopovers(e.target);
 
     if (!anchor || !anchor.hash) return;
-    
-    try{
- 	 	popover = document.querySelector(anchor.hash);
- 	}
- 	catch (error) {
- 		popover = null;
- 	}
 
- 	if (popover == null) return;
- 	
+    try {
+      popover = document.querySelector(anchor.hash);
+    }
+    catch (error) {
+       popover = null;
+    }
+
+    if (popover == null) return;
+
     if (!popover || !popover.classList.contains('popover')) return;
 
     return popover;
