@@ -633,8 +633,8 @@
     startTime      = +new Date;
     pageX          = e.touches[0].pageX;
     pageY          = e.touches[0].pageY;
-	deltaX         = 0;
-	deltaY         = 0;
+    deltaX         = 0;
+    deltaY         = 0;
 
     setSlideNumber(0);
 
@@ -807,7 +807,6 @@
   var getAlert = function (event) {
     var alertDismiss = findAlerts(event.target);
     if (alertDismiss && alertDismiss.hash) return document.querySelector(alertDismiss.hash);
-    console.log('get alert');
   };
 
   window.addEventListener('click', function (event) {
