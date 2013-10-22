@@ -1,25 +1,20 @@
-/* Base styles
--------------------------------------------------- */
+/*
+ * =====================================================
+ * Ratchet v2.0.0
+ * Copyright 2013 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Licensed under http://www.opensource.org/licenses/MIT
+ *
+ * Designed and built by @connors, @dhg, and @fat.
+ * =====================================================
+ */
 
 body {
-  position: static !important; /* Overrides the fixed positioning of body in Ratchet */
-  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;;
+  position: static !important;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   background-color: #fff;
-  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-}
-
-
-/* Typography
--------------------------------------------------- */
-
-hr {
-  height: 0;
-  margin: 10px 0 30px;
-  border: solid #ddd;
-  border-width: 1px 0 0;
-  clear: both;
 }
 
 h1,
@@ -31,970 +26,263 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-
-/* Docs structural styles
--------------------------------------------------- */
-
-.docs-outer-wrapper {
-  position: relative;
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-.docs-inner-wrapper {
-  width: 1170px;
-  margin: 0 auto;
+.column-group {
+  width: auto;
 }
 
-/* Jumbo header
--------------------------------------------------- */
-
-.docs-header {
-  background-color: #fafafa;
-  box-shadow: 0 0 1px rgba(0,0,0,.3);
-}
-
-.docs-header-text {
-  z-index: 3;
-  width: 800px;
-  margin: 0 auto;
-  padding-top: 140px;
-  padding-bottom: 150px;
-  color: #333;
-  text-align: center;
-  -webkit-animation: fadeintext 2s;
-     -moz-animation: fadeintext 2s;
-}
-
-.docs-header-subtitle {
-  margin-top: 0;
-  margin-bottom: 35px;
-  font-size: 45px;
-  font-weight: 300;
-  line-height: 55px;
-}
-
-.docs-btn {
-  display: inline-block;
-  padding: 18px 40px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 400;
-  text-decoration: none;
-  line-height: 1;
-  background-color: #007aff;
-  border-radius: 3px;
-  -webkit-transition: background .2s linear;
-          transition: background .2s linear;
-}
-
-.docs-btn:hover {
-  color: #fff;
-  background-color: #218bff;
-}
-
-.docs-btn:active {
-  background-color: #006add;
-  background-image: none;
-}
-
-/* Styles for the social media buttons */
-.social {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px 0;
-  -webkit-animation: fadeinsocial 2.5s;
-     -moz-animation: fadeinsocial 2.5s;
-}
-
-.social ul {
-  height: 20px;
-  padding-left: 20px;
-  list-style: none;
-  text-align: center;
-}
-
-.social li {
-  display: inline-block;
-  height: 20px;
-  padding: 0;
-  vertical-align: top;
-}
-
-/* Overiding our framework button styles so our social buttons aren't messed up */
-.twitter-follow-button,
-.twitter-follow-button:hover,
-.twitter-follow-button:active,
-.twitter-share-button,
-.twitter-share-button:hover,
-.twitter-share-button:active {
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-}
-
-
-/* iPhone previewer
--------------------------------------------------- */
-
-.iphone {
-  position: relative;
-  top: 50px;
-  float: right;
-  width: 375px;
-  height: 806px;
-  font-family: "Helvetica Neue", sans-serif;
-  background-image: url("../img/iphone.png");
-}
-
-.iphone-fixed,
-.iphone-bottom {
-  left: 50%;
-  margin-left: 125px;
-}
-
-.iphone-fixed {
-  position: fixed;
-  top: 30px;
-}
-
-.iphone-bottom {
-  position: absolute;
-  top: auto;
-  bottom: 130px;
-}
-
-.iphone .iphone-content {
-  position: absolute;
-  top: 147px;
-  left: 27px;
-  width: 320px;
-  height: 548px;
-  overflow: hidden;
-  background-color: #efeff4;
-}
-
-.iphone .content,
-.component-example .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.component-example .content {
-  position: relative;
-}
-
-/* Mad override to avoid it being styled like the block level link */
-.component-example .table-view a[data-transition="slide-out"],
-.iphone .table-view a[data-transition="slide-out"] {
-  display: inline;
-  padding: 0;
-  margin: 0;
-  color: #0882f0;
-}
-
-/* Content layout
--------------------------------------------------- */
-
-.content-section {
-  position: relative;
-  padding-top: 80px;
-}
-
-/* Section header
--------------------------------------------------- */
-
-.section-header {
-  padding-bottom: 30px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.section-title {
-  margin: 0;
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 1;
-  color: #333;
-}
-
-.section-description {
-  margin: 0;
-  font-weight: 300;
-  font-size: 24px;
-  color: #777;
-}
-
-.section-informational {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 70px;
-}
-
-/* Getting started & page setup
--------------------------------------------------- */
-
-.steps {
-  overflow: hidden;
-  padding-left: 0;
-  margin: 0;
-}
-
-.steps .step {
+.column {
+  padding-left: 15px;
+  padding-right: 15px;
   float: left;
-  width: 306px;
-  margin-right: 40px;
-  list-style: none;
-  text-align: center;
 }
 
-.step-icon {
-  display: block;
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 20px;
-  border: 1px solid #ddd;
-  border-radius: 45px;
-  box-shadow: 0px 1px 5px rgba(0,0,0,.05);
-}
-.step-icon .icon {
-  font-size: 40px;
-  line-height: 90px;
-  background: -webkit-linear-gradient(#23e2bf, #1769f3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.step-icon .icon-share {
-  margin-top: -4px;
+.column .column-group {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.step-title {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
+.units-1 {
+  width: 50%;
 }
 
-.step-description {
-  margin: 0;
-  color: #777;
-  margin-bottom: 10px;
-}
-
-.step-description .icon {
-  font-size: 16px;
-}
-
-.steps .step:last-child {
-  margin-right: 0;
-}
-
-/* Components
--------------------------------------------------- */
-
-.section-components {
-  padding-bottom: 350px;
-  background-color: #fff;
-}
-
-.component {
-  position: relative;
-  padding-top: 80px;
-  width: 550px;
-  margin-top: 1px;
-  font-family: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  opacity: .3; /* Fade content back until the user scrolls to it. */
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.component:last-child {
-  margin-bottom: 320px;
-}
-
-/* Active class applied when the specific component is in focus */
-.component.active {
-  opacity: 1;
-}
-
-.component-title {
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 35px;
-}
-
-.component-description {
-  margin-bottom: 13px;
-  color: #777;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 300;
-}
-
-.component-note {
-  margin-top: 10px;
-  color: #999;
-  font-size: 14px;
-  line-height: 18px;
-  font-style: italic;
-}
-
-.component-title + .component-example {
-  margin-top: 13px;
-}
-
-.content-section .highlight,
-.content-section .instruction-code {
-  margin-top: 10px;
-  padding: 10px;
-  overflow-x: auto;
-  font-size: 13px;
-  font-family: monaco, menlo, monospace;
-  color: #777;
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.highlight + .component-description,
-.component-note + .component-description {
-  margin-top: 36px;
-}
-
-pre {
-  margin: 0;
-}
-
-/* Content specific styles
--------------------------------------------------- */
-
-/* Make the example bars stay put in the docs */
-.iphone [class*="bar"] {
-  position: absolute;
-}
-
-/* Component examples on mobile */
-.component-example {
-  position: relative;
-  display: none;
-  margin-bottom: 20px;
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: normal;
-}
-
-.component-example-fullbleed {
-  margin-right: -20px;
-  margin-left: -20px;
-}
-
-/* Bar examples */
-.component-example [class*="bar"] {
-  position: relative;
-}
-
-.component-example .bar-header-secondary {
-  top: 0;
-}
-
-/* List examples */
-.component-example .table-view {
-  margin-left: 0;
-  margin-right: 0;
-  background-color: #fff;
-}
-
-.component-example .table-view li {
-  padding-right: 70px;
-  padding-left: 20px;
-}
-
-.component-example .table-view.inset {
-  margin: 0;
-}
-
-.iphone .table-view .segmented-controller-item,
-.component-example .table-view .segmented-controller-item {
-  border-bottom-width: 0;
-}
-
-.iphone .table-view {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* Button examples */
-#buttons [class*="button"],
-#buttonsCounts [class*="button"],
-#blockButtons [class*="button"] {
-  margin-bottom: 10px;
-}
-
-#buttons [class*="button"]:last-child,
-#buttonsCounts [class*="button"]:last-child,
-#blockButtons [class*="button"]:last-child {
-  margin-bottom: 0;
-}
-#blockButtonsInPhone .button-block {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#push .component-example {
-  height: 108px;
-  overflow: hidden;
-}
-
-#push .component-example .table-view {
-  border-left: 1px solid rgba(0, 0, 0, .1);
-  border-right: 1px solid rgba(0, 0, 0, .1);
-}
-
-.iphone .btn-section .button {
-  display: block;
-  margin: 0 auto;
-}
-
-.iphone .block-btn-section .block-button {
-  margin-top: 10px;
-}
-
-.iphone .block-btn-section .block-button:first-child {
-  margin-top: 100px;
-}
-
-#buttonsInPhone,
-#buttonsCountsInPhone {
-  text-align: center;
-}
-
-#buttonsInPhone [class*="button"],
-#buttonsCountsInPhone [class*="button"] {
-  margin-top: 10px;
-}
-
-#blockButtonsInPhone [class*="button"] {
-  margin-top: 5px;
-}
-#blockButtonsInPhone [class*="button"]:first-child {
-  margin-top: 10px;
-}
-
-/* Counts examples */
-#countsInPhone {
-  text-align: center;
-}
-
-#countsInPhone [class*="count"] {
-  margin-top: 10px;
-}
-
-/* Form examples */
-.component-example form [class*="button"] {
-  margin-bottom: 0;
-}
-
-.component .input-group label {
-  padding: 9px 10px 9px 13px;
-}
-
-/* Toggle examples */
-#toggles .toggle {
-  display: inline-block;
-  margin-right: 10px;
-}
-#togglesInPhone .toggle {
-  margin: 10px auto 0;
-}
-
-/* Popover examples */
-.component-example .popover {
-  position: relative;
-  display: block;
-  top: 0;
-  margin-top: 50px;
-  opacity: 1;
-}
-#popoversInPhone .popover {
-  position: absolute;
-  display: block !important;
-  top: 72px;
-  opacity: 1 !important;
-}
-
-/* Modal example */
-.component-example .modal {
-  left: 0;
-  z-index: 10001;
-}
-.iphone .iphone-content .modal { 
-  position: absolute; 
-}
-.component-example .modal .content,
-.iphone .iphone-content .modal .content { 
-  margin-top: 44px; 
-}
-#modalsInPhone #iwindow > .button { 
-  margin: 15px; 
-}
-
-
-/* Slider examples */
-.component-example-fullbleed .slider,
-.component-example-fullbleed .slider li,
-.component-example-fullbleed .slider li img,
-#slidersInPhone .slider,
-#slidersInPhone .slider li,
-#slidersInPhone .slider li img {
+.units-2 {
   width: 100%;
 }
 
-#slidersInPhone .slider {
-  position: absolute;
-  top: 0;
-  left: 0;
+.offset-1 {
+  margin-left: 50%;
 }
 
-.slider .slide-text {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 300;
-  text-shadow: 0 0 10px rgba(0,0,0,.5);
-}
-
-/* Give inset components in the iphone correct margin */
-.iphone .table-view.inset,
-#segmentedControllersInPhone .segmented-controller,
-#formsInPhone form,
-#formsWithInputGroupInPhone form,
-#formsWithInputGroupAndLabelsInPhone form {
-  margin: 15px;
-}
-
-#formsWithInputGroupInPhone form,
-#formsWithInputGroupAndLabelsInPhone form {
-  margin: 10px 0;
-}
-
-/* Footer
--------------------------------------------------- */
-
-.docs-footer {
-  padding-bottom: 100px;
-  overflow: hidden;
-  color: #fff;
-  background-color: #151515;
-}
-
-.docs-footer .docs-inner-wrapper {
-  text-align: center
-}
-
-.docs-footer h3 {
-  font-size: 24px;
-  color: #fefefe;
-  font-weight: 700;
-}
-
-.docs-footer p {
-  font-size: 18px;
-  color: #777;
-}
-
-.avatars {
-  display: block;
-  width: 590px;
-  margin: 30px auto 0;
-}
-
-.avatars li {
-  float: left;
-  height: 170px;
-  width: 170px;
-  margin-right: 40px;
-  list-style: none;
-}
-
-.avatars .avatar {
-  display: block;
-  height: 100%;
-  width: 100%;
-  margin-bottom: 15px;
-  overflow: hidden;
-  border-radius: 100%;
-}
-
-.avatars li:last-child {
-  margin-right: 0;
-}
-
-.avatars img {
-  width: 170px;
-  height: 170px;
-}
-
-/* Banner for Mozilla and IE about component rendering poorly
-------------------------------------------------------------- */
-.notice-banner {
-  cursor: pointer;
-  height: 0;
-  opacity: 0;
-  padding: 0;
-  color: #333;
-  font-size: 16px;
-  text-align: center;
-  background-color: #fff9c4; /* Old browsers */
-  background-image: -moz-linear-gradient(top,  #fff9c4 0%, #fff38d 100%); /* FF3.6+ */
-  background-image: -ms-linear-gradient(top,  #fff9c4 0%,#fff38d 100%); /* IE10+ */
-  background-image: linear-gradient(to bottom,  #fff9c4 0%,#fff38d 100%); /* W3C */
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
-  -moz-animation: shownotice 1s infinite;
-}
-
-/* Media queries
--------------------------------------------------- */
-
-@media only screen and (max-width: 1039px) {
-  .docs-inner-wrapper  {
-    width: 920px;
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0;
+    max-width: 940px;
   }
 
-  .docs-header-text {
-    width: 700px;
-  }
-
-  .steps .step {
-    width: 280px;
-  }
-
-  .component {
-    width: 500px;
-  }
-
-  .iphone-fixed,
-  .iphone-bottom {
-    margin-left: 85px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .docs-header-text,
-  .docs-inner-wrapper  {
-    width: 700px;
-  }
-
-  .docs-header {
-    height: 400px;
-  }
-
-  .docs-header-text {
-    top: 75px;
-  }
-
-  .steps .step {
-    width: 205px;
-  }
-
-  .component {
-    width: 300px;
-  }
-
-  .iphone-fixed,
-  .iphone-bottom {
-    margin-left: -25px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .docs-outer-wrapper,
-  .docs-inner-wrapper,
-  .docs-header-text,
-  .docs-content,
-  .component {
-    width: auto;
-  }
-
-  .docs-inner-wrapper {
-    padding-right: 20px;
+  .column {
     padding-left: 20px;
+    padding-right: 20px;
   }
 
-  /* Have the masthead scroll away instead of being fixed */
-  .docs-masthead {
-    position: absolute;
-    padding: 2px 0 1px;
-  }
-
-  .docs-masthead-title {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  /* Hide the navigation on mobile. Scroll away! */
-  .docs-navigation {
-    display: none;
-  }
-
-  .docs-header {
-    height: 320px;
-    margin-top: 44px;
-  }
-
-  .docs-header-text {
-    top: 50px;
-  }
-
-  .docs-header-subtitle {
-    margin-bottom: 18px;
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .docs-btn {
-    width: 100%;
-    padding: 15px 0;
-    font-size: 18px;
-  }
-
-  .docs-btn:active {
-    padding: 16px 0 14px;
-  }
-
-  .social ul {
-    height: auto;
-  }
-
-  .social li {
-    padding-bottom: 15px;
-  }
-
-  .social li:last-child {
-    padding-bottom : 0;
-  }
-
-  .content-section {
-    padding-top: 50px;
-  }
-
-  .section-header {
-    padding-bottom: 50px;
-  }
-
-  .section-title {
-    margin-bottom: 5px;
-    font-size: 40px;
-  }
-
-  .section-description {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .section-components {
-    padding-bottom: 0px;
-  }
-
-  .section-informational {
-    padding-bottom: 70px;
-  }
-
-  .steps .step {
-    float: none;
-    width: auto;
-    margin: 0 0 30px 0;
-  }
-
-  .steps .step:last-child {
-    margin: 0;
-  }
-
-  .notice-banner {
-    position: relative;
-    top: 0;
-    font-size: 14px;
-    line-height: 18px;
-  }
-
-  .notice-banner:after {
-    display: none;
-  }
-
-  .component {
-    padding: 50px 20px;
+  .column .column-group {
     margin-left: -20px;
     margin-right: -20px;
-    opacity: 1;
-    border-bottom: 1px solid #ddd;
   }
 
-  .component:last-child {
-    margin-bottom: 80px;
+  .units-1 {
+    width: 50%;
   }
 
-  .component-example {
-    display: block;
+  .units-2 {
+    width: 100%;
   }
 
-  /* Hacky way to get parent of slider position absolute for smooth sliding */
-  #sliders .slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-  }
-  #sliders .highlight:not(.js) {
-    margin-top: 230px;
+  .lg-units-1 {
+    width: 8.333%;
   }
 
-  .avatars {
-    overflow: hidden;
-    width: 280px;
-    margin: 10px auto 0;
+  .lg-units-2 {
+    width: 16.666%;
   }
 
-  .avatars li {
-    height: 86px;
-    width: 86px;
-    margin-right: 10px;
+  .lg-units-3 {
+    width: 25%;
   }
 
-  .avatars li:last-child {
-    margin-right: 0;
+  .lg-units-4 {
+    width: 33.333%;
   }
 
-  .avatars img {
-    width: 86px;
-    height: 86px;
+  .lg-units-5 {
+    width: 41.666%;
   }
 
-  /* Hide the iPhone on mobile */
-  .iphone {
-    display: none;
+  .lg-units-6 {
+    width: 50%;
+  }
+
+  .lg-units-7 {
+    width: 58.333%;
+  }
+
+  .lg-units-8 {
+    width: 66.666%;
+  }
+
+  .lg-units-9 {
+    width: 75%;
+  }
+
+  .lg-units-10 {
+    width: 83.333%;
+  }
+
+  .lg-units-11 {
+    width: 91.666%;
+  }
+
+  .lg-units-12 {
+    width: 100%;
+  }
+
+  .lg-offset-1 {
+    margin-left: 8.333%;
+  }
+
+  .lg-offset-2 {
+    margin-left: 16.666%;
+  }
+
+  .lg-offset-3 {
+    margin-left: 25%;
+  }
+
+  .lg-offset-4 {
+    margin-left: 33.333%;
+  }
+
+  .lg-offset-5 {
+    margin-left: 41.666%;
+  }
+
+  .lg-offset-6 {
+    margin-left: 50%;
+  }
+
+  .lg-offset-7 {
+    margin-left: 58.333%;
+  }
+
+  .lg-offset-8 {
+    margin-left: 66.666%;
+  }
+
+  .lg-offset-9 {
+    margin-left: 75%;
+  }
+
+  .lg-offset-10 {
+    margin-left: 83.333%;
+  }
+
+  .lg-offset-11 {
+    margin-left: 91.666%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
 
-@media only screen and (max-width: 320px) {
-  .docs-header-text {
-    top: 30px;
+  .column {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .column .column-group {
+    margin-left: -30px;
+    margin-right: -30px;
   }
 }
+.docs-header-wrapper {
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320px' height='1'><rect fill='#c8c7cc' x='0' y='0' width='320px' height='0.5'/></svg>");
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
 
-/* Animations
--------------------------------------------------- */
+.docs-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  -webkit-animation-name: fadeintext;
+  animation-name: fadeintext;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.docs-header .docs-title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 400;
+}
+.docs-header .docs-subtitle {
+  margin-top: 0;
+  margin-bottom: 35px;
+  color: #777;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+hr {
+  height: 0;
+  margin: 10px 0 30px;
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+}
+
+.column-group {
+  *zoom: 1;
+}
+
+.column-group:before,
+.column-group:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.column-group:after {
+  clear: both;
+}
+
+.clear {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
 
 @-webkit-keyframes fadeintext {
   0% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
+    opacity: 0;
+    -webkit-transform: scale(0.9);
   }
+
   50% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
+    opacity: 0;
+    -webkit-transform: scale(0.9);
   }
+
   100% {
-   opacity: 1;
-   -webkit-transform: scale(1);
+    opacity: 1;
+    -webkit-transform: scale(1);
   }
 }
 
 @-webkit-keyframes fadeinsocial {
   0% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
+    opacity: 0;
+    -webkit-transform: scale(0.9);
   }
+
   50% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
+    opacity: 0;
+    -webkit-transform: scale(0.9);
   }
-  100% {
-   opacity: 1;
-   -webkit-transform: scale(1);
-  }
-}
 
-@-moz-keyframes fadeintext {
-  0% {
-   opacity: 0;
-   -moz-transform: scale(.9);
-  }
-  50% {
-   opacity: 0;
-   -moz-transform: scale(.9);
-  }
   100% {
-   opacity: 1;
-   -moz-transform: scale(1);
-  }
-}
-
-@-moz-keyframes fadeinsocial {
-  0% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
-  }
-  85% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
-  }
-  100% {
-   opacity: 1;
-   -webkit-transform: scale(1);
-  }
-}
-
-@-moz-keyframes shownotice {
-  0% {
-    min-height: 30px;
-    padding: 20px 0;
     opacity: 1;
+    -webkit-transform: scale(1);
   }
-  100% {
-    min-height: 30px;
-    padding: 20px 0;
-    opacity: 1;
-  }
-}
-
-/* Add Firefox support for CSS to docs since Ratchet framework doesn't natively support Mozilla
--------------------------------------------------- */
-
-/* Bars.css */
-.bar-title,
-.tab-inner {
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-}
-.tab-item {
-  -moz-box-flex: 1;
-}
-.bar-title [class*="button"] {
-  -moz-box-flex: 0;
-}
-.bar-title .segmented-controller {
-  -moz-box-flex: 1;
-}
-
-/* popovers.css */
-.popover-header {
-  display: -moz-box;
-}
-
-/* segmented-controller.css*/
-.segmented-controller {
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-}
-.segmented-controller li {
-  -moz-box-flex: 1;
-}
-
-/* Get tab-bar to look 1/2way decent */
-.iphone .tab-item {
-  min-width: 64px;
 }
