@@ -14,16 +14,43 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 
-// The grid
+
+// Jumbotron
+// --------------------------------------------------
+
+.docs-header-wrapper {
+  background-color: #fafafa;
+  @include hairline(single, #c8c7cc, 320px, 0);
+}
+.docs-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  @include animation-name(fadeintext);
+  @include animation-duration(2s);
+
+  .docs-title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .docs-subtitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #777;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+}
+
+
+// The Chassis grid
 // --------------------------------------------------
 
 .container {
@@ -118,37 +145,6 @@ h6 {
   .column .column-group {
     margin-left: -30px;
     margin-right: -30px;
-  }
-}
-
-
-// Jumbotron
-// --------------------------------------------------
-
-.docs-header-wrapper {
-  background-color: #fafafa;
-  @include hairline(single, #c8c7cc, 320px, 0);
-}
-.docs-header {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-  @include animation-name(fadeintext);
-  @include animation-duration(2s);
-
-  .docs-title {
-    margin: 0;
-    font-size: 40px;
-    font-weight: 400;
-  }
-
-  .docs-subtitle {
-    margin-top: 0;
-    margin-bottom: 35px;
-    color: #777;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 30px;
   }
 }
 
