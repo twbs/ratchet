@@ -22,10 +22,14 @@
     bottom: 0;
   }
 
-  // Flip border position to top for footer bars
-  &.bar-footer.bar-standard,
-  &.bar-footer-secondary.bar-standard {
-    @include box-shadow(0 0 1px rgba(0,0,0,.85));
+  // Modifier class to dock any bar above a standard bar
+  &.bar-footer-secondary {
+    bottom: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar above a .bar-tab
+  &.bar-footer-secondary-tab {
+    bottom: $bar-tab-height;
   }
 }
 
@@ -78,7 +82,6 @@
   bottom: 0;
   height: $bar-tab-height;
   padding: 0;
-  @include box-shadow(0 0px 1px rgba(0,0,0,.85));
 }
 
 // Wrapper for individual tab

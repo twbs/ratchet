@@ -33,6 +33,7 @@ input[type="color"],
   height: 40px;
   padding: 10px 15px;
   margin-bottom: 10px;
+  line-height: $line-height-default;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 3px;
@@ -87,14 +88,14 @@ select {
   margin-bottom: 0;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
   border-radius: 0;
   @include box-shadow(none);
+  @include hairline(single, #c8c7cc, 15px);
 }
 
 // Remove bottom border on last input to avoid double bottom border
 .input-group input:last-child {
-  border-bottom-width: 0;
+  background-image: none;
 }
 
 // Input groups with labels
@@ -104,21 +105,21 @@ select {
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
 }
 
 // Remove bottom border on last input-row to avoid double bottom border
 .input-row:last-child {
-  border-bottom-width: 0;
+  background-image: none;
 }
 
 // Labels get floated left with a set percentage width
 .input-row label {
   float: left;
   width: 35%;
-  padding: 11px 10px 9px 15px; // Optimizing the baseline for mobile.
+  padding: 10px 15px;
   font-family: $font-family-default;
-  font-weight: $font-weight;
+  line-height: 1.1; // Put the text on the baseline.
 }
 
 // Actual inputs float to right of labels and also have a set percentage
@@ -127,7 +128,7 @@ select {
   width: 65%;
   padding-left: 0;
   margin-bottom: 0;
-  border-bottom: 0;
+  background-image: none;
 }
 
 
