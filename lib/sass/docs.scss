@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .docs-header-wrapper {
   background-color: #fafafa;
-  @include hairline(single, #c8c7cc, 320px, 0);
+  @include hairline(single, #c8c7cc, 0);
 }
 .docs-header {
   padding-top: 50px;
