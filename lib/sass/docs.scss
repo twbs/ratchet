@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
   .docs-title {
     margin: 0;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   .docs-subtitle {
@@ -46,6 +46,27 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 22px;
     font-weight: 300;
     line-height: 30px;
+  }
+}
+
+// Overriding the button styles for the social
+// --------------------------------------------------
+
+.social {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    height: 20px;
+    padding-bottom: 25px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  [class*="button"] { 
+    padding: 0;
+    border: 0;
   }
 }
 

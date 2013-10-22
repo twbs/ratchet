@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 .docs-header .docs-title {
   margin: 0;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 300;
 }
 .docs-header .docs-subtitle {
   margin-top: 0;
@@ -49,6 +49,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 22px;
   font-weight: 300;
   line-height: 30px;
+}
+
+.social {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.social li {
+  height: 20px;
+  padding-bottom: 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+.social [class*="button"] {
+  padding: 0;
+  border: 0;
 }
 
 .container {
