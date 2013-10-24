@@ -27,6 +27,16 @@ h1, h2, h3, h4, h5, h6 {
   background-position: 0 100%;
   background-repeat: no-repeat;
 }
+.docs-header-wrapper .icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+.docs-header-wrapper .icon:active {
+  opacity: .3;
+}
 
 .docs-header {
   padding-top: 50px;
@@ -67,11 +77,19 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
 }
 
+.component-example,
+.component-example [class*="bar"],
+.component-example .content {
+  position: relative;
+}
+
+.bar-nav ~ .content {
+  padding: 0;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2%;
-  padding-right: 2%;
 }
 
 .column-group {
@@ -232,6 +250,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: -30px;
   }
 }
+.iphone {
+  display: none;
+}
+
 hr {
   height: 0;
   margin: 10px 0 30px;

@@ -25,6 +25,17 @@ h1, h2, h3, h4, h5, h6 {
 .docs-header-wrapper {
   background-color: #fafafa;
   @include hairline(single, #c8c7cc, 0);
+
+  .icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    @include transition(opacity .2s linear);
+
+    &:active {
+      opacity: .3;
+    }
+  }
 }
 .docs-header {
   padding-top: 50px;
@@ -70,6 +81,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// Componnts
+// --------------------------------------------------
+
+.component-example,
+.component-example [class*="bar"],
+.component-example .content {
+  position: relative;
+}
+
+.bar-nav ~ .content {
+  padding: 0;
+}
+
 
 // The Chassis grid
 // --------------------------------------------------
@@ -77,8 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2%;
-  padding-right: 2%;
+  // padding-left: 2%;
+  // padding-right: 2%;
 }
 .column-group {
   width: auto;
@@ -172,6 +196,10 @@ h1, h2, h3, h4, h5, h6 {
 
 // Misc
 // --------------------------------------------------
+
+.iphone {
+  display: none;
+}
 
 hr {
   height: 0;
