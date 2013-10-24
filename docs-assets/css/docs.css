@@ -83,8 +83,25 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.component-example .bar-header-secondary {
+  top: 0;
+}
+
 .bar-nav ~ .content {
   padding: 0;
+}
+
+.highlight pre {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 13px;
+  overflow-x: auto;
+  color: #777;
+  background-color: #fafafa;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  white-space: pre;
+  word-wrap: normal;
 }
 
 .container {
