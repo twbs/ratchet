@@ -7,32 +7,32 @@
   src: url("ratchicons/ratchicons.eot");
   src: url("ratchicons/ratchicons.eot?#iefix") format("embedded-opentype"),
        url("ratchicons/ratchicons.woff") format("woff"),
-       url("ratchicons/ratchicons.ttf")  format("truetype"),
+       url("ratchicons/ratchicons.ttf") format("truetype"),
        url("ratchicons/ratchicons.svg#svgFontName") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 .icon {
   display: inline-block;
-  font-family: "Ratchicons", sans-serif;
+  font-family: Ratchicons;
   font-size: 24px;
   text-decoration: none;
   line-height: 1;
   cursor: default;
   -webkit-font-smoothing: antialiased;
-
-  &.icon-down:before { content: '\f00b'}
-  &.icon-download:before { content: '\f005'}
-  &.icon-left:before { content: '\f00c'}
-  &.icon-list:before { content: '\f008'}
-  &.icon-pages:before { content: '\f000'}
-  &.icon-refresh:before { content: '\f009'}
-  &.icon-right:before { content: '\f00d'}
-  &.icon-search:before { content: '\f007'}
-  &.icon-share:before { content: '\f00a'}
-  &.icon-sound:before { content: '\f001'}
-  &.icon-sound2:before { content: '\f002'}
-  &.icon-sound3:before { content: '\f003'}
-  &.icon-sound4:before { content: '\f004'}
-  &.icon-up:before { content: '\f00e'}
 }
+
+.icon-down:before { content: '\f00b'}
+.icon-download:before { content: '\f005'}
+.icon-left:before { content: '\f00c'}
+.icon-list:before { content: '\f008'}
+.icon-pages:before { content: '\f000'}
+.icon-refresh:before { content: '\f009'}
+.icon-right:before { content: '\f00d'}
+.icon-search:before { content: '\f007'}
+.icon-share:before { content: '\f00a'}
+.icon-sound:before { content: '\f001'}
+.icon-sound2:before { content: '\f002'}
+.icon-sound3:before { content: '\f003'}
+.icon-sound4:before { content: '\f004'}
+.icon-up:before { content: '\f00e'}
