@@ -89,6 +89,11 @@ h1, h2, h3, h4, h5, h6 {
 .component-example .content {
   position: relative;
 }
+.component-example-fullbleed,
+.highlight {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .component-example .bar-header-secondary {
   top: 0;
 }
@@ -209,6 +214,18 @@ h1, h2, h3, h4, h5, h6 {
 // Misc
 // --------------------------------------------------
 
+.notice-banner {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  background-color: #fff9c4;
+  opacity: 0;
+  -moz-animation: shownotice 1s infinite;
+}
+
 .iphone {
   display: none;
 }
@@ -274,5 +291,21 @@ hr {
   100% {
    opacity: 1;
    -webkit-transform: scale(1);
+  }
+}
+
+// Only visible to Mozilla browsers. Sneaky huh?
+@-moz-keyframes shownotice {
+  0% {
+    height: auto;
+    min-height: 30px;
+    padding: 20px 0;
+    opacity: 1;
+  }
+  100% {
+    height: auto;
+    min-height: 30px;
+    padding: 20px 0;
+    opacity: 1;
   }
 }

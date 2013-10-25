@@ -5,43 +5,44 @@ base_url: "../"
 ---
 
 <!-- Banner for Mozilla/IE -->
-<div class="notice-banner">
-  <p><strong>Heads up!</strong> Ratchet components are written only for iPhone, so many are broken in non-Webkit browsers.</p>
-</div>
+<p class="notice-banner">
+  <strong>Heads up!</strong> Ratchet components are written only for iPhone, so many are broken in non-Webkit browsers.
+</p>
 
-<!--[if IE]>
-<div class="notice-banner">
-  <p><strong>Heads up!</strong> Ratchet components are written only for iPhone, so many are broken in non-Webkit browsers.</p>
-</div>
-<![endif]-->
+<div class="container">
+  <!--[if IE]>
+  <div class="notice-banner">
+    <p><strong>Heads up!</strong> Ratchet components are written only for iPhone, so many are broken in non-Webkit browsers.</p>
+  </div>
+  <![endif]-->
 
-<!-- Components -->
-<section class="docs-outer-wrapper content-section section-components">
-  <div class="docs-inner-wrapper">
-    <div class="section-header">
-      <h2 class="section-title">Components</h2>
-      <p class="section-description">Design patterns that serve as basic building blocks.</p>
-    </div>
-    <div class="iphone">
-      <div class="iphone-content">
-        <div id="iwindow">
+  <!-- Components -->
+  <div class="column-group">
+    <div class="column units-2">
+      <div class="section-header">
+        <h2 class="section-title">Components</h2>
+        <p class="section-description">Design patterns that serve as basic building blocks.</p>
+      </div>
+      <div class="iphone">
+        <div class="iphone-content">
+          <div id="iwindow">
+            <header class="bar-nav">
+              <h1 class="title">Title</h1>
+            </header>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bars -->
+      <article class="component active" id="bars">
+        <h3 class="component-title">Title bar</h3>
+        <p class="component-description">Title bars are full width and docked to the top of the viewport.</p>
+
+        <div class="component-example component-example-fullbleed">
           <header class="bar-nav">
             <h1 class="title">Title</h1>
           </header>
         </div>
-      </div>
-    </div>
-
-    <!-- Bars -->
-    <article class="component active" id="bars">
-      <h3 class="component-title">Title bar</h3>
-      <p class="component-description">Title bars are full width and docked to the top of the viewport.</p>
-
-      <div class="component-example component-example-fullbleed">
-        <header class="bar-nav">
-          <h1 class="title">Title</h1>
-        </header>
-      </div>
 
 {% highlight html %}
 <header class="bar-nav">
@@ -344,20 +345,20 @@ base_url: "../"
     </div>
 
 {% highlight html %}
- <ul class="table-view">
-  <li>
+<ul class="table-view">
+  <li class="table-view-cell">
     <a>
       Item 1
       <span class="chevron"></span>
     </a>
   </li>
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 2
       <span class="chevron"></span>
     </a>
   </li>
-  <li>
+  <li class="table-view-cell">
     <a>
       Item 3
       <span class="chevron"></span>
@@ -930,27 +931,27 @@ document
 
   </article>
 
-  <!-- Slider -->
-  <article class="component" id="sliders">
-    <h3 class="component-title">Sliders</h3>
-    <p class="component-description">Can be used with any number of slides with any type of content.</p>
+    <!-- Slider -->
+    <article class="component" id="sliders">
+      <h3 class="component-title">Sliders</h3>
+      <p class="component-description">Can be used with any number of slides with any type of content.</p>
 
-    <div class="component-example component-example-fullbleed">
-      <div class="slider" id="mySlider">
-        <ul>
-          <li>
-            <img src="{{ page.base_url }}docs-assets/img/slide-1.jpg">
-            <span class="slide-text">&larr; Slide me</span>
-          </li>
-          <li>
-            <img src="{{ page.base_url }}docs-assets/img/slide-2.jpg">
-          </li>
-          <li>
-            <img src="{{ page.base_url }}docs-assets/img/slide-3.jpg">
-          </li>
-        </ul>
+      <div class="component-example component-example-fullbleed">
+        <div class="slider" id="mySlider">
+          <ul>
+            <li>
+              <img src="{{ page.base_url }}docs-assets/img/slide-1.jpg">
+              <span class="slide-text">&larr; Slide me</span>
+            </li>
+            <li>
+              <img src="{{ page.base_url }}docs-assets/img/slide-2.jpg">
+            </li>
+            <li>
+              <img src="{{ page.base_url }}docs-assets/img/slide-3.jpg">
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
 {% highlight html %}
 <div class="slider" id="mySlider">
@@ -969,7 +970,7 @@ document
 </div>
 {% endhighlight %}
 
-    <p class="component-description">Sliders.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
+      <p class="component-description">Sliders.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
 
 {% highlight js %}
 // Only needed if you want to fire a callback
@@ -978,44 +979,44 @@ document
 .addEventListener('slide', myFunction)
 {% endhighlight %}
 
-  </article>
+    </article>
 
-  <!-- Push docs -->
-  <article class="component" id="push">
-    <h3 class="component-title">Push</h3>
-    <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
+    <!-- Push docs -->
+    <article class="component" id="push">
+      <h3 class="component-title">Push</h3>
+      <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
 
 {% highlight html %}
 <!-- A one.html link -->
 <a href="two.html">Two</a>
 {% endhighlight %}
 
-    <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
+      <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
 
-    <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
+      <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
 
 {% highlight html %}
 <!-- An one.html link that animates to two.html -->
 <a href="two.html" data-transition="fade">Two</a>
 {% endhighlight %}
 
-    <p class="component-description">A working version of push:</p>
+      <p class="component-description">A working version of push:</p>
 
-    <div class="component-example component-example-fullbleed">
-      <header class="bar-nav">
-        <h1 class="title">Push</h1>
-      </header>
-      <div class="content">
-        <ul class="table-view">
-          <li>
-            <a href="{{ page.base_url }}two.html" data-transition="slide-in">
-              Load new page with push
-            </a>
-            <span class="chevron"></span>
-          </li>
-        </ul>
+      <div class="component-example component-example-fullbleed">
+        <header class="bar-nav">
+          <h1 class="title">Push</h1>
+        </header>
+        <div class="content">
+          <ul class="table-view">
+            <li>
+              <a href="{{ page.base_url }}two.html" data-transition="slide-in">
+                Load new page with push
+              </a>
+              <span class="chevron"></span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
 
 {% highlight html %}
 <header class="bar-nav">
@@ -1033,21 +1034,21 @@ document
 </div>
 {% endhighlight %}
 
-    <p class="component-description">Have a link you don't want to intercepted by push? Try this:</p>
+        <p class="component-description">Have a link you don't want to intercepted by push? Try this:</p>
 
 {% highlight html %}
 <!-- Use data-ignore="push" to prevent the push.js interception -->
 <a href="http://www.google.com" data-ignore="push">Google<a>
 {% endhighlight %}
 
-    <p class="component-description">Push.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
+        <p class="component-description">Push.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
 
 {% highlight js %}
 // Only needed if you want to fire a callback
 window.addEventListener('push', myFunction);
 {% endhighlight %}
 
-  </article>
-
+      </article>
+    </div>
   </div>
-</section>
+</div>
