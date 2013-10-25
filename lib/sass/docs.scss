@@ -84,6 +84,11 @@ h1, h2, h3, h4, h5, h6 {
 // Components
 // --------------------------------------------------
 
+.component-example {
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+}
 .component-example,
 .component-example [class*="bar"],
 .component-example .content {

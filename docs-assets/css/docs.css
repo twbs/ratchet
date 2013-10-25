@@ -77,6 +77,12 @@ h1, h2, h3, h4, h5, h6 {
   border: 0;
 }
 
+.component-example {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 21px;
+}
+
 .component-example,
 .component-example [class*="bar"],
 .component-example .content {
@@ -281,8 +287,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   text-align: center;
   background-color: #fff9c4;
-  -webkit-animation: shownotice 1s infinite;
   opacity: 0;
+  -moz-animation: shownotice 1s infinite;
 }
 
 .iphone {
@@ -355,7 +361,7 @@ hr {
   }
 }
 
-@-webkit-keyframes shownotice {
+@-moz-keyframes shownotice {
   0% {
     height: auto;
     min-height: 30px;
