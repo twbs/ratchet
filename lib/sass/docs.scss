@@ -83,7 +83,22 @@ h1, h2, h3, h4, h5, h6 {
 
 // Components
 // --------------------------------------------------
-
+.component {
+  padding: 50px 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  border-bottom: 1px solid #ddd;
+}
+.component-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+}
+.component-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
 .component-example {
   font-family: $font-family-default;
   font-size: $font-size-default;
@@ -98,6 +113,10 @@ h1, h2, h3, h4, h5, h6 {
 .highlight {
   margin-left: -15px;
   margin-right: -15px;
+}
+.component-example .table-view.inset {
+  margin-left: 0;
+  margin-right: 0;
 }
 .component-example .bar-header-secondary {
   top: 0;
