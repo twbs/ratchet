@@ -1,6 +1,6 @@
 # Ratchet v2.0 WIP
 
-Prototype mobile apps with simple HTML, CSS and JS components.
+Prototype mobile apps with simple HTML, CSS, and JS components.
 
 ## Getting Started
 
