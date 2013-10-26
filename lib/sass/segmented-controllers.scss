@@ -46,7 +46,7 @@
     }
 
     // Selected segment of controller
-    &.selected {
+    &.active {
       background-color: $primary-color;
 
       // Set color of links to white
@@ -60,7 +60,7 @@
 .segmented-controller-item {
   display: none;
 
-  &.selected {
+  &.active {
     display: block;
   }
 }
