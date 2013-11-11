@@ -217,6 +217,8 @@ hr {
     width: 320px;
     height: 568px;
     overflow: hidden;
+    font-size: $font-size-default;
+    line-height: $line-height-default;
     background-color: #efeff4;
   }
   .iphone .content,

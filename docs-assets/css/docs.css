@@ -219,6 +219,8 @@ hr {
     width: 320px;
     height: 568px;
     overflow: hidden;
+    font-size: 17px;
+    line-height: 21px;
     background-color: #efeff4;
   }
 
