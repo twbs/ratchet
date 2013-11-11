@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 .docs-header-wrapper .icon {
   position: absolute;
   top: 15px;
-  righ: 15px;
+  right: 15px;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
