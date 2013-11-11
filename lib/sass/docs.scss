@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   .icon {
     position: absolute;
     top: 15px;
-    left: 15px;
+    right: 15px;
     @include transition(opacity .2s linear);
 
     &:active {
@@ -321,13 +321,13 @@ hr {
 // Only visible to Mozilla browsers. Sneaky huh?
 @-moz-keyframes shownotice {
   0% {
-    height: auto;
+    height: 100%;
     min-height: 30px;
     padding: 20px 0;
     opacity: 1;
   }
   100% {
-    height: auto;
+    height: 100%;
     min-height: 30px;
     padding: 20px 0;
     opacity: 1;
