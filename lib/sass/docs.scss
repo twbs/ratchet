@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   .icon {
     position: absolute;
     top: 15px;
-    right: 15px;
+    righ: 15px;
     @include transition(opacity .2s linear);
 
     &:active {
@@ -213,6 +213,17 @@ h1, h2, h3, h4, h5, h6 {
   .lg-offset-9     { margin-left: 75%; }
   .lg-offset-10    { margin-left: 83.333%; }
   .lg-offset-11    { margin-left: 91.666%; }
+
+  .iphone {
+    display: block;
+    position: fixed;
+    top: 50px;
+    float: right;
+    width: 375px;
+    height: 806px;
+    font-family: "Helvetica Neue", sans-serif;
+  }
+
 }
 
 

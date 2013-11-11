@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 .docs-header-wrapper .icon {
   position: absolute;
   top: 15px;
-  right: 15px;
+  righ: 15px;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
@@ -286,6 +286,16 @@ h1, h2, h3, h4, h5, h6 {
 
   .lg-offset-11 {
     margin-left: 91.666%;
+  }
+
+  .iphone {
+    display: block;
+    position: relative;
+    top: 50px;
+    float: right;
+    width: 375px;
+    height: 806px;
+    font-family: "Helvetica Neue", sans-serif;
   }
 }
 @media screen and (min-width: 1200px) {
