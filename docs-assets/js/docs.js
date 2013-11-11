@@ -88,8 +88,12 @@ $(function() {
     if(pageHeight - currentTop < footerHeight + contentPadding + 1400) {
       iphone[0].className = "iphone iphone-bottom";
       iphone[0].setAttribute('style','')
+    // } else if((iphone.initialTop - currentTop) <= iphone.dockingOffset) {
+    //   iphone[0].className = "iphone iphone-fixed";
+    //   iphone.css({top: iphone.dockingOffset})
     } else {
       iphone[0].className = "iphone iphone-fixed";
+      iphone.css({top: iphone.dockingOffset})
     }
 
     // Injection of components into phone

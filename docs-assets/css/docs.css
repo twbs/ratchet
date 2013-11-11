@@ -42,8 +42,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  -webkit-animation-name: fadeintext;
-  animation-name: fadeintext;
+  -webkit-animation-name: fadein;
+  animation-name: fadein;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
@@ -65,6 +65,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   list-style: none;
   text-align: center;
+  -webkit-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 .social li {
   height: 20px;
@@ -202,6 +206,10 @@ hr {
     background-image: url("../img/iphone.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    -webkit-animation-name: fadein;
+    animation-name: fadein;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
   }
 
   .iphone .iphone-content {
@@ -417,24 +425,7 @@ hr {
     margin-right: -30px;
   }
 }
-@-webkit-keyframes fadeintext {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.9);
-  }
-
-  50% {
-    opacity: 0;
-    -webkit-transform: scale(0.9);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-  }
-}
-
-@-webkit-keyframes fadeinsocial {
+@-webkit-keyframes fadein {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.9);

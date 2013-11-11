@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  @include animation-name(fadeintext);
+  @include animation-name(fadein);
   @include animation-duration(2s);
 
   .docs-title {
@@ -67,6 +67,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   list-style: none;
   text-align: center;
+  @include animation-name(fadein);
+  @include animation-duration(2s);
 
   li {
     height: 20px;
@@ -205,6 +207,8 @@ hr {
     background-image: url("../img/iphone.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    @include animation-name(fadein);
+    @include animation-duration(2s);
   }
   .iphone .iphone-content {
     position: absolute;
@@ -353,22 +357,7 @@ hr {
 // Animations
 // --------------------------------------------------
 
-@-webkit-keyframes fadeintext {
-  0% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
-  }
-  50% {
-   opacity: 0;
-   -webkit-transform: scale(.9);
-  }
-  100% {
-   opacity: 1;
-   -webkit-transform: scale(1);
-  }
-}
-
-@-webkit-keyframes fadeinsocial {
+@-webkit-keyframes fadein {
   0% {
    opacity: 0;
    -webkit-transform: scale(.9);
