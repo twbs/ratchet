@@ -72,7 +72,7 @@
   var getPopover = function (e) {
     var anchor = findPopovers(e.target);
 
-    if (!anchor || !anchor.hash) return;
+    if (!anchor || !anchor.hash || (anchor.hash.indexOf("/") > 0)) return;
 
     popover = document.querySelector(anchor.hash);
 
@@ -121,7 +121,7 @@
     'slide-out' : 'slide-in',
     'fade'      : 'fade'
   };
-  
+
   var bars = {
     bartab             : '.bar-tab',
     bartitle           : '.bar-title',
