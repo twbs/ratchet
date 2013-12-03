@@ -1,5 +1,23 @@
 {
   "name": "ratchet",
+  "repo": "maker/ratchet",
+  "description": "Prototype mobile apps with simple HTML, CSS and JS components.",
   "version": "1.0.2",
-  "main": ["./dist/ratchet.js", "./dist/ratchet.css"]
+  "main": "dist/ratchet.js",
+  "scripts": [
+    "dist/ratchet.js"
+  ],
+  "styles": [
+    "dist/ratchet.css"
+  ],
+  "keywords": [
+    "ratchet",
+    "mobile",
+    "app",
+    "prototyping",
+    "development"
+  ],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT"
 }
