@@ -881,7 +881,7 @@ input[type="button"] {
   font-size: 12px;
   font-weight: 400;
   list-style: none;
-  background-color: transparent;
+  background-color: white;
   border: 1px solid #428bca;
   border-radius: 4px;
   -webkit-box-orient: horizontal;
@@ -894,8 +894,6 @@ input[type="button"] {
   border-left: 1px solid #428bca;
   -webkit-box-flex: 1;
   box-flex: 1;
-  -webkit-transition: background-color 0.1s linear;
-  transition: background-color 0.1s linear;
 }
 .segmented-controller li > a {
   display: block;

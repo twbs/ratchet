@@ -11,7 +11,7 @@
   font-size: 12px;
   font-weight: $font-weight-light;
   list-style: none;
-  background-color: transparent;
+  background-color: $chrome-color;
   border: 1px solid $primary-color;
   border-radius: 4px;
   @include box-orient(horizontal);
@@ -23,7 +23,6 @@
     white-space: nowrap;
     border-left: 1px solid $primary-color;
     @include box-flex(1);
-    @include transition(background-color .1s linear);
     
     // Link that fills each section
     > a {
