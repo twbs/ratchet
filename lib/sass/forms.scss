@@ -41,15 +41,12 @@ input[type="color"],
   -webkit-appearance: none;
 }
 
-// Fully round search input
+// Rounded search input
 input[type=search] {
   height: 34px;
   padding: 0 10px;
   font-size: 16px;
-  text-align: center;
-  border-radius: 6px;
-  border-width: 0;
-  background-color: rgba(0,0,0,.1);
+  border-radius: 20px;
   box-sizing: border-box; // Override content-box in normalize
 }
 input[type=search]:focus {
@@ -87,30 +84,28 @@ select {
 .input-group input {
   margin-bottom: 0;
   background-color: transparent;
-  border: 0;
+  border-bottom: $border-default;
   border-radius: 0;
   @include box-shadow(none);
-  @include hairline(single, #c8c7cc, 15px);
 }
 
 // Remove bottom border on last input to avoid double bottom border
 .input-group input:last-child {
-  background-image: none;
+  border-bottom: 0;
 }
 
 // Input groups with labels
 // --------------------------------------------------
 
-
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
   overflow: hidden;
-  @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
+  border-bottom: $border-default;
 }
 
 // Remove bottom border on last input-row to avoid double bottom border
 .input-row:last-child {
-  background-image: none;
+  border-bottom: 0;
 }
 
 // Labels get floated left with a set percentage width
@@ -128,7 +123,7 @@ select {
   width: 65%;
   padding-left: 0;
   margin-bottom: 0;
-  background-image: none;
+  border: 0;
 }
 
 

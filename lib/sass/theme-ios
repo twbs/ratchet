@@ -9,8 +9,8 @@
 // --------------------------------------------------
 
 // Main theme colors
-$primary-color: #007aff;
-$chrome-color: rgba(247,247,247,.98);
+$primary-color:  #007aff;
+$chrome-color:   rgba(247,247,247,.98);
 
 // Action colors
 $default-color:  #929292;
@@ -23,18 +23,11 @@ $negative-color: #dd524d;
 $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
 
 
-// Misc variables
-// --------------------------------------------------
-
-// Hairline dividers (.5px tall for retina devices.)
-$hairline: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='1'><rect fill='#e6e6e6' x='0' y='0' width='320' height='0.5'/></svg>"); // Thanks to @madrobby
-
-
 // Bars
 // --------------------------------------------------
 
 .bar {
-  border-bottom-width: 0;
+  border-bottom: 0;
   background-color: $chrome-color;
   @include box-shadow(0 0 1px rgba(0,0,0,.85));
 }
@@ -46,3 +39,66 @@ $hairline: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' 
 .popover .bar-nav {
   border-bottom: 1px solid rgba(0,0,0,.15);
 }
+
+
+// Table views
+// --------------------------------------------------
+
+.table-view {
+  .table-view-cell {
+    border-bottom: 0;
+    @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
+  
+    // Remove the border from the last table view item
+    &:last-child {
+      background-image: none;
+    }
+  }
+  // Table view dividers
+  // --------------------------------------------------
+
+  .table-view-divider {
+    border-top: 0;
+    border-bottom: 0;
+    @include hairline(double, #c8c7cc, 0);  // Double (top and bottom) grey border with no offset.
+  }
+}
+
+
+// Forms
+// --------------------------------------------------
+input[type=search] {
+  text-align: center;
+  background-color: rgba(0,0,0,.1);
+  border: 0;
+  border-radius: 6px;
+}
+input[type=search]:focus {
+  text-align: left;
+}
+
+// Input groups (cluster multiple inputs together into a single group)
+// -------------------------------------------------------------------
+.input-group input {
+  border-bottom: 0;
+  @include hairline(single, #c8c7cc, 15px);
+}
+// Remove bottom border on last input to avoid double bottom border
+.input-group input:last-child {
+  background-image: none;
+}
+
+// Input groups with labels
+// --------------------------------------------------
+
+// To use labels with input groups, wrap a label and an input in an .input-row
+.input-row {
+  border-bottom: 0;
+  @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
+}
+// Remove bottom border on last input-row to avoid double bottom border
+.input-row:last-child,
+.input-row label + input {
+  background-image: none;
+}
+

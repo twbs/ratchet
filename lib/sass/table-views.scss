@@ -12,14 +12,12 @@
   .table-view-cell {
     position: relative;
     padding: 11px 60px 12px 15px; // Given extra right padding to accomodate badges, chevrons or buttons. Extra 1px bottom padding given for hairline divider.
-    @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
-
+    border-bottom: $border-default;
 
     // Remove the border from the last table view item
-    &:last-child {
-      background-image: none;
+    &:last-child { 
+      border-bottom: 0;
     }
-
     // If it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
     > a:not([class*="button"]) {
       position: relative;
@@ -32,14 +30,13 @@
         background-color: #eee;
       }
     }
-
     p {
       margin: 0;
     }
   }
 
 
-  // Inset table views
+  // Inset table views (Will be deprecated and changed into `.card` component)
   // --------------------------------------------------
 
   &.inset {
@@ -47,7 +44,7 @@
     margin-right: 10px;
     margin-left: 10px;
     border: 1px solid rgba(0, 0, 0, .15);
-    border-radius: 6px;
+    border-radius: $border-radius;
 
     // Remove border from last standard list items to avoid double border at top/bottom of table views
     li:last-child {
@@ -67,18 +64,19 @@
     margin-left: 0;
     color: #999;
     font-weight: $font-weight;
+    border-top: $border-default;
+    border-bottom: $border-default;
     background-color: #fafafa;
-    @include hairline(double, #c8c7cc, 0);  // Double (top and bottom) grey border with no offset.
 
     // Rounding first divider on inset lists and remove border on the top
     &:first-child {
       top: 0;
-      border-radius: 6px 6px 0 0;
+      border-radius: $border-radius $border-radius 0 0;
     }
 
     // Rounding last divider on inset table views
     &:last-child {
-      border-radius: 0 0 6px 6px;
+      border-radius: 0 0 $border-radius $border-radius;
     }
   }
 
