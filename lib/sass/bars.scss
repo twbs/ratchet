@@ -9,8 +9,9 @@
   z-index: 10;
   height: $bar-base-height;
   padding: 5px $bar-side-spacing;
+  border-bottom: 1px solid #ddd;
   background-color: $chrome-color;
-  @include box-shadow(0 0 1px rgba(0,0,0,.85));
+
 
   // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
@@ -130,13 +131,14 @@
   }
 }
 
+
 // Nav bar in popovers
 // --------------------------------------------------
 
 .popover .bar-nav {
   padding-right: 15px;
   padding-left: 15px;
-  border-bottom: 1px solid rgba(0,0,0,.15);
+  border-bottom: 1px solid #ddd;
   border-radius: 12px 12px 0 0;
   @include box-shadow(none);
 

@@ -1,0 +1,48 @@
+//
+// iOS theme
+// Provides the visual and interaction style from iOS
+//
+// --------------------------------------------------
+
+
+// Colors
+// --------------------------------------------------
+
+// Main theme colors
+$primary-color: #007aff;
+$chrome-color: rgba(247,247,247,.98);
+
+// Action colors
+$default-color:  #929292;
+$positive-color: #4cd964;
+$negative-color: #dd524d;
+
+
+// iOS style transitions
+// --------------------------------------------------
+$timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
+
+
+// Misc variables
+// --------------------------------------------------
+
+// Hairline dividers (.5px tall for retina devices.)
+$hairline: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='1'><rect fill='#e6e6e6' x='0' y='0' width='320' height='0.5'/></svg>"); // Thanks to @madrobby
+
+
+// Bars
+// --------------------------------------------------
+
+.bar {
+  border-bottom-width: 0;
+  background-color: $chrome-color;
+  @include box-shadow(0 0 1px rgba(0,0,0,.85));
+}
+
+
+// Nav bar in popovers
+// --------------------------------------------------
+
+.popover .bar-nav {
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}

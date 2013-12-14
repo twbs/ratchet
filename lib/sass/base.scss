@@ -55,13 +55,13 @@ strong {
 // Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
 // Note: For these to work, content must come after both bars in the markup
 .bar-nav ~ .content {
-  padding-top: 44px;
+  padding-top: $bar-base-height;
 }
 .bar-tab ~ .content {
-  padding-bottom: 51px;
+  padding-bottom: $bar-tab-height;
 }
 .bar-header-secondary ~ .content {
-  padding-top: 88px;
+  padding-top: $bar-base-height*2;
 }
 
 // Utility classes
