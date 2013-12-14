@@ -64,9 +64,35 @@ $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
   }
 }
 
+.popover .table-view {
+  border-radius: 12px;
+}
+
 
 // Forms
 // --------------------------------------------------
+
+select,
+textarea,
+input[type="text"],
+input[type=search],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+.input-group {
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+// Rounded search input
 input[type=search] {
   text-align: center;
   background-color: rgba(0,0,0,.1);
@@ -80,7 +106,7 @@ input[type=search]:focus {
 // Input groups (cluster multiple inputs together into a single group)
 // -------------------------------------------------------------------
 .input-group input {
-  border-bottom: 0;
+  border: 0;
   @include hairline(single, #c8c7cc, 15px);
 }
 // Remove bottom border on last input to avoid double bottom border
@@ -102,3 +128,44 @@ input[type=search]:focus {
   background-image: none;
 }
 
+
+// Buttons
+// --------------------------------------------------
+
+[class*="button"] {
+  color: $default-color;
+  background-color: transparent;
+  border-radius: 4px;
+  @include transition(background-color, opacity, color);
+  @include transition-duration(.2s);
+  @include transition-timing-function(linear);
+
+  // Active & filled button styles
+  &:active,
+  &.active,
+  &.button-filled {
+    color: #fff;
+    background-color: $default-color;
+  }
+}
+
+// Link button (Buttons that look like links)
+.button-link {
+  &:active,
+  &.active {
+    color: $primary-color;
+    opacity: .3;
+  }
+}
+
+//
+// Badges
+// --------------------------------------------------
+
+[class*="badge"] {
+  color: $default-color;
+
+  &.badge-filled {
+    color: #fff;
+  }
+}

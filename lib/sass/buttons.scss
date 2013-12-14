@@ -10,23 +10,22 @@
   font-size: $button-font-size;
   font-weight: $font-weight-light;
   line-height: 1.15; // Center button text on the phone.
-  color: $default-color;
+  color: #333;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid $default-color;
-  border-radius: 4px;
-  @include transition(background-color, opacity, color);
-  @include transition-duration(.2s);
-  @include transition-timing-function(linear);
+  background-color: $chrome-color;
+  border: $border-default;
+  border-radius: $border-radius;
+
+  &.button-filled {
+    background-color: $chrome-color;
+  }
 
   // Active & filled button styles
   &:active,
-  &.active,
-  &.button-filled {
-    color: #fff;
-    background-color: $default-color;
+  &.active {
+    background-color: #ebebeb;
   }
 
   // Disabled styles & filled button active styles
@@ -49,6 +48,7 @@
   &:active,
   &.active,
   &.button-filled {
+    color: #fff;
     background-color: $primary-color;
   }
 }
@@ -61,6 +61,7 @@
   &:active,
   &.active,
   &.button-filled {
+    color: #fff;
     background-color: $positive-color;
   }
 }
@@ -73,6 +74,7 @@
   &:active,
   &.active,
   &.button-filled {
+    color: #fff;
     background-color: $negative-color;
   }
 }
@@ -84,8 +86,7 @@
 
   &:active,
   &.active {
-    color: $primary-color;
-    opacity: .3;
+    color: darken($primary-color, 10%);
   }
   &.button-filled {
     background-color: transparent;
@@ -115,6 +116,7 @@
     font-weight: $font-weight-light;
     line-height: $bar-base-height;
     color: $primary-color;
+    background-color: transparent;
     border: 0;
     @include transition(opacity .2s linear);
     @include box-flex(0);

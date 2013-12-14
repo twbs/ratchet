@@ -500,7 +500,7 @@ strong {
   margin-left: 0;
   overflow: auto;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 6px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -535,7 +535,7 @@ input[type="color"],
   margin-bottom: 10px;
   line-height: 21px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #dddddd;
   border-radius: 3px;
   outline: none;
   -webkit-appearance: none;
@@ -578,6 +578,9 @@ select {
   margin-bottom: 0;
   background-color: transparent;
   border-bottom: 1px solid #dddddd;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -625,23 +628,19 @@ select {
   font-size: 12px;
   font-weight: 400;
   line-height: 1.15;
-  color: white;
+  color: #333;
   text-align: center;
   vertical-align: top;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 4px;
-  -webkit-transition: background-color, opacity, color;
-  transition: background-color, opacity, color;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear;
-}
-[class*="button"]:active, [class*="button"].active, [class*="button"].button-filled {
-  color: #fff;
   background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+[class*="button"].button-filled {
+  background-color: white;
+}
+[class*="button"]:active, [class*="button"].active {
+  background-color: #ebebeb;
 }
 [class*="button"]:disabled, [class*="button"].disabled, [class*="button"].button-filled:active {
   opacity: .6;
@@ -652,6 +651,7 @@ select {
   border: 1px solid #428bca;
 }
 .button-primary:active, .button-primary.active, .button-primary.button-filled {
+  color: #fff;
   background-color: #428bca;
 }
 
@@ -660,6 +660,7 @@ select {
   border: 1px solid #5cb85c;
 }
 .button-positive:active, .button-positive.active, .button-positive.button-filled {
+  color: #fff;
   background-color: #5cb85c;
 }
 
@@ -668,6 +669,7 @@ select {
   border: 1px solid #d9534f;
 }
 .button-negative:active, .button-negative.active, .button-negative.button-filled {
+  color: #fff;
   background-color: #d9534f;
 }
 
@@ -676,8 +678,7 @@ select {
   border: none;
 }
 .button-link:active, .button-link.active {
-  color: #428bca;
-  opacity: .3;
+  color: #3071a9;
 }
 .button-link.button-filled {
   background-color: transparent;
@@ -699,6 +700,7 @@ select {
   font-weight: 400;
   line-height: 44px;
   color: #428bca;
+  background-color: transparent;
   border: 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
@@ -818,14 +820,13 @@ input[type="button"] {
 
 [class*="badge"] {
   display: inline-block;
-  color: white;
+  color: #333;
 }
 [class*="badge"].badge-filled {
   padding: 2px 9px;
-  color: #fff;
   font-size: 13px;
   line-height: 1;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.15);
   border-radius: 100px;
 }
 
@@ -833,6 +834,7 @@ input[type="button"] {
   color: #428bca;
 }
 .badge-primary.badge-filled {
+  color: #fff;
   background-color: #428bca;
 }
 
@@ -840,6 +842,7 @@ input[type="button"] {
   color: #5cb85c;
 }
 .badge-positive.badge-filled {
+  color: #fff;
   background-color: #5cb85c;
 }
 
@@ -847,6 +850,7 @@ input[type="button"] {
   color: #d9534f;
 }
 .badge-negative.badge-filled {
+  color: #fff;
   background-color: #d9534f;
 }
 
@@ -859,7 +863,7 @@ input[type="button"] {
 
 .button-filled .badge-filled,
 [class*="button"]:active .badge-filled {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .button-block [class*="badge"] {

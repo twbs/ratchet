@@ -35,7 +35,7 @@ input[type="color"],
   margin-bottom: 10px;
   line-height: $line-height-default;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, .2);
+  border: $border-default;
   border-radius: 3px;
   outline: none;
   -webkit-appearance: none;
@@ -85,6 +85,9 @@ select {
   margin-bottom: 0;
   background-color: transparent;
   border-bottom: $border-default;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   border-radius: 0;
   @include box-shadow(none);
 }

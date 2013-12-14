@@ -4,14 +4,13 @@
 
 [class*="badge"] {
   display: inline-block;
-  color: $default-color;
+  color: #333;
 
   &.badge-filled {
     padding: 2px 9px;
-    color: #fff;
     font-size: 13px;
     line-height: 1;
-    background-color: $default-color;
+    background-color: rgba(0,0,0,.15);
     border-radius: 100px;
   }
 }
@@ -25,6 +24,7 @@
   color: $primary-color;
 
   &.badge-filled {
+    color: #fff;
     background-color: $primary-color;
   }
 }
@@ -34,6 +34,7 @@
   color: $positive-color;
 
   &.badge-filled {
+    color: #fff;
     background-color: $positive-color;
   }
 }
@@ -43,6 +44,7 @@
   color: $negative-color;
 
   &.badge-filled {
+    color: #fff;
     background-color: $negative-color;
   }
 }
@@ -62,7 +64,7 @@
 // Styles for filled badges within filled buttons
 .button-filled .badge-filled,
 [class*="button"]:active .badge-filled {
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0,0,0,.15);
 }
 
 // Position badges within block level buttons
