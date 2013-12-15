@@ -111,9 +111,17 @@ input[type=search] {
 input[type=search]:focus {
   text-align: left;
 }
+select,
+textarea,
+.input-group {
+  height: auto;
+}
 
 // Input groups (cluster multiple inputs together into a single group)
 // -------------------------------------------------------------------
+.input-group {
+  padding: 0;
+}
 .input-group input {
   border: 0;
   @include hairline(single, #c8c7cc, 15px);
@@ -142,6 +150,7 @@ input[type=search]:focus {
 // --------------------------------------------------
 
 [class*="button"] {
+  border: 1px solid $default-color;
   color: $default-color;
   background-color: transparent;
   @include transition(background-color, opacity, color);
@@ -154,6 +163,56 @@ input[type=search]:focus {
   &.button-filled {
     color: #fff;
     background-color: $default-color;
+  }
+}
+
+
+// Other button types
+// --------------------------------------------------
+
+// Primary button (Default color is blue)
+.button-primary {
+  color: $primary-color;
+  border: 1px solid $primary-color;
+
+  &:active,
+  &.active,
+  &.button-filled {
+    background-color: $primary-color;
+  }
+}
+
+// Positive button (Default color is green)
+.button-positive {
+  color: $positive-color;
+  border: 1px solid $positive-color;
+
+  &:active,
+  &.active,
+  &.button-filled {
+    background-color: $positive-color;
+  }
+}
+
+// Negative button (Default color is red)
+.button-negative {
+  color: $negative-color;
+  border: 1px solid $negative-color;
+
+  &:active,
+  &.active,
+  &.button-filled {
+    background-color: $negative-color;
+  }
+}
+
+// Link button (Buttons that look like links)
+.button-link {
+  color: $primary-color;
+
+  &:active,
+  &.active {
+    color: $primary-color;
   }
 }
 
@@ -170,7 +229,20 @@ input[type=search]:focus {
 // --------------------------------------------------
 
 .bar-nav {
-  @include transition(opacity .2s linear);
+  [class*="button"] {
+    color: $primary-color;
+    @include transition(opacity .2s linear);
+  }
+
+  // Directional buttons in nav bars
+  // --------------------------------------------------
+
+  .button-prev:before,
+  .button-prev:after,
+  .button-next:before,
+  .button-next:after {
+    background-color: $primary-color;
+  }
 }
 
 
@@ -182,7 +254,41 @@ input[type=search]:focus {
   color: $default-color;
 
   &.badge-filled {
+    color: $default-color;
+  }
+}
+
+
+// Badge modifiers
+// --------------------------------------------------
+
+// Main badge
+.badge-primary {
+  color: $primary-color;
+
+  &.badge-filled {
     color: #fff;
+    background-color: $primary-color;
+  }
+}
+
+// Positive badge
+.badge-positive {
+  color: $positive-color;
+
+  &.badge-filled {
+    color: #fff;
+    background-color: $positive-color;
+  }
+}
+
+// Negative badge
+.badge-negative {
+  color: $negative-color;
+
+  &.badge-filled {
+    color: #fff;
+    background-color: $negative-color;
   }
 }
 
@@ -193,9 +299,21 @@ input[type=search]:focus {
 
 .segmented-controller {
   background-color: transparent;
+  border: 1px solid $primary-color;
 
   li {
+    border-left: 1px solid $primary-color;
     @include transition(background-color .1s linear);
+    
+    // Link that fills each section
+    > a {
+      color: $primary-color;
+    }
+
+    // Selected segment of controller
+    &.selected {
+      background-color: $primary-color;
+    }
   }
 }
 
@@ -243,6 +361,7 @@ input[type=search]:focus {
   }
   // Active state for toggle
   &.active {
+    border: 2px solid $positive-color;
     background-color: transparent;
     @include box-shadow(inset 0 0 0 13px $positive-color);
 
@@ -250,6 +369,10 @@ input[type=search]:focus {
     &:active .toggle-handle,
     .toggle-handle:active {
       @include transform(translate3d(10px,0,0) !important); // Evil important tag is used to overwrite js.
+    }
+
+    .toggle-handle {
+      border-color: $positive-color;
     }
   }
 }
