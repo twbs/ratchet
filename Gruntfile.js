@@ -31,8 +31,7 @@ module.exports = function(grunt) {
           '<%= meta.srcPath %>js/push.js',
           '<%= meta.srcPath %>js/segmented-controllers.js',
           '<%= meta.srcPath %>js/sliders.js',
-          '<%= meta.srcPath %>js/toggles.js',
-          '<%= meta.srcPath %>js/alerts.js'
+          '<%= meta.srcPath %>js/toggles.js'
         ],
         dest: '<%= meta.distPath %><%= pkg.name %>.js'
       }

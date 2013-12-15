@@ -979,55 +979,6 @@ input[type="button"] {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-.alert {
-  position: fixed;
-  right: 15px;
-  left: 15px;
-  bottom: 65px;
-  padding: 15px;
-  color: #fff;
-  border-radius: 3px;
-  z-index: 10;
-  -webkit-transition: opacity;
-  transition: opacity;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear;
-}
-.alert .close {
-  position: relative;
-  top: -2px;
-  float: right;
-  color: inherit;
-  cursor: pointer;
-  -webkit-transition: opacity;
-  transition: opacity;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear;
-}
-.alert .close:active {
-  opacity: .6;
-}
-.alert.dismiss {
-  opacity: 0;
-}
-
-.alert-positive {
-  background-color: rgba(92, 184, 92, 0.97);
-}
-
-.alert-negative {
-  background-color: rgba(217, 83, 79, 0.97);
-}
-
-.alert-inline {
-  position: static;
-  margin: 15px;
-}
-
 .modal {
   position: fixed;
   top: 0;
