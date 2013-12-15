@@ -46,7 +46,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss',
-          '<%= meta.distPath %><%= pkg.name %>-theme.css': '<%= meta.srcPath %>sass/theme-classic.scss'
+          '<%= meta.distPath %><%= pkg.name %>-theme.css': '<%= meta.srcPath %>sass/theme-classic.scss',
+          '<%= meta.distPath %>ios-theme.css': '<%= meta.srcPath %>sass/theme-ios.scss'
         }
       }
     },
