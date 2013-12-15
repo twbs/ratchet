@@ -229,6 +229,9 @@ textarea,
   -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
+.popover:after {
+  border-bottom: 15px solid rgba(247, 247, 247, 0.98);
+}
 
 .modal {
   -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);

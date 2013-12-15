@@ -1151,52 +1151,66 @@ input[type="button"] {
 
 .icon {
   display: inline-block;
-  font-family: "Ratchicons", sans-serif;
+  font-family: Ratchicons;
   font-size: 24px;
   text-decoration: none;
   line-height: 1;
   cursor: default;
   -webkit-font-smoothing: antialiased;
 }
-.icon.icon-down:before {
+
+.icon-down:before {
   content: '\f00b';
 }
-.icon.icon-download:before {
+
+.icon-download:before {
   content: '\f005';
 }
-.icon.icon-left:before {
+
+.icon-left:before {
   content: '\f00c';
 }
-.icon.icon-list:before {
+
+.icon-list:before {
   content: '\f008';
 }
-.icon.icon-pages:before {
+
+.icon-pages:before {
   content: '\f000';
 }
-.icon.icon-refresh:before {
+
+.icon-refresh:before {
   content: '\f009';
 }
-.icon.icon-right:before {
+
+.icon-right:before {
   content: '\f00d';
 }
-.icon.icon-search:before {
+
+.icon-search:before {
   content: '\f007';
 }
-.icon.icon-share:before {
+
+.icon-share:before {
   content: '\f00a';
 }
-.icon.icon-sound:before {
+
+.icon-sound:before {
   content: '\f001';
 }
-.icon.icon-sound2:before {
+
+.icon-sound2:before {
   content: '\f002';
 }
-.icon.icon-sound3:before {
+
+.icon-sound3:before {
   content: '\f003';
 }
-.icon.icon-sound4:before {
+
+.icon-sound4:before {
   content: '\f004';
 }
-.icon.icon-up:before {
+
+.icon-up:before {
   content: '\f00e';
 }

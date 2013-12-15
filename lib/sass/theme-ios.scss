@@ -325,6 +325,10 @@ textarea,
 .popover {
   border-radius: 12px;
   @include transition(-webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
+
+  &:after {
+    border-bottom: 15px solid $chrome-color;
+  }
 }
 
 
