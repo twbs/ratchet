@@ -83,6 +83,7 @@
   bottom: 0;
   height: $bar-tab-height;
   padding: 0;
+  border-top: $border-default;
 }
 
 // Wrapper for individual tab
@@ -105,7 +106,7 @@
 
   .tab-label,
   .icon {
-    color: $default-color;
+    color: #929292;
   }
 
   // Label for tab

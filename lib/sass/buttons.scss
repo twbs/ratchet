@@ -16,7 +16,7 @@
   cursor: pointer;
   background-color: $chrome-color;
   border: $border-default;
-  border-radius: $border-radius;
+  border-radius: 4px;
 
   &.button-filled {
     background-color: $chrome-color;
@@ -105,7 +105,6 @@
 // --------------------------------------------------
 
 .bar-nav {
-
   // Generic style for all buttons in .bar-title
   [class*="button"] {
     position: relative;
@@ -118,7 +117,6 @@
     color: $primary-color;
     background-color: transparent;
     border: 0;
-    @include transition(opacity .2s linear);
     @include box-flex(0);
   }
 

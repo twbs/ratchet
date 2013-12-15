@@ -30,8 +30,8 @@ input[type="tel"],
 input[type="color"],
 .input-group {
   width: 100%;
-  height: 40px;
-  padding: 10px 15px;
+  height: 35px;
+  padding: 0 10px;
   margin-bottom: 10px;
   line-height: $line-height-default;
   background-color: #fff;
@@ -43,7 +43,6 @@ input[type="color"],
 
 // Rounded search input
 input[type=search] {
-  height: 34px;
   padding: 0 10px;
   font-size: 16px;
   border-radius: 20px;

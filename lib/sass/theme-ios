@@ -32,6 +32,11 @@ $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
   @include box-shadow(0 0 1px rgba(0,0,0,.85));
 }
 
+.bar-tab {
+  border-top: 0;
+  @include box-shadow(0 0 -1px rgba(0,0,0,.85));
+}
+
 
 // Nav bar in popovers
 // --------------------------------------------------
@@ -89,11 +94,13 @@ input[type="url"],
 input[type="tel"],
 input[type="color"],
 .input-group {
-  border: 1px solid rgba(0, 0, 0, .2);
+  height: 40px;
+  padding: 10px 15px;  border: 1px solid rgba(0, 0, 0, .2);
 }
 
 // Rounded search input
 input[type=search] {
+  height: 34px;
   text-align: center;
   background-color: rgba(0,0,0,.1);
   border: 0;
@@ -135,7 +142,6 @@ input[type=search]:focus {
 [class*="button"] {
   color: $default-color;
   background-color: transparent;
-  border-radius: 4px;
   @include transition(background-color, opacity, color);
   @include transition-duration(.2s);
   @include transition-timing-function(linear);
@@ -156,6 +162,13 @@ input[type=search]:focus {
     color: $primary-color;
     opacity: .3;
   }
+}
+
+// Buttons in nav bars
+// --------------------------------------------------
+
+.bar-nav {
+  @include transition(opacity .2s linear);
 }
 
 
@@ -193,6 +206,52 @@ input[type=search]:focus {
   border-radius: 12px;
   @include transition(-webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
 }
+
+
+//
+// Modal styles
+// --------------------------------------------------
+
+.modal {
+  @include transition-timing-function($timing-fuction);
+
+  // Active modal
+  &.active {
+    @include transition-timing-function($timing-fuction);
+  }
+}
+
+//
+// Toggles styles
+// --------------------------------------------------
+.toggle {
+  border: 2px solid #e6e6e6;
+  @include box-shadow(inset 0 0 0 0 #e1e1e1);
+  @include transition-property(box-shadow, border);
+  @include transition-duration(.2s);
+
+  // Sliding handle
+  .toggle-handle {
+    border: 1px solid rgba(0, 0, 0, .2);
+    @include box-shadow(0 3px 3px rgba(0,0,0,.08));
+    @include transition-property(-webkit-transform, border, width);
+  }
+  &:active .toggle-handle {
+    width: 35px;
+  }
+  // Active state for toggle
+  &.active {
+    background-color: transparent;
+    @include box-shadow(inset 0 0 0 13px $positive-color);
+
+    // Handle when the handle and the container is active
+    &:active .toggle-handle,
+    .toggle-handle:active {
+      @include transform(translate3d(10px,0,0) !important); // Evil important tag is used to overwrite js.
+    }
+  }
+}
+
 
 //
 // Push styles
