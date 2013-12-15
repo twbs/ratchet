@@ -28,7 +28,7 @@ $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
 // Bars
 // --------------------------------------------------
 
-.bar {
+[class*="bar-"] {
   border-bottom: 0;
   background-color: $chrome-color;
   @include box-shadow(0 0 1px rgba(0,0,0,.85));

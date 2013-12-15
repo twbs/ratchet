@@ -22,7 +22,7 @@
 
     &.left {
       z-index: 1;
-      @include transform(translate3d(100%, 0, 0));
+      @include transform(translate3d(-100%, 0, 0));
     }
 
     &.right {
