@@ -311,10 +311,6 @@ strong {
 
 .bar-nav {
   top: 0;
-  display: -webkit-box;
-  display: box;
-  -webkit-box-orient: horizontal;
-  box-orient: horizontal;
 }
 
 .title {
@@ -702,22 +698,15 @@ select {
   color: #428bca;
   background-color: transparent;
   border: 0;
-  -webkit-box-flex: 0;
-  box-flex: 0;
 }
-.bar-nav .title + [class*="button"]:last-child,
-.bar-nav .button + [class*="button"]:last-child,
 .bar-nav [class*="button"].pull-right {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+  margin-left: 10px;
+}
+.bar-nav [class*="button"].pull-left {
+  margin-right: 10px;
 }
 .bar-nav .button:active,
 .bar-nav .button.active,
-.bar-nav .button-prev:active,
-.bar-nav .button-prev.active,
-.bar-nav .button-next:active,
-.bar-nav .button-next.active,
 .bar-nav .button-primary:active,
 .bar-nav .button-primary.active {
   color: #428bca;
@@ -826,10 +815,8 @@ input[type="button"] {
 }
 
 .segmented-controller {
-  display: -webkit-box;
-  display: box;
+  display: table;
   padding: 0;
-  margin: 0 0 10px 0;
   overflow: hidden;
   font-size: 12px;
   font-weight: 400;
@@ -837,20 +824,19 @@ input[type="button"] {
   background-color: white;
   border: 1px solid #428bca;
   border-radius: 4px;
-  -webkit-box-orient: horizontal;
-  box-orient: horizontal;
 }
 .segmented-controller li {
+  display: table-cell;
   overflow: hidden;
+  width: 1%;
   text-align: center;
   white-space: nowrap;
   border-left: 1px solid #428bca;
-  -webkit-box-flex: 1;
-  box-flex: 1;
 }
 .segmented-controller li > a {
   display: block;
-  padding: 6px 16px 7px;
+  padding-top: 6px;
+  padding-bottom: 7px;
   overflow: hidden;
   line-height: 1;
   color: #428bca;
@@ -877,18 +863,9 @@ input[type="button"] {
 }
 
 [class*="bar-"] .segmented-controller {
-  margin: 3px 0;
-  -webkit-box-flex: 1;
-  box-flex: 1;
-}
-
-.bar-nav .segmented-controller {
-  margin-bottom: 4px;
-}
-
-[class*="bar-"] .segmented-controller + [class*="button"],
-[class*="bar-"] [class*="button"] + .segmented-controller {
-  margin-left: 10px;
+  margin-top: 3px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .popover {

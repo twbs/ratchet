@@ -3,10 +3,8 @@
 // --------------------------------------------------
 
 .segmented-controller {
-  display: -webkit-box;
-  display: box;
+  display: table;
   padding: 0;
-  margin: 0 0 10px 0;
   overflow: hidden;
   font-size: 12px;
   font-weight: $font-weight-light;
@@ -14,20 +12,21 @@
   background-color: $chrome-color;
   border: 1px solid $primary-color;
   border-radius: 4px;
-  @include box-orient(horizontal);
 
   // Section within controller
   li {
+    display: table-cell;
     overflow: hidden;
+    width: 1%;
     text-align: center;
     white-space: nowrap;
     border-left: 1px solid $primary-color;
-    @include box-flex(1);
     
     // Link that fills each section
     > a {
       display: block;
-      padding: 6px 16px 7px;
+      padding-top: 6px;
+      padding-bottom: 7px;
       overflow: hidden;
       line-height: 1;
       color: $primary-color;
@@ -70,15 +69,7 @@
 
 // Remove standard segmented bottom margin
 [class*="bar-"] .segmented-controller {
-  margin: 3px 0;
-  @include box-flex(1);
-}
-.bar-nav .segmented-controller {
-  margin-bottom: 4px;
-}
-
-// Add margins between segmented controllers and buttons
-[class*="bar-"] .segmented-controller + [class*="button"],
-[class*="bar-"] [class*="button"] + .segmented-controller {
-  margin-left: $bar-side-spacing; // Equal to the right and left padding on buttons & icons
+  margin-top: 3px;
+  margin-right: auto;
+  margin-left: auto;
 }

@@ -41,9 +41,6 @@
 // Bar docked to top of viewport for showing page title and actions
 .bar-nav {
   top: 0;
-  display: -webkit-box;
-  display: box;
-  @include box-orient(horizontal);
 }
 
 // Centered text in the .bar-nav 

@@ -117,26 +117,18 @@
     color: $primary-color;
     background-color: transparent;
     border: 0;
-    @include box-flex(0);
-  }
-
-  // Hacky way to right align buttons outside of flex-box system
-  // Note: is only absolutely positioned button, would be better if flex-box had an "align right" option
-  .title + [class*="button"]:last-child,
-  .button + [class*="button"]:last-child,
-  [class*="button"].pull-right {
-    position: absolute;
-    top: 5px; // Offsets the bar's vertical padding
-    right: $bar-side-spacing;
+    
+    &.pull-right { 
+      margin-left: $bar-side-spacing; 
+    }
+    &.pull-left { 
+      margin-right: $bar-side-spacing; 
+    }
   }
 
   // Override standard button active states
   .button:active,
   .button.active,
-  .button-prev:active,
-  .button-prev.active,
-  .button-next:active,
-  .button-next.active,
   .button-primary:active,
   .button-primary.active {
     color: $primary-color;

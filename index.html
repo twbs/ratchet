@@ -90,54 +90,54 @@ layout: default
 
         <div class="component-example component-example-fullbleed">
           <header class="bar-nav">
-            <a class="button">
+            <a class="button pull-left">
               Left
             </a>
-            <h1 class="title">Title</h1>
-            <a class="button">
+            <a class="button pull-right">
               Right
             </a>
+            <h1 class="title">Title</h1>
           </header>
         </div>
 
 {% highlight html %}
 <header class="bar-nav">
-  <a class="button">
+  <a class="button pull-left">
     Left
   </a>
-  <h1 class="title">Title</h1>
-  <a class="button">
+  <a class="button pull-right">
     Right
   </a>
+  <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}
 
       </article>
       <article class="component">
-        <h3 class="component-title">Title bar with directional buttons</h3>
+        <h3 class="component-title">Title bar with icons</h3>
         <p class="component-description">Directional buttons in a title bar should be used for navigational purposes.</p>
 
         <div class="component-example component-example-fullbleed">
           <header class="bar-nav">
-            <a class="button-prev">
-              Previous
+            <a class="button pull-left">
+              Left
+            </a>
+            <a class="button pull-right">
+              Right
             </a>
             <h1 class="title">Title</h1>
-            <a class="button-next">
-              Next
-            </a>
           </header>
         </div>
 
 {% highlight html %}
 <header class="bar-nav">
-  <a class="button-prev">
-    Previous
+  <a class="button pull-left">
+    Left
+  </a>
+  <a class="button pull-right">
+    Right
   </a>
   <h1 class="title">Title</h1>
-  <a class="button-next">
-    Next
-  </a>
 </header>
 {% endhighlight %}
 
@@ -149,8 +149,11 @@ layout: default
 
         <div class="component-example component-example-fullbleed">
           <header class="bar-nav">
-            <a class="button">
+            <a class="button pull-left">
               Left
+            </a>
+            <a class="button pull-right">
+              Right
             </a>
             <ul class="segmented-controller">
               <li class="selected">
@@ -162,17 +165,20 @@ layout: default
               <li>
                 <a>Three</a>
               </li>
+              <li>
+                <a>Four</a>
+              </li>
             </ul>
-            <a class="button">
-              Right
-            </a>
           </header>
         </div>
 
 {% highlight html %}
 <header class="bar-nav">
-  <a class="button">
+  <a class="button pull-left">
     Left
+  </a>
+  <a class="button pull-right">
+    Right
   </a>
   <ul class="segmented-controller">
     <li class="selected">
@@ -185,9 +191,6 @@ layout: default
       <a>Three</a>
     </li>
   </ul>
-  <a class="button">
-    Right
-  </a>
 </header>
 {% endhighlight %}
 
@@ -871,13 +874,12 @@ document
       <div class="component-example">
         <div id="myPopover" class="popover">  
           <header class="bar-nav">
-            <a class="button">
+            <a class="button pull-left">
               Left
-            </a>
-            <h3 class="title">Popover title</h3>
-            <a class="button">
+            </a><a class="button pull-right">
               Right
             </a>
+            <h3 class="title">Popover title</h3>
           </header>
           <ul class="table-view">
             <li class="table-view-cell">Item1</li>
@@ -895,13 +897,13 @@ document
 {% highlight html %}
 <div id="popover" class="popover">  
   <header class="bar-nav">
-    <a class="button">
+    <a class="button pull-left">
       Left
     </a>
-    <h3 class="title">Popover title</h3>
-    <a class="button">
+    <a class="button pull-right">
       Right
     </a>
+    <h3 class="title">Popover title</h3>
   </header>
   <ul class="table-view">
     <li class="table-view-cell">Item1</li>
