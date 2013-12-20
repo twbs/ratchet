@@ -1,8 +1,8 @@
 @import "mixins.scss";
 
 //
-// iOS theme
-// The visual and interaction styles from iOS
+// Android theme
+// The visual and interaction styles for Android
 //
 // --------------------------------------------------
 
@@ -10,40 +10,65 @@
 // Variables
 // --------------------------------------------------
 
+// Type (Change to Roboto)
+$font-family-default: "Helvetica Neue", Helvetica, sans-serif;
+$font-size-default: 17px;
+$font-weight: 500;
+$font-weight-light: 400;
+$line-height-default: 21px;
+
 // Colors
 // Main theme colors
-$primary-color:  #007aff;
-$chrome-color:   rgba(247,247,247,.98);
+$primary-color:  #33b5e5;
+$chrome-color:   #111;
 
 // Action colors
-$default-color:  #929292;
-$positive-color: #4cd964;
-$negative-color: #dd524d;
+$default-color:  #fff;
+$positive-color: #81c700;
+$negative-color: #f20754;
 
-// iOS style transitions
-$timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
+// Bars
+$bar-base-height:  50px;
+$bar-tab-height:   70px;
+
+// Borders
+$border-default: 1px solid #565656;
+$border-radius: 0;
 
 
 // Base
 // --------------------------------------------------
 
 .content {
-  background-color: #efeff4;
+  background-color: $chrome-color;
+  background: rgb(0,0,0); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(68,68,68,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(68,68,68,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(68,68,68,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(68,68,68,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(68,68,68,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(68,68,68,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
 }
-
 
 // Bars
 // --------------------------------------------------
 
 [class*="bar-"] {
-  border-bottom: 0;
+  height: $bar-base-height;
   background-color: $chrome-color;
-  @include box-shadow(0 0 1px rgba(0,0,0,.85));
+  border-bottom: $border-default;
 }
-
 .bar-tab {
-  border-top: 0;
-  @include box-shadow(0 0 -1px rgba(0,0,0,.85));
+  height: $bar-tab-height;
+  border-top: $border-default;
+}
+// Left aligned text in the .bar-nav 
+.title {
+  padding-left: 10px;
+  line-height: $bar-base-height;
+  color: $default-color;
+  text-align: left;
 }
 
 
@@ -74,7 +99,6 @@ $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
   .table-view-divider {
     border-top: 0;
     border-bottom: 0;
-    @include hairline(double, #c8c7cc, 0);  // Double (top and bottom) grey border with no offset.
   }
 }
 
@@ -131,7 +155,6 @@ textarea,
 }
 .input-group input {
   border: 0;
-  @include hairline(single, #c8c7cc, 15px);
 }
 // Remove bottom border on last input to avoid double bottom border
 .input-group input:last-child {
@@ -144,7 +167,6 @@ textarea,
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
   border-bottom: 0;
-  @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
 }
 // Remove bottom border on last input-row to avoid double bottom border
 .input-row:last-child,
@@ -343,15 +365,6 @@ textarea,
 // Modal styles
 // --------------------------------------------------
 
-.modal {
-  @include transition-timing-function($timing-fuction);
-
-  // Active modal
-  &.active {
-    @include transition-timing-function($timing-fuction);
-  }
-}
-
 //
 // Toggles styles
 // --------------------------------------------------
@@ -386,41 +399,4 @@ textarea,
       border-color: $positive-color;
     }
   }
-}
-
-
-//
-// Push styles
-// --------------------------------------------------
-.content {
-  
-  // Fade animation 
-  &.fade {
-    @include transition(opacity .2s ease-in-out);
-  }
-  // Slide animation
-  &.slide {
-    @include transition-timing-function ($timing-fuction);
-
-    // Adding the overlay
-    &.sliding-in,
-    &.right:not([class*="sliding-in"]) {
-      @include animation-name(fadeOverlay);
-      @include animation-duration(.4s);
-    }
-
-    &.right:not([class*="sliding-in"]) {
-      @include animation-direction(reverse);
-    }
-
-    &.left {
-      @include transform(translate3d(-20%, 0, 0)); // Creates the parallax effect
-    }
-  }
-}
-
-// Overlay animation for the slide transition
-@-webkit-keyframes fadeOverlay {
-  from { @include box-shadow(0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0)); }
-  to   { @include box-shadow(0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1)); }
 }

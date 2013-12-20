@@ -253,7 +253,7 @@ strong {
   bottom: 0;
   left: 0;
   overflow: auto;
-  background-color: #efeff4;
+  background-color: #fff;
   -webkit-overflow-scrolling: touch;
 }
 
