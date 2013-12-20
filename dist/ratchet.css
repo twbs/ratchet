@@ -727,51 +727,6 @@ select {
 .bar-nav .button-primary {
   font-weight: 500;
 }
-.bar-nav .button-prev:before,
-.bar-nav .button-prev:after,
-.bar-nav .button-next:before,
-.bar-nav .button-next:after {
-  position: absolute;
-  display: block;
-  width: 15px;
-  height: 3px;
-  background-color: #428bca;
-  content: '';
-}
-.bar-nav .button-prev {
-  padding-left: 20px;
-  margin-left: -5px;
-}
-.bar-nav .button-next {
-  padding-right: 20px;
-  margin-right: -5px;
-}
-.bar-nav .button-prev:before,
-.bar-nav .button-prev:after {
-  left: 0;
-}
-.bar-nav .button-next:before,
-.bar-nav .button-next:after {
-  right: 0;
-}
-.bar-nav .button-prev:before,
-.bar-nav .button-next:before {
-  top: 16px;
-}
-.bar-nav .button-prev:after,
-.bar-nav .button-next:after {
-  top: 25px;
-}
-.bar-nav .button-prev:before,
-.bar-nav .button-next:after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.bar-nav .button-prev:after,
-.bar-nav .button-next:before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
 
 [class*="bar"] .button-block {
   padding: 7px 0;

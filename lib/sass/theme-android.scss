@@ -66,6 +66,9 @@ $border-radius: 0;
     bottom: $bar-tab-height + 1;
   }
 }
+.bar-nav {
+  display: block;
+}
 .bar-tab {
   height: $bar-tab-height;
   border-top: $border-default;

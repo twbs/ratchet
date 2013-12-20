@@ -313,15 +313,7 @@ h6 {
   width: 320px;
   height: 548px;
   overflow: hidden;
-  background-color: $chrome-color;
-  background: rgb(0,0,0); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(0,0,0,1) 0%, rgba(34,34,34,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(34,34,34,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(34,34,34,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(34,34,34,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(34,34,34,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(34,34,34,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+  background-color: #efeff4;
 }
 
 .iphone .content,

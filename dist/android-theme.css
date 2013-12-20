@@ -34,6 +34,10 @@
   bottom: 71px;
 }
 
+.bar-nav {
+  display: block;
+}
+
 .bar-tab {
   height: 70px;
   border-top: 1px solid #565656;
