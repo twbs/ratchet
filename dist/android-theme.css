@@ -9,7 +9,14 @@
  */
 
 .content {
-  background-color: #111111;
+  background: #111111;
+  background: -moz-linear-gradient(top, #111111 0%, #222222 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #111111), color-stop(100%, #222222));
+  background: -webkit-linear-gradient(top, #111111 0%, #222222 100%);
+  background: -o-linear-gradient(top, #111111 0%, #222222 100%);
+  background: -ms-linear-gradient(top, #111111 0%, #222222 100%);
+  background: linear-gradient(to bottom, #111111 0%, #222222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-form', endColorstr='$color-to',GradientType=0 );
 }
 
 [class*="bar-"] {
