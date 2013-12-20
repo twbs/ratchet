@@ -15,23 +15,18 @@
   vertical-align: top;
   cursor: pointer;
   background-color: $chrome-color;
-  border: $border-default;
+  border: 1px solid #ccc;
   border-radius: 4px;
-
-  &.button-filled {
-    background-color: $chrome-color;
-  }
 
   // Active & filled button styles
   &:active,
   &.active {
-    background-color: #ebebeb;
+    background-color: #ccc;
   }
 
   // Disabled styles & filled button active styles
   &:disabled,
-  &.disabled,
-  &.button-filled:active {
+  &.disabled {
     opacity: .6;
   }
 }
@@ -42,41 +37,63 @@
 
 // Primary button (Default color is blue)
 .button-primary {
-  color: $primary-color;
+  color: #fff;
   border: 1px solid $primary-color;
+  background-color: $primary-color;
 
   &:active,
-  &.active,
-  &.button-filled {
-    color: #fff;
-    background-color: $primary-color;
+  &.active {
+    border: 1px solid darken($primary-color, 10%);
+    background-color: darken($primary-color, 10%);
   }
 }
 
 // Positive button (Default color is green)
 .button-positive {
-  color: $positive-color;
+  color: #fff;
   border: 1px solid $positive-color;
+  background-color: $positive-color;
 
   &:active,
-  &.active,
-  &.button-filled {
-    color: #fff;
-    background-color: $positive-color;
+  &.active{
+    border: 1px solid darken($positive-color, 10%);
+    background-color: darken($positive-color, 10%);
   }
 }
 
 // Negative button (Default color is red)
 .button-negative {
-  color: $negative-color;
+  color: #fff;
   border: 1px solid $negative-color;
+  background-color: $negative-color;
 
   &:active,
-  &.active,
-  &.button-filled {
-    color: #fff;
-    background-color: $negative-color;
+  &.active {
+    border: 1px solid darken($negative-color, 10%);
+    background-color: darken($negative-color, 10%);
   }
+}
+
+// Outline buttons 
+.button-outlined {
+  background-color: transparent;
+
+  &.button-primary {
+    color: $primary-color;
+  }
+  &.button-positive {
+    color: $positive-color;
+  }
+  &.button-negative {
+    color: $negative-color;
+  }
+  // Active states
+  &.button-primary:active,
+  &.button-positive:active,
+  &.button-negative:active {
+    color: #fff;
+  }
+
 }
 
 // Link button (Buttons that look like links)
@@ -87,9 +104,6 @@
   &:active,
   &.active {
     color: darken($primary-color, 10%);
-  }
-  &.button-filled {
-    background-color: transparent;
   }
 }
 

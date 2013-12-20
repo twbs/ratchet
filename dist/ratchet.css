@@ -631,44 +631,60 @@ select {
   vertical-align: top;
   cursor: pointer;
   background-color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
-[class*="button"].button-filled {
-  background-color: white;
-}
 [class*="button"]:active, [class*="button"].active {
-  background-color: #ebebeb;
+  background-color: #ccc;
 }
-[class*="button"]:disabled, [class*="button"].disabled, [class*="button"].button-filled:active {
+[class*="button"]:disabled, [class*="button"].disabled {
   opacity: .6;
 }
 
 .button-primary {
-  color: #428bca;
-  border: 1px solid #428bca;
-}
-.button-primary:active, .button-primary.active, .button-primary.button-filled {
   color: #fff;
+  border: 1px solid #428bca;
   background-color: #428bca;
+}
+.button-primary:active, .button-primary.active {
+  border: 1px solid #3071a9;
+  background-color: #3071a9;
 }
 
 .button-positive {
-  color: #5cb85c;
-  border: 1px solid #5cb85c;
-}
-.button-positive:active, .button-positive.active, .button-positive.button-filled {
   color: #fff;
+  border: 1px solid #5cb85c;
   background-color: #5cb85c;
+}
+.button-positive:active, .button-positive.active {
+  border: 1px solid #449d44;
+  background-color: #449d44;
 }
 
 .button-negative {
-  color: #d9534f;
-  border: 1px solid #d9534f;
-}
-.button-negative:active, .button-negative.active, .button-negative.button-filled {
   color: #fff;
+  border: 1px solid #d9534f;
   background-color: #d9534f;
+}
+.button-negative:active, .button-negative.active {
+  border: 1px solid #c9302c;
+  background-color: #c9302c;
+}
+
+.button-outlined {
+  background-color: transparent;
+}
+.button-outlined.button-primary {
+  color: #428bca;
+}
+.button-outlined.button-positive {
+  color: #5cb85c;
+}
+.button-outlined.button-negative {
+  color: #d9534f;
+}
+.button-outlined.button-primary:active, .button-outlined.button-positive:active, .button-outlined.button-negative:active {
+  color: #fff;
 }
 
 .button-link {
@@ -678,15 +694,18 @@ select {
 .button-link:active, .button-link.active {
   color: #3071a9;
 }
-.button-link.button-filled {
-  background-color: transparent;
-}
 
 .button-block {
   display: block;
   padding: 15px 0;
   margin-bottom: 10px;
   font-size: 18px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 100%;
 }
 
 .bar-nav [class*="button"] {
@@ -723,12 +742,6 @@ select {
   margin-top: 4px;
   margin-bottom: 5px;
   font-size: 16px;
-}
-
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  width: 100%;
 }
 
 .popover .button-block {
