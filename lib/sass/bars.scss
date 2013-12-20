@@ -26,12 +26,12 @@
 
   // Modifier class to dock any bar above a standard bar
   &.bar-footer-secondary {
-    bottom: $bar-base-height + 1;
+    bottom: $bar-base-height;
   }
 
   // Modifier class to dock any bar above a .bar-tab
   &.bar-footer-secondary-tab {
-    bottom: $bar-tab-height + 1;
+    bottom: $bar-tab-height;
   }
 }
 

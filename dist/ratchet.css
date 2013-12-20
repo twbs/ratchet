@@ -304,10 +304,10 @@ strong {
   bottom: 0;
 }
 [class*="bar-"].bar-footer-secondary {
-  bottom: 45px;
+  bottom: 44px;
 }
 [class*="bar-"].bar-footer-secondary-tab {
-  bottom: 51px;
+  bottom: 50px;
 }
 
 .bar-nav {
@@ -716,7 +716,8 @@ select {
 
 [class*="bar"] .button-block {
   padding: 7px 0;
-  margin-top: 1px;
+  margin-top: 4px;
+  margin-bottom: 5px;
   font-size: 16px;
 }
 

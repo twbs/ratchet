@@ -24,15 +24,6 @@
   background-color: #111111;
   border-bottom: 1px solid #565656;
 }
-[class*="bar-"].bar-header-secondary {
-  top: 51px;
-}
-[class*="bar-"].bar-footer-secondary {
-  bottom: 51px;
-}
-[class*="bar-"].bar-footer-secondary-tab {
-  bottom: 71px;
-}
 
 .bar-tab {
   height: 70px;

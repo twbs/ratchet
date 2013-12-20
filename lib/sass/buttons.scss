@@ -147,7 +147,8 @@
 // Add proper padding
 [class*="bar"] .button-block {
   padding: 7px 0;
-  margin-top: 1px;
+  margin-top: 4px;
+  margin-bottom: 5px;
   font-size: 16px; // Scale down font size to fit in bar.
 }
 
