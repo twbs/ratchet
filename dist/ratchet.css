@@ -297,16 +297,16 @@ strong {
   background-color: white;
 }
 [class*="bar-"].bar-header-secondary {
-  top: 44px;
+  top: 45px;
 }
 [class*="bar-"].bar-footer {
   bottom: 0;
 }
 [class*="bar-"].bar-footer-secondary {
-  bottom: 44px;
+  bottom: 45px;
 }
 [class*="bar-"].bar-footer-secondary-tab {
-  bottom: 50px;
+  bottom: 51px;
 }
 
 .bar-nav {

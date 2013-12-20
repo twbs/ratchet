@@ -18,6 +18,15 @@
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
 }
+[class*="bar-"].bar-header-secondary {
+  top: 44px;
+}
+[class*="bar-"].bar-footer-secondary {
+  bottom: 44px;
+}
+[class*="bar-"].bar-footer-secondary-tab {
+  bottom: 50px;
+}
 
 .bar-tab {
   border-top: 0;
