@@ -287,9 +287,7 @@ textarea,
 // --------------------------------------------------
 
 [class*="badge"] {
-  color: $default-color;
-
-  &.badge-filled {
+  &.badge-inverted {
     color: $default-color;
   }
 }
@@ -300,31 +298,31 @@ textarea,
 
 // Main badge
 .badge-primary {
-  color: $primary-color;
+  color: #fff;
+  background-color: $primary-color;
 
-  &.badge-filled {
-    color: #fff;
-    background-color: $primary-color;
+  &.badge-inverted {
+    color: $primary-color;
   }
 }
 
 // Positive badge
 .badge-positive {
-  color: $positive-color;
+  color: #fff;
+  background-color: $positive-color;
 
-  &.badge-filled {
-    color: #fff;
-    background-color: $positive-color;
+  &.badge-inverted {
+    color: $positive-color;
   }
 }
 
 // Negative badge
 .badge-negative {
-  color: $negative-color;
+  color: #fff;
+  background-color: $negative-color;
 
-  &.badge-filled {
-    color: #fff;
-    background-color: $negative-color;
+  &.badge-inverted {
+    color: $negative-color;
   }
 }
 

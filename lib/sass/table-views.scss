@@ -97,11 +97,13 @@
   .chevron {
     margin-top: -10px; // Half height of chevron
   }
+  [class*="badge"] {
+    margin-top: -9px; // Aligned just right
+  }
 
   // Push badge over if there's a sibling chevron
   .chevron + [class*="badge"] {
     right: 30px;
-    margin-top: -9px;
   }
 
   // Position buttons vertically centered on the right in table view items

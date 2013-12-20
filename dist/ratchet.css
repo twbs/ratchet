@@ -463,9 +463,11 @@ strong {
 .table-view .chevron {
   margin-top: -10px;
 }
+.table-view [class*="badge"] {
+  margin-top: -9px;
+}
 .table-view .chevron + [class*="badge"] {
   right: 30px;
-  margin-top: -9px;
 }
 .table-view [class*="button"] {
   left: auto;
@@ -746,9 +748,14 @@ input[type="button"] {
 .popover .button-block {
   margin-bottom: 5px;
 }
-
 .popover .button-block:last-child {
   margin-bottom: 0;
+}
+.popover .bar-nav .button-link.pull-left {
+  margin-left: 5px;
+}
+.popover .bar-nav .button-link.pull-right {
+  margin-right: 5px;
 }
 
 .chevron {

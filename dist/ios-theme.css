@@ -206,35 +206,32 @@ textarea,
   opacity: .6;
 }
 
-[class*="badge"] {
-  color: #929292;
-}
-[class*="badge"].badge-filled {
+[class*="badge"].badge-inverted {
   color: #929292;
 }
 
 .badge-primary {
-  color: #007aff;
-}
-.badge-primary.badge-filled {
   color: #fff;
   background-color: #007aff;
 }
+.badge-primary.badge-inverted {
+  color: #007aff;
+}
 
 .badge-positive {
-  color: #4cd964;
-}
-.badge-positive.badge-filled {
   color: #fff;
   background-color: #4cd964;
 }
+.badge-positive.badge-inverted {
+  color: #4cd964;
+}
 
 .badge-negative {
-  color: #dd524d;
-}
-.badge-negative.badge-filled {
   color: #fff;
   background-color: #dd524d;
+}
+.badge-negative.badge-inverted {
+  color: #dd524d;
 }
 
 .segmented-controller {

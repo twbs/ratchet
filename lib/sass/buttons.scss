@@ -180,11 +180,22 @@ input[type="button"] {
 // --------------------------------------------------
 
 // Positioning and giving darker border to look sharp against dark popover
-.popover .button-block {
-  margin-bottom: 5px;
-}
+.popover {
+  .button-block {
+    margin-bottom: 5px;
+  }
 
-// Remove extra margin on bottom of last button
-.popover .button-block:last-child {
-  margin-bottom: 0;
+  // Remove extra margin on bottom of last button
+  .button-block:last-child {
+    margin-bottom: 0;
+  }
+  // Line the button text up with content's text
+  .bar-nav .button-link {
+    &.pull-left {
+      margin-left: 5px;
+    }
+    &.pull-right {
+      margin-right: 5px;
+    }
+  }
 }
