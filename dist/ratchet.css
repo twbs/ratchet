@@ -387,8 +387,6 @@ strong {
 }
 
 .popover .bar-nav {
-  padding-right: 15px;
-  padding-left: 15px;
   border-bottom: 1px solid #dddddd;
   border-radius: 12px 12px 0 0;
   -webkit-box-shadow: none;
@@ -462,12 +460,12 @@ strong {
   top: 50%;
   right: 10px;
 }
-.table-view .chevron,
-.table-view [class*="badge"] {
+.table-view .chevron {
   margin-top: -10px;
 }
 .table-view .chevron + [class*="badge"] {
   right: 30px;
+  margin-top: -9px;
 }
 .table-view [class*="button"] {
   left: auto;

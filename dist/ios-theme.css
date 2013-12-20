@@ -129,65 +129,81 @@ textarea,
 [class*="button"] {
   border: 1px solid #929292;
   color: #929292;
-  background-color: transparent;
-  -webkit-transition: background-color, opacity, color;
-  transition: background-color, opacity, color;
+  background-color: rgba(247, 247, 247, 0.98);
+  -webkit-transition: all;
+  transition: all;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-[class*="button"]:active, [class*="button"].active, [class*="button"].button-filled {
+[class*="button"]:active, [class*="button"].active {
   color: #fff;
   background-color: #929292;
 }
 
 .button-primary {
-  color: #007aff;
+  color: #fff;
   border: 1px solid #007aff;
-}
-.button-primary:active, .button-primary.active, .button-primary.button-filled {
   background-color: #007aff;
+}
+.button-primary:active, .button-primary.active {
+  border: 1px solid #0062cc;
+  background-color: #0062cc;
 }
 
 .button-positive {
-  color: #4cd964;
+  color: #fff;
   border: 1px solid #4cd964;
-}
-.button-positive:active, .button-positive.active, .button-positive.button-filled {
   background-color: #4cd964;
+}
+.button-positive:active, .button-positive.active {
+  border: 1px solid #2ac845;
+  background-color: #2ac845;
 }
 
 .button-negative {
-  color: #dd524d;
+  color: #fff;
   border: 1px solid #dd524d;
-}
-.button-negative:active, .button-negative.active, .button-negative.button-filled {
   background-color: #dd524d;
+}
+.button-negative:active, .button-negative.active {
+  border: 1px solid #cf2d28;
+  background-color: #cf2d28;
+}
+
+.button-outlined {
+  background-color: transparent;
+}
+.button-outlined.button-primary {
+  color: #007aff;
+}
+.button-outlined.button-positive {
+  color: #4cd964;
+}
+.button-outlined.button-negative {
+  color: #dd524d;
+}
+.button-outlined.button-primary:active, .button-outlined.button-positive:active, .button-outlined.button-negative:active {
+  color: #fff;
 }
 
 .button-link {
   color: #007aff;
+  background-color: transparent;
+  border: none;
 }
 .button-link:active, .button-link.active {
-  color: #007aff;
+  color: #0062cc;
+  background-color: transparent;
 }
 
-.button-link:active, .button-link.active {
+.bar-nav .button-link {
   color: #007aff;
-  opacity: .3;
 }
-
-.bar-nav [class*="button"] {
+.bar-nav .button-link:active {
   color: #007aff;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-.bar-nav .button-prev:before,
-.bar-nav .button-prev:after,
-.bar-nav .button-next:before,
-.bar-nav .button-next:after {
-  background-color: #007aff;
+  opacity: .6;
 }
 
 [class*="badge"] {

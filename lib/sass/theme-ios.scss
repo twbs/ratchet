@@ -177,15 +177,14 @@ textarea,
 [class*="button"] {
   border: 1px solid $default-color;
   color: $default-color;
-  background-color: transparent;
-  @include transition(background-color, opacity, color);
+  background-color: $chrome-color;
+  @include transition(all);
   @include transition-duration(.2s);
   @include transition-timing-function(linear);
 
   // Active & filled button styles
   &:active,
-  &.active,
-  &.button-filled {
+  &.active {
     color: #fff;
     background-color: $default-color;
   }
@@ -197,56 +196,74 @@ textarea,
 
 // Primary button (Default color is blue)
 .button-primary {
-  color: $primary-color;
+  color: #fff;
   border: 1px solid $primary-color;
+  background-color: $primary-color;
 
   &:active,
-  &.active,
-  &.button-filled {
-    background-color: $primary-color;
+  &.active {
+    border: 1px solid darken($primary-color, 10%);
+    background-color: darken($primary-color, 10%);
   }
 }
 
 // Positive button (Default color is green)
 .button-positive {
-  color: $positive-color;
+  color: #fff;
   border: 1px solid $positive-color;
+  background-color: $positive-color;
 
   &:active,
-  &.active,
-  &.button-filled {
-    background-color: $positive-color;
+  &.active {
+    border: 1px solid darken($positive-color, 10%);
+    background-color: darken($positive-color, 10%);
   }
 }
 
 // Negative button (Default color is red)
 .button-negative {
-  color: $negative-color;
+  color: #fff;
   border: 1px solid $negative-color;
+  background-color: $negative-color;
 
   &:active,
-  &.active,
-  &.button-filled {
-    background-color: $negative-color;
+  &.active {
+    border: 1px solid darken($negative-color, 10%);
+    background-color: darken($negative-color, 10%);
+  }
+}
+
+// Outlined buttons 
+.button-outlined {
+  background-color: transparent;
+
+  &.button-primary {
+    color: $primary-color;
+  }
+  &.button-positive {
+    color: $positive-color;
+  }
+  &.button-negative {
+    color: $negative-color;
+  }
+  // Active states
+  &.button-primary:active,
+  &.button-positive:active,
+  &.button-negative:active {
+    color: #fff;
   }
 }
 
 // Link button (Buttons that look like links)
 .button-link {
   color: $primary-color;
+  background-color: transparent;
+  border: none;
 
   &:active,
   &.active {
-    color: $primary-color;
-  }
-}
-
-// Link button (Buttons that look like links)
-.button-link {
-  &:active,
-  &.active {
-    color: $primary-color;
-    opacity: .3;
+    color: darken($primary-color, 10%);
+    background-color: transparent;
   }
 }
 
@@ -254,19 +271,13 @@ textarea,
 // --------------------------------------------------
 
 .bar-nav {
-  [class*="button"] {
+  .button-link {
     color: $primary-color;
-    @include transition(opacity .2s linear);
-  }
 
-  // Directional buttons in nav bars
-  // --------------------------------------------------
-
-  .button-prev:before,
-  .button-prev:after,
-  .button-next:before,
-  .button-next:after {
-    background-color: $primary-color;
+    &:active {
+      color: $primary-color;
+      opacity: .6;
+    }
   }
 }
 
