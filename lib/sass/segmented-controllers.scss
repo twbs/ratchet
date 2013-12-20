@@ -69,7 +69,5 @@
 
 // Remove standard segmented bottom margin
 [class*="bar-"] .segmented-controller {
-  margin-top: 3px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 8px auto 0;
 }

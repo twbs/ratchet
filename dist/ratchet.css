@@ -292,7 +292,8 @@ strong {
   left: 0;
   z-index: 10;
   height: 44px;
-  padding: 5px 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   border-bottom: 1px solid #dddddd;
   background-color: white;
 }
@@ -314,9 +315,6 @@ strong {
 }
 
 .title {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: block;
   width: 100%;
   padding: 0;
@@ -691,7 +689,6 @@ select {
   position: relative;
   z-index: 10;
   padding: 0;
-  margin-top: -5px;
   font-size: 16px;
   font-weight: 400;
   line-height: 44px;

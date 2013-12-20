@@ -8,7 +8,8 @@
   left: 0;
   z-index: 10;
   height: $bar-base-height;
-  padding: 5px $bar-side-spacing;
+  padding-right: $bar-side-spacing;
+  padding-left: $bar-side-spacing;
   border-bottom: $border-default;
   background-color: $chrome-color;
 
@@ -45,9 +46,6 @@
 
 // Centered text in the .bar-nav 
 .title {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: block;
   width: 100%;
   padding: 0;

@@ -110,14 +110,13 @@
     position: relative;
     z-index: 10; // Places buttons over full width title
     padding: 0;
-    margin-top: -5px; // Offsets the bar's vertical padding
     font-size: 16px;
     font-weight: $font-weight-light;
     line-height: $bar-base-height;
     color: $primary-color;
     background-color: transparent;
     border: 0;
-    
+
     &.pull-right { 
       margin-left: $bar-side-spacing; 
     }
