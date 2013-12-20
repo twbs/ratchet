@@ -101,6 +101,14 @@
   font-size: 18px;
 }
 
+// Button overrides
+// --------------------------------------------------
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 100%;
+}
+
 // Buttons in nav bars
 // --------------------------------------------------
 
@@ -141,6 +149,7 @@
   }
 }
 
+
 // Block buttons in all bars
 // --------------------------------------------------
 
@@ -152,13 +161,6 @@
   font-size: 16px; // Scale down font size to fit in bar.
 }
 
-// Button overrides
-// --------------------------------------------------
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  width: 100%;
-}
 
 // Block level buttons in popovers
 // --------------------------------------------------
