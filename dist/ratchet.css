@@ -777,38 +777,40 @@ input[type="button"] {
 
 [class*="badge"] {
   display: inline-block;
-  color: #333;
-}
-[class*="badge"].badge-filled {
   padding: 2px 9px;
   font-size: 13px;
   line-height: 1;
+  color: #333;
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 100px;
 }
+[class*="badge"].badge-inverted {
+  padding: 0;
+  background-color: transparent;
+}
 
 .badge-primary {
-  color: #428bca;
-}
-.badge-primary.badge-filled {
   color: #fff;
   background-color: #428bca;
 }
+.badge-primary.badge-inverted {
+  color: #428bca;
+}
 
 .badge-positive {
-  color: #5cb85c;
-}
-.badge-positive.badge-filled {
   color: #fff;
   background-color: #5cb85c;
 }
+.badge-positive.badge-inverted {
+  color: #5cb85c;
+}
 
 .badge-negative {
-  color: #d9534f;
-}
-.badge-negative.badge-filled {
   color: #fff;
   background-color: #d9534f;
+}
+.badge-negative.badge-inverted {
+  color: #d9534f;
 }
 
 [class*="button"] [class*="badge"] {
@@ -816,11 +818,18 @@ input[type="button"] {
   padding-top: 2px;
   padding-bottom: 2px;
   margin: -2px -4px -2px 4px;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
-.button-filled .badge-filled,
-[class*="button"]:active .badge-filled {
-  background-color: rgba(0, 0, 0, 0.15);
+[class*="button"] .badge-inverted,
+[class*="button"]:active .badge-inverted {
+  background-color: transparent;
+}
+
+.button-primary:active .badge-inverted,
+.button-positive:active .badge-inverted,
+.button-negative:active .badge-inverted {
+  color: #fff;
 }
 
 .button-block [class*="badge"] {
