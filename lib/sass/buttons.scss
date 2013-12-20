@@ -107,8 +107,7 @@
 .bar-nav {
   // Generic style for all buttons in .bar-title
   [class*="button"] {
-    position: relative;
-    z-index: 10; // Places buttons over full width title
+    float: left; // Places buttons to the left by default
     padding: 0;
     font-size: 16px;
     font-weight: $font-weight-light;
