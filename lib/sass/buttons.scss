@@ -16,7 +16,7 @@
   cursor: pointer;
   background-color: $chrome-color;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 3px;
 
   // Active & filled button styles
   &:active,
@@ -98,12 +98,16 @@
 
 // Link button (Buttons that look like links)
 .button-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
   color: $primary-color;
+  background-color: transparent;
   border: none;
 
   &:active,
   &.active {
     color: darken($primary-color, 10%);
+    background-color: transparent;
   }
 }
 
@@ -131,13 +135,9 @@ input[type="button"] {
   [class*="button"] {
     position: relative;
     z-index: 10; // Position the buttons on top of .title
-    padding: 0;
-    font-size: 16px;
+    padding: 6px 12px;
+    margin-top: 8px;
     font-weight: $font-weight-light;
-    line-height: $bar-base-height;
-    color: $primary-color;
-    background-color: transparent;
-    border: 0;
 
     &.pull-right { 
       margin-left: $bar-side-spacing; 
@@ -147,19 +147,20 @@ input[type="button"] {
     }
   }
 
-  // Override standard button active states
-  .button:active,
-  .button.active,
-  .button-primary:active,
-  .button-primary.active {
+  // Link button (Buttons that look like links)
+  .button-link {
+    padding: 0;
+    margin-top: 0;
+    font-size: 16px;
     color: $primary-color;
+    line-height: $bar-base-height;
     background-color: transparent;
-    opacity: .3;
-  }
+    border: none;
 
-  // Primary button in bars
-  .button-primary {
-    font-weight: $font-weight;
+    &:active,
+    &.active {
+      color: darken($primary-color, 10%);
+    }
   }
 }
 

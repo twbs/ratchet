@@ -632,7 +632,7 @@ select {
   cursor: pointer;
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 [class*="button"]:active, [class*="button"].active {
   background-color: #ccc;
@@ -688,11 +688,15 @@ select {
 }
 
 .button-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
   color: #428bca;
+  background-color: transparent;
   border: none;
 }
 .button-link:active, .button-link.active {
   color: #3071a9;
+  background-color: transparent;
 }
 
 .button-block {
@@ -711,13 +715,9 @@ input[type="button"] {
 .bar-nav [class*="button"] {
   position: relative;
   z-index: 10;
-  padding: 0;
-  font-size: 16px;
+  padding: 6px 12px;
+  margin-top: 8px;
   font-weight: 400;
-  line-height: 44px;
-  color: #428bca;
-  background-color: transparent;
-  border: 0;
 }
 .bar-nav [class*="button"].pull-right {
   margin-left: 10px;
@@ -725,16 +725,17 @@ input[type="button"] {
 .bar-nav [class*="button"].pull-left {
   margin-right: 10px;
 }
-.bar-nav .button:active,
-.bar-nav .button.active,
-.bar-nav .button-primary:active,
-.bar-nav .button-primary.active {
+.bar-nav .button-link {
+  padding: 0;
+  margin-top: 0;
+  font-size: 16px;
   color: #428bca;
+  line-height: 44px;
   background-color: transparent;
-  opacity: .3;
+  border: none;
 }
-.bar-nav .button-primary {
-  font-weight: 500;
+.bar-nav .button-link:active, .bar-nav .button-link.active {
+  color: #3071a9;
 }
 
 [class*="bar"] .button-block {
