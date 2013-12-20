@@ -24,6 +24,9 @@
   background-color: #111111;
   border-bottom: 1px solid #565656;
 }
+[class*="bar-"] [class*="button"] {
+  line-height: 50px;
+}
 
 .bar-tab {
   height: 70px;

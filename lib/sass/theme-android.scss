@@ -50,6 +50,10 @@ $border-radius: 0;
   height: $bar-base-height;
   background-color: $chrome-color;
   border-bottom: $border-default;
+  
+  [class*="button"] {
+    line-height: $bar-base-height;
+  }
 }
 .bar-tab {
   height: $bar-tab-height;
