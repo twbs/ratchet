@@ -1,4 +1,4 @@
-# Ratchet v2.0 WIP
+# Ratchet v2.0 WIP [![devDependencies](https://david-dm.org/maker/ratchet/dev-status.png)](https://david-dm.org/maker/ratchet#info=devDependencies)
 
 Prototype mobile apps with simple HTML, CSS, and JS components.
 
