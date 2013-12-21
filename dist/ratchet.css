@@ -298,7 +298,7 @@ strong {
   background-color: white;
 }
 [class*="bar-"].bar-header-secondary {
-  top: 45px;
+  top: 44px;
 }
 [class*="bar-"].bar-footer {
   bottom: 0;
@@ -390,7 +390,7 @@ strong {
   width: auto;
   overflow: hidden;
   margin: 10px;
-  background-color: #fff;
+  background-color: white;
   border: 1px solid #dddddd;
   border-radius: 6px;
 }

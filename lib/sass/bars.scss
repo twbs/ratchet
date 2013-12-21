@@ -16,7 +16,7 @@
 
   // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
-    top: $bar-base-height + 1;
+    top: $bar-base-height;
   }
 
   // Modifier class to dock any bar to bottom of viewport
