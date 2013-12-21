@@ -88,10 +88,10 @@ base_url: "../"
 
       <div class="component-example component-example-fullbleed">
         <header class="bar-nav">
-          <a class="button-prev pull-left">
+          <a class="button-link pull-left">
             Previous
           </a>
-          <a class="button pull-right">
+          <a class="button-link pull-right">
             Next
           </a>
           <h1 class="title">Title</h1>
@@ -100,10 +100,10 @@ base_url: "../"
 
 {% highlight html %}
 <header class="bar-nav">
-  <a class="button-prev pull-left">
+  <a class="button-link pull-left">
     Previous
   </a>
-  <a class="button pull-right">
+  <a class="button-link pull-right">
     Next
   </a>
   <h1 class="title">Title</h1>
@@ -992,14 +992,16 @@ document
           <h1 class="title">Push</h1>
         </header>
         <div class="content">
-          <ul class="table-view">
-            <li class="table-view-cell">
-              <a href="{{ page.base_url }}two.html" data-transition="slide-in">
-                Load new page with push
-              </a>
-              <span class="chevron"></span>
-            </li>
-          </ul>
+          <div class="card">
+            <ul class="table-view">
+              <li class="table-view-cell">
+                <a href="{{ page.base_url }}two.html" data-transition="slide-in">
+                  Load new page with push
+                </a>
+                <span class="chevron"></span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -1008,14 +1010,16 @@ document
   <h1 class="title">Push</h1>
 </header>
 <div class="content">
-  <ul class="table-view">
-    <li class="table-view-cell">
-      <a href="{{ page.base_url }}two.html" data-transition="slide-in">
-        Load new page with push
-      </a>
-      <span class="chevron"></span>
-    </li>
-  </ul>
+  <div class="card">
+    <ul class="table-view">
+      <li class="table-view-cell">
+        <a href="{{ page.base_url }}two.html" data-transition="slide-in">
+          Load new page with push
+        </a>
+        <span class="chevron"></span>
+      </li>
+    </ul>
+  </div>
 </div>
 {% endhighlight %}
 
