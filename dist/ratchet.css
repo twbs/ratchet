@@ -855,7 +855,7 @@ input[type="button"] {
   font-weight: 400;
   list-style: none;
   background-color: white;
-  border: 1px solid #428bca;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 .segmented-controller li {
@@ -864,7 +864,7 @@ input[type="button"] {
   width: 1%;
   text-align: center;
   white-space: nowrap;
-  border-left: 1px solid #428bca;
+  border-left: 1px solid #ccc;
 }
 .segmented-controller li > a {
   display: block;
@@ -872,19 +872,73 @@ input[type="button"] {
   padding-bottom: 7px;
   overflow: hidden;
   line-height: 1;
-  color: #428bca;
+  color: #333;
   text-overflow: ellipsis;
 }
 .segmented-controller li:first-child {
   border-left-width: 0;
 }
 .segmented-controller li:active {
-  background-color: #d5e9ff;
+  background-color: #eee;
 }
 .segmented-controller li.selected {
+  background-color: #ccc;
+}
+
+.segmented-controller-primary {
+  border: 1px solid #428bca;
+}
+.segmented-controller-primary li {
+  border-color: inherit;
+}
+.segmented-controller-primary li > a {
+  color: #428bca;
+}
+.segmented-controller-primary li:active {
+  background-color: #cde1f1;
+}
+.segmented-controller-primary li.selected {
   background-color: #428bca;
 }
-.segmented-controller li.selected > a {
+.segmented-controller-primary li.selected > a {
+  color: #fff;
+}
+
+.segmented-controller-positive {
+  border: 1px solid #5cb85c;
+}
+.segmented-controller-positive li {
+  border-color: inherit;
+}
+.segmented-controller-positive li > a {
+  color: #5cb85c;
+}
+.segmented-controller-positive li:active {
+  background-color: #d8eed8;
+}
+.segmented-controller-positive li.selected {
+  background-color: #5cb85c;
+}
+.segmented-controller-positive li.selected > a {
+  color: #fff;
+}
+
+.segmented-controller-negative {
+  border: 1px solid #d9534f;
+}
+.segmented-controller-negative li {
+  border-color: inherit;
+}
+.segmented-controller-negative li > a {
+  color: #d9534f;
+}
+.segmented-controller-negative li:active {
+  background-color: #f9e2e2;
+}
+.segmented-controller-negative li.selected {
+  background-color: #d9534f;
+}
+.segmented-controller-negative li.selected > a {
   color: #fff;
 }
 
