@@ -515,21 +515,24 @@ layout: default
         <ul class="table-view">
           <li class="table-view-cell">
             Item 1
-            <div class="toggle">
+            <label class="toggle">
+              <input type="checkbox">
               <div class="toggle-handle"></div>
-            </div>
+            </label>
           </li>
           <li class="table-view-cell">
             Item 2
-            <div class="toggle active">
+            <label class="toggle active">
+              <input type="checkbox" checked>
               <div class="toggle-handle"></div>
-            </div>
+            </label>
           </li>
           <li class="table-view-cell">
             Item 3
-            <div class="toggle">
+            <label class="toggle">
+              <input type="checkbox">
               <div class="toggle-handle"></div>
-            </div>
+            </label>
           </li>
         </ul>
       </div>
@@ -538,21 +541,24 @@ layout: default
 <ul class="table-view">
   <li class="table-view-cell">
     Item 1
-    <div class="toggle">
+    <label class="toggle">
+      <input type="checkbox">
       <div class="toggle-handle"></div>
-    </div>
+    </label>
   </li>
   <li class="table-view-cell">
     Item 2
-    <div class="toggle active">
+    <label class="toggle active">
+      <input type="checkbox" checked>
       <div class="toggle-handle"></div>
-    </div>
+    </label>
   </li>
   <li class="table-view-cell">
     Item 3
-    <div class="toggle">
+    <label class="toggle">
+      <input type="checkbox">
       <div class="toggle-handle"></div>
-    </div>
+    </label>
   </li>
 </ul>
 {% endhighlight %}
@@ -560,26 +566,30 @@ layout: default
     </article>
 
     <article class="component">
-      <h3 class="component-title">Inset table views</h3>
+      <h3 class="component-title">Carded table views</h3>
 
       <div class="component-example">
-        <ul class="table-view inset">
-          <li class="table-view-cell">Item 1</li>
-          <li class="table-view-cell">Item 2</li>
-          <li class="table-view-cell table-view-divider">Divider</li>
-          <li class="table-view-cell">Item 3</li>
-          <li class="table-view-cell">Item 4</li>
-        </ul>
+        <div class="card">
+          <ul class="table-view">
+            <li class="table-view-cell">Item 1</li>
+            <li class="table-view-cell">Item 2</li>
+            <li class="table-view-cell table-view-divider">Divider</li>
+            <li class="table-view-cell">Item 3</li>
+            <li class="table-view-cell">Item 4</li>
+          </ul>
+        </div>
       </div>
 
 {% highlight html %}
-<ul class="table-view inset">
-  <li class="table-view-cell">Item 1</li>
-  <li class="table-view-cell">Item 2</li>
-  <li class="table-view-cell table-view-divider">Divider</li>
-  <li class="table-view-cell">Item 3</li>
-  <li class="table-view-cell">Item 4</li>
-</ul>
+<div class="card">
+  <ul class="table-view">
+    <li class="table-view-cell">Item 1</li>
+    <li class="table-view-cell">Item 2</li>
+    <li class="table-view-cell table-view-divider">Divider</li>
+    <li class="table-view-cell">Item 3</li>
+    <li class="table-view-cell">Item 4</li>
+  </ul>
+</div>
 {% endhighlight %}
 
     </article>
@@ -677,17 +687,20 @@ layout: default
             <a href="#item3mobile">Thing three</a>
           </li>
         </ul>
-        <ul class="inset table-view">
-          <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
-            Item 1
-          </li>
-          <li id="item2mobile" class="table-view-cell segmented-controller-item">
-            Item 2
-          </li>
-          <li id="item3mobile" class="table-view-cell segmented-controller-item">
-            Item 3
-          </li>
-        </ul>
+
+        <div class="card">
+          <ul class="table-view">
+            <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
+              Item 1
+            </li>
+            <li id="item2mobile" class="table-view-cell segmented-controller-item">
+              Item 2
+            </li>
+            <li id="item3mobile" class="table-view-cell segmented-controller-item">
+              Item 3
+            </li>
+          </ul>
+        </div>
       </div>
 
 {% highlight html %}
@@ -702,17 +715,19 @@ layout: default
     <a href="#item3mobile">Thing three</a>
   </li>
 </ul>
-<ul class="inset table-view">
-  <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
-    Item 1
-  </li>
-  <li id="item2mobile" class="table-view-cell segmented-controller-item">
-    Item 2
-  </li>
-  <li id="item3mobile" class="table-view-cell segmented-controller-item">
-    Item 3
-  </li>
-</ul>
+<div class="card">
+  <ul class="table-view">
+    <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
+      Item 1
+    </li>
+    <li id="item2mobile" class="table-view-cell segmented-controller-item">
+      Item 2
+    </li>
+    <li id="item3mobile" class="table-view-cell segmented-controller-item">
+      Item 3
+    </li>
+  </ul>
+</div>
 {% endhighlight %}
 
     </article>
@@ -837,21 +852,25 @@ layout: default
       <p class="component-description">Toggles can be used by sliding or tapping the control.</p>
 
       <div class="component-example">
-        <div class="toggle active">
+        <label class="toggle active">
+          <input type="checkbox" checked>
           <div class="toggle-handle"></div>
-        </div>
-        <div class="toggle">
+        </label>
+        <label class="toggle">
+          <input type="checkbox">
           <div class="toggle-handle"></div>
-        </div>
+        </label>
       </div>
 
 {% highlight html %}
-<div class="toggle active">
+<label class="toggle active">
+  <input type="checkbox">
   <div class="toggle-handle"></div>
-</div>
-<div class="toggle">
+</label>
+<label class="toggle">
+  <input type="checkbox">
   <div class="toggle-handle"></div>
-</div>
+</label>
 {% endhighlight %}
 
       <p class="component-description">Toggles.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>

@@ -396,6 +396,15 @@ strong {
   right: 15px;
 }
 
+.card {
+  width: auto;
+  overflow: hidden;
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
 .table-view {
   padding: 0;
   margin: 0;
@@ -422,16 +431,6 @@ strong {
 }
 .table-view .table-view-cell p {
   margin: 0;
-}
-.table-view.inset {
-  width: auto;
-  margin-right: 10px;
-  margin-left: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 6px;
-}
-.table-view.inset li:last-child {
-  background-image: none;
 }
 .table-view .table-view-divider {
   padding-top: 6px;
@@ -489,6 +488,10 @@ strong {
   position: absolute;
   left: 15px;
   z-index: 1;
+}
+
+.card .table-view li:last-child {
+  border: 0;
 }
 
 .popover .table-view {
@@ -991,8 +994,9 @@ input[type="button"] {
 }
 
 .toggle {
+  display: block;
   position: relative;
-  width: 47px;
+  width: 74px;
   height: 30px;
   background-color: #fff;
   border: 2px solid #ddd;
@@ -1017,14 +1021,31 @@ input[type="button"] {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+.toggle:before {
+  position: absolute;
+  top: 3px;
+  right: 11px;
+  color: #999;
+  text-transform: uppercase;
+  content: "Off";
+}
 .toggle.active {
   border: 2px solid #5cb85c;
   background-color: #5cb85c;
 }
 .toggle.active .toggle-handle {
   border-color: #5cb85c;
-  -webkit-transform: translate3d(17px, 0, 0);
-  transform: translate3d(17px, 0, 0);
+  -webkit-transform: translate3d(44px, 0, 0);
+  transform: translate3d(44px, 0, 0);
+}
+.toggle.active:before {
+  right: auto;
+  left: 15px;
+  color: #fff;
+  content: "On";
+}
+.toggle input[type="checkbox"] {
+  display: none;
 }
 
 .content.fade {

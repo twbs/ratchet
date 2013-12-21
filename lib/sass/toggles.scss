@@ -3,8 +3,9 @@
 // --------------------------------------------------
 
 .toggle {
+  display: block;
   position: relative;
-  width: 47px;
+  width: 74px;
   height: 30px;
   background-color: #fff;
   border: 2px solid #ddd;
@@ -26,6 +27,14 @@
     @include transition-property(-webkit-transform, border, width);
     @include transition-duration(.2s);
   }
+  &:before {
+    position: absolute;
+    top: 3px;
+    right: 11px;
+    color: #999;
+    text-transform: uppercase;
+    content: "Off";
+  }
 
   // Active state for toggle
   &.active {
@@ -34,7 +43,17 @@
 
     .toggle-handle {
       border-color: $positive-color;
-      @include transform(translate3d(17px,0,0)); 
+      @include transform(translate3d(44px,0,0)); 
     }
+    &:before {
+      right: auto;
+      left: 15px;
+      color: #fff;
+      content: "On";
+    }
+  }
+  // Hide the checkbox
+  input[type="checkbox"] {
+    display: none;
   }
 }
