@@ -58,26 +58,26 @@ base_url: "../"
       <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
 
       <div class="component-example component-example-fullbleed">
-        <header class="bar-nav">
+        <header class="bar-nav pull-left">
           <a class="button">
             Left
           </a>
-          <h1 class="title">Title</h1>
-          <a class="button">
+          <a class="button pull-right">
             Right
           </a>
+          <h1 class="title">Title</h1>
         </header>
       </div>
 
 {% highlight html %}
 <header class="bar-nav">
-  <a class="button">
+  <a class="button pull-left">
     Left
   </a>
-  <h1 class="title">Title</h1>
-  <a class="button">
+  <a class="button pull-right">
     Right
   </a>
+  <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}
 
@@ -88,25 +88,25 @@ base_url: "../"
 
       <div class="component-example component-example-fullbleed">
         <header class="bar-nav">
-          <a class="button-prev">
+          <a class="button-prev pull-left">
             Previous
           </a>
-          <h1 class="title">Title</h1>
-          <a class="button-next">
+          <a class="button pull-right">
             Next
           </a>
+          <h1 class="title">Title</h1>
         </header>
       </div>
 
 {% highlight html %}
 <header class="bar-nav">
-  <a class="button-prev">
+  <a class="button-prev pull-left">
     Previous
   </a>
-  <h1 class="title">Title</h1>
-  <a class="button-next">
+  <a class="button pull-right">
     Next
   </a>
+  <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}
 
@@ -118,8 +118,11 @@ base_url: "../"
 
       <div class="component-example component-example-fullbleed">
         <header class="bar-nav">
-          <a class="button">
+          <a class="button pull-left">
             Left
+          </a>
+          <a class="button pull-right">
+            Right
           </a>
           <ul class="segmented-controller">
             <li class="selected">
@@ -132,16 +135,16 @@ base_url: "../"
               <a>Three</a>
             </li>
           </ul>
-          <a class="button">
-            Right
-          </a>
         </header>
       </div>
 
 {% highlight html %}
 <header class="bar-nav">
-  <a class="button">
+  <a class="button pull-left">
     Left
+  </a>
+  <a class="button pull-right">
+    Right
   </a>
   <ul class="segmented-controller">
     <li class="selected">
@@ -154,9 +157,6 @@ base_url: "../"
       <a>Three</a>
     </li>
   </ul>
-  <a class="button">
-    Right
-  </a>
 </header>
 {% endhighlight %}
 
@@ -168,75 +168,51 @@ base_url: "../"
 
       <div class="component-example component-example-fullbleed">
         <nav class="bar-tab">
-          <ul class="tab-inner">
-            <li class="tab-item active">
-              <a href="#">
-                <span class="icon icon-share"></span>
-                <div class="tab-label">Label</div>
-              </a>
-            </li>
-            <li class="tab-item">
-              <a href="#">
-                <span class="icon icon-share"></span>
-                <div class="tab-label">Label</div>
-              </a>
-            </li>
-            <li class="tab-item">
-              <a href="#">
-                <span class="icon icon-share"></span>
-                <div class="tab-label">Label</div>
-              </a>
-            </li>
-            <li class="tab-item">
-              <a href="#">
-                <span class="icon icon-share"></span>
-                <div class="tab-label">Label</div>
-              </a>
-            </li>
-            <li class="tab-item">
-              <a href="#">
-                <span class="icon icon-share"></span>
-                <div class="tab-label">Label</div>
-              </a>
-            </li>
-          </ul>
+          <a class="tab-item active" href="#">
+            <span class="icon icon-share"></span>
+            <div class="tab-label">Label</div>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon icon-share"></span>
+            <div class="tab-label">Label</div>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon icon-share"></span>
+            <div class="tab-label">Label</div>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon icon-share"></span>
+            <div class="tab-label">Label</div>
+          </a>
+          <a class="tab-item" href="#">
+            <span class="icon icon-share"></span>
+            <div class="tab-label">Label</div>
+          </a>
         </nav>
       </div>
 
 {% highlight html %}
 <nav class="bar-tab">
-  <ul class="tab-inner">
-    <li class="tab-item active">
-      <a href="#">
-        <span class="icon icon-share"></span>
-        <div class="tab-label">Label</div>
-      </a>
-    </li>
-    <li class="tab-item">
-      <a href="#">
-        <span class="icon icon-share"></span>
-        <div class="tab-label">Label</div>
-      </a>
-    </li>
-    <li class="tab-item">
-      <a href="#">
-        <span class="icon icon-share"></span>
-        <div class="tab-label">Label</div>
-      </a>
-    </li>
-    <li class="tab-item">
-      <a href="#">
-        <span class="icon icon-share"></span>
-        <div class="tab-label">Label</div>
-      </a>
-    </li>
-    <li class="tab-item">
-      <a href="#">
-        <span class="icon icon-share"></span>
-        <div class="tab-label">Label</div>
-      </a>
-    </li>
-  </ul>
+  <a class="tab-item active" href="#">
+    <span class="icon icon-share"></span>
+    <div class="tab-label">Label</div>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-share"></span>
+    <div class="tab-label">Label</div>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-share"></span>
+    <div class="tab-label">Label</div>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-share"></span>
+    <div class="tab-label">Label</div>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-share"></span>
+    <div class="tab-label">Label</div>
+  </a>
 </nav>
 {% endhighlight %}
 
@@ -523,26 +499,30 @@ base_url: "../"
   </article>
 
   <article class="component">
-    <h3 class="component-title">Inset table views</h3>
+    <h3 class="component-title">Carded table views</h3>
 
     <div class="component-example">
-      <ul class="table-view inset">
-        <li class="table-view-cell">Item 1</li>
-        <li class="table-view-cell">Item 2</li>
-        <li class="table-view-cell table-view-divider">Divider</li>
-        <li class="table-view-cell">Item 3</li>
-        <li class="table-view-cell">Item 4</li>
-      </ul>
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell">Item 1</li>
+          <li class="table-view-cell">Item 2</li>
+          <li class="table-view-cell table-view-divider">Divider</li>
+          <li class="table-view-cell">Item 3</li>
+          <li class="table-view-cell">Item 4</li>
+        </ul>
+      </div>
     </div>
 
 {% highlight html %}
-<ul class="table-view inset">
-  <li class="table-view-cell">Item 1</li>
-  <li class="table-view-cell">Item 2</li>
-  <li class="table-view-cell table-view-divider">Divider</li>
-  <li class="table-view-cell">Item 3</li>
-  <li class="table-view-cell">Item 4</li>
-</ul>
+<div class="card">
+  <ul class="table-view">
+    <li class="table-view-cell">Item 1</li>
+    <li class="table-view-cell">Item 2</li>
+    <li class="table-view-cell table-view-divider">Divider</li>
+    <li class="table-view-cell">Item 3</li>
+    <li class="table-view-cell">Item 4</li>
+  </ul>
+</div>
 {% endhighlight %}
 
   </article>
@@ -638,17 +618,19 @@ base_url: "../"
           <a href="#item3mobile">Thing three</a>
         </li>
       </ul>
-      <ul class="inset table-view">
-        <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
-          Item 1
-        </li>
-        <li id="item2mobile" class="table-view-cell segmented-controller-item">
-          Item 2
-        </li>
-        <li id="item3mobile" class="table-view-cell segmented-controller-item">
-          Item 3
-        </li>
-      </ul>
+      <div class="card">
+        <ul class="table-view">
+          <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
+            Item 1
+          </li>
+          <li id="item2mobile" class="table-view-cell segmented-controller-item">
+            Item 2
+          </li>
+          <li id="item3mobile" class="table-view-cell segmented-controller-item">
+            Item 3
+          </li>
+        </ul>
+      </div>
     </div>
 
 {% highlight html %}
@@ -663,17 +645,19 @@ base_url: "../"
     <a href="#item3mobile">Thing three</a>
   </li>
 </ul>
-<ul class="inset table-view">
-  <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
-    Item 1
-  </li>
-  <li id="item2mobile" class="table-view-cell segmented-controller-item">
-    Item 2
-  </li>
-  <li id="item3mobile" class="table-view-cell segmented-controller-item">
-    Item 3
-  </li>
-</ul>
+<div class="card">
+  <ul class="table-view">
+    <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
+      Item 1
+    </li>
+    <li id="item2mobile" class="table-view-cell segmented-controller-item">
+      Item 2
+    </li>
+    <li id="item3mobile" class="table-view-cell segmented-controller-item">
+      Item 3
+    </li>
+  </ul>
+</div>
 {% endhighlight %}
 
   </article>
