@@ -34,6 +34,12 @@
   box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
 
+.tab-item.active .tab-label,
+.tab-item.active .icon, .tab-item:active .tab-label,
+.tab-item:active .icon {
+  color: #007aff;
+}
+
 .popover .bar-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -239,19 +245,80 @@ textarea,
 }
 
 .segmented-controller {
+  color: #929292;
   background-color: transparent;
-  border: 1px solid #007aff;
+  border: 1px solid #929292;
 }
 .segmented-controller li {
-  border-left: 1px solid #007aff;
+  border-color: #929292;
   -webkit-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-.segmented-controller li > a {
-  color: #007aff;
+.segmented-controller li:active {
+  background-color: #ebebeb;
 }
 .segmented-controller li.selected {
+  background-color: #929292;
+}
+.segmented-controller li.selected > a {
+  color: #fff;
+}
+
+.segmented-controller-primary {
+  border: 1px solid #007aff;
+}
+.segmented-controller-primary li {
+  border-color: inherit;
+}
+.segmented-controller-primary li > a {
+  color: #007aff;
+}
+.segmented-controller-primary li:active {
+  background-color: #b3d7ff;
+}
+.segmented-controller-primary li.selected {
   background-color: #007aff;
+}
+.segmented-controller-primary li.selected > a {
+  color: #fff;
+}
+
+.segmented-controller-positive {
+  border: 1px solid #4cd964;
+}
+.segmented-controller-positive li {
+  border-color: inherit;
+}
+.segmented-controller-positive li > a {
+  color: #4cd964;
+}
+.segmented-controller-positive li:active {
+  background-color: #dff8e3;
+}
+.segmented-controller-positive li.selected {
+  background-color: #4cd964;
+}
+.segmented-controller-positive li.selected > a {
+  color: #fff;
+}
+
+.segmented-controller-negative {
+  border: 1px solid #dd524d;
+}
+.segmented-controller-negative li {
+  border-color: inherit;
+}
+.segmented-controller-negative li > a {
+  color: #dd524d;
+}
+.segmented-controller-negative li:active {
+  background-color: #fae4e3;
+}
+.segmented-controller-negative li.selected {
+  background-color: #dd524d;
+}
+.segmented-controller-negative li.selected > a {
+  color: #fff;
 }
 
 .popover {
