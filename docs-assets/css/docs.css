@@ -235,6 +235,12 @@ hr {
     right: 0;
     bottom: 0;
   }
+  .iphone .popover {
+    position: absolute;
+    display: block;
+    top: 72px;
+    opacity: 1;
+  }
   .iphone .slider li img {
     width: 100%;
   }
