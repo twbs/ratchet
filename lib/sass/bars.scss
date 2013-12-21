@@ -79,29 +79,20 @@
 
 // Bar docked to bottom used for primary app navigation
 .bar-tab {
+  display: table;
   bottom: 0;
   height: $bar-tab-height;
   padding: 0;
   border-top: $border-default;
 }
 
-// Wrapper for individual tab
-.tab-inner {
-  display: -webkit-box;
-  display: box;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  @include box-orient(horizontal);
-}
-
 // Navigational tab
 .tab-item {
+  display: table-cell;
   height: 100%;
+  width: 1%;
   padding-top: 9px;
   text-align: center;
-  @include box-flex(1);
 
   .tab-label,
   .icon {

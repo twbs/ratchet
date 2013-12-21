@@ -342,29 +342,19 @@ strong {
 }
 
 .bar-tab {
+  display: table;
   bottom: 0;
   height: 50px;
   padding: 0;
   border-top: 1px solid #dddddd;
 }
 
-.tab-inner {
-  display: -webkit-box;
-  display: box;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  -webkit-box-orient: horizontal;
-  box-orient: horizontal;
-}
-
 .tab-item {
+  display: table-cell;
   height: 100%;
+  width: 1%;
   padding-top: 9px;
   text-align: center;
-  -webkit-box-flex: 1;
-  box-flex: 1;
 }
 .tab-item .tab-label,
 .tab-item .icon {
