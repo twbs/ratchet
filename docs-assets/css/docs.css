@@ -225,15 +225,29 @@ hr {
   }
 
   .iphone .content,
-  .iphone [class*="bar"] {
+  .iphone [class*="bar"],
+  .iphone .modal {
     position: absolute;
   }
-
   .iphone .content {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  .iphone .slider li img {
+    width: 100%;
+  }
+  .iphone .slider .slide-text {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 
   .component,
