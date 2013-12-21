@@ -1,0 +1,12 @@
+//
+// Cards
+// --------------------------------------------------
+
+.card {
+  width: auto;
+  overflow: hidden;
+  margin: $bar-side-spacing;
+  background-color: #fff;
+  border: $border-default;
+  border-radius: $border-radius;
+}
