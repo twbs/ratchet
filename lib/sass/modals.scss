@@ -13,7 +13,6 @@
   background-color: #fff;  
   @include transform(translate3d(0, 100%, 0));
   @include transition(-webkit-transform .25s, opacity .25s);
-  @include transition-timing-function($timing-fuction);
 
   // Active modal
   &.active {
@@ -21,6 +20,5 @@
     height: 100%;
     @include transform(translate3d(0, 0, 0));
     @include transition(-webkit-transform .25s);
-    @include transition-timing-function($timing-fuction);
   }
 }

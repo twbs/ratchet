@@ -8,34 +8,21 @@
   &.fade {
     left: 0;
     opacity: 0;
-    @include transition(opacity .2s ease-in-out);
 
     &.in {
       opacity: 1;
     }
   }
 
-  // Slide animation iOS7
+  // Slide animation
   &.slide {
     z-index: 2;
     @include transition(-webkit-transform .4s);
     @include transform(translate3d(0, 0, 0));
-    @include transition-timing-function ($timing-fuction);
-
-    // Adding the overlay
-    &.sliding-in,
-    &.right:not([class*="sliding-in"]) {
-      @include animation-name(fadeOverlay);
-      @include animation-duration(.4s);
-    }
-
-    &.right:not([class*="sliding-in"]) {
-      @include animation-direction(reverse);
-    }
 
     &.left {
       z-index: 1;
-      @include transform(translate3d(-20%, 0, 0)); // Creates the parallax effect
+      @include transform(translate3d(-100%, 0, 0));
     }
 
     &.right {
@@ -43,10 +30,4 @@
       @include transform(translate3d(100%, 0, 0));
     }
   }
-}
-
-// Overlay animation for the slide transition
-@-webkit-keyframes fadeOverlay {
-  from { @include box-shadow(0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0)); }
-  to   { @include box-shadow(0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1)); }
 }

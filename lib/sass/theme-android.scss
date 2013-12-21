@@ -1,0 +1,409 @@
+@import "mixins.scss";
+
+//
+// Android theme
+// The visual and interaction styles for Android
+//
+// --------------------------------------------------
+
+
+// Variables
+// --------------------------------------------------
+
+// Type (Change to Roboto)
+$font-family-default: "Helvetica Neue", Helvetica, sans-serif;
+$font-size-default: 17px;
+$font-weight: 500;
+$font-weight-light: 400;
+$line-height-default: 21px;
+
+// Colors
+// Main theme colors
+$primary-color:  #33b5e5;
+$chrome-color:   #111;
+
+// Action colors
+$default-color:  #fff;
+$positive-color: #81c700;
+$negative-color: #f20754;
+
+// Bars
+$bar-base-height:  50px;
+$bar-tab-height:   70px;
+
+// Borders
+$border-default: 1px solid #565656;
+$border-radius: 0;
+
+
+// Base
+// --------------------------------------------------
+
+.content {
+  @include gradient($chrome-color,lighten($chrome-color, 10%));
+}
+
+// Bars
+// --------------------------------------------------
+
+[class*="bar-"] {
+  height: $bar-base-height;
+  background-color: $chrome-color;
+  border-bottom: $border-default;
+
+  // Modifier class to dock any bar below .bar-nav
+  &.bar-header-secondary {
+    top: $bar-base-height + 1;
+  }
+}
+.bar-tab {
+  height: $bar-tab-height;
+  border-top: $border-default;
+  border-bottom: 0;
+}
+// Left aligned text in the .bar-nav 
+.title {
+  position: static;
+  padding-left: 10px;
+  line-height: $bar-base-height;
+  color: $default-color;
+  text-align: left;
+}
+
+
+// Nav bar in popovers
+// --------------------------------------------------
+
+.popover .bar-nav {
+  border-bottom: $border-default;
+}
+
+
+// Table views
+// --------------------------------------------------
+
+.table-view {
+  .table-view-cell {
+    border-bottom: $border-default;
+  
+    // Remove the border from the last table view item
+    &:last-child {
+      background-image: none;
+    }
+  }
+
+  // Table view dividers
+  .table-view-divider {
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+.popover .table-view {
+  border-radius: 12px;
+}
+
+
+// Forms
+// --------------------------------------------------
+
+select,
+textarea,
+input[type="text"],
+input[type=search],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+.input-group {
+  height: 40px;
+  padding: 10px 15px;  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+// Rounded search input
+input[type=search] {
+  height: 34px;
+  text-align: center;
+  background-color: rgba(0,0,0,.1);
+  border: 0;
+  border-radius: 6px;
+}
+input[type=search]:focus {
+  text-align: left;
+}
+select,
+textarea,
+.input-group {
+  height: auto;
+}
+
+// Input groups (cluster multiple inputs together into a single group)
+// -------------------------------------------------------------------
+.input-group {
+  padding: 0;
+}
+.input-group input {
+  border: 0;
+}
+// Remove bottom border on last input to avoid double bottom border
+.input-group input:last-child {
+  background-image: none;
+}
+
+// Input groups with labels
+// --------------------------------------------------
+
+// To use labels with input groups, wrap a label and an input in an .input-row
+.input-row {
+  border-bottom: 0;
+}
+// Remove bottom border on last input-row to avoid double bottom border
+.input-row:last-child,
+.input-row label + input {
+  background-image: none;
+}
+
+
+// Buttons
+// --------------------------------------------------
+
+[class*="button"] {
+  border: $border-default;
+  color: $default-color;
+  background-color: $chrome-color;
+  border-radius: 3px;
+
+  // Active & filled button styles
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: $default-color;
+  }
+}
+[class*="bar-"] {
+  [class*="button"] {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .button-link {
+    padding: 0;
+    color: $primary-color;
+    line-height: $bar-base-height;
+
+    &:active,
+    &.active {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+
+// Other button types
+// --------------------------------------------------
+
+// Primary button (Default color is blue)
+.button-primary {
+  color: #fff;
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+
+  &:active,
+  &.active {
+    border: 1px solid darken($primary-color, 10%);
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Positive button (Default color is green)
+.button-positive {
+  color: #fff;
+  border: 1px solid $positive-color;
+  background-color: $positive-color;
+
+  &:active,
+  &.active {
+    border: 1px solid darken($positive-color, 10%);
+    background-color: darken($positive-color, 10%);
+  }
+}
+
+// Negative button (Default color is red)
+.button-negative {
+  color: #fff;
+  border: 1px solid $negative-color;
+  background-color: $negative-color;
+
+  &:active,
+  &.active {
+    border: 1px solid darken($negative-color, 10%);
+    background-color: darken($negative-color, 10%);
+  }
+}
+
+// Outlined buttons 
+.button-outlined {
+  background-color: transparent;
+
+  &.button-primary {
+    color: $primary-color;
+  }
+  &.button-positive {
+    color: $positive-color;
+  }
+  &.button-negative {
+    color: $negative-color;
+  }
+  // Active states
+  &.button-primary:active,
+  &.button-positive:active,
+  &.button-negative:active {
+    color: #fff;
+  }
+}
+
+// Link button (Buttons that look like links)
+.button-link {
+  color: $primary-color;
+  background-color: transparent;
+  border: none;
+
+  &:active,
+  &.active {
+    color: darken($primary-color, 10%);
+    background-color: transparent;
+  }
+}
+
+// Buttons in nav bars
+// --------------------------------------------------
+
+.bar-nav {
+  .button-link {
+    color: $primary-color;
+
+    &:active {
+      color: $primary-color;
+      opacity: .6;
+    }
+  }
+}
+
+
+//
+// Badges
+// --------------------------------------------------
+
+[class*="badge"] {
+  &.badge-inverted {
+    color: $default-color;
+  }
+}
+
+
+// Badge modifiers
+// --------------------------------------------------
+
+// Main badge
+.badge-primary {
+  color: #fff;
+  background-color: $primary-color;
+
+  &.badge-inverted {
+    color: $primary-color;
+  }
+}
+
+// Positive badge
+.badge-positive {
+  color: #fff;
+  background-color: $positive-color;
+
+  &.badge-inverted {
+    color: $positive-color;
+  }
+}
+
+// Negative badge
+.badge-negative {
+  color: #fff;
+  background-color: $negative-color;
+
+  &.badge-inverted {
+    color: $negative-color;
+  }
+}
+
+
+//
+// Segmented controllers
+// --------------------------------------------------
+
+.segmented-controller {
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  border-radius: 3px;
+
+  li {
+    border-left: 1px solid $primary-color;
+    
+    // Link that fills each section
+    > a {
+      padding-top: 9px;
+      padding-bottom: 10px;
+      color: $primary-color;
+    }
+
+    // Selected segment of controller
+    &.selected {
+      background-color: $primary-color;
+    }
+  }
+}
+
+
+//
+// Popovers
+// --------------------------------------------------
+
+.popover {
+  border-radius: 12px;
+
+  &:after {
+    border-bottom: 15px solid $chrome-color;
+  }
+}
+
+
+//
+// Modal styles
+// --------------------------------------------------
+
+//
+// Toggles styles
+// --------------------------------------------------
+.toggle {
+  // Sliding handle
+  .toggle-handle {
+    border: $border-default;
+  }
+  &:active .toggle-handle {
+    width: 35px;
+  }
+  // Active state for toggle
+  &.active {
+    border: 2px solid $positive-color;
+    background-color: $positive-color;
+
+    .toggle-handle {
+      border-color: $positive-color;
+    }
+  }
+}

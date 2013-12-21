@@ -1,0 +1,277 @@
+/*
+ * =====================================================
+ * Ratchet v2.0.0
+ * Copyright 2013 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Licensed under http://www.opensource.org/licenses/MIT
+ *
+ * Designed and built by @connors, @dhg, and @fat.
+ * =====================================================
+ */
+
+.content {
+  background: #111111;
+  background: -moz-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #111111), color-stop(100%, #2b2b2b));
+  background: -webkit-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: -o-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: -ms-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-form', endColorstr='$color-to',GradientType=0 );
+}
+
+[class*="bar-"] {
+  height: 50px;
+  background-color: #111111;
+  border-bottom: 1px solid #565656;
+}
+[class*="bar-"].bar-header-secondary {
+  top: 51px;
+}
+
+.bar-tab {
+  height: 70px;
+  border-top: 1px solid #565656;
+  border-bottom: 0;
+}
+
+.title {
+  position: static;
+  padding-left: 10px;
+  line-height: 50px;
+  color: white;
+  text-align: left;
+}
+
+.popover .bar-nav {
+  border-bottom: 1px solid #565656;
+}
+
+.table-view .table-view-cell {
+  border-bottom: 1px solid #565656;
+}
+.table-view .table-view-cell:last-child {
+  background-image: none;
+}
+.table-view .table-view-divider {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.popover .table-view {
+  border-radius: 12px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type=search],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+.input-group {
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input[type=search] {
+  height: 34px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 6px;
+}
+
+input[type=search]:focus {
+  text-align: left;
+}
+
+select,
+textarea,
+.input-group {
+  height: auto;
+}
+
+.input-group {
+  padding: 0;
+}
+
+.input-group input {
+  border: 0;
+}
+
+.input-group input:last-child {
+  background-image: none;
+}
+
+.input-row {
+  border-bottom: 0;
+}
+
+.input-row:last-child,
+.input-row label + input {
+  background-image: none;
+}
+
+[class*="button"] {
+  border: 1px solid #565656;
+  color: white;
+  background-color: #111111;
+  border-radius: 3px;
+}
+[class*="button"]:active, [class*="button"].active {
+  color: #fff;
+  background-color: white;
+}
+
+[class*="bar-"] [class*="button"] {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+[class*="bar-"] .button-link {
+  padding: 0;
+  color: #33b5e5;
+  line-height: 50px;
+}
+[class*="bar-"] .button-link:active, [class*="bar-"] .button-link.active {
+  color: #1a9bcb;
+}
+
+.button-primary {
+  color: #fff;
+  border: 1px solid #33b5e5;
+  background-color: #33b5e5;
+}
+.button-primary:active, .button-primary.active {
+  border: 1px solid #1a9bcb;
+  background-color: #1a9bcb;
+}
+
+.button-positive {
+  color: #fff;
+  border: 1px solid #81c700;
+  background-color: #81c700;
+}
+.button-positive:active, .button-positive.active {
+  border: 1px solid #609400;
+  background-color: #609400;
+}
+
+.button-negative {
+  color: #fff;
+  border: 1px solid #f20754;
+  background-color: #f20754;
+}
+.button-negative:active, .button-negative.active {
+  border: 1px solid #c00643;
+  background-color: #c00643;
+}
+
+.button-outlined {
+  background-color: transparent;
+}
+.button-outlined.button-primary {
+  color: #33b5e5;
+}
+.button-outlined.button-positive {
+  color: #81c700;
+}
+.button-outlined.button-negative {
+  color: #f20754;
+}
+.button-outlined.button-primary:active, .button-outlined.button-positive:active, .button-outlined.button-negative:active {
+  color: #fff;
+}
+
+.button-link {
+  color: #33b5e5;
+  background-color: transparent;
+  border: none;
+}
+.button-link:active, .button-link.active {
+  color: #1a9bcb;
+  background-color: transparent;
+}
+
+.bar-nav .button-link {
+  color: #33b5e5;
+}
+.bar-nav .button-link:active {
+  color: #33b5e5;
+  opacity: .6;
+}
+
+[class*="badge"].badge-inverted {
+  color: white;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #33b5e5;
+}
+.badge-primary.badge-inverted {
+  color: #33b5e5;
+}
+
+.badge-positive {
+  color: #fff;
+  background-color: #81c700;
+}
+.badge-positive.badge-inverted {
+  color: #81c700;
+}
+
+.badge-negative {
+  color: #fff;
+  background-color: #f20754;
+}
+.badge-negative.badge-inverted {
+  color: #f20754;
+}
+
+.segmented-controller {
+  background-color: transparent;
+  border: 1px solid #33b5e5;
+  border-radius: 3px;
+}
+.segmented-controller li {
+  border-left: 1px solid #33b5e5;
+}
+.segmented-controller li > a {
+  padding-top: 9px;
+  padding-bottom: 10px;
+  color: #33b5e5;
+}
+.segmented-controller li.selected {
+  background-color: #33b5e5;
+}
+
+.popover {
+  border-radius: 12px;
+}
+.popover:after {
+  border-bottom: 15px solid #111111;
+}
+
+.toggle .toggle-handle {
+  border: 1px solid #565656;
+}
+.toggle:active .toggle-handle {
+  width: 35px;
+}
+.toggle.active {
+  border: 2px solid #81c700;
+  background-color: #81c700;
+}
+.toggle.active .toggle-handle {
+  border-color: #81c700;
+}

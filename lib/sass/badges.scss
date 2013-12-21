@@ -4,15 +4,16 @@
 
 [class*="badge"] {
   display: inline-block;
-  color: $default-color;
+  padding: 2px 9px;
+  font-size: 13px;
+  line-height: 1;
+  color: #333;
+  background-color: rgba(0,0,0,.15);
+  border-radius: 100px;
 
-  &.badge-filled {
-    padding: 2px 9px;
-    color: #fff;
-    font-size: 13px;
-    line-height: 1;
-    background-color: $default-color;
-    border-radius: 100px;
+  &.badge-inverted {
+    padding: 0;
+    background-color: transparent;
   }
 }
 
@@ -22,28 +23,31 @@
 
 // Main badge
 .badge-primary {
-  color: $primary-color;
+  color: #fff;
+  background-color: $primary-color;
 
-  &.badge-filled {
-    background-color: $primary-color;
+  &.badge-inverted {
+    color: $primary-color;
   }
 }
 
 // Positive badge
 .badge-positive {
-  color: $positive-color;
+  color: #fff;
+  background-color: $positive-color;
 
-  &.badge-filled {
-    background-color: $positive-color;
+  &.badge-inverted {
+    color: $positive-color;
   }
 }
 
 // Negative badge
 .badge-negative {
-  color: $negative-color;
+  color: #fff;
+  background-color: $negative-color;
 
-  &.badge-filled {
-    background-color: $negative-color;
+  &.badge-inverted {
+    color: $negative-color;
   }
 }
 
@@ -57,12 +61,18 @@
   padding-top: 2px;
   padding-bottom: 2px;
   margin: -2px -4px -2px 4px;
+  background-color: rgba(0,0,0,.15);
 }
 
 // Styles for filled badges within filled buttons
-.button-filled .badge-filled,
-[class*="button"]:active .badge-filled {
-  background-color: rgba(0,0,0,.2);
+[class*="button"] .badge-inverted,
+[class*="button"]:active .badge-inverted {
+  background-color: transparent;
+}
+.button-primary:active .badge-inverted,
+.button-positive:active .badge-inverted,
+.button-negative:active .badge-inverted {
+  color: #fff;
 }
 
 // Position badges within block level buttons
@@ -73,3 +83,8 @@
   right: 0;
   margin-right: 10px;
 }
+
+// Badges in table-views
+// --------------------------------------------------
+
+

@@ -1,10 +1,10 @@
-# Ratchet v2.0 WIP
+# Ratchet v2.0 WIP [![devDependencies](https://david-dm.org/maker/ratchet/dev-status.png)](https://david-dm.org/maker/ratchet#info=devDependencies)
 
-Prototype mobile apps with simple HTML, CSS and JS components.
+Prototype mobile apps with simple HTML, CSS, and JS components.
 
 ## Getting Started
 
-- Clone the repo with `git clone https://github.com/maker/ratchet.git` or just [download](http://maker.github.io/ratchet/ratchet.zip) the bundled CSS and JS
+- Clone the repo with `git clone https://github.com/maker/ratchet.git` or just [download](http://github.com/maker/ratchet/archive/v2.0.0.zip) the bundled CSS and JS
 - [Read the docs](http://maker.github.io/ratchet) to learn about the components and how to get a prototype on your phone
 - We will have example apps to check out very soon!
 

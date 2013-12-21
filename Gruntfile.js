@@ -32,8 +32,7 @@ module.exports = function(grunt) {
           '<%= meta.srcPath %>js/push.js',
           '<%= meta.srcPath %>js/segmented-controllers.js',
           '<%= meta.srcPath %>js/sliders.js',
-          '<%= meta.srcPath %>js/toggles.js',
-          '<%= meta.srcPath %>js/alerts.js'
+          '<%= meta.srcPath %>js/toggles.js'
         ],
         dest: '<%= meta.distPath %><%= pkg.name %>.js'
       }
@@ -47,8 +46,10 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss',
-          '<%= meta.distPath %>ratchet-theme.css': '<%= meta.srcPath %>sass/theme-classic.scss',
-          '<%= meta.docsPath %>/css/docs.css': '<%= meta.srcPath %>sass/docs.scss'
+          '<%= meta.docsPath %>/css/docs.css': '<%= meta.srcPath %>sass/docs.scss',
+          '<%= meta.distPath %><%= pkg.name %>-theme.css': '<%= meta.srcPath %>sass/theme-classic.scss',
+          '<%= meta.distPath %>ios-theme.css': '<%= meta.srcPath %>sass/theme-ios.scss',
+          '<%= meta.distPath %>android-theme.css': '<%= meta.srcPath %>sass/theme-android.scss'
         }
       }
     },

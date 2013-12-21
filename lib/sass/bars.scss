@@ -8,9 +8,11 @@
   left: 0;
   z-index: 10;
   height: $bar-base-height;
-  padding: 5px $bar-side-spacing;
+  padding-right: $bar-side-spacing;
+  padding-left: $bar-side-spacing;
+  border-bottom: $border-default;
   background-color: $chrome-color;
-  @include box-shadow(0 0 1px rgba(0,0,0,.85));
+
 
   // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
@@ -40,20 +42,18 @@
 // Bar docked to top of viewport for showing page title and actions
 .bar-nav {
   top: 0;
-  display: -webkit-box;
-  display: box;
-  @include box-orient(horizontal);
 }
 
 // Centered text in the .bar-nav 
 .title {
   position: absolute;
-  top: 0;
-  left: 0;
   display: block;
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -$bar-side-spacing;
+  margin-right: -$bar-side-spacing;
   font-size: $font-size-default;
   font-weight: $font-weight;
   line-height: $bar-base-height;
@@ -79,32 +79,24 @@
 
 // Bar docked to bottom used for primary app navigation
 .bar-tab {
+  display: table;
   bottom: 0;
   height: $bar-tab-height;
   padding: 0;
-}
-
-// Wrapper for individual tab
-.tab-inner {
-  display: -webkit-box;
-  display: box;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  @include box-orient(horizontal);
+  border-top: $border-default;
 }
 
 // Navigational tab
 .tab-item {
+  display: table-cell;
   height: 100%;
+  width: 1%;
   padding-top: 9px;
   text-align: center;
-  @include box-flex(1);
 
   .tab-label,
   .icon {
-    color: $default-color;
+    color: #929292;
   }
 
   // Label for tab
@@ -130,13 +122,12 @@
   }
 }
 
+
 // Nav bar in popovers
 // --------------------------------------------------
 
 .popover .bar-nav {
-  padding-right: 15px;
-  padding-left: 15px;
-  border-bottom: 1px solid rgba(0,0,0,.15);
+  border-bottom: $border-default;
   border-radius: 12px 12px 0 0;
   @include box-shadow(none);
 
