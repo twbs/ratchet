@@ -63,10 +63,10 @@ module.exports = function(grunt) {
   });
 
   // Load the plugins
-  grunt.loadNpmTasks('grunt-jekyll');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-jekyll');
 
   // Default task(s).
   grunt.registerTask('default', ['sass', 'concat']);
