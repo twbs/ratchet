@@ -60,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
 // Overriding the button styles for the social
 // --------------------------------------------------
 
@@ -83,8 +84,63 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+// Masthead
+// --------------------------------------------------
+
+.docs-masthead {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+
+  .logotype {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+.docs-navigation {
+  float: right;
+  padding-top: 5px;
+
+  .nav-item {
+    margin-left: 20px;
+  }    
+}
+
+
+// Section header
+// --------------------------------------------------
+
+.docs-section-header {
+  padding-top: 50px;
+  padding-bottom: 60px; // Vertically center it optically
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background-color: #fcfcfc;
+
+  .section-title,
+  .section-description {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  .section-title {
+    color: #333;
+    font-size: 30px;
+  }
+  .section-description {
+    color: #777;
+    font-size: 18px;
+  }
+}
+
+
 // Components
 // --------------------------------------------------
+
 .component {
   padding: 50px 15px;
   margin-left: -15px;
@@ -195,7 +251,7 @@ hr {
 // --------------------------------------------------
 @media screen and (min-width: 768px) {
   .iphone {
-    display: block;
+    // display: block;
     position: fixed;
     top: 50px;
     left: 50%;

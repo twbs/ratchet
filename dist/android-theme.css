@@ -1,7 +1,7 @@
 /*
  * =====================================================
  * Ratchet v2.0.0
- * Copyright 2013 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Copyright 2014 Connor Sears, Dave Gamache, and Jacob Thornton
  * Licensed under http://www.opensource.org/licenses/MIT
  *
  * Designed and built by @connors, @dhg, and @fat.

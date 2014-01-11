@@ -1,7 +1,7 @@
 /*
  * =====================================================
  * Ratchet v2.0.0
- * Copyright 2013 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Copyright 2014 Connor Sears, Dave Gamache, and Jacob Thornton
  * Licensed under http://www.opensource.org/licenses/MIT
  *
  * Designed and built by @connors, @dhg, and @fat.
@@ -79,6 +79,49 @@ h1, h2, h3, h4, h5, h6 {
 .social [class*="button"] {
   padding: 0;
   border: 0;
+}
+
+.docs-masthead {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.docs-masthead .logotype {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.docs-navigation {
+  float: right;
+  padding-top: 5px;
+}
+.docs-navigation .nav-item {
+  margin-left: 20px;
+}
+
+.docs-section-header {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background-color: #fcfcfc;
+}
+.docs-section-header .section-title,
+.docs-section-header .section-description {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.docs-section-header .section-title {
+  color: #333;
+  font-size: 30px;
+}
+.docs-section-header .section-description {
+  color: #777;
+  font-size: 18px;
 }
 
 .component {
@@ -194,7 +237,6 @@ hr {
 
 @media screen and (min-width: 768px) {
   .iphone {
-    display: block;
     position: fixed;
     top: 50px;
     left: 50%;
