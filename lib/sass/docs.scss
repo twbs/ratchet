@@ -89,16 +89,40 @@ h1, h2, h3, h4, h5, h6 {
 // --------------------------------------------------
 
 .docs-masthead {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  text-align: center;
   border-bottom: 1px solid #ddd;
+  background-color: #fcfcfc;
 
   .logotype {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
     margin-top: 0;
-    margin-bottom: 0;
-    color: #999;
+    margin-bottom: 10px;
+    color: #ccc;
     font-size: 18px;
     font-weight: normal;
+    line-height: 16px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    @include transition(all .2s linear);
+  }
+  .section-title,
+  .section-description {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  .section-title {
+    color: #333;
+    font-size: 45px;
+  }
+  .section-description {
+    color: #777;
+    font-size: 24px;
   }
 }
 .docs-navigation {
@@ -110,33 +134,17 @@ h1, h2, h3, h4, h5, h6 {
   }    
 }
 
-
-// Section header
+// Platform toggle
 // --------------------------------------------------
 
-.docs-section-header {
-  padding-top: 50px;
-  padding-bottom: 60px; // Vertically center it optically
-  text-align: center;
+.platform-toggle {
   border-bottom: 1px solid #ddd;
-  background-color: #fcfcfc;
 
-  .section-title,
-  .section-description {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 300;
-  }
-  .section-title {
-    color: #333;
-    font-size: 30px;
-  }
-  .section-description {
-    color: #777;
-    font-size: 18px;
+  .segmented-controller {
+    margin: 10px auto;
+    max-width: 300px;
   }
 }
-
 
 // Components
 // --------------------------------------------------
