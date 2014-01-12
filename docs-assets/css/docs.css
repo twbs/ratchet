@@ -82,11 +82,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .docs-masthead {
-  padding-top: 70px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 130px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
-  background-color: #fcfcfc;
+  background-color: #1eb0e9;
 }
 .docs-masthead .logotype {
   display: inline-block;
@@ -95,12 +94,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
   margin-top: 0;
   margin-bottom: 10px;
-  color: #ccc;
+  color: #fff;
   font-size: 18px;
   font-weight: normal;
   line-height: 16px;
-  border: 2px solid #ddd;
+  border: 2px solid #fff;
   border-radius: 50px;
+  opacity: .7;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
@@ -111,12 +111,30 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 .docs-masthead .section-title {
-  color: #333;
+  color: #fff;
   font-size: 45px;
 }
 .docs-masthead .section-description {
-  color: #777;
+  color: #fff;
   font-size: 24px;
+  opacity: .7;
+}
+.docs-masthead .icon {
+  position: fixed;
+  top: 15px;
+  color: #fff;
+  opacity: .7;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.docs-masthead .icon:hover {
+  opacity: 1;
+}
+.docs-masthead .icon-download {
+  left: 15px;
+}
+.docs-masthead .icon-list {
+  right: 15px;
 }
 
 .docs-navigation {
@@ -131,8 +149,11 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #ddd;
 }
 .platform-toggle .segmented-controller {
-  margin: 10px auto;
   max-width: 300px;
+  margin: 8px auto;
+}
+.platform-toggle .segmented-controller li {
+  cursor: pointer;
 }
 
 .component {
@@ -247,14 +268,18 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
+  .phone-column {
+    position: relative;
+  }
+
   .iphone {
-    position: fixed;
+    display: block;
+    position: absolute;
     top: 50px;
-    left: 50%;
     float: right;
     width: 395px;
     height: 813px;
-    margin-left: 140px;
+    margin-left: -13px;
     font-family: "Helvetica Neue", sans-serif;
     background-image: url("../img/iphone.png");
     background-size: 100%;
@@ -263,6 +288,10 @@ hr {
     animation-name: fadein;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
+  }
+  .iphone.iphone-fixed {
+    position: fixed;
+    right: auto;
   }
 
   .iphone .iphone-content {

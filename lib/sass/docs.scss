@@ -89,11 +89,10 @@ h1, h2, h3, h4, h5, h6 {
 // --------------------------------------------------
 
 .docs-masthead {
-  padding-top: 70px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 130px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
-  background-color: #fcfcfc;
+  background-color: #1eb0e9;
 
   .logotype {
     display: inline-block;
@@ -102,12 +101,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px;
     margin-top: 0;
     margin-bottom: 10px;
-    color: #ccc;
+    color: #fff;
     font-size: 18px;
     font-weight: normal;
     line-height: 16px;
-    border: 2px solid #ddd;
+    border: 2px solid #fff;
     border-radius: 50px;
+    opacity: .7;
     @include transition(all .2s linear);
   }
   .section-title,
@@ -117,12 +117,30 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
   }
   .section-title {
-    color: #333;
+    color: #fff;
     font-size: 45px;
   }
   .section-description {
-    color: #777;
+    color: #fff;
     font-size: 24px;
+    opacity: .7;
+  }
+  .icon {
+    position: fixed;
+    top: 15px;
+    color: #fff;
+    opacity: .7;
+    @include transition(all .2s linear);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .icon-download {
+    left: 15px;
+  }
+  .icon-list {
+    right: 15px;
   }
 }
 .docs-navigation {
@@ -141,8 +159,12 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #ddd;
 
   .segmented-controller {
-    margin: 10px auto;
     max-width: 300px;
+    margin: 8px auto;
+
+    li {
+      cursor: pointer;
+    }
   }
 }
 
@@ -258,21 +280,28 @@ hr {
 // Tablet to desktop 
 // --------------------------------------------------
 @media screen and (min-width: 768px) {
+  .phone-column {
+    position: relative;
+  }
   .iphone {
-    // display: block;
-    position: fixed;
+    display: block;
+    position: absolute;
     top: 50px;
-    left: 50%;
     float: right;
     width: 395px;
     height: 813px;
-    margin-left: 140px;
+    margin-left: -13px;
     font-family: "Helvetica Neue", sans-serif;
     background-image: url("../img/iphone.png");
     background-size: 100%;
     background-repeat: no-repeat;
     @include animation-name(fadein);
     @include animation-duration(2s);
+
+    &.iphone-fixed {
+      position: fixed;
+      right: auto;
+    }
   }
   .iphone .iphone-content {
     position: absolute;

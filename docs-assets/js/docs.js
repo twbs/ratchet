@@ -35,9 +35,10 @@ $(function() {
 
     iphone.initialLeft   = iphone.offset().left;
     iphone.initialTop    = iphone.initialTop || iphone.offset().top;
-    //iphone.dockingOffset = ($(window).height() + 20 + $('.docs-masthead').height() - iphone.height())/2;
+    iphone.dockingOffset = ($(window).height() + $('.platform-toggle').height() - iphone.height())/2;
     checkDesktopContent();
     calculateScroll();
+    console.log(iphone.dockingOffset);
 
     if (!eventListeners) addEventListeners();
   }
@@ -88,12 +89,12 @@ $(function() {
     if(pageHeight - currentTop < footerHeight + contentPadding + 1400) {
       iphone[0].className = "iphone iphone-bottom";
       iphone[0].setAttribute('style','')
-    // } else if((iphone.initialTop - currentTop) <= iphone.dockingOffset) {
-    //   iphone[0].className = "iphone iphone-fixed";
-    //   iphone.css({top: iphone.dockingOffset})
-    } else {
+    } else if((iphone.initialTop - currentTop) <= iphone.dockingOffset + 40) {
       iphone[0].className = "iphone iphone-fixed";
       iphone.css({top: iphone.dockingOffset})
+    } else {
+      iphone[0].className = "iphone"
+      iphone[0].setAttribute('style','')
     }
 
     // Injection of components into phone
