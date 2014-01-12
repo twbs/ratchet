@@ -37,7 +37,7 @@ $(function() {
 
     device.initialLeft   = device.offset().left;
     device.initialTop    = device.initialTop || device.offset().top;
-    device.dockingOffset = ($(window).height() + platformToggle.outerHeight() - device.height())/2;
+    device.dockingOffset = ($(window).height() - device.height())/2;
     checkDesktopContent();
     calculateScroll();
 
@@ -107,7 +107,7 @@ $(function() {
     var contentSectionItem;
     var currentTop = win.scrollTop();
 
-    if((device.initialTop - currentTop) <= device.dockingOffset + 41) {
+    if((device.initialTop - currentTop) <= device.dockingOffset + 113) {
       device[0].className = "device device-fixed";
       device.css({top: device.dockingOffset})
     } else {

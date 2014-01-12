@@ -1,5 +1,12 @@
 @import "variables.scss";
 @import "mixins.scss";
+// Devices
+.platform-ios {
+  @import "theme-ios.scss";
+}
+.platform-android {
+  @import "theme-android.scss";
+}
 
 //
 // Documentation
@@ -85,8 +92,7 @@ body {
 // --------------------------------------------------
 
 .docs-masthead {
-  padding-top: 100px;
-  padding-bottom: 130px;
+  padding-top: 60px;
   text-align: center;
   background-color: #1eb0e9;
 
@@ -153,28 +159,44 @@ body {
 // --------------------------------------------------
 
 .platform-toggle {
-  z-index: 3;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  background-color: #1eb0e9;
+  @include transition(padding-top .2s linear, padding-bottom .2s linear);
 
   &.fixed {
     position: fixed;
     top: 0;
+    bottom: auto;
     left: 0;
     right: 0;
+    z-index: 3;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   .segmented-controller {
     max-width: 300px;
-    margin: 8px auto;
-    border-color: #ccc;
+    margin: 0 auto;
+    border-color: #fff;
+    background-color: #1eb0e9;
 
     li {
       cursor: pointer;
-      border-color: #ccc;
+      border-color: #fff;
 
+      a { 
+        color: #fff;
+      }
+      &:active {
+        background-color: rgba(255,255,255,.3);
+      }
       &.selected {
-        background-color: #ccc;
+        background-color: #fff;
+
+        a {
+          color: #1eb0e9;
+        }
       }
     }
   }
@@ -316,7 +338,7 @@ hr {
     top: 117px;
     left: 37px;
     width: 320px;
-    height: 568px;
+    height: 569px;
     overflow: hidden;
     font-size: $font-size-default;
     line-height: $line-height-default;
@@ -516,14 +538,4 @@ hr {
     padding: 20px 0;
     opacity: 1;
   }
-}
-
-// Devices
-// --------------------------------------------------
-
-.platform-ios {
-  @import "theme-ios.scss";
-}
-.platform-android {
-  @import "theme-android.scss";
 }
