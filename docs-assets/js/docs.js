@@ -1,7 +1,8 @@
 $(function() {
 
   var doc;
-  var iphone;
+  var device;
+  var platformToggle;
   var windowWidth;
   var windowHeight;
   var pageHeight;
@@ -21,7 +22,8 @@ $(function() {
     win                  = $(window);
     doc                  = $(document);
     bod                  = $(document.body)
-    iphone               = iphone || $('.iphone');
+    device               = device || $('.device');
+    platformToggle       = $('.platform-toggle');
     noticeBanner         = $('.notice-banner');
     navComponentLinks    = $('.nav-components-link');
     componentsList       = $('.components-list');
@@ -33,9 +35,9 @@ $(function() {
     contentPadding       = parseInt($('.docs-content').css('padding-bottom'));
     footerHeight         = $('.docs-footer').outerHeight(false);
 
-    iphone.initialLeft   = iphone.offset().left;
-    iphone.initialTop    = iphone.initialTop || iphone.offset().top;
-    iphone.dockingOffset = ($(window).height() + $('.platform-toggle').outerHeight() - iphone.height())/2;
+    device.initialLeft   = device.offset().left;
+    device.initialTop    = device.initialTop || device.offset().top;
+    device.dockingOffset = ($(window).height() + platformToggle.outerHeight() - device.height())/2;
     checkDesktopContent();
     calculateScroll();
 
@@ -49,7 +51,7 @@ $(function() {
       $(this).hide();
     });
 
-    iphone.on('click', function (e) {
+    device.on('click', function (e) {
       e.preventDefault();
     });
 
@@ -84,23 +86,23 @@ $(function() {
     var contentSectionItem;
     var currentTop = win.scrollTop();
 
-    if((iphone.initialTop - currentTop) <= iphone.dockingOffset + 41) {
-      iphone[0].className = "iphone iphone-fixed";
-      iphone.css({top: iphone.dockingOffset})
+    if((device.initialTop - currentTop) <= device.dockingOffset + 41) {
+      device[0].className = "device device-fixed";
+      device.css({top: device.dockingOffset})
     } else {
-      iphone[0].className = "iphone"
-      iphone[0].setAttribute('style','')
+      device[0].className = "device"
+      device[0].setAttribute('style','')
     }
 
     if(currentTop >= $('.docs-masthead').outerHeight()) {
-      $('.platform-toggle').addClass('fixed');
-      $('.docs-components').css('padding-top', $('.platform-toggle').outerHeight());
+      platformToggle.addClass('fixed');
+      $('.docs-components').css('padding-top', platformToggle.outerHeight());
     } else {
-      $('.platform-toggle').removeClass('fixed');
+      platformToggle.removeClass('fixed');
       $('.docs-components').css('padding-top', 0);
     }
 
-    // Injection of components into phone
+    // Injection of components into device
     for (var l = contentSection.length; l--;) {
       if ((topCache[l] - currentTop) < windowHeight) {
         if (currentActive == l) return;
@@ -109,9 +111,9 @@ $(function() {
         contentSectionItem = $(contentSection[l])
         contentSectionItem.addClass('active')
         if(contentSectionItem.attr('id')) {
-          iphone.attr("id", contentSectionItem.attr('id') + "InPhone");
+          device.attr("id", contentSectionItem.attr('id') + "InDevice");
         } else {
-          iphone.attr("id", "")
+          device.attr("id", "")
         }
         if (!contentSectionItem.hasClass('informational')) {
           updateContent(contentSectionItem.find('.highlight .html').text())
@@ -125,6 +127,9 @@ $(function() {
     }
   }
 
+
+
   $(window).on('load resize', initialize);
-  $(window).on('load', function () { new FingerBlast('.iphone-content'); });
+  $(window).on('load', function () { new FingerBlast('.device-content'); });
+  $(window).on('load', function () { new FingerBlast('.platform-toggle'); });
 });

@@ -156,16 +156,14 @@ body {
 .platform-toggle .segmented-controller {
   max-width: 300px;
   margin: 8px auto;
-  border-color: #bbb;
+  border-color: #ccc;
 }
 .platform-toggle .segmented-controller li {
   cursor: pointer;
+  border-color: #ccc;
 }
 .platform-toggle .segmented-controller li.selected {
-  background-color: #bbb;
-}
-.platform-toggle .segmented-controller a {
-  border-color: #bbb;
+  background-color: #ccc;
 }
 
 .component {
@@ -243,7 +241,7 @@ body {
   -moz-animation: shownotice 1s infinite;
 }
 
-.iphone {
+.device {
   display: none;
 }
 
@@ -280,7 +278,7 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-  .iphone {
+  .device {
     position: relative;
     top: 50px;
     display: block;
@@ -296,12 +294,12 @@ hr {
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
   }
-  .iphone.iphone-fixed {
+  .device.device-fixed {
     position: fixed;
     right: auto;
   }
 
-  .iphone .iphone-content {
+  .device .device-content {
     position: absolute;
     top: 117px;
     left: 37px;
@@ -313,13 +311,13 @@ hr {
     background-color: #efeff4;
   }
 
-  .iphone .content,
-  .iphone [class*="bar"],
-  .iphone .modal {
+  .device .content,
+  .device [class*="bar"],
+  .device .modal {
     position: absolute;
   }
 
-  .iphone .content {
+  .device .content {
     top: 44px;
     left: 0;
     right: 0;
@@ -574,4 +572,617 @@ hr {
     padding: 20px 0;
     opacity: 1;
   }
+}
+
+.platform-ios {
+  @-webkit-keyframes fadeOverlay {
+    from {
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0), -320px 0 0 rgba(0, 0, 0, 0);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0), -320px 0 0 rgba(0, 0, 0, 0);
+    }
+
+    to {
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), -320px 0 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), -320px 0 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+}
+.platform-ios .content {
+  background-color: #efeff4;
+}
+.platform-ios [class*="bar-"] {
+  border-bottom: 0;
+  background-color: rgba(247, 247, 247, 0.98);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+}
+.platform-ios [class*="bar-"].bar-header-secondary {
+  top: 44px;
+}
+.platform-ios [class*="bar-"].bar-footer-secondary {
+  bottom: 44px;
+}
+.platform-ios [class*="bar-"].bar-footer-secondary-tab {
+  bottom: 50px;
+}
+.platform-ios .bar-tab {
+  border-top: 0;
+  -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
+}
+.platform-ios .tab-item.active .tab-label,
+.platform-ios .tab-item.active .icon, .platform-ios .tab-item:active .tab-label,
+.platform-ios .tab-item:active .icon {
+  color: #007aff;
+}
+.platform-ios .popover .bar-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.platform-ios .table-view .table-view-cell {
+  border-bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
+}
+.platform-ios .table-view .table-view-cell:last-child {
+  background-image: none;
+}
+.platform-ios .table-view .table-view-divider {
+  border-top: 0;
+  border-bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 0 100%, 0 0%;
+  background-repeat: no-repeat;
+}
+.platform-ios .popover .table-view {
+  border-radius: 12px;
+}
+.platform-ios .card .table-view li:last-child {
+  background-image: none;
+}
+.platform-ios select,
+.platform-ios textarea,
+.platform-ios input[type="text"],
+.platform-ios input[type=search],
+.platform-ios input[type="password"],
+.platform-ios input[type="datetime"],
+.platform-ios input[type="datetime-local"],
+.platform-ios input[type="date"],
+.platform-ios input[type="month"],
+.platform-ios input[type="time"],
+.platform-ios input[type="week"],
+.platform-ios input[type="number"],
+.platform-ios input[type="email"],
+.platform-ios input[type="url"],
+.platform-ios input[type="tel"],
+.platform-ios input[type="color"],
+.platform-ios .input-group {
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.platform-ios input[type=search] {
+  height: 34px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 6px;
+}
+.platform-ios input[type=search]:focus {
+  text-align: left;
+}
+.platform-ios select,
+.platform-ios textarea,
+.platform-ios .input-group {
+  height: auto;
+}
+.platform-ios .input-group {
+  padding: 0;
+}
+.platform-ios .input-group input {
+  border: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
+}
+.platform-ios .input-group input:last-child {
+  background-image: none;
+}
+.platform-ios .input-row {
+  border-bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
+}
+.platform-ios .input-row:last-child,
+.platform-ios .input-row label + input {
+  background-image: none;
+}
+.platform-ios [class*="button"] {
+  border: 1px solid #929292;
+  color: #929292;
+  background-color: rgba(247, 247, 247, 0.98);
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+.platform-ios [class*="button"]:active, .platform-ios [class*="button"].active {
+  color: #fff;
+  background-color: #929292;
+}
+.platform-ios .button-primary {
+  color: #fff;
+  border: 1px solid #007aff;
+  background-color: #007aff;
+}
+.platform-ios .button-primary:active, .platform-ios .button-primary.active {
+  border: 1px solid #0062cc;
+  background-color: #0062cc;
+}
+.platform-ios .button-positive {
+  color: #fff;
+  border: 1px solid #4cd964;
+  background-color: #4cd964;
+}
+.platform-ios .button-positive:active, .platform-ios .button-positive.active {
+  border: 1px solid #2ac845;
+  background-color: #2ac845;
+}
+.platform-ios .button-negative {
+  color: #fff;
+  border: 1px solid #dd524d;
+  background-color: #dd524d;
+}
+.platform-ios .button-negative:active, .platform-ios .button-negative.active {
+  border: 1px solid #cf2d28;
+  background-color: #cf2d28;
+}
+.platform-ios .button-outlined {
+  background-color: transparent;
+}
+.platform-ios .button-outlined.button-primary {
+  color: #007aff;
+}
+.platform-ios .button-outlined.button-positive {
+  color: #4cd964;
+}
+.platform-ios .button-outlined.button-negative {
+  color: #dd524d;
+}
+.platform-ios .button-outlined.button-primary:active, .platform-ios .button-outlined.button-positive:active, .platform-ios .button-outlined.button-negative:active {
+  color: #fff;
+}
+.platform-ios .button-link {
+  color: #007aff;
+  background-color: transparent;
+  border: none;
+}
+.platform-ios .button-link:active, .platform-ios .button-link.active {
+  color: #0062cc;
+  background-color: transparent;
+}
+.platform-ios .bar-nav .button-link {
+  color: #007aff;
+}
+.platform-ios .bar-nav .button-link:active {
+  color: #007aff;
+  opacity: .6;
+}
+.platform-ios [class*="badge"].badge-inverted {
+  color: #929292;
+}
+.platform-ios .badge-primary {
+  color: #fff;
+  background-color: #007aff;
+}
+.platform-ios .badge-primary.badge-inverted {
+  color: #007aff;
+}
+.platform-ios .badge-positive {
+  color: #fff;
+  background-color: #4cd964;
+}
+.platform-ios .badge-positive.badge-inverted {
+  color: #4cd964;
+}
+.platform-ios .badge-negative {
+  color: #fff;
+  background-color: #dd524d;
+}
+.platform-ios .badge-negative.badge-inverted {
+  color: #dd524d;
+}
+.platform-ios .segmented-controller {
+  color: #929292;
+  background-color: transparent;
+  border: 1px solid #929292;
+}
+.platform-ios .segmented-controller li {
+  border-color: #929292;
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+.platform-ios .segmented-controller li:active {
+  background-color: #ebebeb;
+}
+.platform-ios .segmented-controller li.selected {
+  background-color: #929292;
+}
+.platform-ios .segmented-controller li.selected > a {
+  color: #fff;
+}
+.platform-ios .segmented-controller-primary {
+  border: 1px solid #007aff;
+}
+.platform-ios .segmented-controller-primary li {
+  border-color: inherit;
+}
+.platform-ios .segmented-controller-primary li > a {
+  color: #007aff;
+}
+.platform-ios .segmented-controller-primary li:active {
+  background-color: #b3d7ff;
+}
+.platform-ios .segmented-controller-primary li.selected {
+  background-color: #007aff;
+}
+.platform-ios .segmented-controller-primary li.selected > a {
+  color: #fff;
+}
+.platform-ios .segmented-controller-positive {
+  border: 1px solid #4cd964;
+}
+.platform-ios .segmented-controller-positive li {
+  border-color: inherit;
+}
+.platform-ios .segmented-controller-positive li > a {
+  color: #4cd964;
+}
+.platform-ios .segmented-controller-positive li:active {
+  background-color: #dff8e3;
+}
+.platform-ios .segmented-controller-positive li.selected {
+  background-color: #4cd964;
+}
+.platform-ios .segmented-controller-positive li.selected > a {
+  color: #fff;
+}
+.platform-ios .segmented-controller-negative {
+  border: 1px solid #dd524d;
+}
+.platform-ios .segmented-controller-negative li {
+  border-color: inherit;
+}
+.platform-ios .segmented-controller-negative li > a {
+  color: #dd524d;
+}
+.platform-ios .segmented-controller-negative li:active {
+  background-color: #fae4e3;
+}
+.platform-ios .segmented-controller-negative li.selected {
+  background-color: #dd524d;
+}
+.platform-ios .segmented-controller-negative li.selected > a {
+  color: #fff;
+}
+.platform-ios .popover {
+  border-radius: 12px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+.platform-ios .popover:after {
+  border-bottom: 15px solid rgba(247, 247, 247, 0.98);
+}
+.platform-ios .modal {
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
+  transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
+}
+.platform-ios .modal.active {
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
+  transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
+}
+.platform-ios .toggle {
+  width: 47px;
+  border: 2px solid #e6e6e6;
+  -webkit-box-shadow: inset 0 0 0 0 #e1e1e1;
+  box-shadow: inset 0 0 0 0 #e1e1e1;
+  -webkit-transition-property: box-shadow, border;
+  transition-property: box-shadow, border;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.platform-ios .toggle .toggle-handle {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
+  -webkit-transition-property: -webkit-transform, border, width;
+  transition-property: -webkit-transform, border, width;
+}
+.platform-ios .toggle:before {
+  display: none;
+}
+.platform-ios .toggle:active .toggle-handle {
+  width: 35px;
+}
+.platform-ios .toggle.active {
+  border: 2px solid #4cd964;
+  background-color: transparent;
+  -webkit-box-shadow: inset 0 0 0 13px #4cd964;
+  box-shadow: inset 0 0 0 13px #4cd964;
+}
+.platform-ios .toggle.active .toggle-handle {
+  -webkit-transform: translate3d(17px, 0, 0);
+  transform: translate3d(17px, 0, 0);
+}
+.platform-ios .toggle.active:active .toggle-handle,
+.platform-ios .toggle.active .toggle-handle:active {
+  -webkit-transform: translate3d(10px, 0, 0) !important;
+  transform: translate3d(10px, 0, 0) !important;
+}
+.platform-ios .toggle.active .toggle-handle {
+  border-color: #4cd964;
+}
+.platform-ios .content.fade {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.platform-ios .content.slide {
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
+  transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
+}
+.platform-ios .content.slide.sliding-in, .platform-ios .content.slide.right:not([class*="sliding-in"]) {
+  -webkit-animation-name: fadeOverlay;
+  animation-name: fadeOverlay;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+.platform-ios .content.slide.right:not([class*="sliding-in"]) {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+.platform-ios .content.slide.left {
+  -webkit-transform: translate3d(-20%, 0, 0);
+  transform: translate3d(-20%, 0, 0);
+}
+
+.platform-android .content {
+  background: #111111;
+  background: -moz-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #111111), color-stop(100%, #2b2b2b));
+  background: -webkit-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: -o-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: -ms-linear-gradient(top, #111111 0%, #2b2b2b 100%);
+  background: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-form', endColorstr='$color-to',GradientType=0 );
+}
+.platform-android [class*="bar-"] {
+  height: 50px;
+  background-color: #111111;
+  border-bottom: 1px solid #565656;
+}
+.platform-android [class*="bar-"].bar-header-secondary {
+  top: 51px;
+}
+.platform-android .bar-tab {
+  height: 70px;
+  border-top: 1px solid #565656;
+  border-bottom: 0;
+}
+.platform-android .title {
+  position: static;
+  padding-left: 10px;
+  line-height: 50px;
+  color: white;
+  text-align: left;
+}
+.platform-android .popover .bar-nav {
+  border-bottom: 1px solid #565656;
+}
+.platform-android .table-view .table-view-cell {
+  border-bottom: 1px solid #565656;
+}
+.platform-android .table-view .table-view-cell:last-child {
+  background-image: none;
+}
+.platform-android .table-view .table-view-divider {
+  border-top: 0;
+  border-bottom: 0;
+}
+.platform-android .popover .table-view {
+  border-radius: 12px;
+}
+.platform-android select,
+.platform-android textarea,
+.platform-android input[type="text"],
+.platform-android input[type=search],
+.platform-android input[type="password"],
+.platform-android input[type="datetime"],
+.platform-android input[type="datetime-local"],
+.platform-android input[type="date"],
+.platform-android input[type="month"],
+.platform-android input[type="time"],
+.platform-android input[type="week"],
+.platform-android input[type="number"],
+.platform-android input[type="email"],
+.platform-android input[type="url"],
+.platform-android input[type="tel"],
+.platform-android input[type="color"],
+.platform-android .input-group {
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.platform-android input[type=search] {
+  height: 34px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 6px;
+}
+.platform-android input[type=search]:focus {
+  text-align: left;
+}
+.platform-android select,
+.platform-android textarea,
+.platform-android .input-group {
+  height: auto;
+}
+.platform-android .input-group {
+  padding: 0;
+}
+.platform-android .input-group input {
+  border: 0;
+}
+.platform-android .input-group input:last-child {
+  background-image: none;
+}
+.platform-android .input-row {
+  border-bottom: 0;
+}
+.platform-android .input-row:last-child,
+.platform-android .input-row label + input {
+  background-image: none;
+}
+.platform-android [class*="button"] {
+  border: 1px solid #565656;
+  color: white;
+  background-color: #111111;
+  border-radius: 3px;
+}
+.platform-android [class*="button"]:active, .platform-android [class*="button"].active {
+  color: #fff;
+  background-color: white;
+}
+.platform-android [class*="bar-"] [class*="button"] {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.platform-android [class*="bar-"] .button-link {
+  padding: 0;
+  color: #33b5e5;
+  line-height: 50px;
+}
+.platform-android [class*="bar-"] .button-link:active, .platform-android [class*="bar-"] .button-link.active {
+  color: #1a9bcb;
+}
+.platform-android .button-primary {
+  color: #fff;
+  border: 1px solid #33b5e5;
+  background-color: #33b5e5;
+}
+.platform-android .button-primary:active, .platform-android .button-primary.active {
+  border: 1px solid #1a9bcb;
+  background-color: #1a9bcb;
+}
+.platform-android .button-positive {
+  color: #fff;
+  border: 1px solid #81c700;
+  background-color: #81c700;
+}
+.platform-android .button-positive:active, .platform-android .button-positive.active {
+  border: 1px solid #609400;
+  background-color: #609400;
+}
+.platform-android .button-negative {
+  color: #fff;
+  border: 1px solid #f20754;
+  background-color: #f20754;
+}
+.platform-android .button-negative:active, .platform-android .button-negative.active {
+  border: 1px solid #c00643;
+  background-color: #c00643;
+}
+.platform-android .button-outlined {
+  background-color: transparent;
+}
+.platform-android .button-outlined.button-primary {
+  color: #33b5e5;
+}
+.platform-android .button-outlined.button-positive {
+  color: #81c700;
+}
+.platform-android .button-outlined.button-negative {
+  color: #f20754;
+}
+.platform-android .button-outlined.button-primary:active, .platform-android .button-outlined.button-positive:active, .platform-android .button-outlined.button-negative:active {
+  color: #fff;
+}
+.platform-android .button-link {
+  color: #33b5e5;
+  background-color: transparent;
+  border: none;
+}
+.platform-android .button-link:active, .platform-android .button-link.active {
+  color: #1a9bcb;
+  background-color: transparent;
+}
+.platform-android .bar-nav .button-link {
+  color: #33b5e5;
+}
+.platform-android .bar-nav .button-link:active {
+  color: #33b5e5;
+  opacity: .6;
+}
+.platform-android [class*="badge"].badge-inverted {
+  color: white;
+}
+.platform-android .badge-primary {
+  color: #fff;
+  background-color: #33b5e5;
+}
+.platform-android .badge-primary.badge-inverted {
+  color: #33b5e5;
+}
+.platform-android .badge-positive {
+  color: #fff;
+  background-color: #81c700;
+}
+.platform-android .badge-positive.badge-inverted {
+  color: #81c700;
+}
+.platform-android .badge-negative {
+  color: #fff;
+  background-color: #f20754;
+}
+.platform-android .badge-negative.badge-inverted {
+  color: #f20754;
+}
+.platform-android .segmented-controller {
+  background-color: transparent;
+  border: 1px solid #33b5e5;
+  border-radius: 3px;
+}
+.platform-android .segmented-controller li {
+  border-left: 1px solid #33b5e5;
+}
+.platform-android .segmented-controller li > a {
+  padding-top: 9px;
+  padding-bottom: 10px;
+  color: #33b5e5;
+}
+.platform-android .segmented-controller li.selected {
+  background-color: #33b5e5;
+}
+.platform-android .popover {
+  border-radius: 12px;
+}
+.platform-android .popover:after {
+  border-bottom: 15px solid #111111;
+}
+.platform-android .toggle .toggle-handle {
+  border: 1px solid #565656;
+}
+.platform-android .toggle:active .toggle-handle {
+  width: 35px;
+}
+.platform-android .toggle.active {
+  border: 2px solid #81c700;
+  background-color: #81c700;
+}
+.platform-android .toggle.active .toggle-handle {
+  border-color: #81c700;
 }

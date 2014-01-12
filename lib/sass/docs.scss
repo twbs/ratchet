@@ -167,18 +167,15 @@ body {
   .segmented-controller {
     max-width: 300px;
     margin: 8px auto;
-    border-color: #bbb;
+    border-color: #ccc;
 
     li {
       cursor: pointer;
+      border-color: #ccc;
 
       &.selected {
-        background-color: #bbb;
+        background-color: #ccc;
       }
-    }
-
-    a {
-      border-color: #bbb;
     }
   }
 }
@@ -255,7 +252,7 @@ body {
   -moz-animation: shownotice 1s infinite;
 }
 
-.iphone {
+.device {
   display: none;
 }
 
@@ -295,7 +292,7 @@ hr {
 // Tablet to desktop 
 // --------------------------------------------------
 @media screen and (min-width: 768px) {
-  .iphone {
+  .device {
     position: relative;
     top: 50px;
     display: block;
@@ -309,12 +306,12 @@ hr {
     @include animation-name(fadein);
     @include animation-duration(2s);
 
-    &.iphone-fixed {
+    &.device-fixed {
       position: fixed;
       right: auto;
     }
   }
-  .iphone .iphone-content {
+  .device .device-content {
     position: absolute;
     top: 117px;
     left: 37px;
@@ -325,12 +322,12 @@ hr {
     line-height: $line-height-default;
     background-color: #efeff4;
   }
-  .iphone .content,
-  .iphone [class*="bar"],
-  .iphone .modal {
+  .device .content,
+  .device [class*="bar"],
+  .device .modal {
     position: absolute;
   }
-  .iphone .content {
+  .device .content {
     top: 44px;
     left: 0;
     right: 0;
@@ -519,4 +516,14 @@ hr {
     padding: 20px 0;
     opacity: 1;
   }
+}
+
+// Devices
+// --------------------------------------------------
+
+.platform-ios {
+  @import "theme-ios.scss";
+}
+.platform-android {
+  @import "theme-android.scss";
 }
