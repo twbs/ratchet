@@ -14,10 +14,6 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-}
-
 
 // Jumbotron
 // --------------------------------------------------
@@ -127,7 +123,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .icon {
     position: fixed;
-    top: 15px;
     color: #fff;
     opacity: .7;
     @include transition(all .2s linear);
@@ -137,9 +132,11 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
   .icon-download {
-    left: 15px;
+    top: 11px;
+    right: 60px;
   }
   .icon-list {
+    top: 15px;
     right: 15px;
   }
 }
@@ -310,7 +307,7 @@ hr {
   }
   .iphone .iphone-content {
     position: absolute;
-    top: 118px;
+    top: 117px;
     left: 37px;
     width: 320px;
     height: 568px;

@@ -121,7 +121,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .docs-masthead .icon {
   position: fixed;
-  top: 15px;
   color: #fff;
   opacity: .7;
   -webkit-transition: all 0.2s linear;
@@ -131,9 +130,11 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 .docs-masthead .icon-download {
-  left: 15px;
+  top: 11px;
+  right: 60px;
 }
 .docs-masthead .icon-list {
+  top: 15px;
   right: 15px;
 }
 
@@ -299,7 +300,7 @@ hr {
 
   .iphone .iphone-content {
     position: absolute;
-    top: 118px;
+    top: 117px;
     left: 37px;
     width: 320px;
     height: 568px;
