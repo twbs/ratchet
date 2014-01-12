@@ -97,6 +97,14 @@ $(function() {
       iphone[0].setAttribute('style','')
     }
 
+    if(pageHeight - currentTop <= $('.platform-toggle') {
+      $('.platform-toggle').addClass('fixed');
+    } else {
+      $('.platform-toggle').removeClass('fixed');
+    }
+
+
+
     // Injection of components into phone
     for (var l = contentSection.length; l--;) {
       if ((topCache[l] - currentTop) < windowHeight) {
