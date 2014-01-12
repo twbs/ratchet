@@ -38,7 +38,6 @@ $(function() {
     iphone.dockingOffset = ($(window).height() + $('.platform-toggle').height() - iphone.height())/2;
     checkDesktopContent();
     calculateScroll();
-    console.log(iphone.dockingOffset);
 
     if (!eventListeners) addEventListeners();
   }
@@ -97,13 +96,13 @@ $(function() {
       iphone[0].setAttribute('style','')
     }
 
-    if(pageHeight - currentTop <= $('.platform-toggle') {
+    if(currentTop >= $('.docs-masthead').outerHeight()) {
       $('.platform-toggle').addClass('fixed');
+      console.log('fixed');
     } else {
       $('.platform-toggle').removeClass('fixed');
+      console.log('not fixed');
     }
-
-
 
     // Injection of components into phone
     for (var l = contentSection.length; l--;) {
