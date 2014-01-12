@@ -167,9 +167,18 @@ body {
   .segmented-controller {
     max-width: 300px;
     margin: 8px auto;
+    border-color: #bbb;
 
     li {
       cursor: pointer;
+
+      &.selected {
+        background-color: #bbb;
+      }
+    }
+
+    a {
+      border-color: #bbb;
     }
   }
 }

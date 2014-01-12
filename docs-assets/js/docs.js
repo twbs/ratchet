@@ -84,11 +84,7 @@ $(function() {
     var contentSectionItem;
     var currentTop = win.scrollTop();
 
-    // If page is scrolled to bottom near footers
-    if(pageHeight - currentTop < footerHeight + contentPadding + 1400) {
-      iphone[0].className = "iphone iphone-bottom";
-      iphone[0].setAttribute('style','')
-    } else if((iphone.initialTop - currentTop) <= iphone.dockingOffset + 41) {
+    if((iphone.initialTop - currentTop) <= iphone.dockingOffset + 41) {
       iphone[0].className = "iphone iphone-fixed";
       iphone.css({top: iphone.dockingOffset})
     } else {
