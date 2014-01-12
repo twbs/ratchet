@@ -65,6 +65,27 @@ $(function() {
       componentsList.removeClass('active');
     })
 
+    // Platform switcher
+    $('.platform-switch').on('click', function () {
+      var components = $('.docs-components');
+      var platform   = $(this).attr('data-platform');
+
+      // Set platform
+      if (components.hasClass('platform-ios')) {
+        components.removeClass('platform-ios');
+        components.addClass(platform);
+      } else if (components.hasClass('platform-android')) {
+        components.removeClass('platform-android');
+        components.addClass(platform);
+      } else {
+        components.addClass(platform);
+      }
+
+      // Deal with selected states
+      $(this).siblings('.selected').removeClass('selected');
+      $(this).addClass('selected');
+    });
+
     win.on('scroll', calculateScroll);
   }
 
@@ -127,9 +148,6 @@ $(function() {
     }
   }
 
-
-
   $(window).on('load resize', initialize);
   $(window).on('load', function () { new FingerBlast('.device-content'); });
-  $(window).on('load', function () { new FingerBlast('.platform-toggle'); });
 });
