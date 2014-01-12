@@ -146,7 +146,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .platform-toggle {
+  z-index: 3;
   border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+.platform-toggle.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .platform-toggle .segmented-controller {
   max-width: 300px;
@@ -268,15 +276,10 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-  .phone-column {
-    position: relative;
-  }
-
   .iphone {
-    display: block;
-    position: absolute;
+    position: relative;
     top: 50px;
-    float: right;
+    display: block;
     width: 395px;
     height: 813px;
     margin-left: -13px;
@@ -383,6 +386,9 @@ hr {
   padding-left: 15px;
   padding-right: 15px;
   float: left;
+}
+.column.pull-right {
+  float: right;
 }
 
 .column .column-group {

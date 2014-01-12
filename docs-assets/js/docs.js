@@ -35,7 +35,7 @@ $(function() {
 
     iphone.initialLeft   = iphone.offset().left;
     iphone.initialTop    = iphone.initialTop || iphone.offset().top;
-    iphone.dockingOffset = ($(window).height() + $('.platform-toggle').height() - iphone.height())/2;
+    iphone.dockingOffset = ($(window).height() + $('.platform-toggle').outerHeight() - iphone.height())/2;
     checkDesktopContent();
     calculateScroll();
 
@@ -88,7 +88,7 @@ $(function() {
     if(pageHeight - currentTop < footerHeight + contentPadding + 1400) {
       iphone[0].className = "iphone iphone-bottom";
       iphone[0].setAttribute('style','')
-    } else if((iphone.initialTop - currentTop) <= iphone.dockingOffset + 40) {
+    } else if((iphone.initialTop - currentTop) <= iphone.dockingOffset + 41) {
       iphone[0].className = "iphone iphone-fixed";
       iphone.css({top: iphone.dockingOffset})
     } else {
@@ -98,10 +98,10 @@ $(function() {
 
     if(currentTop >= $('.docs-masthead').outerHeight()) {
       $('.platform-toggle').addClass('fixed');
-      console.log('fixed');
+      $('.docs-components').css('padding-top', $('.platform-toggle').outerHeight());
     } else {
       $('.platform-toggle').removeClass('fixed');
-      console.log('not fixed');
+      $('.docs-components').css('padding-top', 0);
     }
 
     // Injection of components into phone
