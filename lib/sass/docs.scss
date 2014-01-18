@@ -59,9 +59,35 @@ body {
   padding-bottom: 50px;
 
   .button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #00d1fe;
+    border-color: #00d1fe;
+    @include transition(all .2s linear);
+
+    &:hover {
+      color: #63e3ff;
+      border-color: #63e3ff;
+    }
+    &:active {
+      opacity: .5;
+      background-color: transparent;
+    }
+  }
+  .button-primary {
+    margin-left: 10px;
     color: #fff;
     border-color: #00d1fe;
     background-color: #00d1fe;
+
+    &:hover {
+      color: #fff;
+      border-color: #63e3ff;
+      background-color: #63e3ff;
+    }
+    &:active {
+      background-color: #63e3ff;
+    }
   }
 }
 .docs-title,
@@ -353,12 +379,6 @@ hr {
   .docs-header-content {
     padding-top: 100px;
     padding-bottom: 130px;
-    
-    .button {
-      max-width: 300px;
-      margin-right: auto;
-      margin-left: auto;
-    }
   }
   .docs-subtitle {
     margin-bottom: 30px;
