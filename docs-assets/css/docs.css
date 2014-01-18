@@ -790,16 +790,16 @@ body {
 
 .benefit-icon {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto 40px;
   border: 1px solid #ddd;
-  border-radius: 50px;
+  border-radius: 40px;
 }
 .benefit-icon .icon {
   color: #14b9d6;
-  font-size: 50px;
-  line-height: 100px;
+  font-size: 32px;
+  line-height: 80px;
 }
 
 .benefit-heading {
