@@ -34,20 +34,31 @@ body {
   background-image: linear-gradient(45deg, #336f90 0%, #254456 100%);
 }
 .docs-nav {
+  position: relative;
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(255,255,255,.1);
 
-  .icon {
-    margin-top: 5px;
+  .icon,
+  .version {
+    position: absolute;
     color: #fff;
     opacity: .4;
-    cursor: pointer;
     @include transition(opacity .2s linear);
 
     &:hover {
       opacity: 1;
     }
+  }
+
+  .icon {
+    top: 15px;
+    right: 0;
+    cursor: pointer;
+  }
+  .version {
+    top: 21px;
+    left: 0;
   }
 }
 .docs-nav,

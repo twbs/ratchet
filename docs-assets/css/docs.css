@@ -641,20 +641,31 @@ body {
 }
 
 .docs-nav {
+  position: relative;
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.docs-nav .icon {
-  margin-top: 5px;
+.docs-nav .icon,
+.docs-nav .version {
+  position: absolute;
   color: #fff;
   opacity: .4;
-  cursor: pointer;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-.docs-nav .icon:hover {
+.docs-nav .icon:hover,
+.docs-nav .version:hover {
   opacity: 1;
+}
+.docs-nav .icon {
+  top: 15px;
+  right: 0;
+  cursor: pointer;
+}
+.docs-nav .version {
+  top: 21px;
+  left: 0;
 }
 
 .docs-nav,
