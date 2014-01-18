@@ -25,7 +25,7 @@ $(function() {
     device               = device || $('.device');
     platformToggle       = $('.platform-toggle');
     noticeBanner         = $('.notice-banner');
-    navComponentLinks    = $('.nav-components-link');
+    navComponentLinks    = $('.docs-nav');
     componentsList       = $('.components-list');
     componentLinks       = $('.component-example a');
     contentSection       = $('.component');
