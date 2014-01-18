@@ -30,24 +30,23 @@ body {
 // Jumbotron
 // --------------------------------------------------
 
-.docs-home {
-  background-image: linear-gradient(45deg, rgba(2,184,234,1) 0%,rgba(3,175,191,1) 50%,rgba(3,103,191,1) 100%);
-  background-repeat: no-repeat;
+.docs-header {
+  background-image: linear-gradient(45deg, #336f90 0%, #254456 100%);
 }
 .docs-nav {
   padding-top: 12px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  border-bottom: 1px solid rgba(255,255,255,.1);
 
   .icon {
     margin-top: 5px;
     color: #fff;
-    opacity: .5;
+    opacity: .4;
     cursor: pointer;
     @include transition(opacity .2s linear);
 
     &:hover {
-      opacity: .8;
+      opacity: 1;
     }
   }
 }
@@ -56,11 +55,13 @@ body {
   text-align: center;
 }
 .docs-header-content {
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   .button {
-    color: rgb(3,175,191);
-    border-color: #fff;
+    color: #fff;
+    border-color: #00d1fe;
+    background-color: #00d1fe;
   }
 }
 .docs-title,
@@ -80,7 +81,15 @@ body {
   font-size: 24px;
   font-weight: 100;
   line-height: 34px;
-  opacity: .8;
+}
+
+// Benefits
+// --------------------------------------------------
+
+.docs-benefits {
+  display: none;
+  text-align: center;
+  font-size: 18px;
 }
 
 
@@ -88,11 +97,12 @@ body {
 // --------------------------------------------------
 
 .social {
-  display: none;
-  margin: 20px 0 20px;
-  padding: 0;
+  padding: 20px 0 20px;
+  margin: 0;
   list-style: none;
   text-align: center;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
 
   li {
     height: 20px;
@@ -341,7 +351,8 @@ hr {
 @media screen and (min-width: 768px) {
   // Jumbotron
   .docs-header-content {
-    margin-top: 100px;
+    padding-top: 100px;
+    padding-bottom: 130px;
     
     .button {
       max-width: 300px;
@@ -353,12 +364,6 @@ hr {
     margin-bottom: 30px;
     font-size: 41px;
     line-height: 60px;
-  }
-
-  // Social
-  .social {
-    margin-top: 40px;
-    margin-bottom: 40px;
   }
 
   // Device
