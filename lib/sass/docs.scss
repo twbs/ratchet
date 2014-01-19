@@ -440,18 +440,6 @@ body {
 // Misc
 // --------------------------------------------------
 
-.notice-banner {
-  height: 0;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  font-size: 16px;
-  text-align: center;
-  background-color: #fff9c4;
-  opacity: 0;
-  -moz-animation: shownotice 1s infinite;
-}
-
 .device {
   font-family: $font-family-default;
   font-size: $font-size-default;
@@ -518,8 +506,6 @@ hr {
     background-image: url("../img/iphone.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    @include animation-name(fadein);
-    @include animation-duration(2s);
 
     &.device-fixed {
       position: fixed;
@@ -595,7 +581,6 @@ hr {
     text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 }
-
 
 
 // The Chassis grid
