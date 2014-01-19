@@ -899,24 +899,24 @@ body {
 .platform-toggle .segmented-controller {
   max-width: 300px;
   margin: 0 auto;
-  border-color: #fff;
+  border-color: #00d1fe;
   background-color: transparent;
 }
 .platform-toggle .segmented-controller li {
   cursor: pointer;
-  border-color: #fff;
+  border-color: #00d1fe;
 }
 .platform-toggle .segmented-controller li a {
-  color: #fff;
+  color: #00d1fe;
 }
 .platform-toggle .segmented-controller li:active {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 209, 254, 0.3);
 }
 .platform-toggle .segmented-controller li.selected {
-  background-color: #fff;
+  background-color: #00d1fe;
 }
 .platform-toggle .segmented-controller li.selected a {
-  color: #254456;
+  color: #fff;
 }
 
 .component {

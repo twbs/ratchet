@@ -15,14 +15,13 @@ $(function() {
   var topCache;
   var eventListeners;
 
-  var initialize = function  () {
+  var initialize = function () {
     currentActive             = 0;
     topCache                  = [];
     win                       = $(window);
     doc                       = $(document);
     bod                       = $(document.body)
     device                    = device || $('.device');
-    platformToggle            = $('.platform-toggle');
     navComponentLinks         = $('.docs-nav');
     componentsList            = $('.components-list');
     componentLinks            = $('.component-example a');
@@ -37,10 +36,6 @@ $(function() {
     device.initialLeft        = device.offset().left;
     device.initialTop         = device.initialTop || device.offset().top;
     device.dockingOffset      = ($(window).height() - device.height())/2;
-
-    // Toggle placment
-    toggleTop    = platformToggle.offset().top;
-    toggleHeight = platformToggle.outerHeight();
 
     checkDesktopContent();
     calculateScroll();
@@ -87,6 +82,7 @@ $(function() {
     });
 
     win.on('scroll', calculateScroll);
+    win.on('scroll', calculateToggle);
   }
 
   var checkDesktopContent = function () {
@@ -115,14 +111,6 @@ $(function() {
       device[0].setAttribute('style','')
     }
 
-    if(currentTop >= toggleTop) {
-      platformToggle.addClass('fixed');
-      $('.docs-components').css('padding-top', toggleHeight);
-    } else if (currentTop <= $('.docs-header').outerHeight()) {
-      platformToggle.removeClass('fixed');
-      $('.docs-components').css('padding-top', 0);
-    }
-
     // Injection of components into device
     for (var l = contentSection.length; l--;) {
       if ((topCache[l] - currentTop) < windowHeight) {
@@ -148,6 +136,31 @@ $(function() {
     }
   }
 
+  // Platform toggle
+  var initializeToggle = function () {
+    platformToggle = $('.platform-toggle');
+
+    // Toggle placment
+    toggleTop    = platformToggle.offset().top;
+    toggleHeight = platformToggle.outerHeight();
+
+    calculateToggle();
+  }
+  var calculateToggle = function () {
+    var currentTop = win.scrollTop();
+    
+    console.log('yep');
+
+    if(currentTop >= toggleTop) {
+      platformToggle.addClass('fixed');
+      $('.docs-components').css('padding-top', toggleHeight);
+    } else if (currentTop <= $('.docs-header').outerHeight()) {
+      platformToggle.removeClass('fixed');
+      $('.docs-components').css('padding-top', 0);
+    }
+  }
+
   $(window).on('load resize', initialize);
+  $(window).on('load', initializeToggle);
   $(window).on('load', function () { new FingerBlast('.device-content'); });
 });
