@@ -8,7 +8,6 @@ $(function() {
   var pageHeight;
   var contentPadding;
   var footerHeight;
-  var noticeBanner;
   var componentsList;
   var navComponentLinks;
   var contentSection;
@@ -24,7 +23,6 @@ $(function() {
     bod                       = $(document.body)
     device                    = device || $('.device');
     platformToggle            = $('.platform-toggle');
-    noticeBanner              = $('.notice-banner');
     navComponentLinks         = $('.docs-nav');
     componentsList            = $('.components-list');
     componentLinks            = $('.component-example a');
@@ -40,8 +38,6 @@ $(function() {
     device.initialTop         = device.initialTop || device.offset().top;
     device.dockingOffset      = ($(window).height() - device.height())/2;
 
-    console.log(device.dockingOffset);
-
     // Toggle placment
     toggleTop    = platformToggle.offset().top;
     toggleHeight = platformToggle.outerHeight();
@@ -55,19 +51,15 @@ $(function() {
   var addEventListeners = function () {
     eventListeners = true;
 
-    noticeBanner.on('click', function () {
-      $(this).hide();
-    });
-
     device.on('click', function (e) {
       e.preventDefault();
     });
 
-    navComponentLinks.click(function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      componentsList.toggleClass('active');
-    })
+    // navComponentLinks.click(function(e) {
+    //   e.stopPropagation();
+    //   e.preventDefault();
+    //   componentsList.toggleClass('active');
+    // })
 
     doc.on('click', function () {
       componentsList.removeClass('active');
