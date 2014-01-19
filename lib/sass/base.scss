@@ -47,11 +47,6 @@ strong {
           transform: translateZ(0px);
 }
 
-// Utility wrapper to pad in components like forms, block buttons and segmented-controllers so they're not full-bleed
-.content-padded {
-  padding: 10px;
-}
-
 // Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
 // Note: For these to work, content must come after both bars in the markup
 .bar-nav ~ .content {

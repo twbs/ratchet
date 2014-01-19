@@ -17,10 +17,10 @@
 
   </head>
   <body>
-
     <header class="bar-nav">
       <h1 class="title">Movie finder</h1>
     </header>
+    
     <nav class="bar-standard bar-header-secondary">
       <form>
         <input type="search" placeholder="Search">
@@ -28,26 +28,18 @@
     </nav>
 
     <nav class="bar-tab">
-      <ul class="tab-inner">
-        <li class="tab-item active">
-          <a href="index.html" data-transition="fade">
-            <span class="icon icon-share"></span>
-            <div class="tab-label">Movies</div>
-          </a>
-        </li>
-        <li class="tab-item">
-          <a href="theaters.html" data-transition="fade">
-            <span class="icon icon-pages"></span>
-            <div class="tab-label">Theaters</div>
-          </a>
-        </li>
-        <li class="tab-item">
-          <a href="settings.html" data-transition="fade">
-            <span class="icon icon-sound"></span>
-            <div class="tab-label">Settings</div>
-          </a>
-        </li>
-      </ul>
+      <a class="tab-item selected" href="index.html" data-transition="fade">
+        <span class="icon icon-share"></span>
+        <div class="tab-label">Movies</div>
+      </a>
+      <a class="tab-item" href="#" data-transition="fade">
+        <span class="icon icon-pages"></span>
+        <div class="tab-label">Theaters</div>
+      </a>
+      <a class="tab-item" href="#" data-transition="fade">
+        <span class="icon icon-sound"></span>
+        <div class="tab-label">Settings</div>
+      </a>
     </nav>
 
     <div class="content">
@@ -63,11 +55,6 @@
              <img src="img/ralph.png">
           </li>
         </ul>
-      </div>
-
-      <div id="myAlert2" class="alert alert-positive alert-inline">
-        <a href="#myAlert2" class="icon icon-share close"></a>
-        <strong>This</strong> is an inline alert.
       </div>
 
       <ul class="table-view">
@@ -159,6 +146,5 @@
         </li>
       </ul>
     </div>
-
   </body>
 </html>

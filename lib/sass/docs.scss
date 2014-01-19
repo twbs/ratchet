@@ -1,14 +1,6 @@
 @import "variables.scss";
 @import "mixins.scss";
 
-// Devices
-.platform-ios {
-  @import "theme-ios.scss";
-}
-.platform-android {
-  @import "theme-android.scss";
-}
-
 //
 // Documentation
 // --------------------------------------------------
@@ -302,7 +294,7 @@ body {
     bottom: auto;
     left: 0;
     right: 0;
-    z-index: 3;
+    z-index: 20;
     padding-top: 8px;
     padding-bottom: 8px;
     background-image: linear-gradient(45deg, #336f90 0%, #254456 100%);
@@ -480,7 +472,7 @@ hr {
     overflow: hidden;
     font-size: $font-size-default;
     line-height: $line-height-default;
-    background-color: #efeff4;
+    background-color: #fff;
   }
   .device .content,
   .device [class*="bar"],
@@ -639,6 +631,23 @@ hr {
   .column .column-group {
     margin-left: -30px;
     margin-right: -30px;
+  }
+}
+
+// Devices
+.platform-ios {
+  @import "theme-ios.scss";
+
+  .device .device-content {
+    background-color: #efeff4;
+  }
+}
+.platform-android {
+  @import "theme-android.scss";
+
+  .device .device-content {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);
   }
 }
 

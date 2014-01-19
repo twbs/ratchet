@@ -76,8 +76,8 @@ base_url: "../"
       <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
 
       <div class="component-example component-example-fullbleed">
-        <header class="bar-nav pull-left">
-          <a class="button">
+        <header class="bar-nav">
+          <a class="button pull-left">
             Left
           </a>
           <a class="button pull-right">
@@ -186,7 +186,7 @@ base_url: "../"
 
       <div class="component-example component-example-fullbleed">
         <nav class="bar-tab">
-          <a class="tab-item active" href="#">
+          <a class="tab-item selected" href="#">
             <span class="icon icon-share"></span>
             <div class="tab-label">Label</div>
           </a>
@@ -211,7 +211,7 @@ base_url: "../"
 
 {% highlight html %}
 <nav class="bar-tab">
-  <a class="tab-item active" href="#">
+  <a class="tab-item selected" href="#">
     <span class="icon icon-share"></span>
     <div class="tab-label">Label</div>
   </a>
@@ -555,6 +555,7 @@ base_url: "../"
       <a class="button-primary">Button</a>
       <a class="button-positive">Button</a>
       <a class="button-negative">Button</a>
+      <a class="button-link">Button</a>
     </div>
 
 {% highlight html %}
@@ -562,6 +563,7 @@ base_url: "../"
 <a class="button-primary">Button</a>
 <a class="button-positive">Button</a>
 <a class="button-negative">Button</a>
+<a class="button-link">Button</a>
 {% endhighlight %}
 
   </article>
@@ -637,17 +639,9 @@ base_url: "../"
         </li>
       </ul>
       <div class="card">
-        <ul class="table-view">
-          <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
-            Item 1
-          </li>
-          <li id="item2mobile" class="table-view-cell segmented-controller-item">
-            Item 2
-          </li>
-          <li id="item3mobile" class="table-view-cell segmented-controller-item">
-            Item 3
-          </li>
-        </ul>
+        <p id="item1mobile" class="segmented-controller-item selected">Item 1</p>
+        <p id="item2mobile" class="segmented-controller-item">Item 2</p>
+        <p id="item3mobile" class="segmented-controller-item">Item 3</p>
       </div>
     </div>
 
@@ -664,17 +658,10 @@ base_url: "../"
   </li>
 </ul>
 <div class="card">
-  <ul class="table-view">
-    <li id="item1mobile" class="table-view-cell segmented-controller-item selected">
-      Item 1
-    </li>
-    <li id="item2mobile" class="table-view-cell segmented-controller-item">
-      Item 2
-    </li>
-    <li id="item3mobile" class="table-view-cell segmented-controller-item">
-      Item 3
-    </li>
-  </ul>
+  <p id="item1mobile" class="segmented-controller-item selected">Item 1</p>
+  <p id="item2mobile" class="segmented-controller-item">Item 2</p>
+  <p id="item3mobile" class="segmented-controller-item">Item 3</p>
+</div>
 </div>
 {% endhighlight %}
 
@@ -908,7 +895,7 @@ document
           </a>
         </header>
         
-        <div class="content content-padded">
+        <div class="content">
           <p>The contents of my modal</p>
         </div>
       </div>
@@ -924,7 +911,7 @@ document
     </a>
   </header>
   
-  <div class="content content-padded">
+  <div class="content">
     <p>The contents of my modal</p>
   </div>
 </div>

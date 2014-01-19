@@ -262,10 +262,6 @@ strong {
   transform: translateZ(0px);
 }
 
-.content-padded {
-  padding: 10px;
-}
-
 .bar-nav ~ .content {
   padding-top: 44px;
 }
@@ -370,8 +366,8 @@ strong {
   height: 24px;
   margin-top: -2px;
 }
-.tab-item.active .tab-label,
-.tab-item.active .icon, .tab-item:active .tab-label,
+.tab-item.selected .tab-label,
+.tab-item.selected .icon, .tab-item:active .tab-label,
 .tab-item:active .icon {
   color: #428bca;
 }
@@ -608,7 +604,7 @@ select {
 
 [class*="bar-"] input[type=search] {
   height: 29px;
-  margin: 2px 0;
+  margin: 6px 0;
 }
 
 [class*="button"] {
@@ -838,6 +834,7 @@ input[type="button"] {
 }
 
 .segmented-controller {
+  position: relative;
   display: table;
   padding: 0;
   overflow: hidden;
@@ -940,7 +937,8 @@ input[type="button"] {
 }
 
 [class*="bar-"] .segmented-controller {
-  margin: 8px auto 0;
+  top: 8px;
+  margin: 0 auto;
 }
 
 .popover {

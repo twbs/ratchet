@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 .segmented-controller {
+  position: relative;
   display: table;
   padding: 0;
   overflow: hidden;
@@ -136,5 +137,6 @@
 
 // Remove standard segmented bottom margin
 [class*="bar-"] .segmented-controller {
-  margin: 8px auto 0;
+  top: 8px;
+  margin: 0 auto;
 }
