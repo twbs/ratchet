@@ -17,27 +17,35 @@ $(function() {
   var eventListeners;
 
   var initialize = function  () {
-    currentActive        = 0;
-    topCache             = [];
-    win                  = $(window);
-    doc                  = $(document);
-    bod                  = $(document.body)
-    device               = device || $('.device');
-    platformToggle       = $('.platform-toggle');
-    noticeBanner         = $('.notice-banner');
-    navComponentLinks    = $('.docs-nav');
-    componentsList       = $('.components-list');
-    componentLinks       = $('.component-example a');
-    contentSection       = $('.component');
-    topCache             = contentSection.map(function () { return $(this).offset().top })
-    windowHeight         = $(window).height() / 3
-    pageHeight           = $(document).height();
-    contentPadding       = parseInt($('.docs-content').css('padding-bottom'));
-    footerHeight         = $('.docs-footer').outerHeight(false);
+    currentActive             = 0;
+    topCache                  = [];
+    win                       = $(window);
+    doc                       = $(document);
+    bod                       = $(document.body)
+    device                    = device || $('.device');
+    platformToggle            = $('.platform-toggle');
+    noticeBanner              = $('.notice-banner');
+    navComponentLinks         = $('.docs-nav');
+    componentsList            = $('.components-list');
+    componentLinks            = $('.component-example a');
+    contentSection            = $('.component');
+    topCache                  = contentSection.map(function () { return $(this).offset().top })
+    windowHeight              = $(window).height() / 3
+    pageHeight                = $(document).height();
+    contentPadding            = parseInt($('.docs-content').css('padding-bottom'));
+    footerHeight              = $('.docs-footer').outerHeight(false);
+     
+    // Device placment     
+    device.initialLeft        = device.offset().left;
+    device.initialTop         = device.initialTop || device.offset().top;
+    device.dockingOffset      = ($(window).height() - device.height())/2;
 
-    device.initialLeft   = device.offset().left;
-    device.initialTop    = device.initialTop || device.offset().top;
-    device.dockingOffset = ($(window).height() - device.height())/2;
+    console.log(device.dockingOffset);
+
+    // Toggle placment
+    toggleTop    = platformToggle.offset().top;
+    toggleHeight = platformToggle.outerHeight();
+
     checkDesktopContent();
     calculateScroll();
 
@@ -107,7 +115,7 @@ $(function() {
     var contentSectionItem;
     var currentTop = win.scrollTop();
 
-    if((device.initialTop - currentTop) <= device.dockingOffset + 113) {
+    if((device.initialTop - currentTop) <= device.dockingOffset) {
       device[0].className = "device device-fixed";
       device.css({top: device.dockingOffset})
     } else {
@@ -115,10 +123,10 @@ $(function() {
       device[0].setAttribute('style','')
     }
 
-    if(currentTop >= $('.docs-masthead').outerHeight()) {
+    if(currentTop >= toggleTop) {
       platformToggle.addClass('fixed');
-      $('.docs-components').css('padding-top', platformToggle.outerHeight());
-    } else {
+      $('.docs-components').css('padding-top', toggleHeight);
+    } else if (currentTop <= $('.docs-header').outerHeight()) {
       platformToggle.removeClass('fixed');
       $('.docs-components').css('padding-top', 0);
     }

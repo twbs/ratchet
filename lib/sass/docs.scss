@@ -120,6 +120,29 @@ body {
 }
 
 
+// Subpage Header
+// --------------------------------------------------
+.docs-sub-content {
+  padding-top: 50px;
+  color: #fff;
+  text-align: center;
+
+  .page-title,
+  .page-description {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  .page-title {
+    font-size: 40px;
+  }
+  .page-description {
+    font-size: 24px;
+    opacity: .7;
+  }
+}
+
+
 // Content sections
 // --------------------------------------------------
 .docs-section {
@@ -190,7 +213,7 @@ body {
   display: block;
   width: 80px;
   height: 80px;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
   border: 1px solid #eee;
   border-radius: 40px;
 
@@ -270,10 +293,8 @@ body {
 // --------------------------------------------------
 
 .platform-toggle {
-  padding-top: 20px;
-  padding-bottom: 70px;
-  background-color: #1eb0e9;
-  @include transition(padding-top .2s linear, padding-bottom .2s linear);
+  padding-top: 15px;
+  padding-bottom: 80px;
 
   &.fixed {
     position: fixed;
@@ -284,13 +305,15 @@ body {
     z-index: 3;
     padding-top: 8px;
     padding-bottom: 8px;
+    background-image: linear-gradient(45deg, #336f90 0%, #254456 100%);
+    @include transition(padding-top .2s linear, padding-bottom .2s linear);
   }
 
   .segmented-controller {
     max-width: 300px;
     margin: 0 auto;
     border-color: #fff;
-    background-color: #1eb0e9;
+    background-color: transparent;
 
     li {
       cursor: pointer;
@@ -306,7 +329,7 @@ body {
         background-color: #fff;
 
         a {
-          color: #1eb0e9;
+          color: #254456;
         }
       }
     }
@@ -316,6 +339,9 @@ body {
 // Components
 // --------------------------------------------------
 
+.docs-components {
+ // @include transition(padding-top .2s linear);
+}
 .component {
   padding: 50px 15px;
   margin-left: -15px;
