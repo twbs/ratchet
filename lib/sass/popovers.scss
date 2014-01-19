@@ -17,7 +17,7 @@
   @include transform(translate3d(0, -15px, 0));
 
   // Caret on top of popover using CSS triangles (thanks to @chriscoyier for solution)
-  &:after {
+  &:before {
     position: absolute;
     top: -15px;
     left: 50%;

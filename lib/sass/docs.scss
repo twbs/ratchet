@@ -641,3 +641,9 @@ hr {
     margin-right: -30px;
   }
 }
+
+// Animations
+@-webkit-keyframes fadeOverlay {
+  from { @include box-shadow(0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0)); }
+  to   { @include box-shadow(0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1)); }
+}

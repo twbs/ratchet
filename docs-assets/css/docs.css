@@ -1292,3 +1292,14 @@ hr {
     margin-right: -30px;
   }
 }
+@-webkit-keyframes fadeOverlay {
+  from {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0), -320px 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0), -320px 0 0 rgba(0, 0, 0, 0);
+  }
+
+  to {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), -320px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), -320px 0 0 rgba(0, 0, 0, 0.1);
+  }
+}

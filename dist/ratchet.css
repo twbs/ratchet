@@ -958,7 +958,7 @@ input[type="button"] {
   -webkit-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
 }
-.popover:after {
+.popover:before {
   position: absolute;
   top: -15px;
   left: 50%;

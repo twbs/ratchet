@@ -986,24 +986,26 @@ document
 
     <!-- Push docs -->
     <article class="component" id="push">
-      <h3 class="component-title">Push</h3>
-      <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
+      <div class="informational">
+        <h3 class="component-title">Push</h3>
+        <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
 
-{% highlight html %}
-<!-- A one.html link -->
-<a href="two.html">Two</a>
-{% endhighlight %}
+  {% highlight html %}
+  <!-- A one.html link -->
+  <a href="two.html">Two</a>
+  {% endhighlight %}
 
-      <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
+        <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
 
-      <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
+        <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
 
-{% highlight html %}
-<!-- An one.html link that animates to two.html -->
-<a href="two.html" data-transition="fade">Two</a>
-{% endhighlight %}
+  {% highlight html %}
+  <!-- An one.html link that animates to two.html -->
+  <a href="two.html" data-transition="fade">Two</a>
+  {% endhighlight %}
 
-      <p class="component-description">A working version of push:</p>
+        <p class="component-description">A working version of push:</p>
+      </div>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar-nav">
