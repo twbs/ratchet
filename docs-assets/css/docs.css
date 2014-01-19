@@ -860,70 +860,6 @@ body {
   color: #fff;
 }
 
-.docs-masthead {
-  padding-top: 60px;
-  text-align: center;
-  background-color: #1eb0e9;
-}
-.docs-masthead .logotype {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 16px;
-  border: 2px solid #fff;
-  border-radius: 50px;
-  opacity: .7;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-.docs-masthead .section-title,
-.docs-masthead .section-description {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 300;
-}
-.docs-masthead .section-title {
-  color: #fff;
-  font-size: 45px;
-}
-.docs-masthead .section-description {
-  color: #fff;
-  font-size: 24px;
-  opacity: .7;
-}
-.docs-masthead .icon {
-  position: fixed;
-  color: #fff;
-  opacity: .7;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-.docs-masthead .icon:hover {
-  opacity: 1;
-}
-.docs-masthead .icon-download {
-  top: 11px;
-  right: 60px;
-}
-.docs-masthead .icon-list {
-  top: 15px;
-  right: 15px;
-}
-
-.docs-navigation {
-  float: right;
-  padding-top: 5px;
-}
-.docs-navigation .nav-item {
-  margin-left: 20px;
-}
-
 .platform-toggle {
   padding-top: 20px;
   padding-bottom: 70px;
@@ -1027,18 +963,6 @@ body {
   word-wrap: normal;
 }
 
-.notice-banner {
-  height: 0;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  font-size: 16px;
-  text-align: center;
-  background-color: #fff9c4;
-  opacity: 0;
-  -moz-animation: shownotice 1s infinite;
-}
-
 .device {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
@@ -1101,10 +1025,6 @@ hr {
     background-image: url("../img/iphone.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    -webkit-animation-name: fadein;
-    animation-name: fadein;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
   }
   .device.device-fixed {
     position: fixed;
