@@ -279,7 +279,7 @@ body {
   z-index: 20;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-image: linear-gradient(45deg, #336f90 0%, #254456 100%);
+  background-image: linear-gradient(45deg, #317ca6 0%, #254456 100%);
   -webkit-transition: padding-top 0.2s linear, padding-bottom 0.2s linear;
   transition: padding-top 0.2s linear, padding-bottom 0.2s linear;
 }
