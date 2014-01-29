@@ -1117,7 +1117,7 @@ input[type="button"] {
 }
 
 @font-face {
-  font-family: "Ratchicons";
+  font-family: ratchicons;
   src: url("ratchicons/ratchicons.eot");
   src: url("ratchicons/ratchicons.eot?#iefix") format("embedded-opentype"), url("ratchicons/ratchicons.woff") format("woff"), url("ratchicons/ratchicons.ttf") format("truetype"), url("ratchicons/ratchicons.svg#svgFontName") format("svg");
   font-weight: normal;
@@ -1126,7 +1126,7 @@ input[type="button"] {
 
 .icon {
   display: inline-block;
-  font-family: Ratchicons;
+  font-family: ratchicons;
   font-size: 24px;
   text-decoration: none;
   line-height: 1;
@@ -1135,57 +1135,61 @@ input[type="button"] {
 }
 
 .icon-down:before {
-  content: '\f00b';
+  content: '\e80a';
 }
 
 .icon-download:before {
-  content: '\f005';
+  content: '\e80e';
 }
 
 .icon-left:before {
-  content: '\f00c';
+  content: '\e80b';
 }
 
 .icon-list:before {
-  content: '\f008';
+  content: '\e801';
+}
+
+.icon-menu:before {
+  content: '\e800';
 }
 
 .icon-pages:before {
-  content: '\f000';
+  content: '\e802';
 }
 
 .icon-refresh:before {
-  content: '\f009';
+  content: '\e803';
 }
 
 .icon-right:before {
-  content: '\f00d';
+  content: '\e80c';
 }
 
 .icon-search:before {
-  content: '\f007';
+  content: '\e804';
 }
 
 .icon-share:before {
-  content: '\f00a';
-}
-
-.icon-sound:before {
-  content: '\f001';
+  content: '\e805';
 }
 
 .icon-sound2:before {
-  content: '\f002';
+  content: '\e807';
 }
 
 .icon-sound3:before {
-  content: '\f003';
+  content: '\e808';
 }
 
 .icon-sound4:before {
-  content: '\f004';
+  content: '\e809';
+}
+
+.icon-sound:before {
+  content: '\e806';
 }
 
 .icon-up:before {
-  content: '\f00e';
+  content: '\e80d';
 }
