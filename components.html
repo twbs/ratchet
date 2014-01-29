@@ -131,7 +131,7 @@ base_url: "../"
 
     <article class="component">
       <h3 class="component-title">Title bar with segmented controller</h3>
-      <p class="component-description">Title bars can also house segmented controllers (with or without accompanying buttons). It all uses flex-box to create perfectly even spacing no matter their labels.</p>
+      <p class="component-description">Title bars can also house segmented controllers. Feel free to add accompanying buttons too. The control will automatically layout itself out correctly.</p>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar-nav">
@@ -976,26 +976,24 @@ document
 
     <!-- Push docs -->
     <article class="component" id="push">
-      <div class="informational">
-        <h3 class="component-title">Push</h3>
-        <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
+      <h3 class="component-title">Push</h3>
+      <p class="component-description">Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your Ratchet project up.</p>
 
-  {% highlight html %}
-  <!-- A one.html link -->
-  <a href="two.html">Two</a>
-  {% endhighlight %}
+{% highlight html %}
+<!-- A one.html link -->
+<a href="two.html">Two</a>
+{% endhighlight %}
 
-        <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
+      <p class="component-note">This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
 
-        <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
+      <p class="component-description">Now that pages are being loaded through push, it's easy to specify transitions for animations between pages. There are three different transitions to chose from: <code>fade</code>, <code>slide-in</code>, or <code>slide-out</code>.</p>
 
-  {% highlight html %}
-  <!-- An one.html link that animates to two.html -->
-  <a href="two.html" data-transition="fade">Two</a>
-  {% endhighlight %}
+{% highlight html %}
+<!-- An one.html link that animates to two.html -->
+<a href="two.html" data-transition="fade">Two</a>
+{% endhighlight %}
 
-        <p class="component-description">A working version of push:</p>
-      </div>
+      <p class="component-description">A working version of push:</p>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar-nav">
