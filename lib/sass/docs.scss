@@ -158,7 +158,7 @@ body {
   margin-bottom: 0;
 }
 .section-heading {
-  font-size: 55px;
+  font-size: 40px;
   font-weight: 300;
 }
 .section-lead {
@@ -213,6 +213,9 @@ body {
     color: #14b9d6;
     font-size: 32px;
     line-height: 80px;
+  }
+  .icon-download {
+    margin-top: -4px; // Align the icon correctly
   }
 }
 .benefit-heading {
