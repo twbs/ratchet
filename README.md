@@ -24,7 +24,7 @@ Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com
 
 ## Support
 
-Ratchet was developed to support iOS 7+ for iPhone. Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@GoRatchet](https://twitter.com/goratchet).
+Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@GoRatchet](https://twitter.com/goratchet).
 
 ## Reporting bugs & contributing
 
