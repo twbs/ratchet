@@ -538,7 +538,7 @@ hr {
   .component {
     padding-left: 0;
     padding-right: 0;
-    opacity: .5;
+    opacity: .3;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
   }

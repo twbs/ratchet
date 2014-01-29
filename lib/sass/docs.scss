@@ -339,9 +339,6 @@ body {
 // Components
 // --------------------------------------------------
 
-.docs-components {
- // @include transition(padding-top .2s linear);
-}
 .component {
   padding: 50px 15px;
   margin-left: -15px;
@@ -575,7 +572,7 @@ hr {
   .component {
     padding-left: 0;
     padding-right: 0;
-    opacity: .5;
+    opacity: .3;
     @include transition(opacity .2s ease-in-out);
 
     &.active {
