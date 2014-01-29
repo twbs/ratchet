@@ -24,12 +24,12 @@
     }
   ],
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.2",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-jshint": "~0.7.0",
-    "grunt-contrib-nodeunit": "~0.2.2",
-    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-jekyll": "~0.4.0"
+    "grunt-jekyll": "~0.4.1"
   }
 }
