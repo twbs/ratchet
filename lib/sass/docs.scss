@@ -441,17 +441,6 @@ body {
   margin: 10px auto;
 }
 
-// Modals
-#modalsInDevice {
-  #iwindow > .button {
-    margin: 10px;
-  }
-  .card p {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-}
-
 // Popovers 
 #popoversInDevice {
   #iwindow:before {
@@ -463,6 +452,17 @@ body {
     z-index: 11;
     background-color: rgba(0,0,0,.3);
     content: '';
+  }
+}
+
+// Modals
+#modalsInDevice {
+  #iwindow > .button {
+    margin: 10px;
+  }
+  .card p {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
