@@ -266,6 +266,12 @@ body {
   color: #fff;
 }
 
+.docs-mini-footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: #777;
+}
+
 .platform-toggle {
   padding-top: 15px;
   padding-bottom: 90px;
@@ -367,6 +373,52 @@ body {
   border-bottom: 1px solid #ddd;
   white-space: pre;
   word-wrap: normal;
+}
+
+#buttonsInDevice [class*="button"],
+#buttonsBadgesInDevice [class*="button"] {
+  margin-top: 10px;
+  margin-right: 100px;
+  margin-left: 10px;
+}
+
+#blockButtonsInDevice .button-block {
+  margin: 10px;
+}
+
+#segmentedControllersInDevice .segmented-controller {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#segmentedControllersInDevice .card p {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#badgesInDevice {
+  text-align: center;
+}
+#badgesInDevice [class*="badge"] {
+  margin-top: 10px;
+}
+
+#formsInDevice form {
+  margin: 10px;
+}
+#formsInDevice form.input-group {
+  margin: 0;
+}
+
+#togglesInDevice .toggle {
+  margin: 10px auto;
+}
+
+#modalsInDevice #iwindow > .button {
+  margin: 10px;
+}
+#modalsInDevice .card p {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .device {

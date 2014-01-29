@@ -279,6 +279,11 @@ body {
     }
   }
 }
+.docs-mini-footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: #777;
+}
 
 
 // Platform toggle
@@ -386,6 +391,65 @@ body {
   border-bottom: 1px solid #ddd;
   white-space: pre;
   word-wrap: normal;
+}
+
+// Buttons
+#buttonsInDevice,
+#buttonsBadgesInDevice {
+  [class*="button"] {
+    margin-top: 10px;
+    margin-right: 100px;
+    margin-left: 10px;
+  }
+}
+#blockButtonsInDevice .button-block {
+  margin: 10px;
+}
+
+//Segmented Control
+#segmentedControllersInDevice {
+  .segmented-controller {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .card p {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+// Badges
+#badgesInDevice {
+  text-align: center;
+
+  [class*="badge"] {
+    margin-top: 10px;
+  }
+}
+
+// Forms
+#formsInDevice form {
+  margin: 10px;
+
+  &.input-group {
+    margin: 0;
+  }
+}
+
+// Toggles
+#togglesInDevice .toggle {
+  margin: 10px auto;
+}
+
+// Modals
+#modalsInDevice {
+  #iwindow > .button {
+    margin: 10px;
+  }
+  .card p {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 
 // Misc
