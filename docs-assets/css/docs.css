@@ -46,12 +46,12 @@ body {
   opacity: 1;
 }
 .docs-nav .icon {
-  top: 18px;
+  top: 13px;
   right: 0;
   cursor: pointer;
 }
 .docs-nav .version {
-  top: 21px;
+  top: 14px;
   left: 0;
 }
 
@@ -65,7 +65,9 @@ body {
   padding-bottom: 50px;
 }
 .docs-header-content .button {
+  display: block;
   padding: 15px 30px 16px;
+  margin: 0 10px 10px;
   font-size: 18px;
   color: #00d1fe;
   border-color: #00d1fe;
@@ -81,7 +83,7 @@ body {
   background-color: transparent;
 }
 .docs-header-content .button-primary {
-  margin-left: 10px;
+  margin-bottom: 0;
   color: #fff;
   border-color: #00d1fe;
   background-color: #00d1fe;
@@ -102,7 +104,7 @@ body {
 
 .docs-title {
   margin: 0;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -111,7 +113,7 @@ body {
 .docs-subtitle {
   max-width: 750px;
   margin: 0 auto 20px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 100;
   line-height: 34px;
 }
@@ -484,6 +486,25 @@ hr {
     margin-bottom: 30px;
     font-size: 41px;
     line-height: 60px;
+  }
+
+  .docs-header-content .button {
+    display: inline-block;
+    margin: 0;
+  }
+  .docs-header-content .button-primary {
+    margin-left: 10px;
+  }
+
+  .docs-title {
+    font-size: 22px;
+  }
+
+  .docs-nav .icon {
+    top: 18px;
+  }
+  .docs-nav .version {
+    top: 17px;
   }
 
   .device {
