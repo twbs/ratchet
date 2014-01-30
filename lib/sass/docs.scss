@@ -57,8 +57,7 @@ body {
   text-align: center;
 }
 .docs-header-content {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 10px;
 
   .button {
     display: block;
@@ -526,8 +525,7 @@ hr {
 @media screen and (min-width: 768px) {
   // Jumbotron
   .docs-header-content {
-    padding-top: 170px;
-    padding-bottom: 200px;
+    padding: 170px 0 200px;
   }
   .docs-subtitle {
     margin-bottom: 30px;
