@@ -160,12 +160,12 @@ body {
 }
 
 .section-heading {
-  font-size: 40px;
+  font-size: 26px;
   font-weight: 300;
 }
 
 .section-lead {
-  font-size: 24px;
+  font-size: 18px;
   color: #777;
   font-weight: 100;
 }
@@ -189,6 +189,9 @@ body {
 }
 .social iframe {
   background-color: transparent;
+}
+.social .twitter-follow-button {
+  margin-top: 5px;
 }
 
 .docs-benefits {
@@ -239,6 +242,12 @@ body {
   margin-top: 5px;
   color: #fff;
   text-decoration: underline;
+}
+.docs-contribute .column {
+  margin-bottom: 40px;
+}
+.docs-contribute .column:last-child {
+  margin-bottom: 0;
 }
 
 .contribute-heading,
@@ -501,10 +510,26 @@ hr {
   }
 
   .docs-nav .icon {
-    top: 18px;
+    top: 19px;
   }
   .docs-nav .version {
-    top: 17px;
+    top: 21px;
+  }
+
+  .social .twitter-follow-button {
+    margin-top: 0;
+  }
+
+  .docs-contribute .column {
+    margin-bottom: 0;
+  }
+
+  .section-heading {
+    font-size: 40px;
+  }
+
+  .section-lead {
+    font-size: 24px;
   }
 
   .device {

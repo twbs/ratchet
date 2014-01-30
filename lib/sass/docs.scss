@@ -160,11 +160,11 @@ body {
   margin-bottom: 0;
 }
 .section-heading {
-  font-size: 40px;
+  font-size: 26px;
   font-weight: 300;
 }
 .section-lead {
-  font-size: 24px;
+  font-size: 18px;
   color: #777;
   font-weight: 100;
 }
@@ -193,6 +193,9 @@ body {
   // Remove after button class changes.
   iframe {
     background-color: transparent;
+  }
+  .twitter-follow-button {
+    margin-top: 5px;
   }
 }
 
@@ -249,6 +252,13 @@ body {
     margin-top: 5px;
     color: #fff;
     text-decoration: underline;
+  }
+  .column {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 .contribute-heading,
@@ -525,7 +535,6 @@ hr {
     line-height: 60px;
   }
   .docs-header-content {
-
     .button {
       display: inline-block;
       margin: 0;
@@ -539,11 +548,34 @@ hr {
   }
   .docs-nav {
     .icon {
-      top: 18px;
+      top: 19px;
     }
     .version {
-      top: 17px;
+      top: 21px;
     }
+  }
+
+  // Social
+  .social {
+    .twitter-follow-button {
+      margin-top: 0;
+    }
+  }
+
+  // Contribution section
+  .docs-contribute {
+    .column {
+      margin-bottom: 0;
+    }
+  }
+
+  // Content sections
+  // --------------------------------------------------
+  .section-heading {
+    font-size: 40px;
+  }
+  .section-lead {
+    font-size: 24px;
   }
 
   // Device
