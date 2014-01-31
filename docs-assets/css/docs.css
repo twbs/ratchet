@@ -544,6 +544,11 @@ hr {
     -webkit-transition: background-image 0.1s linear;
     transition: background-image 0.1s linear;
   }
+  .device:after {
+    content: '';
+    background-image: url("../img/iphone5s.png");
+    opacity: 0;
+  }
   .device.device-fixed {
     position: fixed;
     right: auto;

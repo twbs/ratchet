@@ -590,6 +590,12 @@ hr {
     background-repeat: no-repeat;
     @include transition(background-image .1s linear);
 
+    // Pre-load device backgrounds so we stop the flicker.
+    &:after {
+      content: '';
+      background-image: url("../img/iphone5s.png");
+      opacity: 0;
+    }
     &.device-fixed {
       position: fixed;
       right: auto;
