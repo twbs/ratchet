@@ -538,9 +538,11 @@ hr {
     height: 813px;
     margin-left: -13px;
     font-family: "Helvetica Neue", sans-serif;
-    background-image: url("../img/iphone.png");
+    background-image: url("../img/iphone5c.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    -webkit-transition: background-image 0.1s linear;
+    transition: background-image 0.1s linear;
   }
   .device.device-fixed {
     position: fixed;
@@ -1162,6 +1164,9 @@ hr {
 .platform-ios .content.slide.left {
   -webkit-transform: translate3d(-20%, 0, 0);
   transform: translate3d(-20%, 0, 0);
+}
+.platform-ios .device {
+  background-image: url("../img/iphone5s.png");
 }
 .platform-ios .device .device-content {
   background-color: #efeff4;

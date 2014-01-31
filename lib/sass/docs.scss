@@ -585,9 +585,10 @@ hr {
     height: 813px;
     margin-left: -13px;
     font-family: "Helvetica Neue", sans-serif;
-    background-image: url("../img/iphone.png");
+    background-image: url("../img/iphone5c.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    @include transition(background-image .1s linear);
 
     &.device-fixed {
       position: fixed;
@@ -769,8 +770,12 @@ hr {
 .platform-ios {
   @import "theme-ios.scss";
 
-  .device .device-content {
-    background-color: #efeff4;
+  .device {
+    background-image: url("../img/iphone5s.png");
+
+    .device-content {
+      background-color: #efeff4;
+    }
   }
 }
 .platform-android {
