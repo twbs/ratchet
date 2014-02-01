@@ -210,7 +210,7 @@ textarea,
   opacity: .6;
 }
 
-[class*="badge"].badge-inverted {
+.badge.badge-inverted {
   color: white;
 }
 

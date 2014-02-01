@@ -19,7 +19,7 @@
       border-bottom: 0;
     }
     // If it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
-    > a:not(.btn) {
+    > a:not(".btn") {
       position: relative;
       display: block;
       padding: inherit;
@@ -68,7 +68,7 @@
 
   .chevron,
   .btn,
-  [class*="badge"],
+  .badge,
   .toggle {
     position: absolute;
     top: 50%;
@@ -79,12 +79,12 @@
   .chevron {
     margin-top: -10px; // Half height of chevron
   }
-  [class*="badge"] {
+  .badge {
     margin-top: -9px; // Aligned just right
   }
 
   // Push badge over if there's a sibling chevron
-  .chevron + [class*="badge"] {
+  .chevron + .badge {
     right: 30px;
   }
 
@@ -106,12 +106,12 @@
   padding-left: 59px;
   background-position-x: 59px; // Make room for your left aligned media/icons.
 
-  > a:not(.btn) {
+  > a:not(".btn") {
     margin-left: -59px;
   }
 
   > .pull-left,
-  > a:not(.btn) .pull-left {
+  > a:not(".btn") .pull-left {
     position: absolute;
     left: 15px;
     z-index: 1;

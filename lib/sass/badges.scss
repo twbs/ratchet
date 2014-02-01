@@ -2,7 +2,7 @@
 // Badges
 // --------------------------------------------------
 
-[class*="badge"] {
+.badge {
   display: inline-block;
   padding: 2px 9px;
   font-size: 13px;
@@ -56,7 +56,7 @@
 // --------------------------------------------------
 
 // Generic styles for all badges within default buttons
-.btn [class*="badge"] {
+.btn .badge {
   font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -78,7 +78,7 @@
 // Position badges within block level buttons
 // Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
 // stays at true center of button
-.btn-block [class*="badge"] {
+.btn-block .badge {
   position: absolute;
   right: 0;
   margin-right: 10px;

@@ -327,7 +327,7 @@ strong {
   white-space: nowrap;
 }
 
-> a:not([class*="button"]) {
+> a:not(".btn") {
   display: block;
   width: 100%;
   height: 100%;
@@ -378,7 +378,7 @@ strong {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.popover .bar-nav .title + [class*="button"]:last-child {
+.popover .bar-nav .title + .btn:last-child {
   right: 15px;
 }
 
@@ -405,14 +405,14 @@ strong {
 .table-view .table-view-cell:last-child {
   border-bottom: 0;
 }
-.table-view .table-view-cell > a:not(.btn) {
+.table-view .table-view-cell > a:not(".btn") {
   position: relative;
   display: block;
   padding: inherit;
   margin: -11px -60px -12px -15px;
   color: inherit;
 }
-.table-view .table-view-cell > a:not(.btn):active {
+.table-view .table-view-cell > a:not(".btn"):active {
   background-color: #eee;
 }
 .table-view .table-view-cell p {
@@ -439,7 +439,7 @@ strong {
 }
 .table-view .chevron,
 .table-view .btn,
-.table-view [class*="badge"],
+.table-view .badge,
 .table-view .toggle {
   position: absolute;
   top: 50%;
@@ -448,10 +448,10 @@ strong {
 .table-view .chevron {
   margin-top: -10px;
 }
-.table-view [class*="badge"] {
+.table-view .badge {
   margin-top: -9px;
 }
-.table-view .chevron + [class*="badge"] {
+.table-view .chevron + .badge {
   right: 30px;
 }
 .table-view .btn {
@@ -466,11 +466,11 @@ strong {
   padding-left: 59px;
   background-position-x: 59px;
 }
-.table-view-indented .table-view-cell > a:not(.btn) {
+.table-view-indented .table-view-cell > a:not(".btn") {
   margin-left: -59px;
 }
 .table-view-indented .table-view-cell > .pull-left,
-.table-view-indented .table-view-cell > a:not(.btn) .pull-left {
+.table-view-indented .table-view-cell > a:not(".btn") .pull-left {
   position: absolute;
   left: 15px;
   z-index: 1;
@@ -770,7 +770,7 @@ input[type="button"] {
   transform: rotate(-45deg);
 }
 
-[class*="badge"] {
+.badge {
   display: inline-block;
   padding: 2px 9px;
   font-size: 13px;
@@ -779,7 +779,7 @@ input[type="button"] {
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 100px;
 }
-[class*="badge"].badge-inverted {
+.badge.badge-inverted {
   padding: 0;
   background-color: transparent;
 }
@@ -808,7 +808,7 @@ input[type="button"] {
   color: #d9534f;
 }
 
-.btn [class*="badge"] {
+.btn .badge {
   font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -827,7 +827,7 @@ input[type="button"] {
   color: #fff;
 }
 
-.btn-block [class*="badge"] {
+.btn-block .badge {
   position: absolute;
   right: 0;
   margin-right: 10px;

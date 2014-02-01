@@ -425,7 +425,7 @@ body {
 #badgesInDevice {
   text-align: center;
 
-  [class*="badge"] {
+  .badge {
     margin-top: 10px;
   }
 }

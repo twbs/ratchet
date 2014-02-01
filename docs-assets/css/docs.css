@@ -404,7 +404,7 @@ body {
 #badgesInDevice {
   text-align: center;
 }
-#badgesInDevice [class*="badge"] {
+#badgesInDevice .badge {
   margin-top: 10px;
 }
 
@@ -987,7 +987,7 @@ hr {
   color: #007aff;
   opacity: .6;
 }
-.platform-ios [class*="badge"].badge-inverted {
+.platform-ios .badge.badge-inverted {
   color: #929292;
 }
 .platform-ios .badge-primary {
@@ -1348,7 +1348,7 @@ hr {
   color: #33b5e5;
   opacity: .6;
 }
-.platform-android [class*="badge"].badge-inverted {
+.platform-android .badge.badge-inverted {
   color: white;
 }
 .platform-android .badge-primary {

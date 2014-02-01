@@ -300,7 +300,7 @@ textarea,
 // Badges
 // --------------------------------------------------
 
-[class*="badge"] {
+.badge {
   &.badge-inverted {
     color: $default-color;
   }
