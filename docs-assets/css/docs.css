@@ -983,6 +983,14 @@ hr {
 .platform-ios .bar-nav .btn-link {
   color: #007aff;
 }
+.platform-ios .bar-nav .btn-link.pull-right .icon {
+  margin-right: -8px;
+  margin-left: -3px;
+}
+.platform-ios .bar-nav .btn-link.pull-left .icon {
+  margin-right: -3px;
+  margin-left: -8px;
+}
 .platform-ios .bar-nav .btn-link:active {
   color: #007aff;
   opacity: .6;
