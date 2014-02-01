@@ -22,10 +22,21 @@ body {
 a {
   color: $primary-color;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes the dark touch outlines on links
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes the dark touch outlines on links 
 }
 strong {
   font-weight: $font-weight;
+}
+
+// Typography
+h1,h2,h3,h4,h5,h6 {
+  margin: 10px 15px;
+  font-size: 14px;
+}
+p {
+  margin: 10px 15px;
+  font-size: 14px;
+  color: #777;
 }
 
 // Wrapper to be used around all content not in .bar-title and .bar-tab

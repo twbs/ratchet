@@ -257,6 +257,17 @@ strong {
   font-weight: 500;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 15px;
+  font-size: 14px;
+}
+
+p {
+  margin: 10px 15px;
+  font-size: 14px;
+  color: #777;
+}
+
 .content {
   position: fixed;
   top: 0;

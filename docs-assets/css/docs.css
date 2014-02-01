@@ -396,9 +396,8 @@ body {
   margin-right: 10px;
   margin-left: 10px;
 }
-#segmentedControllersInDevice .card p {
-  padding-right: 10px;
-  padding-left: 10px;
+#segmentedControllersInDevice .card span {
+  padding: 10px;
 }
 
 #badgesInDevice {
