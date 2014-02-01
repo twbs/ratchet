@@ -101,7 +101,7 @@ base_url: "../"
 
     </article>
     <article class="component">
-      <h3 class="component-title">Title bar with link buttons</h3>
+      <h3 class="component-title">Title bar with link buttons and icons</h3>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
@@ -117,10 +117,12 @@ base_url: "../"
 
 {% highlight html %}
 <header class="bar bar-nav">
-  <span class="icon icon-refresh pull-left"></span>
-  <a class="btn btn-link pull-right">
-    Next
-    <span class="icon icon-lg-right"></span>
+  <a class="btn btn-link pull-left">
+    <span class="icon icon-lg-left"></span>
+    Previous
+  </a>
+  <a class="pull-right">
+    <span class="icon icon-refresh"></span>
   </a>
   <h1 class="title">Title</h1>
 </header>

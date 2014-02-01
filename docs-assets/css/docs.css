@@ -803,6 +803,9 @@ hr {
 }
 
 }
+.platform-ios a {
+  color: #007aff;
+}
 .platform-ios .content {
   background-color: #efeff4;
 }

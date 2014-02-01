@@ -31,6 +31,9 @@ $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
 // Base
 // --------------------------------------------------
 
+a {
+  color: $primary-color;
+}
 .content {
   background-color: #efeff4;
 }
