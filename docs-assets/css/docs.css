@@ -992,24 +992,24 @@ hr {
 }
 .platform-ios .badge-primary {
   color: #fff;
-  background-color: #007aff;
 }
 .platform-ios .badge-primary.badge-inverted {
   color: #007aff;
 }
 .platform-ios .badge-positive {
   color: #fff;
-  background-color: #4cd964;
 }
 .platform-ios .badge-positive.badge-inverted {
   color: #4cd964;
 }
 .platform-ios .badge-negative {
   color: #fff;
-  background-color: #dd524d;
 }
 .platform-ios .badge-negative.badge-inverted {
   color: #dd524d;
+}
+.platform-ios .btn:active .badge-inverted {
+  color: #fff;
 }
 .platform-ios .segmented-control {
   color: #929292;

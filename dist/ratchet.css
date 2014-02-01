@@ -791,7 +791,7 @@ input[type="button"] {
   border-radius: 100px;
 }
 .badge.badge-inverted {
-  padding: 0;
+  padding: 0 5px 0 0;
   background-color: transparent;
 }
 

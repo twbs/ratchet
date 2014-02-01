@@ -313,7 +313,6 @@ textarea,
 // Main badge
 .badge-primary {
   color: #fff;
-  background-color: $primary-color;
 
   &.badge-inverted {
     color: $primary-color;
@@ -323,7 +322,6 @@ textarea,
 // Positive badge
 .badge-positive {
   color: #fff;
-  background-color: $positive-color;
 
   &.badge-inverted {
     color: $positive-color;
@@ -333,11 +331,15 @@ textarea,
 // Negative badge
 .badge-negative {
   color: #fff;
-  background-color: $negative-color;
 
   &.badge-inverted {
     color: $negative-color;
   }
+}
+
+// Active states
+.btn:active .badge-inverted {
+  color: #fff;
 }
 
 

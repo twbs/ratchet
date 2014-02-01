@@ -222,7 +222,6 @@ textarea,
 
 .badge-primary {
   color: #fff;
-  background-color: #007aff;
 }
 .badge-primary.badge-inverted {
   color: #007aff;
@@ -230,7 +229,6 @@ textarea,
 
 .badge-positive {
   color: #fff;
-  background-color: #4cd964;
 }
 .badge-positive.badge-inverted {
   color: #4cd964;
@@ -238,10 +236,13 @@ textarea,
 
 .badge-negative {
   color: #fff;
-  background-color: #dd524d;
 }
 .badge-negative.badge-inverted {
   color: #dd524d;
+}
+
+.btn:active .badge-inverted {
+  color: #fff;
 }
 
 .segmented-control {
