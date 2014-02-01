@@ -39,13 +39,11 @@
       border-left-width: 0;
     }
 
-    // Active state of segmented controller
+    // Active states of segmented controller
     &:active {
       background-color: #eee;
     }
-
-    // Selected segment of controller
-    &.selected {
+    &.active {
       background-color: #ccc;
     }
   }
@@ -67,7 +65,7 @@
     &:active {
       background-color: lighten($primary-color, 35%);
     }
-    &.selected {
+    &.active {
       background-color: $primary-color;
       
       > a {
@@ -90,7 +88,7 @@
     &:active {
       background-color: lighten($positive-color, 35%);
     }
-    &.selected {
+    &.active {
       background-color: $positive-color;
       
       > a {
@@ -113,7 +111,7 @@
     &:active {
       background-color: lighten($negative-color, 35%);
     }
-    &.selected {
+    &.active {
       background-color: $negative-color;
       
       > a {
@@ -126,7 +124,7 @@
 .segmented-control-item {
   display: none;
 
-  &.selected {
+  &.active {
     display: block;
   }
 }

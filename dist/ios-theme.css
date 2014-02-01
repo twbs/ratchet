@@ -257,10 +257,10 @@ textarea,
 .segmented-control li:active {
   background-color: #ebebeb;
 }
-.segmented-control li.selected {
+.segmented-control li.active {
   background-color: #929292;
 }
-.segmented-control li.selected > a {
+.segmented-control li.active > a {
   color: #fff;
 }
 
@@ -276,10 +276,10 @@ textarea,
 .segmented-control-primary li:active {
   background-color: #b3d7ff;
 }
-.segmented-control-primary li.selected {
+.segmented-control-primary li.active {
   background-color: #007aff;
 }
-.segmented-control-primary li.selected > a {
+.segmented-control-primary li.active > a {
   color: #fff;
 }
 
@@ -295,10 +295,10 @@ textarea,
 .segmented-control-positive li:active {
   background-color: #dff8e3;
 }
-.segmented-control-positive li.selected {
+.segmented-control-positive li.active {
   background-color: #4cd964;
 }
-.segmented-control-positive li.selected > a {
+.segmented-control-positive li.active > a {
   color: #fff;
 }
 
@@ -314,10 +314,10 @@ textarea,
 .segmented-control-negative li:active {
   background-color: #fae4e3;
 }
-.segmented-control-negative li.selected {
+.segmented-control-negative li.active {
   background-color: #dd524d;
 }
-.segmented-control-negative li.selected > a {
+.segmented-control-negative li.active > a {
   color: #fff;
 }
 

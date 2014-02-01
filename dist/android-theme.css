@@ -251,7 +251,7 @@ textarea,
   padding-bottom: 10px;
   color: #33b5e5;
 }
-.segmented-control li.selected {
+.segmented-control li.active {
   background-color: #33b5e5;
 }
 

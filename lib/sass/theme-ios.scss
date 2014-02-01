@@ -357,7 +357,7 @@ textarea,
     &:active {
       background-color: lighten($default-color, 35%);
     }
-    &.selected {
+    &.active {
       background-color: $default-color;
       
       > a {
@@ -383,7 +383,7 @@ textarea,
     &:active {
       background-color: lighten($primary-color, 35%);
     }
-    &.selected {
+    &.active {
       background-color: $primary-color;
       
       > a {
@@ -406,7 +406,7 @@ textarea,
     &:active {
       background-color: lighten($positive-color, 35%);
     }
-    &.selected {
+    &.active {
       background-color: $positive-color;
       
       > a {
@@ -429,7 +429,7 @@ textarea,
     &:active {
       background-color: lighten($negative-color, 35%);
     }
-    &.selected {
+    &.active {
       background-color: $negative-color;
       
       > a {

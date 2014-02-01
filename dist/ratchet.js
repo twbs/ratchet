@@ -545,7 +545,7 @@
     var activeBodies;
     var targetBody;
     var targetTab;
-    var className     = 'selected';
+    var className     = 'active';
     var classSelector = '.' + className;
     var targetAnchor  = getTarget(e.target);
 

@@ -360,9 +360,7 @@ textarea,
       padding-bottom: 10px;
       color: $primary-color;
     }
-
-    // Selected segment of controller
-    &.selected {
+    &.active {
       background-color: $primary-color;
     }
   }

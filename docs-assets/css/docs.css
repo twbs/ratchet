@@ -311,10 +311,10 @@ body {
 .platform-toggle .segmented-control li:active {
   background-color: rgba(0, 209, 254, 0.3);
 }
-.platform-toggle .segmented-control li.selected {
+.platform-toggle .segmented-control li.active {
   background-color: #00d1fe;
 }
-.platform-toggle .segmented-control li.selected a {
+.platform-toggle .segmented-control li.active a {
   color: #fff;
 }
 
@@ -1024,10 +1024,10 @@ hr {
 .platform-ios .segmented-control li:active {
   background-color: #ebebeb;
 }
-.platform-ios .segmented-control li.selected {
+.platform-ios .segmented-control li.active {
   background-color: #929292;
 }
-.platform-ios .segmented-control li.selected > a {
+.platform-ios .segmented-control li.active > a {
   color: #fff;
 }
 .platform-ios .segmented-control-primary {
@@ -1042,10 +1042,10 @@ hr {
 .platform-ios .segmented-control-primary li:active {
   background-color: #b3d7ff;
 }
-.platform-ios .segmented-control-primary li.selected {
+.platform-ios .segmented-control-primary li.active {
   background-color: #007aff;
 }
-.platform-ios .segmented-control-primary li.selected > a {
+.platform-ios .segmented-control-primary li.active > a {
   color: #fff;
 }
 .platform-ios .segmented-control-positive {
@@ -1060,10 +1060,10 @@ hr {
 .platform-ios .segmented-control-positive li:active {
   background-color: #dff8e3;
 }
-.platform-ios .segmented-control-positive li.selected {
+.platform-ios .segmented-control-positive li.active {
   background-color: #4cd964;
 }
-.platform-ios .segmented-control-positive li.selected > a {
+.platform-ios .segmented-control-positive li.active > a {
   color: #fff;
 }
 .platform-ios .segmented-control-negative {
@@ -1078,10 +1078,10 @@ hr {
 .platform-ios .segmented-control-negative li:active {
   background-color: #fae4e3;
 }
-.platform-ios .segmented-control-negative li.selected {
+.platform-ios .segmented-control-negative li.active {
   background-color: #dd524d;
 }
-.platform-ios .segmented-control-negative li.selected > a {
+.platform-ios .segmented-control-negative li.active > a {
   color: #fff;
 }
 .platform-ios .popover {
@@ -1385,7 +1385,7 @@ hr {
   padding-bottom: 10px;
   color: #33b5e5;
 }
-.platform-android .segmented-control li.selected {
+.platform-android .segmented-control li.active {
   background-color: #33b5e5;
 }
 .platform-android .popover {

@@ -76,9 +76,9 @@ $(function() {
         components.addClass(platform);
       }
 
-      // Deal with selected states
-      $(this).siblings('.selected').removeClass('selected');
-      $(this).addClass('selected');
+      // Deal with active states
+      $(this).siblings('.active').removeClass('active');
+      $(this).addClass('active');
     });
 
     win.on('scroll', calculateScroll);

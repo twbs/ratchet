@@ -96,7 +96,7 @@
 .segmented-control li > a {
   color: #1eb0e9;
 }
-.segmented-control li.selected {
+.segmented-control li.active {
   background-color: #1eb0e9;
 }
 
@@ -109,7 +109,7 @@
 .bar-title .segmented-control li > a {
   color: #fff;
 }
-.bar-title .segmented-control li.selected {
+.bar-title .segmented-control li.active {
   background-color: rgba(255, 255, 255, 0.4);
 }
 

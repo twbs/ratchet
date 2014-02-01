@@ -868,7 +868,7 @@ input[type="button"] {
 .segmented-control li:active {
   background-color: #eee;
 }
-.segmented-control li.selected {
+.segmented-control li.active {
   background-color: #ccc;
 }
 
@@ -884,10 +884,10 @@ input[type="button"] {
 .segmented-control-primary li:active {
   background-color: #cde1f1;
 }
-.segmented-control-primary li.selected {
+.segmented-control-primary li.active {
   background-color: #428bca;
 }
-.segmented-control-primary li.selected > a {
+.segmented-control-primary li.active > a {
   color: #fff;
 }
 
@@ -903,10 +903,10 @@ input[type="button"] {
 .segmented-control-positive li:active {
   background-color: #d8eed8;
 }
-.segmented-control-positive li.selected {
+.segmented-control-positive li.active {
   background-color: #5cb85c;
 }
-.segmented-control-positive li.selected > a {
+.segmented-control-positive li.active > a {
   color: #fff;
 }
 
@@ -922,17 +922,17 @@ input[type="button"] {
 .segmented-control-negative li:active {
   background-color: #f9e2e2;
 }
-.segmented-control-negative li.selected {
+.segmented-control-negative li.active {
   background-color: #d9534f;
 }
-.segmented-control-negative li.selected > a {
+.segmented-control-negative li.active > a {
   color: #fff;
 }
 
 .segmented-control-item {
   display: none;
 }
-.segmented-control-item.selected {
+.segmented-control-item.active {
   display: block;
 }
 
