@@ -132,6 +132,7 @@ body {
   font-size: 40px;
 }
 .docs-sub-content .page-description {
+  color: #fff;
   font-size: 24px;
   opacity: .7;
 }
