@@ -12,19 +12,19 @@
   background-color: #efeff4;
 }
 
-[class*="bar-"] {
+.bar {
   border-bottom: 0;
   background-color: rgba(247, 247, 247, 0.98);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
 }
-[class*="bar-"].bar-header-secondary {
+.bar.bar-header-secondary {
   top: 44px;
 }
-[class*="bar-"].bar-footer-secondary {
+.bar.bar-footer-secondary {
   bottom: 44px;
 }
-[class*="bar-"].bar-footer-secondary-tab {
+.bar.bar-footer-secondary-tab {
   bottom: 50px;
 }
 

@@ -12,10 +12,10 @@
   padding-top: 108px;
 }
 
-[class*="bar-"] {
+.bar {
   background-color: rgba(30, 176, 233, 0.98);
 }
-[class*="bar-"].bar-standard, [class*="bar-"].bar-footer-secondary {
+.bar.bar-standard, .bar.bar-footer-secondary {
   background-color: rgba(245, 245, 245, 0.98);
 }
 
@@ -25,7 +25,7 @@
   box-shadow: 0 -20px 0 rgba(30, 176, 233, 0.98), 0 0 1px rgba(0, 0, 0, 0.85);
 }
 
-[class*="bar-"].bar-header-secondary {
+.bar.bar-header-secondary {
   top: 64px;
 }
 

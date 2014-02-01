@@ -43,7 +43,7 @@ base_url: "../"
       <div class="device">
         <div class="device-content">
           <div id="iwindow">
-            <header class="bar-nav">
+            <header class="bar bar-nav">
               <h1 class="title">Title</h1>
             </header>
           </div>
@@ -58,13 +58,13 @@ base_url: "../"
         <p class="component-description">Title bars are full width and docked to the top of the viewport.</p>
 
         <div class="component-example component-example-fullbleed">
-          <header class="bar-nav">
+          <header class="bar bar-nav">
             <h1 class="title">Title</h1>
           </header>
         </div>
 
 {% highlight html %}
-<header class="bar-nav">
+<header class="bar bar-nav">
   <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}
@@ -76,7 +76,7 @@ base_url: "../"
       <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
 
       <div class="component-example component-example-fullbleed">
-        <header class="bar-nav">
+        <header class="bar bar-nav">
           <a class="btn pull-left">
             Left
           </a>
@@ -88,7 +88,7 @@ base_url: "../"
       </div>
 
 {% highlight html %}
-<header class="bar-nav">
+<header class="bar bar-nav">
   <a class="btn pull-left">
     Left
   </a>
@@ -104,7 +104,7 @@ base_url: "../"
       <h3 class="component-title">Title bar with link buttons</h3>
 
       <div class="component-example component-example-fullbleed">
-        <header class="bar-nav">
+        <header class="bar bar-nav">
           <a class="btn btn-link pull-left">
             Previous
           </a>
@@ -116,7 +116,7 @@ base_url: "../"
       </div>
 
 {% highlight html %}
-<header class="bar-nav">
+<header class="bar bar-nav">
   <a class="btn btn-link pull-left">
     Previous
   </a>
@@ -134,7 +134,7 @@ base_url: "../"
       <p class="component-description">Title bars can also house segmented controllers. Feel free to add accompanying buttons too. The control will automatically layout itself out correctly.</p>
 
       <div class="component-example component-example-fullbleed">
-        <header class="bar-nav">
+        <header class="bar bar-nav">
           <a class="btn pull-left">
             Left
           </a>
@@ -156,7 +156,7 @@ base_url: "../"
       </div>
 
 {% highlight html %}
-<header class="bar-nav">
+<header class="bar bar-nav">
   <a class="btn pull-left">
     Left
   </a>
@@ -184,7 +184,7 @@ base_url: "../"
       <p class="component-description">Use Ratchicons in the tab bar to represent different sections of your app.</p>
 
       <div class="component-example component-example-fullbleed">
-        <nav class="bar-tab">
+        <nav class="bar bar-tab">
           <a class="tab-item active" href="#">
             <span class="icon icon-share"></span>
             <div class="tab-label">Label</div>
@@ -209,7 +209,7 @@ base_url: "../"
       </div>
 
 {% highlight html %}
-<nav class="bar-tab">
+<nav class="bar bar-tab">
   <a class="tab-item active" href="#">
     <span class="icon icon-share"></span>
     <div class="tab-label">Label</div>
@@ -242,7 +242,7 @@ base_url: "../"
 
       <div class="component-example component-example-fullbleed">
         <!-- Segmented controller in standard bar fixed to top -->
-        <nav class="bar-standard">
+        <nav class="bar bar-standard">
           <ul class="segmented-control">
             <li class="active">
               <a>Thing one</a>
@@ -257,14 +257,14 @@ base_url: "../"
         </nav>
 
         <!-- Block button in standard bar fixed below top bar -->
-        <div class="bar-standard bar-header-secondary">
+        <div class="bar bar-standard bar-header-secondary">
           <a class="btn btn-block">Block level button</a>
         </div>
       </div>
 
 {% highlight html %}
 <!-- Segmented controller in standard bar fixed to top -->
-<nav class="bar-standard">
+<nav class="bar bar-standard">
   <ul class="segmented-control">
     <li class="active">
       <a>Thing one</a>
@@ -279,7 +279,7 @@ base_url: "../"
 </nav>
 
 <!-- Block button in standard bar fixed below top bar -->
-<div class="bar-standard bar-header-secondary">
+<div class="bar bar-standard bar-header-secondary">
   <a class="btn btn-block">Block level button</a>
 </div>
 {% endhighlight %}
@@ -822,7 +822,7 @@ document
 
     <div class="component-example">
       <div id="popover" class="popover">  
-        <header class="bar-nav">
+        <header class="bar bar-nav">
           <a class="btn btn-link pull-left">
             Left
           </a>
@@ -846,7 +846,7 @@ document
 
 {% highlight html %}
 <div id="popover" class="popover">  
-  <header class="bar-nav">
+  <header class="bar bar-nav">
     <a class="btn btn-link pull-left">
       Left
     </a>
@@ -871,7 +871,7 @@ document
     <p class="component-description">Popovers are designed to only fire from <a href="#bars">title bars</a>. Set the value of the title href to the id of a popover, like so:</p>
 
 {% highlight html %}
-<header class="bar-nav">
+<header class="bar bar-nav">
   <a href="#myPopover"> 
     <h1 class="title">Popover title</h3>
   </a>
@@ -887,7 +887,7 @@ document
     <div class="component-example">
       <a href="#myModalexample" class="btn">Open modal</a>
       <div id="myModalexample" class="modal">
-        <header class="bar-nav">
+        <header class="bar bar-nav">
           <a class="btn pull-right" href="#myModalexample">
             Close
           </a>
@@ -905,7 +905,7 @@ document
 {% highlight html %}
 <a href="#myModalexample" class="btn">Open modal</a>
 <div id="myModalexample" class="modal">
-  <header class="bar-nav">
+  <header class="bar bar-nav">
     <a class="btn pull-right" href="#myModalexample">
       Close
     </a>
@@ -996,7 +996,7 @@ document
       <p class="component-description">A working version of push:</p>
 
       <div class="component-example component-example-fullbleed">
-        <header class="bar-nav">
+        <header class="bar bar-nav">
           <h1 class="title">Push</h1>
         </header>
         <div class="content">
@@ -1014,7 +1014,7 @@ document
       </div>
 
 {% highlight html %}
-<header class="bar-nav">
+<header class="bar bar-nav">
   <h1 class="title">Push</h1>
 </header>
 <div class="content">

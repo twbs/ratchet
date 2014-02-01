@@ -364,7 +364,7 @@ body {
   line-height: $line-height-default;
 }
 .component-example,
-.component-example [class*="bar"],
+.component-example .bar,
 .component-example .content {
   position: relative;
 }
@@ -605,7 +605,7 @@ hr {
     background-color: #fff;
   }
   .device .content,
-  .device [class*="bar"],
+  .device .bar,
   .device .modal {
     position: absolute;
   }

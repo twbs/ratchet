@@ -26,7 +26,7 @@ $negative-color: #e71e1e;
 
 // Bars
 // --------------------------------------------------
-[class*="bar-"] {
+.bar {
   background-color: $chrome-color;
 
   &.bar-standard,
@@ -38,7 +38,7 @@ $negative-color: #e71e1e;
   top: 20px;
   @include box-shadow(0 -20px 0 rgba(30,176,233,.98), 0 0 1px rgba(0, 0, 0, 0.85));
 }
-[class*="bar-"].bar-header-secondary {
+.bar.bar-header-secondary {
   top: 64px;
 }
 .title {

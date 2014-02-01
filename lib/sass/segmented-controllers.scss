@@ -134,7 +134,7 @@
 // --------------------------------------------------
 
 // Remove standard segmented bottom margin
-[class*="bar-"] .segmented-control {
+.bar .segmented-control {
   top: 8px;
   margin: 0 auto;
 }

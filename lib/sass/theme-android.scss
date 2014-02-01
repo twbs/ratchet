@@ -46,7 +46,7 @@ $border-radius: 0;
 // Bars
 // --------------------------------------------------
 
-[class*="bar-"] {
+.bar {
   height: $bar-base-height;
   background-color: $chrome-color;
   border-bottom: $border-default;
@@ -188,7 +188,7 @@ textarea,
     background-color: $default-color;
   }
 }
-[class*="bar-"] {
+.bar {
   .btn {
     padding-top: 9px;
     padding-bottom: 9px;

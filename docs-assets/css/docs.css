@@ -344,7 +344,7 @@ body {
 }
 
 .component-example,
-.component-example [class*="bar"],
+.component-example .bar,
 .component-example .content {
   position: relative;
 }
@@ -560,7 +560,7 @@ hr {
   }
 
   .device .content,
-  .device [class*="bar"],
+  .device .bar,
   .device .modal {
     position: absolute;
   }
@@ -806,19 +806,19 @@ hr {
 .platform-ios .content {
   background-color: #efeff4;
 }
-.platform-ios [class*="bar-"] {
+.platform-ios .bar {
   border-bottom: 0;
   background-color: rgba(247, 247, 247, 0.98);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
 }
-.platform-ios [class*="bar-"].bar-header-secondary {
+.platform-ios .bar.bar-header-secondary {
   top: 44px;
 }
-.platform-ios [class*="bar-"].bar-footer-secondary {
+.platform-ios .bar.bar-footer-secondary {
   bottom: 44px;
 }
-.platform-ios [class*="bar-"].bar-footer-secondary-tab {
+.platform-ios .bar.bar-footer-secondary-tab {
   bottom: 50px;
 }
 .platform-ios .bar-tab {
@@ -1180,12 +1180,12 @@ hr {
   background: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-form', endColorstr='$color-to',GradientType=0 );
 }
-.platform-android [class*="bar-"] {
+.platform-android .bar {
   height: 50px;
   background-color: #111111;
   border-bottom: 1px solid #565656;
 }
-.platform-android [class*="bar-"].bar-header-secondary {
+.platform-android .bar.bar-header-secondary {
   top: 51px;
 }
 .platform-android .bar-tab {
@@ -1278,16 +1278,16 @@ hr {
   color: #fff;
   background-color: white;
 }
-.platform-android [class*="bar-"] .btn {
+.platform-android .bar .btn {
   padding-top: 9px;
   padding-bottom: 9px;
 }
-.platform-android [class*="bar-"] .btn-link {
+.platform-android .bar .btn-link {
   padding: 0;
   color: #33b5e5;
   line-height: 50px;
 }
-.platform-android [class*="bar-"] .btn-link:active, .platform-android [class*="bar-"] .btn-link.active {
+.platform-android .bar .btn-link:active, .platform-android .bar .btn-link.active {
   color: #1a9bcb;
 }
 .platform-android .btn-primary {
