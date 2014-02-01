@@ -19,7 +19,7 @@
       border-bottom: 0;
     }
     // If it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
-    > a:not(".btn") {
+    > a:not(.btn) {
       position: relative;
       display: block;
       padding: inherit;
@@ -106,12 +106,12 @@
   padding-left: 59px;
   background-position-x: 59px; // Make room for your left aligned media/icons.
 
-  > a:not(".btn") {
+  > a:not(.btn) {
     margin-left: -59px;
   }
 
   > .pull-left,
-  > a:not(".btn") .pull-left {
+  > a:not(.btn) .pull-left {
     position: absolute;
     left: 15px;
     z-index: 1;

@@ -327,7 +327,7 @@ strong {
   white-space: nowrap;
 }
 
-> a:not(".btn") {
+> a:not(.btn) {
   display: block;
   width: 100%;
   height: 100%;
@@ -405,14 +405,14 @@ strong {
 .table-view .table-view-cell:last-child {
   border-bottom: 0;
 }
-.table-view .table-view-cell > a:not(".btn") {
+.table-view .table-view-cell > a:not(.btn) {
   position: relative;
   display: block;
   padding: inherit;
   margin: -11px -60px -12px -15px;
   color: inherit;
 }
-.table-view .table-view-cell > a:not(".btn"):active {
+.table-view .table-view-cell > a:not(.btn):active {
   background-color: #eee;
 }
 .table-view .table-view-cell p {
@@ -466,11 +466,11 @@ strong {
   padding-left: 59px;
   background-position-x: 59px;
 }
-.table-view-indented .table-view-cell > a:not(".btn") {
+.table-view-indented .table-view-cell > a:not(.btn) {
   margin-left: -59px;
 }
 .table-view-indented .table-view-cell > .pull-left,
-.table-view-indented .table-view-cell > a:not(".btn") .pull-left {
+.table-view-indented .table-view-cell > a:not(.btn) .pull-left {
   position: absolute;
   left: 15px;
   z-index: 1;
