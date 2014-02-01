@@ -218,30 +218,43 @@ textarea,
 
 .badge.badge-inverted {
   color: #929292;
+  background-color: transparent;
 }
 
 .badge-primary {
   color: #fff;
+  background-color: #007aff;
 }
 .badge-primary.badge-inverted {
   color: #007aff;
+  background-color: transparent;
 }
 
 .badge-positive {
   color: #fff;
+  background-color: #4cd964;
 }
 .badge-positive.badge-inverted {
   color: #4cd964;
+  background-color: transparent;
 }
 
 .badge-negative {
   color: #fff;
+  background-color: #dd524d;
 }
 .badge-negative.badge-inverted {
   color: #dd524d;
+  background-color: transparent;
 }
 
-.btn:active .badge-inverted {
+.btn .badge {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.btn .badge.badge-inverted {
+  background-color: transparent;
+}
+.btn:active .badge {
   color: #fff;
 }
 

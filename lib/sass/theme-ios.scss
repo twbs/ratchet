@@ -303,6 +303,7 @@ textarea,
 .badge {
   &.badge-inverted {
     color: $default-color;
+    background-color: transparent;
   }
 }
 
@@ -313,33 +314,51 @@ textarea,
 // Main badge
 .badge-primary {
   color: #fff;
+  background-color: $primary-color;
 
   &.badge-inverted {
     color: $primary-color;
+    background-color: transparent;
   }
 }
 
 // Positive badge
 .badge-positive {
   color: #fff;
+  background-color: $positive-color;
 
   &.badge-inverted {
     color: $positive-color;
+    background-color: transparent;
   }
 }
 
 // Negative badge
 .badge-negative {
   color: #fff;
+  background-color: $negative-color;
 
   &.badge-inverted {
     color: $negative-color;
+    background-color: transparent;
   }
 }
 
-// Active states
-.btn:active .badge-inverted {
-  color: #fff;
+// Badges in buttons
+
+.btn {
+  .badge {
+    background-color: rgba(0,0,0,.15);
+
+    &.badge-inverted {
+      background-color: transparent;
+    }
+  }
+
+  // Active states
+  &:active .badge {
+    color: #fff;
+  }
 }
 
 
