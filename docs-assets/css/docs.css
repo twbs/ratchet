@@ -210,15 +210,13 @@ body {
 }
 
 .benefit-heading {
+  margin-top: 5px 0 10px;
   font-weight: 500;
   font-size: 24px;
-  margin-top: 5px;
-  margin-bottom: 10px;
 }
 
 .benefit-text {
-  margin-top: 0;
-  margin-bottom: 100px;
+  margin: 0 0 100px;
   font-size: 18px;
   color: #777;
 }
