@@ -432,10 +432,6 @@ body {
 #modalsInDevice #iwindow > .btn {
   margin: 10px;
 }
-#modalsInDevice .card p {
-  padding-right: 10px;
-  padding-left: 10px;
-}
 
 .device {
   font-family: "Helvetica Neue", Helvetica, sans-serif;

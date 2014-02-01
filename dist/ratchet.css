@@ -411,6 +411,11 @@ p {
   border: 1px solid #dddddd;
   border-radius: 6px;
 }
+.card p {
+  margin: inherit;
+  font-size: inherit;
+  color: inherit;
+}
 
 .table-view {
   padding: 0;
