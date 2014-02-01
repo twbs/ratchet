@@ -244,80 +244,80 @@ textarea,
   color: #dd524d;
 }
 
-.segmented-controller {
+.segmented-control {
   color: #929292;
   background-color: transparent;
   border: 1px solid #929292;
 }
-.segmented-controller li {
+.segmented-control li {
   border-color: #929292;
   -webkit-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-.segmented-controller li:active {
+.segmented-control li:active {
   background-color: #ebebeb;
 }
-.segmented-controller li.selected {
+.segmented-control li.selected {
   background-color: #929292;
 }
-.segmented-controller li.selected > a {
+.segmented-control li.selected > a {
   color: #fff;
 }
 
-.segmented-controller-primary {
+.segmented-control-primary {
   border: 1px solid #007aff;
 }
-.segmented-controller-primary li {
+.segmented-control-primary li {
   border-color: inherit;
 }
-.segmented-controller-primary li > a {
+.segmented-control-primary li > a {
   color: #007aff;
 }
-.segmented-controller-primary li:active {
+.segmented-control-primary li:active {
   background-color: #b3d7ff;
 }
-.segmented-controller-primary li.selected {
+.segmented-control-primary li.selected {
   background-color: #007aff;
 }
-.segmented-controller-primary li.selected > a {
+.segmented-control-primary li.selected > a {
   color: #fff;
 }
 
-.segmented-controller-positive {
+.segmented-control-positive {
   border: 1px solid #4cd964;
 }
-.segmented-controller-positive li {
+.segmented-control-positive li {
   border-color: inherit;
 }
-.segmented-controller-positive li > a {
+.segmented-control-positive li > a {
   color: #4cd964;
 }
-.segmented-controller-positive li:active {
+.segmented-control-positive li:active {
   background-color: #dff8e3;
 }
-.segmented-controller-positive li.selected {
+.segmented-control-positive li.selected {
   background-color: #4cd964;
 }
-.segmented-controller-positive li.selected > a {
+.segmented-control-positive li.selected > a {
   color: #fff;
 }
 
-.segmented-controller-negative {
+.segmented-control-negative {
   border: 1px solid #dd524d;
 }
-.segmented-controller-negative li {
+.segmented-control-negative li {
   border-color: inherit;
 }
-.segmented-controller-negative li > a {
+.segmented-control-negative li > a {
   color: #dd524d;
 }
-.segmented-controller-negative li:active {
+.segmented-control-negative li:active {
   background-color: #fae4e3;
 }
-.segmented-controller-negative li.selected {
+.segmented-control-negative li.selected {
   background-color: #dd524d;
 }
-.segmented-controller-negative li.selected > a {
+.segmented-control-negative li.selected > a {
   color: #fff;
 }
 

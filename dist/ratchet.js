@@ -534,7 +534,7 @@
 
 !function () {
   var getTarget = function (target) {
-    var i, popovers = document.querySelectorAll('.segmented-controller li a');
+    var i, popovers = document.querySelectorAll('.segmented-control li a');
     for (; target && target !== document; target = target.parentNode) {
       for (i = popovers.length; i--;) { if (popovers[i] === target) return target; }
     }

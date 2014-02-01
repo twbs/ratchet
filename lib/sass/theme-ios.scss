@@ -345,7 +345,7 @@ textarea,
 // Segmented controllers
 // --------------------------------------------------
 
-.segmented-controller {
+.segmented-control {
   color: $default-color;
   background-color: transparent;
   border: 1px solid $default-color;
@@ -371,7 +371,7 @@ textarea,
 // --------------------------------------------------
 
 // Primary
-.segmented-controller-primary {
+.segmented-control-primary {
   border: 1px solid $primary-color;
 
   li {
@@ -394,7 +394,7 @@ textarea,
 }
 
 // Positive
-.segmented-controller-positive {
+.segmented-control-positive {
   border: 1px solid $positive-color;
 
   li {
@@ -417,7 +417,7 @@ textarea,
 }
 
 // Negative
-.segmented-controller-negative {
+.segmented-control-negative {
   border: 1px solid $negative-color;
 
   li {

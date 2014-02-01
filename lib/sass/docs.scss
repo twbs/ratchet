@@ -312,7 +312,7 @@ body {
     @include transition(padding-top .2s linear, padding-bottom .2s linear);
   }
 
-  .segmented-controller {
+  .segmented-control {
     max-width: 300px;
     margin: 0 auto;
     border-color: #00d1fe;
@@ -411,7 +411,7 @@ body {
 
 //Segmented Control
 #segmentedControllersInDevice {
-  .segmented-controller {
+  .segmented-control {
     margin-right: 10px;
     margin-left: 10px;
   }

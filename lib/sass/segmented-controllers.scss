@@ -2,7 +2,7 @@
 // Segmented controllers
 // --------------------------------------------------
 
-.segmented-controller {
+.segmented-control {
   position: relative;
   display: table;
   padding: 0;
@@ -55,7 +55,7 @@
 // --------------------------------------------------
 
 // Primary
-.segmented-controller-primary {
+.segmented-control-primary {
   border: 1px solid $primary-color;
 
   li {
@@ -78,7 +78,7 @@
 }
 
 // Positive
-.segmented-controller-positive {
+.segmented-control-positive {
   border: 1px solid $positive-color;
 
   li {
@@ -101,7 +101,7 @@
 }
 
 // Negative
-.segmented-controller-negative {
+.segmented-control-negative {
   border: 1px solid $negative-color;
 
   li {
@@ -123,7 +123,7 @@
   }
 }
 
-.segmented-controller-item {
+.segmented-control-item {
   display: none;
 
   &.selected {
@@ -136,7 +136,7 @@
 // --------------------------------------------------
 
 // Remove standard segmented bottom margin
-[class*="bar-"] .segmented-controller {
+[class*="bar-"] .segmented-control {
   top: 8px;
   margin: 0 auto;
 }

@@ -833,7 +833,7 @@ input[type="button"] {
   margin-right: 10px;
 }
 
-.segmented-controller {
+.segmented-control {
   position: relative;
   display: table;
   padding: 0;
@@ -845,7 +845,7 @@ input[type="button"] {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.segmented-controller li {
+.segmented-control li {
   display: table-cell;
   overflow: hidden;
   width: 1%;
@@ -853,7 +853,7 @@ input[type="button"] {
   white-space: nowrap;
   border-left: 1px solid #ccc;
 }
-.segmented-controller li > a {
+.segmented-control li > a {
   display: block;
   padding-top: 6px;
   padding-bottom: 7px;
@@ -862,81 +862,81 @@ input[type="button"] {
   color: #333;
   text-overflow: ellipsis;
 }
-.segmented-controller li:first-child {
+.segmented-control li:first-child {
   border-left-width: 0;
 }
-.segmented-controller li:active {
+.segmented-control li:active {
   background-color: #eee;
 }
-.segmented-controller li.selected {
+.segmented-control li.selected {
   background-color: #ccc;
 }
 
-.segmented-controller-primary {
+.segmented-control-primary {
   border: 1px solid #428bca;
 }
-.segmented-controller-primary li {
+.segmented-control-primary li {
   border-color: inherit;
 }
-.segmented-controller-primary li > a {
+.segmented-control-primary li > a {
   color: #428bca;
 }
-.segmented-controller-primary li:active {
+.segmented-control-primary li:active {
   background-color: #cde1f1;
 }
-.segmented-controller-primary li.selected {
+.segmented-control-primary li.selected {
   background-color: #428bca;
 }
-.segmented-controller-primary li.selected > a {
+.segmented-control-primary li.selected > a {
   color: #fff;
 }
 
-.segmented-controller-positive {
+.segmented-control-positive {
   border: 1px solid #5cb85c;
 }
-.segmented-controller-positive li {
+.segmented-control-positive li {
   border-color: inherit;
 }
-.segmented-controller-positive li > a {
+.segmented-control-positive li > a {
   color: #5cb85c;
 }
-.segmented-controller-positive li:active {
+.segmented-control-positive li:active {
   background-color: #d8eed8;
 }
-.segmented-controller-positive li.selected {
+.segmented-control-positive li.selected {
   background-color: #5cb85c;
 }
-.segmented-controller-positive li.selected > a {
+.segmented-control-positive li.selected > a {
   color: #fff;
 }
 
-.segmented-controller-negative {
+.segmented-control-negative {
   border: 1px solid #d9534f;
 }
-.segmented-controller-negative li {
+.segmented-control-negative li {
   border-color: inherit;
 }
-.segmented-controller-negative li > a {
+.segmented-control-negative li > a {
   color: #d9534f;
 }
-.segmented-controller-negative li:active {
+.segmented-control-negative li:active {
   background-color: #f9e2e2;
 }
-.segmented-controller-negative li.selected {
+.segmented-control-negative li.selected {
   background-color: #d9534f;
 }
-.segmented-controller-negative li.selected > a {
+.segmented-control-negative li.selected > a {
   color: #fff;
 }
 
-.segmented-controller-item {
+.segmented-control-item {
   display: none;
 }
-.segmented-controller-item.selected {
+.segmented-control-item.selected {
   display: block;
 }
 
-[class*="bar-"] .segmented-controller {
+[class*="bar-"] .segmented-control {
   top: 8px;
   margin: 0 auto;
 }

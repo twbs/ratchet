@@ -21,7 +21,7 @@ base_url: "../"
   </div>
 
   <div class="platform-toggle">
-    <ul class="segmented-controller">
+    <ul class="segmented-control">
       <li  class="platform-switch selected" data-platform="">
         <a>Base</a>
       </li>
@@ -141,7 +141,7 @@ base_url: "../"
           <a class="btn pull-right">
             Right
           </a>
-          <ul class="segmented-controller">
+          <ul class="segmented-control">
             <li class="selected">
               <a>One</a>
             </li>
@@ -163,7 +163,7 @@ base_url: "../"
   <a class="btn pull-right">
     Right
   </a>
-  <ul class="segmented-controller">
+  <ul class="segmented-control">
     <li class="selected">
       <a>One</a>
     </li>
@@ -243,7 +243,7 @@ base_url: "../"
       <div class="component-example component-example-fullbleed">
         <!-- Segmented controller in standard bar fixed to top -->
         <nav class="bar-standard">
-          <ul class="segmented-controller">
+          <ul class="segmented-control">
             <li class="selected">
               <a>Thing one</a>
             </li>
@@ -265,7 +265,7 @@ base_url: "../"
 {% highlight html %}
 <!-- Segmented controller in standard bar fixed to top -->
 <nav class="bar-standard">
-  <ul class="segmented-controller">
+  <ul class="segmented-control">
     <li class="selected">
       <a>Thing one</a>
     </li>
@@ -622,11 +622,11 @@ base_url: "../"
 
   <!-- Segmented Controller -->
   <article class="component" id="segmentedControllers">
-    <h3 class="component-title">Segmented controller</h3>
-    <p class="component-description">Created with flex-box so button sizes and spacing are consistent. Content sections that are to be swapped in and out by the controller should all be siblings and have the class "segmented-controller-item". Then, just give each content section an id and point the link in the segmented controller to that id.</p>
+    <h3 class="component-title">Segmented control</h3>
+    <p class="component-description">Created with flex-box so button sizes and spacing are consistent. Content sections that are to be swapped in and out by the controller should all be siblings and have the class "segmented-control-item". Then, just give each content section an id and point the link in the segmented controller to that id.</p>
 
     <div class="component-example">
-      <ul class="segmented-controller">
+      <ul class="segmented-control">
         <li class="selected">
           <a href="#item1mobile">Thing one</a>
         </li>
@@ -638,14 +638,14 @@ base_url: "../"
         </li>
       </ul>
       <div class="card">
-        <p id="item1mobile" class="segmented-controller-item selected">Item 1</p>
-        <p id="item2mobile" class="segmented-controller-item">Item 2</p>
-        <p id="item3mobile" class="segmented-controller-item">Item 3</p>
+        <p id="item1mobile" class="segmented-control-item selected">Item 1</p>
+        <p id="item2mobile" class="segmented-control-item">Item 2</p>
+        <p id="item3mobile" class="segmented-control-item">Item 3</p>
       </div>
     </div>
 
 {% highlight html %}
-<ul class="segmented-controller">
+<ul class="segmented-control">
   <li class="selected">
     <a href="#item1mobile">Thing one</a>
   </li>
@@ -657,9 +657,9 @@ base_url: "../"
   </li>
 </ul>
 <div class="card">
-  <p id="item1mobile" class="segmented-controller-item selected">Item 1</p>
-  <p id="item2mobile" class="segmented-controller-item">Item 2</p>
-  <p id="item3mobile" class="segmented-controller-item">Item 3</p>
+  <p id="item1mobile" class="segmented-control-item selected">Item 1</p>
+  <p id="item2mobile" class="segmented-control-item">Item 2</p>
+  <p id="item3mobile" class="segmented-control-item">Item 3</p>
 </div>
 </div>
 {% endhighlight %}

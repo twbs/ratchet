@@ -295,26 +295,26 @@ body {
   -webkit-transition: padding-top 0.2s linear, padding-bottom 0.2s linear;
   transition: padding-top 0.2s linear, padding-bottom 0.2s linear;
 }
-.platform-toggle .segmented-controller {
+.platform-toggle .segmented-control {
   max-width: 300px;
   margin: 0 auto;
   border-color: #00d1fe;
   background-color: transparent;
 }
-.platform-toggle .segmented-controller li {
+.platform-toggle .segmented-control li {
   cursor: pointer;
   border-color: #00d1fe;
 }
-.platform-toggle .segmented-controller li a {
+.platform-toggle .segmented-control li a {
   color: #00d1fe;
 }
-.platform-toggle .segmented-controller li:active {
+.platform-toggle .segmented-control li:active {
   background-color: rgba(0, 209, 254, 0.3);
 }
-.platform-toggle .segmented-controller li.selected {
+.platform-toggle .segmented-control li.selected {
   background-color: #00d1fe;
 }
-.platform-toggle .segmented-controller li.selected a {
+.platform-toggle .segmented-control li.selected a {
   color: #fff;
 }
 
@@ -392,7 +392,7 @@ body {
   margin: 10px;
 }
 
-#segmentedControllersInDevice .segmented-controller {
+#segmentedControllersInDevice .segmented-control {
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -1011,77 +1011,77 @@ hr {
 .platform-ios .badge-negative.badge-inverted {
   color: #dd524d;
 }
-.platform-ios .segmented-controller {
+.platform-ios .segmented-control {
   color: #929292;
   background-color: transparent;
   border: 1px solid #929292;
 }
-.platform-ios .segmented-controller li {
+.platform-ios .segmented-control li {
   border-color: #929292;
   -webkit-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-.platform-ios .segmented-controller li:active {
+.platform-ios .segmented-control li:active {
   background-color: #ebebeb;
 }
-.platform-ios .segmented-controller li.selected {
+.platform-ios .segmented-control li.selected {
   background-color: #929292;
 }
-.platform-ios .segmented-controller li.selected > a {
+.platform-ios .segmented-control li.selected > a {
   color: #fff;
 }
-.platform-ios .segmented-controller-primary {
+.platform-ios .segmented-control-primary {
   border: 1px solid #007aff;
 }
-.platform-ios .segmented-controller-primary li {
+.platform-ios .segmented-control-primary li {
   border-color: inherit;
 }
-.platform-ios .segmented-controller-primary li > a {
+.platform-ios .segmented-control-primary li > a {
   color: #007aff;
 }
-.platform-ios .segmented-controller-primary li:active {
+.platform-ios .segmented-control-primary li:active {
   background-color: #b3d7ff;
 }
-.platform-ios .segmented-controller-primary li.selected {
+.platform-ios .segmented-control-primary li.selected {
   background-color: #007aff;
 }
-.platform-ios .segmented-controller-primary li.selected > a {
+.platform-ios .segmented-control-primary li.selected > a {
   color: #fff;
 }
-.platform-ios .segmented-controller-positive {
+.platform-ios .segmented-control-positive {
   border: 1px solid #4cd964;
 }
-.platform-ios .segmented-controller-positive li {
+.platform-ios .segmented-control-positive li {
   border-color: inherit;
 }
-.platform-ios .segmented-controller-positive li > a {
+.platform-ios .segmented-control-positive li > a {
   color: #4cd964;
 }
-.platform-ios .segmented-controller-positive li:active {
+.platform-ios .segmented-control-positive li:active {
   background-color: #dff8e3;
 }
-.platform-ios .segmented-controller-positive li.selected {
+.platform-ios .segmented-control-positive li.selected {
   background-color: #4cd964;
 }
-.platform-ios .segmented-controller-positive li.selected > a {
+.platform-ios .segmented-control-positive li.selected > a {
   color: #fff;
 }
-.platform-ios .segmented-controller-negative {
+.platform-ios .segmented-control-negative {
   border: 1px solid #dd524d;
 }
-.platform-ios .segmented-controller-negative li {
+.platform-ios .segmented-control-negative li {
   border-color: inherit;
 }
-.platform-ios .segmented-controller-negative li > a {
+.platform-ios .segmented-control-negative li > a {
   color: #dd524d;
 }
-.platform-ios .segmented-controller-negative li:active {
+.platform-ios .segmented-control-negative li:active {
   background-color: #fae4e3;
 }
-.platform-ios .segmented-controller-negative li.selected {
+.platform-ios .segmented-control-negative li.selected {
   background-color: #dd524d;
 }
-.platform-ios .segmented-controller-negative li.selected > a {
+.platform-ios .segmented-control-negative li.selected > a {
   color: #fff;
 }
 .platform-ios .popover {
@@ -1372,20 +1372,20 @@ hr {
 .platform-android .badge-negative.badge-inverted {
   color: #f20754;
 }
-.platform-android .segmented-controller {
+.platform-android .segmented-control {
   background-color: transparent;
   border: 1px solid #33b5e5;
   border-radius: 3px;
 }
-.platform-android .segmented-controller li {
+.platform-android .segmented-control li {
   border-left: 1px solid #33b5e5;
 }
-.platform-android .segmented-controller li > a {
+.platform-android .segmented-control li > a {
   padding-top: 9px;
   padding-bottom: 10px;
   color: #33b5e5;
 }
-.platform-android .segmented-controller li.selected {
+.platform-android .segmented-control li.selected {
   background-color: #33b5e5;
 }
 .platform-android .popover {

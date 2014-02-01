@@ -238,20 +238,20 @@ textarea,
   color: #f20754;
 }
 
-.segmented-controller {
+.segmented-control {
   background-color: transparent;
   border: 1px solid #33b5e5;
   border-radius: 3px;
 }
-.segmented-controller li {
+.segmented-control li {
   border-left: 1px solid #33b5e5;
 }
-.segmented-controller li > a {
+.segmented-control li > a {
   padding-top: 9px;
   padding-bottom: 10px;
   color: #33b5e5;
 }
-.segmented-controller li.selected {
+.segmented-control li.selected {
   background-color: #33b5e5;
 }
 
