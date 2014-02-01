@@ -63,7 +63,7 @@ body {
 .docs-header-content {
   padding: 50px 10px;
 }
-.docs-header-content .button {
+.docs-header-content .btn {
   display: block;
   padding: 15px 30px 16px;
   margin: 0 10px 10px;
@@ -73,26 +73,26 @@ body {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.docs-header-content .button:hover {
+.docs-header-content .btn:hover {
   color: #63e3ff;
   border-color: #63e3ff;
 }
-.docs-header-content .button:active {
+.docs-header-content .btn:active {
   opacity: .5;
   background-color: transparent;
 }
-.docs-header-content .button-primary {
+.docs-header-content .btn-primary {
   margin-bottom: 0;
   color: #fff;
   border-color: #00d1fe;
   background-color: #00d1fe;
 }
-.docs-header-content .button-primary:hover {
+.docs-header-content .btn-primary:hover {
   color: #fff;
   border-color: #63e3ff;
   background-color: #63e3ff;
 }
-.docs-header-content .button-primary:active {
+.docs-header-content .btn-primary:active {
   background-color: #63e3ff;
 }
 
@@ -181,13 +181,6 @@ body {
   height: 20px;
   display: inline-block;
   vertical-align: top;
-}
-.social [class*="button"] {
-  padding: 0;
-  border: 0;
-}
-.social iframe {
-  background-color: transparent;
 }
 .social .twitter-follow-button {
   margin-top: 5px;
@@ -388,14 +381,14 @@ body {
   word-wrap: normal;
 }
 
-#buttonsInDevice [class*="button"],
-#buttonsBadgesInDevice [class*="button"] {
+#buttonsInDevice .btn,
+#buttonsBadgesInDevice .btn {
   margin-top: 10px;
   margin-right: 100px;
   margin-left: 10px;
 }
 
-#blockButtonsInDevice .button-block {
+#blockButtonsInDevice .btn-block {
   margin: 10px;
 }
 
@@ -437,7 +430,7 @@ body {
   content: '';
 }
 
-#modalsInDevice #iwindow > .button {
+#modalsInDevice #iwindow > .btn {
   margin: 10px;
 }
 #modalsInDevice .card p {
@@ -495,11 +488,11 @@ hr {
     line-height: 60px;
   }
 
-  .docs-header-content .button {
+  .docs-header-content .btn {
     display: inline-block;
     margin: 0;
   }
-  .docs-header-content .button-primary {
+  .docs-header-content .btn-primary {
     margin-left: 10px;
   }
 
@@ -921,7 +914,7 @@ hr {
 .platform-ios .input-row label + input {
   background-image: none;
 }
-.platform-ios [class*="button"] {
+.platform-ios .btn {
   border: 1px solid #929292;
   color: #929292;
   background-color: rgba(247, 247, 247, 0.98);
@@ -932,65 +925,65 @@ hr {
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-.platform-ios [class*="button"]:active, .platform-ios [class*="button"].active {
+.platform-ios .btn:active, .platform-ios .btn.active {
   color: #fff;
   background-color: #929292;
 }
-.platform-ios .button-primary {
+.platform-ios .btn-primary {
   color: #fff;
   border: 1px solid #007aff;
   background-color: #007aff;
 }
-.platform-ios .button-primary:active, .platform-ios .button-primary.active {
+.platform-ios .btn-primary:active, .platform-ios .btn-primary.active {
   border: 1px solid #0062cc;
   background-color: #0062cc;
 }
-.platform-ios .button-positive {
+.platform-ios .btn-positive {
   color: #fff;
   border: 1px solid #4cd964;
   background-color: #4cd964;
 }
-.platform-ios .button-positive:active, .platform-ios .button-positive.active {
+.platform-ios .btn-positive:active, .platform-ios .btn-positive.active {
   border: 1px solid #2ac845;
   background-color: #2ac845;
 }
-.platform-ios .button-negative {
+.platform-ios .btn-negative {
   color: #fff;
   border: 1px solid #dd524d;
   background-color: #dd524d;
 }
-.platform-ios .button-negative:active, .platform-ios .button-negative.active {
+.platform-ios .btn-negative:active, .platform-ios .btn-negative.active {
   border: 1px solid #cf2d28;
   background-color: #cf2d28;
 }
-.platform-ios .button-outlined {
+.platform-ios .btn-outlined {
   background-color: transparent;
 }
-.platform-ios .button-outlined.button-primary {
+.platform-ios .btn-outlined.btn-primary {
   color: #007aff;
 }
-.platform-ios .button-outlined.button-positive {
+.platform-ios .btn-outlined.btn-positive {
   color: #4cd964;
 }
-.platform-ios .button-outlined.button-negative {
+.platform-ios .btn-outlined.btn-negative {
   color: #dd524d;
 }
-.platform-ios .button-outlined.button-primary:active, .platform-ios .button-outlined.button-positive:active, .platform-ios .button-outlined.button-negative:active {
+.platform-ios .btn-outlined.btn-primary:active, .platform-ios .btn-outlined.btn-positive:active, .platform-ios .btn-outlined.btn-negative:active {
   color: #fff;
 }
-.platform-ios .button-link {
+.platform-ios .btn-link {
   color: #007aff;
   background-color: transparent;
   border: none;
 }
-.platform-ios .button-link:active, .platform-ios .button-link.active {
+.platform-ios .btn-link:active, .platform-ios .btn-link.active {
   color: #0062cc;
   background-color: transparent;
 }
-.platform-ios .bar-nav .button-link {
+.platform-ios .bar-nav .btn-link {
   color: #007aff;
 }
-.platform-ios .bar-nav .button-link:active {
+.platform-ios .bar-nav .btn-link:active {
   color: #007aff;
   opacity: .6;
 }
@@ -1275,83 +1268,83 @@ hr {
 .platform-android .input-row label + input {
   background-image: none;
 }
-.platform-android [class*="button"] {
+.platform-android .btn {
   border: 1px solid #565656;
   color: white;
   background-color: #111111;
   border-radius: 3px;
 }
-.platform-android [class*="button"]:active, .platform-android [class*="button"].active {
+.platform-android .btn:active, .platform-android .btn.active {
   color: #fff;
   background-color: white;
 }
-.platform-android [class*="bar-"] [class*="button"] {
+.platform-android [class*="bar-"] .btn {
   padding-top: 9px;
   padding-bottom: 9px;
 }
-.platform-android [class*="bar-"] .button-link {
+.platform-android [class*="bar-"] .btn-link {
   padding: 0;
   color: #33b5e5;
   line-height: 50px;
 }
-.platform-android [class*="bar-"] .button-link:active, .platform-android [class*="bar-"] .button-link.active {
+.platform-android [class*="bar-"] .btn-link:active, .platform-android [class*="bar-"] .btn-link.active {
   color: #1a9bcb;
 }
-.platform-android .button-primary {
+.platform-android .btn-primary {
   color: #fff;
   border: 1px solid #33b5e5;
   background-color: #33b5e5;
 }
-.platform-android .button-primary:active, .platform-android .button-primary.active {
+.platform-android .btn-primary:active, .platform-android .btn-primary.active {
   border: 1px solid #1a9bcb;
   background-color: #1a9bcb;
 }
-.platform-android .button-positive {
+.platform-android .btn-positive {
   color: #fff;
   border: 1px solid #81c700;
   background-color: #81c700;
 }
-.platform-android .button-positive:active, .platform-android .button-positive.active {
+.platform-android .btn-positive:active, .platform-android .btn-positive.active {
   border: 1px solid #609400;
   background-color: #609400;
 }
-.platform-android .button-negative {
+.platform-android .btn-negative {
   color: #fff;
   border: 1px solid #f20754;
   background-color: #f20754;
 }
-.platform-android .button-negative:active, .platform-android .button-negative.active {
+.platform-android .btn-negative:active, .platform-android .btn-negative.active {
   border: 1px solid #c00643;
   background-color: #c00643;
 }
-.platform-android .button-outlined {
+.platform-android .btn-outlined {
   background-color: transparent;
 }
-.platform-android .button-outlined.button-primary {
+.platform-android .btn-outlined.btn-primary {
   color: #33b5e5;
 }
-.platform-android .button-outlined.button-positive {
+.platform-android .btn-outlined.btn-positive {
   color: #81c700;
 }
-.platform-android .button-outlined.button-negative {
+.platform-android .btn-outlined.btn-negative {
   color: #f20754;
 }
-.platform-android .button-outlined.button-primary:active, .platform-android .button-outlined.button-positive:active, .platform-android .button-outlined.button-negative:active {
+.platform-android .btn-outlined.btn-primary:active, .platform-android .btn-outlined.btn-positive:active, .platform-android .btn-outlined.btn-negative:active {
   color: #fff;
 }
-.platform-android .button-link {
+.platform-android .btn-link {
   color: #33b5e5;
   background-color: transparent;
   border: none;
 }
-.platform-android .button-link:active, .platform-android .button-link.active {
+.platform-android .btn-link:active, .platform-android .btn-link.active {
   color: #1a9bcb;
   background-color: transparent;
 }
-.platform-android .bar-nav .button-link {
+.platform-android .bar-nav .btn-link {
   color: #33b5e5;
 }
-.platform-android .bar-nav .button-link:active {
+.platform-android .bar-nav .btn-link:active {
   color: #33b5e5;
   opacity: .6;
 }

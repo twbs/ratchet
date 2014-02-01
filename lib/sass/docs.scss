@@ -59,7 +59,7 @@ body {
 .docs-header-content {
   padding: 50px 10px;
 
-  .button {
+  .btn {
     display: block;
     padding: 15px 30px 16px;
     margin: 0 10px 10px;
@@ -77,7 +77,7 @@ body {
       background-color: transparent;
     }
   }
-  .button-primary {
+  .btn-primary {
     margin-bottom: 0;
     color: #fff;
     border-color: #00d1fe;
@@ -184,14 +184,6 @@ body {
     height: 20px;
     display: inline-block;
     vertical-align: top;
-  }
-  [class*="button"] { 
-    padding: 0;
-    border: 0;
-  }
-  // Remove after button class changes.
-  iframe {
-    background-color: transparent;
   }
   .twitter-follow-button {
     margin-top: 5px;
@@ -407,13 +399,13 @@ body {
 // Buttons
 #buttonsInDevice,
 #buttonsBadgesInDevice {
-  [class*="button"] {
+  .btn {
     margin-top: 10px;
     margin-right: 100px;
     margin-left: 10px;
   }
 }
-#blockButtonsInDevice .button-block {
+#blockButtonsInDevice .btn-block {
   margin: 10px;
 }
 
@@ -468,7 +460,7 @@ body {
 
 // Modals
 #modalsInDevice {
-  #iwindow > .button {
+  #iwindow > .btn {
     margin: 10px;
   }
   .card p {
@@ -533,11 +525,11 @@ hr {
     line-height: 60px;
   }
   .docs-header-content {
-    .button {
+    .btn {
       display: inline-block;
       margin: 0;
     }
-    .button-primary {
+    .btn-primary {
       margin-left: 10px;
     }
   }

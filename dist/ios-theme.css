@@ -136,7 +136,7 @@ textarea,
   background-image: none;
 }
 
-[class*="button"] {
+.btn {
   border: 1px solid #929292;
   color: #929292;
   background-color: rgba(247, 247, 247, 0.98);
@@ -147,71 +147,71 @@ textarea,
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
-[class*="button"]:active, [class*="button"].active {
+.btn:active, .btn.active {
   color: #fff;
   background-color: #929292;
 }
 
-.button-primary {
+.btn-primary {
   color: #fff;
   border: 1px solid #007aff;
   background-color: #007aff;
 }
-.button-primary:active, .button-primary.active {
+.btn-primary:active, .btn-primary.active {
   border: 1px solid #0062cc;
   background-color: #0062cc;
 }
 
-.button-positive {
+.btn-positive {
   color: #fff;
   border: 1px solid #4cd964;
   background-color: #4cd964;
 }
-.button-positive:active, .button-positive.active {
+.btn-positive:active, .btn-positive.active {
   border: 1px solid #2ac845;
   background-color: #2ac845;
 }
 
-.button-negative {
+.btn-negative {
   color: #fff;
   border: 1px solid #dd524d;
   background-color: #dd524d;
 }
-.button-negative:active, .button-negative.active {
+.btn-negative:active, .btn-negative.active {
   border: 1px solid #cf2d28;
   background-color: #cf2d28;
 }
 
-.button-outlined {
+.btn-outlined {
   background-color: transparent;
 }
-.button-outlined.button-primary {
+.btn-outlined.btn-primary {
   color: #007aff;
 }
-.button-outlined.button-positive {
+.btn-outlined.btn-positive {
   color: #4cd964;
 }
-.button-outlined.button-negative {
+.btn-outlined.btn-negative {
   color: #dd524d;
 }
-.button-outlined.button-primary:active, .button-outlined.button-positive:active, .button-outlined.button-negative:active {
+.btn-outlined.btn-primary:active, .btn-outlined.btn-positive:active, .btn-outlined.btn-negative:active {
   color: #fff;
 }
 
-.button-link {
+.btn-link {
   color: #007aff;
   background-color: transparent;
   border: none;
 }
-.button-link:active, .button-link.active {
+.btn-link:active, .btn-link.active {
   color: #0062cc;
   background-color: transparent;
 }
 
-.bar-nav .button-link {
+.bar-nav .btn-link {
   color: #007aff;
 }
-.bar-nav .button-link:active {
+.bar-nav .btn-link:active {
   color: #007aff;
   opacity: .6;
 }

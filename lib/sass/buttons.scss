@@ -2,7 +2,7 @@
 // Buttons
 // --------------------------------------------------
 
-[class*="button"] {
+.btn {
   position: relative;
   display: inline-block;
   padding: 5px 8px;
@@ -36,7 +36,7 @@
 // --------------------------------------------------
 
 // Primary button (Default color is blue)
-.button-primary {
+.btn-primary {
   color: #fff;
   border: 1px solid $primary-color;
   background-color: $primary-color;
@@ -49,7 +49,7 @@
 }
 
 // Positive button (Default color is green)
-.button-positive {
+.btn-positive {
   color: #fff;
   border: 1px solid $positive-color;
   background-color: $positive-color;
@@ -62,7 +62,7 @@
 }
 
 // Negative button (Default color is red)
-.button-negative {
+.btn-negative {
   color: #fff;
   border: 1px solid $negative-color;
   background-color: $negative-color;
@@ -75,28 +75,28 @@
 }
 
 // Outlined buttons 
-.button-outlined {
+.btn-outlined {
   background-color: transparent;
 
-  &.button-primary {
+  &.btn-primary {
     color: $primary-color;
   }
-  &.button-positive {
+  &.btn-positive {
     color: $positive-color;
   }
-  &.button-negative {
+  &.btn-negative {
     color: $negative-color;
   }
   // Active states
-  &.button-primary:active,
-  &.button-positive:active,
-  &.button-negative:active {
+  &.btn-primary:active,
+  &.btn-positive:active,
+  &.btn-negative:active {
     color: #fff;
   }
 }
 
 // Link button (Buttons that look like links)
-.button-link {
+.btn-link {
   padding-top: 6px;
   padding-bottom: 6px;
   color: $primary-color;
@@ -111,7 +111,7 @@
 }
 
 // Block level buttons (full width buttons)
-.button-block {
+.btn-block {
   display: block;
   padding: 15px 0;
   margin-bottom: 10px;
@@ -131,7 +131,7 @@ input[type="button"] {
 
 .bar-nav {
   // Generic style for all buttons in .bar-title
-  [class*="button"] {
+  .btn {
     position: relative;
     z-index: 10; // Position the buttons on top of .title
     padding: 6px 12px;
@@ -147,7 +147,7 @@ input[type="button"] {
   }
 
   // Link button (Buttons that look like links)
-  .button-link {
+  .btn-link {
     padding: 0;
     margin-top: 0;
     font-size: 16px;
@@ -168,7 +168,7 @@ input[type="button"] {
 // --------------------------------------------------
 
 // Add proper padding
-[class*="bar"] .button-block {
+[class*="bar"] .btn-block {
   padding: 7px 0;
   margin-top: 4px;
   margin-bottom: 5px;
@@ -181,16 +181,16 @@ input[type="button"] {
 
 // Positioning and giving darker border to look sharp against dark popover
 .popover {
-  .button-block {
+  .btn-block {
     margin-bottom: 5px;
   }
 
   // Remove extra margin on bottom of last button
-  .button-block:last-child {
+  .btn-block:last-child {
     margin-bottom: 0;
   }
   // Line the button text up with content's text
-  .bar-nav .button-link {
+  .bar-nav .btn-link {
     &.pull-left {
       margin-left: 5px;
     }

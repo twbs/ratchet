@@ -54,49 +54,49 @@ $negative-color: #e71e1e;
 // Buttons
 // --------------------------------------------------
 
-[class*="button"] {
+.btn {
   color: $default-color;
   border-color: $default-color;
 
   &:active,
   &.active,
-  &.button-filled {
+  &.btn-filled {
     background-color: $default-color;
   }
 }
 
 // Primary button (Default color is blue)
-.button-primary {
+.btn-primary {
   color: $primary-color;
   border-color: $primary-color;
 
   &:active,
   &.active,
-  &.button-filled {
+  &.btn-filled {
     background-color: $primary-color;
   }
 }
 
 // Positive button (Default color is green)
-.button-positive {
+.btn-positive {
   color: $positive-color;
   border-color: $positive-color;
 
   &:active,
   &.active,
-  &.button-filled {
+  &.btn-filled {
     background-color: $positive-color;
   }
 }
 
 // Negative button (Default color is red)
-.button-negative {
+.btn-negative {
   color: $negative-color;
   border-color: $negative-color;
 
   &:active,
   &.active,
-  &.button-filled {
+  &.btn-filled {
     background-color: $negative-color;
   }
 }
@@ -104,31 +104,20 @@ $negative-color: #e71e1e;
 .bar-title {
 
   // Generic style for all buttons in .bar-title
-  [class*="button"] {
+  .btn {
     color: #fff;
   }
 
   // Override standard button active states
-  .button:active,
-  .button.active,
-  .button-prev:active,
-  .button-prev.active,
-  .button-next:active,
-  .button-next.active,
-  .button-primary:active,
-  .button-primary.active {
+  .btn:active,
+  .btn.active,
+  .btn-prev:active,
+  .btn-prev.active,
+  .btn-next:active,
+  .btn-next.active,
+  .btn-primary:active,
+  .btn-primary.active {
     color: #fff;
-  }
-
-
-  // Directional buttons in nav bars
-  // --------------------------------------------------
-
-  .button-prev:before,
-  .button-prev:after,
-  .button-next:before,
-  .button-next:after {
-    background-color: #fff;
   }
 }
 

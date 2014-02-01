@@ -56,7 +56,7 @@
 // --------------------------------------------------
 
 // Generic styles for all badges within default buttons
-[class*="button"] [class*="badge"] {
+.btn [class*="badge"] {
   font-size: 12px;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -65,26 +65,21 @@
 }
 
 // Styles for filled badges within filled buttons
-[class*="button"] .badge-inverted,
-[class*="button"]:active .badge-inverted {
+.btn .badge-inverted,
+.btn:active .badge-inverted {
   background-color: transparent;
 }
-.button-primary:active .badge-inverted,
-.button-positive:active .badge-inverted,
-.button-negative:active .badge-inverted {
+.btn-primary:active .badge-inverted,
+.btn-positive:active .badge-inverted,
+.btn-negative:active .badge-inverted {
   color: #fff;
 }
 
 // Position badges within block level buttons
 // Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
 // stays at true center of button
-.button-block [class*="badge"] {
+.btn-block [class*="badge"] {
   position: absolute;
   right: 0;
   margin-right: 10px;
 }
-
-// Badges in table-views
-// --------------------------------------------------
-
-

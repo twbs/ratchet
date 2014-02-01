@@ -11,6 +11,6 @@
   padding: 10px 0;
 }
 
-.form-wrapper [class*="button"] {
+.form-wrapper .btn {
   margin: 0 10px;
 }

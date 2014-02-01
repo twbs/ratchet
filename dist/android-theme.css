@@ -122,90 +122,90 @@ textarea,
   background-image: none;
 }
 
-[class*="button"] {
+.btn {
   border: 1px solid #565656;
   color: white;
   background-color: #111111;
   border-radius: 3px;
 }
-[class*="button"]:active, [class*="button"].active {
+.btn:active, .btn.active {
   color: #fff;
   background-color: white;
 }
 
-[class*="bar-"] [class*="button"] {
+[class*="bar-"] .btn {
   padding-top: 9px;
   padding-bottom: 9px;
 }
-[class*="bar-"] .button-link {
+[class*="bar-"] .btn-link {
   padding: 0;
   color: #33b5e5;
   line-height: 50px;
 }
-[class*="bar-"] .button-link:active, [class*="bar-"] .button-link.active {
+[class*="bar-"] .btn-link:active, [class*="bar-"] .btn-link.active {
   color: #1a9bcb;
 }
 
-.button-primary {
+.btn-primary {
   color: #fff;
   border: 1px solid #33b5e5;
   background-color: #33b5e5;
 }
-.button-primary:active, .button-primary.active {
+.btn-primary:active, .btn-primary.active {
   border: 1px solid #1a9bcb;
   background-color: #1a9bcb;
 }
 
-.button-positive {
+.btn-positive {
   color: #fff;
   border: 1px solid #81c700;
   background-color: #81c700;
 }
-.button-positive:active, .button-positive.active {
+.btn-positive:active, .btn-positive.active {
   border: 1px solid #609400;
   background-color: #609400;
 }
 
-.button-negative {
+.btn-negative {
   color: #fff;
   border: 1px solid #f20754;
   background-color: #f20754;
 }
-.button-negative:active, .button-negative.active {
+.btn-negative:active, .btn-negative.active {
   border: 1px solid #c00643;
   background-color: #c00643;
 }
 
-.button-outlined {
+.btn-outlined {
   background-color: transparent;
 }
-.button-outlined.button-primary {
+.btn-outlined.btn-primary {
   color: #33b5e5;
 }
-.button-outlined.button-positive {
+.btn-outlined.btn-positive {
   color: #81c700;
 }
-.button-outlined.button-negative {
+.btn-outlined.btn-negative {
   color: #f20754;
 }
-.button-outlined.button-primary:active, .button-outlined.button-positive:active, .button-outlined.button-negative:active {
+.btn-outlined.btn-primary:active, .btn-outlined.btn-positive:active, .btn-outlined.btn-negative:active {
   color: #fff;
 }
 
-.button-link {
+.btn-link {
   color: #33b5e5;
   background-color: transparent;
   border: none;
 }
-.button-link:active, .button-link.active {
+.btn-link:active, .btn-link.active {
   color: #1a9bcb;
   background-color: transparent;
 }
 
-.bar-nav .button-link {
+.bar-nav .btn-link {
   color: #33b5e5;
 }
-.bar-nav .button-link:active {
+.bar-nav .btn-link:active {
   color: #33b5e5;
   opacity: .6;
 }
