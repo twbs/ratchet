@@ -377,8 +377,8 @@ strong {
   height: 24px;
   margin-top: -2px;
 }
-.tab-item.selected .tab-label,
-.tab-item.selected .icon, .tab-item:active .tab-label,
+.tab-item.active .tab-label,
+.tab-item.active .icon, .tab-item:active .tab-label,
 .tab-item:active .icon {
   color: #428bca;
 }

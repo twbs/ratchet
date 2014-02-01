@@ -113,7 +113,7 @@
   }
 
   // Active states for the tab bar
-  &.selected,
+  &.active,
   &:active {
     .tab-label,
     .icon {
