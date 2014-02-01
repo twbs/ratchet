@@ -169,9 +169,9 @@ input[type="button"] {
 
 // Add proper padding
 .bar .btn-block {
-  padding: 7px 0;
+  padding: 7px 0 6px;
   margin-top: 4px;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   font-size: 16px; // Scale down font size to fit in bar.
 }
 
