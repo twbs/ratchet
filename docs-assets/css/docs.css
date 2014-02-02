@@ -828,6 +828,13 @@ hr {
 .platform-ios .tab-item:active .icon {
   color: #007aff;
 }
+.platform-ios .popover:before {
+  border-bottom: 15px solid rgba(247, 247, 247, 0.98);
+}
+.platform-ios .popover .bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .platform-ios .popover .bar-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }

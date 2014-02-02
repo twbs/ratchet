@@ -81,9 +81,16 @@ a {
 
 // Nav bar in popovers
 // --------------------------------------------------
-
-.popover .bar-nav {
-  border-bottom: 1px solid rgba(0,0,0,.15);
+.popover {
+  &:before {
+    border-bottom: 15px solid $chrome-color;
+  }
+  .bar {
+    @include box-shadow(none);
+  }
+  .bar-nav {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+  }
 }
 
 
