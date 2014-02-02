@@ -939,6 +939,7 @@ input[type="button"] {
   z-index: 20;
   display: none;
   width: 280px;
+  padding-top: 44px;
   margin-left: -140px;
   background-color: white;
   border-radius: 6px;
