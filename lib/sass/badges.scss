@@ -83,3 +83,17 @@
   right: 0;
   margin-right: 10px;
 }
+
+// Ratchicons in table-views
+.table-view {
+  .badge {
+    margin-top: 2px;
+
+    &.pull-left {
+      margin-right: 5px;
+    }
+    &.pull-right {
+      margin-left: 5px;
+    }
+  }
+}

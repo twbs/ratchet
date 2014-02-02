@@ -198,3 +198,11 @@ input[type="button"] {
     }
   }
 }
+
+// Buttons in table-views
+// --------------------------------------------------
+.table-view {
+  .btn {
+    margin-top: -1px; // Center the btn inside the cell
+  }
+}

@@ -58,3 +58,12 @@
     display: none;
   }
 }
+
+
+// Toggles in table-views
+// --------------------------------------------------
+.table-view {
+  .toggle {
+    margin-top: -4px; // Center the toggle inside the cell
+  }
+}

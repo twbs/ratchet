@@ -423,7 +423,7 @@ p {
 }
 .table-view .table-view-cell {
   position: relative;
-  padding: 11px 60px 12px 15px;
+  padding: 11px 15px 12px 15px;
   border-bottom: 1px solid #dddddd;
 }
 .table-view .table-view-cell:last-child {
@@ -433,7 +433,7 @@ p {
   position: relative;
   display: block;
   padding: inherit;
-  margin: -11px -60px -12px -15px;
+  margin: -11px -15px -12px -15px;
   color: inherit;
 }
 .table-view .table-view-cell > a:not(.btn):active {
@@ -460,30 +460,6 @@ p {
 }
 .table-view .table-view-divider:last-child {
   border-radius: 0 0 6px 6px;
-}
-.table-view .chevron,
-.table-view .btn,
-.table-view .badge,
-.table-view .toggle {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-}
-.table-view .chevron {
-  margin-top: -10px;
-}
-.table-view .badge {
-  margin-top: -9px;
-}
-.table-view .chevron + .badge {
-  right: 30px;
-}
-.table-view .btn {
-  left: auto;
-  margin-top: -12px;
-}
-.table-view .toggle {
-  margin-top: -15px;
 }
 
 .table-view-indented .table-view-cell {
@@ -771,27 +747,8 @@ input[type="button"] {
   margin-right: 5px;
 }
 
-.chevron {
-  display: block;
-  height: 20px;
-}
-.chevron:before, .chevron:after {
-  position: relative;
-  display: block;
-  width: 10px;
-  height: 3px;
-  background-color: #c7c7cc;
-  content: '';
-}
-.chevron:before {
-  top: 6px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.chevron:after {
-  top: 8px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+.table-view .btn {
+  margin-top: -1px;
 }
 
 .badge {
@@ -855,6 +812,16 @@ input[type="button"] {
   position: absolute;
   right: 0;
   margin-right: 10px;
+}
+
+.table-view .badge {
+  margin-top: 2px;
+}
+.table-view .badge.pull-left {
+  margin-right: 5px;
+}
+.table-view .badge.pull-right {
+  margin-left: 5px;
 }
 
 .segmented-control {
@@ -1115,6 +1082,10 @@ input[type="button"] {
   display: none;
 }
 
+.table-view .toggle {
+  margin-top: -4px;
+}
+
 .content.fade {
   left: 0;
   opacity: 0;
@@ -1241,4 +1212,18 @@ input[type="button"] {
 .bar .icon {
   font-size: 24px;
   margin-top: 11px;
+}
+
+.table-view .icon {
+  margin-top: 3px;
+  font-size: inherit;
+}
+.table-view .icon.icon-left, .table-view .icon.icon-right {
+  color: #bbb;
+}
+.table-view .icon.pull-left {
+  margin-right: 5px;
+}
+.table-view .icon.pull-right {
+  margin-left: 5px;
 }

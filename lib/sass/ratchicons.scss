@@ -55,3 +55,22 @@
     margin-top: 11px;
   }
 }
+
+// Ratchicons in table-views
+.table-view {
+  .icon {
+    margin-top: 3px;
+    font-size: inherit;
+
+    &.icon-left,
+    &.icon-right {
+      color: #bbb;
+    }
+    &.pull-left {
+      margin-right: 5px;
+    }
+    &.pull-right {
+      margin-left: 5px;
+    }
+  }
+}
