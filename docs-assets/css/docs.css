@@ -274,6 +274,7 @@ body {
 .docs-mini-footer {
   padding-top: 40px;
   padding-bottom: 40px;
+  margin: 0;
   color: #777;
 }
 
