@@ -130,8 +130,4 @@
   border-bottom: $border-default;
   border-radius: 12px 12px 0 0;
   @include box-shadow(none);
-
-  .title + .btn:last-child {
-    right: 15px;
-  }
 }

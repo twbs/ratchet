@@ -129,21 +129,18 @@ input[type="button"] {
 // Buttons in nav bars
 // --------------------------------------------------
 
-.bar-nav {
-  // Generic style for all buttons in .bar-title
-  .btn {
-    position: relative;
-    z-index: 10; // Position the buttons on top of .title
-    padding: 6px 12px;
-    margin-top: 8px;
-    font-weight: $font-weight-light;
+.bar-nav .btn {
+  position: relative;
+  z-index: 10; // Position the buttons on top of .title
+  padding: 6px 12px;
+  margin-top: 8px;
+  font-weight: $font-weight-light;
 
-    &.pull-right { 
-      margin-left: $bar-side-spacing; 
-    }
-    &.pull-left { 
-      margin-right: $bar-side-spacing; 
-    }
+  &.pull-right { 
+    margin-left: $bar-side-spacing; 
+  }
+  &.pull-left { 
+    margin-right: $bar-side-spacing;
   }
 
   // Link button (Buttons that look like links)
@@ -179,30 +176,25 @@ input[type="button"] {
 // Block level buttons in popovers
 // --------------------------------------------------
 
-.popover {
-  .btn-block {
-    margin-bottom: 5px;
-  }
-
+.popover .btn-block {
+  margin-bottom: 5px;
   // Remove extra margin on bottom of last button
-  .btn-block:last-child {
+  &:last-child {
     margin-bottom: 0;
   }
-  // Line the button text up with content's text
-  .bar-nav .btn-link {
-    &.pull-left {
-      margin-left: 5px;
-    }
-    &.pull-right {
-      margin-right: 5px;
-    }
+}
+// Line the button text up with content's text
+.bar-nav .btn-link {
+  &.pull-left {
+    margin-left: 5px;
+  }
+  &.pull-right {
+    margin-right: 5px;
   }
 }
 
 // Buttons in table-views
 // --------------------------------------------------
-.table-view {
-  .btn {
-    margin-top: -1px; // Center the btn inside the cell
-  }
+.table-view .btn {
+  margin-top: -1px; // Center the btn inside the cell
 }

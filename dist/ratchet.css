@@ -397,9 +397,6 @@ p {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.popover .bar-nav .title + .btn:last-child {
-  right: 15px;
-}
 
 .card {
   width: auto;
@@ -714,7 +711,7 @@ input[type="button"] {
 .bar-nav .btn.pull-left {
   margin-right: 10px;
 }
-.bar-nav .btn-link {
+.bar-nav .btn .btn-link {
   padding: 0;
   margin-top: 0;
   font-size: 16px;
@@ -723,7 +720,7 @@ input[type="button"] {
   background-color: transparent;
   border: none;
 }
-.bar-nav .btn-link:active, .bar-nav .btn-link.active {
+.bar-nav .btn .btn-link:active, .bar-nav .btn .btn-link.active {
   color: #3071a9;
 }
 
@@ -740,10 +737,11 @@ input[type="button"] {
 .popover .btn-block:last-child {
   margin-bottom: 0;
 }
-.popover .bar-nav .btn-link.pull-left {
+
+.bar-nav .btn-link.pull-left {
   margin-left: 5px;
 }
-.popover .bar-nav .btn-link.pull-right {
+.bar-nav .btn-link.pull-right {
   margin-right: 5px;
 }
 
