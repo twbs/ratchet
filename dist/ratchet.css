@@ -711,7 +711,7 @@ input[type="button"] {
 .bar-nav .btn.pull-left {
   margin-right: 10px;
 }
-.bar-nav .btn .btn-link {
+.bar-nav .btn.btn-link {
   padding: 0;
   margin-top: 0;
   font-size: 16px;
@@ -720,7 +720,7 @@ input[type="button"] {
   background-color: transparent;
   border: none;
 }
-.bar-nav .btn .btn-link:active, .bar-nav .btn .btn-link.active {
+.bar-nav .btn.btn-link:active, .bar-nav .btn.btn-link.active {
   color: #3071a9;
 }
 

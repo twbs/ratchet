@@ -144,7 +144,7 @@ input[type="button"] {
   }
 
   // Link button (Buttons that look like links)
-  .btn-link {
+  &.btn-link {
     padding: 0;
     margin-top: 0;
     font-size: 16px;
