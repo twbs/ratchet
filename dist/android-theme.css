@@ -16,19 +16,19 @@ body {
 }
 
 .content {
-  background: #111111;
-  background: -moz-linear-gradient(top, #111111 0%, #2b2b2b 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #111111), color-stop(100%, #2b2b2b));
-  background: -webkit-linear-gradient(top, #111111 0%, #2b2b2b 100%);
-  background: -o-linear-gradient(top, #111111 0%, #2b2b2b 100%);
-  background: -ms-linear-gradient(top, #111111 0%, #2b2b2b 100%);
-  background: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);
+  background: #dddddd;
+  background: -moz-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #f7f7f7));
+  background: -webkit-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
+  background: -o-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
+  background: -ms-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
+  background: linear-gradient(to bottom, #dddddd 0%, #f7f7f7 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-form', endColorstr='$color-to',GradientType=0 );
 }
 
 .bar {
   height: 50px;
-  background-color: #111111;
+  background-color: #dddddd;
   border-bottom: 1px solid #565656;
 }
 .bar.bar-header-secondary {
@@ -45,7 +45,7 @@ body {
   position: static;
   padding-left: 10px;
   line-height: 50px;
-  color: white;
+  color: #9a9a9a;
   text-align: left;
 }
 
@@ -131,13 +131,13 @@ textarea,
 
 .btn {
   border: 1px solid #565656;
-  color: white;
-  background-color: #111111;
+  color: #9a9a9a;
+  background-color: #dddddd;
   border-radius: 3px;
 }
 .btn:active, .btn.active {
   color: #fff;
-  background-color: white;
+  background-color: #9a9a9a;
 }
 
 .bar .btn {
@@ -165,22 +165,22 @@ textarea,
 
 .btn-positive {
   color: #fff;
-  border: 1px solid #81c700;
-  background-color: #81c700;
+  border: 1px solid #99cc00;
+  background-color: #99cc00;
 }
 .btn-positive:active, .btn-positive.active {
-  border: 1px solid #609400;
-  background-color: #609400;
+  border: 1px solid #739900;
+  background-color: #739900;
 }
 
 .btn-negative {
   color: #fff;
-  border: 1px solid #f20754;
-  background-color: #f20754;
+  border: 1px solid #ff4444;
+  background-color: #ff4444;
 }
 .btn-negative:active, .btn-negative.active {
-  border: 1px solid #c00643;
-  background-color: #c00643;
+  border: 1px solid #ff1111;
+  background-color: #ff1111;
 }
 
 .btn-outlined {
@@ -190,10 +190,10 @@ textarea,
   color: #33b5e5;
 }
 .btn-outlined.btn-positive {
-  color: #81c700;
+  color: #99cc00;
 }
 .btn-outlined.btn-negative {
-  color: #f20754;
+  color: #ff4444;
 }
 .btn-outlined.btn-primary:active, .btn-outlined.btn-positive:active, .btn-outlined.btn-negative:active {
   color: #fff;
@@ -218,7 +218,7 @@ textarea,
 }
 
 .badge.badge-inverted {
-  color: white;
+  color: #9a9a9a;
 }
 
 .badge-primary {
@@ -231,18 +231,18 @@ textarea,
 
 .badge-positive {
   color: #fff;
-  background-color: #81c700;
+  background-color: #99cc00;
 }
 .badge-positive.badge-inverted {
-  color: #81c700;
+  color: #99cc00;
 }
 
 .badge-negative {
   color: #fff;
-  background-color: #f20754;
+  background-color: #ff4444;
 }
 .badge-negative.badge-inverted {
-  color: #f20754;
+  color: #ff4444;
 }
 
 .segmented-control {
@@ -266,7 +266,7 @@ textarea,
   border-radius: 12px;
 }
 .popover:after {
-  border-bottom: 15px solid #111111;
+  border-bottom: 15px solid #dddddd;
 }
 
 .toggle .toggle-handle {
@@ -276,9 +276,9 @@ textarea,
   width: 35px;
 }
 .toggle.active {
-  border: 2px solid #81c700;
-  background-color: #81c700;
+  border: 2px solid #99cc00;
+  background-color: #99cc00;
 }
 .toggle.active .toggle-handle {
-  border-color: #81c700;
+  border-color: #99cc00;
 }
