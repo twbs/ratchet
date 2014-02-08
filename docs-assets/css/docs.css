@@ -863,7 +863,7 @@ hr {
 .platform-ios select,
 .platform-ios textarea,
 .platform-ios input[type="text"],
-.platform-ios input[type=search],
+.platform-ios input[type="search"],
 .platform-ios input[type="password"],
 .platform-ios input[type="datetime"],
 .platform-ios input[type="datetime-local"],
@@ -881,14 +881,14 @@ hr {
   padding: 10px 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-.platform-ios input[type=search] {
+.platform-ios input[type="search"] {
   height: 34px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1);
   border: 0;
   border-radius: 6px;
 }
-.platform-ios input[type=search]:focus {
+.platform-ios input[type="search"]:focus {
   text-align: left;
 }
 .platform-ios select,
@@ -1265,7 +1265,7 @@ hr {
 .platform-android select,
 .platform-android textarea,
 .platform-android input[type="text"],
-.platform-android input[type=search],
+.platform-android input[type="search"],
 .platform-android input[type="password"],
 .platform-android input[type="datetime"],
 .platform-android input[type="datetime-local"],
@@ -1282,16 +1282,10 @@ hr {
   height: 40px;
   padding: 10px 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-.platform-android input[type=search] {
-  height: 34px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 0;
-  border-radius: 6px;
-}
-.platform-android input[type=search]:focus {
-  text-align: left;
+.platform-android input[type="search"] {
+  border-radius: 2px;
 }
 .platform-android select,
 .platform-android textarea,
@@ -1305,6 +1299,7 @@ hr {
 .platform-android .input-group input {
   border: 0;
   border-bottom: 1px solid #d9d9d9;
+  box-shadow: none;
 }
 .platform-android .input-group input:last-child {
   background-image: none;

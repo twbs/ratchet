@@ -146,7 +146,7 @@ body {
 select,
 textarea,
 input[type="text"],
-input[type=search],
+input[type="search"],
 input[type="password"],
 input[type="datetime"],
 input[type="datetime-local"],
@@ -161,20 +161,15 @@ input[type="tel"],
 input[type="color"],
 .input-group {
   height: 40px;
-  padding: 10px 15px;  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
 
-// Rounded search input
-input[type=search] {
-  height: 34px;
-  text-align: center;
-  background-color: rgba(0,0,0,.1);
-  border: 0;
-  border-radius: 6px;
+input[type="search"] {
+  border-radius: $border-radius;
 }
-input[type=search]:focus {
-  text-align: left;
-}
+
 select,
 textarea,
 .input-group {
@@ -190,6 +185,7 @@ textarea,
 .input-group input {
   border: 0;
   border-bottom: 1px solid #d9d9d9;
+  box-shadow: none;
 }
 // Remove bottom border on last input to avoid double bottom border
 .input-group input:last-child {

@@ -526,7 +526,7 @@ select {
 select,
 textarea,
 input[type="text"],
-input[type=search],
+input[type="search"],
 input[type="password"],
 input[type="datetime"],
 input[type="datetime-local"],
@@ -552,14 +552,14 @@ input[type="color"],
   -webkit-appearance: none;
 }
 
-input[type=search] {
+input[type="search"] {
   padding: 0 10px;
   font-size: 16px;
   border-radius: 20px;
   box-sizing: border-box;
 }
 
-input[type=search]:focus {
+input[type="search"]:focus {
   text-align: left;
 }
 
