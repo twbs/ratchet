@@ -335,16 +335,42 @@ textarea,
   display: none;
 }
 
-.toggle .toggle-handle {
-  border: 1px solid #b1b1b1;
+.toggle {
+  width: 104px;
+  height: 28px;
+  border: 2px solid #d7d7d7;
+  border-radius: 0;
+  background-color: #d7d7d7;
 }
-.toggle:active .toggle-handle {
-  width: 35px;
+.toggle .toggle-handle {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 24px;
+  border: 0;
+  border-radius: 0;
+  background-color: #bebebe;
+}
+.toggle:before {
+  top: 1px;
+  right: auto;
+  left: 11px;
+  z-index: 3;
+  color: #fff;
 }
 .toggle.active {
-  border: 2px solid #99cc00;
-  background-color: #99cc00;
+  background-color: #d7d7d7;
 }
 .toggle.active .toggle-handle {
-  border-color: #99cc00;
+  margin-right: 2px;
+  background-color: #33b5e5;
+  border-color: #33b5e5;
+  -webkit-transform: translate3d(50px, 0, 0);
+  transform: translate3d(50px, 0, 0);
+}
+.toggle.active:before {
+  left: auto;
+  right: 15px;
+  color: #fff;
+  content: "On";
 }

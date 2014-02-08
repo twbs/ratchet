@@ -479,20 +479,45 @@ textarea,
 // Toggles styles
 // --------------------------------------------------
 .toggle {
+  width: 104px;
+  height: 28px;
+  border: 2px solid #d7d7d7;
+  border-radius: 0;
+  background-color: #d7d7d7;
+  
   // Sliding handle
   .toggle-handle {
-    border: $border-default;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 24px;
+    border: 0;
+    border-radius: 0;
+    background-color: #bebebe;
   }
-  &:active .toggle-handle {
-    width: 35px;
+  &:before {
+    top: 1px;
+    right: auto;
+    left: 11px;
+    z-index: 3;
+    color: #fff;
   }
+
   // Active state for toggle
   &.active {
-    border: 2px solid $positive-color;
-    background-color: $positive-color;
+    background-color: #d7d7d7;
 
     .toggle-handle {
-      border-color: $positive-color;
+      margin-right: 2px;
+      background-color: $primary-color;
+      border-color: $primary-color;
+      @include transform(translate3d(50px,0,0)); 
+    }
+    &:before {
+      left: auto;
+      right: 15px;
+      color: #fff;
+      content: "On";
     }
   }
 }
