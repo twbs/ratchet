@@ -522,7 +522,8 @@ textarea,
     display: none;
   }
   &:active .toggle-handle {
-    width: 35px;
+    padding-right: 4px;
+    padding-left: 4px;
   }
   // Active state for toggle
   &.active {
