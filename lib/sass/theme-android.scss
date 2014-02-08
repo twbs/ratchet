@@ -6,12 +6,14 @@
 //
 // --------------------------------------------------
 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
+
 
 // Variables
 // --------------------------------------------------
 
 // Type (Change to Roboto)
-$font-family-default: "Helvetica Neue", Helvetica, sans-serif;
+$font-family-default: 'Roboto', sans-serif;
 $font-size-default: 17px;
 $font-weight: 500;
 $font-weight-light: 400;
@@ -38,6 +40,12 @@ $border-radius: 0;
 
 // Base
 // --------------------------------------------------
+
+body {
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+}
 
 .content {
   @include gradient($chrome-color,lighten($chrome-color, 10%));
