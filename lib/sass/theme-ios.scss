@@ -77,19 +77,9 @@ a {
   }
 }
 
-
-// Nav bar in popovers
-// --------------------------------------------------
-.popover {
-  &:before {
-    border-bottom: 15px solid $chrome-color;
-  }
-  .bar {
-    @include box-shadow(none);
-  }
-  .bar-nav {
-    border-bottom: 1px solid rgba(0,0,0,.15);
-  }
+// `bar-nav` in popovers
+.popover .bar-nav {
+  border-bottom: 1px solid rgba(0,0,0,.15);
 }
 
 
@@ -487,8 +477,14 @@ textarea,
   border-radius: 12px;
   @include transition(-webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
 
-  &:after {
+  &:before {
     border-bottom: 15px solid $chrome-color;
+  }
+  .bar {
+    @include box-shadow(none);
+  }
+  .bar-nav {
+    border-bottom: 1px solid rgba(0,0,0,.15);
   }
 }
 

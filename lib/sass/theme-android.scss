@@ -94,13 +94,6 @@ body {
 }
 
 
-// Nav bar in popovers
-// --------------------------------------------------
-
-.popover .bar-nav {
-  border-bottom: $border-default;
-}
-
 //
 // Cards
 // --------------------------------------------------
@@ -108,6 +101,16 @@ body {
 .card {
   border-color: #d9d9d9;
   border-radius: $border-radius;
+}
+
+// `bar-nav` in popovers
+.popover {
+  .bar {
+    border-radius: 0;
+  }
+  .bar ~ .table-view {
+    padding-top: $bar-base-height;
+  }
 }
 
 // Table views
@@ -460,10 +463,14 @@ textarea,
 // --------------------------------------------------
 
 .popover {
-  border-radius: 12px;
+  top: 100px;
+  border: 1px solid #9b9b9b;
+  border-radius: 0;
+  box-shadow: 0 0 3px rgba(0,0,0,.2);
+  @include transition(-webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
 
-  &:after {
-    border-bottom: 15px solid $chrome-color;
+  &:before {
+    display: none;
   }
 }
 

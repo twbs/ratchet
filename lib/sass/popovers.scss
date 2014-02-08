@@ -9,7 +9,6 @@
   z-index: 20;
   display: none;
   width: 280px;
-  padding-top: $bar-base-height;
   margin-left: -140px;
   background-color: $chrome-color;
   border-radius: $border-radius;
@@ -37,6 +36,10 @@
   &.visible {
     opacity: 1;
     @include transform(translate3d(0, 0, 0));
+  }
+
+  .bar ~ .table-view {
+    padding-top: $bar-base-height;
   }
 }
 

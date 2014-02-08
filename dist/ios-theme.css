@@ -44,13 +44,6 @@ a {
   color: #007aff;
 }
 
-.popover:before {
-  border-bottom: 15px solid rgba(247, 247, 247, 0.98);
-}
-.popover .bar {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
 .popover .bar-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -359,8 +352,15 @@ textarea,
   -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-.popover:after {
+.popover:before {
   border-bottom: 15px solid rgba(247, 247, 247, 0.98);
+}
+.popover .bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.popover .bar-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .modal {

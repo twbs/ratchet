@@ -963,7 +963,6 @@ input[type="button"] {
   z-index: 20;
   display: none;
   width: 280px;
-  padding-top: 44px;
   margin-left: -140px;
   background-color: white;
   border-radius: 6px;
@@ -988,6 +987,9 @@ input[type="button"] {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+.popover .bar ~ .table-view {
+  padding-top: 44px;
 }
 
 .backdrop {

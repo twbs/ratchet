@@ -56,13 +56,16 @@ body {
   text-align: left;
 }
 
-.popover .bar-nav {
-  border-bottom: 1px solid #b1b1b1;
-}
-
 .card {
   border-color: #d9d9d9;
   border-radius: 2px;
+}
+
+.popover .bar {
+  border-radius: 0;
+}
+.popover .bar ~ .table-view {
+  padding-top: 50px;
 }
 
 .table-view .table-view-cell {
@@ -321,10 +324,15 @@ textarea,
 }
 
 .popover {
-  border-radius: 12px;
+  top: 100px;
+  border: 1px solid #9b9b9b;
+  border-radius: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-.popover:after {
-  border-bottom: 15px solid #dddddd;
+.popover:before {
+  display: none;
 }
 
 .toggle .toggle-handle {

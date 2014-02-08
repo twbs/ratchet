@@ -828,13 +828,6 @@ hr {
 .platform-ios .tab-item:active .icon {
   color: #007aff;
 }
-.platform-ios .popover:before {
-  border-bottom: 15px solid rgba(247, 247, 247, 0.98);
-}
-.platform-ios .popover .bar {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
 .platform-ios .popover .bar-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -1114,8 +1107,15 @@ hr {
   -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-.platform-ios .popover:after {
+.platform-ios .popover:before {
   border-bottom: 15px solid rgba(247, 247, 247, 0.98);
+}
+.platform-ios .popover .bar {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.platform-ios .popover .bar-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .platform-ios .modal {
   -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
@@ -1237,12 +1237,15 @@ hr {
   line-height: 50px;
   text-align: left;
 }
-.platform-android .popover .bar-nav {
-  border-bottom: 1px solid #b1b1b1;
-}
 .platform-android .card {
   border-color: #d9d9d9;
   border-radius: 2px;
+}
+.platform-android .popover .bar {
+  border-radius: 0;
+}
+.platform-android .popover .bar ~ .table-view {
+  padding-top: 50px;
 }
 .platform-android .table-view .table-view-cell {
   border-bottom: 1px solid #d9d9d9;
@@ -1476,10 +1479,15 @@ hr {
   background-color: #33b5e5;
 }
 .platform-android .popover {
-  border-radius: 12px;
+  top: 100px;
+  border: 1px solid #9b9b9b;
+  border-radius: 0;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-.platform-android .popover:after {
-  border-bottom: 15px solid #dddddd;
+.platform-android .popover:before {
+  display: none;
 }
 .platform-android .toggle .toggle-handle {
   border: 1px solid #b1b1b1;
