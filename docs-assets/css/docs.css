@@ -1200,51 +1200,64 @@ hr {
 }
 .platform-android body {
   font-family: "Roboto", sans-serif;
-  font-size: 17px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #222222;
 }
 .platform-android .content {
-  background: #dddddd;
-  background: -moz-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #f7f7f7));
-  background: -webkit-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
-  background: -o-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
-  background: -ms-linear-gradient(top, #dddddd 0%, #f7f7f7 100%);
-  background: linear-gradient(to bottom, #dddddd 0%, #f7f7f7 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-form', endColorstr='$color-to',GradientType=0 );
+  background-color: #f2f2f2;
+}
+.platform-android .bar-nav ~ .content {
+  padding-top: 50px;
+}
+.platform-android .bar-tab ~ .content {
+  padding-bottom: 50px;
+}
+.platform-android .bar-header-secondary ~ .content {
+  padding-top: 100px;
 }
 .platform-android .bar {
   height: 50px;
   background-color: #dddddd;
-  border-bottom: 1px solid #565656;
+  border-bottom: 1px solid #b1b1b1;
+  box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, 0.07);
 }
 .platform-android .bar.bar-header-secondary {
   top: 51px;
 }
 .platform-android .bar-tab {
-  height: 70px;
-  border-top: 1px solid #565656;
+  height: 50px;
+  border-top: 1px solid #b1b1b1;
   border-bottom: 0;
+  box-shadow: inset 0 2px 0 #d2d2d2, 0 -3px 3px rgba(0, 0, 0, 0.07);
 }
 .platform-android .title {
   position: static;
   padding-left: 10px;
   line-height: 50px;
-  color: #9a9a9a;
   text-align: left;
 }
 .platform-android .popover .bar-nav {
-  border-bottom: 1px solid #565656;
+  border-bottom: 1px solid #b1b1b1;
+}
+.platform-android .card {
+  border-color: #d9d9d9;
+  border-radius: 2px;
 }
 .platform-android .table-view .table-view-cell {
-  border-bottom: 1px solid #565656;
+  border-bottom: 1px solid #d9d9d9;
 }
 .platform-android .table-view .table-view-cell:last-child {
   background-image: none;
 }
 .platform-android .table-view .table-view-divider {
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
   border-top: 0;
-  border-bottom: 0;
+  border-bottom: 2px solid #a9a9a9;
+  background-color: transparent;
 }
 .platform-android .popover .table-view {
   border-radius: 12px;
@@ -1287,29 +1300,34 @@ hr {
 }
 .platform-android .input-group {
   padding: 0;
+  border: 0;
 }
 .platform-android .input-group input {
   border: 0;
+  border-bottom: 1px solid #d9d9d9;
 }
 .platform-android .input-group input:last-child {
   background-image: none;
 }
 .platform-android .input-row {
-  border-bottom: 0;
+  border-bottom: 1px solid #d9d9d9;
 }
-.platform-android .input-row:last-child,
 .platform-android .input-row label + input {
   background-image: none;
+  border-bottom: 0;
 }
 .platform-android .btn {
-  border: 1px solid #565656;
-  color: #9a9a9a;
-  background-color: #dddddd;
-  border-radius: 3px;
+  color: #222222;
+  background-color: #cecece;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 .platform-android .btn:active, .platform-android .btn.active {
-  color: #fff;
-  background-color: #9a9a9a;
+  color: #222222;
+  border: 0;
+  background-color: #999999;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 .platform-android .bar .btn {
   padding-top: 9px;
@@ -1325,54 +1343,82 @@ hr {
 }
 .platform-android .btn-primary {
   color: #fff;
-  border: 1px solid #33b5e5;
+  border: 0;
   background-color: #33b5e5;
 }
 .platform-android .btn-primary:active, .platform-android .btn-primary.active {
-  border: 1px solid #1a9bcb;
+  color: #fff;
+  border: 0;
   background-color: #1a9bcb;
 }
 .platform-android .btn-positive {
   color: #fff;
-  border: 1px solid #99cc00;
+  border: 0;
   background-color: #99cc00;
 }
 .platform-android .btn-positive:active, .platform-android .btn-positive.active {
-  border: 1px solid #739900;
+  color: #fff;
+  border: 0;
   background-color: #739900;
 }
 .platform-android .btn-negative {
   color: #fff;
-  border: 1px solid #ff4444;
+  border: 0;
   background-color: #ff4444;
 }
 .platform-android .btn-negative:active, .platform-android .btn-negative.active {
-  border: 1px solid #ff1111;
+  color: #fff;
+  border: 0;
   background-color: #ff1111;
 }
 .platform-android .btn-outlined {
+  border: 1px solid #999999;
   background-color: transparent;
+  box-shadow: none;
 }
 .platform-android .btn-outlined.btn-primary {
+  border: 1px solid #33b5e5;
   color: #33b5e5;
 }
+.platform-android .btn-outlined.btn-primary:active {
+  border: 1px solid #33b5e5;
+  background-color: #33b5e5;
+}
 .platform-android .btn-outlined.btn-positive {
+  border: 1px solid #99cc00;
   color: #99cc00;
 }
+.platform-android .btn-outlined.btn-positive:active {
+  border: 1px solid #99cc00;
+  background-color: #99cc00;
+}
 .platform-android .btn-outlined.btn-negative {
+  border: 1px solid #ff4444;
   color: #ff4444;
+}
+.platform-android .btn-outlined.btn-negative:active {
+  border: 1px solid #ff4444;
+  background-color: #ff4444;
+}
+.platform-android .btn-outlined:active {
+  border: 1px solid #999999;
+  background-color: #999999;
+  box-shadow: none;
 }
 .platform-android .btn-outlined.btn-primary:active, .platform-android .btn-outlined.btn-positive:active, .platform-android .btn-outlined.btn-negative:active {
   color: #fff;
+  box-shadow: none;
 }
 .platform-android .btn-link {
   color: #33b5e5;
   background-color: transparent;
   border: none;
+  box-shadow: none;
 }
 .platform-android .btn-link:active, .platform-android .btn-link.active {
   color: #1a9bcb;
   background-color: transparent;
+  box-shadow: none;
 }
 .platform-android .bar-nav .btn-link {
   color: #33b5e5;
@@ -1382,7 +1428,8 @@ hr {
   opacity: .6;
 }
 .platform-android .badge.badge-inverted {
-  color: #9a9a9a;
+  color: #999999;
+  background-color: transparent;
 }
 .platform-android .badge-primary {
   color: #fff;
@@ -1390,6 +1437,7 @@ hr {
 }
 .platform-android .badge-primary.badge-inverted {
   color: #33b5e5;
+  background-color: transparent;
 }
 .platform-android .badge-positive {
   color: #fff;
@@ -1397,6 +1445,7 @@ hr {
 }
 .platform-android .badge-positive.badge-inverted {
   color: #99cc00;
+  background-color: transparent;
 }
 .platform-android .badge-negative {
   color: #fff;
@@ -1404,6 +1453,16 @@ hr {
 }
 .platform-android .badge-negative.badge-inverted {
   color: #ff4444;
+  background-color: transparent;
+}
+.platform-android .btn .badge {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.platform-android .btn .badge.badge-inverted {
+  background-color: transparent;
+}
+.platform-android .btn:active .badge {
+  color: #fff;
 }
 .platform-android .segmented-control {
   background-color: transparent;
@@ -1428,7 +1487,7 @@ hr {
   border-bottom: 15px solid #dddddd;
 }
 .platform-android .toggle .toggle-handle {
-  border: 1px solid #565656;
+  border: 1px solid #b1b1b1;
 }
 .platform-android .toggle:active .toggle-handle {
   width: 35px;
@@ -1445,7 +1504,15 @@ hr {
   background-image: url("../img/android.png");
 }
 .platform-android .device .device-content {
+  font-size: 18px;
+  line-height: 22px;
   background-color: #f2f2f2;
+}
+.platform-android .device .content {
+  top: 50px;
+}
+.platform-android .bar ~ .content {
+  padding: 0;
 }
 
 @-webkit-keyframes fadeOverlay {

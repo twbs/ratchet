@@ -778,8 +778,16 @@ hr {
     background-image: url("../img/android.png");
 
     .device-content {
+      font-size: 18px;
+      line-height: 22px;
       background-color: #f2f2f2;
     }
+    .content {
+      top: 50px;
+    }
+  }
+  .bar ~ .content {
+    padding: 0;
   }
 }
 

@@ -14,28 +14,29 @@
 
 // Type (Change to Roboto)
 $font-family-default: 'Roboto', sans-serif;
-$font-size-default: 17px;
+$font-size-default: 18px;
 $font-weight: 500;
 $font-weight-light: 400;
-$line-height-default: 21px;
+$line-height-default: 22px;
 
 // Colors
 // Main theme colors
 $primary-color:  #33b5e5;
 $chrome-color:   #dddddd;
+$text-color:     #222;
 
 // Action colors
-$default-color:  #9a9a9a;
+$default-color:  #999;
 $positive-color: #99cc00;
 $negative-color: #ff4444;
 
 // Bars
 $bar-base-height:  50px;
-$bar-tab-height:   70px;
+$bar-tab-height:   50px;
 
 // Borders
-$border-default: 1px solid #565656;
-$border-radius: 0;
+$border-default: 1px solid #b1b1b1;
+$border-radius: 2px;
 
 
 // Base
@@ -45,10 +46,23 @@ body {
   font-family: $font-family-default;
   font-size: $font-size-default;
   line-height: $line-height-default;
+  color: $text-color;
 }
 
 .content {
-  @include gradient($chrome-color,lighten($chrome-color, 10%));
+  background-color: #f2f2f2;
+}
+
+// Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
+// Note: For these to work, content must come after both bars in the markup
+.bar-nav ~ .content {
+  padding-top: $bar-base-height;
+}
+.bar-tab ~ .content {
+  padding-bottom: $bar-tab-height;
+}
+.bar-header-secondary ~ .content {
+  padding-top: $bar-base-height*2;
 }
 
 // Bars
@@ -58,6 +72,7 @@ body {
   height: $bar-base-height;
   background-color: $chrome-color;
   border-bottom: $border-default;
+  box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0,0,0,.07);
 
   // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
@@ -68,13 +83,13 @@ body {
   height: $bar-tab-height;
   border-top: $border-default;
   border-bottom: 0;
+  box-shadow: inset 0 2px 0 #d2d2d2, 0 -3px 3px rgba(0,0,0,.07);
 }
 // Left aligned text in the .bar-nav 
 .title {
   position: static;
   padding-left: 10px;
   line-height: $bar-base-height;
-  color: $default-color;
   text-align: left;
 }
 
@@ -86,13 +101,21 @@ body {
   border-bottom: $border-default;
 }
 
+//
+// Cards
+// --------------------------------------------------
+
+.card {
+  border-color: #d9d9d9;
+  border-radius: $border-radius;
+}
 
 // Table views
 // --------------------------------------------------
 
 .table-view {
   .table-view-cell {
-    border-bottom: $border-default;
+    border-bottom: 1px solid #d9d9d9;
   
     // Remove the border from the last table view item
     &:last-child {
@@ -102,8 +125,13 @@ body {
 
   // Table view dividers
   .table-view-divider {
+    padding-top: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
     border-top: 0;
-    border-bottom: 0;
+    border-bottom: 2px solid #a9a9a9;
+    background-color: transparent;
   }
 }
 
@@ -157,9 +185,11 @@ textarea,
 // -------------------------------------------------------------------
 .input-group {
   padding: 0;
+  border: 0;
 }
 .input-group input {
   border: 0;
+  border-bottom: 1px solid #d9d9d9;
 }
 // Remove bottom border on last input to avoid double bottom border
 .input-group input:last-child {
@@ -171,12 +201,12 @@ textarea,
 
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
-  border-bottom: 0;
+  border-bottom: 1px solid #d9d9d9;
 }
 // Remove bottom border on last input-row to avoid double bottom border
-.input-row:last-child,
 .input-row label + input {
   background-image: none;
+  border-bottom: 0;
 }
 
 
@@ -184,16 +214,19 @@ textarea,
 // --------------------------------------------------
 
 .btn {
-  border: $border-default;
-  color: $default-color;
-  background-color: $chrome-color;
-  border-radius: 3px;
+  color: $text-color;
+  background-color: #cecece;
+  border: 0;
+  border-radius: $border-radius;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 1px rgba(0,0,0,.25);
 
   // Active & filled button styles
   &:active,
   &.active {
-    color: #fff;
+    color: $text-color;
+    border: 0;
     background-color: $default-color;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2);
   }
 }
 .bar {
@@ -220,12 +253,13 @@ textarea,
 // Primary button (Default color is blue)
 .btn-primary {
   color: #fff;
-  border: 1px solid $primary-color;
+  border: 0;
   background-color: $primary-color;
 
   &:active,
   &.active {
-    border: 1px solid darken($primary-color, 10%);
+    color: #fff;
+    border: 0;
     background-color: darken($primary-color, 10%);
   }
 }
@@ -233,12 +267,13 @@ textarea,
 // Positive button (Default color is green)
 .btn-positive {
   color: #fff;
-  border: 1px solid $positive-color;
+  border: 0;
   background-color: $positive-color;
 
   &:active,
   &.active {
-    border: 1px solid darken($positive-color, 10%);
+    color: #fff;
+    border: 0;
     background-color: darken($positive-color, 10%);
   }
 }
@@ -246,34 +281,61 @@ textarea,
 // Negative button (Default color is red)
 .btn-negative {
   color: #fff;
-  border: 1px solid $negative-color;
+  border: 0;
   background-color: $negative-color;
 
   &:active,
   &.active {
-    border: 1px solid darken($negative-color, 10%);
+    color: #fff;
+    border: 0;
     background-color: darken($negative-color, 10%);
   }
 }
 
 // Outlined buttons 
 .btn-outlined {
+  border: 1px solid $default-color;
   background-color: transparent;
+  box-shadow: none;
 
   &.btn-primary {
+    border: 1px solid $primary-color;
     color: $primary-color;
+
+    &:active {
+      border: 1px solid $primary-color;
+      background-color: $primary-color;
+    }
   }
   &.btn-positive {
+    border: 1px solid $positive-color;
     color: $positive-color;
+
+    &:active {
+      border: 1px solid $positive-color;
+      background-color: $positive-color;
+    }
   }
   &.btn-negative {
+    border: 1px solid $negative-color;
     color: $negative-color;
+
+    &:active {
+      border: 1px solid $negative-color;
+      background-color: $negative-color;
+    }
   }
   // Active states
+  &:active {
+    border: 1px solid $default-color;
+    background-color: $default-color;
+    box-shadow: none;
+  }
   &.btn-primary:active,
   &.btn-positive:active,
   &.btn-negative:active {
     color: #fff;
+    box-shadow: none;
   }
 }
 
@@ -282,11 +344,13 @@ textarea,
   color: $primary-color;
   background-color: transparent;
   border: none;
+  box-shadow: none;
 
   &:active,
   &.active {
     color: darken($primary-color, 10%);
     background-color: transparent;
+    box-shadow: none;
   }
 }
 
@@ -312,6 +376,7 @@ textarea,
 .badge {
   &.badge-inverted {
     color: $default-color;
+    background-color: transparent;
   }
 }
 
@@ -326,6 +391,7 @@ textarea,
 
   &.badge-inverted {
     color: $primary-color;
+    background-color: transparent;
   }
 }
 
@@ -336,6 +402,7 @@ textarea,
 
   &.badge-inverted {
     color: $positive-color;
+    background-color: transparent;
   }
 }
 
@@ -346,6 +413,23 @@ textarea,
 
   &.badge-inverted {
     color: $negative-color;
+    background-color: transparent;
+  }
+}
+
+// Badges in buttons
+.btn {
+  .badge {
+    background-color: rgba(0,0,0,.15);
+
+    &.badge-inverted {
+      background-color: transparent;
+    }
+  }
+
+  // Active states
+  &:active .badge {
+    color: #fff;
   }
 }
 
@@ -387,10 +471,6 @@ textarea,
   }
 }
 
-
-//
-// Modal styles
-// --------------------------------------------------
 
 //
 // Toggles styles
