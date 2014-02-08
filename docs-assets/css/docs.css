@@ -1432,6 +1432,9 @@ hr {
 .platform-android .toggle.active .toggle-handle {
   border-color: #81c700;
 }
+.platform-android .device {
+  background-image: url("../img/android.png");
+}
 .platform-android .device .device-content {
   background-color: #000;
   background-image: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);

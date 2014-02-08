@@ -773,9 +773,13 @@ hr {
 .platform-android {
   @import "theme-android.scss";
 
-  .device .device-content {
-    background-color: #000;
-    background-image: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);
+  .device {
+    background-image: url("../img/android.png");
+
+    .device-content {
+      background-color: #000;
+      background-image: linear-gradient(to bottom, #111111 0%, #2b2b2b 100%);
+    }
   }
 }
 
