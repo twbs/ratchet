@@ -1145,9 +1145,6 @@ hr {
 .platform-ios .toggle:before {
   display: none;
 }
-.platform-ios .toggle:active .toggle-handle {
-  width: 35px;
-}
 .platform-ios .toggle.active {
   border: 2px solid #4cd964;
   background-color: transparent;
@@ -1501,9 +1498,10 @@ hr {
   left: 0;
   width: 50px;
   height: 24px;
-  border: 0;
+  border: 1px solid #b5b5b5;
   border-radius: 0;
   background-color: #bebebe;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 .platform-android .toggle:before {
   top: 1px;
@@ -1524,7 +1522,7 @@ hr {
 }
 .platform-android .toggle.active:before {
   left: auto;
-  right: 15px;
+  right: 14px;
   color: #fff;
   content: "On";
 }

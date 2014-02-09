@@ -392,9 +392,6 @@ textarea,
 .toggle:before {
   display: none;
 }
-.toggle:active .toggle-handle {
-  width: 35px;
-}
 .toggle.active {
   border: 2px solid #4cd964;
   background-color: transparent;

@@ -148,8 +148,6 @@ $(function() {
   }
   var calculateToggle = function () {
     var currentTop = win.scrollTop();
-    
-    console.log('yep');
 
     if(currentTop >= toggleTop) {
       platformToggle.addClass('fixed');

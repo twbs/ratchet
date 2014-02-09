@@ -521,10 +521,6 @@ textarea,
   &:before {
     display: none;
   }
-  &:active .toggle-handle {
-    padding-right: 4px;
-    padding-left: 4px;
-  }
   // Active state for toggle
   &.active {
     border: 2px solid $positive-color;
