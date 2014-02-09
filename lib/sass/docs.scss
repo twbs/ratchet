@@ -633,10 +633,12 @@ hr {
     top: 72px;
     opacity: 1;
   }
-  .slider li img {
+  .slider .slide img {
     width: 100%;
+    height: 570px; // Fullscreen fun times
+    display: block;
   }
-  .slider .slide-text {
+  .slider .slides .slide-text {
     position: absolute;
     top: 45%;
     left: 0;

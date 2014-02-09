@@ -600,7 +600,7 @@
   var scrollableArea;
 
   var getSlider = function (target) {
-    var i, sliders = document.querySelectorAll('.slider > ul');
+    var i, sliders = document.querySelectorAll('.slider > .slides');
     for (; target && target !== document; target = target.parentNode) {
       for (i = sliders.length; i--;) { if (sliders[i] === target) return target; }
     }
@@ -624,7 +624,7 @@
 
     if (!slider) return;
 
-    var firstItem  = slider.querySelector('li');
+    var firstItem  = slider.querySelector('.slide');
 
     scrollableArea = firstItem.offsetWidth * slider.children.length;
     isScrolling    = undefined;

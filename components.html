@@ -994,35 +994,35 @@ document
 
       <div class="component-example component-example-fullbleed">
         <div class="slider" id="mySlider">
-          <ul>
-            <li>
+          <div class="slides">
+            <div class="slide">
               <img src="{{ page.base_url }}docs-assets/img/slide-1.jpg">
               <span class="slide-text">&larr; Slide me</span>
-            </li>
-            <li>
+            </div>
+            <div class="slide">
               <img src="{{ page.base_url }}docs-assets/img/slide-2.jpg">
-            </li>
-            <li>
+            </div>
+            <div class="slide">
               <img src="{{ page.base_url }}docs-assets/img/slide-3.jpg">
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
 
 {% highlight html %}
 <div class="slider" id="mySlider">
-  <ul>
-    <li>
+  <div class="slides">
+    <div class="slide">
       <img src="{{ page.base_url }}docs-assets/img/slide-1.jpg">
       <span class="slide-text">&larr; Slide me</span>
-    </li>
-    <li>
+    </div>
+    <div class="slide">
       <img src="{{ page.base_url }}docs-assets/img/slide-2.jpg">
-    </li>
-    <li>
+    </div>
+    <div class="slide">
       <img src="{{ page.base_url }}docs-assets/img/slide-3.jpg">
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 {% endhighlight %}
 
