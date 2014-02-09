@@ -70,17 +70,17 @@ a {
   text-align: left;
 }
 
-.card {
-  border-color: #d9d9d9;
-  border-radius: 2px;
-  background-color: transparent;
-}
-
 .popover .bar {
   border-radius: 0;
 }
 .popover .bar ~ .table-view {
   padding-top: 50px;
+}
+
+.card {
+  border-color: #d9d9d9;
+  border-radius: 2px;
+  background-color: transparent;
 }
 
 .table-view {
@@ -170,6 +170,8 @@ textarea,
 }
 
 .btn {
+  padding: 8px 15px;
+  font-size: 14px;
   color: #222222;
   background-color: #cecece;
   border: 0;
@@ -279,6 +281,11 @@ textarea,
   color: #1a9bcb;
   background-color: transparent;
   box-shadow: none;
+}
+
+.btn-block {
+  padding: 15px 0;
+  font-size: 18px;
 }
 
 .bar-nav .btn-link {

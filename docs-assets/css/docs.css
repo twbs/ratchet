@@ -1239,16 +1239,16 @@ hr {
   line-height: 50px;
   text-align: left;
 }
-.platform-android .card {
-  border-color: #d9d9d9;
-  border-radius: 2px;
-  background-color: transparent;
-}
 .platform-android .popover .bar {
   border-radius: 0;
 }
 .platform-android .popover .bar ~ .table-view {
   padding-top: 50px;
+}
+.platform-android .card {
+  border-color: #d9d9d9;
+  border-radius: 2px;
+  background-color: transparent;
 }
 .platform-android .table-view {
   background-color: transparent;
@@ -1327,6 +1327,8 @@ hr {
   border-bottom: 0;
 }
 .platform-android .btn {
+  padding: 8px 15px;
+  font-size: 14px;
   color: #222222;
   background-color: #cecece;
   border: 0;
@@ -1430,6 +1432,10 @@ hr {
   color: #1a9bcb;
   background-color: transparent;
   box-shadow: none;
+}
+.platform-android .btn-block {
+  padding: 15px 0;
+  font-size: 18px;
 }
 .platform-android .bar-nav .btn-link {
   color: #33b5e5;
