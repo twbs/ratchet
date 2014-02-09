@@ -1277,6 +1277,9 @@ hr {
 .platform-android .popover .table-view {
   border-radius: 12px;
 }
+.platform-android .table-view .btn {
+  margin-top: -3px;
+}
 .platform-android select,
 .platform-android textarea,
 .platform-android input[type="text"],

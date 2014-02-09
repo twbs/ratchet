@@ -173,6 +173,11 @@ a {
   border-radius: 12px;
 }
 
+// Buttons in table-views
+// --------------------------------------------------
+.table-view .btn {
+  margin-top: -4px; // Center the btn inside the cell
+}
 
 // Forms
 // --------------------------------------------------

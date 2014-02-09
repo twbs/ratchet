@@ -112,6 +112,10 @@ a {
   border-radius: 12px;
 }
 
+.table-view .btn {
+  margin-top: -3px;
+}
+
 select,
 textarea,
 input[type="text"],
