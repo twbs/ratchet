@@ -60,6 +60,11 @@ a {
 .bar-tab .tab-item .icon {
   margin-top: 0;
 }
+.bar-tab .tab-item.active .tab-label,
+.bar-tab .tab-item.active .icon, .bar-tab .tab-item:active .tab-label,
+.bar-tab .tab-item:active .icon {
+  color: #33b5e5;
+}
 
 .title {
   position: static;

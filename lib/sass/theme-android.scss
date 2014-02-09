@@ -97,11 +97,23 @@ a {
   bottom: auto;
   height: $bar-tab-height;
   border-top: 0;
-  
-  .tab-item .icon {
-    margin-top: 0;
+
+  .tab-item {
+    .icon {
+      margin-top: 0;
+    }
+
+    // Active states for the tab bar
+    &.active,
+    &:active {
+      .tab-label,
+      .icon {
+        color: $primary-color;
+      }
+    }
   }
 }
+
 // Left aligned text in the .bar-nav 
 .title {
   position: static;

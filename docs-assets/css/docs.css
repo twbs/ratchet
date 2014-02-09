@@ -1229,6 +1229,11 @@ hr {
 .platform-android .bar-tab .tab-item .icon {
   margin-top: 0;
 }
+.platform-android .bar-tab .tab-item.active .tab-label,
+.platform-android .bar-tab .tab-item.active .icon, .platform-android .bar-tab .tab-item:active .tab-label,
+.platform-android .bar-tab .tab-item:active .icon {
+  color: #33b5e5;
+}
 .platform-android .title {
   position: static;
   padding-left: 15px;
