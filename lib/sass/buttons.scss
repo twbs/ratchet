@@ -150,8 +150,8 @@ input[type="button"] {
     font-size: 16px;
     color: $primary-color;
     line-height: $bar-base-height;
-    background-color: transparent;
     border: none;
+    background-color: transparent;
 
     &:active,
     &.active {

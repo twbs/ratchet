@@ -625,7 +625,7 @@ select {
   border: 0;
 }
 
-.bar input[type=search] {
+.bar input[type="search"] {
   height: 29px;
   margin: 6px 0;
 }
@@ -743,8 +743,8 @@ input[type="button"] {
   font-size: 16px;
   color: #428bca;
   line-height: 44px;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
 }
 .bar-nav .btn.btn-link:active, .bar-nav .btn.btn-link.active {
   color: #3071a9;
@@ -986,10 +986,10 @@ input[type="button"] {
   width: 0;
   height: 0;
   margin-left: -15px;
-  content: '';
   border-right: 15px solid transparent;
   border-bottom: 15px solid white;
   border-left: 15px solid transparent;
+  content: '';
 }
 .popover.visible {
   opacity: 1;

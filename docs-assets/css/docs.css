@@ -1505,6 +1505,51 @@ hr {
 .platform-android .segmented-control li:active, .platform-android .segmented-control li.active {
   background-color: #999999;
 }
+.platform-android .segmented-control-primary {
+  border: 0;
+}
+.platform-android .segmented-control-primary li {
+  border-color: inherit;
+}
+.platform-android .segmented-control-primary li > a {
+  color: #fff;
+}
+.platform-android .segmented-control-primary li:active, .platform-android .segmented-control-primary li.active {
+  background-color: #33b5e5;
+}
+.platform-android .segmented-control-primary li:active > a, .platform-android .segmented-control-primary li.active > a {
+  color: #fff;
+}
+.platform-android .segmented-control-positive {
+  border: 0;
+}
+.platform-android .segmented-control-positive li {
+  border-color: inherit;
+}
+.platform-android .segmented-control-positive li > a {
+  color: #fff;
+}
+.platform-android .segmented-control-positive li:active, .platform-android .segmented-control-positive li.active {
+  background-color: #99cc00;
+}
+.platform-android .segmented-control-positive li:active > a, .platform-android .segmented-control-positive li.active > a {
+  color: #fff;
+}
+.platform-android .segmented-control-negative {
+  border: 0;
+}
+.platform-android .segmented-control-negative li {
+  border-color: inherit;
+}
+.platform-android .segmented-control-negative li > a {
+  color: #fff;
+}
+.platform-android .segmented-control-negative li:active, .platform-android .segmented-control-negative li.active {
+  background-color: #ff4444;
+}
+.platform-android .segmented-control-negative li:active > a, .platform-android .segmented-control-negative li.active > a {
+  color: #fff;
+}
 .platform-android .bar .segmented-control {
   top: 7px;
 }

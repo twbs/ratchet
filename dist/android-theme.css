@@ -373,6 +373,54 @@ textarea,
   background-color: #999999;
 }
 
+.segmented-control-primary {
+  border: 0;
+}
+.segmented-control-primary li {
+  border-color: inherit;
+}
+.segmented-control-primary li > a {
+  color: #fff;
+}
+.segmented-control-primary li:active, .segmented-control-primary li.active {
+  background-color: #33b5e5;
+}
+.segmented-control-primary li:active > a, .segmented-control-primary li.active > a {
+  color: #fff;
+}
+
+.segmented-control-positive {
+  border: 0;
+}
+.segmented-control-positive li {
+  border-color: inherit;
+}
+.segmented-control-positive li > a {
+  color: #fff;
+}
+.segmented-control-positive li:active, .segmented-control-positive li.active {
+  background-color: #99cc00;
+}
+.segmented-control-positive li:active > a, .segmented-control-positive li.active > a {
+  color: #fff;
+}
+
+.segmented-control-negative {
+  border: 0;
+}
+.segmented-control-negative li {
+  border-color: inherit;
+}
+.segmented-control-negative li > a {
+  color: #fff;
+}
+.segmented-control-negative li:active, .segmented-control-negative li.active {
+  background-color: #ff4444;
+}
+.segmented-control-negative li:active > a, .segmented-control-negative li.active > a {
+  color: #fff;
+}
+
 .bar .segmented-control {
   top: 7px;
 }

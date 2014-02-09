@@ -64,7 +64,7 @@
   background-color: rgba(0,0,0,.15);
 }
 
-// Styles for filled badges within filled buttons
+// Styles for filled badges within default buttons
 .btn .badge-inverted,
 .btn:active .badge-inverted {
   background-color: transparent;
@@ -77,14 +77,14 @@
 
 // Position badges within block level buttons
 // Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
-// stays at true center of button
+// stays at the center of button
 .btn-block .badge {
   position: absolute;
   right: 0;
   margin-right: 10px;
 }
 
-// Ratchicons in table-views
+// Badges in table-views
 .table-view .badge {
   margin-top: 2px;
 

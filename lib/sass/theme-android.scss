@@ -526,6 +526,73 @@ textarea,
 }
 
 
+// Other segmented controller types
+// --------------------------------------------------
+
+// Primary
+.segmented-control-primary {
+  border: 0;
+
+  li {
+    border-color: inherit;
+    
+    > a {
+      color: #fff;
+    }
+    &:active,
+    &.active {
+      background-color: $primary-color;
+      
+      > a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Positive
+.segmented-control-positive {
+  border: 0;
+
+  li {
+    border-color: inherit;
+    
+    > a {
+      color: #fff;
+    }
+    &:active,
+    &.active {
+      background-color: $positive-color;
+      
+      > a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Negative
+.segmented-control-negative {
+  border: 0;
+
+  li {
+    border-color: inherit;
+    
+    > a {
+      color: #fff;
+    }
+    &:active,
+    &.active {
+      background-color: $negative-color;
+      
+      > a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
 // Segmented controller in all bars
 // --------------------------------------------------
 
