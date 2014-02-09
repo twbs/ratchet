@@ -795,6 +795,9 @@ hr {
 .platform-ios a {
   color: #007aff;
 }
+.platform-ios a:active {
+  color: #0062cc;
+}
 .platform-ios .content {
   background-color: #efeff4;
 }
@@ -1182,6 +1185,12 @@ hr {
   line-height: 22px;
   color: #222222;
 }
+.platform-android a {
+  color: #33b5e5;
+}
+.platform-android a:active {
+  color: #1a9bcb;
+}
 .platform-android .content {
   background-color: #f2f2f2;
 }
@@ -1193,135 +1202,6 @@ hr {
 }
 .platform-android .bar-header-secondary ~ .content {
   padding-top: 100px;
-}
-.platform-android a {
-  color: #33b5e5;
-}
-.platform-android .bar {
-  height: 50px;
-  background-color: #dddddd;
-  border-bottom: 1px solid #b1b1b1;
-  box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, 0.07);
-}
-.platform-android .bar.bar-header-secondary {
-  top: 50px;
-}
-.platform-android .bar.bar-footer-secondary {
-  bottom: 50px;
-}
-.platform-android .bar.bar-footer-secondary-tab {
-  bottom: 50px;
-}
-.platform-android .bar-tab {
-  top: 0;
-  bottom: auto;
-  height: 50px;
-  border-top: 0;
-}
-.platform-android .bar-tab .tab-item .icon {
-  margin-top: 0;
-}
-.platform-android .bar-tab .tab-item.active .tab-label,
-.platform-android .bar-tab .tab-item.active .icon, .platform-android .bar-tab .tab-item:active .tab-label,
-.platform-android .bar-tab .tab-item:active .icon {
-  color: #33b5e5;
-}
-.platform-android .title {
-  position: static;
-  padding-left: 15px;
-  font-size: 18px;
-  line-height: 49px;
-  text-align: left;
-}
-.platform-android .popover .bar {
-  border-radius: 0;
-}
-.platform-android .popover .bar ~ .table-view {
-  padding-top: 50px;
-}
-.platform-android .card {
-  border-color: #d9d9d9;
-  border-radius: 2px;
-  background-color: transparent;
-}
-.platform-android .table-view {
-  background-color: transparent;
-}
-.platform-android .table-view .table-view-cell {
-  border-bottom: 1px solid #d9d9d9;
-}
-.platform-android .table-view .table-view-cell:last-child {
-  background-image: none;
-}
-.platform-android .table-view .table-view-cell > a:not(.btn):active {
-  background-color: #33b5e5;
-}
-.platform-android .table-view .table-view-cell > a:not(.btn):active .icon {
-  color: #fff;
-}
-.platform-android .table-view .table-view-divider {
-  padding-top: 25px;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-top: 0;
-  border-bottom: 2px solid #a9a9a9;
-  background-color: transparent;
-}
-.platform-android .popover .table-view {
-  border-radius: 12px;
-}
-.platform-android .table-view .btn {
-  margin-top: -4px;
-}
-.platform-android select,
-.platform-android textarea,
-.platform-android input[type="text"],
-.platform-android input[type="search"],
-.platform-android input[type="password"],
-.platform-android input[type="datetime"],
-.platform-android input[type="datetime-local"],
-.platform-android input[type="date"],
-.platform-android input[type="month"],
-.platform-android input[type="time"],
-.platform-android input[type="week"],
-.platform-android input[type="number"],
-.platform-android input[type="email"],
-.platform-android input[type="url"],
-.platform-android input[type="tel"],
-.platform-android input[type="color"],
-.platform-android .input-group {
-  height: 40px;
-  padding: 10px 15px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
-.platform-android input[type="search"] {
-  border-radius: 2px;
-}
-.platform-android select,
-.platform-android textarea,
-.platform-android .input-group {
-  height: auto;
-}
-.platform-android .input-group {
-  padding: 0;
-  border: 0;
-}
-.platform-android .input-group input {
-  border: 0;
-  border-bottom: 1px solid #d9d9d9;
-  box-shadow: none;
-}
-.platform-android .input-group input:last-child {
-  background-image: none;
-}
-.platform-android .input-row {
-  border-bottom: 1px solid #d9d9d9;
-}
-.platform-android .input-row label + input {
-  background-image: none;
-  border-bottom: 0;
 }
 .platform-android .btn {
   padding: 8px 15px;
@@ -1337,19 +1217,6 @@ hr {
   border: 0;
   background-color: #999999;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-.platform-android .bar .btn {
-  padding-top: 9px;
-  padding-bottom: 9px;
-}
-.platform-android .bar .btn-link {
-  padding: 0;
-  color: #33b5e5;
-  font-size: 18px;
-  line-height: 49px;
-}
-.platform-android .bar .btn-link:active, .platform-android .bar .btn-link.active {
-  color: #1a9bcb;
 }
 .platform-android .btn-primary {
   color: #fff;
@@ -1434,6 +1301,64 @@ hr {
   padding: 15px 0;
   font-size: 18px;
 }
+.platform-android .btn .badge {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.platform-android .btn .badge.badge-inverted {
+  background-color: transparent;
+}
+.platform-android .btn:active .badge {
+  color: #fff;
+}
+.platform-android .bar {
+  height: 50px;
+  background-color: #dddddd;
+  border-bottom: 1px solid #b1b1b1;
+  box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, 0.07);
+}
+.platform-android .bar.bar-header-secondary {
+  top: 50px;
+}
+.platform-android .bar.bar-footer-secondary {
+  bottom: 50px;
+}
+.platform-android .bar.bar-footer-secondary-tab {
+  bottom: 50px;
+}
+.platform-android .bar-tab {
+  top: 0;
+  bottom: auto;
+  height: 50px;
+  border-top: 0;
+}
+.platform-android .bar-tab .tab-item .icon {
+  margin-top: 0;
+}
+.platform-android .bar-tab .tab-item.active .tab-label,
+.platform-android .bar-tab .tab-item.active .icon, .platform-android .bar-tab .tab-item:active .tab-label,
+.platform-android .bar-tab .tab-item:active .icon {
+  color: #33b5e5;
+}
+.platform-android .title {
+  position: static;
+  padding-left: 15px;
+  font-size: 18px;
+  line-height: 49px;
+  text-align: left;
+}
+.platform-android .bar .btn {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.platform-android .bar .btn-link {
+  padding: 0;
+  color: #33b5e5;
+  font-size: 18px;
+  line-height: 49px;
+}
+.platform-android .bar .btn-link:active, .platform-android .bar .btn-link.active {
+  color: #1a9bcb;
+}
 .platform-android .bar-nav .btn {
   margin-top: 7px;
 }
@@ -1444,6 +1369,12 @@ hr {
 .platform-android .bar-nav .btn-link:active {
   color: #33b5e5;
   opacity: .6;
+}
+.platform-android .bar .segmented-control {
+  top: 7px;
+}
+.platform-android .bar .icon {
+  margin-top: 13px;
 }
 .platform-android .badge.badge-inverted {
   color: #999999;
@@ -1473,14 +1404,86 @@ hr {
   color: #ff4444;
   background-color: transparent;
 }
-.platform-android .btn .badge {
-  background-color: rgba(0, 0, 0, 0.15);
-}
-.platform-android .btn .badge.badge-inverted {
+.platform-android .card {
+  border-color: #d9d9d9;
+  border-radius: 2px;
   background-color: transparent;
 }
-.platform-android .btn:active .badge {
+.platform-android .table-view {
+  background-color: transparent;
+}
+.platform-android .table-view .table-view-cell {
+  border-bottom: 1px solid #d9d9d9;
+}
+.platform-android .table-view .table-view-cell:last-child {
+  background-image: none;
+}
+.platform-android .table-view .table-view-cell > a:not(.btn):active {
+  background-color: #33b5e5;
+}
+.platform-android .table-view .table-view-cell > a:not(.btn):active .icon {
   color: #fff;
+}
+.platform-android .table-view .table-view-divider {
+  padding-top: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 0;
+  border-bottom: 2px solid #a9a9a9;
+  background-color: transparent;
+}
+.platform-android .table-view .btn {
+  margin-top: -4px;
+}
+.platform-android select,
+.platform-android textarea,
+.platform-android input[type="text"],
+.platform-android input[type="search"],
+.platform-android input[type="password"],
+.platform-android input[type="datetime"],
+.platform-android input[type="datetime-local"],
+.platform-android input[type="date"],
+.platform-android input[type="month"],
+.platform-android input[type="time"],
+.platform-android input[type="week"],
+.platform-android input[type="number"],
+.platform-android input[type="email"],
+.platform-android input[type="url"],
+.platform-android input[type="tel"],
+.platform-android input[type="color"],
+.platform-android .input-group {
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.platform-android input[type="search"] {
+  border-radius: 2px;
+}
+.platform-android select,
+.platform-android textarea,
+.platform-android .input-group {
+  height: auto;
+}
+.platform-android .input-group {
+  padding: 0;
+  border: 0;
+}
+.platform-android .input-group input {
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: none;
+}
+.platform-android .input-group input:last-child {
+  background-image: none;
+}
+.platform-android .input-row {
+  border-bottom: 1px solid #d9d9d9;
+}
+.platform-android .input-row label + input {
+  background-image: none;
+  border-bottom: 0;
 }
 .platform-android .segmented-control {
   background-color: #cecece;
@@ -1549,9 +1552,6 @@ hr {
 .platform-android .segmented-control-negative li:active > a, .platform-android .segmented-control-negative li.active > a {
   color: #fff;
 }
-.platform-android .bar .segmented-control {
-  top: 7px;
-}
 .platform-android .popover {
   top: 90px;
   border: 1px solid #9b9b9b;
@@ -1562,6 +1562,15 @@ hr {
 }
 .platform-android .popover:before {
   display: none;
+}
+.platform-android .popover .bar {
+  border-radius: 0;
+}
+.platform-android .popover .bar-nav ~ .table-view {
+  padding-top: 50px;
+}
+.platform-android .popover .table-view {
+  border-radius: 12px;
 }
 .platform-android .toggle {
   width: 104px;
@@ -1602,9 +1611,6 @@ hr {
   right: 14px;
   color: #fff;
   content: "On";
-}
-.platform-android .bar .icon {
-  margin-top: 13px;
 }
 .platform-android .device {
   font-family: 'Roboto', sans-serif;

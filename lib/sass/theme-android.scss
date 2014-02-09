@@ -6,6 +6,7 @@
 //
 // --------------------------------------------------
 
+
 // Variables
 // --------------------------------------------------
 
@@ -17,6 +18,7 @@ $font-weight-light: 400;
 $line-height-default: 22px;
 
 // Colors
+//
 // Main theme colors
 $primary-color:  #33b5e5;
 $chrome-color:   #dddddd;
@@ -46,10 +48,19 @@ body {
   color: $text-color;
 }
 
+// Universal link styling
+a {
+  color: $primary-color;
+  
+  &:active {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Content
 .content {
   background-color: #f2f2f2;
 }
-
 // Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
 // Note: For these to work, content must come after both bars in the markup
 .bar-nav ~ .content {
@@ -60,197 +71,6 @@ body {
 }
 .bar-header-secondary ~ .content {
   padding-top: $bar-base-height*2;
-}
-
-// Universal link styling
-a {
-  color: $primary-color;
-}
-
-
-// Bars
-// --------------------------------------------------
-
-.bar {
-  height: $bar-base-height;
-  background-color: $chrome-color;
-  border-bottom: $border-default;
-  box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0,0,0,.07);
-
-  // Modifier class to dock any bar below .bar-nav
-  &.bar-header-secondary {
-    top: $bar-base-height;
-  }
-
-  // Modifier class to dock any bar above a standard bar
-  &.bar-footer-secondary {
-    bottom: $bar-base-height;
-  }
-
-  // Modifier class to dock any bar above a .bar-tab
-  &.bar-footer-secondary-tab {
-    bottom: $bar-tab-height;
-  }
-}
-.bar-tab {
-  top: 0;
-  bottom: auto;
-  height: $bar-tab-height;
-  border-top: 0;
-
-  .tab-item {
-    .icon {
-      margin-top: 0;
-    }
-
-    // Active states for the tab bar
-    &.active,
-    &:active {
-      .tab-label,
-      .icon {
-        color: $primary-color;
-      }
-    }
-  }
-}
-
-// Left aligned text in the .bar-nav 
-.title {
-  position: static;
-  padding-left: 15px;
-  font-size: $font-size-default;
-  line-height: 49px;
-  text-align: left;
-}
-// `bar-nav` in popovers
-.popover {
-  .bar {
-    border-radius: 0;
-  }
-  .bar ~ .table-view {
-    padding-top: $bar-base-height;
-  }
-}
-
-
-//
-// Cards
-// --------------------------------------------------
-
-.card {
-  border-color: #d9d9d9;
-  border-radius: $border-radius;
-  background-color: transparent;
-}
-
-
-// Table views
-// --------------------------------------------------
-
-.table-view {
-  background-color: transparent;
-
-  .table-view-cell {
-    border-bottom: 1px solid #d9d9d9;
-  
-    // Remove the border from the last table view item
-    &:last-child {
-      background-image: none;
-    }
-    > a:not(.btn):active {
-      background-color: $primary-color;
-
-      .icon {
-        color: #fff;
-      }
-    }
-  }
-
-  // Table view dividers
-  .table-view-divider {
-    padding-top: 25px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-top: 0;
-    border-bottom: 2px solid #a9a9a9;
-    background-color: transparent;
-  }
-}
-
-.popover .table-view {
-  border-radius: 12px;
-}
-
-// Buttons in table-views
-// --------------------------------------------------
-.table-view .btn {
-  margin-top: -4px; // Center the btn inside the cell
-}
-
-// Forms
-// --------------------------------------------------
-
-select,
-textarea,
-input[type="text"],
-input[type="search"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="color"],
-.input-group {
-  height: 40px;
-  padding: 10px 15px;
-  border: 1px solid rgba(0, 0, 0, .2);
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
-}
-
-input[type="search"] {
-  border-radius: $border-radius;
-}
-
-select,
-textarea,
-.input-group {
-  height: auto;
-}
-
-// Input groups (cluster multiple inputs together into a single group)
-// -------------------------------------------------------------------
-.input-group {
-  padding: 0;
-  border: 0;
-}
-.input-group input {
-  border: 0;
-  border-bottom: 1px solid #d9d9d9;
-  box-shadow: none;
-}
-// Remove bottom border on last input to avoid double bottom border
-.input-group input:last-child {
-  background-image: none;
-}
-
-// Input groups with labels
-// --------------------------------------------------
-
-// To use labels with input groups, wrap a label and an input in an .input-row
-.input-row {
-  border-bottom: 1px solid #d9d9d9;
-}
-// Remove bottom border on last input-row to avoid double bottom border
-.input-row label + input {
-  background-image: none;
-  border-bottom: 0;
 }
 
 
@@ -276,23 +96,6 @@ textarea,
   }
 }
 
-.bar {
-  .btn {
-    padding-top: 9px;
-    padding-bottom: 9px;
-  }
-  .btn-link {
-    padding: 0;
-    color: $primary-color;
-    font-size: $font-size-default;
-    line-height: 49px;
-
-    &:active,
-    &.active {
-      color: darken($primary-color, 10%);
-    }
-  }
-}
 
 // Other button types
 // --------------------------------------------------
@@ -407,9 +210,98 @@ textarea,
   font-size: 18px;
 }
 
-// Buttons in nav bars
+// Buttons with badges
+.btn {
+  .badge {
+    background-color: rgba(0,0,0,.15);
+
+    &.badge-inverted {
+      background-color: transparent;
+    }
+  }
+
+  // Active states
+  &:active .badge {
+    color: #fff;
+  }
+}
+
+
+// Bars
 // --------------------------------------------------
 
+.bar {
+  height: $bar-base-height;
+  background-color: $chrome-color;
+  border-bottom: $border-default;
+  box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0,0,0,.07);
+
+  // Modifier class to dock any bar below .bar-nav
+  &.bar-header-secondary {
+    top: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar above a standard bar
+  &.bar-footer-secondary {
+    bottom: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar above a .bar-tab
+  &.bar-footer-secondary-tab {
+    bottom: $bar-tab-height;
+  }
+}
+.bar-tab {
+  top: 0;
+  bottom: auto;
+  height: $bar-tab-height;
+  border-top: 0;
+
+  .tab-item {
+    .icon {
+      margin-top: 0;
+    }
+
+    // Active states for the tab bar
+    &.active,
+    &:active {
+      .tab-label,
+      .icon {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Left aligned text in the .bar-nav 
+.title {
+  position: static;
+  padding-left: 15px;
+  font-size: $font-size-default;
+  line-height: 49px;
+  text-align: left;
+}
+
+// Bars with buttons
+.bar {
+  .btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .btn-link {
+    padding: 0;
+    color: $primary-color;
+    font-size: $font-size-default;
+    line-height: 49px;
+
+    &:active,
+    &.active {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Nav bars with buttons
 .bar-nav {
   .btn {
     margin-top: 7px;
@@ -425,8 +317,19 @@ textarea,
   }
 }
 
+// Bars with segmented-controls
+// 
+// Remove standard segmented bottom margin
+.bar .segmented-control {
+  top: 7px;
+}
 
-//
+// Bars with Ratchicons
+.bar .icon {
+  margin-top: 13px;
+}
+
+
 // Badges
 // --------------------------------------------------
 
@@ -437,10 +340,8 @@ textarea,
   }
 }
 
-
 // Badge modifiers
-// --------------------------------------------------
-
+// 
 // Main badge
 .badge-primary {
   color: #fff;
@@ -474,24 +375,123 @@ textarea,
   }
 }
 
-// Badges in buttons
-.btn {
-  .badge {
-    background-color: rgba(0,0,0,.15);
 
-    &.badge-inverted {
-      background-color: transparent;
-    }
-  }
+// Cards
+// --------------------------------------------------
 
-  // Active states
-  &:active .badge {
-    color: #fff;
-  }
+.card {
+  border-color: #d9d9d9;
+  border-radius: $border-radius;
+  background-color: transparent;
 }
 
 
-//
+// Table views
+// --------------------------------------------------
+
+.table-view {
+  background-color: transparent;
+
+  .table-view-cell {
+    border-bottom: 1px solid #d9d9d9;
+  
+    // Remove the border from the last table view item
+    &:last-child {
+      background-image: none;
+    }
+    > a:not(.btn):active {
+      background-color: $primary-color;
+
+      .icon {
+        color: #fff;
+      }
+    }
+  }
+
+  // Table view dividers
+  .table-view-divider {
+    padding-top: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 0;
+    border-bottom: 2px solid #a9a9a9;
+    background-color: transparent;
+  }
+}
+
+// Table-views with buttons
+// --------------------------------------------------
+.table-view .btn {
+  margin-top: -4px; // Center the btn inside the cell
+}
+
+// Forms
+// --------------------------------------------------
+
+select,
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+.input-group {
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+input[type="search"] {
+  border-radius: $border-radius;
+}
+
+select,
+textarea,
+.input-group {
+  height: auto;
+}
+
+// Input groups (cluster multiple inputs together into a single group)
+// -------------------------------------------------------------------
+.input-group {
+  padding: 0;
+  border: 0;
+}
+.input-group input {
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: none;
+}
+// Remove bottom border on last input to avoid double bottom border
+.input-group input:last-child {
+  background-image: none;
+}
+
+// Input groups with labels
+// --------------------------------------------------
+
+// To use labels with input groups, wrap a label and an input in an .input-row
+.input-row {
+  border-bottom: 1px solid #d9d9d9;
+}
+// Remove bottom border on last input-row to avoid double bottom border
+.input-row label + input {
+  background-image: none;
+  border-bottom: 0;
+}
+
+
 // Segmented controllers
 // --------------------------------------------------
 
@@ -593,16 +593,6 @@ textarea,
 }
 
 
-// Segmented controller in all bars
-// --------------------------------------------------
-
-// Remove standard segmented bottom margin
-.bar .segmented-control {
-  top: 7px;
-}
-
-
-//
 // Popovers
 // --------------------------------------------------
 
@@ -616,6 +606,23 @@ textarea,
   &:before {
     display: none;
   }
+}
+
+// Popovers with bars
+.popover {
+  .bar {
+    border-radius: 0;
+  }
+
+  // Padding the content correctly.
+  .bar-nav ~ .table-view {
+    padding-top: $bar-base-height;
+  }
+}
+
+// Popovers with table-views
+.popover .table-view {
+  border-radius: 12px;
 }
 
 
@@ -665,9 +672,4 @@ textarea,
       content: "On";
     }
   }
-}
-
-// Ratchicons in nav bars
-.bar .icon {
-  margin-top: 13px;
 }

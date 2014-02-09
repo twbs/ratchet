@@ -11,6 +11,7 @@
 // --------------------------------------------------
 
 // Colors
+//
 // Main theme colors
 $primary-color:  #007aff;
 $chrome-color:   rgba(247,247,247,.98);
@@ -31,9 +32,16 @@ $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
 // Base
 // --------------------------------------------------
 
+// Universal link styling
 a {
   color: $primary-color;
+
+  &:active {
+    color: darken($primary-color, 10%);
+  }
 }
+
+// Content
 .content {
   background-color: #efeff4;
 }
