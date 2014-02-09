@@ -23,6 +23,10 @@ a {
   color: $primary-color;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes the dark touch outlines on links 
+
+  &:active {
+    color: darken($primary-color, 10%);
+  }
 }
 strong {
   font-weight: $font-weight;

@@ -21,6 +21,7 @@
   // Active & filled button styles
   &:active,
   &.active {
+    color: inherit;
     background-color: #ccc;
   }
 

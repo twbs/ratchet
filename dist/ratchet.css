@@ -252,6 +252,9 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+a:active {
+  color: #3071a9;
+}
 
 strong {
   font-weight: 500;
@@ -326,6 +329,130 @@ p {
   margin: 10px 15px;
   font-size: 14px;
   color: #777;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 5px 8px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #333;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.btn:active, .btn.active {
+  color: inherit;
+  background-color: #ccc;
+}
+.btn:disabled, .btn.disabled {
+  opacity: .6;
+}
+
+.btn-primary {
+  color: #fff;
+  border: 1px solid #428bca;
+  background-color: #428bca;
+}
+.btn-primary:active, .btn-primary.active {
+  border: 1px solid #3071a9;
+  background-color: #3071a9;
+}
+
+.btn-positive {
+  color: #fff;
+  border: 1px solid #5cb85c;
+  background-color: #5cb85c;
+}
+.btn-positive:active, .btn-positive.active {
+  border: 1px solid #449d44;
+  background-color: #449d44;
+}
+
+.btn-negative {
+  color: #fff;
+  border: 1px solid #d9534f;
+  background-color: #d9534f;
+}
+.btn-negative:active, .btn-negative.active {
+  border: 1px solid #c9302c;
+  background-color: #c9302c;
+}
+
+.btn-outlined {
+  background-color: transparent;
+}
+.btn-outlined.btn-primary {
+  color: #428bca;
+}
+.btn-outlined.btn-positive {
+  color: #5cb85c;
+}
+.btn-outlined.btn-negative {
+  color: #d9534f;
+}
+.btn-outlined.btn-primary:active, .btn-outlined.btn-positive:active, .btn-outlined.btn-negative:active {
+  color: #fff;
+}
+
+.btn-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #428bca;
+  background-color: transparent;
+  border: none;
+}
+.btn-link:active, .btn-link.active {
+  color: #3071a9;
+  background-color: transparent;
+}
+
+.btn-block {
+  display: block;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 100%;
+}
+
+.btn .badge {
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: -2px -4px -2px 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn .badge-inverted,
+.btn:active .badge-inverted {
+  background-color: transparent;
+}
+
+.btn-primary:active .badge-inverted,
+.btn-positive:active .badge-inverted,
+.btn-negative:active .badge-inverted {
+  color: #fff;
+}
+
+.btn-block .badge {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+.btn .icon {
+  font-size: inherit;
 }
 
 .bar {
@@ -491,6 +618,44 @@ p {
 }
 .bar .icon.pull-right {
   margin-right: -3px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  font-size: 13px;
+  line-height: 1;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+.badge.badge-inverted {
+  padding: 0 5px 0 0;
+  background-color: transparent;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #428bca;
+}
+.badge-primary.badge-inverted {
+  color: #428bca;
+}
+
+.badge-positive {
+  color: #fff;
+  background-color: #5cb85c;
+}
+.badge-positive.badge-inverted {
+  color: #5cb85c;
+}
+
+.badge-negative {
+  color: #fff;
+  background-color: #d9534f;
+}
+.badge-negative.badge-inverted {
+  color: #d9534f;
 }
 
 .card {
@@ -712,167 +877,6 @@ select {
   padding-left: 0;
   margin-bottom: 0;
   border: 0;
-}
-
-.btn {
-  position: relative;
-  display: inline-block;
-  padding: 5px 8px;
-  margin: 0;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.15;
-  color: #333;
-  text-align: center;
-  vertical-align: top;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-.btn:active, .btn.active {
-  background-color: #ccc;
-}
-.btn:disabled, .btn.disabled {
-  opacity: .6;
-}
-
-.btn-primary {
-  color: #fff;
-  border: 1px solid #428bca;
-  background-color: #428bca;
-}
-.btn-primary:active, .btn-primary.active {
-  border: 1px solid #3071a9;
-  background-color: #3071a9;
-}
-
-.btn-positive {
-  color: #fff;
-  border: 1px solid #5cb85c;
-  background-color: #5cb85c;
-}
-.btn-positive:active, .btn-positive.active {
-  border: 1px solid #449d44;
-  background-color: #449d44;
-}
-
-.btn-negative {
-  color: #fff;
-  border: 1px solid #d9534f;
-  background-color: #d9534f;
-}
-.btn-negative:active, .btn-negative.active {
-  border: 1px solid #c9302c;
-  background-color: #c9302c;
-}
-
-.btn-outlined {
-  background-color: transparent;
-}
-.btn-outlined.btn-primary {
-  color: #428bca;
-}
-.btn-outlined.btn-positive {
-  color: #5cb85c;
-}
-.btn-outlined.btn-negative {
-  color: #d9534f;
-}
-.btn-outlined.btn-primary:active, .btn-outlined.btn-positive:active, .btn-outlined.btn-negative:active {
-  color: #fff;
-}
-
-.btn-link {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  color: #428bca;
-  background-color: transparent;
-  border: none;
-}
-.btn-link:active, .btn-link.active {
-  color: #3071a9;
-  background-color: transparent;
-}
-
-.btn-block {
-  display: block;
-  padding: 15px 0;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  width: 100%;
-}
-
-.btn .badge {
-  font-size: 12px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin: -2px -4px -2px 4px;
-  background-color: rgba(0, 0, 0, 0.15);
-}
-
-.btn .badge-inverted,
-.btn:active .badge-inverted {
-  background-color: transparent;
-}
-
-.btn-primary:active .badge-inverted,
-.btn-positive:active .badge-inverted,
-.btn-negative:active .badge-inverted {
-  color: #fff;
-}
-
-.btn-block .badge {
-  position: absolute;
-  right: 0;
-  margin-right: 10px;
-}
-
-.btn .icon {
-  font-size: inherit;
-}
-
-.badge {
-  display: inline-block;
-  padding: 2px 9px;
-  font-size: 13px;
-  line-height: 1;
-  color: #333;
-  background-color: rgba(0, 0, 0, 0.15);
-  border-radius: 100px;
-}
-.badge.badge-inverted {
-  padding: 0 5px 0 0;
-  background-color: transparent;
-}
-
-.badge-primary {
-  color: #fff;
-  background-color: #428bca;
-}
-.badge-primary.badge-inverted {
-  color: #428bca;
-}
-
-.badge-positive {
-  color: #fff;
-  background-color: #5cb85c;
-}
-.badge-positive.badge-inverted {
-  color: #5cb85c;
-}
-
-.badge-negative {
-  color: #fff;
-  background-color: #d9534f;
-}
-.badge-negative.badge-inverted {
-  color: #d9534f;
 }
 
 .segmented-control {

@@ -47,7 +47,6 @@ module.exports = function(grunt) {
         files: {
           '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss',
           '<%= meta.docsPath %>/css/docs.css': '<%= meta.srcPath %>sass/docs.scss',
-          '<%= meta.distPath %><%= pkg.name %>-theme.css': '<%= meta.srcPath %>sass/theme-classic.scss',
           '<%= meta.distPath %>ios-theme.css': '<%= meta.srcPath %>sass/theme-ios.scss',
           '<%= meta.distPath %>android-theme.css': '<%= meta.srcPath %>sass/theme-android.scss'
         }
