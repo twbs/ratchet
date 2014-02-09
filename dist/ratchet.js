@@ -523,6 +523,7 @@
   window.addEventListener('touchend', touchend);
   window.addEventListener('click', function (e) { if (getTarget(e)) e.preventDefault(); });
   window.addEventListener('popstate', popstate);
+  window.PUSH = PUSH;
 
 }();
 
