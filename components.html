@@ -100,15 +100,42 @@ base_url: "../"
 {% endhighlight %}
 
     </article>
+
+    <article class="component">
+      <h3 class="component-title">Title bar with icons</h3>
+
+      <div class="component-example component-example-fullbleed">
+        <header class="bar bar-nav">
+          <span class="icon icon-lg-left pull-left"></span>
+          <a class="icon icon-refresh pull-right"></a>
+          <h1 class="title">Title</h1>
+        </header>
+      </div>
+
+{% highlight html %}
+<header class="bar bar-nav">
+  <a class="icon icon-lg-left pull-left"></a>
+  <a class="icon icon-refresh pull-right"></a>
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
+
+    </article>
+
     <article class="component">
       <h3 class="component-title">Title bar with link buttons and icons</h3>
+      <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
           <a class="btn btn-link pull-left">
-            Previous
+            <span class="icon icon-lg-left"></span>
+            Left
           </a>
-          <a class="icon icon-refresh pull-right"></a>
+          <a class="btn btn-link pull-right">
+            <span class="icon icon-lg-right"></span>
+            Right
+          </a>
           <h1 class="title">Title</h1>
         </header>
       </div>
@@ -117,9 +144,12 @@ base_url: "../"
 <header class="bar bar-nav">
   <a class="btn btn-link pull-left">
     <span class="icon icon-lg-left"></span>
-    Previous
+    Left
   </a>
-  <a class="icon icon-refresh pull-right"></a>
+  <a class="btn btn-link pull-right">
+    Right
+    <span class="icon icon-lg-right"></span>
+  </a>
   <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}

@@ -49,10 +49,15 @@
 }
 
 // Ratchicons in nav bars
-.bar {
-  .icon {
-    font-size: 24px;
-    margin-top: 11px;
+.bar .icon {
+  font-size: 24px;
+  margin-top: 11px;
+
+  &.pull-left {
+    margin-left: -3px;
+  }
+  &.pull-right {
+    margin-right: -3px;
   }
 }
 

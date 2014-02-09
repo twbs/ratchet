@@ -52,6 +52,7 @@ body {
 .title {
   position: static;
   padding-left: 15px;
+  font-size: 18px;
   line-height: 50px;
   text-align: left;
 }
@@ -73,6 +74,12 @@ body {
 }
 .table-view .table-view-cell:last-child {
   background-image: none;
+}
+.table-view .table-view-cell > a:not(.btn):active {
+  background-color: #33b5e5;
+}
+.table-view .table-view-cell > a:not(.btn):active .icon {
+  color: #fff;
 }
 .table-view .table-view-divider {
   padding-top: 25px;
@@ -166,6 +173,7 @@ textarea,
 .bar .btn-link {
   padding: 0;
   color: #33b5e5;
+  font-size: 18px;
   line-height: 50px;
 }
 .bar .btn-link:active, .bar .btn-link.active {
@@ -374,4 +382,8 @@ textarea,
   right: 14px;
   color: #fff;
   content: "On";
+}
+
+.bar .icon {
+  margin-top: 13px;
 }

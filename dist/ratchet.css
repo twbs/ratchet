@@ -767,8 +767,16 @@ input[type="button"] {
 .bar-nav .btn-link.pull-left {
   margin-left: 5px;
 }
+.bar-nav .btn-link.pull-left .icon {
+  margin-right: -3px;
+  margin-left: -8px;
+}
 .bar-nav .btn-link.pull-right {
   margin-right: 5px;
+}
+.bar-nav .btn-link.pull-right .icon {
+  margin-right: -8px;
+  margin-left: -3px;
 }
 
 .table-view .btn {
@@ -1239,6 +1247,12 @@ input[type="button"] {
 .bar .icon {
   font-size: 24px;
   margin-top: 11px;
+}
+.bar .icon.pull-left {
+  margin-left: -3px;
+}
+.bar .icon.pull-right {
+  margin-right: -3px;
 }
 
 .table-view .icon {

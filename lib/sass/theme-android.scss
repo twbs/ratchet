@@ -89,6 +89,7 @@ body {
 .title {
   position: static;
   padding-left: 15px;
+  font-size: $font-size-default;
   line-height: $bar-base-height;
   text-align: left;
 }
@@ -123,6 +124,13 @@ body {
     // Remove the border from the last table view item
     &:last-child {
       background-image: none;
+    }
+    > a:not(.btn):active {
+      background-color: $primary-color;
+
+      .icon {
+        color: #fff;
+      }
     }
   }
 
@@ -236,6 +244,7 @@ textarea,
   .btn-link {
     padding: 0;
     color: $primary-color;
+    font-size: $font-size-default;
     line-height: $bar-base-height;
 
     &:active,
@@ -521,4 +530,9 @@ textarea,
       content: "On";
     }
   }
+}
+
+// Ratchicons in nav bars
+.bar .icon {
+  margin-top: 13px;
 }

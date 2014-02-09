@@ -980,14 +980,6 @@ hr {
 .platform-ios .bar-nav .btn-link {
   color: #007aff;
 }
-.platform-ios .bar-nav .btn-link.pull-right .icon {
-  margin-right: -8px;
-  margin-left: -3px;
-}
-.platform-ios .bar-nav .btn-link.pull-left .icon {
-  margin-right: -3px;
-  margin-left: -8px;
-}
 .platform-ios .bar-nav .btn-link:active {
   color: #007aff;
   opacity: .6;
@@ -1231,6 +1223,7 @@ hr {
 .platform-android .title {
   position: static;
   padding-left: 15px;
+  font-size: 18px;
   line-height: 50px;
   text-align: left;
 }
@@ -1249,6 +1242,12 @@ hr {
 }
 .platform-android .table-view .table-view-cell:last-child {
   background-image: none;
+}
+.platform-android .table-view .table-view-cell > a:not(.btn):active {
+  background-color: #33b5e5;
+}
+.platform-android .table-view .table-view-cell > a:not(.btn):active .icon {
+  color: #fff;
 }
 .platform-android .table-view .table-view-divider {
   padding-top: 25px;
@@ -1331,6 +1330,7 @@ hr {
 .platform-android .bar .btn-link {
   padding: 0;
   color: #33b5e5;
+  font-size: 18px;
   line-height: 50px;
 }
 .platform-android .bar .btn-link:active, .platform-android .bar .btn-link.active {
@@ -1525,6 +1525,9 @@ hr {
   right: 14px;
   color: #fff;
   content: "On";
+}
+.platform-android .bar .icon {
+  margin-top: 13px;
 }
 .platform-android .device {
   font-family: 'Roboto', sans-serif;

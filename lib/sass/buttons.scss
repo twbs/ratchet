@@ -187,9 +187,19 @@ input[type="button"] {
 .bar-nav .btn-link {
   &.pull-left {
     margin-left: 5px;
+
+    .icon {
+      margin-right: -3px;
+      margin-left: -8px;
+    }
   }
   &.pull-right {
     margin-right: 5px;
+
+    .icon {
+      margin-right: -8px;
+      margin-left: -3px;
+    }
   }
 }
 
