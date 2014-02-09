@@ -132,3 +132,103 @@
   border-radius: 12px 12px 0 0;
   @include box-shadow(none);
 }
+
+
+// Nav bars with buttons
+// --------------------------------------------------
+
+.bar-nav .btn {
+  position: relative;
+  z-index: 10; // Position the buttons on top of .title
+  padding: 6px 12px;
+  margin-top: 8px;
+  font-weight: $font-weight-light;
+
+  &.pull-right { 
+    margin-left: $bar-side-spacing; 
+  }
+  &.pull-left { 
+    margin-right: $bar-side-spacing;
+  }
+}
+
+// Nav bars with link buttons (Line the text up with content)
+.bar-nav .btn-link {
+  padding: 0;
+  margin-top: 0;
+  font-size: 16px;
+  color: $primary-color;
+  line-height: $bar-base-height;
+  border: none;
+  background-color: transparent;
+
+  &:active,
+  &.active {
+    color: darken($primary-color, 10%);
+  }
+
+  &.pull-left {
+    margin-left: 5px;
+
+    .icon {
+      margin-right: -3px;
+      margin-left: -8px;
+    }
+  }
+  &.pull-right {
+    margin-right: 5px;
+
+    .icon {
+      margin-right: -8px;
+      margin-left: -3px;
+    }
+  }
+}
+
+
+// Bars with block buttons
+// --------------------------------------------------
+
+// Add proper padding
+.bar .btn-block {
+  padding: 7px 0 6px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 16px; // Scale down font size to fit in bar.
+}
+
+
+// Search forms in standard bar
+// --------------------------------------------------
+
+// Position/size search bar within the bar
+.bar input[type="search"] {
+  height: 29px;
+  margin: 6px 0;
+}
+
+
+// Segmented controller in all bars
+// --------------------------------------------------
+
+// Remove standard segmented bottom margin
+.bar .segmented-control {
+  top: 8px;
+  margin: 0 auto;
+}
+
+
+// Nav bars with Ratchicons
+// --------------------------------------------------
+
+.bar .icon {
+  font-size: 24px;
+  margin-top: 11px;
+
+  &.pull-left {
+    margin-left: -3px;
+  }
+  &.pull-right {
+    margin-right: -3px;
+  }
+}

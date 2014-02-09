@@ -84,25 +84,50 @@
 }
 
 
-// Table views in cards
+// Table-views with buttons
 // --------------------------------------------------
 
-.card .table-view li:last-child {
-  border: 0;
+.table-view .btn {
+  margin-top: -1px; // Center the btn inside the cell
 }
 
 
-// Table views in popovers
+// Table-views with badges
+// --------------------------------------------------
+.table-view .badge {
+  margin-top: 2px;
+
+  &.pull-left {
+    margin-right: 5px;
+  }
+  &.pull-right {
+    margin-left: 5px;
+  }
+}
+
+
+// Table-views with toggles
 // --------------------------------------------------
 
-.popover .table-view {
-  width: auto;
-  max-height: 300px;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  overflow: auto;
-  background-color: #fff;
-  border-radius: $border-radius;
-  -webkit-overflow-scrolling: touch;
+.table-view .toggle {
+  margin-top: -4px; // Center the toggle inside the cell
+}
+
+
+// Table-views with Ratchicons
+// --------------------------------------------------
+.table-view .icon {
+  margin-top: 3px;
+  font-size: inherit;
+
+  &.icon-left,
+  &.icon-right {
+    color: #bbb;
+  }
+  &.pull-left {
+    margin-right: 5px;
+  }
+  &.pull-right {
+    margin-left: 5px;
+  }
 }

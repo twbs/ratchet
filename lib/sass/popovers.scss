@@ -55,3 +55,31 @@
   z-index: 10;
   background-color: rgba(0,0,0,.15);
 }
+
+// Block level buttons in popovers
+// --------------------------------------------------
+
+.popover .btn-block {
+  margin-bottom: 5px;
+  
+  // Remove extra margin on bottom of last button
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// Table views in popovers
+// --------------------------------------------------
+
+.popover .table-view {
+  width: auto;
+  max-height: 300px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: $border-radius;
+  -webkit-overflow-scrolling: touch;
+}

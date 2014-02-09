@@ -600,7 +600,7 @@ hr {
     display: block;
   }
 
-  .slider .slides .slide-text {
+  .slider .slide-group .slide-text {
     position: absolute;
     top: 45%;
     left: 0;

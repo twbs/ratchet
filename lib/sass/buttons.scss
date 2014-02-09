@@ -118,93 +118,53 @@
   font-size: 18px;
 }
 
+
 // Button overrides
 // --------------------------------------------------
+
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   width: 100%;
 }
 
-// Buttons in nav bars
+
+// Buttons with badges
 // --------------------------------------------------
 
-.bar-nav .btn {
-  position: relative;
-  z-index: 10; // Position the buttons on top of .title
-  padding: 6px 12px;
-  margin-top: 8px;
-  font-weight: $font-weight-light;
+// Generic styles for all badges within default buttons
+.btn .badge {
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: -2px -4px -2px 4px;
+  background-color: rgba(0,0,0,.15);
+}
 
-  &.pull-right { 
-    margin-left: $bar-side-spacing; 
-  }
-  &.pull-left { 
-    margin-right: $bar-side-spacing;
-  }
+// Buttons with inverted badges
+.btn .badge-inverted,
+.btn:active .badge-inverted {
+  background-color: transparent;
+}
+.btn-primary:active .badge-inverted,
+.btn-positive:active .badge-inverted,
+.btn-negative:active .badge-inverted {
+  color: #fff;
+}
 
-  // Link button (Buttons that look like links)
-  &.btn-link {
-    padding: 0;
-    margin-top: 0;
-    font-size: 16px;
-    color: $primary-color;
-    line-height: $bar-base-height;
-    border: none;
-    background-color: transparent;
-
-    &:active,
-    &.active {
-      color: darken($primary-color, 10%);
-    }
-  }
+// Position badges within block level buttons
+// Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
+// stays at the center of button
+.btn-block .badge {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
 }
 
 
-// Block buttons in all bars
+// Buttons with Ratchicons
 // --------------------------------------------------
 
-// Add proper padding
-.bar .btn-block {
-  padding: 7px 0 6px;
-  margin-top: 5px;
-  margin-bottom: 0;
-  font-size: 16px; // Scale down font size to fit in bar.
-}
-
-
-// Block level buttons in popovers
-// --------------------------------------------------
-
-.popover .btn-block {
-  margin-bottom: 5px;
-  // Remove extra margin on bottom of last button
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-// Line the button text up with content's text
-.bar-nav .btn-link {
-  &.pull-left {
-    margin-left: 5px;
-
-    .icon {
-      margin-right: -3px;
-      margin-left: -8px;
-    }
-  }
-  &.pull-right {
-    margin-right: 5px;
-
-    .icon {
-      margin-right: -8px;
-      margin-left: -3px;
-    }
-  }
-}
-
-// Buttons in table-views
-// --------------------------------------------------
-.table-view .btn {
-  margin-top: -1px; // Center the btn inside the cell
+.btn .icon {
+  font-size: inherit;
 }

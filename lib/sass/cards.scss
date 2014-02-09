@@ -16,3 +16,11 @@
   	color: inherit;
   }
 }
+
+
+// Cards with table-views
+// --------------------------------------------------
+
+.card .table-view li:last-child {
+  border: 0;
+}
