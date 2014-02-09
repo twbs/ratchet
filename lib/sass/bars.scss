@@ -90,7 +90,7 @@
     display: table-cell;
     height: 100%;
     width: 1%;
-    padding-top: 9px;
+    vertical-align: bottom;
     text-align: center;
 
     .tab-label,
@@ -108,7 +108,7 @@
     .icon {
       width: 24px;
       height: 24px;
-      margin-top: -2px;
+      margin-top: 0;
     }
 
     // Active states for the tab bar
