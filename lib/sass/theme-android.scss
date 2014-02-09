@@ -65,6 +65,12 @@ body {
   padding-top: $bar-base-height*2;
 }
 
+// Universal link styling
+a {
+  color: $primary-color;
+}
+
+
 // Bars
 // --------------------------------------------------
 
@@ -116,6 +122,7 @@ body {
 .card {
   border-color: #d9d9d9;
   border-radius: $border-radius;
+  background-color: transparent;
 }
 
 // `bar-nav` in popovers
@@ -132,6 +139,8 @@ body {
 // --------------------------------------------------
 
 .table-view {
+  background-color: transparent;
+
   .table-view-cell {
     border-bottom: 1px solid #d9d9d9;
   
