@@ -76,14 +76,24 @@ body {
 
   // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
-    top: $bar-base-height + 1;
+    top: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar above a standard bar
+  &.bar-footer-secondary {
+    bottom: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar above a .bar-tab
+  &.bar-footer-secondary-tab {
+    bottom: $bar-tab-height;
   }
 }
 .bar-tab {
+  top: 0;
+  bottom: auto;
   height: $bar-tab-height;
-  border-top: $border-default;
-  border-bottom: 0;
-  box-shadow: inset 0 2px 0 #d2d2d2, 0 -3px 3px rgba(0,0,0,.07);
+  border-top: 0;
   
   .tab-item .icon {
     margin-top: 0;
