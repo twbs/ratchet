@@ -1,0 +1,11 @@
+{
+  "name": "ratchet",
+  "version": "2.0.0",
+  "main": [
+    "./dist/ratchet.css",
+    "./dist/ratchet.js"
+  ],
+  "dependencies": {
+  }
+}
+
