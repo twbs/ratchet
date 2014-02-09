@@ -1184,9 +1184,6 @@ hr {
   background-color: #efeff4;
 }
 
-.platform-android {
-  @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
-}
 .platform-android body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -1236,7 +1233,7 @@ hr {
   position: static;
   padding-left: 15px;
   font-size: 18px;
-  line-height: 50px;
+  line-height: 49px;
   text-align: left;
 }
 .platform-android .popover .bar {
@@ -1278,7 +1275,7 @@ hr {
   border-radius: 12px;
 }
 .platform-android .table-view .btn {
-  margin-top: -3px;
+  margin-top: -4px;
 }
 .platform-android select,
 .platform-android textarea,
@@ -1352,7 +1349,7 @@ hr {
   padding: 0;
   color: #33b5e5;
   font-size: 18px;
-  line-height: 50px;
+  line-height: 49px;
 }
 .platform-android .bar .btn-link:active, .platform-android .bar .btn-link.active {
   color: #1a9bcb;
@@ -1440,7 +1437,11 @@ hr {
   padding: 15px 0;
   font-size: 18px;
 }
+.platform-android .bar-nav .btn {
+  margin-top: 7px;
+}
 .platform-android .bar-nav .btn-link {
+  margin-top: 0;
   color: #33b5e5;
 }
 .platform-android .bar-nav .btn-link:active {
@@ -1485,20 +1486,29 @@ hr {
   color: #fff;
 }
 .platform-android .segmented-control {
-  background-color: transparent;
-  border: 1px solid #33b5e5;
-  border-radius: 3px;
+  background-color: #cecece;
+  border: 0;
+  font-size: 14px;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 .platform-android .segmented-control li {
-  border-left: 1px solid #33b5e5;
+  border-left: 1px solid #999;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 .platform-android .segmented-control li > a {
-  padding-top: 9px;
+  padding-top: 10px;
   padding-bottom: 10px;
-  color: #33b5e5;
+  color: #222222;
 }
-.platform-android .segmented-control li.active {
-  background-color: #33b5e5;
+.platform-android .segmented-control li:first-child {
+  border-left-width: 0;
+}
+.platform-android .segmented-control li:active, .platform-android .segmented-control li.active {
+  background-color: #999999;
+}
+.platform-android .bar .segmented-control {
+  top: 7px;
 }
 .platform-android .popover {
   top: 100px;

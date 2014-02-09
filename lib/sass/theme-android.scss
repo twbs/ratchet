@@ -6,9 +6,6 @@
 //
 // --------------------------------------------------
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
-
-
 // Variables
 // --------------------------------------------------
 
@@ -110,7 +107,7 @@ a {
   position: static;
   padding-left: 15px;
   font-size: $font-size-default;
-  line-height: $bar-base-height;
+  line-height: 49px;
   text-align: left;
 }
 // `bar-nav` in popovers
@@ -276,7 +273,7 @@ textarea,
     padding: 0;
     color: $primary-color;
     font-size: $font-size-default;
-    line-height: $bar-base-height;
+    line-height: 49px;
 
     &:active,
     &.active {
@@ -402,7 +399,11 @@ textarea,
 // --------------------------------------------------
 
 .bar-nav {
+  .btn {
+    margin-top: 7px;
+  }
   .btn-link {
+    margin-top: 0;
     color: $primary-color;
 
     &:active {
@@ -483,23 +484,42 @@ textarea,
 // --------------------------------------------------
 
 .segmented-control {
-  background-color: transparent;
-  border: 1px solid $primary-color;
-  border-radius: 3px;
+  background-color: #cecece;
+  border: 0;
+  font-size: 14px;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
 
   li {
-    border-left: 1px solid $primary-color;
+    border-left: 1px solid #999;
+      box-shadow: inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2);
     
     // Link that fills each section
     > a {
-      padding-top: 9px;
+      padding-top: 10px;
       padding-bottom: 10px;
-      color: $primary-color;
+      color: $text-color;
     }
+
+    // Remove border-left and shadow from first section
+    &:first-child {
+      border-left-width: 0;
+    }
+
+    &:active,
     &.active {
-      background-color: $primary-color;
+      background-color: $default-color;
     }
   }
+}
+
+
+// Segmented controller in all bars
+// --------------------------------------------------
+
+// Remove standard segmented bottom margin
+.bar .segmented-control {
+  top: 7px;
 }
 
 
