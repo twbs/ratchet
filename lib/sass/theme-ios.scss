@@ -2,7 +2,7 @@
 
 //
 // iOS theme
-// The visual and interaction styles from iOS
+// Visuals and interactions in the style of iOS
 //
 // --------------------------------------------------
 
@@ -21,8 +21,8 @@ $positive-color: #4cd964;
 $negative-color: #dd524d;
 
 // Bars
-$bar-base-height:  44px;
-$bar-tab-height:   50px;
+$bar-base-height: 44px;
+$bar-tab-height:  50px;
 
 // iOS style transitions
 $timing-fuction: cubic-bezier(.1, .5, .1, 1); // Inspired by @c2prods
@@ -36,152 +36,6 @@ a {
 }
 .content {
   background-color: #efeff4;
-}
-
-
-// Bars
-// --------------------------------------------------
-
-.bar {
-  border-bottom: 0;
-  background-color: $chrome-color;
-  @include box-shadow(0 0 1px rgba(0,0,0,.85));
-
-  // Modifier class to dock any bar below .bar-nav
-  &.bar-header-secondary {
-    top: $bar-base-height;
-  }
-
-  // Modifier class to dock any bar above a standard bar
-  &.bar-footer-secondary {
-    bottom: $bar-base-height;
-  }
-
-  // Modifier class to dock any bar above a .bar-tab
-  &.bar-footer-secondary-tab {
-    bottom: $bar-tab-height;
-  }
-}
-.bar-tab {
-  border-top: 0;
-  @include box-shadow(0 0 -1px rgba(0,0,0,.85));
-}
-.tab-item {
-  // Active states for the tab bar
-  &.active,
-  &:active {
-    .tab-label,
-    .icon {
-      color: $primary-color;
-    }
-  }
-}
-
-// `bar-nav` in popovers
-.popover .bar-nav {
-  border-bottom: 1px solid rgba(0,0,0,.15);
-}
-
-
-// Table views
-// --------------------------------------------------
-
-.table-view {
-  .table-view-cell {
-    border-bottom: 0;
-    @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
-  
-    // Remove the border from the last table view item
-    &:last-child {
-      background-image: none;
-    }
-  }
-  // Table view dividers
-  // --------------------------------------------------
-
-  .table-view-divider {
-    border-top: 0;
-    border-bottom: 0;
-    @include hairline(double, #c8c7cc, 0);  // Double (top and bottom) grey border with no offset.
-  }
-}
-
-.popover .table-view {
-  border-radius: 12px;
-}
-
-.card .table-view li:last-child {
-  background-image: none;
-}
-
-
-// Forms
-// --------------------------------------------------
-
-select,
-textarea,
-input[type="text"],
-input[type="search"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="tel"],
-input[type="color"],
-.input-group {
-  height: 40px;
-  padding: 10px 15px;  border: 1px solid rgba(0, 0, 0, .2);
-}
-
-// Rounded search input
-input[type="search"] {
-  height: 34px;
-  text-align: center;
-  background-color: rgba(0,0,0,.1);
-  border: 0;
-  border-radius: 6px;
-}
-input[type="search"]:focus {
-  text-align: left;
-}
-select,
-textarea,
-.input-group {
-  height: auto;
-}
-
-// Input groups (cluster multiple inputs together into a single group)
-// -------------------------------------------------------------------
-.input-group {
-  padding: 0;
-}
-.input-group input {
-  border: 0;
-  @include hairline(single, #c8c7cc, 15px);
-}
-// Remove bottom border on last input to avoid double bottom border
-.input-group input:last-child {
-  background-image: none;
-}
-
-// Input groups with labels
-// --------------------------------------------------
-
-// To use labels with input groups, wrap a label and an input in an .input-row
-.input-row {
-  border-bottom: 0;
-  @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
-}
-// Remove bottom border on last input-row to avoid double bottom border
-.input-row:last-child,
-.input-row label + input {
-  background-image: none;
 }
 
 
@@ -281,9 +135,65 @@ textarea,
   }
 }
 
-// Buttons in nav bars
+// Buttons with badges
+.btn {
+  .badge {
+    background-color: rgba(0,0,0,.15);
+
+    &.badge-inverted {
+      background-color: transparent;
+    }
+  }
+
+  // Active states
+  &:active .badge {
+    color: #fff;
+  }
+}
+
+
+// Bars
 // --------------------------------------------------
 
+// Default bar
+.bar {
+  border-bottom: 0;
+  background-color: $chrome-color;
+  @include box-shadow(0 0 1px rgba(0,0,0,.85));
+
+  // Modifier class to dock any bar below .bar-nav
+  &.bar-header-secondary {
+    top: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar above a standard bar
+  &.bar-footer-secondary {
+    bottom: $bar-base-height;
+  }
+
+  // Modifier class to dock any bar above a .bar-tab
+  &.bar-footer-secondary-tab {
+    bottom: $bar-tab-height;
+  }
+}
+
+// Tab bar
+.bar-tab {
+  border-top: 0;
+  @include box-shadow(0 0 -1px rgba(0,0,0,.85));
+}
+.tab-item {
+  // Active states for the tab bar
+  &.active,
+  &:active {
+    .tab-label,
+    .icon {
+      color: $primary-color;
+    }
+  }
+}
+
+// Nav bars with buttons
 .bar-nav {
   // Link buttons in nav bars
   .btn-link {
@@ -297,7 +207,7 @@ textarea,
 }
 
 
-//
+
 // Badges
 // --------------------------------------------------
 
@@ -310,8 +220,7 @@ textarea,
 
 
 // Badge modifiers
-// --------------------------------------------------
-
+//
 // Main badge
 .badge-primary {
   color: #fff;
@@ -345,20 +254,105 @@ textarea,
   }
 }
 
-// Badges in buttons
-.btn {
-  .badge {
-    background-color: rgba(0,0,0,.15);
 
-    &.badge-inverted {
-      background-color: transparent;
+// Cards
+// --------------------------------------------------
+
+// Cards with table-views
+.card .table-view-cell:last-child {
+  background-image: none;
+}
+
+// Table views
+// --------------------------------------------------
+
+.table-view {
+  .table-view-cell {
+    border-bottom: 0;
+    @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
+  
+    // Remove the border from the last table view item
+    &:last-child {
+      background-image: none;
     }
   }
 
-  // Active states
-  &:active .badge {
-    color: #fff;
+  // Table view dividers
+  .table-view-divider {
+    border-top: 0;
+    border-bottom: 0;
+    @include hairline(double, #c8c7cc, 0);  // Double (top and bottom) grey border with no offset.
   }
+}
+
+
+// Forms
+// --------------------------------------------------
+
+select,
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+.input-group {
+  height: 40px;
+  padding: 10px 15px;  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+// Rounded search input
+input[type="search"] {
+  height: 34px;
+  text-align: center;
+  background-color: rgba(0,0,0,.1);
+  border: 0;
+  border-radius: 6px;
+}
+input[type="search"]:focus {
+  text-align: left;
+}
+select,
+textarea,
+.input-group {
+  height: auto;
+}
+
+// Input groups (cluster multiple inputs together into a single group)
+// -------------------------------------------------------------------
+.input-group {
+  padding: 0;
+}
+.input-group input {
+  border: 0;
+  @include hairline(single, #c8c7cc, 15px);
+}
+// Remove bottom border on last input to avoid double bottom border
+.input-group input:last-child {
+  background-image: none;
+}
+
+// Input groups with labels
+// --------------------------------------------------
+
+// To use labels with input groups, wrap a label and an input in an .input-row
+.input-row {
+  border-bottom: 0;
+  @include hairline(single, #c8c7cc, 15px); // Single grey border with a 15px offset.
+}
+// Remove bottom border on last input-row to avoid double bottom border
+.input-row:last-child,
+.input-row label + input {
+  background-image: none;
 }
 
 
@@ -389,8 +383,7 @@ textarea,
 }
 
 // Other segmented controller types
-// --------------------------------------------------
-
+//
 // Primary
 .segmented-control-primary {
   border: 1px solid $primary-color;
@@ -461,7 +454,6 @@ textarea,
 }
 
 
-//
 // Popovers
 // --------------------------------------------------
 
@@ -472,16 +464,24 @@ textarea,
   &:before {
     border-bottom: 15px solid $chrome-color;
   }
-  .bar {
-    @include box-shadow(none);
-  }
-  .bar-nav {
-    border-bottom: 1px solid rgba(0,0,0,.15);
-  }
+}
+
+// Popovers with `bar`
+.popover .bar {
+  @include box-shadow(none);
+}
+
+// Popovers with `bar-nav`
+.popover .bar-nav {
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+// Popovers with `table-views1
+.popover .table-view {
+  border-radius: 12px;
 }
 
 
-//
 // Modal styles
 // --------------------------------------------------
 
@@ -494,7 +494,7 @@ textarea,
   }
 }
 
-//
+
 // Toggles styles
 // --------------------------------------------------
 .toggle {
@@ -536,11 +536,9 @@ textarea,
 }
 
 
-//
 // Push styles
 // --------------------------------------------------
 .content {
-  
   // Fade animation 
   &.fade {
     @include transition(opacity .2s ease-in-out);

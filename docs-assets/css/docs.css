@@ -798,114 +798,6 @@ hr {
 .platform-ios .content {
   background-color: #efeff4;
 }
-.platform-ios .bar {
-  border-bottom: 0;
-  background-color: rgba(247, 247, 247, 0.98);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
-}
-.platform-ios .bar.bar-header-secondary {
-  top: 44px;
-}
-.platform-ios .bar.bar-footer-secondary {
-  bottom: 44px;
-}
-.platform-ios .bar.bar-footer-secondary-tab {
-  bottom: 50px;
-}
-.platform-ios .bar-tab {
-  border-top: 0;
-  -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
-}
-.platform-ios .tab-item.active .tab-label,
-.platform-ios .tab-item.active .icon, .platform-ios .tab-item:active .tab-label,
-.platform-ios .tab-item:active .icon {
-  color: #007aff;
-}
-.platform-ios .popover .bar-nav {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-.platform-ios .table-view .table-view-cell {
-  border-bottom: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 15px 100%;
-  background-repeat: no-repeat;
-}
-.platform-ios .table-view .table-view-cell:last-child {
-  background-image: none;
-}
-.platform-ios .table-view .table-view-divider {
-  border-top: 0;
-  border-bottom: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%, 0 0%;
-  background-repeat: no-repeat;
-}
-.platform-ios .popover .table-view {
-  border-radius: 12px;
-}
-.platform-ios .card .table-view li:last-child {
-  background-image: none;
-}
-.platform-ios select,
-.platform-ios textarea,
-.platform-ios input[type="text"],
-.platform-ios input[type="search"],
-.platform-ios input[type="password"],
-.platform-ios input[type="datetime"],
-.platform-ios input[type="datetime-local"],
-.platform-ios input[type="date"],
-.platform-ios input[type="month"],
-.platform-ios input[type="time"],
-.platform-ios input[type="week"],
-.platform-ios input[type="number"],
-.platform-ios input[type="email"],
-.platform-ios input[type="url"],
-.platform-ios input[type="tel"],
-.platform-ios input[type="color"],
-.platform-ios .input-group {
-  height: 40px;
-  padding: 10px 15px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.platform-ios input[type="search"] {
-  height: 34px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 0;
-  border-radius: 6px;
-}
-.platform-ios input[type="search"]:focus {
-  text-align: left;
-}
-.platform-ios select,
-.platform-ios textarea,
-.platform-ios .input-group {
-  height: auto;
-}
-.platform-ios .input-group {
-  padding: 0;
-}
-.platform-ios .input-group input {
-  border: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 15px 100%;
-  background-repeat: no-repeat;
-}
-.platform-ios .input-group input:last-child {
-  background-image: none;
-}
-.platform-ios .input-row {
-  border-bottom: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 15px 100%;
-  background-repeat: no-repeat;
-}
-.platform-ios .input-row:last-child,
-.platform-ios .input-row label + input {
-  background-image: none;
-}
 .platform-ios .btn {
   border: 1px solid #929292;
   color: #929292;
@@ -972,6 +864,40 @@ hr {
   color: #0062cc;
   background-color: transparent;
 }
+.platform-ios .btn .badge {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.platform-ios .btn .badge.badge-inverted {
+  background-color: transparent;
+}
+.platform-ios .btn:active .badge {
+  color: #fff;
+}
+.platform-ios .bar {
+  border-bottom: 0;
+  background-color: rgba(247, 247, 247, 0.98);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+}
+.platform-ios .bar.bar-header-secondary {
+  top: 44px;
+}
+.platform-ios .bar.bar-footer-secondary {
+  bottom: 44px;
+}
+.platform-ios .bar.bar-footer-secondary-tab {
+  bottom: 50px;
+}
+.platform-ios .bar-tab {
+  border-top: 0;
+  -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
+}
+.platform-ios .tab-item.active .tab-label,
+.platform-ios .tab-item.active .icon, .platform-ios .tab-item:active .tab-label,
+.platform-ios .tab-item:active .icon {
+  color: #007aff;
+}
 .platform-ios .bar-nav .btn-link {
   color: #007aff;
 }
@@ -1007,14 +933,82 @@ hr {
   color: #dd524d;
   background-color: transparent;
 }
-.platform-ios .btn .badge {
-  background-color: rgba(0, 0, 0, 0.15);
+.platform-ios .card .table-view-cell:last-child {
+  background-image: none;
 }
-.platform-ios .btn .badge.badge-inverted {
-  background-color: transparent;
+.platform-ios .table-view .table-view-cell {
+  border-bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
 }
-.platform-ios .btn:active .badge {
-  color: #fff;
+.platform-ios .table-view .table-view-cell:last-child {
+  background-image: none;
+}
+.platform-ios .table-view .table-view-divider {
+  border-top: 0;
+  border-bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 0 100%, 0 0%;
+  background-repeat: no-repeat;
+}
+.platform-ios select,
+.platform-ios textarea,
+.platform-ios input[type="text"],
+.platform-ios input[type="search"],
+.platform-ios input[type="password"],
+.platform-ios input[type="datetime"],
+.platform-ios input[type="datetime-local"],
+.platform-ios input[type="date"],
+.platform-ios input[type="month"],
+.platform-ios input[type="time"],
+.platform-ios input[type="week"],
+.platform-ios input[type="number"],
+.platform-ios input[type="email"],
+.platform-ios input[type="url"],
+.platform-ios input[type="tel"],
+.platform-ios input[type="color"],
+.platform-ios .input-group {
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.platform-ios input[type="search"] {
+  height: 34px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 6px;
+}
+.platform-ios input[type="search"]:focus {
+  text-align: left;
+}
+.platform-ios select,
+.platform-ios textarea,
+.platform-ios .input-group {
+  height: auto;
+}
+.platform-ios .input-group {
+  padding: 0;
+}
+.platform-ios .input-group input {
+  border: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
+}
+.platform-ios .input-group input:last-child {
+  background-image: none;
+}
+.platform-ios .input-row {
+  border-bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
+  background-position: 15px 100%;
+  background-repeat: no-repeat;
+}
+.platform-ios .input-row:last-child,
+.platform-ios .input-row label + input {
+  background-image: none;
 }
 .platform-ios .segmented-control {
   color: #929292;
@@ -1103,6 +1097,9 @@ hr {
 }
 .platform-ios .popover .bar-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.platform-ios .popover .table-view {
+  border-radius: 12px;
 }
 .platform-ios .modal {
   -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
