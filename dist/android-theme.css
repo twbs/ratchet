@@ -289,10 +289,6 @@ a:active {
   background-color: transparent;
 }
 
-.table-view .btn {
-  margin-top: -4px;
-}
-
 select,
 textarea,
 input[type="text"],
@@ -427,6 +423,7 @@ textarea,
   border-radius: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 .popover:before {
@@ -476,6 +473,7 @@ textarea,
   background-color: #33b5e5;
   border-color: #33b5e5;
   -webkit-transform: translate3d(50px, 0, 0);
+  -ms-transform: translate3d(50px, 0, 0);
   transform: translate3d(50px, 0, 0);
 }
 .toggle.active:before {

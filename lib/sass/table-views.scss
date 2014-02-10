@@ -12,7 +12,7 @@
   .table-view-cell {
     position: relative;
     overflow: hidden;
-    padding: 11px 15px;
+    padding: 11px 65px 11px 15px;
     border-bottom: $border-default;
 
     // Remove the border from the last table view item
@@ -25,7 +25,7 @@
       display: block;
       overflow: hidden;
       padding: inherit;
-      margin: -11px -15px; // Make the entire list item tappable.
+      margin: -11px -65px -11px -15px; // Make the entire list item tappable.
       color: inherit;
 
       &:active {
@@ -83,50 +83,33 @@
   }
 }
 
-// Table-views with buttons
+
+// Table-views with buttons, badges and toggles
 // --------------------------------------------------
-
-.table-view .btn {
-  margin-top: -1px; // Center the btn inside the cell
-}
-
-
-// Table-views with badges
-// --------------------------------------------------
-.table-view .badge {
-  margin-top: 2px;
-
-  &.pull-left {
-    margin-right: 5px;
+.table-view-cell,
+.table-view-cell > a {
+  > .btn,
+  > .badge,
+  > .toggle {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    @include transform(translateY(-50%));
   }
-  &.pull-right {
-    margin-left: 5px;
+
+  // If the cell has a chevron, give some more room.
+  .push-left,
+  .push-right {
+    > .btn,
+    > .badge,
+    > .toggle {
+      right: 35px;
+    }
   }
 }
-
-
-// Table-views with toggles
-// --------------------------------------------------
-
-.table-view .toggle {
-  margin-top: -4px; // Center the toggle inside the cell
-}
-
 
 // Table-views with Ratchicons
 // --------------------------------------------------
 .table-view .icon {
-  margin-top: 3px;
-  font-size: inherit;
-
-  &.icon-left,
-  &.icon-right {
-    color: #bbb;
-  }
-  &.pull-left {
-    margin-right: 5px;
-  }
-  &.pull-right {
-    margin-left: 5px;
-  }
+  font-size: inherit
 }
