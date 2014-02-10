@@ -364,19 +364,20 @@ textarea,
 }
 
 
-//
-// Segmented controllers
+// Segmented controls
 // --------------------------------------------------
 
 .segmented-control {
-  color: $default-color;
   background-color: transparent;
   border: 1px solid $default-color;
 
   li {
     border-color: $default-color;
     @include transition(background-color .1s linear);
-    
+
+    > a {
+      color: $default-color;
+    }
     &:active {
       background-color: lighten($default-color, 35%);
     }

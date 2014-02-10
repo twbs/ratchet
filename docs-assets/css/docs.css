@@ -1022,7 +1022,6 @@ hr {
   background-image: none;
 }
 .platform-ios .segmented-control {
-  color: #929292;
   background-color: transparent;
   border: 1px solid #929292;
 }
@@ -1031,6 +1030,9 @@ hr {
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
+}
+.platform-ios .segmented-control li > a {
+  color: #929292;
 }
 .platform-ios .segmented-control li:active {
   background-color: #ebebeb;

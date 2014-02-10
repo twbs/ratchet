@@ -261,7 +261,6 @@ textarea,
 }
 
 .segmented-control {
-  color: #929292;
   background-color: transparent;
   border: 1px solid #929292;
 }
@@ -270,6 +269,9 @@ textarea,
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
+}
+.segmented-control li > a {
+  color: #929292;
 }
 .segmented-control li:active {
   background-color: #ebebeb;
