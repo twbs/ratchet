@@ -394,11 +394,11 @@ body {
   margin: 10px;
 }
 
-#segmentedControllersInDevice .segmented-control {
+#segmentedControlsInDevice .segmented-control {
   margin-right: 10px;
   margin-left: 10px;
 }
-#segmentedControllersInDevice .card span {
+#segmentedControlsInDevice .card span {
   padding: 10px;
 }
 
