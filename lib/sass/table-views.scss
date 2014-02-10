@@ -11,7 +11,8 @@
   // Pad each table view item and add dividers
   .table-view-cell {
     position: relative;
-    padding: 11px 15px 12px 15px;
+    overflow: hidden;
+    padding: 11px 15px;
     border-bottom: $border-default;
 
     // Remove the border from the last table view item
@@ -22,8 +23,9 @@
     > a:not(.btn) {
       position: relative;
       display: block;
+      overflow: hidden;
       padding: inherit;
-      margin: -11px -15px -12px -15px; // Make the entire list item tappable.
+      margin: -11px -15px; // Make the entire list item tappable.
       color: inherit;
 
       &:active {
@@ -64,25 +66,22 @@
 }
 
 
-// Indented table views
+// Table-views with media (images,avatars, icons)
 // --------------------------------------------------
 
-.table-view-indented .table-view-cell {
-  padding-left: 59px;
-  background-position-x: 59px; // Make room for your left aligned media/icons.
-
-  > a:not(.btn) {
-    margin-left: -59px;
+.table-view .media,
+.table-view .media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.table-view .media-object {
+  &.pull-left {
+    margin-right: 10px;
   }
-
-  > .pull-left,
-  > a:not(.btn) .pull-left {
-    position: absolute;
-    left: 15px;
-    z-index: 1;
+  &.pull-right {
+    margin-left: 10px;
   }
 }
-
 
 // Table-views with buttons
 // --------------------------------------------------

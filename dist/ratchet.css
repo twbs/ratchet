@@ -684,7 +684,8 @@ input[type="button"] {
 }
 .table-view .table-view-cell {
   position: relative;
-  padding: 11px 15px 12px 15px;
+  overflow: hidden;
+  padding: 11px 15px;
   border-bottom: 1px solid #dddddd;
 }
 .table-view .table-view-cell:last-child {
@@ -693,8 +694,9 @@ input[type="button"] {
 .table-view .table-view-cell > a:not(.btn) {
   position: relative;
   display: block;
+  overflow: hidden;
   padding: inherit;
-  margin: -11px -15px -12px -15px;
+  margin: -11px -15px;
   color: inherit;
 }
 .table-view .table-view-cell > a:not(.btn):active {
@@ -723,18 +725,17 @@ input[type="button"] {
   border-radius: 0 0 6px 6px;
 }
 
-.table-view-indented .table-view-cell {
-  padding-left: 59px;
-  background-position-x: 59px;
+.table-view .media,
+.table-view .media-body {
+  overflow: hidden;
+  zoom: 1;
 }
-.table-view-indented .table-view-cell > a:not(.btn) {
-  margin-left: -59px;
+
+.table-view .media-object.pull-left {
+  margin-right: 10px;
 }
-.table-view-indented .table-view-cell > .pull-left,
-.table-view-indented .table-view-cell > a:not(.btn) .pull-left {
-  position: absolute;
-  left: 15px;
-  z-index: 1;
+.table-view .media-object.pull-right {
+  margin-left: 10px;
 }
 
 .table-view .btn {
