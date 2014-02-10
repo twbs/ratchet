@@ -556,7 +556,7 @@ input[type="button"] {
 
 .bar-nav .btn {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   padding: 6px 12px;
   margin-top: 8px;
   font-weight: 400;
@@ -612,14 +612,16 @@ input[type="button"] {
   margin: 0 auto;
 }
 
-.bar .icon {
+.bar > .icon {
+  position: relative;
+  z-index: 20;
   font-size: 24px;
   margin-top: 11px;
 }
-.bar .icon.pull-left {
+.bar > .icon.pull-left {
   margin-left: -3px;
 }
-.bar .icon.pull-right {
+.bar > .icon.pull-right {
   margin-right: -3px;
 }
 

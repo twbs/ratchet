@@ -10,27 +10,18 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../dist/ratchet.css">
-    <link rel="stylesheet" href="css/docs.css">
-    <link rel="stylesheet" href="css/prettify.css">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <style>
-      .iphone [class*="bar"] {
-        position: absolute;
-      }
-    </style>
-
     <link rel="apple-touch-icon-precomposed" sizes="512x512" href="img/apple-touch-icon-512x512.png">
   </head>
   <body ontouchstart="">
-    <header class="bar-nav">
+    <header class="bar bar-nav">
       <h1 class="title">Push</h1>
     </header>
     <div class="content">
       <div class="card">
         <ul class="table-view">
           <li class="table-view-cell">
-            <a href="two.html" data-transition="slide-in" data-selector=".iphone-content">
-                <span class="icon icon-right pull-right"></span>
+            <a class="push-right" href="two.html" data-transition="slide-in" data-selector=".device-content">
                 Load new page with push
             </a>
           </li>
