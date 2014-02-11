@@ -15,24 +15,18 @@
   border-radius: 4px;
 
   // Section within controller
-  li {
+  .control-item {
     display: table-cell;
     overflow: hidden;
     width: 1%;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    line-height: 1;
+    color: #333;
     text-align: center;
     white-space: nowrap;
+    text-overflow: ellipsis;
     border-left: 1px solid #ccc;
-    
-    // Link that fills each section
-    > a {
-      display: block;
-      padding-top: 6px;
-      padding-bottom: 7px;
-      overflow: hidden;
-      line-height: 1;
-      color: #333;
-      text-overflow: ellipsis;
-    }
 
     // Remove border-left and shadow from first section
     &:first-child {
@@ -56,12 +50,10 @@
 .segmented-control-primary {
   border: 1px solid $primary-color;
 
-  li {
+  .control-item {
     border-color: inherit;
-    
-    > a {
-      color: $primary-color;
-    }
+    color: $primary-color;
+
     &:active {
       background-color: lighten($primary-color, 35%);
     }
@@ -79,12 +71,10 @@
 .segmented-control-positive {
   border: 1px solid $positive-color;
 
-  li {
+  .control-item {
     border-color: inherit;
-    
-    > a {
-      color: $positive-color;
-    }
+    color: $positive-color;
+
     &:active {
       background-color: lighten($positive-color, 35%);
     }
@@ -102,12 +92,10 @@
 .segmented-control-negative {
   border: 1px solid $negative-color;
 
-  li {
+  .control-item {
     border-color: inherit;
-    
-    > a {
-      color: $negative-color;
-    }
+    color: $negative-color;
+
     &:active {
       background-color: lighten($negative-color, 35%);
     }
@@ -121,7 +109,7 @@
   }
 }
 
-.segmented-control-item {
+.control-content {
   display: none;
 
   &.active {

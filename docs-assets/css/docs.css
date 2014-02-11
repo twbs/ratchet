@@ -304,21 +304,17 @@ body {
   border-color: #00d1fe;
   background-color: transparent;
 }
-.platform-toggle .segmented-control li {
+.platform-toggle .segmented-control .control-item {
   cursor: pointer;
+  color: #00d1fe;
   border-color: #00d1fe;
 }
-.platform-toggle .segmented-control li a {
-  color: #00d1fe;
-}
-.platform-toggle .segmented-control li:active {
+.platform-toggle .segmented-control .control-item:active {
   background-color: rgba(0, 209, 254, 0.3);
 }
-.platform-toggle .segmented-control li.active {
-  background-color: #00d1fe;
-}
-.platform-toggle .segmented-control li.active a {
+.platform-toggle .segmented-control .control-item.active {
   color: #fff;
+  background-color: #00d1fe;
 }
 
 .component {
@@ -395,6 +391,7 @@ body {
 }
 
 #segmentedControlsInDevice .segmented-control {
+  margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
 }

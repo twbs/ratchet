@@ -318,22 +318,17 @@ body {
     border-color: #00d1fe;
     background-color: transparent;
 
-    li {
+    .control-item {
       cursor: pointer;
+      color: #00d1fe;
       border-color: #00d1fe;
-
-      a { 
-        color: #00d1fe;
-      }
+      
       &:active {
         background-color: rgba(0,209,254,.3);
       }
       &.active {
+        color: #fff;
         background-color: #00d1fe;
-
-        a {
-          color: #fff;
-        }
       }
     }
   }
@@ -411,6 +406,7 @@ body {
 //Segmented Control
 #segmentedControlsInDevice {
   .segmented-control {
+    margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px;
   }

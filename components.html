@@ -21,17 +21,17 @@ base_url: "../"
   </div>
 
   <div class="platform-toggle">
-    <ul class="segmented-control">
-      <li  class="platform-switch active" data-platform="">
-        <a>Base</a>
-      </li>
-      <li class="platform-switch" data-platform="platform-ios">
-        <a>iOS</a>
-      </li>
-      <li class="platform-switch" data-platform="platform-android">
-        <a>Android</a>
-      </li>
-    </ul>
+    <div class="segmented-control">
+      <a  class="platform-switch control-item active" data-platform="">
+        Base
+      </a>
+      <a class="platform-switch control-item" data-platform="platform-ios">
+        iOS
+      </a>
+      <a class="platform-switch control-item" data-platform="platform-android">
+        Android
+      </a>
+    </div>
   </div>
 </div>
 
@@ -168,17 +168,11 @@ base_url: "../"
           <a class="btn pull-right">
             Right
           </a>
-          <ul class="segmented-control">
-            <li class="active">
-              <a>One</a>
-            </li>
-            <li>
-              <a>Two</a>
-            </li>
-            <li>
-              <a>Three</a>
-            </li>
-          </ul>
+          <div class="segmented-control">
+            <a class="control-item active">One</a>
+            <a class="control-item">Two</a>
+            <a class="control-item">Three</a>
+          </div>
         </header>
       </div>
 
@@ -190,17 +184,11 @@ base_url: "../"
   <a class="btn pull-right">
     Right
   </a>
-  <ul class="segmented-control">
-    <li class="active">
-      <a>One</a>
-    </li>
-    <li>
-      <a>Two</a>
-    </li>
-    <li>
-      <a>Three</a>
-    </li>
-  </ul>
+  <div class="segmented-control">
+    <a class="control-item active">One</a>
+    <a class="control-item">Two</a>
+    <a class="control-item">Three</a>
+  </div>
 </header>
 {% endhighlight %}
 
@@ -270,17 +258,11 @@ base_url: "../"
       <div class="component-example component-example-fullbleed">
         <!-- Segmented control in standard bar fixed to top -->
         <nav class="bar bar-standard">
-          <ul class="segmented-control">
-            <li class="active">
-              <a>Thing one</a>
-            </li>
-            <li>
-              <a>Thing two</a>
-            </li>
-            <li>
-              <a>Thing three</a>
-            </li>
-          </ul>
+          <div class="segmented-control">
+            <a class="control-item active">Thing one</a>
+            <a class="control-item">Thing two</a>
+            <a class="control-item">Thing three</a>
+          </div>
         </nav>
 
         <!-- Block button in standard bar fixed below top bar -->
@@ -292,17 +274,11 @@ base_url: "../"
 {% highlight html %}
 <!-- Segmented control in standard bar fixed to top -->
 <nav class="bar bar-standard">
-  <ul class="segmented-control">
-    <li class="active">
-      <a>Thing one</a>
-    </li>
-    <li>
-      <a>Thing two</a>
-    </li>
-    <li>
-      <a>Thing three</a>
-    </li>
-  </ul>
+  <div class="segmented-control">
+    <a class="control-item active">Thing one</a>
+    <a class="control-item">Thing two</a>
+    <a class="control-item">Thing three</a>
+  </div>
 </nav>
 
 <!-- Block button in standard bar fixed below top bar -->
@@ -759,44 +735,43 @@ quis nostrud exercitation ullamco.</p>
   <!-- Segmented Control -->
   <article class="component" id="segmentedControls">
     <h3 class="component-title">Segmented control</h3>
-    <p class="component-description">Created with flex-box so button sizes and spacing are consistent. Content sections that are to be swapped in and out by the controller should all be siblings and have the class "segmented-control-item". Then, just give each content section an id and point the link in the segmented control to that id.</p>
+    <p class="component-description">Created with flex-box so button sizes and spacing are consistent. Content sections that are to be swapped in and out by the controller should all be siblings and have the class "control-content". Then, just give each content section an id and point the link in the segmented control to that id.</p>
 
     <div class="component-example">
-      <ul class="segmented-control">
-        <li class="active">
-          <a href="#item1mobile">Thing one</a>
-        </li>
-        <li>
-          <a href="#item2mobile">Thing two</a>
-        </li>
-        <li>
-          <a href="#item3mobile">Thing three</a>
-        </li>
-      </ul>
+      <div class="segmented-control">
+        <a class="control-item active" href="#item1mobile">
+          Thing one
+        </a>
+        <a class="control-item" href="#item2mobile">
+          Thing two
+        </a>
+        <a class="control-item" href="#item3mobile">
+          Thing three
+        </a>
+      </div>
       <div class="card">
-        <span id="item1mobile" class="segmented-control-item active">Item 1</span>
-        <span id="item2mobile" class="segmented-control-item">Item 2</span>
-        <span id="item3mobile" class="segmented-control-item">Item 3</span>
+        <span id="item1mobile" class="control-content active">Item 1</span>
+        <span id="item2mobile" class="control-content">Item 2</span>
+        <span id="item3mobile" class="control-content">Item 3</span>
       </div>
     </div>
 
 {% highlight html %}
-<ul class="segmented-control">
-  <li class="active">
-    <a href="#item1mobile">Thing one</a>
-  </li>
-  <li>
-    <a href="#item2mobile">Thing two</a>
-  </li>
-  <li>
-    <a href="#item3mobile">Thing three</a>
-  </li>
-</ul>
-<div class="card">
-  <span id="item1mobile" class="segmented-control-item active">Item 1</span>
-  <span id="item2mobile" class="segmented-control-item">Item 2</span>
-  <span id="item3mobile" class="segmented-control-item">Item 3</span>
+<div class="segmented-control">
+  <a class="control-item active" href="#item1mobile">
+    Thing one
+  </a>
+  <a class="control-item" href="#item2mobile">
+    Thing two
+  </a>
+  <a class="control-item" href="#item3mobile">
+    Thing three
+  </a>
 </div>
+<div class="card">
+  <span id="item1mobile" class="control-content active">Item 1</span>
+  <span id="item2mobile" class="control-content">Item 2</span>
+  <span id="item3mobile" class="control-content">Item 3</span>
 </div>
 {% endhighlight %}
 
