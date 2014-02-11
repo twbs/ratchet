@@ -347,74 +347,60 @@ textarea,
 }
 
 .segmented-control {
+  font-size: 14px;
   background-color: #cecece;
   border: 0;
-  font-size: 14px;
   border-radius: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
-.segmented-control li {
-  border-left: 1px solid #999;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-.segmented-control li > a {
+.segmented-control .control-item {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #222222;
+  border-left: 1px solid #999;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
-.segmented-control li:first-child {
+.segmented-control .control-item:first-child {
   border-left-width: 0;
 }
-.segmented-control li:active, .segmented-control li.active {
+.segmented-control .control-item:active, .segmented-control .control-item.active {
   background-color: #999999;
 }
 
 .segmented-control-primary {
   border: 0;
 }
-.segmented-control-primary li {
+.segmented-control-primary .control-item {
+  color: #fff;
   border-color: inherit;
 }
-.segmented-control-primary li > a {
+.segmented-control-primary .control-item:active, .segmented-control-primary .control-item.active {
   color: #fff;
-}
-.segmented-control-primary li:active, .segmented-control-primary li.active {
   background-color: #33b5e5;
-}
-.segmented-control-primary li:active > a, .segmented-control-primary li.active > a {
-  color: #fff;
 }
 
 .segmented-control-positive {
   border: 0;
 }
-.segmented-control-positive li {
+.segmented-control-positive .control-item {
+  color: #fff;
   border-color: inherit;
 }
-.segmented-control-positive li > a {
+.segmented-control-positive .control-item:active, .segmented-control-positive .control-item.active {
   color: #fff;
-}
-.segmented-control-positive li:active, .segmented-control-positive li.active {
   background-color: #99cc00;
-}
-.segmented-control-positive li:active > a, .segmented-control-positive li.active > a {
-  color: #fff;
 }
 
 .segmented-control-negative {
   border: 0;
 }
-.segmented-control-negative li {
+.segmented-control-negative .control-item {
+  color: #fff;
   border-color: inherit;
 }
-.segmented-control-negative li > a {
+.segmented-control-negative .control-item:active, .segmented-control-negative .control-item.active {
   color: #fff;
-}
-.segmented-control-negative li:active, .segmented-control-negative li.active {
   background-color: #ff4444;
-}
-.segmented-control-negative li:active > a, .segmented-control-negative li.active > a {
-  color: #fff;
 }
 
 .popover {

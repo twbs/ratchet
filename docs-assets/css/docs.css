@@ -1022,77 +1022,61 @@ hr {
   background-color: transparent;
   border: 1px solid #929292;
 }
-.platform-ios .segmented-control li {
+.platform-ios .segmented-control .control-item {
+  color: #929292;
   border-color: #929292;
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-.platform-ios .segmented-control li > a {
-  color: #929292;
-}
-.platform-ios .segmented-control li:active {
+.platform-ios .segmented-control .control-item:active {
   background-color: #ebebeb;
 }
-.platform-ios .segmented-control li.active {
-  background-color: #929292;
-}
-.platform-ios .segmented-control li.active > a {
+.platform-ios .segmented-control .control-item.active {
   color: #fff;
+  background-color: #929292;
 }
 .platform-ios .segmented-control-primary {
   border: 1px solid #007aff;
 }
-.platform-ios .segmented-control-primary li {
+.platform-ios .segmented-control-primary .control-item {
+  color: #007aff;
   border-color: inherit;
 }
-.platform-ios .segmented-control-primary li > a {
-  color: #007aff;
-}
-.platform-ios .segmented-control-primary li:active {
+.platform-ios .segmented-control-primary .control-item:active {
   background-color: #b3d7ff;
 }
-.platform-ios .segmented-control-primary li.active {
-  background-color: #007aff;
-}
-.platform-ios .segmented-control-primary li.active > a {
+.platform-ios .segmented-control-primary .control-item.active {
   color: #fff;
+  background-color: #007aff;
 }
 .platform-ios .segmented-control-positive {
   border: 1px solid #4cd964;
 }
-.platform-ios .segmented-control-positive li {
+.platform-ios .segmented-control-positive .control-item {
+  color: #4cd964;
   border-color: inherit;
 }
-.platform-ios .segmented-control-positive li > a {
-  color: #4cd964;
-}
-.platform-ios .segmented-control-positive li:active {
+.platform-ios .segmented-control-positive .control-item:active {
   background-color: #dff8e3;
 }
-.platform-ios .segmented-control-positive li.active {
-  background-color: #4cd964;
-}
-.platform-ios .segmented-control-positive li.active > a {
+.platform-ios .segmented-control-positive .control-item.active {
   color: #fff;
+  background-color: #4cd964;
 }
 .platform-ios .segmented-control-negative {
   border: 1px solid #dd524d;
 }
-.platform-ios .segmented-control-negative li {
+.platform-ios .segmented-control-negative .control-item {
+  color: #dd524d;
   border-color: inherit;
 }
-.platform-ios .segmented-control-negative li > a {
-  color: #dd524d;
-}
-.platform-ios .segmented-control-negative li:active {
+.platform-ios .segmented-control-negative .control-item:active {
   background-color: #fae4e3;
 }
-.platform-ios .segmented-control-negative li.active {
-  background-color: #dd524d;
-}
-.platform-ios .segmented-control-negative li.active > a {
+.platform-ios .segmented-control-negative .control-item.active {
   color: #fff;
+  background-color: #dd524d;
 }
 .platform-ios .popover {
   border-radius: 12px;
@@ -1505,71 +1489,57 @@ hr {
   border-bottom: 0;
 }
 .platform-android .segmented-control {
+  font-size: 14px;
   background-color: #cecece;
   border: 0;
-  font-size: 14px;
   border-radius: 2px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
-.platform-android .segmented-control li {
-  border-left: 1px solid #999;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-.platform-android .segmented-control li > a {
+.platform-android .segmented-control .control-item {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #222222;
+  border-left: 1px solid #999;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
-.platform-android .segmented-control li:first-child {
+.platform-android .segmented-control .control-item:first-child {
   border-left-width: 0;
 }
-.platform-android .segmented-control li:active, .platform-android .segmented-control li.active {
+.platform-android .segmented-control .control-item:active, .platform-android .segmented-control .control-item.active {
   background-color: #999999;
 }
 .platform-android .segmented-control-primary {
   border: 0;
 }
-.platform-android .segmented-control-primary li {
+.platform-android .segmented-control-primary .control-item {
+  color: #fff;
   border-color: inherit;
 }
-.platform-android .segmented-control-primary li > a {
+.platform-android .segmented-control-primary .control-item:active, .platform-android .segmented-control-primary .control-item.active {
   color: #fff;
-}
-.platform-android .segmented-control-primary li:active, .platform-android .segmented-control-primary li.active {
   background-color: #33b5e5;
-}
-.platform-android .segmented-control-primary li:active > a, .platform-android .segmented-control-primary li.active > a {
-  color: #fff;
 }
 .platform-android .segmented-control-positive {
   border: 0;
 }
-.platform-android .segmented-control-positive li {
+.platform-android .segmented-control-positive .control-item {
+  color: #fff;
   border-color: inherit;
 }
-.platform-android .segmented-control-positive li > a {
+.platform-android .segmented-control-positive .control-item:active, .platform-android .segmented-control-positive .control-item.active {
   color: #fff;
-}
-.platform-android .segmented-control-positive li:active, .platform-android .segmented-control-positive li.active {
   background-color: #99cc00;
-}
-.platform-android .segmented-control-positive li:active > a, .platform-android .segmented-control-positive li.active > a {
-  color: #fff;
 }
 .platform-android .segmented-control-negative {
   border: 0;
 }
-.platform-android .segmented-control-negative li {
+.platform-android .segmented-control-negative .control-item {
+  color: #fff;
   border-color: inherit;
 }
-.platform-android .segmented-control-negative li > a {
+.platform-android .segmented-control-negative .control-item:active, .platform-android .segmented-control-negative .control-item.active {
   color: #fff;
-}
-.platform-android .segmented-control-negative li:active, .platform-android .segmented-control-negative li.active {
   background-color: #ff4444;
-}
-.platform-android .segmented-control-negative li:active > a, .platform-android .segmented-control-negative li.active > a {
-  color: #fff;
 }
 .platform-android .popover {
   top: 90px;

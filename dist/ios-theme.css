@@ -264,80 +264,64 @@ textarea,
   background-color: transparent;
   border: 1px solid #929292;
 }
-.segmented-control li {
+.segmented-control .control-item {
+  color: #929292;
   border-color: #929292;
   -webkit-transition: background-color 0.1s linear;
   -moz-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
-.segmented-control li > a {
-  color: #929292;
-}
-.segmented-control li:active {
+.segmented-control .control-item:active {
   background-color: #ebebeb;
 }
-.segmented-control li.active {
-  background-color: #929292;
-}
-.segmented-control li.active > a {
+.segmented-control .control-item.active {
   color: #fff;
+  background-color: #929292;
 }
 
 .segmented-control-primary {
   border: 1px solid #007aff;
 }
-.segmented-control-primary li {
+.segmented-control-primary .control-item {
+  color: #007aff;
   border-color: inherit;
 }
-.segmented-control-primary li > a {
-  color: #007aff;
-}
-.segmented-control-primary li:active {
+.segmented-control-primary .control-item:active {
   background-color: #b3d7ff;
 }
-.segmented-control-primary li.active {
-  background-color: #007aff;
-}
-.segmented-control-primary li.active > a {
+.segmented-control-primary .control-item.active {
   color: #fff;
+  background-color: #007aff;
 }
 
 .segmented-control-positive {
   border: 1px solid #4cd964;
 }
-.segmented-control-positive li {
+.segmented-control-positive .control-item {
+  color: #4cd964;
   border-color: inherit;
 }
-.segmented-control-positive li > a {
-  color: #4cd964;
-}
-.segmented-control-positive li:active {
+.segmented-control-positive .control-item:active {
   background-color: #dff8e3;
 }
-.segmented-control-positive li.active {
-  background-color: #4cd964;
-}
-.segmented-control-positive li.active > a {
+.segmented-control-positive .control-item.active {
   color: #fff;
+  background-color: #4cd964;
 }
 
 .segmented-control-negative {
   border: 1px solid #dd524d;
 }
-.segmented-control-negative li {
+.segmented-control-negative .control-item {
+  color: #dd524d;
   border-color: inherit;
 }
-.segmented-control-negative li > a {
-  color: #dd524d;
-}
-.segmented-control-negative li:active {
+.segmented-control-negative .control-item:active {
   background-color: #fae4e3;
 }
-.segmented-control-negative li.active {
-  background-color: #dd524d;
-}
-.segmented-control-negative li.active > a {
+.segmented-control-negative .control-item.active {
   color: #fff;
+  background-color: #dd524d;
 }
 
 .popover {

@@ -371,22 +371,17 @@ textarea,
   background-color: transparent;
   border: 1px solid $default-color;
 
-  li {
+  .control-item {
+    color: $default-color;
     border-color: $default-color;
     @include transition(background-color .1s linear);
 
-    > a {
-      color: $default-color;
-    }
     &:active {
       background-color: lighten($default-color, 35%);
     }
     &.active {
+      color: #fff;
       background-color: $default-color;
-      
-      > a {
-        color: #fff;
-      }
     }
   }
 }
@@ -397,21 +392,16 @@ textarea,
 .segmented-control-primary {
   border: 1px solid $primary-color;
 
-  li {
+  .control-item {
+    color: $primary-color;
     border-color: inherit;
     
-    > a {
-      color: $primary-color;
-    }
     &:active {
       background-color: lighten($primary-color, 35%);
     }
     &.active {
+      color: #fff;
       background-color: $primary-color;
-      
-      > a {
-        color: #fff;
-      }
     }
   }
 }
@@ -420,21 +410,16 @@ textarea,
 .segmented-control-positive {
   border: 1px solid $positive-color;
 
-  li {
+  .control-item {
+    color: $positive-color;
     border-color: inherit;
-    
-    > a {
-      color: $positive-color;
-    }
+
     &:active {
       background-color: lighten($positive-color, 35%);
     }
     &.active {
+      color: #fff;
       background-color: $positive-color;
-      
-      > a {
-        color: #fff;
-      }
     }
   }
 }
@@ -443,21 +428,16 @@ textarea,
 .segmented-control-negative {
   border: 1px solid $negative-color;
 
-  li {
+  .control-item {
+    color: $negative-color;
     border-color: inherit;
-    
-    > a {
-      color: $negative-color;
-    }
+
     &:active {
       background-color: lighten($negative-color, 35%);
     }
     &.active {
+      color: #fff;
       background-color: $negative-color;
-      
-      > a {
-        color: #fff;
-      }
     }
   }
 }

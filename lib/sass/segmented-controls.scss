@@ -51,18 +51,15 @@
   border: 1px solid $primary-color;
 
   .control-item {
-    border-color: inherit;
     color: $primary-color;
+    border-color: inherit;
 
     &:active {
       background-color: lighten($primary-color, 35%);
     }
     &.active {
+      color: #fff;
       background-color: $primary-color;
-      
-      > a {
-        color: #fff;
-      }
     }
   }
 }
@@ -72,18 +69,15 @@
   border: 1px solid $positive-color;
 
   .control-item {
-    border-color: inherit;
     color: $positive-color;
+    border-color: inherit;
 
     &:active {
       background-color: lighten($positive-color, 35%);
     }
     &.active {
+      color: #fff;
       background-color: $positive-color;
-      
-      > a {
-        color: #fff;
-      }
     }
   }
 }
@@ -93,18 +87,15 @@
   border: 1px solid $negative-color;
 
   .control-item {
-    border-color: inherit;
     color: $negative-color;
+    border-color: inherit;
 
     &:active {
       background-color: lighten($negative-color, 35%);
     }
     &.active {
+      color: #fff;
       background-color: $negative-color;
-      
-      > a {
-        color: #fff;
-      }
     }
   }
 }

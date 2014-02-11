@@ -528,7 +528,7 @@
 }();
 
 /* ----------------------------------
- * Segmented controls v1.0.0
+ * Segmented controls v1.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
