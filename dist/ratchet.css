@@ -539,7 +539,6 @@ input[type="button"] {
 .bar-tab .tab-item .icon ~ .tab-label {
   margin-top: -2px;
   font-size: 11px;
-  font-weight: 400;
 }
 .bar-tab .tab-item.active .tab-label,
 .bar-tab .tab-item.active .icon, .bar-tab .tab-item:active .tab-label,
