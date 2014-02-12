@@ -5,7 +5,12 @@
     "./dist/ratchet.css",
     "./dist/ratchet.js"
   ],
+  "ignore": [
+    "_config.yml",
+    "CNAME",
+    "CONTRIBUTING.md",
+    "docs-assets"
+  ],
   "dependencies": {
   }
 }
-
