@@ -90,7 +90,7 @@
     display: table-cell;
     height: 100%;
     width: 1%;
-    vertical-align: bottom;
+    vertical-align: middle;
     text-align: center;
 
     .tab-label,
@@ -98,18 +98,18 @@
       color: #929292;
     }
 
-    // Label for tab
-    .tab-label {
-      margin-top: -2px;
-      font-size: 11px;
-      font-weight: 400;
-    }
-    
     // Tab icon
     .icon {
       width: 24px;
       height: 24px;
-      margin-top: 0;
+      margin-top: 5px;
+
+      // Make the label smaller if it's used with an icon
+      ~ .tab-label {
+        margin-top: -2px;
+        font-size: 11px;
+        font-weight: 400;
+      }
     }
 
     // Active states for the tab bar

@@ -252,6 +252,40 @@ base_url: "../"
   </article>
 
   <article class="component">
+      <h3 class="component-title">Tab bar (labels only)</h3>
+
+      <div class="component-example component-example-fullbleed">
+        <nav class="bar bar-tab">
+          <a class="tab-item active" href="#">
+            <div class="tab-label">Label</div>
+          </a>
+          <a class="tab-item" href="#">
+            <div class="tab-label">Label</div>
+          </a>
+          <a class="tab-item" href="#">
+            <div class="tab-label">Label</div>
+          </a>
+        </nav>
+      </div>
+
+{% highlight html %}
+<nav class="bar bar-tab">
+  <a class="tab-item active" href="#">
+    <div class="tab-label">Label</div>
+  </a>
+  <a class="tab-item" href="#">
+    <div class="tab-label">Label</div>
+  </a>
+  <a class="tab-item" href="#">
+    <div class="tab-label">Label</div>
+  </a>
+</nav>
+{% endhighlight %}
+
+    <p class="component-note touch-only"><strong>Note:</strong> Use push.js to actually change content.</p>
+  </article>
+
+  <article class="component">
       <h3 class="component-title">Standard bars</h3>
       <p class="component-description">Standard bars are basic fixed elements that can be positioned in 3 places. These can be used to house buttons or segmented controls (see following examples).</p>
 

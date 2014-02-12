@@ -524,22 +524,22 @@ input[type="button"] {
   display: table-cell;
   height: 100%;
   width: 1%;
-  vertical-align: bottom;
+  vertical-align: middle;
   text-align: center;
 }
 .bar-tab .tab-item .tab-label,
 .bar-tab .tab-item .icon {
   color: #929292;
 }
-.bar-tab .tab-item .tab-label {
-  margin-top: -2px;
-  font-size: 11px;
-  font-weight: 400;
-}
 .bar-tab .tab-item .icon {
   width: 24px;
   height: 24px;
-  margin-top: 0;
+  margin-top: 5px;
+}
+.bar-tab .tab-item .icon ~ .tab-label {
+  margin-top: -2px;
+  font-size: 11px;
+  font-weight: 400;
 }
 .bar-tab .tab-item.active .tab-label,
 .bar-tab .tab-item.active .icon, .bar-tab .tab-item:active .tab-label,
