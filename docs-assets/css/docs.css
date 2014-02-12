@@ -803,6 +803,16 @@ hr {
 .platform-ios .content {
   background-color: #efeff4;
 }
+.platform-ios .h5, .platform-ios h5,
+.platform-ios .h6, .platform-ios h6,
+.platform-ios p {
+  color: #8f8f94;
+}
+.platform-ios .h5, .platform-ios h5,
+.platform-ios .h6, .platform-ios h6 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
 .platform-ios .btn {
   border: 1px solid #929292;
   color: #929292;

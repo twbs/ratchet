@@ -19,6 +19,18 @@ a:active {
   background-color: #efeff4;
 }
 
+.h5, h5,
+.h6, h6,
+p {
+  color: #8f8f94;
+}
+
+.h5, h5,
+.h6, h6 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 .btn {
   border: 1px solid #929292;
   color: #929292;
