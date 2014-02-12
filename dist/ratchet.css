@@ -525,11 +525,8 @@ input[type="button"] {
   height: 100%;
   width: 1%;
   vertical-align: middle;
-  text-align: center;
-}
-.bar-tab .tab-item .tab-label,
-.bar-tab .tab-item .icon {
   color: #929292;
+  text-align: center;
 }
 .bar-tab .tab-item .icon {
   width: 24px;
@@ -540,9 +537,7 @@ input[type="button"] {
   margin-top: -2px;
   font-size: 11px;
 }
-.bar-tab .tab-item.active .tab-label,
-.bar-tab .tab-item.active .icon, .bar-tab .tab-item:active .tab-label,
-.bar-tab .tab-item:active .icon {
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #428bca;
 }
 

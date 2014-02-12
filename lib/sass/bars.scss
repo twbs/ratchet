@@ -91,11 +91,13 @@
     height: 100%;
     width: 1%;
     vertical-align: middle;
+    color: #929292;
     text-align: center;
 
-    .tab-label,
-    .icon {
-      color: #929292;
+    // Active states for the tab bar
+    &.active,
+    &:active {
+      color: $primary-color;
     }
 
     // Tab icon
@@ -108,15 +110,6 @@
       ~ .tab-label {
         margin-top: -2px;
         font-size: 11px;
-      }
-    }
-
-    // Active states for the tab bar
-    &.active,
-    &:active {
-      .tab-label,
-      .icon {
-        color: $primary-color;
       }
     }
   }

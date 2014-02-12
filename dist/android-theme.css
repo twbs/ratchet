@@ -178,9 +178,7 @@ a:active {
 .bar-tab .tab-item .icon {
   margin-top: 5px;
 }
-.bar-tab .tab-item.active .tab-label,
-.bar-tab .tab-item.active .icon, .bar-tab .tab-item:active .tab-label,
-.bar-tab .tab-item:active .icon {
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #33b5e5;
 }
 

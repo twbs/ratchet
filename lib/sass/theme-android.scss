@@ -258,17 +258,14 @@ a {
   border-top: 0;
 
   .tab-item {
-    .icon {
-      margin-top: 5px;
-    }
-
     // Active states for the tab bar
     &.active,
     &:active {
-      .tab-label,
-      .icon {
-        color: $primary-color;
-      }
+      color: $primary-color;
+    }
+    
+    .icon {
+      margin-top: 5px;
     }
   }
 }

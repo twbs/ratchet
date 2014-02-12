@@ -209,10 +209,7 @@ p {
   // Active states for the tab bar
   &.active,
   &:active {
-    .tab-label,
-    .icon {
-      color: $primary-color;
-    }
+    color: $primary-color;
   }
 }
 

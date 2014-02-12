@@ -911,9 +911,7 @@ hr {
   -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
-.platform-ios .tab-item.active .tab-label,
-.platform-ios .tab-item.active .icon, .platform-ios .tab-item:active .tab-label,
-.platform-ios .tab-item:active .icon {
+.platform-ios .tab-item.active, .platform-ios .tab-item:active {
   color: #007aff;
 }
 .platform-ios .bar-nav .btn-link {
@@ -1350,9 +1348,7 @@ hr {
 .platform-android .bar-tab .tab-item .icon {
   margin-top: 5px;
 }
-.platform-android .bar-tab .tab-item.active .tab-label,
-.platform-android .bar-tab .tab-item.active .icon, .platform-android .bar-tab .tab-item:active .tab-label,
-.platform-android .bar-tab .tab-item:active .icon {
+.platform-android .bar-tab .tab-item.active, .platform-android .bar-tab .tab-item:active {
   color: #33b5e5;
 }
 .platform-android .title {

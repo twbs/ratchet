@@ -138,9 +138,7 @@ p {
   box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
 
-.tab-item.active .tab-label,
-.tab-item.active .icon, .tab-item:active .tab-label,
-.tab-item:active .icon {
+.tab-item.active, .tab-item:active {
   color: #007aff;
 }
 
