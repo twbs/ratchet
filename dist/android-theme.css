@@ -175,11 +175,11 @@ a:active {
   height: 50px;
   border-top: 0;
 }
-.bar-tab .tab-item .icon {
-  margin-top: 5px;
-}
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #33b5e5;
+}
+.bar-tab .tab-item .icon {
+  margin-top: 5px;
 }
 
 .title {

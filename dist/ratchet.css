@@ -528,17 +528,18 @@ input[type="button"] {
   color: #929292;
   text-align: center;
 }
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+  color: #428bca;
+}
 .bar-tab .tab-item .icon {
   width: 24px;
   height: 24px;
   margin-top: 5px;
 }
 .bar-tab .tab-item .icon ~ .tab-label {
+  display: block;
   margin-top: -2px;
   font-size: 11px;
-}
-.bar-tab .tab-item.active, .bar-tab .tab-item:active {
-  color: #428bca;
 }
 
 .bar-nav .btn {

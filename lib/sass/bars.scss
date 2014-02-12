@@ -108,6 +108,7 @@
 
       // Make the label smaller if it's used with an icon
       ~ .tab-label {
+        display: block;
         margin-top: -2px;
         font-size: 11px;
       }
