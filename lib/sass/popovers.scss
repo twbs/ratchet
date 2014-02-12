@@ -69,6 +69,16 @@
 }
 
 
+// Popovers with nav bars
+// --------------------------------------------------
+
+.popover .bar-nav {
+  border-bottom: $border-default;
+  border-radius: 12px 12px 0 0;
+  @include box-shadow(none);
+}
+
+
 // Table views in popovers
 // --------------------------------------------------
 

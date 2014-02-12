@@ -124,16 +124,6 @@
 }
 
 
-// Nav bar in popovers
-// --------------------------------------------------
-
-.popover .bar-nav {
-  border-bottom: $border-default;
-  border-radius: 12px 12px 0 0;
-  @include box-shadow(none);
-}
-
-
 // Nav bars with buttons
 // --------------------------------------------------
 
@@ -166,7 +156,7 @@
   &.active {
     color: darken($primary-color, 10%);
   }
-
+  // Make sure link buttons line up with the content correctly
   &.pull-left {
     margin-left: 5px;
 
@@ -221,7 +211,7 @@
 // Nav bars with Ratchicons
 // --------------------------------------------------
 
-.bar > .icon {
+.bar .icon {
   position: relative;
   z-index: 20; // Position the buttons on top of .title
   font-size: 24px;

@@ -547,13 +547,6 @@ input[type="button"] {
   color: #428bca;
 }
 
-.popover .bar-nav {
-  border-bottom: 1px solid #dddddd;
-  border-radius: 12px 12px 0 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 .bar-nav .btn {
   position: relative;
   z-index: 20;
@@ -612,16 +605,16 @@ input[type="button"] {
   margin: 0 auto;
 }
 
-.bar > .icon {
+.bar .icon {
   position: relative;
   z-index: 20;
   font-size: 24px;
   margin-top: 11px;
 }
-.bar > .icon.pull-left {
+.bar .icon.pull-left {
   margin-left: -3px;
 }
-.bar > .icon.pull-right {
+.bar .icon.pull-right {
   margin-right: -3px;
 }
 
@@ -1021,6 +1014,13 @@ select {
 }
 .popover .btn-block:last-child {
   margin-bottom: 0;
+}
+
+.popover .bar-nav {
+  border-bottom: 1px solid #dddddd;
+  border-radius: 12px 12px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .popover .table-view {
