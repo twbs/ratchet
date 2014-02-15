@@ -536,7 +536,7 @@ input[type="button"] {
 .bar-tab .tab-item .icon {
   width: 24px;
   height: 24px;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 .bar-tab .tab-item .icon ~ .tab-label {
   display: block;
