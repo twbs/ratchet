@@ -587,14 +587,23 @@ textarea,
 // --------------------------------------------------
 
 .popover {
-  top: 90px;
+  top: 47px;
+  left: 15px;
+  width: 200px;
+  margin-left: 0;
   border: 1px solid #9b9b9b;
   border-radius: 0;
   box-shadow: 0 0 3px rgba(0,0,0,.2);
-  @include transition(-webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
+  @include transform(scale(.75));
+  @include transition(-webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
 
   &:before {
     display: none;
+  }
+
+
+  &.visible {
+    @include transform(scale(1));
   }
 }
 

@@ -775,6 +775,9 @@ hr {
     .content {
       top: 50px;
     }
+    .popover {
+      @include transform(scale(1));
+    }
   }
   .bar ~ .content {
     padding: 0;

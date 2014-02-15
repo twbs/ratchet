@@ -1567,16 +1567,27 @@ hr {
   background-color: #ff4444;
 }
 .platform-android .popover {
-  top: 90px;
+  top: 47px;
+  left: 15px;
+  width: 200px;
+  margin-left: 0;
   border: 1px solid #9b9b9b;
   border-radius: 0;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  -moz-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transition: -webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: -webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 .platform-android .popover:before {
   display: none;
+}
+.platform-android .popover.visible {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 .platform-android .popover .bar {
   border-radius: 0;
@@ -1680,6 +1691,11 @@ hr {
 }
 .platform-android .device .content {
   top: 50px;
+}
+.platform-android .device .popover {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 .platform-android .bar ~ .content {
   padding: 0;

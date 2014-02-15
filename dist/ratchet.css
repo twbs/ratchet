@@ -1029,8 +1029,8 @@ select {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 15;
+  background-color: none;
 }
 
 .popover .btn-block {
