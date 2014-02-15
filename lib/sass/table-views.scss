@@ -53,17 +53,6 @@
     border-top: $border-default;
     border-bottom: $border-default;
     background-color: #fafafa;
-
-    // Rounding first divider on inset lists and remove border on the top
-    &:first-child {
-      top: 0;
-      border-radius: $border-radius $border-radius 0 0;
-    }
-
-    // Rounding last divider on inset table views
-    &:last-child {
-      border-radius: 0 0 $border-radius $border-radius;
-    }
   }
 }
 

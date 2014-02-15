@@ -24,6 +24,17 @@
   margin: 0;
   border-top: 0;
   border-bottom: 0;
+
+  // Rounding first divider on carded lists and remove border on the top
+  .table-view-divider:first-child {
+    top: 0;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  // Rounding last divider on carded table views
+  .table-view-divider:last-child {
+    border-radius: 0 0 $border-radius $border-radius;
+  }
 }
 .card .table-view li:last-child {
   border: 0;
