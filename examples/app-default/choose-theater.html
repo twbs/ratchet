@@ -3,48 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Movie finder</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../dist/touch-icons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../dist/touch-icons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/touch-icons/apple-touch-icon-57x57.png">
-
     <link rel="stylesheet" href="../../dist/ratchet.css">
+    <!-- <link rel="stylesheet" href="../../dist/ios-theme.css"> -->
     <link rel="stylesheet" href="css/app.css">
     <script src="../../dist/ratchet.js"></script>
-
   </head>
   <body>
-
     <header class="bar bar-nav">
-      <a class="btn pull-left" href="index.html" data-transition="slide-out">
+      <a class="btn btn-link pull-left" href="index.html" data-transition="slide-out">
+        <span class="icon icon-left-nav"></span>
         Back
+      </a>
+      <a class="btn btn-link pull-right">
+        Test
       </a>
       <h1 class="title">Argo</h1>
     </header>
     
-    <nav class="bar bar-standard bar-header-secondary">
+    <div class="bar bar-standard bar-header-secondary">
       <form>
         <input type="search" placeholder="Search theaters">
       </form>
-    </nav>
-
-    <nav class="bar bar-tab">
-      <a class="tab-item selected" href="index.html" data-transition="fade">
-        <span class="icon icon-share"></span>
-        <div class="tab-label">Movies</div>
-      </a>
-      <a class="tab-item" href="#" data-transition="fade">
-        <span class="icon icon-pages"></span>
-        <div class="tab-label">Theaters</div>
-      </a>
-      <a class="tab-item" href="#" data-transition="fade">
-        <span class="icon icon-sound"></span>
-        <div class="tab-label">Settings</div>
-      </a>
-    </nav>
+    </div>
 
     <div class="content">
       <ul class="table-view">

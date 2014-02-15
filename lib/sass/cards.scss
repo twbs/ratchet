@@ -20,7 +20,11 @@
 
 // Cards with table-views
 // --------------------------------------------------
-
+.card .table-view {
+  margin: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
 .card .table-view li:last-child {
   border: 0;
 }
