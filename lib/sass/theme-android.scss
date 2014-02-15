@@ -600,8 +600,6 @@ textarea,
   &:before {
     display: none;
   }
-
-
   &.visible {
     @include transform(scale(1));
   }
