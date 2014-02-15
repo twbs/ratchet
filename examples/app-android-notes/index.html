@@ -2,61 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Movie finder</title>
+    <title>Notes</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <link rel="stylesheet" href="../../dist/ratchet.css">
+    <link rel="stylesheet" href="../../dist/android-theme.css">
     <link rel="stylesheet" href="css/app.css">
     <script src="../../dist/ratchet.js"></script>
+
+    
+    <!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="bar bar-nav">
-      <a class="icon icon-gear pull-right" href="#settingsModal" ></a>
-      <h1 class="title">Movie finder</h1>
+      <a class="icon icon-compose pull-right" href="#composeModal" ></a>
+      <h1 class="title">
+        Notes
+      </h1>
     </header>
-    
-    <div class="bar bar-standard bar-header-secondary">
-      <form>
-        <input type="search" placeholder="Search">
-      </form>
-    </div>
 
     <div class="content">
-      
-      <div class="slider">
-        <div class="slide-group">
-          <div class="slide">
-            <img src="img/argo.png">
-          </div>
-          <div class="slide">
-             <img src="img/skyfall.png">
-          </div>
-          <div class="slide">
-             <img src="img/ralph.png">
-          </div>
-        </div>
-      </div>
 
       <ul class="table-view">
-        <li class="table-view-cell table-view-divider">Recommended movies</li>
-        <li class="table-view-cell media">
+        <li class="table-view-cell">
           <a class="push-right" href="choose-theater.html" data-transition="slide-in">
-            <img class="media-object pull-left" src="http://placehold.it/64x64">
-            <div class="media-body">
-              Argo
-              <p>Lorem ipsum dolor sit amet, consectetur.</p>
-            </div>
+            Argo
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
           </a>
         </li>
-        <li class="table-view-cell media">
+        <li class="table-view-cell">
           <a class="push-right" href="choose-theater.html" data-transition="slide-in">
-            <img class="media-object pull-left" src="http://placehold.it/64x64">
-            <div class="media-body">
-              Skyfall: 007
-              <p>Lorem ipsum dolor sit amet, consectetur.</p>
-            </div>
+            Argo
+            <p>Lorem ipsum dolor sit amet, consectetur.</p>
           </a>
         </li>
         <li class="table-view-cell media">
@@ -126,9 +106,9 @@
     </div>
 
     <!-- Settings modal -->
-    <div id="settingsModal" class="modal">
+    <div id="composeModal" class="modal">
       <header class="bar bar-nav">
-        <a class="icon icon-close pull-right" href="#settingsModal"></a>
+        <a class="icon icon-close pull-right" href="#composeModal"></a>
         <h1 class="title">Settings</h1>
       </header>
       
