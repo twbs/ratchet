@@ -106,7 +106,6 @@
     .icon {
       width: 24px;
       height: 24px;
-      top: 2px;
 
       // Make the label smaller if it's used with an icon
       ~ .tab-label {
@@ -213,6 +212,7 @@
 .bar {
   .icon {
     position: relative;
+    top: 2px;
     z-index: 20; // Position the buttons on top of .title
     font-size: 24px;
 

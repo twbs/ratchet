@@ -178,9 +178,6 @@ a:active {
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #33b5e5;
 }
-.bar-tab .tab-item .icon {
-  top: 2px;
-}
 
 .title {
   position: static;
@@ -214,9 +211,6 @@ a:active {
 .bar-nav .btn-link:active {
   color: #33b5e5;
   opacity: .6;
-}
-.bar-nav .btn-link .icon {
-  top: 2px;
 }
 
 .bar .segmented-control {

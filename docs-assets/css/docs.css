@@ -1357,9 +1357,6 @@ hr {
 .platform-android .bar-tab .tab-item.active, .platform-android .bar-tab .tab-item:active {
   color: #33b5e5;
 }
-.platform-android .bar-tab .tab-item .icon {
-  top: 2px;
-}
 .platform-android .title {
   position: static;
   padding-left: 15px;
@@ -1390,9 +1387,6 @@ hr {
 .platform-android .bar-nav .btn-link:active {
   color: #33b5e5;
   opacity: .6;
-}
-.platform-android .bar-nav .btn-link .icon {
-  top: 2px;
 }
 .platform-android .bar .segmented-control {
   top: 7px;

@@ -263,10 +263,6 @@ a {
     &:active {
       color: $primary-color;
     }
-    
-    .icon {
-      top: 2px;
-    }
   }
 }
 
@@ -310,10 +306,6 @@ a {
     &:active {
       color: $primary-color;
       opacity: .6;
-    }
-    // Position icons in link buttons correctly.
-    .icon {
-      top: 2px;
     }
   }
 }

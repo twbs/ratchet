@@ -543,7 +543,6 @@ input[type="button"] {
 .bar-tab .tab-item .icon {
   width: 24px;
   height: 24px;
-  top: 2px;
 }
 .bar-tab .tab-item .icon ~ .tab-label {
   display: block;
@@ -614,6 +613,7 @@ input[type="button"] {
 
 .bar .icon {
   position: relative;
+  top: 2px;
   z-index: 20;
   font-size: 24px;
 }
