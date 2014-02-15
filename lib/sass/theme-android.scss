@@ -598,9 +598,9 @@ textarea,
 }
 
 
-//
 // Toggles styles
 // --------------------------------------------------
+
 .toggle {
   width: 104px;
   height: 28px;
@@ -645,3 +645,33 @@ textarea,
     }
   }
 }
+
+
+// Push icons
+// --------------------------------------------------
+
+.push-left:after {
+  content: '\e803';
+}
+.push-right:after {
+  content: '\e806';
+}
+
+
+// Ratchicons for Android 
+// --------------------------------------------------
+
+.icon-caret:before { content: '\e800'; }
+.icon-down:before,
+.icon-down-nav:before { content: '\e801'; }
+.icon-download:before { content: '\e802'; }
+.icon-left:before,
+.icon-left-nav:before { content: '\e803'; }
+.icon-more-vertical:before { content: '\e804'; }
+.icon-more:before { content: '\e805'; } 
+.icon-right:before,
+.icon-right-nav:before { content: '\e806'; }
+.icon-search:before { content: '\e807'; }
+.icon-share:before { content: '\e808'; }
+.icon-up:before,
+.icon-up-nav:before { content: '\e809'; }

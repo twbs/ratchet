@@ -1609,6 +1609,46 @@ hr {
   color: #fff;
   content: "On";
 }
+.platform-android .push-left:after {
+  content: '\e803';
+}
+.platform-android .push-right:after {
+  content: '\e806';
+}
+.platform-android .icon-caret:before {
+  content: '\e800';
+}
+.platform-android .icon-down:before,
+.platform-android .icon-down-nav:before {
+  content: '\e801';
+}
+.platform-android .icon-download:before {
+  content: '\e802';
+}
+.platform-android .icon-left:before,
+.platform-android .icon-left-nav:before {
+  content: '\e803';
+}
+.platform-android .icon-more-vertical:before {
+  content: '\e804';
+}
+.platform-android .icon-more:before {
+  content: '\e805';
+}
+.platform-android .icon-right:before,
+.platform-android .icon-right-nav:before {
+  content: '\e806';
+}
+.platform-android .icon-search:before {
+  content: '\e807';
+}
+.platform-android .icon-share:before {
+  content: '\e808';
+}
+.platform-android .icon-up:before,
+.platform-android .icon-up-nav:before {
+  content: '\e809';
+}
 .platform-android .device {
   font-family: 'Roboto', sans-serif;
   background-image: url("../img/android.png");
