@@ -8,20 +8,24 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <link rel="stylesheet" href="../../dist/ratchet.css">
-    <link rel="stylesheet" href="../../dist/android-theme.css">
+    <link rel="stylesheet" href="../../dist/ios-theme.css">
     <link rel="stylesheet" href="css/app.css">
     <script src="../../dist/ratchet.js"></script>
 
-    
+
     <!-- Roboto -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="bar bar-nav">
-      <a class="icon icon-compose pull-right" href="#composeModal" ></a>
-      <h1 class="title">
-        Notes
-      </h1>
+      <a class="icon icon-compose pull-right" href="#composeModal"></a>
+      <a href="#navPopover">
+        <h1 class="title">
+          <span class="icon icon-home"></span>
+          Notes
+          <span class="icon icon-caret"></span>
+        </h1>
+      </a>
     </header>
 
     <div class="content">
@@ -147,6 +151,22 @@
           <a class="btn btn-positive btn-block">Save settings</a>
         </div>
       </div>
+    </div>
+
+    <!-- Popover -->
+    <div id="navPopover" class="popover">
+      <ul class="table-view">
+        <li class="table-view-cell">Item1</li>
+        <li class="table-view-cell">Item2</li>
+        <li class="table-view-cell">Item3</li>
+        <li class="table-view-cell">Item4</li>
+        <li class="table-view-cell">Item5</li>
+        <li class="table-view-cell">Item6</li>
+        <li class="table-view-cell">Item7</li>
+        <li class="table-view-cell">Item8</li>
+        <li class="table-view-cell">Item9</li>
+        <li class="table-view-cell">Item10</li>
+      </ul>
     </div>
   </body>
 </html>

@@ -60,12 +60,6 @@
   color: #000;
   text-align: center;
   white-space: nowrap;
-
-  .icon-caret {
-    top: 3px;
-    margin-top: 0;
-    margin-left: -5px;
-  }
 }
 
 > a:not(.btn) {
@@ -193,7 +187,7 @@
 }
 
 
-// Search forms in standard bar
+// Bars for search forms
 // --------------------------------------------------
 
 // Position/size search bar within the bar
@@ -203,7 +197,7 @@
 }
 
 
-// Segmented controller in all bars
+// Bars with segmented controls
 // --------------------------------------------------
 
 // Remove standard segmented bottom margin
@@ -213,19 +207,28 @@
 }
 
 
-// Nav bars with Ratchicons
+// Bars with Ratchicons
 // --------------------------------------------------
 
-.bar .icon {
-  position: relative;
-  top: 10px;
-  z-index: 20; // Position the buttons on top of .title
-  font-size: 24px;
+.bar {
+  .icon {
+    position: relative;
+    z-index: 20; // Position the buttons on top of .title
+    font-size: 24px;
 
-  &.pull-left {
-    margin-left: -3px;
+    &.pull-left {
+      margin-left: -3px;
+    }
+    &.pull-right {
+      margin-right: -3px;
+    }
   }
-  &.pull-right {
-    margin-right: -3px;
+  > .icon {
+    top: 10px;
+  }
+  // Handle carets in the titles
+  .title .icon-caret {
+    top: 4px;
+    margin-left: -5px;
   }
 }

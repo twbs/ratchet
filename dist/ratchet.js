@@ -53,7 +53,6 @@
   };
 
   var onPopoverHidden = function () {
-    popover.parentNode.removeChild(backdrop);
     popover.style.display = 'none';
     popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
   }
@@ -66,6 +65,7 @@
     element.addEventListener('touchend', function () {
       popover.addEventListener('webkitTransitionEnd', onPopoverHidden);
       popover.classList.remove('visible');
+      popover.parentNode.removeChild(backdrop);
     });
 
     return element;

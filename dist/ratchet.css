@@ -509,11 +509,6 @@ input[type="button"] {
   text-align: center;
   white-space: nowrap;
 }
-.title .icon-caret {
-  top: 3px;
-  margin-top: 0;
-  margin-left: -5px;
-}
 
 > a:not(.btn) {
   display: block;
@@ -619,7 +614,6 @@ input[type="button"] {
 
 .bar .icon {
   position: relative;
-  top: 10px;
   z-index: 20;
   font-size: 24px;
 }
@@ -628,6 +622,13 @@ input[type="button"] {
 }
 .bar .icon.pull-right {
   margin-right: -3px;
+}
+.bar > .icon {
+  top: 10px;
+}
+.bar .title .icon-caret {
+  top: 4px;
+  margin-left: -5px;
 }
 
 .badge {
@@ -996,6 +997,9 @@ select {
   -webkit-transform: translate3d(0, -15px, 0);
   -ms-transform: translate3d(0, -15px, 0);
   transform: translate3d(0, -15px, 0);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 .popover:before {
   position: absolute;
@@ -1026,7 +1030,7 @@ select {
   bottom: 0;
   left: 0;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .popover .btn-block {
@@ -1051,6 +1055,8 @@ select {
   margin-left: 0;
   overflow: auto;
   background-color: #fff;
+  border-top: 0;
+  border-bottom: 0;
   border-radius: 6px;
   -webkit-overflow-scrolling: touch;
 }

@@ -370,6 +370,7 @@ textarea,
 
 .popover .table-view {
   border-radius: 12px;
+  background-image: none;
 }
 
 .modal {

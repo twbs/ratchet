@@ -1118,6 +1118,7 @@ hr {
 }
 .platform-ios .popover .table-view {
   border-radius: 12px;
+  background-image: none;
 }
 .platform-ios .modal {
   -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
@@ -1366,10 +1367,6 @@ hr {
   line-height: 49px;
   text-align: left;
 }
-.platform-android .title .icon-caret {
-  top: 5px;
-  margin-top: 0;
-}
 .platform-android .bar .btn {
   padding-top: 9px;
   padding-bottom: 9px;
@@ -1400,8 +1397,12 @@ hr {
 .platform-android .bar .segmented-control {
   top: 7px;
 }
-.platform-android .bar .icon {
+.platform-android .bar > .icon {
   top: 13px;
+}
+.platform-android .bar .title .icon-caret {
+  top: 10px;
+  color: #777;
 }
 .platform-android .bar input[type="search"] {
   height: 35px;
@@ -1615,7 +1616,7 @@ hr {
   background-color: #d7d7d7;
 }
 .platform-android .toggle.active .toggle-handle {
-  right: 2px;
+  margin-right: 2px;
   background-color: #33b5e5;
   border-color: #33b5e5;
   -webkit-transform: translate3d(50px, 0, 0);

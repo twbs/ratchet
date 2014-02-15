@@ -277,11 +277,6 @@ a {
   font-size: $font-size-default;
   line-height: 49px;
   text-align: left;
-
-  .icon-caret {
-    top: 5px;
-    margin-top: 0;
-  }
 }
 
 // Bars with buttons
@@ -331,8 +326,15 @@ a {
 }
 
 // Bars with Ratchicons
-.bar .icon {
-  top: 13px;
+.bar {
+  > .icon {
+    top: 13px;
+  }
+  // Handle carets in the titles
+  .title .icon-caret {
+    top: 10px;
+    color: #777;
+  }
 }
 
 // Standard bars with search forms

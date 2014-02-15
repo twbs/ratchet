@@ -189,10 +189,6 @@ a:active {
   line-height: 49px;
   text-align: left;
 }
-.title .icon-caret {
-  top: 5px;
-  margin-top: 0;
-}
 
 .bar .btn {
   padding-top: 9px;
@@ -227,8 +223,12 @@ a:active {
   top: 7px;
 }
 
-.bar .icon {
+.bar > .icon {
   top: 13px;
+}
+.bar .title .icon-caret {
+  top: 10px;
+  color: #777;
 }
 
 .bar input[type="search"] {
@@ -465,7 +465,7 @@ textarea,
   background-color: #d7d7d7;
 }
 .toggle.active .toggle-handle {
-  right: 2px;
+  margin-right: 2px;
   background-color: #33b5e5;
   border-color: #33b5e5;
   -webkit-transform: translate3d(50px, 0, 0);

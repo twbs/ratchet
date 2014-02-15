@@ -15,6 +15,7 @@
   opacity: 0;
   box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   @include transform(translate3d(0, -15px, 0));
+  @include transition(all .25s linear);
 
   // Caret on top of popover using CSS triangles (thanks to @chriscoyier for solution)
   &:before {
@@ -53,7 +54,7 @@
   bottom: 0;
   left: 0;
   z-index: 10;
-  background-color: rgba(0,0,0,.15);
+  background-color: rgba(0,0,0,.3);
 }
 
 // Block level buttons in popovers
@@ -90,6 +91,8 @@
   margin-left: 0;
   overflow: auto;
   background-color: #fff;
+  border-top: 0;
+  border-bottom: 0;
   border-radius: $border-radius;
   -webkit-overflow-scrolling: touch;
 }
