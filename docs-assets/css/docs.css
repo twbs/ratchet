@@ -1397,6 +1397,9 @@ hr {
 .platform-android .bar .icon {
   margin-top: 13px;
 }
+.platform-android .bar input[type="search"] {
+  height: 35px;
+}
 .platform-android .badge.badge-inverted {
   color: #999999;
   background-color: transparent;

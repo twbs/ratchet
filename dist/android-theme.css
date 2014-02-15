@@ -228,6 +228,10 @@ a:active {
   margin-top: 13px;
 }
 
+.bar input[type="search"] {
+  height: 35px;
+}
+
 .badge.badge-inverted {
   color: #999999;
   background-color: transparent;

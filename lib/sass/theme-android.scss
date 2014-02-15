@@ -331,6 +331,13 @@ a {
   margin-top: 13px;
 }
 
+// Standard bars with search forms
+//
+// Position/size search bar within the bar
+.bar input[type="search"] {
+  height: 35px;
+}
+
 
 // Badges
 // --------------------------------------------------
