@@ -1049,7 +1049,7 @@ document
 {% highlight html %}
 <div id="popover" class="popover">  
   <header class="bar bar-nav">
-    <h3 class="title">Popover title</h3>
+    <h1 class="title">Popover title</h1>
   </header>
   <ul class="table-view">
     <li class="table-view-cell">Item1</li>
@@ -1069,7 +1069,10 @@ document
 {% highlight html %}
 <header class="bar bar-nav">
   <a href="#myPopover"> 
-    <h1 class="title">Tap this title</h3>
+    <h1 class="title">
+      Tap title
+      <span class="icon icon-caret"></span>
+    </h1>
   </a>
 </header>
 {% endhighlight %}
@@ -1084,9 +1087,7 @@ document
       <a href="#myModalexample" class="btn">Open modal</a>
       <div id="myModalexample" class="modal">
         <header class="bar bar-nav">
-          <a class="btn pull-right" href="#myModalexample">
-            Close
-          </a>
+          <a class="icon icon-close pull-right" href="#myModalexample"></a>
           <h1 class="title">Modal</h1>
         </header>
         
@@ -1100,9 +1101,7 @@ document
 <a href="#myModalexample" class="btn">Open modal</a>
 <div id="myModalexample" class="modal">
   <header class="bar bar-nav">
-    <a class="btn pull-right" href="#myModalexample">
-      Close
-    </a>
+    <a class="icon icon-close pull-right" href="#myModalexample"></a>
     <h1 class="title">Modal</h1>
   </header>
   
