@@ -502,6 +502,11 @@ input[type="button"] {
   text-align: center;
   white-space: nowrap;
 }
+.title .icon-caret {
+  top: 3px;
+  margin-top: 0;
+  margin-left: -5px;
+}
 
 > a:not(.btn) {
   display: block;

@@ -189,6 +189,10 @@ a:active {
   line-height: 49px;
   text-align: left;
 }
+.title .icon-caret {
+  top: 5px;
+  margin-top: 0;
+}
 
 .bar .btn {
   padding-top: 9px;

@@ -1358,6 +1358,10 @@ hr {
   line-height: 49px;
   text-align: left;
 }
+.platform-android .title .icon-caret {
+  top: 5px;
+  margin-top: 0;
+}
 .platform-android .bar .btn {
   padding-top: 9px;
   padding-bottom: 9px;

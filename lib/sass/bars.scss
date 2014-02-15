@@ -60,6 +60,12 @@
   color: #000;
   text-align: center;
   white-space: nowrap;
+
+  .icon-caret {
+    top: 3px;
+    margin-top: 0;
+    margin-left: -5px;
+  }
 }
 
 > a:not(.btn) {

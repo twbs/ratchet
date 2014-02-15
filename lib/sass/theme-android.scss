@@ -277,6 +277,11 @@ a {
   font-size: $font-size-default;
   line-height: 49px;
   text-align: left;
+
+  .icon-caret {
+    top: 5px;
+    margin-top: 0;
+  }
 }
 
 // Bars with buttons
