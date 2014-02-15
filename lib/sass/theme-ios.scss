@@ -279,6 +279,9 @@ p {
 // --------------------------------------------------
 
 // Cards with table-views
+.card .table-view {
+  background-image: none;
+}
 .card .table-view-cell:last-child {
   background-image: none;
 }

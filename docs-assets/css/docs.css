@@ -949,6 +949,9 @@ hr {
   color: #dd524d;
   background-color: transparent;
 }
+.platform-ios .card .table-view {
+  background-image: none;
+}
 .platform-ios .card .table-view-cell:last-child {
   background-image: none;
 }

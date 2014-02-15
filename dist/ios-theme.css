@@ -182,6 +182,10 @@ p {
   background-color: transparent;
 }
 
+.card .table-view {
+  background-image: none;
+}
+
 .card .table-view-cell:last-child {
   background-image: none;
 }
