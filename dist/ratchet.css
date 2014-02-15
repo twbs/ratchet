@@ -1357,11 +1357,11 @@ select {
 }
 
 .icon-star-filled:before {
-  content: '\e82d';
+  content: '\e82e';
 }
 
 .icon-star:before {
-  content: '\e82e';
+  content: '\e82d';
 }
 
 .icon-stop:before {
