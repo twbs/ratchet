@@ -179,7 +179,7 @@ a:active {
   color: #33b5e5;
 }
 .bar-tab .tab-item .icon {
-  margin-top: 5px;
+  top: 2px;
 }
 
 .title {
@@ -219,13 +219,16 @@ a:active {
   color: #33b5e5;
   opacity: .6;
 }
+.bar-nav .btn-link .icon {
+  top: 2px;
+}
 
 .bar .segmented-control {
   top: 7px;
 }
 
 .bar .icon {
-  margin-top: 13px;
+  top: 13px;
 }
 
 .bar input[type="search"] {

@@ -1357,7 +1357,7 @@ hr {
   color: #33b5e5;
 }
 .platform-android .bar-tab .tab-item .icon {
-  margin-top: 5px;
+  top: 2px;
 }
 .platform-android .title {
   position: static;
@@ -1394,11 +1394,14 @@ hr {
   color: #33b5e5;
   opacity: .6;
 }
+.platform-android .bar-nav .btn-link .icon {
+  top: 2px;
+}
 .platform-android .bar .segmented-control {
   top: 7px;
 }
 .platform-android .bar .icon {
-  margin-top: 13px;
+  top: 13px;
 }
 .platform-android .bar input[type="search"] {
   height: 35px;

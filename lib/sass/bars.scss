@@ -112,7 +112,7 @@
     .icon {
       width: 24px;
       height: 24px;
-      margin-top: 4px;
+      top: 2px;
 
       // Make the label smaller if it's used with an icon
       ~ .tab-label {
@@ -174,6 +174,10 @@
       margin-left: -3px;
     }
   }
+  // Position icons in link buttons correctly.
+  .icon {
+    top: 2px;
+  }
 }
 
 
@@ -214,9 +218,9 @@
 
 .bar .icon {
   position: relative;
+  top: 10px;
   z-index: 20; // Position the buttons on top of .title
   font-size: 24px;
-  margin-top: 11px;
 
   &.pull-left {
     margin-left: -3px;

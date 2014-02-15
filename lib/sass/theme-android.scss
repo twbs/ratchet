@@ -265,7 +265,7 @@ a {
     }
     
     .icon {
-      margin-top: 5px;
+      top: 2px;
     }
   }
 }
@@ -316,6 +316,10 @@ a {
       color: $primary-color;
       opacity: .6;
     }
+    // Position icons in link buttons correctly.
+    .icon {
+      top: 2px;
+    }
   }
 }
 
@@ -328,7 +332,7 @@ a {
 
 // Bars with Ratchicons
 .bar .icon {
-  margin-top: 13px;
+  top: 13px;
 }
 
 // Standard bars with search forms

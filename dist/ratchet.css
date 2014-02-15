@@ -548,7 +548,7 @@ input[type="button"] {
 .bar-tab .tab-item .icon {
   width: 24px;
   height: 24px;
-  margin-top: 4px;
+  top: 2px;
 }
 .bar-tab .tab-item .icon ~ .tab-label {
   display: block;
@@ -596,6 +596,9 @@ input[type="button"] {
   margin-right: -8px;
   margin-left: -3px;
 }
+.bar-nav .btn-link .icon {
+  top: 2px;
+}
 
 .bar .btn-block {
   padding: 7px 0 6px;
@@ -616,9 +619,9 @@ input[type="button"] {
 
 .bar .icon {
   position: relative;
+  top: 10px;
   z-index: 20;
   font-size: 24px;
-  margin-top: 11px;
 }
 .bar .icon.pull-left {
   margin-left: -3px;
