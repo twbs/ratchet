@@ -1064,9 +1064,9 @@ select {
   -webkit-transform: translate3d(0, 100%, 0);
   -ms-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
-  -webkit-transition: -webkit-transform 0.25s, opacity 0.25s;
-  -moz-transition: -webkit-transform 0.25s, opacity 0.25s;
-  transition: -webkit-transform 0.25s, opacity 0.25s;
+  -webkit-transition: -webkit-transform 0.25s, opacity 1ms 0.25s;
+  -moz-transition: -webkit-transform 0.25s, opacity 1ms 0.25s;
+  transition: -webkit-transform 0.25s, opacity 1ms 0.25s;
 }
 .modal.active {
   opacity: 1;

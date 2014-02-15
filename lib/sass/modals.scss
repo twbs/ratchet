@@ -12,7 +12,7 @@
   overflow: hidden;
   background-color: #fff;  
   @include transform(translate3d(0, 100%, 0));
-  @include transition(-webkit-transform .25s, opacity .25s);
+  @include transition(-webkit-transform .25s, opacity 1ms .25s);
 
   // Active modal
   &.active {
