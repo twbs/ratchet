@@ -1149,12 +1149,6 @@ hr {
   -ms-transform: translate3d(17px, 0, 0);
   transform: translate3d(17px, 0, 0);
 }
-.platform-ios .toggle.active:active .toggle-handle,
-.platform-ios .toggle.active .toggle-handle:active {
-  -webkit-transform: translate3d(10px, 0, 0) !important;
-  -ms-transform: translate3d(10px, 0, 0) !important;
-  transform: translate3d(10px, 0, 0) !important;
-}
 .platform-ios .toggle.active .toggle-handle {
   border-color: #4cd964;
 }

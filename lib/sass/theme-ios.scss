@@ -524,12 +524,6 @@ textarea,
       @include transform(translate3d(17px,0,0)); 
     }
 
-    // When the handle and the container is active
-    &:active .toggle-handle,
-    .toggle-handle:active {
-      @include transform(translate3d(10px,0,0) !important); // Evil important tag is used to overwrite js.
-    }
-
     .toggle-handle {
       border-color: $positive-color;
     }
