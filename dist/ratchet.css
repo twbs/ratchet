@@ -517,8 +517,10 @@ input[type="button"] {
   display: table;
   bottom: 0;
   height: 50px;
+  width: 100%;
   padding: 0;
   border-top: 1px solid #dddddd;
+  table-layout: fixed;
 }
 .bar-tab .tab-item {
   display: table-cell;

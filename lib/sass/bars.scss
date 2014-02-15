@@ -82,8 +82,10 @@
   display: table;
   bottom: 0;
   height: $bar-tab-height;
+  width: 100%;
   padding: 0;
   border-top: $border-default;
+  table-layout: fixed;
 
   // Navigational tab
   .tab-item {
