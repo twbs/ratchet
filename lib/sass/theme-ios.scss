@@ -296,7 +296,7 @@ p {
 
   .table-view-cell {
     border-bottom: 0;
-    @include hairline(single, #c8c7cc, 0); // Single grey border.
+    @include hairline(single, #c8c7cc, 15px); // Single grey border with 15px offset.
   
     // Remove the border from the last table view item
     &:last-child {

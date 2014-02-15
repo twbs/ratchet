@@ -965,7 +965,7 @@ hr {
 .platform-ios .table-view .table-view-cell {
   border-bottom: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%;
+  background-position: 15px 100%;
   background-repeat: no-repeat;
 }
 .platform-ios .table-view .table-view-cell:last-child {
