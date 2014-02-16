@@ -6,9 +6,9 @@ module.exports = function(grunt) {
 
     // Metadata.
     meta: {
-      srcPath: 'lib/',
-      distPath: 'dist/',
-      docsPath: 'docs-assets/'
+      distPath:       'dist/',
+      docsPath:       'docs/dist/',
+      docsAssetsPath: 'docs/assets/'
     },
     
     banner: '/*\n' +
@@ -27,15 +27,20 @@ module.exports = function(grunt) {
       },
       ratchet: {
         src: [
-          '<%= meta.srcPath %>js/modals.js',
-          '<%= meta.srcPath %>js/popovers.js',
-          '<%= meta.srcPath %>js/push.js',
-          '<%= meta.srcPath %>js/segmented-controllers.js',
-          '<%= meta.srcPath %>js/sliders.js',
-          '<%= meta.srcPath %>js/toggles.js'
+          'js/modals.js',
+          'js/popovers.js',
+          'js/push.js',
+          'js/segmented-controllers.js',
+          'js/sliders.js',
+          'js/toggles.js'
         ],
         dest: '<%= meta.distPath %><%= pkg.name %>.js'
+      },
+      docs: {
+        src: '<%= meta.distPath %><%= pkg.name %>.js',
+        dest: '<%= meta.docsPath %><%= pkg.name %>.js'
       }
+
     },
     
     sass: {
@@ -45,10 +50,13 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= meta.distPath %><%= pkg.name %>.css': '<%= meta.srcPath %>sass/ratchet.scss',
-          '<%= meta.docsPath %>/css/docs.css': '<%= meta.srcPath %>sass/docs.scss',
-          '<%= meta.distPath %>ios-theme.css': '<%= meta.srcPath %>sass/theme-ios.scss',
-          '<%= meta.distPath %>android-theme.css': '<%= meta.srcPath %>sass/theme-android.scss'
+          '<%= meta.distPath %><%= pkg.name %>.css': 'sass/ratchet.scss',
+          '<%= meta.distPath %>ios-theme.css': 'sass/theme-ios.scss',
+          '<%= meta.distPath %>android-theme.css': 'sass/theme-android.scss',
+          '<%= meta.docsAssetsPath %>css/docs.css': 'sass/docs.scss',
+          '<%= meta.docsPath %><%= pkg.name %>.css': 'sass/ratchet.scss',
+          '<%= meta.docsPath %>ios-theme.css': 'sass/theme-ios.scss',
+          '<%= meta.docsPath %>android-theme.css': 'sass/theme-android.scss'
         }
       }
     },
