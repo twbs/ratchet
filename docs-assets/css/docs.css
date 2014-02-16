@@ -1354,8 +1354,13 @@ hr {
   height: 50px;
   border-top: 0;
 }
-.platform-android .bar-tab .tab-item.active, .platform-android .bar-tab .tab-item:active {
+.platform-android .bar-tab .tab-item.active {
   color: #33b5e5;
+  border-bottom: 2px solid #33b5e5;
+}
+.platform-android .bar-tab .tab-item:active {
+  color: #929292;
+  background-color: #78c6e3;
 }
 .platform-android .title {
   position: static;

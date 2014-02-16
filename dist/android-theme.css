@@ -175,8 +175,13 @@ a:active {
   height: 50px;
   border-top: 0;
 }
-.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+.bar-tab .tab-item.active {
   color: #33b5e5;
+  border-bottom: 2px solid #33b5e5;
+}
+.bar-tab .tab-item:active {
+  color: #929292;
+  background-color: #78c6e3;
 }
 
 .title {

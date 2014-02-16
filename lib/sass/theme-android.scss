@@ -259,9 +259,14 @@ a {
 
   .tab-item {
     // Active states for the tab bar
-    &.active,
-    &:active {
+    &.active {
       color: $primary-color;
+      border-bottom: 2px solid $primary-color;
+    }
+    //Pressed state
+    &:active {
+      color: #929292;
+      background-color: #78c6e3;
     }
   }
 }
