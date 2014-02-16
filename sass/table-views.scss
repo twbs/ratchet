@@ -98,3 +98,8 @@
     }
   }
 }
+
+// If the table view is the first component, give it extra margin on top.
+.content > .table-view:first-child {
+  margin-top: 15px;
+}

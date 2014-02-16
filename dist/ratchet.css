@@ -780,6 +780,10 @@ input[type="button"] {
   right: 35px;
 }
 
+.content > .table-view:first-child {
+  margin-top: 15px;
+}
+
 input,
 textarea,
 button,
@@ -849,7 +853,8 @@ select {
   border-radius: 0;
 }
 
-.input-group input {
+.input-group input,
+.input-group textarea {
   margin-bottom: 0;
   background-color: transparent;
   border-bottom: 1px solid #dddddd;

@@ -80,7 +80,8 @@ select {
 }
 
 // Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input
-.input-group input {
+.input-group input,
+.input-group textarea {
   margin-bottom: 0;
   background-color: transparent;
   border-bottom: $border-default;
