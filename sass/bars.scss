@@ -120,10 +120,10 @@
 }
 
 
-// Nav bars with buttons
+// Bars with buttons
 // --------------------------------------------------
 
-.bar-nav .btn {
+.bar .btn {
   position: relative;
   z-index: 20; // Position the buttons on top of .title
   padding: 6px 12px;
@@ -138,11 +138,10 @@
   }
 }
 
-// Nav bars with link buttons (Line the text up with content)
-.bar-nav .btn-link {
+// Bars with link buttons (Line the text up with content)
+.bar .btn-link {
   margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
   font-size: 16px;
   color: $primary-color;
   line-height: $bar-base-height;
@@ -152,40 +151,64 @@
   &.active {
     color: darken($primary-color, 10%);
   }
-
-  // Make sure link buttons w/ icons line up with the content correctly
-  .icon {
-    top: 2px;
-    padding: 0;
-  }
-  &.pull-left {
-    margin-left: -10px;
-
-    .icon {
-      margin-right: -5px;
-      margin-left: -7px;
-    }
-  }
-  &.pull-right {
-    margin-right: -10px;
-
-    .icon {
-      margin-right: -7px;
-      margin-left: -5px;
-    }
-  }
 }
 
-
 // Bars with block buttons
-// --------------------------------------------------
-
 // Add proper padding
 .bar .btn-block {
   padding: 7px 0 6px;
   margin-top: 5px;
   margin-bottom: 0;
   font-size: 16px; // Scale down font size to fit in bar.
+}
+
+// Nav buttons (Only applicable within bars)
+//
+// Buttons inside bar that sit closer against the viewport.
+.bar .btn-nav {
+  &.pull-left {
+    margin-left: -5px;
+
+    .icon-left-nav {
+      margin-right: -3px;
+    }
+  }
+  &.pull-right {
+    margin-right: -5px;
+
+    .icon-right-nav {
+      margin-left: -3px;
+    }
+  }
+}
+
+
+// Bars with Ratchicons
+// --------------------------------------------------
+
+.bar {
+  .icon {
+    position: relative;
+    padding: 10px 0;
+    z-index: 20; // Position the buttons on top of .title
+    font-size: 24px;
+  }
+
+  // Handle the larger icons in btns.
+  .btn .icon {
+    top: 2px;
+    padding: 0;
+  }
+  
+  // Handle carets in the titles
+  .title .icon {
+    padding: 0;
+
+    &.icon-caret {
+      top: 4px;
+      margin-left: -5px;
+    }
+  }
 }
 
 
@@ -206,38 +229,4 @@
 .bar .segmented-control {
   top: 8px;
   margin: 0 auto;
-}
-
-
-// Bars with Ratchicons
-// --------------------------------------------------
-
-.bar {
-  .icon {
-    position: relative;
-    padding: 10px 13px;
-    z-index: 20; // Position the buttons on top of .title
-    font-size: 24px;
-  }
-  > .icon {
-    padding-right: 5px;
-    padding-left: 5px;
-
-    // Offset the bar's side padding
-    &.pull-left {
-      margin-left: -10px;
-    }
-    &.pull-right {
-      margin-right: -10px;
-    }
-  }
-  // Handle carets in the titles
-  .title .icon {
-    padding: 0;
-
-    &.icon-caret {
-      top: 4px;
-      margin-left: -5px;
-    }
-  }
 }

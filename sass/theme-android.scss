@@ -287,12 +287,13 @@ a {
 // Bars with buttons
 .bar {
   .btn {
+    margin-top: 7px;
     padding-top: 9px;
     padding-bottom: 9px;
   }
   .btn-link {
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-top: 0;
+    padding: 0;
     color: $primary-color;
     font-size: $font-size-default;
     line-height: 49px;
@@ -300,32 +301,6 @@ a {
     &:active,
     &.active {
       color: darken($primary-color, 10%);
-    }
-
-    // Offset the bar's side padding
-    &.pull-left {
-      padding-left: 12px;
-      padding-right: 0;
-    }
-    &.pull-right {
-      padding-left: 0;
-      padding-right: 12px;
-    }
-  }
-}
-
-// Nav bars with buttons
-.bar-nav {
-  .btn {
-    margin-top: 7px;
-  }
-  .btn-link {
-    margin-top: 0;
-    color: $primary-color;
-
-    &:active {
-      color: $primary-color;
-      opacity: .6;
     }
 
     // Make sure link buttons w/ icons line up with the content correctly
@@ -349,6 +324,7 @@ a {
     padding-top: 13px;
     padding-bottom: 13px;
   }
+
   // Handle carets in the titles
   .title .icon {
     padding: 0;

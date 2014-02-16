@@ -197,12 +197,13 @@ a:active {
 }
 
 .bar .btn {
+  margin-top: 7px;
   padding-top: 9px;
   padding-bottom: 9px;
 }
 .bar .btn-link {
-  padding-top: 0;
-  padding-bottom: 0;
+  margin-top: 0;
+  padding: 0;
   color: #33b5e5;
   font-size: 18px;
   line-height: 49px;
@@ -210,27 +211,7 @@ a:active {
 .bar .btn-link:active, .bar .btn-link.active {
   color: #1a9bcb;
 }
-.bar .btn-link.pull-left {
-  padding-left: 12px;
-  padding-right: 0;
-}
-.bar .btn-link.pull-right {
-  padding-left: 0;
-  padding-right: 12px;
-}
-
-.bar-nav .btn {
-  margin-top: 7px;
-}
-.bar-nav .btn-link {
-  margin-top: 0;
-  color: #33b5e5;
-}
-.bar-nav .btn-link:active {
-  color: #33b5e5;
-  opacity: .6;
-}
-.bar-nav .btn-link .icon {
+.bar .btn-link .icon {
   top: 2px;
   padding: 0;
 }

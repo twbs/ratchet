@@ -1374,12 +1374,13 @@ hr {
   text-align: left;
 }
 .platform-android .bar .btn {
+  margin-top: 7px;
   padding-top: 9px;
   padding-bottom: 9px;
 }
 .platform-android .bar .btn-link {
-  padding-top: 0;
-  padding-bottom: 0;
+  margin-top: 0;
+  padding: 0;
   color: #33b5e5;
   font-size: 18px;
   line-height: 49px;
@@ -1387,26 +1388,7 @@ hr {
 .platform-android .bar .btn-link:active, .platform-android .bar .btn-link.active {
   color: #1a9bcb;
 }
-.platform-android .bar .btn-link.pull-left {
-  padding-left: 12px;
-  padding-right: 0;
-}
-.platform-android .bar .btn-link.pull-right {
-  padding-left: 0;
-  padding-right: 12px;
-}
-.platform-android .bar-nav .btn {
-  margin-top: 7px;
-}
-.platform-android .bar-nav .btn-link {
-  margin-top: 0;
-  color: #33b5e5;
-}
-.platform-android .bar-nav .btn-link:active {
-  color: #33b5e5;
-  opacity: .6;
-}
-.platform-android .bar-nav .btn-link .icon {
+.platform-android .bar .btn-link .icon {
   top: 2px;
   padding: 0;
 }
