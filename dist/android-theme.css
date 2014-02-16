@@ -183,6 +183,10 @@ a:active {
   color: #929292;
   background-color: #78c6e3;
 }
+.bar-tab .tab-item .icon {
+  top: 3px;
+  padding: 0;
+}
 
 .title {
   position: static;
@@ -222,11 +226,13 @@ a:active {
   top: 7px;
 }
 
-.bar > .icon {
-  top: 13px;
+.bar .icon {
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 .bar .title .icon-caret {
   top: 10px;
+  padding: 0;
   color: #777;
 }
 

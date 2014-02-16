@@ -104,8 +104,10 @@
 
     // Tab icon
     .icon {
+      top: 2px;
       width: 24px;
       height: 24px;
+      padding: 0;
 
       // Make the label smaller if it's used with an icon
       ~ .tab-label {
@@ -150,26 +152,27 @@
   &.active {
     color: darken($primary-color, 10%);
   }
-  // Make sure link buttons line up with the content correctly
+
+  // Make sure link buttons w/ icons line up with the content correctly
+  .icon {
+    padding-right: 0;
+    padding-left: 0;
+  }
   &.pull-left {
     margin-left: 5px;
 
     .icon {
       margin-right: -3px;
-      margin-left: -8px;
+      margin-left: -10px;
     }
   }
   &.pull-right {
     margin-right: 5px;
 
     .icon {
-      margin-right: -8px;
+      margin-right: -10px;
       margin-left: -3px;
     }
-  }
-  // Position icons in link buttons correctly.
-  .icon {
-    top: 2px;
   }
 }
 
@@ -212,23 +215,26 @@
 .bar {
   .icon {
     position: relative;
-    top: 2px;
+    padding: 10px;
     z-index: 20; // Position the buttons on top of .title
     font-size: 24px;
-
-    &.pull-left {
-      margin-left: -3px;
-    }
-    &.pull-right {
-      margin-right: -3px;
-    }
   }
   > .icon {
-    top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+
+    // Offset the bar's side padding
+    &.pull-left {
+      margin-left: -10px;
+    }
+    &.pull-right {
+      margin-right: -10px;
+    }
   }
   // Handle carets in the titles
   .title .icon-caret {
     top: 4px;
+    padding: 0;
     margin-left: -5px;
   }
 }

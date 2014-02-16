@@ -1362,6 +1362,10 @@ hr {
   color: #929292;
   background-color: #78c6e3;
 }
+.platform-android .bar-tab .tab-item .icon {
+  top: 3px;
+  padding: 0;
+}
 .platform-android .title {
   position: static;
   padding-left: 15px;
@@ -1396,11 +1400,13 @@ hr {
 .platform-android .bar .segmented-control {
   top: 7px;
 }
-.platform-android .bar > .icon {
-  top: 13px;
+.platform-android .bar .icon {
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 .platform-android .bar .title .icon-caret {
   top: 10px;
+  padding: 0;
   color: #777;
 }
 .platform-android .bar input[type="search"] {

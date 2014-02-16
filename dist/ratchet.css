@@ -541,8 +541,10 @@ input[type="button"] {
   color: #428bca;
 }
 .bar-tab .tab-item .icon {
+  top: 2px;
   width: 24px;
   height: 24px;
+  padding: 0;
 }
 .bar-tab .tab-item .icon ~ .tab-label {
   display: block;
@@ -576,22 +578,23 @@ input[type="button"] {
 .bar-nav .btn-link:active, .bar-nav .btn-link.active {
   color: #3071a9;
 }
+.bar-nav .btn-link .icon {
+  padding-right: 0;
+  padding-left: 0;
+}
 .bar-nav .btn-link.pull-left {
   margin-left: 5px;
 }
 .bar-nav .btn-link.pull-left .icon {
   margin-right: -3px;
-  margin-left: -8px;
+  margin-left: -10px;
 }
 .bar-nav .btn-link.pull-right {
   margin-right: 5px;
 }
 .bar-nav .btn-link.pull-right .icon {
-  margin-right: -8px;
+  margin-right: -10px;
   margin-left: -3px;
-}
-.bar-nav .btn-link .icon {
-  top: 2px;
 }
 
 .bar .btn-block {
@@ -613,21 +616,23 @@ input[type="button"] {
 
 .bar .icon {
   position: relative;
-  top: 2px;
+  padding: 10px;
   z-index: 20;
   font-size: 24px;
 }
-.bar .icon.pull-left {
-  margin-left: -3px;
-}
-.bar .icon.pull-right {
-  margin-right: -3px;
-}
 .bar > .icon {
-  top: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.bar > .icon.pull-left {
+  margin-left: -10px;
+}
+.bar > .icon.pull-right {
+  margin-right: -10px;
 }
 .bar .title .icon-caret {
   top: 4px;
+  padding: 0;
   margin-left: -5px;
 }
 
