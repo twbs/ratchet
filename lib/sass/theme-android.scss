@@ -291,7 +291,8 @@ a {
     padding-bottom: 9px;
   }
   .btn-link {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     color: $primary-color;
     font-size: $font-size-default;
     line-height: 49px;
@@ -299,6 +300,16 @@ a {
     &:active,
     &.active {
       color: darken($primary-color, 10%);
+    }
+
+    // Offset the bar's side padding
+    &.pull-left {
+      padding-left: 12px;
+      padding-right: 0;
+    }
+    &.pull-right {
+      padding-left: 0;
+      padding-right: 12px;
     }
   }
 }

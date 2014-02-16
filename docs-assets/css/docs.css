@@ -1378,13 +1378,22 @@ hr {
   padding-bottom: 9px;
 }
 .platform-android .bar .btn-link {
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   color: #33b5e5;
   font-size: 18px;
   line-height: 49px;
 }
 .platform-android .bar .btn-link:active, .platform-android .bar .btn-link.active {
   color: #1a9bcb;
+}
+.platform-android .bar .btn-link.pull-left {
+  padding-left: 12px;
+  padding-right: 0;
+}
+.platform-android .bar .btn-link.pull-right {
+  padding-left: 0;
+  padding-right: 12px;
 }
 .platform-android .bar-nav .btn {
   margin-top: 7px;

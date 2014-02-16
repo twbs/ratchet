@@ -162,16 +162,16 @@
     margin-left: -10px;
 
     .icon {
-      margin-right: -4px;
-      margin-left: -4px;
+      margin-right: -5px;
+      margin-left: -7px;
     }
   }
   &.pull-right {
     margin-right: -10px;
 
     .icon {
-      margin-right: -4px;
-      margin-left: -4px;
+      margin-right: -7px;
+      margin-left: -5px;
     }
   }
 }
@@ -220,8 +220,8 @@
     font-size: 24px;
   }
   > .icon {
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
 
     // Offset the bar's side padding
     &.pull-left {

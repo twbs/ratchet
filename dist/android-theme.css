@@ -201,13 +201,22 @@ a:active {
   padding-bottom: 9px;
 }
 .bar .btn-link {
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   color: #33b5e5;
   font-size: 18px;
   line-height: 49px;
 }
 .bar .btn-link:active, .bar .btn-link.active {
   color: #1a9bcb;
+}
+.bar .btn-link.pull-left {
+  padding-left: 12px;
+  padding-right: 0;
+}
+.bar .btn-link.pull-right {
+  padding-left: 0;
+  padding-right: 12px;
 }
 
 .bar-nav .btn {
