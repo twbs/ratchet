@@ -288,7 +288,7 @@ a:active {
   background-image: none;
 }
 .table-view .table-view-cell > a:not(.btn):active {
-  background-color: #33b5e5;
+  background-color: #e0e0e0;
 }
 .table-view .table-view-cell > a:not(.btn):active .icon {
   color: #fff;
