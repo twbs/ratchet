@@ -40,7 +40,6 @@ module.exports = function(grunt) {
         src: '<%= meta.distPath %><%= pkg.name %>.js',
         dest: '<%= meta.docsPath %><%= pkg.name %>.js'
       }
-
     },
     
     sass: {
