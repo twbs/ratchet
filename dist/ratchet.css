@@ -288,6 +288,14 @@ strong {
   padding-top: 88px;
 }
 
+.bar-footer ~ .content {
+  padding-bottom: 44px;
+}
+
+.bar-footer-secondary ~ .content {
+  padding-bottom: 88px;
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;

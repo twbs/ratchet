@@ -62,6 +62,12 @@ strong {
 .bar-header-secondary ~ .content {
   padding-top: $bar-base-height*2;
 }
+.bar-footer ~ .content {
+  padding-bottom: $bar-base-height;
+}
+.bar-footer-secondary ~ .content {
+  padding-bottom: $bar-base-height*2;
+}
 
 // Utility classes
 .container {
