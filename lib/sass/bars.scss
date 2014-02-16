@@ -140,13 +140,13 @@
 
 // Nav bars with link buttons (Line the text up with content)
 .bar-nav .btn-link {
-  padding: 0;
   margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   font-size: 16px;
   color: $primary-color;
   line-height: $bar-base-height;
-  border: none;
-  background-color: transparent;
+  border: 0;
 
   &:active,
   &.active {
@@ -155,23 +155,23 @@
 
   // Make sure link buttons w/ icons line up with the content correctly
   .icon {
-    padding-right: 0;
-    padding-left: 0;
+    top: 2px;
+    padding: 0;
   }
   &.pull-left {
-    margin-left: 5px;
+    margin-left: -10px;
 
     .icon {
-      margin-right: -3px;
-      margin-left: -10px;
+      margin-right: -4px;
+      margin-left: -4px;
     }
   }
   &.pull-right {
-    margin-right: 5px;
+    margin-right: -10px;
 
     .icon {
-      margin-right: -10px;
-      margin-left: -3px;
+      margin-right: -4px;
+      margin-left: -4px;
     }
   }
 }
@@ -215,13 +215,13 @@
 .bar {
   .icon {
     position: relative;
-    padding: 10px;
+    padding: 10px 13px;
     z-index: 20; // Position the buttons on top of .title
     font-size: 24px;
   }
   > .icon {
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
 
     // Offset the bar's side padding
     &.pull-left {
@@ -232,9 +232,12 @@
     }
   }
   // Handle carets in the titles
-  .title .icon-caret {
-    top: 4px;
+  .title .icon {
     padding: 0;
-    margin-left: -5px;
+
+    &.icon-caret {
+      top: 4px;
+      margin-left: -5px;
+    }
   }
 }

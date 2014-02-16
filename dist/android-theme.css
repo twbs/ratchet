@@ -221,6 +221,10 @@ a:active {
   color: #33b5e5;
   opacity: .6;
 }
+.bar-nav .btn-link .icon {
+  top: 2px;
+  padding: 0;
+}
 
 .bar .segmented-control {
   top: 7px;
@@ -230,9 +234,11 @@ a:active {
   padding-top: 13px;
   padding-bottom: 13px;
 }
-.bar .title .icon-caret {
-  top: 10px;
+.bar .title .icon {
   padding: 0;
+}
+.bar .title .icon.icon-caret {
+  top: 10px;
   color: #777;
 }
 

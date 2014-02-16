@@ -316,6 +316,12 @@ a {
       color: $primary-color;
       opacity: .6;
     }
+
+    // Make sure link buttons w/ icons line up with the content correctly
+    .icon {
+      top: 2px;
+      padding: 0;
+    }
   }
 }
 
@@ -333,10 +339,13 @@ a {
     padding-bottom: 13px;
   }
   // Handle carets in the titles
-  .title .icon-caret {
-    top: 10px;
+  .title .icon {
     padding: 0;
-    color: #777;
+
+    &.icon-caret {
+      top: 10px;
+      color: #777;
+    }
   }
 }
 

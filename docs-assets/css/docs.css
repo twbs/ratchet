@@ -1397,6 +1397,10 @@ hr {
   color: #33b5e5;
   opacity: .6;
 }
+.platform-android .bar-nav .btn-link .icon {
+  top: 2px;
+  padding: 0;
+}
 .platform-android .bar .segmented-control {
   top: 7px;
 }
@@ -1404,9 +1408,11 @@ hr {
   padding-top: 13px;
   padding-bottom: 13px;
 }
-.platform-android .bar .title .icon-caret {
-  top: 10px;
+.platform-android .bar .title .icon {
   padding: 0;
+}
+.platform-android .bar .title .icon.icon-caret {
+  top: 10px;
   color: #777;
 }
 .platform-android .bar input[type="search"] {

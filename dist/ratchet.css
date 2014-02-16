@@ -567,34 +567,34 @@ input[type="button"] {
 }
 
 .bar-nav .btn-link {
-  padding: 0;
   margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   font-size: 16px;
   color: #428bca;
   line-height: 44px;
-  border: none;
-  background-color: transparent;
+  border: 0;
 }
 .bar-nav .btn-link:active, .bar-nav .btn-link.active {
   color: #3071a9;
 }
 .bar-nav .btn-link .icon {
-  padding-right: 0;
-  padding-left: 0;
+  top: 2px;
+  padding: 0;
 }
 .bar-nav .btn-link.pull-left {
-  margin-left: 5px;
-}
-.bar-nav .btn-link.pull-left .icon {
-  margin-right: -3px;
   margin-left: -10px;
 }
+.bar-nav .btn-link.pull-left .icon {
+  margin-right: -4px;
+  margin-left: -4px;
+}
 .bar-nav .btn-link.pull-right {
-  margin-right: 5px;
+  margin-right: -10px;
 }
 .bar-nav .btn-link.pull-right .icon {
-  margin-right: -10px;
-  margin-left: -3px;
+  margin-right: -4px;
+  margin-left: -4px;
 }
 
 .bar .btn-block {
@@ -616,13 +616,13 @@ input[type="button"] {
 
 .bar .icon {
   position: relative;
-  padding: 10px;
+  padding: 10px 13px;
   z-index: 20;
   font-size: 24px;
 }
 .bar > .icon {
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 .bar > .icon.pull-left {
   margin-left: -10px;
@@ -630,9 +630,11 @@ input[type="button"] {
 .bar > .icon.pull-right {
   margin-right: -10px;
 }
-.bar .title .icon-caret {
-  top: 4px;
+.bar .title .icon {
   padding: 0;
+}
+.bar .title .icon.icon-caret {
+  top: 4px;
   margin-left: -5px;
 }
 
