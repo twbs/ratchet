@@ -261,7 +261,7 @@ a {
     // Active states for the tab bar
     &.active {
       color: $primary-color;
-      border-bottom: 2px solid $primary-color;
+      box-shadow: inset 0 -2px 0 $primary-color;
     }
     //Pressed state
     &:active {

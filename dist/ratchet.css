@@ -540,12 +540,11 @@ input[type="button"] {
   padding: 0;
   border-top: 1px solid #dddddd;
   border-bottom: 0;
-  border-collapse: collapse;
   table-layout: fixed;
 }
 .bar-tab .tab-item {
   display: table-cell;
-  height: 100%;
+  height: 50px;
   width: 1%;
   vertical-align: middle;
   color: #929292;
@@ -562,7 +561,6 @@ input[type="button"] {
 }
 .bar-tab .tab-item .icon ~ .tab-label {
   display: block;
-  margin-top: -2px;
   font-size: 11px;
 }
 

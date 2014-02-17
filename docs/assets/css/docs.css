@@ -907,7 +907,7 @@ hr {
   bottom: 50px;
 }
 .platform-ios .bar-tab {
-  border-top: 0;
+  border-top: 1px solid rgba(247, 247, 247, 0.98);
   -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
@@ -1356,7 +1356,7 @@ hr {
 }
 .platform-android .bar-tab .tab-item.active {
   color: #33b5e5;
-  border-bottom: 2px solid #33b5e5;
+  box-shadow: inset 0 -2px 0 #33b5e5;
 }
 .platform-android .bar-tab .tab-item:active {
   color: #929292;

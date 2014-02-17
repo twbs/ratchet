@@ -86,13 +86,12 @@
   padding: 0;
   border-top: $border-default;
   border-bottom: 0;
-  border-collapse: collapse;
   table-layout: fixed;
 
   // Navigational tab
   .tab-item {
     display: table-cell;
-    height: 100%;
+    height: $bar-tab-height;
     width: 1%;
     vertical-align: middle;
     color: #929292;
@@ -114,7 +113,6 @@
       // Make the label smaller if it's used with an icon
       ~ .tab-label {
         display: block;
-        margin-top: -2px;
         font-size: 11px;
       }
     }
