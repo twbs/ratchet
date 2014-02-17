@@ -21,7 +21,7 @@ $(function() {
     win                  = $(window);
     doc                  = $(document);
     bod                  = $(document.body)
-    device               = device || $('.device');
+    device               = device || $('.js-device');
     navComponentLinks    = $('.docs-nav');
     componentsList       = $('.components-list');
     componentLinks       = $('.component-example a');

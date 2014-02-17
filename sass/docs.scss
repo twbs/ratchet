@@ -4,6 +4,7 @@
 //
 // Documentation
 // --------------------------------------------------
+
 html,
 body {
   width: 100%;
@@ -134,6 +135,9 @@ body {
     font-size: 24px;
     opacity: .7;
   }
+  &.with-padding {
+    padding-bottom: 80px;
+  }
 }
 
 
@@ -194,6 +198,7 @@ body {
 
 // Benefits
 // --------------------------------------------------
+
 .docs-benefits {
   padding-bottom: 0;
   text-align: center;
@@ -499,11 +504,11 @@ hr {
   clear: both;
 }
 
+
 // Docs media queries
 // --------------------------------------------------
 
 // Tablet to desktop 
-// --------------------------------------------------
 @media screen and (min-width: 768px) {
   // Jumbotron
   .docs-header-content {
@@ -564,12 +569,6 @@ hr {
     background-repeat: no-repeat;
     @include transition(background-image .1s linear);
 
-    // Pre-load device backgrounds so we stop the flicker.
-    &:after {
-      content: '';
-      background-image: url("../img/iphone5s.png");
-      opacity: 0;
-    }
     &.device-fixed {
       position: fixed;
       right: auto;
@@ -645,6 +644,12 @@ hr {
     font-weight: 300;
     text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
+}
+
+// Example devices
+
+.example-device {
+  margin: 0 auto;
 }
 
 

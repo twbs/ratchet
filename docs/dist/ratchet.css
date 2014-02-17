@@ -314,7 +314,7 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 15px;
+  margin: 10px 10px;
   line-height: 1;
 }
 
@@ -345,9 +345,14 @@ h6, .h6 {
 }
 
 p {
-  margin: 10px 15px;
+  margin: 10px 10px;
   font-size: 14px;
   color: #777;
+}
+
+.container > h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container p {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .btn {

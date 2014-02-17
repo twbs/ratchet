@@ -138,6 +138,9 @@ body {
   font-size: 24px;
   opacity: .7;
 }
+.docs-sub-content.with-padding {
+  padding-bottom: 80px;
+}
 
 .docs-section {
   padding-top: 80px;
@@ -525,11 +528,6 @@ hr {
     -moz-transition: background-image 0.1s linear;
     transition: background-image 0.1s linear;
   }
-  .device:after {
-    content: '';
-    background-image: url("../img/iphone5s.png");
-    opacity: 0;
-  }
   .device.device-fixed {
     position: fixed;
     right: auto;
@@ -614,6 +612,10 @@ hr {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 }
+.example-device {
+  margin: 0 auto;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
