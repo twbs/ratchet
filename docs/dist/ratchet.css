@@ -539,6 +539,8 @@ input[type="button"] {
   width: 100%;
   padding: 0;
   border-top: 1px solid #dddddd;
+  border-bottom: 0;
+  border-collapse: collapse;
   table-layout: fixed;
 }
 .bar-tab .tab-item {
