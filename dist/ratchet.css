@@ -280,10 +280,6 @@ strong {
   padding-top: 44px;
 }
 
-.bar-tab ~ .content {
-  padding-bottom: 50px;
-}
-
 .bar-header-secondary ~ .content {
   padding-top: 88px;
 }
@@ -294,6 +290,14 @@ strong {
 
 .bar-footer-secondary ~ .content {
   padding-bottom: 88px;
+}
+
+.bar-tab ~ .content {
+  padding-bottom: 50px;
+}
+
+.bar-footer-secondary-tab ~ .content {
+  padding-bottom: 94px;
 }
 
 .container {

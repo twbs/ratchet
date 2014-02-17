@@ -51,22 +51,29 @@ strong {
           transform: translateZ(0px);
 }
 
-// Pad top/bottom of content so it doesn't hide behind .bar-title and .bar-tab.
+// Pad top/bottom of content so it doesn't hide behind bars.
 // Note: For these to work, content must come after both bars in the markup
 .bar-nav ~ .content {
   padding-top: $bar-base-height;
 }
-.bar-tab ~ .content {
-  padding-bottom: $bar-tab-height;
-}
 .bar-header-secondary ~ .content {
   padding-top: $bar-base-height*2;
 }
+
+// Footer bar padding
 .bar-footer ~ .content {
   padding-bottom: $bar-base-height;
 }
 .bar-footer-secondary ~ .content {
   padding-bottom: $bar-base-height*2;
+}
+
+// Tab bar padding
+.bar-tab ~ .content {
+  padding-bottom: $bar-tab-height;
+}
+.bar-footer-secondary-tab ~ .content {
+  padding-bottom: $bar-tab-height+$bar-base-height;
 }
 
 // Utility classes
