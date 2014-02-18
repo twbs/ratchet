@@ -350,7 +350,7 @@ p {
   color: #777;
 }
 
-.container > h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container p {
+.container > h1, .container > h2, .container > h3, .container > h4, .container > h5, .container > h6, .container > p {
   margin-left: 0;
   margin-right: 0;
 }
