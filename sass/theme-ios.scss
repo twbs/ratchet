@@ -202,10 +202,12 @@ p {
 
 // Tab bar
 .bar-tab {
-  border-top: 1px solid $chrome-color;
+  border-top: 0;
   @include box-shadow(0 0 -1px rgba(0,0,0,.85));
 }
 .tab-item {
+  color: #929292;
+
   // Active states for the tab bar
   &.active,
   &:active {

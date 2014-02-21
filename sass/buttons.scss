@@ -6,10 +6,10 @@
   position: relative;
   display: inline-block;
   padding: 5px 8px;
-  margin: 0;
+  margin-bottom: 0; // For input.btn
   font-size: $button-font-size;
   font-weight: $font-weight-light;
-  line-height: 1; // Center button text on the phone.
+  line-height: 1;
   color: #333;
   text-align: center;
   vertical-align: top;
@@ -21,7 +21,7 @@
   // Active & filled button styles
   &:active,
   &.active {
-    color: inherit;
+    color: inherit; // Overriding the gloabl style for all anchors.
     background-color: #ccc;
   }
 
@@ -105,7 +105,7 @@
   padding-bottom: 6px;
   color: $primary-color;
   background-color: transparent;
-  border: none;
+  border: 0;
 
   &:active,
   &.active {

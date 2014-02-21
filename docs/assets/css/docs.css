@@ -1,7 +1,7 @@
 /*
  * =====================================================
  * Ratchet v2.0.0
- * Copyright 2014 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
  * Designed and built by @connors, @dhg, and @fat.
@@ -909,9 +909,12 @@ hr {
   bottom: 50px;
 }
 .platform-ios .bar-tab {
-  border-top: 1px solid rgba(247, 247, 247, 0.98);
+  border-top: 0;
   -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
+}
+.platform-ios .tab-item {
+  color: #929292;
 }
 .platform-ios .tab-item.active, .platform-ios .tab-item:active {
   color: #007aff;
@@ -1364,6 +1367,9 @@ hr {
   height: 50px;
   border-top: 0;
 }
+.platform-android .bar-tab .tab-item {
+  color: #929292;
+}
 .platform-android .bar-tab .tab-item.active {
   color: #33b5e5;
   -webkit-box-shadow: inset 0 -2px 0 #33b5e5;
@@ -1375,7 +1381,8 @@ hr {
 }
 .platform-android .bar-tab .tab-item .icon {
   top: 3px;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .platform-android .title {
   position: static;
@@ -1385,9 +1392,9 @@ hr {
   text-align: left;
 }
 .platform-android .bar .btn {
-  margin-top: 7px;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  margin-top: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .platform-android .bar .btn-link {
   margin-top: 0;

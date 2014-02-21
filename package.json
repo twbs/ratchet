@@ -10,7 +10,7 @@
     "prototype"
   ],
   "homepage": "http://maker.github.com/ratchet/",
-  "author": "Connor Sears, Dave Gamache, and Jacob Thornton",
+  "author": "Connor Sears",
   "style": "./dist/ratchet.css",
   "sass": "./lib/sass/ratchet.scss",
   "repository": {

@@ -3,8 +3,7 @@
 // --------------------------------------------------
 
 // Width of slider
-.slider,
-.slider > li {
+.slider {
   width: 100%;
 }
 
@@ -16,7 +15,6 @@
   // Inner wrapper for slider (width of all slides together)
   .slide-group {
     position: relative;
-    padding: 0;
     font-size: 0; // Remove spaces from inline-block children
     white-space: nowrap;
     @include transition(all 0 linear);
@@ -27,11 +25,7 @@
       vertical-align: top; // Ensure that li always aligns to top
       width: 100%; 
       height: 100%;
-
-      // Required reset of font-size to same as standard body
-      > * {
-        font-size: 14px;
-      }
+      font-size: 14px;
     }
   }
 }

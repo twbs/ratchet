@@ -55,7 +55,7 @@
   bottom: 0;
   left: 0;
   z-index: 15;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,.3);
 }
 
 // Block level buttons in popovers
@@ -76,7 +76,8 @@
 
 .popover .bar-nav {
   border-bottom: $border-default;
-  border-radius: 12px 12px 0 0;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
   @include box-shadow(none);
 }
 
@@ -85,11 +86,8 @@
 // --------------------------------------------------
 
 .popover .table-view {
-  width: auto;
   max-height: 300px;
-  margin-right: 0;
   margin-bottom: 0;
-  margin-left: 0;
   overflow: auto;
   background-color: #fff;
   border-top: 0;

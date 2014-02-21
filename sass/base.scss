@@ -3,7 +3,11 @@
 // --------------------------------------------------
 
 // Use box sizing on all the things!
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { 
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 // We fix position the body and scroll `.content`.
 body {
@@ -23,14 +27,11 @@ body {
 a {
   color: $primary-color;
   text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes the dark touch outlines on links in webkit browsers. 
+  -webkit-tap-highlight-color: rgba(0,0,0,0); // Removes the dark touch outlines on links in webkit browsers. 
 
   &:active {
     color: darken($primary-color, 10%);
   }
-}
-strong {
-  font-weight: $font-weight;
 }
 
 // Wrapper to be used around all content not in .bar-title and .bar-tab
@@ -48,8 +49,8 @@ strong {
 // Hack to force all relatively and absolutely positioned elements still render while scrolling
 // Note: This is a bug for "-webkit-overflow-scrolling: touch"
 .content > * {
-  -webkit-transform: translateZ(0px);
-          transform: translateZ(0px);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 // Pad top/bottom of content so it doesn't hide behind bars.
@@ -58,7 +59,7 @@ strong {
   padding-top: $bar-base-height;
 }
 .bar-header-secondary ~ .content {
-  padding-top: $bar-base-height*2;
+  padding-top: ($bar-base-height*2);
 }
 
 // Footer bar padding
@@ -66,7 +67,7 @@ strong {
   padding-bottom: $bar-base-height;
 }
 .bar-footer-secondary ~ .content {
-  padding-bottom: $bar-base-height*2;
+  padding-bottom: ($bar-base-height*2);
 }
 
 // Tab bar padding
@@ -74,13 +75,16 @@ strong {
   padding-bottom: $bar-tab-height;
 }
 .bar-footer-secondary-tab ~ .content {
-  padding-bottom: $bar-tab-height+$bar-base-height;
+  padding-bottom: ($bar-tab-height+$bar-base-height);
 }
 
 // Utility classes
 .container {
   padding-right: 15px;
   padding-left: 15px;
+}
+.content-padded {
+  margin: $bar-side-spacing;
 }
 .pull-left {
   float: left;

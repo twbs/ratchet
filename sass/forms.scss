@@ -27,8 +27,7 @@ input[type="number"],
 input[type="email"],
 input[type="url"],
 input[type="tel"],
-input[type="color"],
-.input-group {
+input[type="color"] {
   width: 100%;
   height: 35px;
   padding: 0 15px;
@@ -69,34 +68,17 @@ select {
 // Input groups (cluster multiple inputs together into a single group)
 // -------------------------------------------------------------------
 
-// Reset from initial form setup styles
-.input-group {
-  width: auto;
-  height: auto;
-  padding: 0;
-  border-left: 0; // Side borders are removed because the form is full width.
-  border-right: 0;
-  border-radius: 0;
-}
-
 // Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input
 .input-group input,
 .input-group textarea {
   margin-bottom: 0;
   background-color: transparent;
-  border-bottom: $border-default;
   border-top: 0;
   border-left: 0;
   border-right: 0;
   border-radius: 0;
   @include box-shadow(none);
 }
-
-// Remove bottom border on last input to avoid double bottom border
-.input-group input:last-child {
-  border-bottom: 0;
-}
-
 
 // Input groups with labels
 // --------------------------------------------------
@@ -105,11 +87,6 @@ select {
 .input-row {
   overflow: hidden;
   border-bottom: $border-default;
-}
-
-// Remove bottom border on last input-row to avoid double bottom border
-.input-row:last-child {
-  border-bottom: 0;
 }
 
 // Labels get floated left with a set percentage width
@@ -122,7 +99,7 @@ select {
 }
 
 // Actual inputs float to right of labels and also have a set percentage
-.input-row label + input {
+.input-row input {
   float: right;
   width: 65%;
   padding-left: 0;

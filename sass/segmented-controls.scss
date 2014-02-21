@@ -5,11 +5,9 @@
 .segmented-control {
   position: relative;
   display: table;
-  padding: 0;
   overflow: hidden;
   font-size: 12px;
   font-weight: $font-weight-light;
-  list-style: none;
   background-color: $chrome-color;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -33,10 +31,12 @@
       border-left-width: 0;
     }
 
-    // Active states of segmented controller
+    // Tap state of segmented controller
     &:active {
       background-color: #eee;
     }
+
+    // Selected state of segmented controller
     &.active {
       background-color: #ccc;
     }
@@ -48,7 +48,7 @@
 
 // Primary
 .segmented-control-primary {
-  border: 1px solid $primary-color;
+  border-color: $primary-color;
 
   .control-item {
     color: $primary-color;
@@ -66,7 +66,7 @@
 
 // Positive
 .segmented-control-positive {
-  border: 1px solid $positive-color;
+  border-color: $positive-color;
 
   .control-item {
     color: $positive-color;
@@ -84,7 +84,7 @@
 
 // Negative
 .segmented-control-negative {
-  border: 1px solid $negative-color;
+  border-color: $negative-color;
 
   .control-item {
     color: $negative-color;

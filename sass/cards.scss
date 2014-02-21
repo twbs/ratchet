@@ -3,37 +3,32 @@
 // --------------------------------------------------
 
 .card {
-  width: auto;
   overflow: hidden;
   margin: $bar-side-spacing;
   background-color: $card-bg;
   border: $border-default;
   border-radius: $border-radius;
-
-  p {
-  	margin: inherit;
-  	font-size: inherit;
-  	color: inherit;
-  }
 }
 
 
 // Cards with table-views
 // --------------------------------------------------
 .card .table-view {
-  margin: 0;
+  margin-bottom: 0;
   border-top: 0;
   border-bottom: 0;
 
   // Rounding first divider on carded lists and remove border on the top
   .table-view-divider:first-child {
     top: 0;
-    border-radius: $border-radius $border-radius 0 0;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
   }
 
   // Rounding last divider on carded table views
   .table-view-divider:last-child {
-    border-radius: 0 0 $border-radius $border-radius;
+    border-bottom-right-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
   }
 }
 // Remove the bottom border from last table cell

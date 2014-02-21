@@ -259,6 +259,8 @@ a {
   border-top: 0;
 
   .tab-item {
+    color: #929292;
+
     // Active states for the tab bar
     &.active {
       color: $primary-color;
@@ -271,7 +273,8 @@ a {
     }
     .icon {
       top: 3px;
-      padding: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }
@@ -288,9 +291,9 @@ a {
 // Bars with buttons
 .bar {
   .btn {
-    margin-top: 7px;
-    padding-top: 9px;
-    padding-bottom: 9px;
+    margin-top: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .btn-link {
     margin-top: 0;
@@ -325,7 +328,6 @@ a {
     padding-top: 13px;
     padding-bottom: 13px;
   }
-
   // Handle carets in the titles
   .title .icon {
     padding: 0;

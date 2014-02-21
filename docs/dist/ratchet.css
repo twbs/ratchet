@@ -1,7 +1,7 @@
 /*
  * =====================================================
  * Ratchet v2.0.0
- * Copyright 2014 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
  * Designed and built by @connors, @dhg, and @fat.
@@ -229,8 +229,8 @@ th {
 }
 
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -256,10 +256,6 @@ a:active {
   color: #3071a9;
 }
 
-strong {
-  font-weight: 500;
-}
-
 .content {
   position: fixed;
   top: 0;
@@ -272,8 +268,8 @@ strong {
 }
 
 .content > * {
-  -webkit-transform: translateZ(0px);
-  transform: translateZ(0px);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .bar-nav ~ .content {
@@ -305,6 +301,10 @@ strong {
   padding-left: 15px;
 }
 
+.content-padded {
+  margin: 10px;
+}
+
 .pull-left {
   float: left;
 }
@@ -314,7 +314,8 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
   line-height: 1;
 }
 
@@ -345,27 +346,17 @@ h6, .h6 {
 }
 
 p {
-  margin: 10px 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   color: #777;
-}
-
-.container > h1,
-.container > h2,
-.container > h3,
-.container > h4,
-.container > h5,
-.container > h6,
-.container > p {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .btn {
   position: relative;
   display: inline-block;
   padding: 5px 8px;
-  margin: 0;
+  margin-bottom: 0;
   font-size: 12px;
   font-weight: 400;
   line-height: 1;
@@ -439,7 +430,7 @@ p {
   padding-bottom: 6px;
   color: #428bca;
   background-color: transparent;
-  border: none;
+  border: 0;
 }
 .btn-link:active, .btn-link.active {
   color: #3071a9;
@@ -499,16 +490,20 @@ input[type="button"] {
   border-bottom: 1px solid #dddddd;
   background-color: white;
 }
-.bar.bar-header-secondary {
+
+.bar-header-secondary {
   top: 44px;
 }
-.bar.bar-footer {
+
+.bar-footer {
   bottom: 0;
 }
-.bar.bar-footer-secondary {
+
+.bar-footer-secondary {
   bottom: 44px;
 }
-.bar.bar-footer-secondary-tab {
+
+.bar-footer-secondary-tab {
   bottom: 50px;
 }
 
@@ -521,10 +516,7 @@ input[type="button"] {
   display: block;
   width: 100%;
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin: 0 -10px;
   font-size: 17px;
   font-weight: 500;
   line-height: 44px;
@@ -532,15 +524,16 @@ input[type="button"] {
   text-align: center;
   white-space: nowrap;
 }
-.title .title a {
+
+.title a {
   color: inherit;
 }
 
 .bar-tab {
   display: table;
   bottom: 0;
-  height: 50px;
   width: 100%;
+  height: 50px;
   padding: 0;
   border-top: 1px solid #dddddd;
   border-bottom: 0;
@@ -561,7 +554,8 @@ input[type="button"] {
   top: 2px;
   width: 24px;
   height: 24px;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .bar-tab .tab-item .icon ~ .tab-label {
   display: block;
@@ -616,12 +610,13 @@ input[type="button"] {
 
 .bar .icon {
   position: relative;
-  padding: 10px 0;
   z-index: 20;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 24px;
 }
 .bar .btn .icon {
-  top: 2px;
+  top: 3px;
   padding: 0;
 }
 .bar .title .icon {
@@ -681,30 +676,26 @@ input[type="button"] {
 }
 
 .card {
-  width: auto;
   overflow: hidden;
   margin: 10px;
   background-color: white;
   border: 1px solid #dddddd;
   border-radius: 6px;
 }
-.card p {
-  margin: inherit;
-  font-size: inherit;
-  color: inherit;
-}
 
 .card .table-view {
-  margin: 0;
+  margin-bottom: 0;
   border-top: 0;
   border-bottom: 0;
 }
 .card .table-view .table-view-divider:first-child {
   top: 0;
-  border-radius: 6px 6px 0 0;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
 }
 .card .table-view .table-view-divider:last-child {
-  border-radius: 0 0 6px 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 
 .card .table-view-cell:last-child {
@@ -712,23 +703,25 @@ input[type="button"] {
 }
 
 .table-view {
-  padding: 0;
-  margin: 0 0 15px 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
   list-style: none;
   background-color: #fff;
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
 }
-.table-view .table-view-cell {
+
+.table-view-cell {
   position: relative;
   overflow: hidden;
   padding: 11px 65px 11px 15px;
   border-bottom: 1px solid #dddddd;
 }
-.table-view .table-view-cell:last-child {
+.table-view-cell:last-child {
   border-bottom: 0;
 }
-.table-view .table-view-cell > a:not(.btn) {
+.table-view-cell > a:not(.btn) {
   position: relative;
   display: block;
   overflow: hidden;
@@ -736,13 +729,14 @@ input[type="button"] {
   margin: -11px -65px -11px -15px;
   color: inherit;
 }
-.table-view .table-view-cell > a:not(.btn):active {
+.table-view-cell > a:not(.btn):active {
   background-color: #eee;
 }
-.table-view .table-view-cell p {
-  margin: 0;
+.table-view-cell p {
+  margin-bottom: 0;
 }
-.table-view .table-view-divider {
+
+.table-view-divider {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 15px;
@@ -823,8 +817,7 @@ input[type="number"],
 input[type="email"],
 input[type="url"],
 input[type="tel"],
-input[type="color"],
-.input-group {
+input[type="color"] {
   width: 100%;
   height: 35px;
   padding: 0 15px;
@@ -860,20 +853,10 @@ select {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.input-group {
-  width: auto;
-  height: auto;
-  padding: 0;
-  border-left: 0;
-  border-right: 0;
-  border-radius: 0;
-}
-
 .input-group input,
 .input-group textarea {
   margin-bottom: 0;
   background-color: transparent;
-  border-bottom: 1px solid #dddddd;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -882,17 +865,9 @@ select {
   box-shadow: none;
 }
 
-.input-group input:last-child {
-  border-bottom: 0;
-}
-
 .input-row {
   overflow: hidden;
   border-bottom: 1px solid #dddddd;
-}
-
-.input-row:last-child {
-  border-bottom: 0;
 }
 
 .input-row label {
@@ -903,7 +878,7 @@ select {
   line-height: 1.1;
 }
 
-.input-row label + input {
+.input-row input {
   float: right;
   width: 65%;
   padding-left: 0;
@@ -914,11 +889,9 @@ select {
 .segmented-control {
   position: relative;
   display: table;
-  padding: 0;
   overflow: hidden;
   font-size: 12px;
   font-weight: 400;
-  list-style: none;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -947,7 +920,7 @@ select {
 }
 
 .segmented-control-primary {
-  border: 1px solid #428bca;
+  border-color: #428bca;
 }
 .segmented-control-primary .control-item {
   color: #428bca;
@@ -962,7 +935,7 @@ select {
 }
 
 .segmented-control-positive {
-  border: 1px solid #5cb85c;
+  border-color: #5cb85c;
 }
 .segmented-control-positive .control-item {
   color: #5cb85c;
@@ -977,7 +950,7 @@ select {
 }
 
 .segmented-control-negative {
-  border: 1px solid #d9534f;
+  border-color: #d9534f;
 }
 .segmented-control-negative .control-item {
   color: #d9534f;
@@ -1059,17 +1032,15 @@ select {
 
 .popover .bar-nav {
   border-bottom: 1px solid #dddddd;
-  border-radius: 12px 12px 0 0;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .popover .table-view {
-  width: auto;
   max-height: 300px;
-  margin-right: 0;
   margin-bottom: 0;
-  margin-left: 0;
   overflow: auto;
   background-color: #fff;
   border-top: 0;
@@ -1105,8 +1076,7 @@ select {
   transition: -webkit-transform 0.25s;
 }
 
-.slider,
-.slider > li {
+.slider {
   width: 100%;
 }
 
@@ -1116,7 +1086,6 @@ select {
 }
 .slider .slide-group {
   position: relative;
-  padding: 0;
   font-size: 0;
   white-space: nowrap;
   -webkit-transition: all 0 linear;
@@ -1128,8 +1097,6 @@ select {
   vertical-align: top;
   width: 100%;
   height: 100%;
-}
-.slider .slide-group .slide > * {
   font-size: 14px;
 }
 

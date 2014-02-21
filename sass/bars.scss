@@ -12,27 +12,26 @@
   padding-left: $bar-side-spacing;
   border-bottom: $border-default;
   background-color: $chrome-color;
+}
 
+// Modifier class to dock any bar below .bar-nav
+.bar-header-secondary {
+  top: $bar-base-height;
+}
 
-  // Modifier class to dock any bar below .bar-nav
-  &.bar-header-secondary {
-    top: $bar-base-height;
-  }
+// Modifier class to dock any bar to the bottom of the viewport
+.bar-footer {
+  bottom: 0;
+}
 
-  // Modifier class to dock any bar to the bottom of the viewport
-  &.bar-footer {
-    bottom: 0;
-  }
+// Modifier class to dock any bar above a standard bar
+.bar-footer-secondary {
+  bottom: $bar-base-height;
+}
 
-  // Modifier class to dock any bar above a standard bar
-  &.bar-footer-secondary {
-    bottom: $bar-base-height;
-  }
-
-  // Modifier class to dock any bar above a .bar-tab
-  &.bar-footer-secondary-tab {
-    bottom: $bar-tab-height;
-  }
+// Modifier class to dock any bar above a .bar-tab
+.bar-footer-secondary-tab {
+  bottom: $bar-tab-height;
 }
 
 
@@ -52,21 +51,17 @@
   display: block;
   width: 100%;
   padding: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: -$bar-side-spacing;
-  margin-right: -$bar-side-spacing;
+  margin: 0 (-$bar-side-spacing); 
   font-size: $font-size-default;
   font-weight: $font-weight;
   line-height: $bar-base-height;
   color: #000;
   text-align: center;
   white-space: nowrap;
-
-  // Retain specified title color
-  .title a {
-    color: inherit;
-  }
+}
+// Retain specified title color
+.title a {
+  color: inherit;
 }
 
 
@@ -77,14 +72,14 @@
 .bar-tab {
   display: table;
   bottom: 0;
-  height: $bar-tab-height;
   width: 100%;
+  height: $bar-tab-height;
   padding: 0;
   border-top: $border-default;
   border-bottom: 0;
   table-layout: fixed;
 
-  // Navigational tab
+  // Navigational tab (Nested to be more specific for the icons in tab-items)
   .tab-item {
     display: table-cell;
     width: 1%;
@@ -101,10 +96,11 @@
 
     // Tab icon
     .icon {
-      top: 2px;
+      top: 3px;
       width: 24px;
       height: 24px;
-      padding: 0;
+      padding-top: 0;
+      padding-bottom: 0;
 
       // Make the text smaller if it's used with an icon
       ~ .tab-label {
@@ -114,7 +110,6 @@
     }
   }
 }
-
 
 // Bars with buttons
 // --------------------------------------------------
@@ -187,14 +182,15 @@
 .bar {
   .icon {
     position: relative;
-    padding: 10px 0;
     z-index: 20; // Position the buttons on top of .title
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 24px;
   }
 
   // Vertical center the larger icons in btns.
   .btn .icon {
-    top: 2px;
+    top: 3px;
     padding: 0;
   }
   

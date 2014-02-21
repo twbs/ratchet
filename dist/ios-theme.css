@@ -1,7 +1,7 @@
 /*
  * =====================================================
  * Ratchet v2.0.0
- * Copyright 2014 Connor Sears, Dave Gamache, and Jacob Thornton
+ * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
  * Designed and built by @connors, @dhg, and @fat.
@@ -133,11 +133,14 @@ p {
 }
 
 .bar-tab {
-  border-top: 1px solid rgba(247, 247, 247, 0.98);
+  border-top: 0;
   -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
 
+.tab-item {
+  color: #929292;
+}
 .tab-item.active, .tab-item:active {
   color: #007aff;
 }

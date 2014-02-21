@@ -1,5 +1,5 @@
 name: Ratchet
-authors: Connor Sears, Dave Gamache, and Jacob Thornton
+authors: Connor Sears
 description: Prototype iPhone apps with simple HTML, CSS, and JS components.
 
 pygments:  true
