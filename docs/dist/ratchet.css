@@ -350,7 +350,13 @@ p {
   color: #777;
 }
 
-.container > h1, .container > h2, .container > h3, .container > h4, .container > h5, .container > h6, .container > p {
+.container > h1,
+.container > h2,
+.container > h3,
+.container > h4,
+.container > h5,
+.container > h6,
+.container > p {
   margin-left: 0;
   margin-right: 0;
 }
@@ -362,7 +368,7 @@ p {
   margin: 0;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1;
   color: #333;
   text-align: center;
   vertical-align: top;
@@ -526,14 +532,7 @@ input[type="button"] {
   text-align: center;
   white-space: nowrap;
 }
-
-> a:not(.btn) {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.title a {
+.title .title a {
   color: inherit;
 }
 
@@ -549,8 +548,8 @@ input[type="button"] {
 }
 .bar-tab .tab-item {
   display: table-cell;
-  height: 50px;
   width: 1%;
+  height: 50px;
   vertical-align: middle;
   color: #929292;
   text-align: center;
@@ -572,7 +571,7 @@ input[type="button"] {
 .bar .btn {
   position: relative;
   z-index: 20;
-  padding: 6px 12px;
+  padding: 6px 12px 7px;
   margin-top: 8px;
   font-weight: 400;
 }
@@ -708,8 +707,8 @@ input[type="button"] {
   border-radius: 0 0 6px 6px;
 }
 
-.card .table-view li:last-child {
-  border: 0;
+.card .table-view-cell:last-child {
+  border-bottom: 0;
 }
 
 .table-view {
@@ -1010,6 +1009,7 @@ select {
   background-color: white;
   border-radius: 6px;
   opacity: 0;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   -webkit-transform: translate3d(0, -15px, 0);
   -ms-transform: translate3d(0, -15px, 0);
@@ -1047,7 +1047,7 @@ select {
   bottom: 0;
   left: 0;
   z-index: 15;
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .popover .btn-block {

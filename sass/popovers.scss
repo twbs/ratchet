@@ -13,7 +13,7 @@
   background-color: $chrome-color;
   border-radius: $border-radius;
   opacity: 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+  @include box-shadow(0 0 15px rgba(0, 0, 0, .1));
   @include transform(translate3d(0, -15px, 0));
   @include transition(all .25s linear);
 
@@ -39,6 +39,7 @@
     @include transform(translate3d(0, 0, 0));
   }
 
+  // Give correct spacing to the content if there is a bar inside the popover.
   .bar ~ .table-view {
     padding-top: $bar-base-height;
   }
@@ -54,7 +55,7 @@
   bottom: 0;
   left: 0;
   z-index: 15;
-  background-color: none;
+  background-color: rgba(0,0,0,0.3);
 }
 
 // Block level buttons in popovers

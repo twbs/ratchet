@@ -11,6 +11,7 @@
   background-color: rgba(0,0,0,.15);
   border-radius: 100px;
 
+  // Inverted badges have no background.
   &.badge-inverted {
     padding: 0 5px 0 0;
     background-color: transparent;

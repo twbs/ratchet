@@ -1235,12 +1235,14 @@ hr {
   background-color: #cecece;
   border: 0;
   border-radius: 2px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 .platform-android .btn:active, .platform-android .btn.active {
   color: #222222;
   border: 0;
   background-color: #999999;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 .platform-android .btn-primary {
@@ -1276,6 +1278,7 @@ hr {
 .platform-android .btn-outlined {
   border: 1px solid #999999;
   background-color: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .platform-android .btn-outlined.btn-primary {
@@ -1305,21 +1308,25 @@ hr {
 .platform-android .btn-outlined:active {
   border: 1px solid #999999;
   background-color: #999999;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .platform-android .btn-outlined.btn-primary:active, .platform-android .btn-outlined.btn-positive:active, .platform-android .btn-outlined.btn-negative:active {
   color: #fff;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .platform-android .btn-link {
   color: #33b5e5;
   background-color: transparent;
   border: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .platform-android .btn-link:active, .platform-android .btn-link.active {
   color: #1a9bcb;
   background-color: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .platform-android .btn-block {
@@ -1339,6 +1346,7 @@ hr {
   height: 50px;
   background-color: #dddddd;
   border-bottom: 1px solid #b1b1b1;
+  -webkit-box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, 0.07);
   box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0, 0, 0, 0.07);
 }
 .platform-android .bar.bar-header-secondary {
@@ -1358,6 +1366,7 @@ hr {
 }
 .platform-android .bar-tab .tab-item.active {
   color: #33b5e5;
+  -webkit-box-shadow: inset 0 -2px 0 #33b5e5;
   box-shadow: inset 0 -2px 0 #33b5e5;
 }
 .platform-android .bar-tab .tab-item:active {
@@ -1488,6 +1497,7 @@ hr {
   height: 40px;
   padding: 10px 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .platform-android input[type="search"] {
@@ -1505,6 +1515,7 @@ hr {
 .platform-android .input-group input {
   border: 0;
   border-bottom: 1px solid #d9d9d9;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .platform-android .input-group input:last-child {
@@ -1522,6 +1533,7 @@ hr {
   background-color: #cecece;
   border: 0;
   border-radius: 2px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 .platform-android .segmented-control .control-item {
@@ -1529,6 +1541,7 @@ hr {
   padding-bottom: 10px;
   color: #222222;
   border-left: 1px solid #999;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 .platform-android .segmented-control .control-item:first-child {
@@ -1577,6 +1590,7 @@ hr {
   margin-left: 0;
   border: 1px solid #9b9b9b;
   border-radius: 0;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   -webkit-transform: scale(0.75);
   -ms-transform: scale(0.75);
@@ -1592,6 +1606,9 @@ hr {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
+}
+.platform-android .backdrop {
+  background-color: none;
 }
 .platform-android .popover .bar {
   border-radius: 0;
@@ -1617,6 +1634,7 @@ hr {
   border: 1px solid #b5b5b5;
   border-radius: 2px;
   background-color: #bebebe;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 .platform-android .toggle:before {

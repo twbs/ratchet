@@ -74,7 +74,7 @@ select {
   width: auto;
   height: auto;
   padding: 0;
-  border-left: 0;
+  border-left: 0; // Side borders are removed because the form is full width.
   border-right: 0;
   border-radius: 0;
 }
@@ -96,6 +96,7 @@ select {
 .input-group input:last-child {
   border-bottom: 0;
 }
+
 
 // Input groups with labels
 // --------------------------------------------------

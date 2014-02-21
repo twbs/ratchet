@@ -19,7 +19,7 @@
     top: $bar-base-height;
   }
 
-  // Modifier class to dock any bar to bottom of viewport
+  // Modifier class to dock any bar to the bottom of the viewport
   &.bar-footer {
     bottom: 0;
   }
@@ -44,7 +44,9 @@
   top: 0;
 }
 
-// Centered text in the .bar-nav 
+// Centered text in the .bar-nav
+//
+// We position the absolutely to make sure the title is always centered
 .title {
   position: absolute;
   display: block;
@@ -60,24 +62,18 @@
   color: #000;
   text-align: center;
   white-space: nowrap;
-}
 
-> a:not(.btn) {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-//Retain specified title color
-.title a {
-  color: inherit;
+  // Retain specified title color
+  .title a {
+    color: inherit;
+  }
 }
 
 
 // Tab bar
 // --------------------------------------------------
 
-// Bar docked to bottom used for primary app navigation
+// Bar docked to bottom and used for primary app navigation
 .bar-tab {
   display: table;
   bottom: 0;
@@ -91,8 +87,8 @@
   // Navigational tab
   .tab-item {
     display: table-cell;
-    height: $bar-tab-height;
     width: 1%;
+    height: $bar-tab-height;
     vertical-align: middle;
     color: #929292;
     text-align: center;
@@ -110,7 +106,7 @@
       height: 24px;
       padding: 0;
 
-      // Make the label smaller if it's used with an icon
+      // Make the text smaller if it's used with an icon
       ~ .tab-label {
         display: block;
         font-size: 11px;
@@ -126,10 +122,11 @@
 .bar .btn {
   position: relative;
   z-index: 20; // Position the buttons on top of .title
-  padding: 6px 12px;
+  padding: 6px 12px 7px;
   margin-top: 8px;
   font-weight: $font-weight-light;
 
+  // Give buttons that are floated left and right side margin
   &.pull-right { 
     margin-left: $bar-side-spacing; 
   }
@@ -154,6 +151,7 @@
 }
 
 // Bars with block buttons
+//
 // Add proper padding
 .bar .btn-block {
   padding: 7px 0 6px;
@@ -164,7 +162,7 @@
 
 // Nav buttons (Only applicable within bars)
 //
-// Buttons inside bar that sit closer against the viewport.
+// Buttons inside bars that sit closer against the viewport.
 .bar .btn-nav {
   &.pull-left {
     margin-left: -5px;
@@ -194,7 +192,7 @@
     font-size: 24px;
   }
 
-  // Handle the larger icons in btns.
+  // Vertical center the larger icons in btns.
   .btn .icon {
     top: 2px;
     padding: 0;
@@ -204,6 +202,7 @@
   .title .icon {
     padding: 0;
 
+    // Specific postioning of the caret icon within a title. Used with popover.js.
     &.icon-caret {
       top: 4px;
       margin-left: -5px;
@@ -225,7 +224,7 @@
 // Bars with segmented controls
 // --------------------------------------------------
 
-// Remove standard segmented bottom margin
+// Position the control correctly inside a bar.
 .bar .segmented-control {
   top: 8px;
   margin: 0 auto;

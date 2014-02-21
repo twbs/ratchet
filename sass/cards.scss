@@ -36,6 +36,7 @@
     border-radius: 0 0 $border-radius $border-radius;
   }
 }
-.card .table-view li:last-child {
-  border: 0;
+// Remove the bottom border from last table cell
+.card .table-view-cell:last-child {
+  border-bottom: 0;
 }

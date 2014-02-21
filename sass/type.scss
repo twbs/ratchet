@@ -22,7 +22,13 @@ p {
 
 // Take on the container's side spacing
 .container {
-  > h1, > h2, > h3, > h4, > h5, > h6, > p {
+  > h1, 
+  > h2, 
+  > h3, 
+  > h4, 
+  > h5, 
+  > h6, 
+  > p {
     margin-left: 0;
     margin-right: 0;
   }

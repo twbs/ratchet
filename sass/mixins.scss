@@ -6,12 +6,6 @@
 // General
 // --------------------------------------------------
 
-// Box orient
-@mixin box-orient($orient) {
-  -webkit-box-orient: $orient;
-          box-orient: $orient;
-}
-
 // Box shadow
 @mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow;

@@ -84,7 +84,7 @@ a {
   background-color: #cecece;
   border: 0;
   border-radius: $border-radius;
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 1px rgba(0,0,0,.25);
+  @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 1px rgba(0,0,0,.25));
 
   // Active & filled button styles
   &:active,
@@ -92,7 +92,7 @@ a {
     color: $text-color;
     border: 0;
     background-color: $default-color;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2);
+    @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2));
   }
 }
 
@@ -146,7 +146,8 @@ a {
 .btn-outlined {
   border: 1px solid $default-color;
   background-color: transparent;
-  box-shadow: none;
+  @include box-shadow(none);
+
 
   &.btn-primary {
     border: 1px solid $primary-color;
@@ -179,13 +180,13 @@ a {
   &:active {
     border: 1px solid $default-color;
     background-color: $default-color;
-    box-shadow: none;
+    @include box-shadow(none);
   }
   &.btn-primary:active,
   &.btn-positive:active,
   &.btn-negative:active {
     color: #fff;
-    box-shadow: none;
+    @include box-shadow(none);
   }
 }
 
@@ -194,13 +195,13 @@ a {
   color: $primary-color;
   background-color: transparent;
   border: none;
-  box-shadow: none;
+  @include box-shadow(none);
 
   &:active,
   &.active {
     color: darken($primary-color, 10%);
     background-color: transparent;
-    box-shadow: none;
+    @include box-shadow(none);
   }
 }
 
@@ -234,7 +235,7 @@ a {
   height: $bar-base-height;
   background-color: $chrome-color;
   border-bottom: $border-default;
-  box-shadow: inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0,0,0,.07);
+  @include box-shadow(inset 0 -2px 0 #d2d2d2, 0 3px 3px rgba(0,0,0,.07));
 
   // Modifier class to dock any bar below .bar-nav
   &.bar-header-secondary {
@@ -261,7 +262,7 @@ a {
     // Active states for the tab bar
     &.active {
       color: $primary-color;
-      box-shadow: inset 0 -2px 0 $primary-color;
+      @include box-shadow(inset 0 -2px 0 $primary-color);
     }
     //Pressed state
     &:active {
@@ -457,7 +458,7 @@ input[type="color"],
   height: 40px;
   padding: 10px 15px;
   border: 1px solid rgba(0, 0, 0, .2);
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  @include box-shadow(0 1px 1px rgba(0,0,0,.1));
 }
 
 input[type="search"] {
@@ -479,7 +480,7 @@ textarea,
 .input-group input {
   border: 0;
   border-bottom: 1px solid #d9d9d9;
-  box-shadow: none;
+  @include box-shadow(none);
 }
 // Remove bottom border on last input to avoid double bottom border
 .input-group input:last-child {
@@ -508,14 +509,14 @@ textarea,
   background-color: #cecece;
   border: 0;
   border-radius: $border-radius;
-  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+  @include box-shadow(0 1px 1px rgba(0,0,0,.25));
 
   .control-item {
     padding-top: 10px;
     padding-bottom: 10px;
     color: $text-color;
     border-left: 1px solid #999;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2);
+    @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.2));
 
     // Remove border-left and shadow from first section
     &:first-child {
@@ -592,7 +593,7 @@ textarea,
   margin-left: 0;
   border: 1px solid #9b9b9b;
   border-radius: 0;
-  box-shadow: 0 0 3px rgba(0,0,0,.2);
+  @include box-shadow(0 0 3px rgba(0,0,0,.2));
   @include transform(scale(.75));
   @include transition(-webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
 
@@ -602,6 +603,11 @@ textarea,
   &.visible {
     @include transform(scale(1));
   }
+}
+
+// Remove the popover's backdrop
+.backdrop {
+  background-color: none;
 }
 
 // Popovers with bars
@@ -641,7 +647,7 @@ textarea,
     border: 1px solid #b5b5b5;
     border-radius: 2px;
     background-color: #bebebe;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.1);
+    @include box-shadow(inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.1));
   }
   &:before {
     top: 1px;
