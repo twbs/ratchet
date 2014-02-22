@@ -26,7 +26,7 @@ body {
 .docs-header {
   min-height: 700px;
   height: 100vh;
-  background-image: linear-gradient(45deg, #0a1855 0%,#f11651 100%);
+  background-image: linear-gradient(45deg, #0a1855 0%,#da0024 100%);
 
   &:before {
     position: fixed;
@@ -73,11 +73,12 @@ body {
 }
 .docs-header-content {
   padding: 50px 10px;
+  @include animation-name(fadeintext);
+  @include animation-duration(3s);
 
   .btn {
     display: block;
-    padding: 15px 30px 16px;
-    margin: 0 10px 10px;
+    padding: 15px 60px 16px;
     font-size: 18px;
     color: rgba(255,255,255,.7);
     border-color: rgba(255,255,255,.7);
@@ -528,8 +529,7 @@ hr {
   .docs-header-content {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    @include transform(translateY(-50%));
   }
   .docs-subtitle {
     margin-bottom: 30px;
@@ -539,10 +539,6 @@ hr {
   .docs-header-content {
     .btn {
       display: inline-block;
-      margin: 0;
-    }
-    .btn-primary {
-      margin-left: 10px;
     }
   }
   .docs-title {
@@ -807,7 +803,14 @@ hr {
 }
 
 // Animations
-@-webkit-keyframes fadeOverlay {
-  from { @include box-shadow(0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0)); }
-  to   { @include box-shadow(0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1)); }
+@-webkit-keyframes fadeintext {
+  0% {
+   opacity: 0;
+  }
+  50% {
+   opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
 }

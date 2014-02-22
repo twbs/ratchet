@@ -25,9 +25,10 @@
 
 }
 
+
 // Transforms
 // --------------------------------------------------
-@mixin transform($transform) {
+@mixin transform($transform...) {
   -webkit-transform: $transform;
       -ms-transform: $transform;
           transform: $transform;
