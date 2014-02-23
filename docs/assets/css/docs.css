@@ -26,6 +26,7 @@ body {
 .docs-header {
   position: relative;
   height: 100vh;
+  min-height: 620px;
   background-image: linear-gradient(45deg, #0a1855 0%, #da0024 100%);
 }
 .docs-header:before {
@@ -40,15 +41,14 @@ body {
   content: '';
 }
 
-.docs-logo {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 15px;
+.docs-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   color: #fff;
-  font-weight: 300;
-  line-height: 68px;
-  border: 1px solid #fff;
-  border-radius: 40px;
+  font-size: 22px;
+  font-weight: 100;
+  opacity: .4;
 }
 
 .docs-nav {
@@ -56,9 +56,24 @@ body {
   right: 20px;
   top: 20px;
   color: #fff;
+  cursor: pointer;
+}
+
+.docs-logo {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 15px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 72px;
+  border: 1px solid #fff;
+  border-radius: 40px;
 }
 
 .docs-header-content {
+  position: relative;
+  top: 40px;
   text-align: center;
   padding: 50px 10px;
   -webkit-animation-name: fadeintext;
@@ -113,16 +128,16 @@ body {
 .carbonad {
   position: absolute !important;
   bottom: 90px !important;
-  left: 50% !important;
-  width: 330px !important;
+  width: 100% !important;
   height: auto !important;
   padding: 15px !important;
-  margin-left: -165px !important;
   font-size: 13px !important;
   line-height: 16px !important;
-  border-radius: 3px !important;
   background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
   -webkit-animation-name: fadeintext;
   -moz-animation-name: fadeintext;
   animation-name: fadeintext;
@@ -522,26 +537,25 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
+  .docs-logo {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    line-height: 68px;
+  }
+
   .docs-header {
     min-height: 770px;
   }
 
-  .docs-title {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 100;
-    opacity: .4;
-  }
-
   .docs-header-content {
-    position: relative;
     top: 37%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+  .docs-header-content .btn {
+    display: inline-block;
   }
 
   .docs-subtitle {
@@ -550,8 +564,14 @@ hr {
     line-height: 60px;
   }
 
-  .docs-header-content .btn {
-    display: inline-block;
+  .carbonad {
+    left: 50% !important;
+    width: 330px !important;
+    margin-left: -165px !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 3px !important;
   }
 
   .social .twitter-follow-button {
