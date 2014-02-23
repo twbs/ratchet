@@ -24,7 +24,7 @@ body {
 }
 
 .docs-header {
-  min-height: 700px;
+  position: relative;
   height: 100vh;
   background-image: linear-gradient(45deg, #0a1855 0%, #da0024 100%);
 }
@@ -40,36 +40,6 @@ body {
   content: '';
 }
 
-.docs-nav {
-  position: relative;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.docs-nav .icon,
-.docs-nav .version {
-  position: absolute;
-  color: #fff;
-  opacity: .4;
-  -webkit-transition: opacity 0.2s linear;
-  -moz-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-.docs-nav .icon:hover,
-.docs-nav .version:hover {
-  opacity: 1;
-}
-.docs-nav .icon {
-  top: 13px;
-  right: 0;
-  cursor: pointer;
-}
-.docs-nav .version {
-  top: 14px;
-  left: 0;
-}
-
-.docs-nav,
 .docs-header-content {
   text-align: center;
 }
@@ -116,25 +86,60 @@ body {
   opacity: .5;
 }
 
-.docs-title,
-.docs-subtitle {
-  color: #fff;
-}
-
-.docs-title {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-}
-
 .docs-subtitle {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 26px;
   font-weight: 100;
+  color: #fff;
   line-height: 34px;
+}
+
+.carbonad {
+  position: absolute !important;
+  bottom: 90px !important;
+  left: 50% !important;
+  width: 330px !important;
+  height: auto !important;
+  padding: 15px !important;
+  margin-left: -165px !important;
+  font-size: 13px !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.carbonad-img {
+  margin: 0 !important;
+}
+
+.carbonad-text,
+.carbonad-text a,
+.carbonad-tag,
+.carbonad-tag a {
+  color: #fff !important;
+}
+
+.carbonad-text,
+.carbonad-tag {
+  display: block !important;
+  float: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin-left: 145px !important;
+  color: white !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+.carbonad-text {
+  padding-top: 0 !important;
+}
+
+.carbonad-tag {
+  text-align: left !important;
+}
+.carbonad-tag a {
+  color: #fff !important;
 }
 
 .docs-sub-content {
@@ -194,12 +199,15 @@ body {
 }
 
 .social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 20px 0 20px;
   margin: 0;
   list-style: none;
   text-align: center;
-  border-bottom: 1px solid #eee;
-  background-color: #f9f9f9;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .social li {
   height: 20px;
@@ -493,9 +501,23 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
+  .docs-header {
+    min-height: 770px;
+  }
+
+  .docs-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 100;
+    opacity: .4;
+  }
+
   .docs-header-content {
     position: relative;
-    top: 50%;
+    top: 37%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -511,8 +533,22 @@ hr {
     display: inline-block;
   }
 
-  .docs-title {
-    font-size: 22px;
+  .docs-logo {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 68px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+  }
+
+  .docs-nav {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
   }
 
   .social .twitter-follow-button {

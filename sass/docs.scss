@@ -24,7 +24,7 @@ body {
 // --------------------------------------------------
 
 .docs-header {
-  min-height: 700px;
+  position: relative;
   height: 100vh;
   background-image: linear-gradient(45deg, #0a1855 0%,#da0024 100%);
 
@@ -40,34 +40,6 @@ body {
     content: '';
   }
 }
-.docs-nav {
-  position: relative;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-
-  .icon,
-  .version {
-    position: absolute;
-    color: #fff;
-    opacity: .4;
-    @include transition(opacity .2s linear);
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .icon {
-    top: 13px;
-    right: 0;
-    cursor: pointer;
-  }
-  .version {
-    top: 14px;
-    left: 0;
-  }
-}
-.docs-nav,
 .docs-header-content {
   text-align: center;
 }
@@ -109,28 +81,62 @@ body {
     }
   }
 }
-.docs-title,
-.docs-subtitle {
-  color: #fff;
-}
-.docs-title {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 6px;
-}
 .docs-subtitle {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 26px;
   font-weight: 100;
+  color: #fff;
   line-height: 34px;
 }
 
+// Ads
+.carbonad {
+  position: absolute !important;
+  bottom: 90px !important;
+  left: 50% !important;
+  width: 330px !important;
+  height: auto !important;
+  padding: 15px !important;
+  margin-left: -165px !important;
+  font-size: 13px !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
+}
+.carbonad-img {
+  margin: 0 !important;
+}
+.carbonad-text,
+.carbonad-text a,
+.carbonad-tag,
+.carbonad-tag a {
+  color: #fff !important;
+}
+.carbonad-text,
+.carbonad-tag {
+  display: block !important;
+  float: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin-left: 145px !important;
+  color: #fff!important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+.carbonad-text {
+  padding-top: 0 !important;
+}
+.carbonad-tag {
+  text-align: left !important;
+
+  a {
+    color: #fff !important;
+  }
+}
 
 // Subpage Header
 // --------------------------------------------------
+
 .docs-sub-content {
   padding-top: 50px;
   color: #fff;
@@ -193,12 +199,15 @@ body {
 // --------------------------------------------------
 
 .social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 20px 0 20px;
   margin: 0;
   list-style: none;
   text-align: center;
-  border-bottom: 1px solid #eee;
-  background-color: #f9f9f9;
+  background-color: rgba(0,0,0,.2);
 
   li {
     height: 20px;
@@ -526,9 +535,21 @@ hr {
 // Tablet to desktop 
 @media screen and (min-width: 768px) {
   // Jumbotron
+  .docs-header {
+    min-height: 770px;
+  }
+  .docs-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 100;
+    opacity: .4;
+  }
   .docs-header-content {
     position: relative;
-    top: 50%;
+    top: 37%;
     @include transform(translateY(-50%));
   }
   .docs-subtitle {
@@ -541,8 +562,21 @@ hr {
       display: inline-block;
     }
   }
-  .docs-title {
-    font-size: 22px;
+  .docs-logo {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 68px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+  }
+  .docs-nav {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
   }
 
   // Social
