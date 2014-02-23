@@ -40,10 +40,24 @@ body {
     content: '';
   }
 }
-.docs-header-content {
-  text-align: center;
+.docs-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 68px;
+  border: 1px solid #fff;
+  border-radius: 40px;
+}
+.docs-nav {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #fff;
 }
 .docs-header-content {
+  text-align: center;
   padding: 50px 10px;
   @include animation-name(fadeintext);
   @include animation-duration(3s);
@@ -561,22 +575,6 @@ hr {
     .btn {
       display: inline-block;
     }
-  }
-  .docs-logo {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 15px;
-    color: #fff;
-    font-weight: 300;
-    line-height: 68px;
-    border: 1px solid #fff;
-    border-radius: 40px;
-  }
-  .docs-nav {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    color: #fff;
   }
 
   // Social
