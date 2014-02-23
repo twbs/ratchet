@@ -100,18 +100,15 @@ body {
   padding: 15px !important;
   margin-left: -165px !important;
   font-size: 13px !important;
+  line-height: 16px !important;
   border-radius: 3px !important;
   background: transparent !important;
   border: 1px solid rgba(255,255,255,.1) !important;
+  @include animation-name(fadeintext);
+  @include animation-duration(3s);
 }
 .carbonad-img {
   margin: 0 !important;
-}
-.carbonad-text,
-.carbonad-text a,
-.carbonad-tag,
-.carbonad-tag a {
-  color: #fff !important;
 }
 .carbonad-text,
 .carbonad-tag {
@@ -120,7 +117,7 @@ body {
   width: auto !important;
   height: auto !important;
   margin-left: 145px !important;
-  color: #fff!important;
+  color: rgba(255,255,255,.65) !important;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 .carbonad-text {
@@ -128,10 +125,13 @@ body {
 }
 .carbonad-tag {
   text-align: left !important;
-
-  a {
-    color: #fff !important;
-  }
+}
+.carbonad-text a,
+.carbonad-tag a {
+  color: #fff !important;
+}
+.carbonad #azcarbon>img {
+  display: none;
 }
 
 // Subpage Header
