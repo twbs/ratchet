@@ -151,10 +151,8 @@ $(function() {
 
     if(currentTop >= toggleTop) {
       platformToggle.addClass('fixed');
-      $('.docs-components').css('padding-top', toggleHeight);
     } else if (currentTop <= $('.docs-header').outerHeight()) {
       platformToggle.removeClass('fixed');
-      $('.docs-components').css('padding-top', 0);
     }
   }
 
