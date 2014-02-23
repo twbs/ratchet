@@ -57,6 +57,13 @@ body {
   top: 20px;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+.docs-nav:active {
+  color: #fff;
+  opacity: .5;
 }
 
 .docs-logo {

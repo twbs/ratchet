@@ -56,6 +56,12 @@ body {
   top: 20px;
   color: #fff;
   cursor: pointer;
+  @include transition(opacity .2s linear);
+
+  &:active {
+    color: #fff;
+    opacity: .5;
+  }
 }
 .docs-logo {
   width: 75px;
