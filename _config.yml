@@ -1,6 +1,6 @@
 name: Ratchet
 authors: Connor Sears
-description: Prototype iPhone apps with simple HTML, CSS, and JS components.
+description: Prototype mobile apps with simple HTML, CSS, and JS components.
 
 pygments:  true
 permalink: pretty
