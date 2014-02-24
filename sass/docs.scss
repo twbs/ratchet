@@ -250,13 +250,54 @@ body {
   margin-bottom: 0;
 }
 .section-heading {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 300;
 }
 .section-lead {
   font-size: 18px;
   color: #777;
   font-weight: 100;
+}
+
+// Steps
+// --------------------------------------------------
+
+.docs-steps {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+.step {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.step-title,
+.step-description {
+  font-weight: 300;
+}
+.step-title {
+  font-size: 18px
+}
+.step-title code {
+  font-size: 14px;
+}
+.step-description {
+  font-size: 14px;
+}
+
+// Docs modules 
+.docs-module {
+  margin-top: 20px;
+  padding: 20px;
+  border: $border-default;
+  border-radius: 3px;
+
+  .btn-block {
+    margin-bottom: 0;
+  }
+}
+.docs-module-title {
+  font-weight: 300;
 }
 
 
@@ -344,7 +385,7 @@ code {
   border-bottom: 1px solid #ddd;
 }
 .component-title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: 300;
   line-height: 34px;
@@ -352,6 +393,7 @@ code {
 .component-description {
   margin-bottom: 15px;
   font-size: 16px;
+  font-weight: 300;
 }
 .component-example {
   font-family: $font-family-default;
@@ -716,27 +758,27 @@ hr {
   }
 
   // Steps
-  .docs-steps {
-    margin-top: 50px;
-    padding: 0;
-    list-style: none;
+  .step-title {
+    font-size: 24px;
   }
-  .step {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .step-title,
-  .step-description {
-    font-weight: 300;
+  .step-title code {
+    font-size: 18px;
   }
   .step-description {
     font-size: 18px;
+  }
+
+  // Docs modules 
+  .docs-module {
+    margin-top: 35px;
   }
 
 
   // Content sections
   // --------------------------------------------------
   .section-heading {
+    margin-top: 50px;
+    margin-bottom: 10px;
     font-size: 40px;
   }
   .section-lead {
