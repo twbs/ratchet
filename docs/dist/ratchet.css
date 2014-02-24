@@ -1222,12 +1222,12 @@ select {
 
 .push-left:after {
   left: 15px;
-  content: '\e80d';
+  content: '\e822';
 }
 
 .push-right:after {
   right: 15px;
-  content: '\e811';
+  content: '\e826';
 }
 
 @font-face {
