@@ -106,6 +106,11 @@ body {
   font-size: 22px;
 }
 
+.docs-jump-menu,
+.docs-component-group {
+  display: none;
+}
+
 .docs-title a,
 .docs-nav-item {
   color: #fff;
@@ -375,7 +380,7 @@ body {
   color: #777;
 }
 
-.platform-toggle {
+.docs-component-toolbar {
   padding-top: 12px;
   padding-bottom: 12px;
   position: fixed;
@@ -384,6 +389,7 @@ body {
   left: 0;
   right: 0;
   z-index: 20;
+  height: 52px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   -webkit-transform: translate3d(0, -55px, 0);
@@ -393,7 +399,7 @@ body {
   -moz-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
 }
-.platform-toggle.visible {
+.docs-component-toolbar.visible {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
@@ -401,11 +407,16 @@ body {
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.platform-toggle .segmented-control {
-  max-width: 300px;
-  margin: 0 auto;
+.docs-component-toolbar .segmented-control {
+  position: absolute;
+  left: 50%;
+  width: 300px;
+  margin: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-.platform-toggle .segmented-control .control-item {
+.docs-component-toolbar .segmented-control .control-item {
   cursor: pointer;
 }
 
@@ -628,9 +639,79 @@ hr {
     opacity: 1;
   }
   .docs-nav .docs-nav-item {
+    position: relative;
     display: inline-block;
     padding: 0 15px;
     font-size: 14px;
+  }
+
+  .docs-jump-menu {
+    display: block;
+    color: #777;
+    cursor: pointer;
+    -webkit-transition: opacity 0.2 linear;
+    -moz-transition: opacity 0.2 linear;
+    transition: opacity 0.2 linear;
+  }
+  .docs-jump-menu:hover {
+    color: #428bca;
+  }
+  .docs-jump-menu:active {
+    opacity: .5;
+  }
+  .docs-jump-menu .icon-list {
+    font-size: 16px;
+    margin-right: 3px;
+  }
+  .docs-jump-menu .icon-caret {
+    position: relative;
+    top: 4px;
+  }
+
+  .docs-component-group {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  }
+  .docs-component-group.active {
+    display: block;
+  }
+  .docs-component-group:before, .docs-component-group:after {
+    position: absolute;
+    left: 30px;
+    width: 0;
+    height: 0;
+    content: '';
+  }
+  .docs-component-group:before {
+    top: -11px;
+    margin-left: -11px;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid rgba(0, 0, 0, 0.3);
+    border-left: 11px solid transparent;
+  }
+  .docs-component-group:after {
+    top: -10px;
+    margin-left: -10px;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+  }
+  .docs-component-group .docs-component-item {
+    display: block;
+    padding: 10px 20px;
+    color: #777;
+  }
+  .docs-component-group .docs-component-item:hover {
+    color: #fff;
+    background-color: #428bca;
   }
 
   .carbonad {

@@ -105,6 +105,10 @@ body {
     font-size: 22px;
   }
 }
+.docs-jump-menu,
+.docs-component-group{
+  display: none;
+}
 .docs-title a,
 .docs-nav-item {
   color: #fff;
@@ -385,7 +389,7 @@ body {
 // Platform toggle
 // --------------------------------------------------
 
-.platform-toggle {
+.docs-component-toolbar {
   padding-top: 12px;
   padding-bottom: 12px;
   position: fixed;
@@ -394,6 +398,7 @@ body {
   left: 0;
   right: 0;
   z-index: 20;
+  height: 52px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   @include transform(translate3d(0, -55px, 0));
@@ -405,8 +410,11 @@ body {
   }
 
   .segmented-control {
-    max-width: 300px;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    margin: 0;
+    @include transform(translateX(-50%));
 
     .control-item {
       cursor: pointer;
@@ -642,9 +650,81 @@ hr {
       opacity: 1;
     }
     .docs-nav-item {
+      position: relative;
       display: inline-block;
       padding: 0 15px;
       font-size: 14px;
+    }
+  }
+
+  // Component jump menu
+  .docs-jump-menu {
+    display: block;
+    color: #777;
+    cursor: pointer;
+    @include transition(opacity .2 linear);
+
+    &:hover {   
+      color: $primary-color;
+    }
+    &:active {
+      opacity: .5;
+    }
+    .icon-list {
+      font-size: 16px;
+      margin-right: 3px;
+    }
+    .icon-caret {
+      position: relative;
+      top: 4px;
+    }
+  }
+  .docs-component-group {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0,0,0,.05);
+
+    &.active {
+      display: block;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      left: 30px;
+      width: 0;
+      height: 0;
+      content: '';
+    }
+    &:before {
+      top: -11px;
+      margin-left: -11px;
+      border-right: 11px solid transparent;
+      border-bottom: 11px solid rgba(0,0,0,.3);
+      border-left: 11px solid transparent;
+    }
+    &:after {
+      top: -10px;
+      margin-left: -10px;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      border-left: 10px solid transparent
+    }
+    .docs-component-item {
+      display: block;
+      padding: 10px 20px;
+      color: #777;
+
+      &:hover {
+        color: #fff;
+        background-color: $primary-color;
+      }
     }
   }
 

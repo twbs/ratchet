@@ -8,13 +8,13 @@ $(function() {
   var pageHeight;
   var contentPadding;
   var footerHeight;
-  var componentsList;
   var navComponentLinks;
+  var componentsList;
   var contentSection;
   var currentActive;
   var topCache;
   var eventListeners;
-  var platformToggle;
+  var toolbarToggle;
   var toggleTop;
   var toggleHeight;
 
@@ -26,8 +26,8 @@ $(function() {
     doc                  = $(document);
     bod                  = $(document.body)
     device               = device || $('.js-device');
-    //navComponentLinks    = $('.docs-nav');
-    componentsList       = $('.components-list');
+    navComponentLinks    = $('.js-jump-menu');
+    componentsList       = $('.js-component-group');
     componentLinks       = $('.component-example a');
     contentSection       = $('.component');
     topCache             = contentSection.map(function () { return $(this).offset().top })
@@ -36,7 +36,7 @@ $(function() {
     pageHeight           = $(document).height();
     contentPadding       = parseInt($('.docs-content').css('padding-bottom'));
     footerHeight         = $('.docs-footer').outerHeight(false);
-    platformToggle       = $('.js-platform-toggle');
+    toolbarToggle       = $('.js-docs-component-toolbar');
 
     // Device placement
     if (windowWidth >= 768) {
@@ -68,11 +68,11 @@ $(function() {
       nav.toggleClass('active'); 
     });
 
-    // navComponentLinks.click(function(e) {
-    //   e.stopPropagation();
-    //   e.preventDefault();
-    //   componentsList.toggleClass('active');
-    // })
+    navComponentLinks.click(function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      componentsList.toggleClass('active');
+    })
 
     doc.on('click', function () {
       componentsList.removeClass('active');
@@ -154,15 +154,16 @@ $(function() {
     }
   }
 
-  // Platform toggle
+  // Toolbar toggle
   var calculateToggle = function () {
     var currentTop   = win.scrollTop();
     var headerHeight = $('.docs-sub-header').outerHeight();
 
     if(currentTop >= headerHeight) {
-      platformToggle.addClass('visible');
+      toolbarToggle.addClass('visible');
     } else if (currentTop <= headerHeight) {
-      platformToggle.removeClass('visible');
+      toolbarToggle.removeClass('visible');
+      componentsList.removeClass('active');
     }
   }
 
