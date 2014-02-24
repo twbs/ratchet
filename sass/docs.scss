@@ -387,11 +387,11 @@ body {
       margin-right: 10px;
     }
     .example {
-      display: inline-block;
+      display: block;
+      padding: 4px;
       overflow: hidden;
       padding: 3px;
-      width: 170px;
-      height: 100px;
+      width: 100%;
       border: $border-default;
       border-radius: 3px;
     }
@@ -400,6 +400,7 @@ body {
       font-weight: 300;
     }
     img {
+      display: block;
       width: 100%;
     }
   }
@@ -919,7 +920,6 @@ hr {
 
     .example {
       width: 180px;
-      height: 120px;
     }
   }
 }
@@ -938,7 +938,6 @@ hr {
   // Examples
   .docs-example-group .example-wrap .example {
     width: 220px;
-    height: 150px;
   }
 }
 

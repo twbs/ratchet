@@ -388,11 +388,11 @@ body {
   margin-right: 10px;
 }
 .docs-example-group .example-wrap .example {
-  display: inline-block;
+  display: block;
+  padding: 4px;
   overflow: hidden;
   padding: 3px;
-  width: 170px;
-  height: 100px;
+  width: 100%;
   border: 1px solid #dddddd;
   border-radius: 3px;
 }
@@ -401,6 +401,7 @@ body {
   font-weight: 300;
 }
 .docs-example-group .example-wrap img {
+  display: block;
   width: 100%;
 }
 
@@ -911,7 +912,6 @@ hr {
   }
   .docs-example-group .example-wrap .example {
     width: 180px;
-    height: 120px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -929,7 +929,6 @@ hr {
 
   .docs-example-group .example-wrap .example {
     width: 220px;
-    height: 150px;
   }
 }
 .container {
