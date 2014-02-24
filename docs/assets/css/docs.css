@@ -38,8 +38,7 @@ body {
   background-image: url(../img/pattern.png);
   background-size: 30%;
   background-position: center center;
-  opacity: .035;
-  content: '';
+  opacity: .038;
 }
 
 .docs-header {
@@ -47,20 +46,28 @@ body {
   min-height: 620px;
 }
 
+.docs-masthead {
+  position: relative;
+  overflow: hidden;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .docs-title {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 14px;
+  left: 50%;
+  margin-bottom: 0;
   color: #fff;
   font-size: 22px;
   font-weight: 100;
-  opacity: .4;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .docs-nav {
-  position: absolute;
-  right: 20px;
-  top: 20px;
   color: #fff;
   cursor: pointer;
   -webkit-transition: opacity 0.2s linear;
@@ -72,21 +79,9 @@ body {
   opacity: .5;
 }
 
-.docs-logo {
-  width: 75px;
-  height: 75px;
-  margin: 0 auto 15px;
-  color: #fff;
-  font-size: 35px;
-  font-weight: 300;
-  line-height: 72px;
-  border: 1px solid #fff;
-  border-radius: 40px;
-}
-
 .docs-header-content {
   position: relative;
-  top: 40px;
+  top: 30px;
   text-align: center;
   padding: 50px 10px;
   -webkit-animation-name: fadeintext;
@@ -101,7 +96,7 @@ body {
   padding: 15px 60px 16px;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.7);
-  border-color: rgba(255, 255, 255, 0.7);
+  border: 0;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -117,7 +112,6 @@ body {
 .docs-header-content .btn-primary {
   margin-bottom: 0;
   color: #0a1855;
-  border-color: rgba(255, 255, 255, 0.85);
   background-color: rgba(255, 255, 255, 0.85);
 }
 .docs-header-content .btn-primary:hover {
@@ -132,20 +126,10 @@ body {
 .docs-subtitle {
   max-width: 750px;
   margin: 0 auto 20px;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 100;
   color: #fff;
-  line-height: 34px;
-}
-
-.docs-masthead {
-  position: relative;
-}
-.docs-masthead .docs-title {
-  left: 0;
-}
-.docs-masthead .docs-nav {
-  right: 0;
+  line-height: 38px;
 }
 
 .carbonad {
@@ -155,7 +139,7 @@ body {
   height: auto !important;
   padding: 15px !important;
   font-size: 13px !important;
-  line-height: 16px !important;
+  line-height: 18px !important;
   background: transparent !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-right: 0 !important;
@@ -181,7 +165,7 @@ body {
   height: auto !important;
   margin-left: 145px !important;
   color: rgba(255, 255, 255, 0.65) !important;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-family: "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 .carbonad-text {
@@ -202,18 +186,19 @@ body {
 }
 
 .docs-sub-content {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 55px;
+  padding-bottom: 65px;
   color: #fff;
 }
 .docs-sub-content .page-title,
 .docs-sub-content .page-description {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: 100;
 }
 .docs-sub-content .page-title {
   font-size: 40px;
+  margin-bottom: 5px;
 }
 .docs-sub-content .page-description {
   color: #fff;
@@ -224,17 +209,6 @@ body {
 .docs-section {
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-.section-header {
-  text-align: center;
-}
-.section-header:after {
-  display: block;
-  content: '';
-  width: 200px;
-  margin: 50px auto 80px;
-  border-bottom: 1px solid #eee;
 }
 
 .section-heading,
@@ -569,8 +543,15 @@ hr {
     min-height: 770px;
   }
 
+  .docs-title {
+    position: static;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
   .docs-header-content {
-    top: 37%;
+    top: 32%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -586,6 +567,7 @@ hr {
   }
 
   .carbonad {
+    bottom: 130px !important;
     left: 50% !important;
     width: 330px !important;
     margin-left: -165px !important;
@@ -717,6 +699,8 @@ hr {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .column-group {
