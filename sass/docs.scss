@@ -285,99 +285,9 @@ body {
 }
 
 
-// Benefits
-// --------------------------------------------------
-
-.docs-benefits {
-  padding-bottom: 0;
-  text-align: center;
-}
-.benefit-icon {
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 30px;
-  border: 1px solid #eee;
-  border-radius: 40px;
-
-  .icon {
-    color: #14b9d6;
-    font-size: 32px;
-    line-height: 80px;
-  }
-  .icon-download {
-    margin-top: -2px; // Align the icon correctly
-  }
-}
-.benefit-heading {
-  margin-top: 5px 0 10px;
-  font-weight: 500;
-  font-size: 24px;
-}
-.benefit-text {
-  margin: 0 0 100px;
-  font-size: 18px;
-  color: #777;
-}
-
-
-// Contribute
-// --------------------------------------------------
-
-.docs-contribute {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: #fff;
-  text-align: center;
-  background-color: #00d1fe;
-
-  .link {
-    display: inline-block;
-    margin-top: 5px;
-    color: #fff;
-    text-decoration: underline;
-  }
-  .column {
-    margin-bottom: 40px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-.contribute-heading,
-.contribute-text {
-  margin-top: 0;
-}
-.contribute-heading {
-  margin-bottom: 5px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.contribute-text {
-  margin-bottom: 0;
-  color: rgba(255,255,255,.85);
-}
-
-
 // Footer
 // --------------------------------------------------
 
-.docs-footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: rgba(255,255,255,.7);
-  text-align: center;
-  background-color: #254456;
-
-  .footer-content {
-    opacity: .7;
-    
-    a {
-      color: #fff;
-    }
-  }
-}
 .docs-mini-footer {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -390,15 +300,15 @@ body {
 // --------------------------------------------------
 
 .docs-component-toolbar {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   position: fixed;
   top: 0;
   bottom: auto;
   left: 0;
   right: 0;
   z-index: 20;
-  height: 52px;
+  height: 44px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   @include transform(translate3d(0, -55px, 0));
@@ -410,11 +320,8 @@ body {
   }
 
   .segmented-control {
-    position: absolute;
-    left: 50%;
-    width: 300px;
-    margin: 0;
-    @include transform(translateX(-50%));
+    max-width: 300px;
+    margin: 0 auto;
 
     .control-item {
       cursor: pointer;
@@ -432,13 +339,21 @@ body {
   border-bottom: 1px solid #ddd;
 }
 .component-title {
-  margin: 0;
+  margin-bottom: 15px;
   font-size: 24px;
   font-weight: 300;
 }
 .component-description {
-  margin: 10px 0;
+  margin-bottom: 15px;
   font-size: 16px;
+
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    background-color: #f9f9f9;
+    white-space: nowrap;
+    border-radius: 3px;
+  }
 }
 .component-example {
   font-family: $font-family-default;
@@ -659,6 +574,8 @@ hr {
 
   // Component jump menu
   .docs-jump-menu {
+    position: absolute;
+    left: 20px;
     display: block;
     color: #777;
     cursor: pointer;
@@ -857,6 +774,10 @@ hr {
   }
   .docs-sub-header .carbonad {
     right: 30px !important;
+  }
+  // Component jump menu
+  .docs-jump-menu {
+    left: 30px;
   }
 }
 

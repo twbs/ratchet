@@ -176,6 +176,14 @@ a:active {
 .bar.bar-footer-secondary-tab {
   bottom: 50px;
 }
+.bar .bar-footer,
+.bar .bar-footer-secondary,
+.bar .bar-footer-secondary-tab {
+  border-bottom: 0;
+  border-top: 1px solid #b1b1b1;
+  -webkit-box-shadow: inset 0 -2px 0 #33b5e5;
+  box-shadow: inset 0 -2px 0 #33b5e5;
+}
 
 .bar-tab {
   top: 0;

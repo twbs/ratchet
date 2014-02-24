@@ -198,6 +198,13 @@ p {
   &.bar-footer-secondary-tab {
     bottom: $bar-tab-height;
   }
+  // Give the footers the correct border
+  .bar-footer,
+  .bar-footer-secondary,
+  .bar-footer-secondary-tab {
+    border-top: 0;
+    @include box-shadow(0 0 -1px rgba(0,0,0,.85));
+  }
 }
 
 // Tab bar

@@ -19,7 +19,7 @@
   top: $bar-base-height;
 }
 
-// Modifier class to dock any bar to the bottom of the viewport
+// Modifier class for footer bars
 .bar-footer {
   bottom: 0;
 }
@@ -32,6 +32,14 @@
 // Modifier class to dock any bar above a .bar-tab
 .bar-footer-secondary-tab {
   bottom: $bar-tab-height;
+}
+
+// Give the footers the correct border
+.bar-footer,
+.bar-footer-secondary,
+.bar-footer-secondary-tab {
+  border-bottom: 0;
+  border-top: $border-default;
 }
 
 

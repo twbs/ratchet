@@ -251,6 +251,15 @@ a {
   &.bar-footer-secondary-tab {
     bottom: $bar-tab-height;
   }
+
+  // Give the footers the correct border
+  .bar-footer,
+  .bar-footer-secondary,
+  .bar-footer-secondary-tab {
+    border-bottom: 0;
+    border-top: $border-default;
+    @include box-shadow(inset 0 -2px 0 $primary-color);
+  }
 }
 .bar-tab {
   top: 0;

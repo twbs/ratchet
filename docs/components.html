@@ -57,7 +57,7 @@ title: Components &middot; Ratchet
 
     <article class="component">
       <h3 class="component-title">Title bar with buttons</h3>
-      <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
+      <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions. Use the <code>.pull-right</code> or <code>.pull-right</code> utility classes to float the buttons. Also, be sure to place any floated elements bofore the title.</p>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
@@ -87,6 +87,7 @@ title: Components &middot; Ratchet
 
     <article class="component">
       <h3 class="component-title">Title bar with icons</h3>
+      <p class="component-description">Icons can also be used for actions in toolbars. Again, be sure to use utility classes to float the icons into position.</p>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
@@ -108,7 +109,7 @@ title: Components &middot; Ratchet
 
     <article class="component">
       <h3 class="component-title">Title bar with link buttons and icons</h3>
-      <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions.</p>
+      <p class="component-description">Link buttons can be used in tool bars to remove the outline. Use these in conjuction with icons to recreate the nav feel from iOS7. Note the use of <code>.btn-nav</code> to bring the buttons a little bit closer to the edge of the viewport.</p>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
@@ -180,7 +181,7 @@ title: Components &middot; Ratchet
 
     <article class="component">
       <h3 class="component-title">Tab bar</h3>
-      <p class="component-description">Use Ratchicons in the tab bar to represent different sections of your app.</p>
+      <p class="component-description">Use Ratchicons in the <code>.tab-bar</code> to represent different sections of your app.</p>
 
       <div class="component-example component-example-fullbleed">
         <nav class="bar bar-tab">
@@ -237,6 +238,7 @@ title: Components &middot; Ratchet
 
   <article class="component">
       <h3 class="component-title">Tab bar (labels only)</h3>
+      <p class="component-description">If you don't want to use icons, that's okay too. The text will appear larger to use the additional space.</p>
 
       <div class="component-example component-example-fullbleed">
         <nav class="bar bar-tab">
@@ -271,7 +273,7 @@ title: Components &middot; Ratchet
 
   <article class="component">
       <h3 class="component-title">Standard bars</h3>
-      <p class="component-description">Standard bars are basic fixed elements that can be positioned in 3 places. These can be used to house buttons or segmented controls (see following examples).</p>
+      <p class="component-description">Standard bars are basic fixed elements that can be positioned in four places. These can be used to house buttons, icons, or segmented controls (see following examples).</p>
 
       <div class="component-example component-example-fullbleed">
         <!-- Segmented control in standard bar fixed to top -->
@@ -285,6 +287,12 @@ title: Components &middot; Ratchet
 
         <!-- Block button in standard bar fixed below top bar -->
         <div class="bar bar-standard bar-header-secondary">
+          <a class="btn btn-block">Block level button</a>
+        </div>
+
+
+        <!-- Block button in standard bar fixed below top bar -->
+        <div class="bar bar-standard bar-footer">
           <a class="btn btn-block">Block level button</a>
         </div>
       </div>
@@ -303,6 +311,17 @@ title: Components &middot; Ratchet
 <div class="bar bar-standard bar-header-secondary">
   <a class="btn btn-block">Block level button</a>
 </div>
+
+<!-- Block button in standard bar fixed above the footer -->
+<div class="bar bar-standard bar-footer-secondary">
+  <a class="btn btn-block">Block level button</a>
+</div>
+
+<!-- Icons in standard bar fixed to the bottom of the screen -->
+<div class="bar bar-standard bar-footer">
+  <a class="icon icon-compose pull-left"></a>
+  <a class="icon icon-gear pull-right"></a>
+</div>
 {% endhighlight %}
 
   </article>
@@ -310,30 +329,34 @@ title: Components &middot; Ratchet
   <!-- Typography -->
   <article class="component" id="typography">
     <h3 class="component-title">Typography</h3>
-    <p class="component-description">Use headings and paragraphs to title and describe sections of your app.</p>
+    <p class="component-description">Use headings and paragraphs to title and describe sections of your app. Apply or wrap elements with <code>.content-padded</code> to give the content space around the screen.</p>
 
     <div class="component-example component-example-fullbleed">
-      <h1>h1. Heading</h1>
-      <h2>h2. Heading</h2>
-      <h3>h3. Heading</h3>
-      <h4>h4. Heading</h4>
-      <h5>h5. Heading</h5>
-      <h6>h6. Heading</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco.</p>
+      <div class="content-padded">
+        <h1>h1. Heading</h1>
+        <h2>h2. Heading</h2>
+        <h3>h3. Heading</h3>
+        <h4>h4. Heading</h4>
+        <h5>h5. Heading</h5>
+        <h6>h6. Heading</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco.</p>
+      </div>
     </div>
 
 {% highlight html %}
-<h1>h1. Heading</h1>
-<h2>h2. Heading</h2>
-<h3>h3. Heading</h3>
-<h4>h4. Heading</h4>
-<h5>h5. Heading</h5>
-<h6>h6. Heading</h6>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco.</p>
+<div class="content-padded">
+  <h1>h1. Heading</h1>
+  <h2>h2. Heading</h2>
+  <h3>h3. Heading</h3>
+  <h4>h4. Heading</h4>
+  <h5>h5. Heading</h5>
+  <h6>h6. Heading</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco.</p>
+</div>
 {% endhighlight %}
 
   </article>
@@ -341,7 +364,7 @@ quis nostrud exercitation ullamco.</p>
   <!-- Table views -->
   <article class="component" id="table-views">
     <h3 class="component-title">Table views</h3>
-    <p class="component-description">Table views can be used for organizing data, showing collections of links or a series of controls.</p>
+    <p class="component-description">Table views can be used for organizing data, showing collections of links, or a series of controls.</p>
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
@@ -365,7 +388,7 @@ quis nostrud exercitation ullamco.</p>
 
   <article class="component">
     <h3 class="component-title">Table view with chevrons</h3>
-    <p class="component-description">Chevrons should be used to indicate that the item is linked.</p>
+    <p class="component-description">Chevrons should be used to indicate that the item is linked. Just apply the classes <code>.push-right</code> or <code>.push-left</code> to use a chevron.</p>
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
@@ -411,6 +434,7 @@ quis nostrud exercitation ullamco.</p>
 
   <article class="component">
     <h3 class="component-title">Table view with badges</h3>
+    <p class="component-description">Badges are a great way of showing data.</p>
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
@@ -432,6 +456,7 @@ quis nostrud exercitation ullamco.</p>
 
   <article class="component">
     <h3 class="component-title">Table view with badges and chevrons</h3>
+    <p class="component-description">Feel free to use chevrons and badges together. They'll automatically positon themselves correctly.</p>
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
@@ -483,6 +508,7 @@ quis nostrud exercitation ullamco.</p>
 
   <article class="component">
     <h3 class="component-title">Table view with media (images)</h3>
+    <p class="component-description">Showing media inside table views is easy. This component to perfect for images and text.</p>
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
@@ -552,6 +578,7 @@ quis nostrud exercitation ullamco.</p>
 
   <article class="component">
     <h3 class="component-title">Table view with media (icons)</h3>
+    <p class="component-description">Ratchicons can also used instead of images.</p>
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
@@ -689,6 +716,7 @@ quis nostrud exercitation ullamco.</p>
 
   <article class="component">
     <h3 class="component-title">Carded table views</h3>
+    <p class="component-description">Use <code>.card</code> to wrap any content in a padded element.</p>
 
     <div class="component-example">
       <div class="card">
@@ -816,7 +844,7 @@ quis nostrud exercitation ullamco.</p>
   <!-- Segmented Control -->
   <article class="component" id="segmentedControls">
     <h3 class="component-title">Segmented control</h3>
-    <p class="component-description">Created with flex-box so button sizes and spacing are consistent. Content sections that are to be swapped in and out by the controller should all be siblings and have the class "control-content". Then, just give each content section an id and point the link in the segmented control to that id.</p>
+    <p class="component-description">Content sections that are to be swapped in and out by the controller should all be siblings and have the class <code>.control-content</code>. Then, just give each content section an id and point the link in the segmented control to that id.</p>
 
     <div class="component-example">
       <div class="segmented-control">
@@ -861,7 +889,7 @@ quis nostrud exercitation ullamco.</p>
   <!-- Badges -->
   <article class="component" id="badges">
     <h3 class="component-title">Badges</h3>
-    <p class="component-description">Badges come in four flavors and should be used to indicate "how many" of something there are.</p>
+    <p class="component-description">Badges come in four flavors and should be used to indicate "how many" of something there are. Adding the a class of <code>.badge-inverted</code> will remove the badges background color.</p>
 
     <div class="component-example">
       <span class="badge">1</span>
@@ -1076,7 +1104,7 @@ document
         </header>
         
         <div class="content">
-          <p>The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+          <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
         </div>
       </div>
     </div>
@@ -1090,7 +1118,7 @@ document
   </header>
   
   <div class="content">
-    <p>The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+    <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
   </div>
 </div>
 {% endhighlight %}

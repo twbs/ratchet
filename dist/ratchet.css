@@ -510,6 +510,13 @@ input[type="button"] {
   bottom: 50px;
 }
 
+.bar-footer,
+.bar-footer-secondary,
+.bar-footer-secondary-tab {
+  border-bottom: 0;
+  border-top: 1px solid #dddddd;
+}
+
 .bar-nav {
   top: 0;
 }
@@ -897,7 +904,7 @@ select {
   font-weight: 400;
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .segmented-control .control-item {
   display: table-cell;
