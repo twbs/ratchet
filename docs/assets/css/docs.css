@@ -376,41 +376,37 @@ body {
 }
 
 .platform-toggle {
-  display: none;
-  padding-top: 15px;
-  padding-bottom: 90px;
-}
-.platform-toggle.fixed {
+  padding-top: 12px;
+  padding-bottom: 12px;
   position: fixed;
   top: 0;
   bottom: auto;
   left: 0;
   right: 0;
   z-index: 20;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-image: linear-gradient(45deg, #317ca6 0%, #254456 100%);
-  -webkit-transition: padding-top 0.2s linear, padding-bottom 0.2s linear;
-  -moz-transition: padding-top 0.2s linear, padding-bottom 0.2s linear;
-  transition: padding-top 0.2s linear, padding-bottom 0.2s linear;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  -webkit-transform: translate3d(0, -55px, 0);
+  -ms-transform: translate3d(0, -55px, 0);
+  transform: translate3d(0, -55px, 0);
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+}
+.platform-toggle.visible {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .platform-toggle .segmented-control {
   max-width: 300px;
   margin: 0 auto;
-  border-color: #00d1fe;
-  background-color: transparent;
 }
 .platform-toggle .segmented-control .control-item {
   cursor: pointer;
-  color: #00d1fe;
-  border-color: #00d1fe;
-}
-.platform-toggle .segmented-control .control-item:active {
-  background-color: rgba(0, 209, 254, 0.3);
-}
-.platform-toggle .segmented-control .control-item.active {
-  color: #fff;
-  background-color: #00d1fe;
 }
 
 .component {

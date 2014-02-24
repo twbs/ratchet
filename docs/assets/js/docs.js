@@ -14,6 +14,10 @@ $(function() {
   var currentActive;
   var topCache;
   var eventListeners;
+  var platformToggle;
+  var toggleTop;
+  var toggleHeight;
+
 
   var initialize = function () {
     currentActive        = 0;
@@ -32,8 +36,9 @@ $(function() {
     pageHeight           = $(document).height();
     contentPadding       = parseInt($('.docs-content').css('padding-bottom'));
     footerHeight         = $('.docs-footer').outerHeight(false);
+    platformToggle       = $('.js-platform-toggle');
 
-    // Device placment
+    // Device placement
     if (windowWidth >= 768) {
       device.initialLeft   = device.offset().left;
       device.initialTop    = device.initialTop || device.offset().top;
@@ -42,6 +47,7 @@ $(function() {
 
     checkDesktopContent();
     calculateScroll();
+    calculateToggle();
 
     if (!eventListeners) addEventListeners();
   }
@@ -94,6 +100,7 @@ $(function() {
     });
 
     win.on('scroll', calculateScroll);
+    win.on('scroll', calculateToggle);
   }
 
   var checkDesktopContent = function () {
@@ -144,6 +151,18 @@ $(function() {
 
     function updateContent(content) {
       $('#iwindow').html(content);
+    }
+  }
+
+  // Platform toggle
+  var calculateToggle = function () {
+    var currentTop   = win.scrollTop();
+    var headerHeight = $('.docs-sub-header').outerHeight();
+
+    if(currentTop >= headerHeight) {
+      platformToggle.addClass('visible');
+    } else if (currentTop <= headerHeight) {
+      platformToggle.removeClass('visible');
     }
   }
 

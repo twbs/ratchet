@@ -386,41 +386,30 @@ body {
 // --------------------------------------------------
 
 .platform-toggle {
-  display: none;
-  padding-top: 15px;
-  padding-bottom: 90px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  @include transform(translate3d(0, -55px, 0));
+  @include transition(-webkit-transform .5s);
 
-  &.fixed {
-    position: fixed;
-    top: 0;
-    bottom: auto;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-image: linear-gradient(45deg, #317ca6 0%, #254456 100%);
-    @include transition(padding-top .2s linear, padding-bottom .2s linear);
+  &.visible {
+    @include transform(translateY(0));
+    @include transform(translate3d(0, 0, 0));
   }
 
   .segmented-control {
     max-width: 300px;
     margin: 0 auto;
-    border-color: #00d1fe;
-    background-color: transparent;
 
     .control-item {
       cursor: pointer;
-      color: #00d1fe;
-      border-color: #00d1fe;
-      
-      &:active {
-        background-color: rgba(0,209,254,.3);
-      }
-      &.active {
-        color: #fff;
-        background-color: #00d1fe;
-      }
     }
   }
 }
