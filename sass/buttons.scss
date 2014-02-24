@@ -5,7 +5,7 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: 5px 8px;
+  padding: 6px 8px 7px;
   margin-bottom: 0; // For input.btn
   font-size: $button-font-size;
   font-weight: $font-weight-light;
@@ -139,8 +139,6 @@ input[type="button"] {
 // Generic styles for all badges within default buttons
 .btn .badge {
   font-size: 12px;
-  padding-top: 2px;
-  padding-bottom: 2px;
   margin: -2px -4px -2px 4px;
   background-color: rgba(0,0,0,.15);
 }

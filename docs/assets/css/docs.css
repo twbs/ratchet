@@ -92,7 +92,7 @@ body {
   z-index: 20;
   overflow: hidden;
   height: 0;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.9);
   opacity: 0;
 }
 .docs-nav .docs-nav-group.active {
@@ -342,6 +342,7 @@ body {
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 300;
+  line-height: 34px;
 }
 
 .component-description {
@@ -368,19 +369,56 @@ body {
   position: relative;
 }
 
+.component-example .bar {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+.component-example .bar.bar-header-secondary {
+  top: 0 !important;
+  border-top: 0;
+}
+
+.component-example > .content-padded {
+  margin: 15px;
+}
+
+.component-example > .card {
+  margin: 15px 0 0;
+}
+.component-example > .card .control-content {
+  padding: 15px;
+}
+
+.component-example > .btn,
+.component-example > .toggle {
+  margin-bottom: 10px;
+}
+
+.component-example .slider {
+  height: 200px;
+}
+
+.component-example .slide img {
+  width: 100%;
+  height: 200px;
+}
+
+.component-example .slide-text {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .component-example-fullbleed,
 .highlight {
   margin-left: -15px;
   margin-right: -15px;
-}
-
-.component-example .table-view.inset {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.component-example .bar-header-secondary {
-  top: 0;
 }
 
 .bar-nav ~ .content {
@@ -398,6 +436,16 @@ body {
   border-bottom: 1px solid #ddd;
   white-space: pre;
   word-wrap: normal;
+}
+
+#modals .modal {
+  left: 0;
+  z-index: 50;
+}
+
+#push .component-example {
+  height: 150px;
+  overflow: hidden;
 }
 
 #buttonsInDevice .btn,
@@ -1568,12 +1616,12 @@ hr {
   text-align: left;
 }
 .platform-android .bar .btn {
-  margin-top: 7px;
+  top: 7px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .platform-android .bar .btn-link {
-  margin-top: 0;
+  top: 0;
   padding: 0;
   color: #33b5e5;
   font-size: 18px;
@@ -1585,6 +1633,9 @@ hr {
 .platform-android .bar .btn-link .icon {
   top: 2px;
   padding: 0;
+}
+.platform-android .bar .btn-block {
+  top: 4px;
 }
 .platform-android .bar .segmented-control {
   top: 7px;

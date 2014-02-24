@@ -218,12 +218,12 @@ a:active {
 }
 
 .bar .btn {
-  margin-top: 7px;
+  top: 7px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 .bar .btn-link {
-  margin-top: 0;
+  top: 0;
   padding: 0;
   color: #33b5e5;
   font-size: 18px;
@@ -235,6 +235,9 @@ a:active {
 .bar .btn-link .icon {
   top: 2px;
   padding: 0;
+}
+.bar .btn-block {
+  top: 4px;
 }
 
 .bar .segmented-control {

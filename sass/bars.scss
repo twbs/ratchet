@@ -124,9 +124,10 @@
 
 .bar .btn {
   position: relative;
+  top: 7px;
   z-index: 20; // Position the buttons on top of .title
   padding: 6px 12px 7px;
-  margin-top: 8px;
+  margin-top: 0;
   font-weight: $font-weight-light;
 
   // Give buttons that are floated left and right side margin
@@ -140,7 +141,7 @@
 
 // Bars with link buttons (Line the text up with content)
 .bar .btn-link {
-  margin-top: 0;
+  top: 0;
   padding: 0;
   font-size: 16px;
   color: $primary-color;
@@ -157,8 +158,8 @@
 //
 // Add proper padding
 .bar .btn-block {
-  padding: 7px 0 6px;
-  margin-top: 5px;
+  top: 6px;
+  padding: 7px 0;
   margin-bottom: 0;
   font-size: 16px; // Scale down font size to fit in bar.
 }
@@ -230,6 +231,6 @@
 
 // Position the control correctly inside a bar.
 .bar .segmented-control {
-  top: 8px;
+  top: 7px;
   margin: 0 auto;
 }

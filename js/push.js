@@ -287,8 +287,8 @@
 
       if (/slide/.test(transition)) {
         swap.classList.add('sliding-in', enter ? 'right' : 'left');
-        swap.classList.add('slide');
-        container.classList.add('slide');
+        swap.classList.add('sliding');
+        container.classList.add('sliding');
       }
 
       container.parentNode.insertBefore(swap, container);
@@ -325,7 +325,7 @@
 
       function slideEnd() {
         swap.removeEventListener('webkitTransitionEnd', slideEnd);
-        swap.classList.remove('slide', 'sliding-in');
+        swap.classList.remove('sliding', 'sliding-in');
         swap.classList.remove(swapDirection);
         container.parentNode.removeChild(container);
         complete && complete();

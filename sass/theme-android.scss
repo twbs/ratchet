@@ -300,12 +300,12 @@ a {
 // Bars with buttons
 .bar {
   .btn {
-    margin-top: 7px;
+    top: 7px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
   .btn-link {
-    margin-top: 0;
+    top: 0;
     padding: 0;
     color: $primary-color;
     font-size: $font-size-default;
@@ -321,6 +321,9 @@ a {
       top: 2px;
       padding: 0;
     }
+  }
+  .btn-block {
+    top: 4px;
   }
 }
 

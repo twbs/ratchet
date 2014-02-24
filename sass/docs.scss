@@ -90,7 +90,7 @@ body {
     z-index: 20;
     overflow: hidden;
     height: 0;
-    background-color: rgba(0,0,0,.95);
+    background-color: rgba(0,0,0,.9);
     opacity: 0;
 
     &.active {
@@ -342,6 +342,7 @@ body {
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 300;
+  line-height: 34px;
 }
 .component-description {
   margin-bottom: 15px;
@@ -365,17 +366,51 @@ body {
 .component-example .content {
   position: relative;
 }
+.component-example .bar {
+  border-top: $border-default;
+  border-bottom: $border-default;
+
+  &.bar-header-secondary {
+    top: 0 !important;
+    border-top: 0;
+  }
+}
+.component-example > .content-padded {
+  margin: 15px;
+}
+.component-example > .card {
+  margin: 15px 0 0;
+
+  .control-content {
+    padding: 15px;
+  }
+}
+.component-example > .btn,
+.component-example > .toggle {
+  margin-bottom: 10px;
+}
+.component-example .slider {
+  height: 200px;
+}
+.component-example .slide img {
+  width: 100%;
+  height: 200px;
+}
+.component-example .slide-text {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 .component-example-fullbleed,
 .highlight {
   margin-left: -15px;
   margin-right: -15px;
-}
-.component-example .table-view.inset {
-  margin-left: 0;
-  margin-right: 0;
-}
-.component-example .bar-header-secondary {
-  top: 0;
 }
 .bar-nav ~ .content {
   padding: 0;
@@ -391,6 +426,16 @@ body {
   border-bottom: 1px solid #ddd;
   white-space: pre;
   word-wrap: normal;
+}
+// Modals
+#modals .modal {
+  left: 0;
+  z-index: 50;
+}
+// Push
+#push .component-example {
+  height: 150px;
+  overflow: hidden;
 }
 
 // Buttons
