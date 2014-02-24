@@ -70,8 +70,15 @@ body {
   font-weight: 100;
   @include transform(translateX(-50%));
 }
-.docs-title a,
 .docs-nav {
+  .docs-nav-item {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.docs-title a,
+.docs-nav a {
   color: #fff;
   @include transition(opacity .2s linear);
 
@@ -79,9 +86,6 @@ body {
     color: #fff;
     opacity: .5;
   }
-}
-.docs-nav {
-  cursor: pointer;
 }
 .docs-header-content {
   position: relative;
