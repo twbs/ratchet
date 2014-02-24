@@ -4,7 +4,7 @@
  * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
- * Designed and built by @connors, @dhg, and @fat.
+ * Designed by @connors.
  * =====================================================
  */
 
@@ -296,11 +296,6 @@ a:active {
   padding-bottom: 94px;
 }
 
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
 .content-padded {
   margin: 10px;
 }
@@ -311,6 +306,14 @@ a:active {
 
 .pull-right {
   float: right;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 
 h1, h2, h3, h4, h5, h6 {

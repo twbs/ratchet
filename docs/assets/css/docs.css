@@ -4,7 +4,7 @@
  * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
- * Designed and built by @connors, @dhg, and @fat.
+ * Designed by @connors.
  * =====================================================
  */
 
@@ -59,7 +59,6 @@ body {
 
 .docs-masthead {
   position: relative;
-  overflow: hidden;
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -71,26 +70,54 @@ body {
   margin-bottom: 0;
   font-size: 22px;
   font-weight: 100;
+  z-index: 20;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
+.docs-nav .docs-nav-trigger {
+  color: #fff;
+  cursor: pointer;
+  opacity: .7;
+}
+.docs-nav .docs-nav-trigger.active {
+  opacity: 1;
+}
+.docs-nav .docs-nav-group {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  overflow: hidden;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  opacity: 0;
+}
+.docs-nav .docs-nav-group.active {
+  height: auto;
+  opacity: 1;
+}
+.docs-nav .docs-nav-item {
+  display: block;
+  padding: 20px 15px;
+  font-weight: 100;
+  font-size: 22px;
+}
+
 .docs-title a,
-.docs-nav {
+.docs-nav-item {
   color: #fff;
   -webkit-transition: opacity 0.2s linear;
   -moz-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-.docs-title a:active,
-.docs-nav:active {
+.docs-title a:active, .docs-title a:focus,
+.docs-nav-item:active,
+.docs-nav-item:focus {
   color: #fff;
   opacity: .5;
-}
-
-.docs-nav {
-  cursor: pointer;
 }
 
 .docs-header-content {
@@ -197,6 +224,7 @@ body {
   padding-top: 55px;
   padding-bottom: 65px;
   color: #fff;
+  text-align: center;
 }
 .docs-sub-content .page-title,
 .docs-sub-content .page-description {
@@ -561,6 +589,7 @@ hr {
 
   .docs-sub-content {
     margin-right: 380px;
+    text-align: left;
   }
 
   .docs-title {
@@ -585,6 +614,27 @@ hr {
     margin-bottom: 30px;
     font-size: 41px;
     line-height: 60px;
+  }
+
+  .docs-nav {
+    float: right;
+    margin-top: 3px;
+    margin-bottom: -3px;
+  }
+  .docs-nav .docs-nav-trigger {
+    display: none;
+  }
+  .docs-nav .docs-nav-group {
+    position: static;
+    display: block;
+    height: auto;
+    background-color: transparent;
+    opacity: 1;
+  }
+  .docs-nav .docs-nav-item {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 14px;
   }
 
   .carbonad {

@@ -4,7 +4,7 @@
  * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
- * Designed and built by @connors, @dhg, and @fat.
+ * Designed by @connors.
  * =====================================================
  */
 /*
@@ -13,7 +13,7 @@
  * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
- * Designed and built by @connors, @dhg, and @fat.
+ * Designed by @connors.
  * =====================================================
  */
 /* ----------------------------------

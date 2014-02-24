@@ -79,10 +79,6 @@ a {
 }
 
 // Utility classes
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-}
 .content-padded {
   margin: $bar-side-spacing;
 }
@@ -91,4 +87,7 @@ a {
 }
 .pull-right {
   float: right;
+}
+.clearfix {
+  @include clearfix();
 }

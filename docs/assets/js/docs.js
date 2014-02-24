@@ -22,20 +22,23 @@ $(function() {
     doc                  = $(document);
     bod                  = $(document.body)
     device               = device || $('.js-device');
-    navComponentLinks    = $('.docs-nav');
+    //navComponentLinks    = $('.docs-nav');
     componentsList       = $('.components-list');
     componentLinks       = $('.component-example a');
     contentSection       = $('.component');
     topCache             = contentSection.map(function () { return $(this).offset().top })
     windowHeight         = $(window).height() / 3
+    windowWidth          = $(window).width();
     pageHeight           = $(document).height();
     contentPadding       = parseInt($('.docs-content').css('padding-bottom'));
     footerHeight         = $('.docs-footer').outerHeight(false);
 
     // Device placment
-    device.initialLeft   = device.offset().left;
-    device.initialTop    = device.initialTop || device.offset().top;
-    device.dockingOffset = ($(window).height() - device.height())/2;
+    if (windowWidth >= 768) {
+      device.initialLeft   = device.offset().left;
+      device.initialTop    = device.initialTop || device.offset().top;
+      device.dockingOffset = ($(window).height() - device.height())/2; 
+    }
 
     checkDesktopContent();
     calculateScroll();
@@ -48,6 +51,15 @@ $(function() {
 
     device.on('click', function (e) {
       e.preventDefault();
+    });
+
+    // Mobile navigation
+    $('.js-docs-nav-trigger').on('click', function () {
+      var nav     = $('.docs-nav-group');
+      var trigger = $('.js-docs-nav-trigger');
+
+      trigger.toggleClass('active');
+      nav.toggleClass('active'); 
     });
 
     // navComponentLinks.click(function(e) {
@@ -82,7 +94,6 @@ $(function() {
     });
 
     win.on('scroll', calculateScroll);
-    win.on('scroll', calculateToggle);
   }
 
   var checkDesktopContent = function () {
@@ -136,27 +147,6 @@ $(function() {
     }
   }
 
-  // Platform toggle
-  var initializeToggle = function () {
-    platformToggle = $('.platform-toggle');
-
-    // Toggle placment
-    toggleTop    = platformToggle.offset().top;
-    toggleHeight = platformToggle.outerHeight();
-
-    calculateToggle();
-  }
-  var calculateToggle = function () {
-    var currentTop = win.scrollTop();
-
-    if(currentTop >= toggleTop) {
-      platformToggle.addClass('fixed');
-    } else if (currentTop <= $('.docs-header').outerHeight()) {
-      platformToggle.removeClass('fixed');
-    }
-  }
-
   $(window).on('load resize', initialize);
-  $(window).on('load', initializeToggle);
   $(window).on('load', function () { new FingerBlast('.device-content'); });
 });

@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
             ' *\n' +
-            ' * Designed and built by @connors, @dhg, and @fat.\n' +
+            ' * Designed by @connors.\n' +
             ' * =====================================================\n' +
             ' */\n',
     

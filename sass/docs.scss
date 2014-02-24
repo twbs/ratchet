@@ -1,6 +1,8 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+// Clearfix mixin for docs
+
 //
 // Documentation
 // --------------------------------------------------
@@ -57,7 +59,6 @@ body {
 // Masthead
 .docs-masthead {
   position: relative;
-  overflow: hidden;
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(255,255,255,.1);
@@ -68,21 +69,49 @@ body {
   margin-bottom: 0;
   font-size: 22px;
   font-weight: 100;
+  z-index: 20;
   @include transform(translateX(-50%));
 }
 .docs-nav {
+  .docs-nav-trigger {
+    color: #fff;
+    cursor: pointer;
+    opacity: .7;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+  .docs-nav-group {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    overflow: hidden;
+    height: 0;
+    background-color: rgba(0,0,0,.95);
+    opacity: 0;
+
+    &.active {
+      height: auto;
+      opacity: 1;
+    }
+  }
   .docs-nav-item {
-    display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
+    display: block;
+    padding: 20px 15px;
+    font-weight: 100;
+    font-size: 22px;
   }
 }
 .docs-title a,
-.docs-nav a {
+.docs-nav-item {
   color: #fff;
   @include transition(opacity .2s linear);
 
-  &:active {
+  &:active,
+  &:focus {
     color: #fff;
     opacity: .5;
   }
@@ -185,6 +214,7 @@ body {
   padding-top: 55px; // Visually centers the content.
   padding-bottom: 65px; // Visually centers the content.
   color: #fff;
+  text-align: center;
 
   .page-title,
   .page-description {
@@ -584,7 +614,8 @@ hr {
     @include transform(translateY(-50%) !important);
   }
   .docs-sub-content {
-    margin-right: 380px
+    margin-right: 380px;
+    text-align: left;
   }
   .docs-title {
     position: static;
@@ -603,6 +634,29 @@ hr {
     margin-bottom: 30px;
     font-size: 41px;
     line-height: 60px;
+  }
+
+  // Docs nav
+  .docs-nav {
+    float: right;
+    margin-top: 3px;
+    margin-bottom: -3px;
+
+    .docs-nav-trigger {
+      display: none;
+    }
+    .docs-nav-group {
+      position: static;
+      display: block;
+      height: auto;
+      background-color: transparent;
+      opacity: 1;
+    }
+    .docs-nav-item {
+      display: inline-block;
+      padding: 0 15px;
+      font-size: 14px;
+    }
   }
 
   // Ads
