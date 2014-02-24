@@ -373,6 +373,37 @@ body {
   cursor: pointer;
 }
 
+.docs-examples {
+  margin-top: 30px;
+}
+
+.docs-example-group {
+  margin-top: 30px;
+}
+.docs-example-group .example-wrap {
+  display: inline-block;
+  margin-right: 10px;
+}
+.docs-example-group .example-wrap:last-child {
+  margin-right: 10px;
+}
+.docs-example-group .example-wrap .example {
+  display: inline-block;
+  overflow: hidden;
+  padding: 3px;
+  width: 170px;
+  height: 100px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+.docs-example-group .example-wrap h5 {
+  margin-top: 10px;
+  font-weight: 300;
+}
+.docs-example-group .example-wrap img {
+  width: 100%;
+}
+
 code {
   padding: 2px 4px;
   font-size: 90%;
@@ -874,6 +905,14 @@ hr {
     font-weight: 300;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
+
+  .docs-example-group .example-wrap {
+    display: inline-block;
+  }
+  .docs-example-group .example-wrap .example {
+    width: 180px;
+    height: 120px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .device {
@@ -887,11 +926,12 @@ hr {
   .docs-jump-menu {
     left: 30px;
   }
-}
-.example-device {
-  margin: 0 auto;
-}
 
+  .docs-example-group .example-wrap .example {
+    width: 220px;
+    height: 150px;
+  }
+}
 .container {
   position: relative;
   margin-left: auto;
