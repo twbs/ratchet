@@ -43,6 +43,15 @@ body {
 .docs-header {
   height: 100vh;
   min-height: 620px;
+
+  // Ad on the homepage
+  .carbonad {
+    position: absolute !important;
+    bottom: 90px !important;
+    margin-top: 0 !important;
+    @include animation-name(fadeintext);
+    @include animation-duration(3s);
+  }
 }
 
 // Masthead
@@ -55,23 +64,24 @@ body {
 }
 .docs-title {
   position: absolute;
-  top: 14px;
   left: 50%;
   margin-bottom: 0;
-  color: #fff;
   font-size: 22px;
   font-weight: 100;
   @include transform(translateX(-50%));
 }
+.docs-title a,
 .docs-nav {
   color: #fff;
-  cursor: pointer;
   @include transition(opacity .2s linear);
 
   &:active {
     color: #fff;
     opacity: .5;
   }
+}
+.docs-nav {
+  cursor: pointer;
 }
 .docs-header-content {
   position: relative;
@@ -124,8 +134,6 @@ body {
 
 // Ads
 .carbonad {
-  position: absolute !important;
-  bottom: 90px !important;
   width: 100% !important;
   height: auto !important;
   padding: 15px !important;
@@ -136,8 +144,6 @@ body {
   border-right: 0 !important;
   border-bottom: 0 !important;
   border-left: 0 !important;
-  @include animation-name(fadeintext);
-  @include animation-duration(3s);
 }
 .carbonad-img {
   margin: 0 !important;
@@ -170,6 +176,8 @@ body {
 // --------------------------------------------------
 
 .docs-sub-content {
+  position: relative;
+  overflow: hidden;
   padding-top: 55px; // Visually centers the content.
   padding-bottom: 65px; // Visually centers the content.
   color: #fff;
@@ -554,17 +562,29 @@ hr {
 
 // Tablet to desktop 
 @media screen and (min-width: 768px) {
-  .docs-logo {
-    width: 70px;
-    height: 70px;
-    font-size: 30px; 
-    line-height: 68px;
-  }
   .docs-header {
     min-height: 770px;
+
+    // Ads on the homepage
+    .carbonad {
+      bottom: 130px !important;
+      left: 50% !important;
+      margin-left: -165px !important;
+    }
+  }
+  .docs-sub-header .carbonad {
+    position: absolute !important;
+    top: 50% !important;
+    right: 15px !important;
+    margin-top: 0 !important;
+    @include transform(translateY(-50%) !important);
+  }
+  .docs-sub-content {
+    margin-right: 380px
   }
   .docs-title {
     position: static;
+    float: left;
     @include transform(translateX(0));
   }
   .docs-header-content {
@@ -583,10 +603,7 @@ hr {
 
   // Ads
   .carbonad {
-    bottom: 130px !important;
-    left: 50% !important;
     width: 330px !important;
-    margin-left: -165px !important;
     border-right: 1px solid rgba(255,255,255,.1) !important;
     border-bottom: 1px solid rgba(255,255,255,.1) !important;
     border-left: 1px solid rgba(255,255,255,.1) !important;
@@ -623,7 +640,7 @@ hr {
     display: block;
     width: 395px;
     height: 813px;
-    margin-left: -13px;
+    margin-left: -20px;
     font-family: "Helvetica Neue", sans-serif;
     background-image: url("../img/iphone5c.png");
     background-size: 100%;
@@ -706,6 +723,15 @@ hr {
     text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 }
+@media screen and (min-width: 1200px) {
+  // Device
+  .device {
+    margin-left: 39px;
+  }
+  .docs-sub-header .carbonad {
+    right: 30px !important;
+  }
+}
 
 // Example devices
 
@@ -718,6 +744,7 @@ hr {
 // --------------------------------------------------
 
 .container {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
