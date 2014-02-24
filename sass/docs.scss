@@ -331,7 +331,12 @@ body {
 
 // Components
 // --------------------------------------------------
-
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+}
 .component {
   padding: 50px 15px;
   margin-left: -15px;
@@ -347,14 +352,6 @@ body {
 .component-description {
   margin-bottom: 15px;
   font-size: 16px;
-
-  code {
-    padding: 2px 4px;
-    font-size: 90%;
-    background-color: #f9f9f9;
-    white-space: nowrap;
-    border-radius: 3px;
-  }
 }
 .component-example {
   font-family: $font-family-default;
@@ -426,6 +423,18 @@ body {
   border-bottom: 1px solid #ddd;
   white-space: pre;
   word-wrap: normal;
+}
+#ratchicons .icon,
+#ratchiconsInDevice .icon {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 25px;
 }
 // Modals
 #modals .modal {
@@ -706,12 +715,24 @@ hr {
     }
   }
 
-  // Contribution section
-  .docs-contribute {
-    .column {
-      margin-bottom: 0;
-    }
+  // Steps
+  .docs-steps {
+    margin-top: 50px;
+    padding: 0;
+    list-style: none;
   }
+  .step {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .step-title,
+  .step-description {
+    font-weight: 300;
+  }
+  .step-description {
+    font-size: 18px;
+  }
+
 
   // Content sections
   // --------------------------------------------------
