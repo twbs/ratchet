@@ -47,7 +47,7 @@ body {
 }
 .docs-header .carbonad {
   position: absolute !important;
-  bottom: 90px !important;
+  bottom: 180px !important;
   margin-top: 0 !important;
   -webkit-animation-name: fadeintext;
   -moz-animation-name: fadeintext;

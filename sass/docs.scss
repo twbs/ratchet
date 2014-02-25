@@ -49,7 +49,7 @@ body {
   // Ad on the homepage
   .carbonad {
     position: absolute !important;
-    bottom: 90px !important;
+    bottom: 180px !important;
     margin-top: 0 !important;
     @include animation-name(fadeintext);
     @include animation-duration(3s);
