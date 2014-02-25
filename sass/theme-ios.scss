@@ -564,7 +564,7 @@ textarea,
     @include transition(opacity .2s ease-in-out);
   }
   // Slide animation
-  &.slide {
+  &.sliding {
     @include transition-timing-function ($timing-fuction);
 
     // Adding the overlay

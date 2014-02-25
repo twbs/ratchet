@@ -440,12 +440,12 @@ textarea,
   -moz-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
-.content.slide {
+.content.sliding {
   -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
   -moz-transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
   transition-timing-function: cubic-bezier(0.1, 0.5, 0.1, 1);
 }
-.content.slide.sliding-in, .content.slide.right:not([class*="sliding-in"]) {
+.content.sliding.sliding-in, .content.sliding.right:not([class*="sliding-in"]) {
   -webkit-animation-name: fadeOverlay;
   -moz-animation-name: fadeOverlay;
   animation-name: fadeOverlay;
@@ -453,12 +453,12 @@ textarea,
   -moz-animation-duration: 0.4s;
   animation-duration: 0.4s;
 }
-.content.slide.right:not([class*="sliding-in"]) {
+.content.sliding.right:not([class*="sliding-in"]) {
   -webkit-animation-direction: reverse;
   -moz-animation-direction: reverse;
   animation-direction: reverse;
 }
-.content.slide.left {
+.content.sliding.left {
   -webkit-transform: translate3d(-20%, 0, 0);
   -ms-transform: translate3d(-20%, 0, 0);
   transform: translate3d(-20%, 0, 0);
