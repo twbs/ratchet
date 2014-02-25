@@ -17,7 +17,7 @@ Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly
 ### Running documentation locally
 
 1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation).
-2. From the root `/ratchet` directory, run `jekyll serve` in the command line.
+2. From the root `/ratchet/docs` directory, run `jekyll serve` in the command line.
 3. Open <http://localhost:4000> in your browser, and boom!
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
