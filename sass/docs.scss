@@ -132,28 +132,15 @@ body {
     display: block;
     padding: 15px 60px 16px;
     font-size: 18px;
-    color: rgba(255,255,255,.7);
+    margin-bottom: 0;
+    color: #0a1855;
+    background-color: #fff;
     border: 0;
     @include transition(all .2s linear);
 
     &:hover {
-      color: #fff;
-      border-color: #fff;
-    }
-    &:active {
-      opacity: .5;
-      background-color: transparent;
-    }
-  }
-  .btn-primary {
-    margin-bottom: 0;
-    color: #0a1855;
-    background-color: rgba(255,255,255,.85);
-
-    &:hover {
-      color: #0a1855;
-      border-color: #fff;
       background-color: #fff;
+      @include box-shadow(0 0 50px rgba(255,255,255,.3));
     }
     &:active {
       opacity: .5;

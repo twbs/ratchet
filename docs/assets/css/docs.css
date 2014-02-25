@@ -4,7 +4,7 @@
  * Copyright 2014 Connor Sears
  * Licensed under http://www.opensource.org/licenses/MIT
  *
- * Designed by @connors.
+ * V2.0.0 designed by @connors.
  * =====================================================
  */
 
@@ -141,31 +141,20 @@ body {
   display: block;
   padding: 15px 60px 16px;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+  color: #0a1855;
+  background-color: #fff;
   border: 0;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .docs-header-content .btn:hover {
-  color: #fff;
-  border-color: #fff;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
 }
 .docs-header-content .btn:active {
-  opacity: .5;
-  background-color: transparent;
-}
-.docs-header-content .btn-primary {
-  margin-bottom: 0;
-  color: #0a1855;
-  background-color: rgba(255, 255, 255, 0.85);
-}
-.docs-header-content .btn-primary:hover {
-  color: #0a1855;
-  border-color: #fff;
-  background-color: #fff;
-}
-.docs-header-content .btn-primary:active {
   opacity: .5;
 }
 
