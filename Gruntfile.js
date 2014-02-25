@@ -52,9 +52,19 @@ module.exports = function(grunt) {
           '<%= meta.distPath %><%= pkg.name %>.css': 'sass/ratchet.scss',
           '<%= meta.distPath %>ios-theme.css': 'sass/theme-ios.scss',
           '<%= meta.distPath %>android-theme.css': 'sass/theme-android.scss',
-          '<%= meta.docsAssetsPath %>css/docs.css': 'sass/docs.scss',
-          '<%= meta.docsPath %><%= pkg.name %>.css': '<%= meta.distPath %><%= pkg.name %>.css'
+          '<%= meta.docsAssetsPath %>css/docs.css': 'sass/docs.scss'
         }
+      }
+    },
+
+    copy: {
+      docs: {
+        expand: true,
+        cwd: 'dist',
+        src: [
+          '*'
+        ],
+        dest: 'docs/dist'
       }
     },
  
@@ -70,11 +80,13 @@ module.exports = function(grunt) {
 
   // Load the plugins
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jekyll');
 
+
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'concat']);
-  grunt.registerTask('build', ['sass', 'concat']);
+  grunt.registerTask('default', ['sass', 'concat', 'copy']);
+  grunt.registerTask('build', ['sass', 'concat', 'copy']);
 };

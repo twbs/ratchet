@@ -7,15 +7,6 @@
  * Designed by @connors.
  * =====================================================
  */
-/*
- * =====================================================
- * Ratchet v2.0.0
- * Copyright 2014 Connor Sears
- * Licensed under http://www.opensource.org/licenses/MIT
- *
- * Designed by @connors.
- * =====================================================
- */
 /* ----------------------------------
  * MODAL v1.0.0
  * Licensed under The MIT License
