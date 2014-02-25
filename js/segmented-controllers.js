@@ -1,5 +1,5 @@
 /* ----------------------------------
- * Segmented controls v1.0.1
+ * Segmented controls v2.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */

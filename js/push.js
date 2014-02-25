@@ -1,5 +1,5 @@
 /* ----------------------------------
- * PUSH v1.0.0
+ * PUSH v2.0.0
  * Licensed under The MIT License
  * inspired by chris's jquery.pjax.js
  * http://opensource.org/licenses/MIT

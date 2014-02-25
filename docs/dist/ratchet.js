@@ -8,7 +8,7 @@
  * =====================================================
  */
 /* ----------------------------------
- * MODAL v1.0.0
+ * MODAL v2.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
@@ -36,7 +36,7 @@
 }();
 
 /* ----------------------------------
- * POPOVER v1.0.1
+ * POPOVER v2.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
@@ -108,7 +108,7 @@
 }();
 
 /* ----------------------------------
- * PUSH v1.0.0
+ * PUSH v2.0.0
  * Licensed under The MIT License
  * inspired by chris's jquery.pjax.js
  * http://opensource.org/licenses/MIT
@@ -528,7 +528,7 @@
 }();
 
 /* ----------------------------------
- * Segmented controls v1.0.1
+ * Segmented controls v2.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
@@ -575,7 +575,7 @@
   window.addEventListener('click', function (e) { if (getTarget(e.target)) e.preventDefault(); });
 }();
 /* ----------------------------------
- * SLIDER v1.0.1
+ * SLIDER v2.0.0
  * Licensed under The MIT License
  * Adapted from Brad Birdsall's swipe
  * http://opensource.org/licenses/MIT
@@ -692,7 +692,7 @@
 }();
 
 /* ----------------------------------
- * TOGGLE v1.0.0
+ * TOGGLE v2.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */

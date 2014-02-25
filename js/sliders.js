@@ -1,5 +1,5 @@
 /* ----------------------------------
- * SLIDER v1.0.1
+ * SLIDER v2.0.0
  * Licensed under The MIT License
  * Adapted from Brad Birdsall's swipe
  * http://opensource.org/licenses/MIT

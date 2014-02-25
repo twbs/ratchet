@@ -1,5 +1,5 @@
 /* ----------------------------------
- * TOGGLE v1.0.0
+ * TOGGLE v2.0.0
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
