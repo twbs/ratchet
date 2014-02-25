@@ -41,7 +41,7 @@ A small list of "gotchas" are provided below for designers and developers starti
 - Ratchet uses XHR requests to fetch additional pages inside the application. Due to security concerns, modern browsers prevent XHR requests when opening files locally (aka using the file:/// protocol); consequently, Ratchet does not work when opened directly as a file.
     - A common solution to this is to simply serve the files from a local server. One convenient way to achieve this is to run ```python -m SimpleHTTPServer <port>``` to serve up the files in the current directory to ```http://localhost:<port>```
 
-## Maintainer
+## Maintainers
 
 Connor Sears
 
