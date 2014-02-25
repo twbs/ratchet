@@ -38,6 +38,7 @@ $(function() {
     footerHeight         = $('.docs-footer').outerHeight(false);
     toolbarToggle       = $('.js-docs-component-toolbar');
 
+    if (!device.length) return
     // Device placement
     if (windowWidth >= 768) {
       device.initialLeft   = device.offset().left;
@@ -166,6 +167,8 @@ $(function() {
       componentsList.removeClass('active');
     }
   }
+
+  if (!device) return
 
   $(window).on('load resize', initialize);
   $(window).on('load', function () { new FingerBlast('.device-content'); });
