@@ -47,12 +47,12 @@ Connor Sears
 
 - <https://twitter.com/connors>
 - <https://github.com/connors>
-- 
+
+
 Connor Montgomery
 
 - <https://twitter.com/connor>
 - <https://github.com/connor>
-
 
 
 Created by Connor Sears, Dave Gamache, and Jacob Thornton.
