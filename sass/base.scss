@@ -49,8 +49,7 @@ a {
 // Hack to force all relatively and absolutely positioned elements still render while scrolling
 // Note: This is a bug for "-webkit-overflow-scrolling: touch"
 .content > * {
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  @include transform(translateZ(0));
 }
 
 // Pad top/bottom of content so it doesn't hide behind bars.
