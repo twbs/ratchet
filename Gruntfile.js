@@ -32,10 +32,10 @@ module.exports = function(grunt) {
             ' */\n',
     
     concat: {
-      options: {
-        banner: '<%= banner %>'
-      },
       ratchet: {
+        options: {
+          banner: '<%= banner %>'
+        },
         src: [
           'js/modals.js',
           'js/popovers.js',
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     sass: {
       options: {
         banner: '<%= banner %>',
-        style: 'expanded',
+        style: 'expanded'
       },
       dist: {
         files: {
@@ -77,6 +77,39 @@ module.exports = function(grunt) {
         dest: 'docs/dist'
       }
     },
+
+    cssmin: {
+      combine: {
+        files: {
+          'dist/<%= pkg.name %>.min.css': ['dist/<%= pkg.name %>.css']
+        }
+      }
+    },
+
+    uglify: {
+      options: {
+        report: 'min'
+      },
+      ratchet: {
+        src: 'dist/<%= pkg.name %>.js',
+        dest: 'dist/<%= pkg.name %>.min.js'
+      }
+    },
+
+    usebanner: {
+      dist: {
+        options: {
+          position: 'top',
+          banner: '<%= banner %>'
+        },
+        files: {
+          src: [
+            'dist/<%= pkg.name %>.min.js',
+            'dist/<%= pkg.name %>.min.css'
+          ]
+        }
+      }
+    },
  
     watch: {
       scripts: {
@@ -91,8 +124,11 @@ module.exports = function(grunt) {
   // Load the plugins
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'concat', 'copy']);
-  grunt.registerTask('build', ['sass', 'concat', 'copy']);
+  grunt.registerTask('banner', ['usebanner']);
+  grunt.registerTask('dist-css', ['sass', 'cssmin']);
+  grunt.registerTask('dist-js', ['concat', 'uglify']);
+  grunt.registerTask('dist', ['dist-css', 'dist-js', 'banner', 'copy']);
+  grunt.registerTask('default', ['dist']);
+  grunt.registerTask('build', ['dist']);
 };
