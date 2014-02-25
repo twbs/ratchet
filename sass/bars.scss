@@ -1,0 +1,236 @@
+//
+// Bars
+// --------------------------------------------------
+
+.bar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: $bar-base-height;
+  padding-right: $bar-side-spacing;
+  padding-left: $bar-side-spacing;
+  border-bottom: $border-default;
+  background-color: $chrome-color;
+}
+
+// Modifier class to dock any bar below .bar-nav
+.bar-header-secondary {
+  top: $bar-base-height;
+}
+
+// Modifier class for footer bars
+.bar-footer {
+  bottom: 0;
+}
+
+// Modifier class to dock any bar above a standard bar
+.bar-footer-secondary {
+  bottom: $bar-base-height;
+}
+
+// Modifier class to dock any bar above a .bar-tab
+.bar-footer-secondary-tab {
+  bottom: $bar-tab-height;
+}
+
+// Give the footers the correct border
+.bar-footer,
+.bar-footer-secondary,
+.bar-footer-secondary-tab {
+  border-bottom: 0;
+  border-top: $border-default;
+}
+
+
+// Nav bar
+// --------------------------------------------------
+
+// Bar docked to top of viewport for showing page title and actions
+.bar-nav {
+  top: 0;
+}
+
+// Centered text in the .bar-nav
+//
+// We position the absolutely to make sure the title is always centered
+.title {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 (-$bar-side-spacing); 
+  font-size: $font-size-default;
+  font-weight: $font-weight;
+  line-height: $bar-base-height;
+  color: #000;
+  text-align: center;
+  white-space: nowrap;
+}
+// Retain specified title color
+.title a {
+  color: inherit;
+}
+
+
+// Tab bar
+// --------------------------------------------------
+
+// Bar docked to bottom and used for primary app navigation
+.bar-tab {
+  display: table;
+  bottom: 0;
+  width: 100%;
+  height: $bar-tab-height;
+  padding: 0;
+  border-top: $border-default;
+  border-bottom: 0;
+  table-layout: fixed;
+
+  // Navigational tab (Nested to be more specific for the icons in tab-items)
+  .tab-item {
+    display: table-cell;
+    width: 1%;
+    height: $bar-tab-height;
+    vertical-align: middle;
+    color: #929292;
+    text-align: center;
+
+    // Active states for the tab bar
+    &.active,
+    &:active {
+      color: $primary-color;
+    }
+
+    // Tab icon
+    .icon {
+      top: 3px;
+      width: 24px;
+      height: 24px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      // Make the text smaller if it's used with an icon
+      ~ .tab-label {
+        display: block;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+// Bars with buttons
+// --------------------------------------------------
+
+.bar .btn {
+  position: relative;
+  top: 7px;
+  z-index: 20; // Position the buttons on top of .title
+  padding: 6px 12px 7px;
+  margin-top: 0;
+  font-weight: $font-weight-light;
+
+  // Give buttons that are floated left and right side margin
+  &.pull-right { 
+    margin-left: $bar-side-spacing; 
+  }
+  &.pull-left { 
+    margin-right: $bar-side-spacing;
+  }
+}
+
+// Bars with link buttons (Line the text up with content)
+.bar .btn-link {
+  top: 0;
+  padding: 0;
+  font-size: 16px;
+  color: $primary-color;
+  line-height: $bar-base-height;
+  border: 0;
+
+  &:active,
+  &.active {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Bars with block buttons
+//
+// Add proper padding
+.bar .btn-block {
+  top: 6px;
+  padding: 7px 0;
+  margin-bottom: 0;
+  font-size: 16px; // Scale down font size to fit in bar.
+}
+
+// Nav buttons (Only applicable within bars)
+//
+// Buttons inside bars that sit closer against the viewport.
+.bar .btn-nav {
+  &.pull-left {
+    margin-left: -5px;
+
+    .icon-left-nav {
+      margin-right: -3px;
+    }
+  }
+  &.pull-right {
+    margin-right: -5px;
+
+    .icon-right-nav {
+      margin-left: -3px;
+    }
+  }
+}
+
+
+// Bars with Ratchicons
+// --------------------------------------------------
+
+.bar {
+  .icon {
+    position: relative;
+    z-index: 20; // Position the buttons on top of .title
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
+  }
+
+  // Vertical center the larger icons in btns.
+  .btn .icon {
+    top: 3px;
+    padding: 0;
+  }
+  
+  // Handle carets in the titles
+  .title .icon {
+    padding: 0;
+
+    // Specific postioning of the caret icon within a title. Used with popover.js.
+    &.icon-caret {
+      top: 4px;
+      margin-left: -5px;
+    }
+  }
+}
+
+
+// Bars for search forms
+// --------------------------------------------------
+
+// Position/size search bar within the bar
+.bar input[type="search"] {
+  height: 29px;
+  margin: 6px 0;
+}
+
+
+// Bars with segmented controls
+// --------------------------------------------------
+
+// Position the control correctly inside a bar.
+.bar .segmented-control {
+  top: 7px;
+  margin: 0 auto;
+}

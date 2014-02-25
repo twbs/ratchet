@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ site.name }}: {{ site.description }}">
+<meta name="author" content="{{ site.authors }}">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" href="../favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<link rel="stylesheet" href="../dist/ratchet.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<link rel="stylesheet" href="../assets/css/pygments.css">
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/img/apple-touch-icon-114x114.png">
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="../dist/ratchet.js"></script>
+<script src="../assets/js/docs.js"></script>
+<script src="../assets/js/fingerblast.js"></script>
+
+<!-- Typekit -->
+<script type="text/javascript" src="//use.typekit.net/asj6ttm.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<!-- Roboto -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36050008-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  // Remove once I add back in the docs.js
+  // $(function() {
+  //   $(window).on('load', function () { new FingerBlast('.body'); });
+  // });
+</script>

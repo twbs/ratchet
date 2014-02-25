@@ -29,8 +29,6 @@ nbproject
 .komodotools
 
 # Folders to ignore
-.hg
-.svn
-.CVS
 .idea
 node_modules
+_site

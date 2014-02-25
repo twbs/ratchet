@@ -1,0 +1,12 @@
+name: Ratchet
+authors: Connor Sears
+description: Prototype mobile apps with simple HTML, CSS, and JS components.
+
+pygments:  true
+permalink: pretty
+
+# Server
+source:  ./docs
+port:    4000
+baseurl: /
+url:     http://localhost:4000

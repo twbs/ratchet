@@ -1,0 +1,60 @@
+//
+// Push styles (to be used with push.js)
+// --------------------------------------------------
+
+.content {
+  // Fade animation 
+  &.fade {
+    left: 0;
+    opacity: 0;
+
+    &.in {
+      opacity: 1;
+    }
+  }
+
+  // Slide animation
+  &.sliding {
+    z-index: 2;
+    -webkit-transition: -webkit-transform .4s;
+       -moz-transition: -moz-transform .4s;
+            transition: transform .4s;
+    @include transform(translate3d(0, 0, 0));
+
+    &.left {
+      z-index: 1;
+      @include transform(translate3d(-100%, 0, 0));
+    }
+
+    &.right {
+      z-index: 3;
+      @include transform(translate3d(100%, 0, 0));
+    }
+  }
+}
+
+// Add chevrons to elements
+.push-left,
+.push-right {
+  &:after {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    color: #bbb;
+    font-family: Ratchicons;
+    font-size: inherit;
+    text-decoration: none;
+    line-height: 1;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    @include transform(translateY(-50%));
+  }
+}
+.push-left:after {
+  left: 15px;
+  content: '\e822';
+}
+.push-right:after {
+  right: 15px;
+  content: '\e826';
+}

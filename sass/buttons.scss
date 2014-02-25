@@ -1,0 +1,172 @@
+//
+// Buttons
+// --------------------------------------------------
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 6px 8px 7px;
+  margin-bottom: 0; // For input.btn
+  font-size: $button-font-size;
+  font-weight: $font-weight-light;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: $chrome-color;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  // Active & filled button styles
+  &:active,
+  &.active {
+    color: inherit; // Overriding the gloabl style for all anchors.
+    background-color: #ccc;
+  }
+
+  // Disabled styles & filled button active styles
+  &:disabled,
+  &.disabled {
+    opacity: .6;
+  }
+}
+
+
+// Other button types
+// --------------------------------------------------
+
+// Primary button (Default color is blue)
+.btn-primary {
+  color: #fff;
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+
+  &:active,
+  &.active {
+    color: #fff;
+    border: 1px solid darken($primary-color, 10%);
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Positive button (Default color is green)
+.btn-positive {
+  color: #fff;
+  border: 1px solid $positive-color;
+  background-color: $positive-color;
+
+  &:active,
+  &.active {
+    color: #fff;
+    border: 1px solid darken($positive-color, 10%);
+    background-color: darken($positive-color, 10%);
+  }
+}
+
+// Negative button (Default color is red)
+.btn-negative {
+  color: #fff;
+  border: 1px solid $negative-color;
+  background-color: $negative-color;
+
+  &:active,
+  &.active {
+    color: #fff;
+    border: 1px solid darken($negative-color, 10%);
+    background-color: darken($negative-color, 10%);
+  }
+}
+
+// Outlined buttons 
+.btn-outlined {
+  background-color: transparent;
+
+  &.btn-primary {
+    color: $primary-color;
+  }
+  &.btn-positive {
+    color: $positive-color;
+  }
+  &.btn-negative {
+    color: $negative-color;
+  }
+  // Active states
+  &.btn-primary:active,
+  &.btn-positive:active,
+  &.btn-negative:active {
+    color: #fff;
+  }
+}
+
+// Link button (Buttons that look like links)
+.btn-link {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: $primary-color;
+  background-color: transparent;
+  border: 0;
+
+  &:active,
+  &.active {
+    color: darken($primary-color, 10%);
+    background-color: transparent;
+  }
+}
+
+// Block level buttons (full width buttons)
+.btn-block {
+  display: block;
+  padding: 15px 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+
+// Button overrides
+// --------------------------------------------------
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 100%;
+}
+
+
+// Buttons with badges
+// --------------------------------------------------
+
+// Generic styles for all badges within default buttons
+.btn .badge {
+  font-size: 12px;
+  margin: -2px -4px -2px 4px;
+  background-color: rgba(0,0,0,.15);
+}
+
+// Buttons with inverted badges
+.btn .badge-inverted,
+.btn:active .badge-inverted {
+  background-color: transparent;
+}
+.btn-primary:active .badge-inverted,
+.btn-positive:active .badge-inverted,
+.btn-negative:active .badge-inverted {
+  color: #fff;
+}
+
+// Position badges within block level buttons
+// Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
+// stays at the center of button
+.btn-block .badge {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
+
+// Buttons with Ratchicons
+// --------------------------------------------------
+
+.btn .icon {
+  font-size: inherit;
+}
