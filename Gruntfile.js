@@ -85,11 +85,7 @@ module.exports = function(grunt) {
   });
 
   // Load the plugins
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jekyll');
+  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
 
   // Default task(s).
