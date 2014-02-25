@@ -52,7 +52,7 @@ body {
     bottom: 180px !important;
     margin-top: 0 !important;
     @include animation-name(fadeintext);
-    @include animation-duration(3s);
+    @include animation-duration(2s);
   }
 }
 
@@ -126,7 +126,7 @@ body {
   text-align: center;
   padding: 50px 10px;
   @include animation-name(fadeintext);
-  @include animation-duration(3s);
+  @include animation-duration(2s);
 
   .btn {
     display: block;

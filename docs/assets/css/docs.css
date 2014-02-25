@@ -52,9 +52,9 @@ body {
   -webkit-animation-name: fadeintext;
   -moz-animation-name: fadeintext;
   animation-name: fadeintext;
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 .docs-masthead {
@@ -133,9 +133,9 @@ body {
   -webkit-animation-name: fadeintext;
   -moz-animation-name: fadeintext;
   animation-name: fadeintext;
-  -webkit-animation-duration: 3s;
-  -moz-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
 }
 .docs-header-content .btn {
   display: block;
