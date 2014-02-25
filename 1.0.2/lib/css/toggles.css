@@ -1,0 +1,66 @@
+/* Toggle styles (to be used with toggles.js)
+-------------------------------------------------- */
+
+.toggle {
+  position: relative;
+  width: 75px;
+  height: 28px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, .1);
+}
+
+/* Text indicating "on" or "off". Default is "off" */
+.toggle:before {
+  position: absolute;
+  right: 13px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #777;
+  text-shadow: 0 1px #fff;
+  text-transform: uppercase;
+  content: "Off";
+}
+
+/* Sliding handle */
+.toggle-handle {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(top, #fff 0, #f2f2f2 100%);
+  background-image: linear-gradient(to bottom, #fff 0, #f2f2f2 100%);
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 100px;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out, border 0.1s ease-in-out;
+                  transition: transform 0.1s ease-in-out, border 0.1s ease-in-out;
+}
+
+/* Active state for toggle */
+.toggle.active {
+  background-color: #19a8e4;
+  background-image: -webkit-linear-gradient(top, #088cd4 0, #19a8e4 100%);
+  background-image: linear-gradient(to bottom, #088cd4 0, #19a8e4 100%);
+  border: 1px solid #096c9d;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, .25);
+}
+
+/* Active state for toggle handle */
+.toggle.active .toggle-handle {
+  border-color: #0a76ad;
+  -webkit-transform: translate3d(48px,0,0);
+          transform: translate3d(48px,0,0);
+}
+
+/* Change "off" to "on" for active state */
+.toggle.active:before {
+  right: auto;
+  left: 15px;
+  color: #fff;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.25);
+  content: "On";
+}

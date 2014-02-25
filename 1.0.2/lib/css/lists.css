@@ -1,0 +1,115 @@
+/* Lists
+-------------------------------------------------- */
+
+/* Remove usual bullet styles from list */
+.list {
+  margin-bottom: 10px;
+  list-style: none;
+  background-color: #fff;
+}
+
+/* Pad each list item and add dividers */
+.list li {
+  position: relative;
+  padding: 11px 60px 11px 10px; /* Given extra right padding to accomodate counts, chevrons or buttons */
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* Give top border to first list items */
+.list li:first-child {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* If a list of links, make sure the child <a> takes up full list item tap area (want to avoid selecting child buttons though) */
+.list li > a:not([class*="button"]) {
+  position: relative;
+  display: block;
+  padding: inherit;
+  margin: -11px -60px -11px -10px;
+  color: inherit;
+}
+
+/* Inset list
+-------------------------------------------------- */
+
+.list.inset {
+  width: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Remove border from first/last standard list items to avoid double border at top/bottom of lists */
+.list.inset li:first-child {
+  border-top-width: 0;
+}
+.list.inset li:last-child {
+  border-bottom-width: 0;
+}
+
+
+/* List dividers
+-------------------------------------------------- */
+
+.list .list-divider {
+  position: relative;
+  top: -1px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #eee 100%);
+  background-image: linear-gradient(to bottom, #f8f8f8 0, #eee 100%);
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4);
+}
+
+/* Rounding first divider on inset lists and remove border on the top */
+.list.inset .list-divider:first-child {
+  top: 0;
+  border-top-width: 0;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Rounding last divider on inset lists */
+.list.inset .list-divider:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+/* Right-aligned subcontent in lists (chevrons, buttons, counts and toggles)
+-------------------------------------------------- */
+.list .chevron,
+.list [class*="button"],
+.list [class*="count"],
+.list .toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+ /* Position chevrons/counts vertically centered on the right in list items */
+.list .chevron,
+.list [class*="count"] {
+  margin-top: -10px; /* Half height of chevron */
+}
+
+/* Push count over if there's a sibling chevron */
+.list .chevron + [class*="count"] {
+  right: 30px;
+}
+
+/* Position buttons vertically centered on the right in list items */
+.list [class*="button"] {
+  left: auto;
+  margin-top: -14px; /* Half height of button */
+}
+
+.list .toggle {
+  margin-top: -15px; /* Half height of toggle */
+}
