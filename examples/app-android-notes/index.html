@@ -112,66 +112,28 @@
       </ul>
     </div>
 
-    <!-- Settings modal -->
+    <!-- Compose modal -->
     <div id="composeModal" class="modal">
       <header class="bar bar-nav">
-        <a class="icon icon-close pull-right" href="#composeModal"></a>
-        <h1 class="title">
-          <span class="icon icon-gear"></span>
-          Settings
-        </h1>
+        <a class="icon icon-left pull-left" href="#composeModal"></a>
+        <h1 class="title">New note</h1>
       </header>
       
       <div class="content">
-        <h5>User settings</h5>
-
-        <form class="input-group">
-          <input type="text" placeholder="Full name">
-          <input type="email" placeholder="Email">
-          <input type="text" placeholder="Username">
+        <form class="content-padded">
+          <input type="text" placeholder="Title">
+          <textarea rows="10"></textarea>
+          <a class="btn btn-positive btn-block" href="#composeModal">Save note</a>
         </form>
-
-        <h5>App settings</h5>
-
-        <ul class="table-view">
-          <li class="table-view-cell media">
-            <span class="media-object pull-left icon icon-sound"></span>
-            <div class="media-body">
-              Enable sounds
-            </div>
-            <div class="toggle">
-              <div class="toggle-handle"></div>
-            </div>
-          </li>
-          <li class="table-view-cell media">
-            <span class="media-object pull-left icon icon-person"></span>
-            <div class="media-body">
-              Parental controls
-            </div>
-            <div class="toggle">
-              <div class="toggle-handle"></div>
-            </div>
-          </li>
-        </ul>
-        <div class="container">
-          <a class="btn btn-positive btn-block">Save settings</a>
-        </div>
       </div>
-    </div>
+    </div><!-- /.modal -->
 
     <!-- Popover -->
     <div id="navPopover" class="popover">
       <ul class="table-view">
-        <li class="table-view-cell">Item1</li>
-        <li class="table-view-cell">Item2</li>
-        <li class="table-view-cell">Item3</li>
-        <li class="table-view-cell">Item4</li>
-        <li class="table-view-cell">Item5</li>
-        <li class="table-view-cell">Item6</li>
-        <li class="table-view-cell">Item7</li>
-        <li class="table-view-cell">Item8</li>
-        <li class="table-view-cell">Item9</li>
-        <li class="table-view-cell">Item10</li>
+        <li class="table-view-cell">New note</li>
+        <li class="table-view-cell">Email</li>
+        <li class="table-view-cell">Share</li>
       </ul>
     </div>
   </body>

@@ -322,6 +322,8 @@ body {
 }
 
 .docs-footer-content {
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
   color: #777;
   font-size: 12px;
