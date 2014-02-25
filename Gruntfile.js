@@ -1,3 +1,9 @@
+/* ----------------------------------
+ * Ratchet's Gruntfile
+ * Licensed under The MIT License
+ * http://opensource.org/licenses/MIT
+ * ---------------------------------- */
+
 module.exports = function(grunt) {
 
   // Project configuration.
