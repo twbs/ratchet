@@ -352,8 +352,10 @@ body {
   height: 44px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
+  -webkit-transition: -webkit-transform .5s;
+     -moz-transition: -moz-transform .5s;
+          transition: transform .5s;
   @include transform(translate3d(0, -55px, 0));
-  @include transition(-webkit-transform .5s);
 
   &.visible {
     @include transform(translateY(0));
@@ -374,7 +376,7 @@ body {
 // --------------------------------------------------
 
 .docs-examples {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 .docs-example-group {

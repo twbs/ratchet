@@ -479,7 +479,10 @@ textarea,
 
 .popover {
   border-radius: 12px;
-  @include transition(-webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
+  -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
+     -moz-transition: -moz-transform .2s ease-in-out, opacity .2s ease-in-out;
+          transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+  @include transition(-webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
 
   &:before {
     border-bottom: 15px solid $chrome-color;
@@ -528,8 +531,10 @@ textarea,
   // Sliding handle
   .toggle-handle {
     border: 1px solid rgba(0, 0, 0, .2);
+    -webkit-transition-property: -webkit-transform, border, width;
+       -moz-transition-property: -moz-transform, border, width;
+            transition-property: transform, border, width;
     @include box-shadow(0 3px 3px rgba(0,0,0,.08));
-    @include transition-property(-webkit-transform, border, width);
   }
   &:before {
     display: none;

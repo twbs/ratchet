@@ -1072,22 +1072,22 @@ select {
   min-height: 100%;
   overflow: hidden;
   background-color: #fff;
+  -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
+  -moz-transition: -moz-transform .25s, opacity 1ms .25s;
+  transition: transform .25s, opacity 1ms .25s;
   -webkit-transform: translate3d(0, 100%, 0);
   -ms-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
-  -webkit-transition: -webkit-transform 0.25s, opacity 1ms 0.25s;
-  -moz-transition: -webkit-transform 0.25s, opacity 1ms 0.25s;
-  transition: -webkit-transform 0.25s, opacity 1ms 0.25s;
 }
 .modal.active {
   opacity: 1;
   height: 100%;
+  -webkit-transition: -webkit-transform .25s;
+  -moz-transition: -moz-transform .25s;
+  transition: transform .25s;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: -webkit-transform 0.25s;
-  -moz-transition: -webkit-transform 0.25s;
-  transition: -webkit-transform 0.25s;
 }
 
 .slider {
@@ -1140,8 +1140,8 @@ select {
   border: 1px solid #ddd;
   border-radius: 100px;
   -webkit-transition-property: -webkit-transform, border, width;
-  -moz-transition-property: -webkit-transform, border, width;
-  transition-property: -webkit-transform, border, width;
+  -moz-transition-property: -moz-transform, border, width;
+  transition-property: transform, border, width;
   -webkit-transition-duration: 0.2s;
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
@@ -1184,9 +1184,9 @@ select {
 }
 .content.sliding {
   z-index: 2;
-  -webkit-transition: -webkit-transform 0.4s;
-  -moz-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
+  -webkit-transition: -webkit-transform .4s;
+  -moz-transition: -moz-transform .4s;
+  transition: transform .4s;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);

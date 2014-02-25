@@ -16,7 +16,9 @@
   // Slide animation
   &.sliding {
     z-index: 2;
-    @include transition(-webkit-transform .4s);
+    -webkit-transition: -webkit-transform .4s;
+       -moz-transition: -moz-transform .4s;
+            transition: transform .4s;
     @include transform(translate3d(0, 0, 0));
 
     &.left {

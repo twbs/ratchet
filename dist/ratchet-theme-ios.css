@@ -361,9 +361,12 @@ textarea,
 
 .popover {
   border-radius: 12px;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  -moz-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
+  -moz-transition: -moz-transform .2s ease-in-out, opacity .2s ease-in-out;
+  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 .popover:before {
   border-bottom: 15px solid rgba(247, 247, 247, 0.98);
@@ -408,11 +411,11 @@ textarea,
 }
 .toggle .toggle-handle {
   border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition-property: -webkit-transform, border, width;
+  -moz-transition-property: -moz-transform, border, width;
+  transition-property: transform, border, width;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
-  -webkit-transition-property: -webkit-transform, border, width;
-  -moz-transition-property: -webkit-transform, border, width;
-  transition-property: -webkit-transform, border, width;
 }
 .toggle:before {
   display: none;

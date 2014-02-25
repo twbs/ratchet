@@ -355,12 +355,12 @@ body {
   height: 44px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
+  -webkit-transition: -webkit-transform .5s;
+  -moz-transition: -moz-transform .5s;
+  transition: transform .5s;
   -webkit-transform: translate3d(0, -55px, 0);
   -ms-transform: translate3d(0, -55px, 0);
   transform: translate3d(0, -55px, 0);
-  -webkit-transition: -webkit-transform 0.5s;
-  -moz-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
 }
 .docs-component-toolbar.visible {
   -webkit-transform: translateY(0);
@@ -379,7 +379,7 @@ body {
 }
 
 .docs-examples {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -1439,9 +1439,12 @@ hr {
 }
 .platform-ios .popover {
   border-radius: 12px;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  -moz-transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
+  -moz-transition: -moz-transform .2s ease-in-out, opacity .2s ease-in-out;
+  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  -moz-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 .platform-ios .popover:before {
   border-bottom: 15px solid rgba(247, 247, 247, 0.98);
@@ -1481,11 +1484,11 @@ hr {
 }
 .platform-ios .toggle .toggle-handle {
   border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition-property: -webkit-transform, border, width;
+  -moz-transition-property: -moz-transform, border, width;
+  transition-property: transform, border, width;
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08);
-  -webkit-transition-property: -webkit-transform, border, width;
-  -moz-transition-property: -webkit-transform, border, width;
-  transition-property: -webkit-transform, border, width;
 }
 .platform-ios .toggle:before {
   display: none;
@@ -1940,14 +1943,14 @@ hr {
   margin-left: 0;
   border: 1px solid #9b9b9b;
   border-radius: 0;
+  -webkit-transition: -webkit-transform .1s ease-in-out, opacity .2s ease-in-out;
+  -moz-transition: -moz-transform .1s ease-in-out, opacity .2s ease-in-out;
+  transition: transform .1s ease-in-out, opacity .2s ease-in-out;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   -webkit-transform: scale(0.75);
   -ms-transform: scale(0.75);
   transform: scale(0.75);
-  -webkit-transition: -webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  -moz-transition: -webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  transition: -webkit-transform 0.1s ease-in-out, transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 .platform-android .popover:before {
   display: none;
