@@ -43,7 +43,7 @@ body {
 
 .docs-header {
   height: 100vh;
-  min-height: 620px;
+  min-height: 700px;
 }
 .docs-header .carbonad {
   position: absolute !important;
@@ -311,31 +311,47 @@ body {
   font-weight: 300;
 }
 
-.social {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px 0 20px;
+.docs-footer {
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.docs-footer .social {
+  padding: 0 0 20px;
   margin: 0;
   list-style: none;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
 }
-.social li {
+.docs-footer .social li {
   height: 20px;
   display: inline-block;
   vertical-align: top;
 }
-.social .twitter-follow-button {
+.docs-footer .social .twitter-follow-button {
   margin-top: 5px;
 }
 
-.docs-mini-footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
+.docs-footer-content {
   margin: 0;
   color: #777;
+  font-size: 12px;
+}
+
+.docs-header .docs-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.docs-header .docs-footer .docs-footer-content {
+  color: rgba(255, 255, 255, 0.5);
+}
+.docs-header .docs-footer .docs-footer-content a {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .docs-component-toolbar {
@@ -375,6 +391,7 @@ body {
 
 .docs-examples {
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .docs-example-group {
@@ -417,6 +434,9 @@ code {
   margin-left: -15px;
   margin-right: -15px;
   border-bottom: 1px solid #ddd;
+}
+.component.no-border {
+  border-bottom: 0;
 }
 
 .component-title {
@@ -630,10 +650,10 @@ hr {
 
 @media screen and (min-width: 768px) {
   .docs-header {
-    min-height: 770px;
+    min-height: 830px;
   }
   .docs-header .carbonad {
-    bottom: 130px !important;
+    bottom: 180px !important;
     left: 50% !important;
     margin-left: -165px !important;
   }
@@ -679,8 +699,6 @@ hr {
 
   .docs-nav {
     float: right;
-    margin-top: 3px;
-    margin-bottom: -3px;
   }
   .docs-nav .docs-nav-trigger {
     display: none;
@@ -778,8 +796,8 @@ hr {
     border-radius: 3px !important;
   }
 
-  .social .twitter-follow-button {
-    margin-top: 0;
+  .docs-footer .social .twitter-follow-button {
+    margin-top: 0px;
   }
 
   .step-title {

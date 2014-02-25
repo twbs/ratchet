@@ -53,9 +53,7 @@ module.exports = function(grunt) {
           '<%= meta.distPath %>ios-theme.css': 'sass/theme-ios.scss',
           '<%= meta.distPath %>android-theme.css': 'sass/theme-android.scss',
           '<%= meta.docsAssetsPath %>css/docs.css': 'sass/docs.scss',
-          '<%= meta.docsPath %><%= pkg.name %>.css': 'sass/ratchet.scss',
-          '<%= meta.docsPath %>ios-theme.css': 'sass/theme-ios.scss',
-          '<%= meta.docsPath %>android-theme.css': 'sass/theme-android.scss'
+          '<%= meta.docsPath %><%= pkg.name %>.css': '<%= meta.distPath %><%= pkg.name %>.css'
         }
       }
     },

@@ -44,7 +44,7 @@ body {
 }
 .docs-header {
   height: 100vh;
-  min-height: 620px;
+  min-height: 700px;
 
   // Ad on the homepage
   .carbonad {
@@ -301,39 +301,52 @@ body {
 }
 
 
-// Overriding the button styles for the social
+// Footer
 // --------------------------------------------------
 
-.social {
+.docs-footer {
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  .social {
+    padding: 0 0 20px;
+    margin: 0;
+    list-style: none;
+
+    li {
+      height: 20px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .twitter-follow-button {
+      margin-top: 5px;
+    }
+  }
+}
+.docs-footer-content {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+.docs-header .docs-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px 0 20px;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-  background-color: rgba(0,0,0,.2);
+  margin-top: 0;
+  border-top: 1px solid rgba(255,255,255,.1);
 
-  li {
-    height: 20px;
-    display: inline-block;
-    vertical-align: top;
+  .docs-footer-content {
+    color: rgba(255,255,255,.5);
+
+    a {
+      font-weight: bold;
+      color: rgba(255,255,255,.8);
+    }
   }
-  .twitter-follow-button {
-    margin-top: 5px;
-  }
-}
-
-
-// Footer
-// --------------------------------------------------
-
-.docs-mini-footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin: 0;
-  color: #777;
 }
 
 
@@ -375,6 +388,7 @@ body {
 
 .docs-examples {
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 .docs-example-group {
   margin-top: 30px;
@@ -423,6 +437,10 @@ code {
   margin-left: -15px;
   margin-right: -15px;
   border-bottom: 1px solid #ddd;
+
+  &.no-border {
+    border-bottom: 0;
+  }
 }
 .component-title {
   margin-bottom: 10px;
@@ -645,11 +663,11 @@ hr {
 // Tablet to desktop 
 @media screen and (min-width: 768px) {
   .docs-header {
-    min-height: 770px;
+    min-height: 830px;
 
     // Ads on the homepage
     .carbonad {
-      bottom: 130px !important;
+      bottom: 180px !important;
       left: 50% !important;
       margin-left: -165px !important;
     }
@@ -687,8 +705,6 @@ hr {
   // Docs nav
   .docs-nav {
     float: right;
-    margin-top: 3px;
-    margin-bottom: -3px;
 
     .docs-nav-trigger {
       display: none;
@@ -791,9 +807,9 @@ hr {
   }
 
   // Social
-  .social {
-    .twitter-follow-button {
-      margin-top: 0;
+  .docs-footer {
+    .social .twitter-follow-button {
+      margin-top: 0px;
     }
   }
 
