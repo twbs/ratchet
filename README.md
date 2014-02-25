@@ -4,15 +4,15 @@ Build mobile apps with simple HTML, CSS, and JS components.
 
 ## Getting Started
 
-- Clone the repo with `git clone https://github.com/maker/ratchet.git` or just [download](http://github.com/maker/ratchet/archive/v2.0.0.zip) the bundled CSS and JS
-- [Read the docs](http://maker.github.io/ratchet) to learn about the components and how to get a prototype on your phone
+- Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.0.zip) the bundled CSS and JS
+- [Read the docs](http://goratchet.com) to learn about the components and how to get a prototype on your phone
 - We will have example apps to check out very soon!
 
-Take note that our master branch is our active, unstable development branch and that if you're looking to download a stable copy of the repo, check the [tagged downloads](https://github.com/maker/ratchet/tags).
+Take note that our master branch is our active, unstable development branch and that if you're looking to download a stable copy of the repo, check the [tagged downloads](https://github.com/twbs/ratchet/tags).
 
 ## Documentation
 
-Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://maker.github.io/ratchet>. The docs may also be run locally.
+Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://goratchet.com>. The docs may also be run locally.
 
 ### Running documentation locally
 
@@ -28,7 +28,7 @@ Questions or discussions about Ratchet should happen in the [Google group](https
 
 ## Reporting bugs & contributing
 
-Please file a GitHub issue to [report a bug](https://github.com/maker/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/maker/ratchet/blob/master/CONTRIBUTING.md).
+Please file a GitHub issue to [report a bug](https://github.com/twbs/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/twbs/ratchet/blob/master/CONTRIBUTING.md).
 
 ## Troubleshooting
 

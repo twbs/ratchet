@@ -9,16 +9,16 @@
     "native",
     "prototype"
   ],
-  "homepage": "http://maker.github.com/ratchet/",
+  "homepage": "http://goratchet.com",
   "author": "Connor Sears",
   "style": "./dist/ratchet.css",
   "sass": "./lib/sass/ratchet.scss",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maker/ratchet.git"
+    "url": "https://github.com/twbs/ratchet.git"
   },
   "bugs": {
-    "url": "https://github.com/maker/ratchet/issues"
+    "url": "https://github.com/twbs/ratchet/issues"
   },
   "licenses": [
     {
