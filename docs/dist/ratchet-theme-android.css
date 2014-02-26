@@ -2,7 +2,7 @@
  * =====================================================
  * Ratchet v2.0.0
  * Copyright 2014 Connor Sears
- * Licensed under http://www.opensource.org/licenses/MIT
+ * Licensed under MIT.
  *
  * V2.0.0 designed by @connors.
  * =====================================================
