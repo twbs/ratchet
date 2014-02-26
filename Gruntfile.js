@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       docsAssetsPath: 'docs/assets/'
     },
     
-    banner: '/*\n' +
+    banner: '/*!\n' +
             ' * =====================================================\n' +
             ' * Ratchet v<%= pkg.version %>\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
