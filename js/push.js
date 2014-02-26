@@ -8,6 +8,7 @@
 /* global _gaq: true */
 
 !function () {
+  'use strict';
 
   var noop = function () {};
 

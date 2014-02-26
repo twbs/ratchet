@@ -2,6 +2,7 @@
 /* global FingerBlast: true */
 
 $(function() {
+  'use strict';
 
   var doc;
   var device;

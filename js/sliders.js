@@ -6,6 +6,7 @@
  * ---------------------------------- */
 
 !function () {
+  'use strict';
 
   var pageX;
   var pageY;
