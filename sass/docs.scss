@@ -336,6 +336,11 @@ body {
   }
 }
 
+// Style the GitHub buttons via CSS instead of inline attributes
+.github-btn {
+  border: 0;
+  overflow: hidden;
+}
 
 // Platform toggle
 // --------------------------------------------------
