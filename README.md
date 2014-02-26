@@ -38,8 +38,8 @@ A small list of "gotchas" are provided below for designers and developers starti
 
 - Ratchet is designed to respond to touch events from a mobile device. In order to use mouse click events (for desktop browsing and testing), you have a few options:
     - Enable touch event emulation in Chrome (found in the overrides tab in the web inspector preferences)
-    - Use a javascript library like fingerblast.js to emulate touch events (ideally only loaded from desktop devices)
-- Script tags containing javascript will not be executed on pages that are loaded with push.js. If you would like to attach event handlers to elements on other pages, document-level event delegation is a common solution.
+    - Use a JavaScript library like fingerblast.js to emulate touch events (ideally only loaded from desktop devices)
+- Script tags containing JavaScript will not be executed on pages that are loaded with push.js. If you would like to attach event handlers to elements on other pages, document-level event delegation is a common solution.
 - Ratchet uses XHR requests to fetch additional pages inside the application. Due to security concerns, modern browsers prevent XHR requests when opening files locally (aka using the file:/// protocol); consequently, Ratchet does not work when opened directly as a file.
     - A common solution to this is to simply serve the files from a local server. One convenient way to achieve this is to run ```python -m SimpleHTTPServer <port>``` to serve up the files in the current directory to ```http://localhost:<port>```
 
