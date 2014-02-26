@@ -25,9 +25,9 @@ module.exports = function(grunt) {
             ' * =====================================================\n' +
             ' * Ratchet v<%= pkg.version %>\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+            ' * Licensed under <%= pkg.license %>.\n' +
             ' *\n' +
-            ' * V<%= pkg.version %> designed by @connors.\n' +
+            ' * v<%= pkg.version %> designed by @connors.\n' +
             ' * =====================================================\n' +
             ' */\n',
     
@@ -95,21 +95,6 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
-
-    usebanner: {
-      dist: {
-        options: {
-          position: 'top',
-          banner: '<%= banner %>'
-        },
-        files: {
-          src: [
-            'dist/<%= pkg.name %>.min.js',
-            'dist/<%= pkg.name %>.min.css'
-          ]
-        }
-      }
-    },
  
     watch: {
       scripts: {
@@ -125,10 +110,9 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // Default task(s).
-  grunt.registerTask('banner', ['usebanner']);
   grunt.registerTask('dist-css', ['sass', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
-  grunt.registerTask('dist', ['dist-css', 'dist-js', 'banner', 'copy']);
+  grunt.registerTask('dist', ['dist-css', 'dist-js', 'copy']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('build', ['dist']);
 };
