@@ -9,8 +9,6 @@
     "_config.yml",
     "CNAME",
     "CONTRIBUTING.md",
-    "docs-assets"
-  ],
-  "dependencies": {
-  }
+    "docs"
+  ]
 }
