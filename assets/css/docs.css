@@ -99,6 +99,14 @@ body {
   height: auto;
   opacity: 1;
 }
+
+.version {
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 0;
+  color: #b983a6;
+}
+
 .docs-nav .docs-nav-item {
   display: block;
   padding: 20px 15px;
