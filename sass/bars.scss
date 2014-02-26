@@ -59,7 +59,7 @@
   display: block;
   width: 100%;
   padding: 0;
-  margin: 0 (-$bar-side-spacing); 
+  margin: 0 (-$bar-side-spacing);
   font-size: $font-size-default;
   font-weight: $font-weight;
   line-height: $bar-base-height;
@@ -131,10 +131,10 @@
   font-weight: $font-weight-light;
 
   // Give buttons that are floated left and right side margin
-  &.pull-right { 
-    margin-left: $bar-side-spacing; 
+  &.pull-right {
+    margin-left: $bar-side-spacing;
   }
-  &.pull-left { 
+  &.pull-left {
     margin-right: $bar-side-spacing;
   }
 }
@@ -202,7 +202,7 @@
     top: 3px;
     padding: 0;
   }
-  
+
   // Handle carets in the titles
   .title .icon {
     padding: 0;

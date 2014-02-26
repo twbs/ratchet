@@ -20,7 +20,7 @@
   border-bottom: $border-default;
 
   // Remove the border from the last table view item
-  &:last-child { 
+  &:last-child {
     border-bottom: 0;
   }
   // If it's a table view of links, make sure the child <a> takes up full table view item tap area (want to avoid selecting child buttons though)
@@ -49,7 +49,7 @@
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 15px;
-  margin-top: -1px; // Hides the border of the previous list item  
+  margin-top: -1px; // Hides the border of the previous list item
   margin-left: 0;
   color: #999;
   font-weight: $font-weight;

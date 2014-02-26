@@ -46,7 +46,7 @@
 
     .toggle-handle {
       border-color: $positive-color;
-      @include transform(translate3d(44px,0,0)); 
+      @include transform(translate3d(44px,0,0));
     }
     &:before {
       right: auto;

@@ -272,7 +272,7 @@ body {
   font-size: 14px;
 }
 
-// Docs modules 
+// Docs modules
 .docs-module {
   margin-top: 20px;
   padding: 20px;
@@ -584,7 +584,7 @@ code {
   margin: 10px auto;
 }
 
-// Popovers 
+// Popovers
 #popoversInDevice {
   #iwindow:before {
     position: absolute;
@@ -649,7 +649,7 @@ hr {
 // Docs media queries
 // --------------------------------------------------
 
-// Tablet to desktop 
+// Tablet to desktop
 @media screen and (min-width: 768px) {
   .docs-header {
     min-height: 830px;
@@ -680,7 +680,7 @@ hr {
   .docs-header-content {
     top: 32%;
     @include transform(translateY(-50%));
-    
+
     .btn {
       display: inline-block;
     }
@@ -722,7 +722,7 @@ hr {
     cursor: pointer;
     @include transition(opacity .2 linear);
 
-    &:hover {   
+    &:hover {
       color: $primary-color;
     }
     &:active {
@@ -813,7 +813,7 @@ hr {
     font-size: 18px;
   }
 
-  // Docs modules 
+  // Docs modules
   .docs-module {
     margin-top: 35px;
   }
@@ -981,7 +981,7 @@ hr {
 .offset-1 { margin-left: 50%; }
 
 
-// Tablet to desktop 
+// Tablet to desktop
 // --------------------------------------------------
 
  @media screen and (min-width: 768px) {

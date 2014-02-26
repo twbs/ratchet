@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       docsPath:       'docs/dist/',
       docsAssetsPath: 'docs/assets/'
     },
-    
+
     banner: '/*!\n' +
             ' * =====================================================\n' +
             ' * Ratchet v<%= pkg.version %>\n' +
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             ' * V<%= pkg.version %> designed by @connors.\n' +
             ' * =====================================================\n' +
             ' */\n',
-    
+
     concat: {
       ratchet: {
         options: {
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         dest: '<%= meta.docsPath %><%= pkg.name %>.js'
       }
     },
-    
+
     sass: {
       options: {
         banner: '<%= banner %>',
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
         }
       }
     },
- 
+
     watch: {
       scripts: {
         files: [
