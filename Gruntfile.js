@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             ' * =====================================================\n' +
             ' * Ratchet v<%= pkg.version %>\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+            ' * Licensed under <%= pkg.license %>.\n' +
             ' *\n' +
             ' * V<%= pkg.version %> designed by @connors.\n' +
             ' * =====================================================\n' +
