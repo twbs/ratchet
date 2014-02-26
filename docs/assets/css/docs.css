@@ -343,6 +343,10 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.docs-footer-links li {
+  display: inline;
+}
+
 .docs-component-toolbar {
   padding-top: 8px;
   padding-bottom: 8px;
