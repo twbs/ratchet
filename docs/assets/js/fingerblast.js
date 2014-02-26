@@ -1,8 +1,10 @@
 // FINGERBLAST.js
 // --------------
-// Adapted from phantom limb by brian cartensen
+// Adapted from phantom limb by Brian Cartensen
 
 function FingerBlast(element) {
+  'use strict';
+
   this.element = typeof element == 'string' ? document.querySelector(element) : element;
   this.listen();
 }
@@ -17,6 +19,7 @@ FingerBlast.prototype = {
   mouseIsDown: false,
 
   listen: function () {
+    'use strict';
 
     var activate = this.activate.bind(this);
     var deactivate = this.deactivate.bind(this);
@@ -47,6 +50,8 @@ FingerBlast.prototype = {
   },
 
   activate: function () {
+    'use strict';
+
     if (this.active) return;
     this.element.addEventListener('mousedown', (this.touchStart = this.touchStart.bind(this)), true);
     this.element.addEventListener('mousemove', (this.touchMove  = this.touchMove.bind(this)),  true);
@@ -56,6 +61,8 @@ FingerBlast.prototype = {
   },
 
   deactivate: function (e) {
+    'use strict';
+
     this.active = false;
     if (this.mouseIsDown) this.touchEnd(e);
     this.element.removeEventListener('mousedown', this.touchStart, true);
@@ -65,12 +72,16 @@ FingerBlast.prototype = {
   },
 
   click: function (e) {
+    'use strict';
+
     if (e.synthetic) return;
     e.preventDefault();
     e.stopPropagation();
   },
 
   touchStart: function (e) {
+    'use strict';
+
     if (e.synthetic || /input|textarea/.test(e.target.tagName.toLowerCase())) return;
 
     this.mouseIsDown = true;
@@ -82,6 +93,8 @@ FingerBlast.prototype = {
   },
 
   touchMove: function (e) {
+    'use strict';
+
     if (e.synthetic) return;
 
     e.preventDefault();
@@ -93,6 +106,8 @@ FingerBlast.prototype = {
   },
 
   touchEnd: function (e) {
+    'use strict';
+
     if (e.synthetic) return;
 
     this.mouseIsDown = false;
@@ -111,6 +126,8 @@ FingerBlast.prototype = {
   },
 
   fireTouchEvents: function (eventName, originalEvent) {
+    'use strict';
+
     var events   = [];
     var gestures = [];
 
@@ -189,6 +206,8 @@ FingerBlast.prototype = {
   },
 
   createMouseEvent: function (eventName, originalEvent) {
+    'use strict';
+
     var e = document.createEvent('MouseEvent');
 
     e.initMouseEvent(eventName, true, true,
@@ -207,6 +226,8 @@ FingerBlast.prototype = {
   },
 
   move: function (x, y) {
+    'use strict';
+
     if (isNaN(x) || isNaN(y)) {
       this.target = null;
     } else {

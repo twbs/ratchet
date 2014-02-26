@@ -5,6 +5,8 @@
  * ---------------------------------- */
 
 !function () {
+  'use strict';
+
   var getTarget = function (target) {
     var i, segmentedControls = document.querySelectorAll('.segmented-control .control-item');
     for (; target && target !== document; target = target.parentNode) {
