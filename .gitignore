@@ -32,3 +32,7 @@ nbproject
 .idea
 node_modules
 _site
+
+# grunt-html-validation
+validation-report.json
+validation-status.json
