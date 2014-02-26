@@ -76,6 +76,13 @@ body {
   transform: translateX(-50%);
 }
 
+.version {
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 0;
+  color: #777;
+}
+
 .docs-nav .docs-nav-trigger {
   color: #fff;
   cursor: pointer;
@@ -98,13 +105,6 @@ body {
 .docs-nav .docs-nav-group.active {
   height: auto;
   opacity: 1;
-}
-
-.version {
-  margin-top: 15px;
-  text-align: center;
-  margin-bottom: 0;
-  color: #b983a6;
 }
 
 .docs-nav .docs-nav-item {
@@ -156,6 +156,9 @@ body {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   transition: all 0.2s linear;
+}
+.docs-header-content .version {
+  color: #b983a6;
 }
 .docs-header-content .btn:hover {
   background-color: #fff;
