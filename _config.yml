@@ -11,4 +11,3 @@ permalink:    pretty
 
 # Server
 source:       ./docs
-port:         4000
