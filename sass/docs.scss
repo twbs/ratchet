@@ -336,6 +336,11 @@ body {
   }
 }
 
+// Style the GitHub buttons via CSS instead of inline attributes
+.github-btn {
+  border: 0;
+  overflow: hidden;
+}
 
 // Platform toggle
 // --------------------------------------------------
@@ -391,7 +396,6 @@ body {
     }
     .example {
       display: block;
-      padding: 4px;
       overflow: hidden;
       padding: 3px;
       width: 100%;
@@ -798,7 +802,7 @@ hr {
   // Social
   .docs-footer {
     .social .twitter-follow-button {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 

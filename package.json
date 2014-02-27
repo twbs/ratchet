@@ -3,7 +3,6 @@
   "description": "Build native apps with simple HTML, CSS, and JS components.",
   "version": "2.0.0",
   "keywords": [
-    "ratchet",
     "css",
     "ios",
     "native",
@@ -20,15 +19,9 @@
   "bugs": {
     "url": "https://github.com/twbs/ratchet/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
-  ],
+  "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-banner": "~0.2.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-cssmin": "~0.8.0",
@@ -37,6 +30,7 @@
     "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-uglify": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-html-validation": "~0.1.13",
     "grunt-jekyll": "~0.4.1",
     "load-grunt-tasks": "~0.4.0"
   }

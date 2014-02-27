@@ -12,5 +12,3 @@ permalink:    pretty
 # Server
 source:       ./docs
 port:         4000
-baseurl:      /
-url:          http://localhost:4000
