@@ -6,7 +6,7 @@ Build mobile apps with simple HTML, CSS, and JS components.
 
 - Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.0.zip) the bundled CSS and JS
 - [Read the docs](http://goratchet.com) to learn about the components and how to get a prototype on your phone
-- We will have example apps to check out very soon!
+- [Check out examples](http://goratchet.com/examples/)
 
 Take note that our master branch is our active, unstable development branch and that if you're looking to download a stable copy of the repo, check the [tagged downloads](https://github.com/twbs/ratchet/tags).
 
