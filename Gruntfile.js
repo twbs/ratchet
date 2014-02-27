@@ -79,9 +79,14 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      combine: {
+      minify: {
+        options: {
+          banner: '', // set to empty ; see bellow
+          keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+          report: 'min'
+        },
         files: {
-          'dist/<%= pkg.name %>.min.css': ['dist/<%= pkg.name %>.css']
+          'dist/<%= pkg.name %>.min.css': 'dist/<%= pkg.name %>.css'
         }
       }
     },
