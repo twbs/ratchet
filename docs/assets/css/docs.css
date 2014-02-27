@@ -400,7 +400,6 @@ body {
 }
 .docs-example-group .example-wrap .example {
   display: block;
-  padding: 4px;
   overflow: hidden;
   padding: 3px;
   width: 100%;
@@ -791,7 +790,7 @@ hr {
   }
 
   .docs-footer .social .twitter-follow-button {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .step-title {
@@ -1966,7 +1965,7 @@ hr {
   transform: scale(1);
 }
 .platform-android .backdrop {
-  background-color: none;
+  background-color: transparent;
 }
 .platform-android .popover .bar {
   border-radius: 0;
