@@ -715,7 +715,6 @@ hr {
     left: 20px;
     display: block;
     color: #777;
-    cursor: pointer;
     -webkit-transition: opacity 0.2 linear;
     -moz-transition: opacity 0.2 linear;
     transition: opacity 0.2 linear;

@@ -1245,7 +1245,6 @@ select {
   font-size: 24px;
   text-decoration: none;
   line-height: 1;
-  cursor: default;
   -webkit-font-smoothing: antialiased;
 }
 

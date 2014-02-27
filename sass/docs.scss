@@ -723,7 +723,6 @@ hr {
     left: 20px;
     display: block;
     color: #777;
-    cursor: pointer;
     @include transition(opacity .2 linear);
 
     &:hover {
