@@ -25,9 +25,9 @@ module.exports = function(grunt) {
             ' * =====================================================\n' +
             ' * Ratchet v<%= pkg.version %>\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+            ' * Licensed under <%= pkg.license %>.\n' +
             ' *\n' +
-            ' * V<%= pkg.version %> designed by @connors.\n' +
+            ' * v<%= pkg.version %> designed by @connors.\n' +
             ' * =====================================================\n' +
             ' */\n',
 
@@ -79,35 +79,26 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      combine: {
+      minify: {
+        options: {
+          banner: '', // set to empty ; see bellow
+          keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+          report: 'min'
+        },
         files: {
-          'dist/<%= pkg.name %>.min.css': ['dist/<%= pkg.name %>.css']
+          'dist/<%= pkg.name %>.min.css': 'dist/<%= pkg.name %>.css'
         }
       }
     },
 
     uglify: {
       options: {
+        banner: '<%= banner %>',
         report: 'min'
       },
       ratchet: {
         src: 'dist/<%= pkg.name %>.js',
         dest: 'dist/<%= pkg.name %>.min.js'
-      }
-    },
-
-    usebanner: {
-      dist: {
-        options: {
-          position: 'top',
-          banner: '<%= banner %>'
-        },
-        files: {
-          src: [
-            'dist/<%= pkg.name %>.min.js',
-            'dist/<%= pkg.name %>.min.css'
-          ]
-        }
       }
     },
 
@@ -145,10 +136,9 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // Default task(s).
-  grunt.registerTask('banner', ['usebanner']);
   grunt.registerTask('dist-css', ['sass', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
-  grunt.registerTask('dist', ['dist-css', 'dist-js', 'banner', 'copy']);
+  grunt.registerTask('dist', ['dist-css', 'dist-js', 'copy']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('build', ['dist']);

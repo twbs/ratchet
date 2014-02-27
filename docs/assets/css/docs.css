@@ -2,9 +2,9 @@
  * =====================================================
  * Ratchet v2.0.0
  * Copyright 2014 Connor Sears
- * Licensed under http://www.opensource.org/licenses/MIT
+ * Licensed under MIT.
  *
- * V2.0.0 designed by @connors.
+ * v2.0.0 designed by @connors.
  * =====================================================
  */
 
@@ -74,13 +74,6 @@ body {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-}
-
-.version {
-  margin-top: 15px;
-  text-align: center;
-  margin-bottom: 0;
-  color: #777;
 }
 
 .docs-nav .docs-nav-trigger {
@@ -155,9 +148,6 @@ body {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   transition: all 0.2s linear;
-}
-.docs-header-content .version {
-  color: #b983a6;
 }
 .docs-header-content .btn:hover {
   background-color: #fff;
