@@ -467,7 +467,7 @@ textarea,
 }
 
 .backdrop {
-  background-color: none;
+  background-color: transparent;
 }
 
 .popover .bar {
