@@ -88,6 +88,7 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
+        banner: '<%= banner %>',
         report: 'min'
       },
       ratchet: {
