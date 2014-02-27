@@ -37,6 +37,7 @@
     "grunt-contrib-sass": "~0.7.1",
     "grunt-contrib-uglify": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3",
+    "grunt-html-validation": "~0.1.13",
     "grunt-jekyll": "~0.4.1",
     "load-grunt-tasks": "~0.4.0"
   }

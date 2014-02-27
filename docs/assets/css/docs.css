@@ -353,6 +353,11 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.github-btn {
+  border: 0;
+  overflow: hidden;
+}
+
 .docs-component-toolbar {
   padding-top: 8px;
   padding-bottom: 8px;
