@@ -76,13 +76,6 @@ body {
   transform: translateX(-50%);
 }
 
-.version {
-  margin-top: 15px;
-  text-align: center;
-  margin-bottom: 0;
-  color: #777;
-}
-
 .docs-nav .docs-nav-trigger {
   color: #fff;
   cursor: pointer;
@@ -155,9 +148,6 @@ body {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   transition: all 0.2s linear;
-}
-.docs-header-content .version {
-  color: #b983a6;
 }
 .docs-header-content .btn:hover {
   background-color: #fff;
@@ -2026,10 +2016,10 @@ hr {
   content: "On";
 }
 .platform-android .push-left:after {
-  content: '\e803';
+  content: '';
 }
 .platform-android .push-right:after {
-  content: '\e806';
+  content: '';
 }
 .platform-android .icon-caret:before {
   content: '\e800';
