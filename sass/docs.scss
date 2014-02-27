@@ -75,7 +75,6 @@ body {
 .docs-nav {
   .docs-nav-trigger {
     color: #fff;
-    cursor: pointer;
     opacity: .7;
 
     &.active {
@@ -723,6 +722,7 @@ hr {
     left: 20px;
     display: block;
     color: #777;
+    cursor: pointer;
     @include transition(opacity .2 linear);
 
     &:hover {
