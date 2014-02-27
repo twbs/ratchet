@@ -96,21 +96,6 @@ module.exports = function(grunt) {
       }
     },
 
-    usebanner: {
-      dist: {
-        options: {
-          position: 'top',
-          banner: '<%= banner %>'
-        },
-        files: {
-          src: [
-            'dist/<%= pkg.name %>.min.js',
-            'dist/<%= pkg.name %>.min.css'
-          ]
-        }
-      }
-    },
-
     watch: {
       scripts: {
         files: [
@@ -145,10 +130,9 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // Default task(s).
-  grunt.registerTask('banner', ['usebanner']);
   grunt.registerTask('dist-css', ['sass', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
-  grunt.registerTask('dist', ['dist-css', 'dist-js', 'banner', 'copy']);
+  grunt.registerTask('dist', ['dist-css', 'dist-js', 'copy']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('build', ['dist']);
