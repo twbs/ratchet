@@ -1,4 +1,4 @@
-# Ratchet v2.0 [![devDependencies](https://david-dm.org/twbs/ratchet/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/ratchet#info=devDependencies)
+# Ratchet v2.0.0 [![devDependencies](https://david-dm.org/twbs/ratchet/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/ratchet#info=devDependencies)
 
 Build mobile apps with simple HTML, CSS, and JS components.
 
