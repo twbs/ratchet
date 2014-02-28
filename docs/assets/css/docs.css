@@ -665,6 +665,7 @@ body {
 code {
   padding: 2px 4px;
   font-size: 90%;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   background-color: #f9f9f9;
   border-radius: 3px;
 }
