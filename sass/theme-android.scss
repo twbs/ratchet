@@ -51,7 +51,7 @@ body {
 // Universal link styling
 a {
   color: $primary-color;
-  
+
   &:active {
     color: darken($primary-color, 10%);
   }
@@ -142,7 +142,7 @@ a {
   }
 }
 
-// Outlined buttons 
+// Outlined buttons
 .btn-outlined {
   border: 1px solid $default-color;
   background-color: transparent;
@@ -288,7 +288,7 @@ a {
   }
 }
 
-// Left aligned text in the .bar-nav 
+// Left aligned text in the .bar-nav
 .title {
   position: static;
   padding-left: 15px;
@@ -328,7 +328,7 @@ a {
 }
 
 // Bars with segmented-controls
-// 
+//
 // Remove standard segmented bottom margin
 .bar .segmented-control {
   top: 7px;
@@ -370,7 +370,7 @@ a {
 }
 
 // Badge modifiers
-// 
+//
 // Main badge
 .badge-primary {
   color: #fff;
@@ -423,7 +423,7 @@ a {
 
   .table-view-cell {
     border-bottom: 1px solid #d9d9d9;
-  
+
     // Remove the border from the last table view item
     &:last-child {
       background-image: none;
@@ -571,7 +571,7 @@ textarea,
   .control-item {
     color: #fff;
     border-color: inherit;
-    
+
     &:active,
     &.active {
       color: #fff;
@@ -587,7 +587,7 @@ textarea,
   .control-item {
     color: #fff;
     border-color: inherit;
-    
+
     &:active,
     &.active {
       color: #fff;
@@ -623,7 +623,7 @@ textarea,
 
 // Remove the popover's backdrop
 .backdrop {
-  background-color: none;
+  background-color: transparent;
 }
 
 // Popovers with bars
@@ -653,7 +653,7 @@ textarea,
   border: 2px solid #d7d7d7;
   border-radius: 0;
   background-color: #d7d7d7;
-  
+
   // Sliding handle
   .toggle-handle {
     top: 0;
@@ -682,7 +682,7 @@ textarea,
       margin-right: 2px;
       background-color: $primary-color;
       border-color: $primary-color;
-      @include transform(translate3d(50px,0,0)); 
+      @include transform(translate3d(50px,0,0));
     }
     &:before {
       left: auto;
@@ -705,7 +705,7 @@ textarea,
 }
 
 
-// Ratchicons for Android 
+// Ratchicons for Android
 // --------------------------------------------------
 
 .icon-caret:before { content: '\e800'; }
@@ -715,7 +715,7 @@ textarea,
 .icon-left:before,
 .icon-left-nav:before { content: '\e803'; }
 .icon-more-vertical:before { content: '\e804'; }
-.icon-more:before { content: '\e805'; } 
+.icon-more:before { content: '\e805'; }
 .icon-right:before,
 .icon-right-nav:before { content: '\e806'; }
 .icon-search:before { content: '\e807'; }

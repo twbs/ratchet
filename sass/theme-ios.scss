@@ -50,12 +50,12 @@ a {
 // Typography
 // --------------------------------------------------
 
-.h5, h5, 
+.h5, h5,
 .h6, h6,
 p {
   color: #8f8f94;
 }
-.h5, h5, 
+.h5, h5,
 .h6, h6, {
   font-weight: normal;
   text-transform: uppercase;
@@ -124,7 +124,7 @@ p {
   }
 }
 
-// Outlined buttons 
+// Outlined buttons
 .btn-outlined {
   background-color: transparent;
 
@@ -227,7 +227,7 @@ p {
   // Link buttons in nav bars
   .btn-link {
     color: $primary-color;
-    
+
     &:active {
       color: $primary-color;
       opacity: .6;
@@ -306,7 +306,7 @@ p {
   .table-view-cell {
     border-bottom: 0;
     @include hairline(single, #c8c7cc, 15px); // Single grey border with 15px offset.
-  
+
     // Remove the border from the last table view item
     &:last-child {
       background-image: none;
@@ -426,7 +426,7 @@ textarea,
   .control-item {
     color: $primary-color;
     border-color: inherit;
-    
+
     &:active {
       background-color: lighten($primary-color, 35%);
     }
@@ -546,7 +546,7 @@ textarea,
     @include box-shadow(inset 0 0 0 13px $positive-color);
 
     .toggle-handle {
-      @include transform(translate3d(17px,0,0)); 
+      @include transform(translate3d(17px,0,0));
     }
 
     .toggle-handle {
@@ -559,7 +559,7 @@ textarea,
 // Push styles
 // --------------------------------------------------
 .content {
-  // Fade animation 
+  // Fade animation
   &.fade {
     @include transition(opacity .2s ease-in-out);
   }

@@ -20,22 +20,22 @@ module.exports = function(grunt) {
       docsPath:       'docs/dist/',
       docsAssetsPath: 'docs/assets/'
     },
-    
+
     banner: '/*!\n' +
             ' * =====================================================\n' +
             ' * Ratchet v<%= pkg.version %>\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= _.pluck(pkg.licenses, "url").join(", ") %>\n' +
+            ' * Licensed under <%= pkg.license %>.\n' +
             ' *\n' +
-            ' * V<%= pkg.version %> designed by @connors.\n' +
+            ' * v<%= pkg.version %> designed by @connors.\n' +
             ' * =====================================================\n' +
             ' */\n',
-    
+
     concat: {
-      options: {
-        banner: '<%= banner %>'
-      },
       ratchet: {
+        options: {
+          banner: '<%= banner %>'
+        },
         src: [
           'js/modals.js',
           'js/popovers.js',
@@ -51,11 +51,11 @@ module.exports = function(grunt) {
         dest: '<%= meta.docsPath %><%= pkg.name %>.js'
       }
     },
-    
+
     sass: {
       options: {
         banner: '<%= banner %>',
-        style: 'expanded',
+        style: 'expanded'
       },
       dist: {
         files: {
@@ -77,7 +77,31 @@ module.exports = function(grunt) {
         dest: 'docs/dist'
       }
     },
- 
+
+    cssmin: {
+      minify: {
+        options: {
+          banner: '', // set to empty ; see bellow
+          keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+          report: 'min'
+        },
+        files: {
+          'dist/<%= pkg.name %>.min.css': 'dist/<%= pkg.name %>.css'
+        }
+      }
+    },
+
+    uglify: {
+      options: {
+        banner: '<%= banner %>',
+        report: 'min'
+      },
+      ratchet: {
+        src: 'dist/<%= pkg.name %>.js',
+        dest: 'dist/<%= pkg.name %>.min.js'
+      }
+    },
+
     watch: {
       scripts: {
         files: [
@@ -85,14 +109,53 @@ module.exports = function(grunt) {
         ],
         tasks: ['sass']
       }
+    },
+
+    jekyll: {
+      docs: {}
+    },
+
+    validation: {
+      options: {
+        charset: 'utf-8',
+        doctype: 'HTML5',
+        failHard: true,
+        reset: true,
+        relaxerror: [
+          'Bad value apple-mobile-web-app-title for attribute name on element meta: Keyword apple-mobile-web-app-title is not registered.',
+          'Attribute ontouchstart not allowed on element body at this point.'
+        ]
+      },
+      files: {
+        src: '_site/**/*.html'
+      }
+    },
+
+    sed: {
+      versionNumber: {
+        pattern: (function () {
+          var old = grunt.option('oldver');
+          return old ? RegExp.quote(old) : old;
+        })(),
+        replacement: grunt.option('newver'),
+        recursive: true
+      }
     }
   });
 
   // Load the plugins
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
-
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'concat', 'copy']);
-  grunt.registerTask('build', ['sass', 'concat', 'copy']);
+  grunt.registerTask('dist-css', ['sass', 'cssmin']);
+  grunt.registerTask('dist-js', ['concat', 'uglify']);
+  grunt.registerTask('dist', ['dist-css', 'dist-js', 'copy']);
+  grunt.registerTask('validate-html', ['jekyll', 'validation']);
+  grunt.registerTask('default', ['dist']);
+  grunt.registerTask('build', ['dist']);
+
+  // Version numbering task.
+  // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
+  // This can be overzealous, so its changes should always be manually reviewed!
+  grunt.registerTask('change-version-number', 'sed');
 };

@@ -272,7 +272,7 @@ body {
   font-size: 14px;
 }
 
-// Docs modules 
+// Docs modules
 .docs-module {
   margin-top: 20px;
   padding: 20px;
@@ -354,6 +354,11 @@ body {
   }
 }
 
+// Style the GitHub buttons via CSS instead of inline attributes
+.github-btn {
+  border: 0;
+  overflow: hidden;
+}
 
 // Platform toggle
 // --------------------------------------------------
@@ -409,7 +414,6 @@ body {
     }
     .example {
       display: block;
-      padding: 4px;
       overflow: hidden;
       padding: 3px;
       width: 100%;
@@ -602,7 +606,7 @@ code {
   margin: 10px auto;
 }
 
-// Popovers 
+// Popovers
 #popoversInDevice {
   #iwindow:before {
     position: absolute;
@@ -667,7 +671,7 @@ hr {
 // Docs media queries
 // --------------------------------------------------
 
-// Tablet to desktop 
+// Tablet to desktop
 @media screen and (min-width: 768px) {
   .docs-header {
     min-height: 870px;
@@ -698,7 +702,7 @@ hr {
   .docs-header-content {
     top: 30%;
     @include transform(translateY(-50%));
-    
+
     .btn {
       display: inline-block;
     }
@@ -740,7 +744,7 @@ hr {
     cursor: pointer;
     @include transition(opacity .2 linear);
 
-    &:hover {   
+    &:hover {
       color: $primary-color;
     }
     &:active {
@@ -816,7 +820,7 @@ hr {
   // Social
   .docs-footer {
     .social .twitter-follow-button {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 
@@ -831,7 +835,7 @@ hr {
     font-size: 18px;
   }
 
-  // Docs modules 
+  // Docs modules
   .docs-module {
     margin-top: 35px;
   }
@@ -999,7 +1003,7 @@ hr {
 .offset-1 { margin-left: 50%; }
 
 
-// Tablet to desktop 
+// Tablet to desktop
 // --------------------------------------------------
 
  @media screen and (min-width: 768px) {

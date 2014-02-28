@@ -22,7 +22,7 @@
     'slide-out' : 'slide-in',
     'fade'      : 'fade'
   };
-  
+
   var bars = {
     bartab             : '.bar-tab',
     barnav             : '.bar-nav',

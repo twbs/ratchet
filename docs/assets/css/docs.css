@@ -2,9 +2,9 @@
  * =====================================================
  * Ratchet v2.0.0
  * Copyright 2014 Connor Sears
- * Licensed under http://www.opensource.org/licenses/MIT
+ * Licensed under MIT.
  *
- * V2.0.0 designed by @connors.
+ * v2.0.0 designed by @connors.
  * =====================================================
  */
 
@@ -360,6 +360,11 @@ body {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.github-btn {
+  border: 0;
+  overflow: hidden;
+}
+
 .docs-component-toolbar {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -412,7 +417,6 @@ body {
 }
 .docs-example-group .example-wrap .example {
   display: block;
-  padding: 4px;
   overflow: hidden;
   padding: 3px;
   width: 100%;
@@ -803,7 +807,7 @@ hr {
   }
 
   .docs-footer .social .twitter-follow-button {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .step-title {
@@ -1978,7 +1982,7 @@ hr {
   transform: scale(1);
 }
 .platform-android .backdrop {
-  background-color: none;
+  background-color: transparent;
 }
 .platform-android .popover .bar {
   border-radius: 0;

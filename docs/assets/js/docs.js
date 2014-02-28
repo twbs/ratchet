@@ -42,7 +42,7 @@ $(function() {
     if (windowWidth >= 768) {
       device.initialLeft   = device.offset().left;
       device.initialTop    = device.initialTop || device.offset().top;
-      device.dockingOffset = ($(window).height() - device.height())/2; 
+      device.dockingOffset = ($(window).height() - device.height())/2;
     }
 
     checkDesktopContent();
@@ -65,7 +65,7 @@ $(function() {
       var trigger = $('.js-docs-nav-trigger');
 
       trigger.toggleClass('active');
-      nav.toggleClass('active'); 
+      nav.toggleClass('active');
     });
 
     navComponentLinks.click(function(e) {
