@@ -1,6 +1,6 @@
 /*!
  * =====================================================
- * Ratchet v2.0.0
+ * Ratchet v2.0.0 (http://goratchet.com)
  * Copyright 2014 Connor Sears
  * Licensed under MIT.
  *
