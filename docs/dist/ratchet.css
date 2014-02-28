@@ -1214,7 +1214,6 @@ select {
   font-size: inherit;
   text-decoration: none;
   line-height: 1;
-  cursor: default;
   -webkit-font-smoothing: antialiased;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
