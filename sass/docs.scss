@@ -28,28 +28,14 @@ body {
 .docs-sub-header {
   position: relative;
   background-image: linear-gradient(45deg, #0a1855 0%,#da0024 100%);
-
-  &:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-image: url(../img/pattern.png);
-    background-size: 30%;
-    background-position: center center;
-    opacity: .038;
-    // content: '';
-  }
 }
 .docs-header {
   height: 100vh;
-  min-height: 700px;
+  min-height: 750px;
 
   // Ad on the homepage
   .carbonad {
-    position: absolute !important;
-    bottom: 180px !important;
+    position: relative !important;
     margin-top: 0 !important;
     @include animation-name(fadeintext);
     @include animation-duration(2s);
@@ -60,8 +46,42 @@ body {
     text-align: center;
   }
 }
+.docs-header-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+// Desktop jumbotron
+@media screen and (min-width: 768px) {
+  .docs-header {
+    min-height: 870px;
 
-// Masthead
+    // Ads on the homepage
+    .carbonad {
+      left: 50% !important;
+      margin-left: -165px !important;
+      margin-bottom: 60px !important;
+    }
+  }
+
+  // Positon ads correctly on sub pages
+  .docs-sub-header .carbonad {
+    position: absolute !important;
+    top: 50% !important;
+    right: 15px !important;
+    margin-top: 0 !important;
+    @include transform(translateY(-50%) !important);
+  }
+}
+// Account for the extra margin for large sceens.
+@media screen and (min-width: 1200px) {
+  .docs-sub-header .carbonad {
+    right: 30px !important;
+  }
+}
+
+// Masthead and nav
 .docs-masthead {
   position: relative;
   padding-top: 15px;
@@ -124,9 +144,121 @@ body {
     opacity: .5;
   }
 }
+
+// Desktop: Masthead and nav
+@media screen and (min-width: 768px) {
+  .docs-title {
+    position: static;
+    float: left;
+    @include transform(translateX(0));
+  }
+
+  // Docs nav
+  .docs-nav {
+    float: right;
+
+    .docs-nav-trigger {
+      display: none;
+    }
+    .docs-nav-group {
+      position: static;
+      display: block;
+      height: auto;
+      background-color: transparent;
+      opacity: 1;
+    }
+    .docs-nav-item {
+      position: relative;
+      display: inline-block;
+      padding: 0 15px;
+      font-size: 14px;
+    }
+  }
+
+  // Component jump menu
+  .docs-jump-menu {
+    position: absolute;
+    left: 20px;
+    display: block;
+    color: #777;
+    cursor: pointer;
+    @include transition(opacity .2 linear);
+
+    &:hover {
+      color: $primary-color;
+    }
+    &:active {
+      opacity: .5;
+    }
+    .icon-list {
+      font-size: 16px;
+      margin-right: 3px;
+    }
+    .icon-caret {
+      position: relative;
+      top: 4px;
+    }
+  }
+  .docs-component-group {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 3px;
+    box-shadow: 0 0 8px rgba(0,0,0,.05);
+
+    &.active {
+      display: block;
+    }
+    &:before,
+    &:after {
+      position: absolute;
+      left: 30px;
+      width: 0;
+      height: 0;
+      content: '';
+    }
+    &:before {
+      top: -11px;
+      margin-left: -11px;
+      border-right: 11px solid transparent;
+      border-bottom: 11px solid rgba(0,0,0,.3);
+      border-left: 11px solid transparent;
+    }
+    &:after {
+      top: -10px;
+      margin-left: -10px;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      border-left: 10px solid transparent
+    }
+    .docs-component-item {
+      display: block;
+      padding: 10px 20px;
+      color: #777;
+
+      &:hover {
+        color: #fff;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+// Account for extra margin on large screens
+@media screen and (min-width: 1200px) {
+  .docs-jump-menu {
+    left: 30px;
+  }
+}
+
+// Main homepage header content
+// "Build mobile apps using simple..."
 .docs-header-content {
   position: relative;
-  top: 30px;
   text-align: center;
   padding: 50px 10px;
   @include animation-name(fadeintext);
@@ -158,6 +290,23 @@ body {
   font-weight: 100;
   color: #fff;
   line-height: 38px;
+}
+
+// Desktop header content
+@media screen and (min-width: 768px) {
+  .docs-header-content {
+    top: 30%;
+    @include transform(translateY(-50%));
+
+    .btn {
+      display: inline-block;
+    }
+  }
+  .docs-subtitle {
+    margin-bottom: 30px;
+    font-size: 41px;
+    line-height: 60px;
+  }
 }
 
 // Ads
@@ -200,6 +349,18 @@ body {
   display: none;
 }
 
+// Desktop styles for ads
+@media screen and (min-width: 768px) {
+  .carbonad {
+    width: 330px !important;
+    border-right: 1px solid rgba(255,255,255,.1) !important;
+    border-bottom: 1px solid rgba(255,255,255,.1) !important;
+    border-left: 1px solid rgba(255,255,255,.1) !important;
+    border-radius: 3px !important;
+  }
+}
+
+
 // Subpage Header
 // --------------------------------------------------
 
@@ -228,9 +389,18 @@ body {
   }
 }
 
+// Desktop: Left align the text
+@media screen and (min-width: 768px) {
+  .docs-sub-content {
+    margin-right: 380px;
+    text-align: left;
+  }
+}
+
 
 // Content sections
 // --------------------------------------------------
+
 .docs-section {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -249,6 +419,19 @@ body {
   color: #777;
   font-weight: 100;
 }
+
+// Desktop: Section headings 
+@media screen and (min-width: 768px) {
+  .section-heading {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
+  .section-lead {
+    font-size: 24px;
+  }
+}
+
 
 // Steps
 // --------------------------------------------------
@@ -274,6 +457,24 @@ body {
 }
 .step-description {
   font-size: 14px;
+}
+
+// Desktop steps styles
+@media screen and (min-width: 768px) {
+  .step-title {
+    font-size: 24px;
+  }
+  .step-title code {
+    font-size: 18px;
+  }
+  .step-description {
+    font-size: 18px;
+  }
+
+  // Docs modules
+  .docs-module {
+    margin-top: 35px;
+  }
 }
 
 // Docs modules
@@ -304,8 +505,7 @@ body {
 .docs-footer {
   border-top: 1px solid #ddd;
   margin-top: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 20px;
   color: #777;
   font-size: 14px;
   text-align: center;
@@ -324,6 +524,12 @@ body {
       margin-top: 5px;
     }
   }
+  @media screen and (min-width: 768px) {
+    // Remove the top margin on desktop
+    .social .twitter-follow-button {
+      margin-top: 0;
+    }
+  }
 }
 .docs-footer-text {
   margin-top: 0;
@@ -333,6 +539,8 @@ body {
   .docs-footer-text {
     width: 550px;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .docs-footer-links {
@@ -347,10 +555,6 @@ body {
 
 // Overrides for the homepage's footer
 .docs-header .docs-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin-top: 0;
   border-top: 1px solid rgba(255,255,255,.1);
 
@@ -369,6 +573,7 @@ body {
   border: 0;
   overflow: hidden;
 }
+
 
 // Platform toggle
 // --------------------------------------------------
@@ -404,6 +609,7 @@ body {
     }
   }
 }
+
 
 // Example devices
 // --------------------------------------------------
@@ -441,9 +647,22 @@ body {
     }
   }
 }
-// .example-device {
-//   margin: 0 auto;
-// }
+@media screen and (min-width: 768px) {
+  // Examples
+  .docs-example-group .example-wrap {
+    display: inline-block;
+
+    .example {
+      width: 180px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .docs-example-group .example-wrap .example {
+    width: 220px;
+  }
+}
+
 
 // Components
 // --------------------------------------------------
@@ -546,6 +765,35 @@ code {
   white-space: pre;
   word-wrap: normal;
 }
+@media screen and (min-width: 768px) {
+  .component,
+  .component-example-fullbleed,
+  .highlight {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .component {
+    padding-left: 0;
+    padding-right: 0;
+    opacity: .3;
+    @include transition(opacity .2s ease-in-out);
+
+    &.active {
+      opacity: 1;
+    }
+  }
+  .component-example {
+    display: none;
+  }
+  .highlight pre {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 3px;
+  }
+}
+
+
+// Specific example overrides
 #ratchicons .icon,
 #ratchiconsInDevice .icon {
   width: 50px;
@@ -571,7 +819,8 @@ code {
 
 // Buttons
 #buttonsInDevice,
-#buttonsBadgesInDevice {
+#buttonsBadgesInDevice,
+#buttonsWithIconsInDevice {
   .btn {
     margin-top: 10px;
     margin-right: 100px;
@@ -630,6 +879,14 @@ code {
     content: '';
   }
 }
+@media screen and (min-width: 768px) {
+  .popover {
+    position: absolute;
+    display: block;
+    top: 72px;
+    opacity: 1;
+  }
+}
 
 // Modals
 #modalsInDevice {
@@ -638,7 +895,28 @@ code {
   }
 }
 
-// Misc
+// Sliders
+@media screen and (min-width: 768px) {
+  .slider .slide img {
+    width: 100%;
+    height: 570px; // Fullscreen fun times
+    display: block;
+  }
+  .slider .slide-group .slide-text {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+  }
+}
+
+
+// Example device
 // --------------------------------------------------
 
 .device {
@@ -647,223 +925,7 @@ code {
   line-height: $line-height-default;
   display: none;
 }
-
-hr {
-  height: 0;
-  margin: 10px 0 30px;
-  border: solid #ddd;
-  border-width: 1px 0 0;
-  clear: both;
-}
-
-.column-group {
-  *zoom: 1;
-}
-.column-group:before,
-.column-group:after {
-  display: table;
-  line-height: 0;
-  content: "";
-}
-.column-group:after {
-  clear: both;
-}
-// You can also use a <br class="clear">
-.clear {
-  display: block;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-  clear: both;
-}
-
-
-// Docs media queries
-// --------------------------------------------------
-
-// Tablet to desktop
 @media screen and (min-width: 768px) {
-  .docs-header {
-    min-height: 870px;
-
-    // Ads on the homepage
-    .carbonad {
-      bottom: 259px !important;
-      left: 50% !important;
-      margin-left: -165px !important;
-    }
-  }
-  .docs-sub-header .carbonad {
-    position: absolute !important;
-    top: 50% !important;
-    right: 15px !important;
-    margin-top: 0 !important;
-    @include transform(translateY(-50%) !important);
-  }
-  .docs-sub-content {
-    margin-right: 380px;
-    text-align: left;
-  }
-  .docs-title {
-    position: static;
-    float: left;
-    @include transform(translateX(0));
-  }
-  .docs-header-content {
-    top: 30%;
-    @include transform(translateY(-50%));
-
-    .btn {
-      display: inline-block;
-    }
-  }
-  .docs-subtitle {
-    margin-bottom: 30px;
-    font-size: 41px;
-    line-height: 60px;
-  }
-
-  // Docs nav
-  .docs-nav {
-    float: right;
-
-    .docs-nav-trigger {
-      display: none;
-    }
-    .docs-nav-group {
-      position: static;
-      display: block;
-      height: auto;
-      background-color: transparent;
-      opacity: 1;
-    }
-    .docs-nav-item {
-      position: relative;
-      display: inline-block;
-      padding: 0 15px;
-      font-size: 14px;
-    }
-  }
-
-  // Component jump menu
-  .docs-jump-menu {
-    position: absolute;
-    left: 20px;
-    display: block;
-    color: #777;
-    cursor: pointer;
-    @include transition(opacity .2 linear);
-
-    &:hover {
-      color: $primary-color;
-    }
-    &:active {
-      opacity: .5;
-    }
-    .icon-list {
-      font-size: 16px;
-      margin-right: 3px;
-    }
-    .icon-caret {
-      position: relative;
-      top: 4px;
-    }
-  }
-  .docs-component-group {
-    position: absolute;
-    top: 35px;
-    left: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: 3px;
-    box-shadow: 0 0 8px rgba(0,0,0,.05);
-
-    &.active {
-      display: block;
-    }
-    &:before,
-    &:after {
-      position: absolute;
-      left: 30px;
-      width: 0;
-      height: 0;
-      content: '';
-    }
-    &:before {
-      top: -11px;
-      margin-left: -11px;
-      border-right: 11px solid transparent;
-      border-bottom: 11px solid rgba(0,0,0,.3);
-      border-left: 11px solid transparent;
-    }
-    &:after {
-      top: -10px;
-      margin-left: -10px;
-      border-right: 10px solid transparent;
-      border-bottom: 10px solid #fff;
-      border-left: 10px solid transparent
-    }
-    .docs-component-item {
-      display: block;
-      padding: 10px 20px;
-      color: #777;
-
-      &:hover {
-        color: #fff;
-        background-color: $primary-color;
-      }
-    }
-  }
-
-  // Ads
-  .carbonad {
-    width: 330px !important;
-    border-right: 1px solid rgba(255,255,255,.1) !important;
-    border-bottom: 1px solid rgba(255,255,255,.1) !important;
-    border-left: 1px solid rgba(255,255,255,.1) !important;
-    border-radius: 3px !important;
-  }
-
-  // Social
-  .docs-footer {
-    .social .twitter-follow-button {
-      margin-top: 0;
-    }
-  }
-
-  // Steps
-  .step-title {
-    font-size: 24px;
-  }
-  .step-title code {
-    font-size: 18px;
-  }
-  .step-description {
-    font-size: 18px;
-  }
-
-  // Docs modules
-  .docs-module {
-    margin-top: 35px;
-  }
-
-
-  // Content sections
-  // --------------------------------------------------
-  .section-heading {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-size: 40px;
-  }
-  .section-lead {
-    font-size: 24px;
-  }
-
-  // Device
   .device {
     position: relative;
     top: 50px;
@@ -904,79 +966,36 @@ hr {
     right: 0;
     bottom: 0;
   }
-  .component,
-  .component-example-fullbleed,
-  .highlight {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .component {
-    padding-left: 0;
-    padding-right: 0;
-    opacity: .3;
-    @include transition(opacity .2s ease-in-out);
-
-    &.active {
-      opacity: 1;
-    }
-  }
-  .component-example {
-    display: none;
-  }
-  .highlight pre {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-radius: 3px;
-  }
-
-  // Component overrides
-  .popover {
-    position: absolute;
-    display: block;
-    top: 72px;
-    opacity: 1;
-  }
-  .slider .slide img {
-    width: 100%;
-    height: 570px; // Fullscreen fun times
-    display: block;
-  }
-  .slider .slide-group .slide-text {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 300;
-    text-shadow: 0 0 10px rgba(0,0,0,.5);
-  }
-  // Examples
-  .docs-example-group .example-wrap {
-    display: inline-block;
-
-    .example {
-      width: 180px;
-    }
-  }
 }
 @media screen and (min-width: 1200px) {
-  // Device
   .device {
     margin-left: 39px;
   }
-  .docs-sub-header .carbonad {
-    right: 30px !important;
-  }
-  // Component jump menu
-  .docs-jump-menu {
-    left: 30px;
-  }
-  // Examples
-  .docs-example-group .example-wrap .example {
-    width: 220px;
-  }
+}
+
+
+// Misc
+// --------------------------------------------------
+
+hr {
+  height: 0;
+  margin: 10px 0 30px;
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+}
+
+.column-group {
+  *zoom: 1;
+}
+.column-group:before,
+.column-group:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.column-group:after {
+  clear: both;
 }
 
 
@@ -1083,7 +1102,10 @@ hr {
   }
 }
 
-// Devices
+
+// Example platform styles
+// --------------------------------------------------
+
 .platform-ios {
   @import "theme-ios.scss";
 
