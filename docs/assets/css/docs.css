@@ -31,11 +31,11 @@ body {
 
 .docs-header {
   height: 100vh;
-  min-height: 700px;
+  min-height: 750px;
 }
 .docs-header .carbonad {
   position: absolute !important;
-  bottom: 180px !important;
+  bottom: 255px !important;
   margin-top: 0 !important;
   -webkit-animation-name: fadeintext;
   -moz-animation-name: fadeintext;
@@ -249,7 +249,6 @@ body {
 }
 .docs-header-content {
   position: relative;
-  top: 30px;
   text-align: center;
   padding: 50px 10px;
   -webkit-animation-name: fadeintext;
