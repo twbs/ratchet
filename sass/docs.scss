@@ -286,6 +286,8 @@ body {
   color: #fff;
   line-height: 38px;
 }
+
+// Desktop header content
 @media screen and (min-width: 768px) {
   .docs-header-content {
     top: 30%;
@@ -381,6 +383,8 @@ body {
     opacity: .7;
   }
 }
+
+// Desktop: Left align the text
 @media screen and (min-width: 768px) {
   .docs-sub-content {
     margin-right: 380px;
@@ -391,6 +395,7 @@ body {
 
 // Content sections
 // --------------------------------------------------
+
 .docs-section {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -409,6 +414,8 @@ body {
   color: #777;
   font-weight: 100;
 }
+
+// Desktop: Section headings 
 @media screen and (min-width: 768px) {
   .section-heading {
     margin-top: 50px;
@@ -419,6 +426,7 @@ body {
     font-size: 24px;
   }
 }
+
 
 // Steps
 // --------------------------------------------------
@@ -564,6 +572,7 @@ body {
   overflow: hidden;
 }
 
+
 // Platform toggle
 // --------------------------------------------------
 
@@ -598,6 +607,7 @@ body {
     }
   }
 }
+
 
 // Example devices
 // --------------------------------------------------
@@ -650,6 +660,7 @@ body {
     width: 220px;
   }
 }
+
 
 // Components
 // --------------------------------------------------
@@ -901,6 +912,7 @@ code {
     text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 }
+
 
 // Example device
 // --------------------------------------------------
