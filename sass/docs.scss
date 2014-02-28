@@ -505,8 +505,7 @@ body {
 .docs-footer {
   border-top: 1px solid #ddd;
   margin-top: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 20px;
   color: #777;
   font-size: 14px;
   text-align: center;
@@ -540,6 +539,8 @@ body {
   .docs-footer-text {
     width: 550px;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 .docs-footer-links {
