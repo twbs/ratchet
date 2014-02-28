@@ -24,6 +24,12 @@ Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
+### Documentation for previous releases
+
+Documentation for v1.0.2 has been made available for the time being at <http://goratchet.com/1.0.2/> while folks transition to Ratchet 2.
+
+[Previous releases](https://github.com/twbs/ratchet/releases) and their documentation are also available for download.
+
 ## Support
 
 Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@GoRatchet](https://twitter.com/goratchet).
