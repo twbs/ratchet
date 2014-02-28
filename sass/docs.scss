@@ -296,6 +296,8 @@ body {
   margin-top: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
+  color: #777;
+  font-size: 14px;
   text-align: center;
 
   .social {
@@ -313,11 +315,27 @@ body {
     }
   }
 }
-.docs-footer-content {
-  margin: 0;
-  color: #777;
-  font-size: 12px;
+.docs-footer-text {
+  margin-top: 0;
+  margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .docs-footer-text {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+.docs-footer-links {
+  padding-left: 0;
+
+  li {
+    display: inline;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}
+
+// Overrides for the homepage's footer
 .docs-header .docs-footer {
   position: absolute;
   bottom: 0;
@@ -326,17 +344,14 @@ body {
   margin-top: 0;
   border-top: 1px solid rgba(255,255,255,.1);
 
-  .docs-footer-content {
+  .docs-footer-text,
+  .docs-footer-links {
     color: rgba(255,255,255,.5);
 
     a {
-      font-weight: bold;
       color: rgba(255,255,255,.8);
     }
   }
-}
-.docs-footer-links li {
-  display: inline;
 }
 
 
@@ -655,11 +670,11 @@ hr {
 // Tablet to desktop 
 @media screen and (min-width: 768px) {
   .docs-header {
-    min-height: 830px;
+    min-height: 870px;
 
     // Ads on the homepage
     .carbonad {
-      bottom: 180px !important;
+      bottom: 259px !important;
       left: 50% !important;
       margin-left: -165px !important;
     }
@@ -681,7 +696,7 @@ hr {
     @include transform(translateX(0));
   }
   .docs-header-content {
-    top: 32%;
+    top: 30%;
     @include transform(translateY(-50%));
     
     .btn {
