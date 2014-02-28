@@ -526,11 +526,11 @@ textarea,
 }
 
 .push-left:after {
-  content: '\e803';
+  content: '';
 }
 
 .push-right:after {
-  content: '\e806';
+  content: '';
 }
 
 .icon-caret:before {
