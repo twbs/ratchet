@@ -56,6 +56,11 @@ body {
   -moz-animation-duration: 2s;
   animation-duration: 2s;
 }
+.docs-header .version {
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
 
 .docs-masthead {
   position: relative;
@@ -298,6 +303,13 @@ body {
 
 .docs-module-title {
   font-weight: 300;
+}
+
+.version {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #777;
+  font-size: 90%;
 }
 
 .docs-footer {
