@@ -2048,10 +2048,10 @@ hr {
   content: "On";
 }
 .platform-android .push-left:after {
-  content: '\e803';
+  content: '';
 }
 .platform-android .push-right:after {
-  content: '\e806';
+  content: '';
 }
 .platform-android .icon-caret:before {
   content: '\e800';
