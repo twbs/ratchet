@@ -35,8 +35,7 @@ body {
 
   // Ad on the homepage
   .carbonad {
-    position: absolute !important;
-    bottom: 255px !important;
+    position: relative !important;
     margin-top: 0 !important;
     @include animation-name(fadeintext);
     @include animation-duration(2s);
@@ -47,6 +46,12 @@ body {
     text-align: center;
   }
 }
+.docs-header-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 // Desktop jumbotron
 @media screen and (min-width: 768px) {
   .docs-header {
@@ -54,9 +59,9 @@ body {
 
     // Ads on the homepage
     .carbonad {
-      bottom: 259px !important;
       left: 50% !important;
       margin-left: -165px !important;
+      margin-bottom: 60px !important;
     }
   }
 
@@ -549,10 +554,6 @@ body {
 
 // Overrides for the homepage's footer
 .docs-header .docs-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin-top: 0;
   border-top: 1px solid rgba(255,255,255,.1);
 

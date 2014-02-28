@@ -34,8 +34,7 @@ body {
   min-height: 750px;
 }
 .docs-header .carbonad {
-  position: absolute !important;
-  bottom: 255px !important;
+  position: relative !important;
   margin-top: 0 !important;
   -webkit-animation-name: fadeintext;
   -moz-animation-name: fadeintext;
@@ -50,14 +49,21 @@ body {
   text-align: center;
 }
 
+.docs-header-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
   .docs-header {
     min-height: 870px;
   }
   .docs-header .carbonad {
-    bottom: 259px !important;
     left: 50% !important;
     margin-left: -165px !important;
+    margin-bottom: 60px !important;
   }
 
   .docs-sub-header .carbonad {
@@ -537,10 +543,6 @@ body {
 }
 
 .docs-header .docs-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   margin-top: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
