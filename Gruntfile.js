@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
     banner: '/*!\n' +
             ' * =====================================================\n' +
-            ' * Ratchet v<%= pkg.version %>\n' +
+            ' * Ratchet v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license %>.\n' +
             ' *\n' +
@@ -129,6 +129,17 @@ module.exports = function(grunt) {
       files: {
         src: '_site/**/*.html'
       }
+    },
+
+    sed: {
+      versionNumber: {
+        pattern: (function () {
+          var old = grunt.option('oldver');
+          return old ? RegExp.quote(old) : old;
+        })(),
+        replacement: grunt.option('newver'),
+        recursive: true
+      }
     }
   });
 
@@ -142,4 +153,9 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('build', ['dist']);
+
+  // Version numbering task.
+  // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
+  // This can be overzealous, so its changes should always be manually reviewed!
+  grunt.registerTask('change-version-number', 'sed');
 };

@@ -1,6 +1,6 @@
 /*!
  * =====================================================
- * Ratchet v2.0.0
+ * Ratchet v2.0.0 (http://goratchet.com)
  * Copyright 2014 Connor Sears
  * Licensed under MIT.
  *
@@ -305,6 +305,8 @@ body {
   margin-top: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
+  color: #777;
+  font-size: 14px;
   text-align: center;
 }
 .docs-footer .social {
@@ -321,10 +323,24 @@ body {
   margin-top: 5px;
 }
 
-.docs-footer-content {
-  margin: 0;
-  color: #777;
-  font-size: 12px;
+.docs-footer-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .docs-footer-text {
+    width: 550px;
+    margin: 0 auto;
+  }
+}
+.docs-footer-links {
+  padding-left: 0;
+}
+.docs-footer-links li {
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .docs-header .docs-footer {
@@ -335,11 +351,12 @@ body {
   margin-top: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.docs-header .docs-footer .docs-footer-content {
+.docs-header .docs-footer .docs-footer-text,
+.docs-header .docs-footer .docs-footer-links {
   color: rgba(255, 255, 255, 0.5);
 }
-.docs-header .docs-footer .docs-footer-content a {
-  font-weight: bold;
+.docs-header .docs-footer .docs-footer-text a,
+.docs-header .docs-footer .docs-footer-links a {
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -643,10 +660,10 @@ hr {
 
 @media screen and (min-width: 768px) {
   .docs-header {
-    min-height: 830px;
+    min-height: 870px;
   }
   .docs-header .carbonad {
-    bottom: 180px !important;
+    bottom: 259px !important;
     left: 50% !important;
     margin-left: -165px !important;
   }
@@ -675,7 +692,7 @@ hr {
   }
 
   .docs-header-content {
-    top: 32%;
+    top: 30%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
