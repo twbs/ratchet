@@ -54,6 +54,9 @@ body {
     @include animation-name(fadeintext);
     @include animation-duration(2s);
   }
+  .version {
+    color: rgba(255,255,255,.5)
+  }
 }
 
 // Masthead
@@ -285,6 +288,13 @@ body {
 }
 .docs-module-title {
   font-weight: 300;
+}
+.version {
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: #777;
+  font-size: 90%;
+  text-align: center;
 }
 
 
