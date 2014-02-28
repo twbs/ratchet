@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 
     banner: '/*!\n' +
             ' * =====================================================\n' +
-            ' * Ratchet v<%= pkg.version %>\n' +
+            ' * Ratchet v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license %>.\n' +
             ' *\n' +
