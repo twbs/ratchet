@@ -34,7 +34,7 @@ Please file a GitHub issue to [report a bug](https://github.com/twbs/ratchet/iss
 
 ## Troubleshooting
 
-A small list of "gotchas" are provided below for designers and developers starting to work with Ratchet
+A small list of "gotchas" is provided below for designers and developers starting to work with Ratchet.
 
 - Ratchet is designed to respond to touch events from a mobile device. In order to use mouse click events (for desktop browsing and testing), you have a few options:
   - Enable touch event emulation in Chrome (found in the overrides tab in the web inspector preferences)
