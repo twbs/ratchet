@@ -55,7 +55,9 @@ body {
     @include animation-duration(2s);
   }
   .version {
-    color: rgba(255,255,255,.5)
+    margin-top: 15px;
+    color: rgba(255,255,255,.5);
+    text-align: center;
   }
 }
 
@@ -290,11 +292,10 @@ body {
   font-weight: 300;
 }
 .version {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 0;
   color: #777;
   font-size: 90%;
-  text-align: center;
 }
 
 
