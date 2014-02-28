@@ -441,6 +441,7 @@ body {
 .docs-example-group .example-wrap img {
   display: block;
   width: 100%;
+  height: auto;
 }
 
 code {
