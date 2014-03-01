@@ -962,9 +962,10 @@ code {
     height: 813px;
     margin-left: -20px;
     font-family: "Helvetica Neue", sans-serif;
-    background-image: url("../img/iphone5c.png");
-    background-size: 100%;
+    background-image: url("../img/device-sprite.png");
+    background-size: 300%;
     background-repeat: no-repeat;
+    background-position-x: 0;
     @include transition(background-image .1s linear);
 
     &.device-fixed {
@@ -1138,8 +1139,8 @@ hr {
   @import "theme-ios.scss";
 
   .device {
-    background-image: url("../img/iphone5s.png");
-
+    background-position-x: -395px;
+    
     .device-content {
       background-color: #efeff4;
     }
@@ -1150,7 +1151,7 @@ hr {
 
   .device {
     font-family: 'Roboto', sans-serif;
-    background-image: url("../img/android.png");
+    background-position-x: -790px;
 
     .device-content {
       font-size: 18px;
