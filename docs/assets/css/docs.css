@@ -16,11 +16,41 @@ body {
 
 body {
   position: relative !important;
-  font: 14px/1.5 "Source Sans Pro",sans-serif;
+  font: 300 14px/1.5 "Open Sans", sans-serif;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+}
+
+.docs-content {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .docs-content {
+    font-size: 18px;
+  }
+}
+.docs-content h1, .docs-content h2, .docs-content h3, .docs-content h4, .docs-content h5, .docs-content h6 {
+  font-weight: 300;
+  color: #222;
+}
+.docs-content h2 {
+  margin-bottom: .25em;
+  font-size: 2em;
+}
+.docs-content h3 {
+  margin-bottom: .5em;
+  font-size: 1.25em;
+}
+.docs-content p {
+  margin-bottom: 1.5em;
+  font-size: 1em;
+  color: #555;
+}
+.docs-content .lead {
+  font-size: 1.1em;
+  color: #777;
 }
 
 .docs-header,
@@ -289,7 +319,6 @@ body {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 28px;
-  font-weight: 300;
   color: #fff;
   line-height: 38px;
 }
@@ -396,82 +425,12 @@ body {
   }
 }
 .docs-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ddd;
 }
 
-.section-heading,
-.section-lead {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.section-heading {
-  font-size: 22px;
-  font-weight: 300;
-}
-
-.section-lead {
-  font-size: 18px;
-  color: #777;
-}
-
-@media screen and (min-width: 768px) {
-  .section-heading {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-size: 40px;
-  }
-
-  .section-lead {
-    font-size: 24px;
-  }
-}
-.docs-steps {
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.step {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.step-title,
-.step-description {
-  font-weight: 300;
-}
-
-.step-title {
-  font-size: 18px;
-}
-
-.step-title code {
-  font-size: 14px;
-}
-
-.step-description {
-  font-size: 14px;
-}
-
-@media screen and (min-width: 768px) {
-  .step-title {
-    font-size: 24px;
-  }
-
-  .step-title code {
-    font-size: 18px;
-  }
-
-  .step-description {
-    font-size: 18px;
-  }
-
-  .docs-module {
-    margin-top: 35px;
-  }
-}
 .docs-module {
   margin-top: 20px;
   padding: 20px;
@@ -480,10 +439,6 @@ body {
 }
 .docs-module .btn-block {
   margin-bottom: 0;
-}
-
-.docs-module-title {
-  font-weight: 300;
 }
 
 .version {
@@ -620,7 +575,6 @@ body {
 }
 .docs-example-group .example-wrap h5 {
   margin-top: 10px;
-  font-weight: 300;
 }
 .docs-example-group .example-wrap img {
   display: block;
@@ -662,14 +616,12 @@ code {
 .component-title {
   margin-bottom: 10px;
   font-size: 24px;
-  font-weight: 300;
   line-height: 34px;
 }
 
 .component-description {
   margin-bottom: 15px;
   font-size: 16px;
-  font-weight: 300;
 }
 
 .component-example {
@@ -726,7 +678,6 @@ code {
   color: #fff;
   text-align: center;
   font-size: 24px;
-  font-weight: 300;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -883,7 +834,6 @@ code {
     color: #fff;
     text-align: center;
     font-size: 24px;
-    font-weight: 300;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 }

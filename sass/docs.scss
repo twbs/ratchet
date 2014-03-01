@@ -14,11 +14,47 @@ body {
 }
 body {
   position: relative !important; // Overrides the fixed positioning of body in Ratchet
-  font: 14px/1.5 "Source Sans Pro",sans-serif;
+  font: 300 14px/1.5 "Open Sans", sans-serif;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; // Fix for webkit rendering
   -webkit-text-size-adjust: 100%;
+}
+
+// Typography
+//
+// Gets scoped to a common class in the docs so we don't collide with any of
+// Ratchet's styles.
+
+.docs-content {
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: #222;
+  }
+  h2 {
+    margin-bottom: .25em;
+    font-size: 2em;
+  }
+  h3 {
+    margin-bottom: .5em;
+    font-size: 1.25em;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    color: #555;
+  }
+  .lead {
+    font-size: 1.1em;
+    color: #777;
+  }
 }
 
 
@@ -287,7 +323,6 @@ body {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 28px;
-  font-weight: 300;
   color: #fff;
   line-height: 38px;
 }
@@ -401,79 +436,12 @@ body {
 // Content sections
 // --------------------------------------------------
 
+// Wrap each section of the docs
 .docs-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-.section-heading,
-.section-lead {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.section-heading {
-  font-size: 22px;
-  font-weight: 300;
-}
-.section-lead {
-  font-size: 18px;
-  color: #777;
-}
-
-// Desktop: Section headings
-@media screen and (min-width: 768px) {
-  .section-heading {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-size: 40px;
-  }
-  .section-lead {
-    font-size: 24px;
-  }
-}
-
-
-// Steps
-// --------------------------------------------------
-
-.docs-steps {
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
-}
-.step {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.step-title,
-.step-description {
-  font-weight: 300;
-}
-.step-title {
-  font-size: 18px
-}
-.step-title code {
-  font-size: 14px;
-}
-.step-description {
-  font-size: 14px;
-}
-
-// Desktop steps styles
-@media screen and (min-width: 768px) {
-  .step-title {
-    font-size: 24px;
-  }
-  .step-title code {
-    font-size: 18px;
-  }
-  .step-description {
-    font-size: 18px;
-  }
-
-  // Docs modules
-  .docs-module {
-    margin-top: 35px;
-  }
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ddd;
 }
 
 // Docs modules
@@ -486,9 +454,6 @@ body {
   .btn-block {
     margin-bottom: 0;
   }
-}
-.docs-module-title {
-  font-weight: 300;
 }
 .version {
   margin-top: 10px;
@@ -637,7 +602,6 @@ body {
     }
     h5 {
       margin-top: 10px;
-      font-weight: 300;
     }
     img {
       display: block;
@@ -686,13 +650,11 @@ code {
 .component-title {
   margin-bottom: 10px;
   font-size: 24px;
-  font-weight: 300;
   line-height: 34px;
 }
 .component-description {
   margin-bottom: 15px;
   font-size: 16px;
-  font-weight: 300;
 }
 .component-example {
   font-family: $font-family-default;
@@ -742,7 +704,6 @@ code {
   color: #fff;
   text-align: center;
   font-size: 24px;
-  font-weight: 300;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .component-example-fullbleed,
@@ -910,7 +871,6 @@ code {
     color: #fff;
     text-align: center;
     font-size: 24px;
-    font-weight: 300;
     text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 }
