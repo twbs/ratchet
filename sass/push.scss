@@ -57,3 +57,28 @@
   right: 15px;
   content: '\e826';
 }
+
+// Deprecated `push-left` and `push-right` as of 2.0.1
+.push-left,
+.push-right {
+  &:after {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    color: #bbb;
+    font-family: Ratchicons;
+    font-size: inherit;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    @include transform(translateY(-50%));
+  }
+}
+.push-left:after {
+  left: 15px;
+  content: '\e822';
+}
+.push-right:after {
+  right: 15px;
+  content: '\e826';
+}
