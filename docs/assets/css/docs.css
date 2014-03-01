@@ -924,9 +924,10 @@ code {
     height: 813px;
     margin-left: -20px;
     font-family: "Helvetica Neue", sans-serif;
-    background-image: url("../img/iphone5c.png");
-    background-size: 100%;
+    background-image: url("../img/device-sprite.png");
+    background-size: 300%;
     background-repeat: no-repeat;
+    background-position-x: 0;
     -webkit-transition: background-image 0.1s linear;
     -moz-transition: background-image 0.1s linear;
     transition: background-image 0.1s linear;
@@ -1587,7 +1588,7 @@ hr {
   transform: translate3d(-20%, 0, 0);
 }
 .platform-ios .device {
-  background-image: url("../img/iphone5s.png");
+  background-position-x: -395px;
 }
 .platform-ios .device .device-content {
   background-color: #efeff4;
@@ -2108,7 +2109,7 @@ hr {
 }
 .platform-android .device {
   font-family: 'Roboto', sans-serif;
-  background-image: url("../img/android.png");
+  background-position-x: -790px;
 }
 .platform-android .device .device-content {
   font-size: 18px;
