@@ -1205,31 +1205,7 @@ select {
 }
 
 .navigate-left:after,
-.navigate-right:after {
-  position: absolute;
-  top: 50%;
-  display: inline-block;
-  color: #bbb;
-  font-family: Ratchicons;
-  font-size: inherit;
-  text-decoration: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.navigate-left:after {
-  left: 15px;
-  content: '\e822';
-}
-
-.navigate-right:after {
-  right: 15px;
-  content: '\e826';
-}
-
+.navigate-right:after,
 .push-left:after,
 .push-right:after {
   position: absolute;
@@ -1246,11 +1222,13 @@ select {
   transform: translateY(-50%);
 }
 
+.navigate-left:after,
 .push-left:after {
   left: 15px;
   content: '\e822';
 }
 
+.navigate-right:after,
 .push-right:after {
   right: 15px;
   content: '\e826';

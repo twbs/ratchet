@@ -35,30 +35,7 @@
 
 // Add chevrons to elements
 .navigate-left,
-.navigate-right {
-  &:after {
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    color: #bbb;
-    font-family: Ratchicons;
-    font-size: inherit;
-    text-decoration: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    @include transform(translateY(-50%));
-  }
-}
-.navigate-left:after {
-  left: 15px;
-  content: '\e822';
-}
-.navigate-right:after {
-  right: 15px;
-  content: '\e826';
-}
-
-// Deprecated `push-left` and `push-right` as of 2.0.1
+.navigate-right,
 .push-left,
 .push-right {
   &:after {
@@ -74,11 +51,13 @@
     @include transform(translateY(-50%));
   }
 }
+.navigate-left:after,
 .push-left:after {
   left: 15px;
   content: '\e822';
 }
-.push-right:after {
+.navigate-right:after,
+.push-right:after{
   right: 15px;
   content: '\e826';
 }
