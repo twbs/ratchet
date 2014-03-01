@@ -525,6 +525,14 @@ textarea,
   content: "On";
 }
 
+.navigate-left:after {
+  content: '';
+}
+
+.navigate-right:after {
+  content: '';
+}
+
 .push-left:after {
   content: '';
 }

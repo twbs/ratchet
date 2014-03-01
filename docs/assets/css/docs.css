@@ -2069,6 +2069,12 @@ hr {
   color: #fff;
   content: "On";
 }
+.platform-android .navigate-left:after {
+  content: '';
+}
+.platform-android .navigate-right:after {
+  content: '';
+}
 .platform-android .push-left:after {
   content: '';
 }

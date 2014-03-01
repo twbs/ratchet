@@ -697,6 +697,14 @@ textarea,
 // Push icons
 // --------------------------------------------------
 
+.navigate-left:after {
+  content: '';
+}
+.navigate-right:after {
+  content: '';
+}
+
+// Deprecated `push-left` and `push-right` as of 2.0.1
 .push-left:after {
   content: '';
 }
