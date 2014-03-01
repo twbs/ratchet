@@ -34,8 +34,8 @@
 }
 
 // Add chevrons to elements
-.push-left,
-.push-right {
+.navigate-left,
+.navigate-right {
   &:after {
     position: absolute;
     top: 50%;
@@ -49,11 +49,11 @@
     @include transform(translateY(-50%));
   }
 }
-.push-left:after {
+.navigate-left:after {
   left: 15px;
   content: '\e822';
 }
-.push-right:after {
+.navigate-right:after {
   right: 15px;
   content: '\e826';
 }

@@ -1204,8 +1204,8 @@ select {
   transform: translate3d(100%, 0, 0);
 }
 
-.push-left:after,
-.push-right:after {
+.navigate-left:after,
+.navigate-right:after {
   position: absolute;
   top: 50%;
   display: inline-block;
@@ -1220,12 +1220,12 @@ select {
   transform: translateY(-50%);
 }
 
-.push-left:after {
+.navigate-left:after {
   left: 15px;
   content: '\e822';
 }
 
-.push-right:after {
+.navigate-right:after {
   right: 15px;
   content: '\e826';
 }
