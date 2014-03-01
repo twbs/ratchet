@@ -756,11 +756,14 @@ code {
   margin-bottom: 10px;
 }
 .component-example .slider {
-  height: 200px;
+  height: 300px;
+
+  .slide {
+    height: 300px;
+  }
 }
 .component-example .slide img {
   width: 100%;
-  height: 200px;
 }
 .component-example .slide-text {
   position: absolute;
