@@ -14,7 +14,7 @@ body {
 }
 body {
   position: relative !important; // Overrides the fixed positioning of body in Ratchet
-  font: 14px/1.5 "adelle-sans",sans-serif;
+  font: 14px/1.5 "Source Sans Pro",sans-serif;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; // Fix for webkit rendering
@@ -96,13 +96,6 @@ body {
   font-weight: 300;
   z-index: 20;
   @include transform(translateX(-50%));
-
-  // Use a thinner weight on retina
-  @media 
-    (-webkit-min-device-pixel-ratio: 2), 
-    (min-resolution: 192dpi) {
-      font-weight: 100;
-    }
 }
 .docs-nav {
   .docs-nav-trigger {
@@ -133,13 +126,6 @@ body {
     display: block;
     padding: 20px 15px;
     font-size: 22px;
-    
-    // Use a thinner weight on retina
-    @media 
-      (-webkit-min-device-pixel-ratio: 2), 
-      (min-resolution: 192dpi) {
-        font-weight: 100;
-      }
   }
 }
 .docs-jump-menu,
@@ -301,7 +287,7 @@ body {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 28px;
-  font-weight: 100;
+  font-weight: 300;
   color: #fff;
   line-height: 38px;
 }
@@ -391,13 +377,6 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 300;
-
-    // Use a thinner weight on retina
-    @media 
-      (-webkit-min-device-pixel-ratio: 2), 
-      (min-resolution: 192dpi) {
-        font-weight: 100;
-      }
   }
   .page-title {
     font-size: 40px;
@@ -438,16 +417,9 @@ body {
 .section-lead {
   font-size: 18px;
   color: #777;
-
-  // Use a thinner weight on retina
-  @media 
-    (-webkit-min-device-pixel-ratio: 2), 
-    (min-resolution: 192dpi) {
-      font-weight: 100;
-    }
 }
 
-// Desktop: Section headings 
+// Desktop: Section headings
 @media screen and (min-width: 768px) {
   .section-heading {
     margin-top: 50px;

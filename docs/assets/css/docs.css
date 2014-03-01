@@ -16,7 +16,7 @@ body {
 
 body {
   position: relative !important;
-  font: 14px/1.5 "adelle-sans",sans-serif;
+  font: 14px/1.5 "Source Sans Pro",sans-serif;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -99,11 +99,6 @@ body {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .docs-title {
-    font-weight: 100;
-  }
-}
 
 .docs-nav .docs-nav-trigger {
   color: #fff;
@@ -131,11 +126,6 @@ body {
   display: block;
   padding: 20px 15px;
   font-size: 22px;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .docs-nav .docs-nav-item {
-    font-weight: 100;
-  }
 }
 
 .docs-jump-menu,
@@ -299,7 +289,7 @@ body {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 28px;
-  font-weight: 100;
+  font-weight: 300;
   color: #fff;
   line-height: 38px;
 }
@@ -389,12 +379,6 @@ body {
   margin-bottom: 0;
   font-weight: 300;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .docs-sub-content .page-title,
-  .docs-sub-content .page-description {
-    font-weight: 100;
-  }
-}
 .docs-sub-content .page-title {
   font-size: 40px;
   margin-bottom: 5px;
@@ -430,11 +414,6 @@ body {
 .section-lead {
   font-size: 18px;
   color: #777;
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .section-lead {
-    font-weight: 100;
-  }
 }
 
 @media screen and (min-width: 768px) {
