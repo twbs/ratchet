@@ -93,9 +93,16 @@ body {
   left: 50%;
   margin-bottom: 0;
   font-size: 22px;
-  font-weight: 100;
+  font-weight: 300;
   z-index: 20;
   @include transform(translateX(-50%));
+
+  // Use a thinner weight on retina
+  @media 
+    (-webkit-min-device-pixel-ratio: 2), 
+    (min-resolution: 192dpi) {
+      font-weight: 100;
+    }
 }
 .docs-nav {
   .docs-nav-trigger {
@@ -125,12 +132,18 @@ body {
   .docs-nav-item {
     display: block;
     padding: 20px 15px;
-    font-weight: 100;
     font-size: 22px;
+    
+    // Use a thinner weight on retina
+    @media 
+      (-webkit-min-device-pixel-ratio: 2), 
+      (min-resolution: 192dpi) {
+        font-weight: 100;
+      }
   }
 }
 .docs-jump-menu,
-.docs-component-group{
+.docs-component-group {
   display: none;
 }
 .docs-title a,
@@ -377,7 +390,14 @@ body {
   .page-description {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 100;
+    font-weight: 300;
+
+    // Use a thinner weight on retina
+    @media 
+      (-webkit-min-device-pixel-ratio: 2), 
+      (min-resolution: 192dpi) {
+        font-weight: 100;
+      }
   }
   .page-title {
     font-size: 40px;
@@ -418,7 +438,13 @@ body {
 .section-lead {
   font-size: 18px;
   color: #777;
-  font-weight: 100;
+
+  // Use a thinner weight on retina
+  @media 
+    (-webkit-min-device-pixel-ratio: 2), 
+    (min-resolution: 192dpi) {
+      font-weight: 100;
+    }
 }
 
 // Desktop: Section headings 
@@ -671,6 +697,7 @@ body {
 code {
   padding: 2px 4px;
   font-size: 90%;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   background-color: #f9f9f9;
   border-radius: 3px;
 }
