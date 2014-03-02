@@ -92,7 +92,8 @@ body {
   }
   .docs-header .carbonad {
     left: 50% !important;
-    margin-left: -165px !important;
+    width: 300px !important;
+    margin-left: -150px !important;
     margin-bottom: 60px !important;
   }
 
