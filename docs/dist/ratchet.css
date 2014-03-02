@@ -367,6 +367,7 @@ p {
   color: #333;
   text-align: center;
   vertical-align: top;
+  white-space: nowrap;
   cursor: pointer;
   background-color: white;
   border: 1px solid #ccc;
@@ -443,6 +444,7 @@ p {
 
 .btn-block {
   display: block;
+  width: 100%;
   padding: 15px 0;
   margin-bottom: 10px;
   font-size: 18px;

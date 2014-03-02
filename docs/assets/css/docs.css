@@ -838,7 +838,8 @@ code {
 }
 
 #blockButtonsInDevice .btn-block {
-  margin: 10px;
+  width: 300px;
+  margin: 10px auto;
 }
 
 #segmentedControlsInDevice .segmented-control {
