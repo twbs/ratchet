@@ -106,11 +106,6 @@ body {
     transform: translateY(-50%) !important;
   }
 }
-@media screen and (min-width: 1200px) {
-  .docs-sub-header .carbonad {
-    right: 30px !important;
-  }
-}
 .docs-masthead {
   position: relative;
   padding-top: 15px;
@@ -365,7 +360,7 @@ body {
   height: auto !important;
   margin-left: 145px !important;
   color: rgba(255, 255, 255, 0.65) !important;
-  font-family: "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .carbonad-text {
@@ -387,7 +382,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .carbonad {
-    width: 330px !important;
+    width: 360px !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
