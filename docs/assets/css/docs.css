@@ -930,7 +930,7 @@ code {
     background-image: url("../img/device-sprite.png");
     background-size: 300%;
     background-repeat: no-repeat;
-    background-position-x: 0;
+    background-position: 0;
     -webkit-transition: background-image 0.1s linear;
     -moz-transition: background-image 0.1s linear;
     transition: background-image 0.1s linear;
@@ -1591,7 +1591,7 @@ hr {
   transform: translate3d(-20%, 0, 0);
 }
 .platform-ios .device {
-  background-position-x: -395px;
+  background-position: -395px 0;
 }
 .platform-ios .device .device-content {
   background-color: #efeff4;
@@ -2114,7 +2114,7 @@ hr {
 }
 .platform-android .device {
   font-family: 'Roboto', sans-serif;
-  background-position-x: -790px;
+  background-position: -790px 0;
 }
 .platform-android .device .device-content {
   font-size: 18px;

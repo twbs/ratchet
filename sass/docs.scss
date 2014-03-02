@@ -969,7 +969,7 @@ code {
     background-image: url("../img/device-sprite.png");
     background-size: 300%;
     background-repeat: no-repeat;
-    background-position-x: 0;
+    background-position: 0;
     @include transition(background-image .1s linear);
 
     &.device-fixed {
@@ -1143,7 +1143,7 @@ hr {
   @import "theme-ios.scss";
 
   .device {
-    background-position-x: -395px;
+    background-position: -395px 0;
 
     .device-content {
       background-color: #efeff4;
@@ -1155,7 +1155,7 @@ hr {
 
   .device {
     font-family: 'Roboto', sans-serif;
-    background-position-x: -790px;
+    background-position: -790px 0;
 
     .device-content {
       font-size: 18px;
