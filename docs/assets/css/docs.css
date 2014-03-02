@@ -562,7 +562,7 @@ body {
   border: 1px solid #dddddd;
   border-radius: 3px;
 }
-.example-wrap h5 {
+.example-wrap .example-title {
   margin-top: 10px;
 }
 .example-wrap img {
