@@ -551,21 +551,10 @@ body {
 }
 
 .docs-examples {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.docs-example-group {
   margin-top: 30px;
 }
-.docs-example-group .example-wrap {
-  display: inline-block;
-  margin-right: 10px;
-}
-.docs-example-group .example-wrap:last-child {
-  margin-right: 10px;
-}
-.docs-example-group .example-wrap .example {
+
+.example-wrap .example {
   display: block;
   overflow: hidden;
   padding: 3px;
@@ -573,26 +562,18 @@ body {
   border: 1px solid #dddddd;
   border-radius: 3px;
 }
-.docs-example-group .example-wrap h5 {
+.example-wrap h5 {
   margin-top: 10px;
 }
-.docs-example-group .example-wrap img {
+.example-wrap img {
   display: block;
   width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 768px) {
-  .docs-example-group .example-wrap {
-    display: inline-block;
-  }
-  .docs-example-group .example-wrap .example {
-    width: 180px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .docs-example-group .example-wrap .example {
-    width: 220px;
+  .example-wrap .example {
+    width: 100%;
   }
 }
 code {

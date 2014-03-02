@@ -577,52 +577,31 @@ body {
 
 // Example devices
 // --------------------------------------------------
-
 .docs-examples {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.docs-example-group {
   margin-top: 30px;
-
-  .example-wrap {
-    display: inline-block;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: 10px;
-    }
-    .example {
-      display: block;
-      overflow: hidden;
-      padding: 3px;
-      width: 100%;
-      border: $border-default;
-      border-radius: 3px;
-    }
-    h5 {
-      margin-top: 10px;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+}
+.example-wrap {
+  .example {
+    display: block;
+    overflow: hidden;
+    padding: 3px;
+    width: 100%;
+    border: $border-default;
+    border-radius: 3px;
+  }
+  h5 {
+    margin-top: 10px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 @media screen and (min-width: 768px) {
   // Examples
-  .docs-example-group .example-wrap {
-    display: inline-block;
-
-    .example {
-      width: 180px;
-    }
-  }
-}
-@media screen and (min-width: 1200px) {
-  .docs-example-group .example-wrap .example {
-    width: 220px;
+  .example-wrap .example {
+    width: 100%;
   }
 }
 
