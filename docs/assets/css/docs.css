@@ -571,11 +571,6 @@ body {
   height: auto;
 }
 
-@media screen and (min-width: 768px) {
-  .example-wrap .example {
-    width: 100%;
-  }
-}
 code {
   padding: 2px 4px;
   font-size: 90%;
