@@ -98,8 +98,8 @@ body {
   @include transform(translateX(-50%));
 
   // Use a thinner weight on retina
-  @media 
-    (-webkit-min-device-pixel-ratio: 2), 
+  @media
+    (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi) {
       font-weight: 100;
     }
@@ -133,10 +133,10 @@ body {
     display: block;
     padding: 20px 15px;
     font-size: 22px;
-    
+
     // Use a thinner weight on retina
-    @media 
-      (-webkit-min-device-pixel-ratio: 2), 
+    @media
+      (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi) {
         font-weight: 100;
       }
@@ -393,8 +393,8 @@ body {
     font-weight: 300;
 
     // Use a thinner weight on retina
-    @media 
-      (-webkit-min-device-pixel-ratio: 2), 
+    @media
+      (-webkit-min-device-pixel-ratio: 2),
       (min-resolution: 192dpi) {
         font-weight: 100;
       }
@@ -440,14 +440,14 @@ body {
   color: #777;
 
   // Use a thinner weight on retina
-  @media 
-    (-webkit-min-device-pixel-ratio: 2), 
+  @media
+    (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi) {
       font-weight: 100;
     }
 }
 
-// Desktop: Section headings 
+// Desktop: Section headings
 @media screen and (min-width: 768px) {
   .section-heading {
     margin-top: 50px;
@@ -859,7 +859,8 @@ code {
   }
 }
 #blockButtonsInDevice .btn-block {
-  margin: 10px;
+  width: 300px;
+  margin: 10px auto;
 }
 
 //Segmented Control
@@ -1143,7 +1144,7 @@ hr {
 
   .device {
     background-position-x: -395px;
-    
+
     .device-content {
       background-color: #efeff4;
     }
