@@ -86,15 +86,15 @@ module.exports = function(grunt) {
         report: 'min'
       },
       ratchet: {
-        src: 'dist/<%= pkg.name %>.css',
-        dest: 'dist/<%= pkg.name %>.min.css'
+        src: '<%= meta.distPath %><%= pkg.name %>.css',
+        dest: '<%= meta.distPath %><%= pkg.name %>.min.css'
       },
       docs: {
         src: [
-          'docs/assets/css/docs.css',
-          'docs/assets/css/pygments-manni.css'
+          '<%= meta.docsAssetsPath %>css/docs.css',
+          '<%= meta.docsAssetsPath %>css/pygments-manni.css'
         ],
-        dest: 'docs/assets/css/docs.min.css'
+        dest: '<%= meta.docsAssetsPath %>css/docs.min.css'
       }
     },
 
@@ -104,8 +104,8 @@ module.exports = function(grunt) {
         report: 'min'
       },
       ratchet: {
-        src: 'dist/<%= pkg.name %>.js',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        src: '<%= meta.distPath %><%= pkg.name %>.js',
+        dest: '<%= meta.distPath %><%= pkg.name %>.min.js'
       }
     },
 
