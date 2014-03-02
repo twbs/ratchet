@@ -525,10 +525,12 @@ textarea,
   content: "On";
 }
 
+.navigate-left:after,
 .push-left:after {
   content: '';
 }
 
+.navigate-right:after,
 .push-right:after {
   content: '';
 }
