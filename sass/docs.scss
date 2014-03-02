@@ -110,12 +110,6 @@ body {
     @include transform(translateY(-50%) !important);
   }
 }
-// Account for the extra margin for large sceens.
-@media screen and (min-width: 1200px) {
-  .docs-sub-header .carbonad {
-    right: 30px !important;
-  }
-}
 
 // Masthead and nav
 .docs-masthead {
