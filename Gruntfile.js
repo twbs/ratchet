@@ -104,11 +104,21 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         banner: '<%= banner %>',
+        compress: true,
+        mangle: true,
+        preserveComments: false,
         report: 'min'
       },
       ratchet: {
         src: '<%= meta.distPath %><%= pkg.name %>.js',
         dest: '<%= meta.distPath %><%= pkg.name %>.min.js'
+      },
+      docs: {
+        src: [
+          '<%= meta.docsAssetsPath %>js/docs.js',
+          '<%= meta.docsAssetsPath %>js/fingerblast.js'
+        ],
+        dest: '<%= meta.docsAssetsPath %>js/docs.min.js'
       }
     },
 
