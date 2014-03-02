@@ -981,15 +981,6 @@ hr {
     padding: 0;
     max-width: 940px;
   }
-  .column {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  // Lines nested grids up correctly.
-  .column .column-group {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
 
   // Override the mobile grid
   .units-1 { width: 50%; }
@@ -1030,15 +1021,6 @@ hr {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
-  }
-  .column {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  // Lines nested grids up correctly.
-  .column .column-group {
-    margin-left: -30px;
-    margin-right: -30px;
   }
 }
 
