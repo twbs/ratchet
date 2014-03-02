@@ -91,6 +91,8 @@
   }
 
   // If the cell has a chevron, give some more room.
+  .navigate-left,
+  .navigate-right,
   .push-left,
   .push-right {
     > .btn,
