@@ -12,7 +12,7 @@
     }
   };
 
-  window.addEventListener("touchend", function (e) {
+  window.addEventListener('touchend', function (e) {
     var activeTab;
     var activeBodies;
     var targetBody;

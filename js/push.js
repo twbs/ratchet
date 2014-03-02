@@ -5,6 +5,8 @@
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
 
+/* global _gaq: true */
+
 !function () {
 
   var noop = function () {};
@@ -56,7 +58,7 @@
   };
 
   var cachePop = function (id, direction) {
-    var forward           = direction == 'forward';
+    var forward           = direction === 'forward';
     var cacheForwardStack = JSON.parse(cacheMapping.cacheForwardStack || '[]');
     var cacheBackStack    = JSON.parse(cacheMapping.cacheBackStack    || '[]');
     var pushStack         = forward ? cacheBackStack    : cacheForwardStack;
@@ -86,7 +88,7 @@
       || location.host     !== target.host
       || !target.hash && /#/.test(target.href)
       || target.hash && target.href.replace(target.hash, '') === location.href.replace(location.hash, '')
-      || target.getAttribute('data-ignore') == 'push'
+      || target.getAttribute('data-ignore') === 'push'
     ) return;
 
     return target;
@@ -133,16 +135,16 @@
 
     if (activeObj.title) document.title = activeObj.title;
 
-    if (direction == 'back') {
-      transitionFrom    = JSON.parse(direction == 'back' ? cacheMapping.cacheForwardStack : cacheMapping.cacheBackStack);
+    if (direction === 'back') {
+      transitionFrom    = JSON.parse(direction === 'back' ? cacheMapping.cacheForwardStack : cacheMapping.cacheBackStack);
       transitionFromObj = getCached(transitionFrom[transitionFrom.length - 1]);
     } else {
       transitionFromObj = activeObj;
     }
 
-    if (direction == 'back' && !transitionFromObj.id) return PUSH.id = id;
+    if (direction === 'back' && !transitionFromObj.id) return PUSH.id = id;
 
-    transition = direction == 'back' ? transitionMap[transitionFromObj.transition] : transitionFromObj.transition;
+    transition = direction === 'back' ? transitionMap[transitionFromObj.transition] : transitionFromObj.transition;
 
     if (!activeDom) {
       return PUSH({
@@ -158,7 +160,7 @@
     if (transitionFromObj.transition) {
       activeObj = extendWithDom(activeObj, '.content', activeDom.cloneNode(true));
       for (key in bars) {
-        barElement = document.querySelector(bars[key])
+        barElement = document.querySelector(bars[key]);
         if (activeObj[key]) swapContent(activeObj[key], barElement);
         else if (barElement) barElement.parentNode.removeChild(barElement);
       }
@@ -181,8 +183,7 @@
 
   var PUSH = function (options) {
     var key;
-    var data = {};
-    var xhr  = PUSH.xhr;
+    var xhr = PUSH.xhr;
 
     options.container = options.container || options.transition ? document.querySelector('.content') : document.body;
 
@@ -192,7 +193,7 @@
 
     if (xhr && xhr.readyState < 4) {
       xhr.onreadystatechange = noop;
-      xhr.abort()
+      xhr.abort();
     }
 
     xhr = new XMLHttpRequest();
@@ -201,12 +202,12 @@
 
     xhr.onreadystatechange = function () {
       if (options._timeout) clearTimeout(options._timeout);
-      if (xhr.readyState == 4) xhr.status == 200 ? success(xhr, options) : failure(options.url);
+      if (xhr.readyState === 4) xhr.status === 200 ? success(xhr, options) : failure(options.url);
     };
 
     if (!PUSH.id) {
       cacheReplace({
-        id         : +new Date,
+        id         : +new Date(),
         url        : window.location.href,
         title      : document.title,
         timeout    : options.timeout,
@@ -238,7 +239,7 @@
 
     if (options.transition) {
       for (key in bars) {
-        barElement = document.querySelector(bars[key])
+        barElement = document.querySelector(bars[key]);
         if (data[key]) swapContent(data[key], barElement);
         else if (barElement) barElement.parentNode.removeChild(barElement);
       }
@@ -246,7 +247,7 @@
 
     swapContent(data.contents, options.container, options.transition, function () {
       cacheReplace({
-        id         : options.id || +new Date,
+        id         : options.id || +new Date(),
         url        : data.url,
         title      : data.title,
         timeout    : options.timeout,
@@ -255,12 +256,12 @@
       triggerStateChange();
     });
 
-    if (!options.ignorePush && window._gaq) _gaq.push(['_trackPageview']) // google analytics
+    if (!options.ignorePush && window._gaq) _gaq.push(['_trackPageview']); // google analytics
     if (!options.hash) return;
   };
 
   var failure = function (url) {
-    throw new Error('Could not get: ' + url)
+    throw new Error('Could not get: ' + url);
   };
 
 
@@ -279,7 +280,7 @@
     } else {
       enter  = /in$/.test(transition);
 
-      if (transition == 'fade') {
+      if (transition === 'fade') {
         container.classList.add('in');
         container.classList.add('fade');
         swap.classList.add('fade');
@@ -296,40 +297,40 @@
 
     if (!transition) complete && complete();
 
-    if (transition == 'fade') {
+    if (transition === 'fade') {
       container.offsetWidth; // force reflow
       container.classList.remove('in');
-      container.addEventListener('webkitTransitionEnd', fadeContainerEnd);
-
-      function fadeContainerEnd() {
+      var fadeContainerEnd = function () {
         container.removeEventListener('webkitTransitionEnd', fadeContainerEnd);
         swap.classList.add('in');
         swap.addEventListener('webkitTransitionEnd', fadeSwapEnd);
-      }
-      function fadeSwapEnd () {
+      };
+      var fadeSwapEnd = function () {
         swap.removeEventListener('webkitTransitionEnd', fadeSwapEnd);
         container.parentNode.removeChild(container);
         swap.classList.remove('fade');
         swap.classList.remove('in');
         complete && complete();
-      }
+      };
+      container.addEventListener('webkitTransitionEnd', fadeContainerEnd);
+
     }
 
     if (/slide/.test(transition)) {
-      container.offsetWidth; // force reflow
-      swapDirection      = enter ? 'right' : 'left'
-      containerDirection = enter ? 'left' : 'right'
-      container.classList.add(containerDirection);
-      swap.classList.remove(swapDirection);
-      swap.addEventListener('webkitTransitionEnd', slideEnd);
-
-      function slideEnd() {
+      var slideEnd = function () {
         swap.removeEventListener('webkitTransitionEnd', slideEnd);
         swap.classList.remove('sliding', 'sliding-in');
         swap.classList.remove(swapDirection);
         container.parentNode.removeChild(container);
         complete && complete();
-      }
+      };
+
+      container.offsetWidth; // force reflow
+      swapDirection      = enter ? 'right' : 'left';
+      containerDirection = enter ? 'left' : 'right';
+      container.classList.add(containerDirection);
+      swap.classList.remove(swapDirection);
+      swap.addEventListener('webkitTransitionEnd', slideEnd);
     }
   };
 
@@ -355,13 +356,9 @@
     window.location.replace(url);
   };
 
-  var parseURL = function (url) {
-    var a = document.createElement('a'); a.href = url; return a;
-  };
-
   var extendWithDom = function (obj, fragment, dom) {
     var i;
-    var result    = {};
+    var result = {};
 
     for (i in obj) result[i] = obj[i];
 
@@ -389,8 +386,8 @@
     if (/<html/i.test(responseText)) {
       head           = document.createElement('div');
       body           = document.createElement('div');
-      head.innerHTML = responseText.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0]
-      body.innerHTML = responseText.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0]
+      head.innerHTML = responseText.match(/<head[^>]*>([\s\S.]*)<\/head>/i)[0];
+      body.innerHTML = responseText.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0];
     } else {
       head           = body = document.createElement('div');
       head.innerHTML = responseText;
@@ -410,7 +407,7 @@
   // ==========================
 
   window.addEventListener('touchstart', function () { isScrolling = false; });
-  window.addEventListener('touchmove', function () { isScrolling = true; })
+  window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', touchend);
   window.addEventListener('click', function (e) { if (getTarget(e)) e.preventDefault(); });
   window.addEventListener('popstate', popstate);

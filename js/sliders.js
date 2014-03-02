@@ -26,11 +26,12 @@
     for (; target && target !== document; target = target.parentNode) {
       for (i = sliders.length; i--;) { if (sliders[i] === target) return target; }
     }
-  }
+  };
 
   var getScroll = function () {
     var translate3d = slider.style.webkitTransform.match(/translate3d\(([^,]*)/);
-    return parseInt(translate3d ? translate3d[1] : 0)
+    var ret = translate3d ? translate3d[1] : 0;
+    return parseInt(ret, 10);
   };
 
   var setSlideNumber = function (offset) {
@@ -39,7 +40,7 @@
     slideNumber += offset;
     slideNumber = Math.min(slideNumber, 0);
     slideNumber = Math.max(-(slider.children.length - 1), slideNumber);
-  }
+  };
 
   var onTouchStart = function (e) {
     slider = getSlider(e.target);
@@ -53,7 +54,7 @@
     sliderWidth    = slider.offsetWidth;
     resistance     = 1;
     lastSlide      = -(slider.children.length - 1);
-    startTime      = +new Date;
+    startTime      = +new Date();
     pageX          = e.touches[0].pageX;
     pageY          = e.touches[0].pageY;
     deltaX         = 0;
@@ -72,7 +73,7 @@
     pageX  = e.touches[0].pageX;
     pageY  = e.touches[0].pageY;
 
-    if (typeof isScrolling == 'undefined') {
+    if (typeof isScrolling === 'undefined') {
       isScrolling = Math.abs(deltaY) > Math.abs(deltaX);
     }
 
@@ -82,8 +83,8 @@
 
     e.preventDefault();
 
-    resistance = slideNumber == 0         && deltaX > 0 ? (pageX / sliderWidth) + 1.25 :
-                 slideNumber == lastSlide && deltaX < 0 ? (Math.abs(pageX) / sliderWidth) + 1.25 : 1;
+    resistance = slideNumber === 0         && deltaX > 0 ? (pageX / sliderWidth) + 1.25 :
+                 slideNumber === lastSlide && deltaX < 0 ? (Math.abs(pageX) / sliderWidth) + 1.25 : 1;
 
     slider.style.webkitTransform = 'translate3d(' + offsetX + 'px,0,0)';
   };
@@ -92,7 +93,7 @@
     if (!slider || isScrolling) return;
 
     setSlideNumber(
-      (+new Date) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0
+      (+new Date()) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0
     );
 
     offsetX = slideNumber * sliderWidth;

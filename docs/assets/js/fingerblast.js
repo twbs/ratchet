@@ -2,8 +2,10 @@
 // --------------
 // Adapted from phantom limb by brian cartensen
 
+/* global GLOBAL: true */
+
 function FingerBlast(element) {
-  this.element = typeof element == 'string' ? document.querySelector(element) : element;
+  this.element = typeof element === 'string' ? document.querySelector(element) : element;
   this.listen();
 }
 
@@ -23,13 +25,13 @@ FingerBlast.prototype = {
 
     function contains (element, ancestor) {
       var descendants, index, descendant;
-      if ("compareDocumentPosition" in ancestor) {
+      if ('compareDocumentPosition' in ancestor) {
         return !!(ancestor.compareDocumentPosition(element) & 16);
-      } else if ("contains" in ancestor) {
-        return ancestor != element && ancestor.contains(element);
+      } else if ('contains' in ancestor) {
+        return ancestor !== element && ancestor.contains(element);
       } else {
-        for (descendants = ancestor.getElementsByTagName("*"), index = 0; descendant = descendants[index++];) {
-          if (descendant == element) return true;
+        for (descendants = ancestor.getElementsByTagName('*'), index = 0; descendant = descendants[index++];) {
+          if (descendant === element) return true;
         }
         return false;
       }
@@ -37,12 +39,12 @@ FingerBlast.prototype = {
 
     this.element.addEventListener('mouseover', function (e) {
       var target = e.relatedTarget;
-      if (target != this && !contains(target, this)) activate();
+      if (target !== this && !contains(target, this)) activate();
     });
 
-    this.element.addEventListener("mouseout", function (e) {
+    this.element.addEventListener('mouseout', function (e) {
       var target = e.relatedTarget;
-      if (target != this && !contains(target, this)) deactivate(e);
+      if (target !== this && !contains(target, this)) deactivate(e);
     });
   },
 
@@ -116,7 +118,7 @@ FingerBlast.prototype = {
 
     if (!this.target) return;
 
-    // Convert "ontouch*" properties and attributes to listeners.
+    // Convert 'ontouch*' properties and attributes to listeners.
     var onEventName = 'on' + eventName;
 
     if (onEventName in this.target) {

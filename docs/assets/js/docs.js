@@ -1,8 +1,10 @@
+/* jshint jquery: true */
+/* global FingerBlast: true */
+
 $(function() {
 
   var doc;
   var device;
-  var platformToggle;
   var windowWidth;
   var windowHeight;
   var pageHeight;
@@ -10,13 +12,14 @@ $(function() {
   var footerHeight;
   var navComponentLinks;
   var componentsList;
+  var componentLinks;
   var contentSection;
   var currentActive;
   var topCache;
+  var win;
+  var bod;
   var eventListeners;
   var toolbarToggle;
-  var toggleTop;
-  var toggleHeight;
 
 
   var initialize = function () {
@@ -24,19 +27,19 @@ $(function() {
     topCache             = [];
     win                  = $(window);
     doc                  = $(document);
-    bod                  = $(document.body)
+    bod                  = $(document.body);
     device               = device || $('.js-device');
     navComponentLinks    = $('.js-jump-menu');
     componentsList       = $('.js-component-group');
     componentLinks       = $('.component-example a');
     contentSection       = $('.component');
-    topCache             = contentSection.map(function () { return $(this).offset().top })
-    windowHeight         = $(window).height() / 3
+    topCache             = contentSection.map(function () { return $(this).offset().top; });
+    windowHeight         = $(window).height() / 3;
     windowWidth          = $(window).width();
     pageHeight           = $(document).height();
-    contentPadding       = parseInt($('.docs-content').css('padding-bottom'));
+    contentPadding       = parseInt($('.docs-content').css('padding-bottom'), 10);
     footerHeight         = $('.docs-footer').outerHeight(false);
-    toolbarToggle       = $('.js-docs-component-toolbar');
+    toolbarToggle        = $('.js-docs-component-toolbar');
 
     // Device placement
     if (windowWidth >= 768) {
@@ -50,7 +53,7 @@ $(function() {
     calculateToggle();
 
     if (!eventListeners) addEventListeners();
-  }
+  };
 
   var addEventListeners = function () {
     eventListeners = true;
@@ -72,11 +75,11 @@ $(function() {
       e.stopPropagation();
       e.preventDefault();
       componentsList.toggleClass('active');
-    })
+    });
 
     doc.on('click', function () {
       componentsList.removeClass('active');
-    })
+    });
 
     // Platform switcher
     $('.platform-switch').on('click', function () {
@@ -101,58 +104,58 @@ $(function() {
 
     win.on('scroll', calculateScroll);
     win.on('scroll', calculateToggle);
-  }
+  };
 
   var checkDesktopContent = function () {
     windowWidth = $(window).width();
     if (windowWidth <= 768) {
-      var content = $('.content')
+      var content = $('.content');
       if (content.length > 1) {
-        $(content[0]).remove()
+        $(content[0]).remove();
       }
     }
-  }
+  };
 
   var calculateScroll = function() {
     // if small screen don't worry about this
-    if (windowWidth <= 768) return
+    if (windowWidth <= 768) return;
 
     // Save scrollTop value
     var contentSectionItem;
     var currentTop = win.scrollTop();
 
     if((device.initialTop - currentTop) <= device.dockingOffset) {
-      device[0].className = "device device-fixed";
-      device.css({top: device.dockingOffset})
+      device[0].className = 'device device-fixed';
+      device.css({top: device.dockingOffset});
     } else {
-      device[0].className = "device"
-      device[0].setAttribute('style','')
+      device[0].className = 'device';
+      device[0].setAttribute('style','');
     }
 
     // Injection of components into device
     for (var l = contentSection.length; l--;) {
       if ((topCache[l] - currentTop) < windowHeight) {
-        if (currentActive == l) return;
+        if (currentActive === l) return;
         currentActive = l;
         bod.find('.component.active').removeClass('active');
-        contentSectionItem = $(contentSection[l])
-        contentSectionItem.addClass('active')
+        contentSectionItem = $(contentSection[l]);
+        contentSectionItem.addClass('active');
         if(contentSectionItem.attr('id')) {
-          device.attr("id", contentSectionItem.attr('id') + "InDevice");
+          device.attr('id', contentSectionItem.attr('id') + 'InDevice');
         } else {
-          device.attr("id", "")
+          device.attr('id', '');
         }
         if (!contentSectionItem.hasClass('informational')) {
-          updateContent(contentSectionItem.find('.highlight .html').text())
+          updateContent(contentSectionItem.find('.highlight .html').text());
         }
-        break
+        break;
       }
     }
 
     function updateContent(content) {
       $('#iwindow').html(content);
     }
-  }
+  };
 
   // Toolbar toggle
   var calculateToggle = function () {
@@ -165,7 +168,7 @@ $(function() {
       toolbarToggle.removeClass('visible');
       componentsList.removeClass('active');
     }
-  }
+  };
 
   $(window).on('load resize', initialize);
   $(window).on('load', function () { new FingerBlast('.device-content'); });

@@ -16,7 +16,7 @@
     for (; target && target !== document; target = target.parentNode) {
       for (i = toggles.length; i--;) { if (toggles[i] === target) return target; }
     }
-  }
+  };
 
   window.addEventListener('touchstart', function (e) {
     e = e.originalEvent || e;

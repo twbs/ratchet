@@ -18,7 +18,7 @@
   var onPopoverHidden = function () {
     popover.style.display = 'none';
     popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
-  }
+  };
 
   var backdrop = function () {
     var element = document.createElement('div');
@@ -37,13 +37,13 @@
   var getPopover = function (e) {
     var anchor = findPopovers(e.target);
 
-    if (!anchor || !anchor.hash || (anchor.hash.indexOf("/") > 0)) return;
+    if (!anchor || !anchor.hash || (anchor.hash.indexOf('/') > 0)) return;
 
     try {
       popover = document.querySelector(anchor.hash);
     }
     catch (error) {
-       popover = null;
+      popover = null;
     }
 
     if (popover == null) return;
@@ -51,7 +51,7 @@
     if (!popover || !popover.classList.contains('popover')) return;
 
     return popover;
-  }
+  };
 
   var showHidePopover = function (e) {
     var popover = getPopover(e);
