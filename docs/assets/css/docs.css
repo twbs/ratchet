@@ -930,7 +930,7 @@ code {
     background-image: url("../img/device-sprite.png");
     background-size: 300%;
     background-repeat: no-repeat;
-    background-position: 0;
+    background-position: 0 0;
     -webkit-transition: background-image 0.1s linear;
     -moz-transition: background-image 0.1s linear;
     transition: background-image 0.1s linear;

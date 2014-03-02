@@ -969,7 +969,7 @@ code {
     background-image: url("../img/device-sprite.png");
     background-size: 300%;
     background-repeat: no-repeat;
-    background-position: 0;
+    background-position: 0 0;
     @include transition(background-image .1s linear);
 
     &.device-fixed {
