@@ -90,6 +90,12 @@ module.exports = function(grunt) {
         src: '<%= meta.distPath %><%= pkg.name %>.css',
         dest: '<%= meta.distPath %><%= pkg.name %>.min.css'
       },
+      theme: {
+        files: {
+          '<%= meta.distPath %><%= pkg.name %>-theme-ios.min.css': '<%= meta.distPath %><%= pkg.name %>-theme-ios.css',
+          '<%= meta.distPath %><%= pkg.name %>-theme-android.min.css' : '<%= meta.distPath %><%= pkg.name %>-theme-android.css'
+        }
+      },
       docs: {
         src: [
           '<%= meta.docsAssetsPath %>css/docs.css',
