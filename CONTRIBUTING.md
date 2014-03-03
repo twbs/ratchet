@@ -146,7 +146,7 @@ project:
 If you have any other questions about contributing, please feel free to contact
 us.
 
-**Don't edit files in `dist/`.** You should edit files in `lib/`.
+**Don't edit files in `dist/`.** You should edit files in `sass/` and `js/`.
 
 ## Special thanks to @necolas
 
