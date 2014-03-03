@@ -175,6 +175,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('build', ['dist']);
+  grunt.registerTask('test', ['dist', 'validate-html']);
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z

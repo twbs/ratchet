@@ -20,6 +20,9 @@
     "url": "https://github.com/twbs/ratchet/issues"
   },
   "license": "MIT",
+  "scripts": {
+    "test": "grunt test"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-concat": "~0.3.0",
