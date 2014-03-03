@@ -1,6 +1,6 @@
 # Contributing to Ratchet
 
-## Types of issues<a name="types-of-issues"></a>
+## Types of issues
 
 The GitHub issue tracker should only be used for one of the
 following:
@@ -24,7 +24,7 @@ These are some things that don't belong in the issue tracker:
 + **Please avoid derailing issues.** Keep the discussion on topic and respect
   the opinions of others.
 
-## Bugs<a name="bugs"></a>
+## Bugs
 
 A bug is a _demonstrable problem_ that is caused by the code in the
 repository.
@@ -55,7 +55,7 @@ environment? What steps will reproduce the issue? What browser(s) and OS
 experience the problem? What would you expect to be the outcome? All these
 details will help me and others to assess and fix any potential bugs.
 
-### Example of a good bug report:
+### Example of a good bug report
 
 > Short and descriptive title
 >
@@ -76,14 +76,14 @@ details will help me and others to assess and fix any potential bugs.
 A good bug report shouldn't leave us needing to chase you up to get further
 information that is required to assess or fix the bug.
 
-## Feature requests<a name="feature-requests"></a>
+## Feature requests
 
 Feature requests are welcome! Please provide links to examples or articles that
 help to illustrate the specifics of a feature you're requesting. The more
 detail, the better. It will help us to decide whether the feature is something I
 agree should become part of the project.
 
-## Contribution enquiries<a name="enquiries"></a>
+## Contribution enquiries
 
 Contribution enquiries should take place before any significant pull request,
 otherwise you risk spending a lot of time working on something that we might not
@@ -94,7 +94,7 @@ would like to have a go at implementing yourself if they are wanted. Other
 enquiries might revolve around refactoring code or porting a project to
 different languages.
 
-## Pull requests<a name="pull-requests"></a>
+## Pull requests
 
 Good pull requests - patches, improvements, new features - are a fantastic
 help.
