@@ -1,0 +1,18 @@
+{
+  "boss"      : true,
+  "browser"   : true,
+  "camelcase" : true,
+  "devel"     : true,
+  "eqeqeq"    : true,
+  "eqnull"    : true,
+  "expr"      : true,
+  "indent"    : 2,
+  "laxbreak"  : true,
+  "nonbsp"    : true,
+  "quotmark"  : "single",
+  "strict"    : true,
+  "trailing"  : true,
+  "undef"     : true,
+  "unused"    : true,
+  "validthis" : true
+}
