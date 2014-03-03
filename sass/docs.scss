@@ -96,7 +96,8 @@ body {
     // Ads on the homepage
     .carbonad {
       left: 50% !important;
-      margin-left: -165px !important;
+      width: 300px !important;
+      margin-left: -150px !important;
       margin-bottom: 60px !important;
     }
   }
@@ -108,12 +109,6 @@ body {
     right: 15px !important;
     margin-top: 0 !important;
     @include transform(translateY(-50%) !important);
-  }
-}
-// Account for the extra margin for large sceens.
-@media screen and (min-width: 1200px) {
-  .docs-sub-header .carbonad {
-    right: 30px !important;
   }
 }
 
@@ -302,7 +297,7 @@ body {
 
   .btn {
     display: block;
-    padding: 15px 90px 16px;
+    padding: 15px 75px 16px;
     font-size: 18px;
     margin-bottom: 0;
     color: #0a1855;
@@ -368,7 +363,7 @@ body {
   height: auto !important;
   margin-left: 145px !important;
   color: rgba(255,255,255,.65) !important;
-  font-family: "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 .carbonad-text {
   padding-top: 0 !important;
@@ -387,7 +382,7 @@ body {
 // Desktop styles for ads
 @media screen and (min-width: 768px) {
   .carbonad {
-    width: 330px !important;
+    width: 360px !important;
     border-right: 1px solid rgba(255,255,255,.1) !important;
     border-bottom: 1px solid rgba(255,255,255,.1) !important;
     border-left: 1px solid rgba(255,255,255,.1) !important;
@@ -586,52 +581,27 @@ body {
 
 // Example devices
 // --------------------------------------------------
-
 .docs-examples {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.docs-example-group {
   margin-top: 30px;
-
-  .example-wrap {
-    display: inline-block;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: 10px;
-    }
-    .example {
-      display: block;
-      overflow: hidden;
-      padding: 3px;
-      width: 100%;
-      border: $border-default;
-      border-radius: 3px;
-    }
-    h5 {
-      margin-top: 10px;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
 }
-@media screen and (min-width: 768px) {
-  // Examples
-  .docs-example-group .example-wrap {
-    display: inline-block;
+.example-wrap {
+  margin-bottom: 30px;
 
-    .example {
-      width: 180px;
-    }
+  .example {
+    display: block;
+    overflow: hidden;
+    padding: 3px;
+    width: 100%;
+    border: $border-default;
+    border-radius: 3px;
   }
-}
-@media screen and (min-width: 1200px) {
-  .docs-example-group .example-wrap .example {
-    width: 220px;
+  .example-title {
+    margin-top: 10px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1015,15 +985,6 @@ hr {
     padding: 0;
     max-width: 940px;
   }
-  .column {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  // Lines nested grids up correctly.
-  .column .column-group {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
 
   // Override the mobile grid
   .units-1 { width: 50%; }
@@ -1064,15 +1025,6 @@ hr {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
-  }
-  .column {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  // Lines nested grids up correctly.
-  .column .column-group {
-    margin-left: -30px;
-    margin-right: -30px;
   }
 }
 
