@@ -66,13 +66,19 @@ a {
 .bar-nav ~ .content {
   padding-top: $bar-base-height;
 }
-.bar-tab ~ .content {
-  padding-bottom: $bar-tab-height;
-}
 .bar-header-secondary ~ .content {
   padding-top: $bar-base-height*2;
 }
-
+.bar-tab ~ .content {
+  padding-top: $bar-tab-height;
+  padding-bottom: 0;
+}
+.bar-footer ~ .content {
+  padding-bottom: $bar-base-height;
+}
+.bar-footer-secondary ~ .content {
+  padding-bottom: ($bar-base-height*2);
+}
 
 // Buttons
 // --------------------------------------------------
@@ -697,9 +703,12 @@ textarea,
 // Push icons
 // --------------------------------------------------
 
+// Deprecated `push-left` and `push-right` as of 2.0.1
+.navigate-left:after,
 .push-left:after {
   content: '';
 }
+.navigate-right:after,
 .push-right:after {
   content: '';
 }

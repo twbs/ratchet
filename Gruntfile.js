@@ -80,26 +80,45 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      minify: {
+      options: {
+        banner: '', // set to empty; see bellow
+        keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+        report: 'min'
+      },
+      ratchet: {
+        src: '<%= meta.distPath %><%= pkg.name %>.css',
+        dest: '<%= meta.distPath %><%= pkg.name %>.min.css'
+      },
+      docs: {
         options: {
-          banner: '', // set to empty ; see bellow
-          keepSpecialComments: '*', // set to '*' because we already add the banner in sass
-          report: 'min'
+          noAdvanced: true  // disable advanced optimizations since it causes code highlighting not to work
         },
-        files: {
-          'dist/<%= pkg.name %>.min.css': 'dist/<%= pkg.name %>.css'
-        }
+        src: [
+          '<%= meta.docsAssetsPath %>css/docs.css',
+          '<%= meta.docsAssetsPath %>css/pygments-manni.css'
+        ],
+        dest: '<%= meta.docsAssetsPath %>css/docs.min.css'
       }
     },
 
     uglify: {
       options: {
         banner: '<%= banner %>',
+        compress: true,
+        mangle: true,
+        preserveComments: false,
         report: 'min'
       },
       ratchet: {
-        src: 'dist/<%= pkg.name %>.js',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        src: '<%= meta.distPath %><%= pkg.name %>.js',
+        dest: '<%= meta.distPath %><%= pkg.name %>.min.js'
+      },
+      docs: {
+        src: [
+          '<%= meta.docsAssetsPath %>js/docs.js',
+          '<%= meta.docsAssetsPath %>js/fingerblast.js'
+        ],
+        dest: '<%= meta.docsAssetsPath %>js/docs.min.js'
       }
     },
 
@@ -156,6 +175,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('build', ['dist']);
+  grunt.registerTask('test', ['dist', 'validate-html']);
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z

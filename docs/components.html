@@ -57,28 +57,28 @@ title: Components &middot; Ratchet
 
     <article class="component">
       <h3 class="component-title">Title bar with buttons</h3>
-      <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions. Use the <code>.pull-right</code> or <code>.pull-right</code> utility classes to float the buttons. Also, be sure to place any floated elements bofore the title.</p>
+      <p class="component-description">Buttons in a title bar are left or right aligned and should be used for actions. Use the <code>.pull-right</code> or <code>.pull-left</code> utility classes to float the buttons. Also, be sure to place any floated elements before the title.</p>
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
-          <a class="btn pull-left">
+          <button class="btn pull-left">
             Left
-          </a>
-          <a class="btn pull-right">
+          </button>
+          <button class="btn pull-right">
             Right
-          </a>
+          </button>
           <h1 class="title">Title</h1>
         </header>
       </div>
 
 {% highlight html %}
 <header class="bar bar-nav">
-  <a class="btn pull-left">
+  <button class="btn pull-left">
     Left
-  </a>
-  <a class="btn pull-right">
+  </button>
+  <button class="btn pull-right">
     Right
-  </a>
+  </button>
   <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}
@@ -113,28 +113,28 @@ title: Components &middot; Ratchet
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
-          <a class="btn btn-link btn-nav pull-left">
+          <button class="btn btn-link btn-nav pull-left">
             <span class="icon icon-left-nav"></span>
             Left
-          </a>
-          <a class="btn btn-link btn-nav pull-right">
+          </button>
+          <button class="btn btn-link btn-nav pull-right">
             Right
             <span class="icon icon-right-nav"></span>
-          </a>
+          </button>
           <h1 class="title">Title</h1>
         </header>
       </div>
 
 {% highlight html %}
 <header class="bar bar-nav">
-  <a class="btn btn-link btn-nav pull-left">
+  <button class="btn btn-link btn-nav pull-left">
     <span class="icon icon-left-nav"></span>
     Left
-  </a>
-  <a class="btn btn-link btn-nav pull-right">
+  </button>
+  <button class="btn btn-link btn-nav pull-right">
     Right
     <span class="icon icon-right-nav"></span>
-  </a>
+  </button>
   <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}
@@ -147,10 +147,10 @@ title: Components &middot; Ratchet
 
       <div class="component-example component-example-fullbleed">
         <header class="bar bar-nav">
-          <a class="btn pull-left">
+          <button class="btn pull-left">
             Left
-          </a>
-          <a class="btn pull-right">
+          </button>
+          <button class="btn pull-right">
             Right
           </a>
           <div class="segmented-control">
@@ -163,12 +163,12 @@ title: Components &middot; Ratchet
 
 {% highlight html %}
 <header class="bar bar-nav">
-  <a class="btn pull-left">
+  <button class="btn pull-left">
     Left
   </a>
-  <a class="btn pull-right">
+  <button class="btn pull-right">
     Right
-  </a>
+  </button>
   <div class="segmented-control">
     <a class="control-item active">One</a>
     <a class="control-item">Two</a>
@@ -287,7 +287,7 @@ title: Components &middot; Ratchet
 
         <!-- Block button in standard bar fixed below top bar -->
         <div class="bar bar-standard bar-header-secondary">
-          <a class="btn btn-block">Block level button</a>
+          <button class="btn btn-block">Block level button</button>
         </div>
       </div>
 
@@ -303,12 +303,12 @@ title: Components &middot; Ratchet
 
 <!-- Block button in standard bar fixed below top bar -->
 <div class="bar bar-standard bar-header-secondary">
-  <a class="btn btn-block">Block level button</a>
+  <button class="btn btn-block">Block level button</button>
 </div>
 
 <!-- Block button in standard bar fixed above the footer -->
 <div class="bar bar-standard bar-footer-secondary">
-  <a class="btn btn-block">Block level button</a>
+  <button class="btn btn-block">Block level button</button>
 </div>
 
 <!-- Icons in standard bar fixed to the bottom of the screen -->
@@ -382,22 +382,22 @@ title: Components &middot; Ratchet
 
   <article class="component">
     <h3 class="component-title">Table view with chevrons</h3>
-    <p class="component-description">Chevrons should be used to indicate that the item is linked. Just apply the classes <code>.push-right</code> or <code>.push-left</code> to use a chevron.</p>
+    <p class="component-description">Chevrons should be used to indicate that the item is linked. Just apply the classes <code>.navigate-right</code> or <code>.navigate-left</code> to use a chevron.</p>
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
         <li class="table-view-cell">
-          <a class="push-right">
+          <a class="navigate-right">
             Item 1
           </a>
         </li>
         <li class="table-view-cell">
-          <a class="push-right">
+          <a class="navigate-right">
             Item 2
           </a>
         </li>
         <li class="table-view-cell">
-          <a class="push-right">
+          <a class="navigate-right">
             Item 3
           </a>
         </li>
@@ -407,17 +407,17 @@ title: Components &middot; Ratchet
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell">
-    <a class="push-right">
+    <a class="navigate-right">
       Item 1
     </a>
   </li>
   <li class="table-view-cell">
-    <a class="push-right">
+    <a class="navigate-right">
       Item 2
     </a>
   </li>
   <li class="table-view-cell">
-    <a class="push-right">
+    <a class="navigate-right">
       Item 3
     </a>
   </li>
@@ -455,19 +455,19 @@ title: Components &middot; Ratchet
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
         <li class="table-view-cell">
-          <a class="push-right">
+          <a class="navigate-right">
             <span class="badge">5</span>
             Item 1
           </a>
         </li>
         <li class="table-view-cell">
-          <a class="push-right">
+          <a class="navigate-right">
             <span class="badge">5</span>
             Item 2
           </a>
         </li>
         <li class="table-view-cell">
-          <a class="push-right">
+          <a class="navigate-right">
             <span class="badge">5</span>
             Item 3
           </a>
@@ -478,19 +478,19 @@ title: Components &middot; Ratchet
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell">
-    <a class="push-right">
+    <a class="navigate-right">
       <span class="badge">5</span>
       Item 1
     </a>
   </li>
   <li class="table-view-cell">
-    <a class="push-right">
+    <a class="navigate-right">
       <span class="badge">5</span>
       Item 2
     </a>
   </li>
   <li class="table-view-cell">
-    <a class="push-right">
+    <a class="navigate-right">
       <span class="badge">5</span>
       Item 3
     </a>
@@ -507,7 +507,7 @@ title: Components &middot; Ratchet
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
         <li class="table-view-cell media">
-          <a class="push-right">
+          <a class="navigate-right">
             <img class="media-object pull-left" src="http://placehold.it/42x42" alt="Placeholder image">
             <div class="media-body">
               Item 1
@@ -516,7 +516,7 @@ title: Components &middot; Ratchet
           </a>
         </li>
         <li class="table-view-cell media">
-          <a class="push-right">
+          <a class="navigate-right">
             <img class="media-object pull-left" src="http://placehold.it/42x42" alt="Placeholder image">
             <div class="media-body">
               Item 1
@@ -525,7 +525,7 @@ title: Components &middot; Ratchet
           </a>
         </li>
         <li class="table-view-cell media">
-          <a class="push-right">
+          <a class="navigate-right">
             <img class="media-object pull-left" src="http://placehold.it/42x42" alt="Placeholder image">
             <div class="media-body">
               Item 1
@@ -539,7 +539,7 @@ title: Components &middot; Ratchet
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell media">
-    <a class="push-right">
+    <a class="navigate-right">
       <img class="media-object pull-left" src="http://placehold.it/42x42">
       <div class="media-body">
         Item 1
@@ -548,7 +548,7 @@ title: Components &middot; Ratchet
     </a>
   </li>
   <li class="table-view-cell media">
-    <a class="push-right">
+    <a class="navigate-right">
       <img class="media-object pull-left" src="http://placehold.it/42x42">
       <div class="media-body">
         Item 1
@@ -557,7 +557,7 @@ title: Components &middot; Ratchet
     </a>
   </li>
   <li class="table-view-cell media">
-    <a class="push-right">
+    <a class="navigate-right">
       <img class="media-object pull-left" src="http://placehold.it/42x42">
       <div class="media-body">
         Item 1
@@ -577,7 +577,7 @@ title: Components &middot; Ratchet
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
         <li class="table-view-cell media">
-          <a class="push-right">
+          <a class="navigate-right">
             <span class="media-object pull-left icon icon-trash"></span>
             <div class="media-body">
               Item 1
@@ -585,7 +585,7 @@ title: Components &middot; Ratchet
           </a>
         </li>
         <li class="table-view-cell media">
-          <a class="push-right">
+          <a class="navigate-right">
             <span class="media-object pull-left icon icon-gear"></span>
             <div class="media-body">
               Item 2
@@ -593,7 +593,7 @@ title: Components &middot; Ratchet
           </a>
         </li>
         <li class="table-view-cell media">
-          <a class="push-right">
+          <a class="navigate-right">
             <span class="media-object pull-left icon icon-pages"></span>
             <div class="media-body">
               Item 3
@@ -606,7 +606,7 @@ title: Components &middot; Ratchet
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell media">
-    <a class="push-right">
+    <a class="navigate-right">
       <span class="media-object pull-left icon icon-trash"></span>
       <div class="media-body">
         Item 1
@@ -614,7 +614,7 @@ title: Components &middot; Ratchet
     </a>
   </li>
   <li class="table-view-cell media">
-    <a class="push-right">
+    <a class="navigate-right">
       <span class="media-object pull-left icon icon-gear"></span>
       <div class="media-body">
         Item 2
@@ -622,7 +622,7 @@ title: Components &middot; Ratchet
     </a>
   </li>
   <li class="table-view-cell media">
-    <a class="push-right">
+    <a class="navigate-right">
       <span class="media-object pull-left icon icon-pages"></span>
       <div class="media-body">
         Item 3
@@ -639,19 +639,19 @@ title: Components &middot; Ratchet
 
     <div class="component-example component-example-fullbleed">
       <ul class="table-view">
-        <li class="table-view-cell">Item 1 <a class="btn">Button</a></li>
-        <li class="table-view-cell">Item 2 <a class="btn btn-primary">Button</a></li>
-        <li class="table-view-cell">Item 3 <a class="btn btn-positive">Button</a></li>
-        <li class="table-view-cell">Item 4 <a class="btn btn-negative">Button</a></li>
+        <li class="table-view-cell">Item 1 <button class="btn">Button</button></li>
+        <li class="table-view-cell">Item 2 <button class="btn btn-primary">Button</button></li>
+        <li class="table-view-cell">Item 3 <button class="btn btn-positive">Button</button></li>
+        <li class="table-view-cell">Item 4 <button class="btn btn-negative">Button</button></li>
       </ul>
     </div>
 
 {% highlight html %}
 <ul class="table-view">
-  <li class="table-view-cell">Item 1 <a class="btn">Button</a></li>
-  <li class="table-view-cell">Item 2 <a class="btn btn-primary">Button</a></li>
-  <li class="table-view-cell">Item 3 <a class="btn btn-positive">Button</a></li>
-  <li class="table-view-cell">Item 4 <a class="btn btn-negative">Button</a></li>
+  <li class="table-view-cell">Item 1 <button class="btn">Button</button></li>
+  <li class="table-view-cell">Item 2 <button class="btn btn-primary">Button</button></li>
+  <li class="table-view-cell">Item 3 <button class="btn btn-positive">Button</button></li>
+  <li class="table-view-cell">Item 4 <button class="btn btn-negative">Button</button></li>
 </ul>
 {% endhighlight %}
 
@@ -744,29 +744,29 @@ title: Components &middot; Ratchet
     <p class="component-description">Buttons come in many flavors and should be used for user actions.</p>
 
     <div class="component-example">
-      <a class="btn">Button</a>
-      <a class="btn btn-primary">Button</a>
-      <a class="btn btn-positive">Button</a>
-      <a class="btn btn-negative">Button</a>
-      <a class="btn btn-link">Button</a>
+      <button class="btn">Button</button>
+      <button class="btn btn-primary">Button</button>
+      <button class="btn btn-positive">Button</button>
+      <button class="btn btn-negative">Button</button>
+      <button class="btn btn-link">Button</button>
 
-      <a class="btn btn-outlined">Button</a>
-      <a class="btn btn-primary btn-outlined">Button</a>
-      <a class="btn btn-positive btn-outlined">Button</a>
-      <a class="btn btn-negative btn-outlined">Button</a>
+      <button class="btn btn-outlined">Button</a>
+      <button class="btn btn-primary btn-outlined">Button</button>
+      <button class="btn btn-positive btn-outlined">Button</button>
+      <button class="btn btn-negative btn-outlined">Button</button>
     </div>
 
 {% highlight html %}
-<a class="btn">Button</a>
-<a class="btn btn-primary">Button</a>
-<a class="btn btn-positive">Button</a>
-<a class="btn btn-negative">Button</a>
-<a class="btn btn-link">Button</a>
+<button class="btn">Button</button>
+<button class="btn btn-primary">Button</button>
+<button class="btn btn-positive">Button</button>
+<button class="btn btn-negative">Button</button>
+<button class="btn btn-link">Button</button>
 
-<a class="btn btn-outlined">Button</a>
-<a class="btn btn-primary btn-outlined">Button</a>
-<a class="btn btn-positive btn-outlined">Button</a>
-<a class="btn btn-negative btn-outlined">Button</a>
+<button class="btn btn-outlined">Button</a>
+<button class="btn btn-primary btn-outlined">Button</button>
+<button class="btn btn-positive btn-outlined">Button</button>
+<button class="btn btn-negative btn-outlined">Button</button>
 {% endhighlight %}
 
   </article>
@@ -777,49 +777,49 @@ title: Components &middot; Ratchet
     <p class="component-description">Ratchicons work inside buttons too.</p>
 
     <div class="component-example">
-      <a class="btn">
+      <button class="btn">
         <span class="icon icon-search"></span>
         Button
-      </a>
-      <a class="btn btn-primary">
+      </button>
+      <button class="btn btn-primary">
         <span class="icon icon-search"></span>
         Button
-      </a>
-      <a class="btn btn-positive">
+      </button>
+      <button class="btn btn-positive">
         <span class="icon icon-search"></span>
         Button
-      </a>
-      <a class="btn btn-negative">
+      </button>
+      <button class="btn btn-negative">
         <span class="icon icon-search"></span>
         Button
-      </a>
-      <a class="btn btn-link">
+      </button>
+      <button class="btn btn-link">
         <span class="icon icon-left"></span>
         Button
-      </a>
+      </button>
     </div>
 
 {% highlight html %}
-<a class="btn">
+<button class="btn">
   <span class="icon icon-search"></span>
   Button
-</a>
-<a class="btn btn-primary">
+</button>
+<button class="btn btn-primary">
   <span class="icon icon-search"></span>
   Button
-</a>
-<a class="btn btn-positive">
+</button>
+<button class="btn btn-positive">
   <span class="icon icon-search"></span>
   Button
-</a>
-<a class="btn btn-negative">
+</button>
+<button class="btn btn-negative">
   <span class="icon icon-search"></span>
   Button
-</a>
-<a class="btn btn-link">
+</button>
+<button class="btn btn-link">
   <span class="icon icon-left"></span>
   Button
-</a>
+</button>
 {% endhighlight %}
 
   </article>
@@ -828,22 +828,22 @@ title: Components &middot; Ratchet
     <h3 class="component-title">Buttons with badges</h3>
 
     <div class="component-example">
-      <a class="btn">Badge button <span class="badge">1</span></a>
-      <a class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></a>
-      <a class="btn btn-positive">Badge button <span class="badge badge-positive">1</span></a>
-      <a class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></a>
+      <button class="btn">Badge button <span class="badge">1</span></button>
+      <button class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></button>
+      <button class="btn btn-positive">Badge button <span class="badge badge-positive">1</span></button>
+      <button class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></button>
     </div>
 
 {% highlight html %}
-<a class="btn">Badge button <span class="badge">1</span></a>
-<a class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></a>
-<a class="btn btn-positive">Badge button <span class="badge badge-positive">1</span></a>
-<a class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></a>
+<button class="btn">Badge button <span class="badge">1</span></button>
+<button class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></button>
+<button class="btn btn-positive">Badge button <span class="badge badge-positive">1</span></button>
+<button class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></button>
 
-<a class="btn btn-outlined">Badge button <span class="badge badge-inverted">1</span></a>
-<a class="btn btn-outlined btn-primary">Badge button <span class="badge badge-primary badge-inverted">1</span></a>
-<a class="btn btn-outlined btn-positive">Badge button <span class="badge badge-positive badge-inverted">1</span></a>
-<a class="btn btn-outlined btn-negative">Badge button <span class="badge badge-negative badge-inverted">1</span></a>
+<button class="btn btn-outlined">Badge button <span class="badge badge-inverted">1</span></button>
+<button class="btn btn-outlined btn-primary">Badge button <span class="badge badge-primary badge-inverted">1</span></button>
+<button class="btn btn-outlined btn-positive">Badge button <span class="badge badge-positive badge-inverted">1</span></button>
+<button class="btn btn-outlined btn-negative">Badge button <span class="badge badge-negative badge-inverted">1</span></button>
 {% endhighlight %}
 
   </article>
@@ -852,27 +852,27 @@ title: Components &middot; Ratchet
     <h3 class="component-title">Block buttons</h3>
 
     <div class="component-example">
-      <a class="btn btn-block">Block button</a>
-      <a class="btn btn-primary btn-block">Block button</a>
-      <a class="btn btn-positive btn-block">Block button</a>
-      <a class="btn btn-negative btn-block">Block button</a>
+      <button class="btn btn-block">Block button</button>
+      <button class="btn btn-primary btn-block">Block button</button>
+      <button class="btn btn-positive btn-block">Block button</button>
+      <button class="btn btn-negative btn-block">Block button</button>
 
-      <a class="btn btn-block btn-outlined">Block button</a>
-      <a class="btn btn-primary btn-block btn-outlined">Block button</a>
-      <a class="btn btn-positive btn-block btn-outlined">Block button</a>
-      <a class="btn btn-negative btn-block btn-outlined">Block button</a>
+      <button class="btn btn-block btn-outlined">Block button</button>
+      <button class="btn btn-primary btn-block btn-outlined">Block button</button>
+      <button class="btn btn-positive btn-block btn-outlined">Block button</button>
+      <button class="btn btn-negative btn-block btn-outlined">Block button</button>
     </div>
 
 {% highlight html %}
-<a class="btn btn-block">Block button</a>
-<a class="btn btn-primary btn-block">Block button</a>
-<a class="btn btn-positive btn-block">Block button</a>
-<a class="btn btn-negative btn-block">Block button</a>
+<button class="btn btn-block">Block button</button>
+<button class="btn btn-primary btn-block">Block button</button>
+<button class="btn btn-positive btn-block">Block button</button>
+<button class="btn btn-negative btn-block">Block button</button>
 
-<a class="btn btn-block btn-outlined">Block button</a>
-<a class="btn btn-primary btn-block btn-outlined">Block button</a>
-<a class="btn btn-positive btn-block btn-outlined">Block button</a>
-<a class="btn btn-negative btn-block btn-outlined">Block button</a>
+<button class="btn btn-block btn-outlined">Block button</button>
+<button class="btn btn-primary btn-block btn-outlined">Block button</button>
+<button class="btn btn-positive btn-block btn-outlined">Block button</button>
+<button class="btn btn-negative btn-block btn-outlined">Block button</button>
 {% endhighlight %}
 
   </article>
@@ -961,7 +961,7 @@ title: Components &middot; Ratchet
         <input type="text" placeholder="Full name">
         <input type="search" placeholder="Search">
         <textarea rows="5"></textarea>
-        <a class="btn btn-positive btn-block">Choose existing</a>
+        <button class="btn btn-positive btn-block">Choose existing</button>
       </form>
     </div>
 
@@ -970,7 +970,7 @@ title: Components &middot; Ratchet
   <input type="text" placeholder="Full name">
   <input type="search" placeholder="Search">
   <textarea rows="5"></textarea>
-  <a class="btn btn-positive btn-block">Choose existing</a>
+  <button class="btn btn-positive btn-block">Choose existing</button>
 </form>
 {% endhighlight %}
 
@@ -1103,7 +1103,6 @@ document
   </a>
 </header>
 {% endhighlight %}
-
   </article>
 
   <!-- Modals -->
@@ -1149,17 +1148,17 @@ document
         <div class="slider" id="mySlider">
           <div class="slide-group">
             <div class="slide">
-              <img src="/assets/img/slide-1.png" alt="Mountain and sky">
+              <img src="/assets/img/slide-1.jpg" alt="Mountain and sky">
               <span class="slide-text">
                 <span class="icon icon-left-nav"></span>
                 Slide me
               </span>
             </div>
             <div class="slide">
-              <img src="/assets/img/slide-2.png" alt="Giant mecha">
+              <img src="/assets/img/slide-2.jpg" alt="Giant mecha">
             </div>
             <div class="slide">
-              <img src="/assets/img/slide-3.png" alt="Big Ben">
+              <img src="/assets/img/slide-3.jpg" alt="Big Ben">
             </div>
           </div>
         </div>
@@ -1169,17 +1168,17 @@ document
 <div class="slider" id="mySlider">
   <div class="slide-group">
     <div class="slide">
-      <img src="/assets/img/slide-1.png">
+      <img src="/assets/img/slide-1.jpg">
       <span class="slide-text">
         <span class="icon icon-left-nav"></span>
         Slide me
       </span>
     </div>
     <div class="slide">
-      <img src="/assets/img/slide-2.png">
+      <img src="/assets/img/slide-2.jpg">
     </div>
     <div class="slide">
-      <img src="/assets/img/slide-3.png">
+      <img src="/assets/img/slide-3.jpg">
     </div>
   </div>
 </div>
@@ -1225,7 +1224,7 @@ document
           <div class="card">
             <ul class="table-view">
               <li class="table-view-cell">
-                <a class="push-right" href="../two.html" data-transition="slide-in">
+                <a class="navigate-right" href="../two.html" data-transition="slide-in">
                   Load new page with push
                 </a>
               </li>
@@ -1242,7 +1241,7 @@ document
   <div class="card">
     <ul class="table-view">
       <li class="table-view-cell">
-        <a class="push-right" href="../two.html" data-transition="slide-in">
+        <a class="navigate-right" href="../two.html" data-transition="slide-in">
           Load new page with push
         </a>
       </li>

@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "0.10"
+before_install:
+  - rvm use 1.9.3
+install:
+  - npm install -g grunt-cli
+  - npm install
+  - gem install --no-document jekyll sass
+matrix:
+  fast_finish: true

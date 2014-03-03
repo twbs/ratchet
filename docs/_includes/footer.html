@@ -6,11 +6,9 @@
     </li>
     <li>
       <a data-ignore="push" href="https://twitter.com/share" class="twitter-share-button" data-url="http://goratchet.com" data-text="Ratchet &#8211; Build mobile apps with simple HTML, CSS, and JS components." data-via="GoRatchet">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </li>
     <li><a data-ignore="push" href="https://twitter.com/GoRatchet" class="twitter-follow-button" data-show-count="true">
       Follow @GoRatchet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </li>
   </ul>
 
@@ -26,3 +24,25 @@
     <li><a href="http://goratchet.com/1.0.2/" data-ignore="push">Legacy v1.0.2 Docs</a></li>
   </ul>
 </div>
+
+{% comment %}
+  Inject Twitter widgets asynchronously. Snippet snipped from Twitter's
+  JS interface site: https://dev.twitter.com/docs/tfw-javascript
+
+  * "js.async=1;" added to add async attribute to the generated script tag.
+{% endcomment %}
+<script>
+  window.twttr = (function (d,s,id) {
+    var t, js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
+    js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+  }(document, "script", "twitter-wjs"));
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/dist/ratchet.min.js"></script>
+<script src="/assets/js/docs.min.js"></script>
+
+<script src="//use.typekit.net/asj6ttm.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>

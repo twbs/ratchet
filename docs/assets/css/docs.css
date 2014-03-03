@@ -296,7 +296,7 @@ body {
 }
 .docs-header-content .btn {
   display: block;
-  padding: 15px 60px 16px;
+  padding: 15px 90px 16px;
   font-size: 18px;
   margin-bottom: 0;
   color: #0a1855;
@@ -425,12 +425,20 @@ body {
   }
 }
 .docs-section {
-  margin-bottom: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
   border-bottom: 1px solid #ddd;
 }
 
+.docs-section:last-child {
+  border-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .docs-module {
+    margin-top: 35px;
+  }
+}
 .docs-module {
   margin-top: 20px;
   padding: 20px;
@@ -662,12 +670,14 @@ code {
 }
 
 .component-example .slider {
-  height: 200px;
+  height: 300px;
+}
+.component-example .slider .slide {
+  height: 300px;
 }
 
 .component-example .slide img {
   width: 100%;
-  height: 200px;
 }
 
 .component-example .slide-text {
@@ -766,7 +776,8 @@ code {
 }
 
 #blockButtonsInDevice .btn-block {
-  margin: 10px;
+  width: 300px;
+  margin: 10px auto;
 }
 
 #segmentedControlsInDevice .segmented-control {
@@ -853,9 +864,10 @@ code {
     height: 813px;
     margin-left: -20px;
     font-family: "Helvetica Neue", sans-serif;
-    background-image: url("../img/iphone5c.png");
-    background-size: 100%;
+    background-image: url("../img/device-sprite.png");
+    background-size: 300%;
     background-repeat: no-repeat;
+    background-position: 0 0;
     -webkit-transition: background-image 0.1s linear;
     -moz-transition: background-image 0.1s linear;
     transition: background-image 0.1s linear;
@@ -1516,7 +1528,7 @@ hr {
   transform: translate3d(-20%, 0, 0);
 }
 .platform-ios .device {
-  background-image: url("../img/iphone5s.png");
+  background-position: -395px 0;
 }
 .platform-ios .device .device-content {
   background-color: #efeff4;
@@ -1540,11 +1552,18 @@ hr {
 .platform-android .bar-nav ~ .content {
   padding-top: 50px;
 }
-.platform-android .bar-tab ~ .content {
-  padding-bottom: 50px;
-}
 .platform-android .bar-header-secondary ~ .content {
   padding-top: 100px;
+}
+.platform-android .bar-tab ~ .content {
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+.platform-android .bar-footer ~ .content {
+  padding-bottom: 50px;
+}
+.platform-android .bar-footer-secondary ~ .content {
+  padding-bottom: 100px;
 }
 .platform-android .btn {
   padding: 8px 15px;
@@ -1995,9 +2014,11 @@ hr {
   color: #fff;
   content: "On";
 }
+.platform-android .navigate-left:after,
 .platform-android .push-left:after {
   content: '';
 }
+.platform-android .navigate-right:after,
 .platform-android .push-right:after {
   content: '';
 }
@@ -2037,7 +2058,7 @@ hr {
 }
 .platform-android .device {
   font-family: 'Roboto', sans-serif;
-  background-image: url("../img/android.png");
+  background-position: -790px 0;
 }
 .platform-android .device .device-content {
   font-size: 18px;

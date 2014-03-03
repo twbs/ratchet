@@ -30,12 +30,21 @@ a:active {
   padding-top: 50px;
 }
 
+.bar-header-secondary ~ .content {
+  padding-top: 100px;
+}
+
 .bar-tab ~ .content {
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+
+.bar-footer ~ .content {
   padding-bottom: 50px;
 }
 
-.bar-header-secondary ~ .content {
-  padding-top: 100px;
+.bar-footer-secondary ~ .content {
+  padding-bottom: 100px;
 }
 
 .btn {
@@ -525,10 +534,12 @@ textarea,
   content: "On";
 }
 
+.navigate-left:after,
 .push-left:after {
   content: '';
 }
 
+.navigate-right:after,
 .push-right:after {
   content: '';
 }
