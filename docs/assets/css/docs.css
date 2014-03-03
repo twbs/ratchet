@@ -1967,7 +1967,6 @@ hr {
   left: auto;
   right: 14px;
   color: #fff;
-  content: "On";
 }
 .platform-android .navigate-left:after,
 .platform-android .push-left:after {
