@@ -1,11 +1,12 @@
 {
   "name": "ratchet",
-  "description": "Build native apps with simple HTML, CSS, and JS components.",
+  "description": "Build mobile apps with simple HTML, CSS, and JS components.",
   "version": "2.0.0",
   "keywords": [
     "css",
     "ios",
-    "native",
+    "android",
+    "mobile",
     "prototype"
   ],
   "homepage": "http://goratchet.com",
