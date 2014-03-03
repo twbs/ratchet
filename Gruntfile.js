@@ -80,15 +80,21 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      minify: {
-        options: {
-          banner: '', // set to empty ; see bellow
-          keepSpecialComments: '*', // set to '*' because we already add the banner in sass
-          report: 'min'
-        },
-        files: {
-          'dist/<%= pkg.name %>.min.css': 'dist/<%= pkg.name %>.css'
-        }
+      options: {
+        banner: '', // set to empty ; see bellow
+        keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+        report: 'min'
+      },
+      ratchet: {
+        src: '<%= meta.distPath %><%= pkg.name %>.css',
+        dest: '<%= meta.distPath %><%= pkg.name %>.min.css'
+      },
+      docs: {
+        src: [
+          '<%= meta.docsAssetsPath %>css/docs.css',
+          '<%= meta.docsAssetsPath %>css/pygments-manni.css'
+        ],
+        dest: '<%= meta.docsAssetsPath %>css/docs.min.css'
       }
     },
 
@@ -98,8 +104,8 @@ module.exports = function(grunt) {
         report: 'min'
       },
       ratchet: {
-        src: 'dist/<%= pkg.name %>.js',
-        dest: 'dist/<%= pkg.name %>.min.js'
+        src: '<%= meta.distPath %><%= pkg.name %>.js',
+        dest: '<%= meta.distPath %><%= pkg.name %>.min.js'
       }
     },
 
