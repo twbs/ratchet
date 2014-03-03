@@ -2,7 +2,18 @@
 
 Build mobile apps with simple HTML, CSS, and JS components.
 
-## Getting Started
+## Table of contents
+
+- [Getting started](#getting-started)
+- [Documentation](#documentation)
+- [Support](#support)
+- [Contributing](#contributing)
+- [Troubleshooting](#troubleshooting)
+- [Versioning](#versioning)
+- [Maintainers](#maintainers)
+- [License](#license)
+
+## Getting started
 
 - Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.0.zip) the bundled CSS and JS
 - [Read the docs](http://goratchet.com) to learn about the components and how to get a prototype on your phone
@@ -34,7 +45,7 @@ Documentation for v1.0.2 has been made available for the time being at <http://g
 
 Questions or discussions about Ratchet should happen in the [Google group](https://groups.google.com/forum/#!forum/goratchet) or hit us up on Twitter [@GoRatchet](https://twitter.com/goratchet).
 
-## Reporting bugs & contributing
+## Contributing
 
 Please file a GitHub issue to [report a bug](https://github.com/twbs/ratchet/issues). When reporting a bug, be sure to follow the [contributor guidelines](https://github.com/twbs/ratchet/blob/master/CONTRIBUTING.md).
 
