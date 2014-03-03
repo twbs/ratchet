@@ -1615,11 +1615,18 @@ hr {
 .platform-android .bar-nav ~ .content {
   padding-top: 50px;
 }
-.platform-android .bar-tab ~ .content {
-  padding-bottom: 50px;
-}
 .platform-android .bar-header-secondary ~ .content {
   padding-top: 100px;
+}
+.platform-android .bar-tab ~ .content {
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+.platform-android .bar-footer ~ .content {
+  padding-bottom: 50px;
+}
+.platform-android .bar-footer-secondary ~ .content {
+  padding-bottom: 100px;
 }
 .platform-android .btn {
   padding: 8px 15px;
