@@ -83,6 +83,7 @@ module.exports = function(grunt) {
       options: {
         banner: '', // set to empty; see bellow
         keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+        noAdvanced: true, // disable advanced optimizations since it causes many issues
         report: 'min'
       },
       ratchet: {
@@ -90,9 +91,6 @@ module.exports = function(grunt) {
         dest: '<%= meta.distPath %><%= pkg.name %>.min.css'
       },
       docs: {
-        options: {
-          noAdvanced: true  // disable advanced optimizations since it causes code highlighting not to work
-        },
         src: [
           '<%= meta.docsAssetsPath %>css/docs.css',
           '<%= meta.docsAssetsPath %>css/pygments-manni.css'
