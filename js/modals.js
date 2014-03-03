@@ -5,6 +5,8 @@
  * ---------------------------------- */
 
 !function () {
+  'use strict';
+
   var findModals = function (target) {
     var i, modals = document.querySelectorAll('a');
     for (; target && target !== document; target = target.parentNode) {
