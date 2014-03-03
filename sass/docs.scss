@@ -14,11 +14,47 @@ body {
 }
 body {
   position: relative !important; // Overrides the fixed positioning of body in Ratchet
-  font: 14px/1.5 "adelle-sans",sans-serif;
+  font: 300 14px/1.5 "Open Sans", sans-serif;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; // Fix for webkit rendering
   -webkit-text-size-adjust: 100%;
+}
+
+// Typography
+//
+// Gets scoped to a common class in the docs so we don't collide with any of
+// Ratchet's styles.
+
+.docs-content {
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    color: #222;
+  }
+  h2 {
+    margin-bottom: .25em;
+    font-size: 2em;
+  }
+  h3 {
+    margin-bottom: .5em;
+    font-size: 1.25em;
+  }
+
+  p {
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    color: #555;
+  }
+  .lead {
+    font-size: 1.1em;
+    color: #777;
+  }
 }
 
 
@@ -60,7 +96,8 @@ body {
     // Ads on the homepage
     .carbonad {
       left: 50% !important;
-      margin-left: -165px !important;
+      width: 300px !important;
+      margin-left: -150px !important;
       margin-bottom: 60px !important;
     }
   }
@@ -72,12 +109,6 @@ body {
     right: 15px !important;
     margin-top: 0 !important;
     @include transform(translateY(-50%) !important);
-  }
-}
-// Account for the extra margin for large sceens.
-@media screen and (min-width: 1200px) {
-  .docs-sub-header .carbonad {
-    right: 30px !important;
   }
 }
 
@@ -96,13 +127,6 @@ body {
   font-weight: 300;
   z-index: 20;
   @include transform(translateX(-50%));
-
-  // Use a thinner weight on retina
-  @media
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
-      font-weight: 100;
-    }
 }
 .docs-nav {
   .docs-nav-trigger {
@@ -133,13 +157,6 @@ body {
     display: block;
     padding: 20px 15px;
     font-size: 22px;
-
-    // Use a thinner weight on retina
-    @media
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi) {
-        font-weight: 100;
-      }
   }
 }
 .docs-jump-menu,
@@ -280,7 +297,7 @@ body {
 
   .btn {
     display: block;
-    padding: 15px 90px 16px;
+    padding: 15px 75px 16px;
     font-size: 18px;
     margin-bottom: 0;
     color: #0a1855;
@@ -301,7 +318,6 @@ body {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 28px;
-  font-weight: 100;
   color: #fff;
   line-height: 38px;
 }
@@ -347,7 +363,7 @@ body {
   height: auto !important;
   margin-left: 145px !important;
   color: rgba(255,255,255,.65) !important;
-  font-family: "adelle-sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 .carbonad-text {
   padding-top: 0 !important;
@@ -366,7 +382,7 @@ body {
 // Desktop styles for ads
 @media screen and (min-width: 768px) {
   .carbonad {
-    width: 330px !important;
+    width: 360px !important;
     border-right: 1px solid rgba(255,255,255,.1) !important;
     border-bottom: 1px solid rgba(255,255,255,.1) !important;
     border-left: 1px solid rgba(255,255,255,.1) !important;
@@ -391,13 +407,6 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 300;
-
-    // Use a thinner weight on retina
-    @media
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi) {
-        font-weight: 100;
-      }
   }
   .page-title {
     font-size: 40px;
@@ -422,83 +431,18 @@ body {
 // Content sections
 // --------------------------------------------------
 
+// Wrap each section of the docs
 .docs-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #ddd;
 }
-.section-heading,
-.section-lead {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.section-heading {
-  font-size: 22px;
-  font-weight: 300;
-}
-.section-lead {
-  font-size: 18px;
-  color: #777;
-
-  // Use a thinner weight on retina
-  @media
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
-      font-weight: 100;
-    }
+.docs-section:last-child {
+  border-bottom: 0;
 }
 
-// Desktop: Section headings
+// Docs modules
 @media screen and (min-width: 768px) {
-  .section-heading {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    font-size: 40px;
-  }
-  .section-lead {
-    font-size: 24px;
-  }
-}
-
-
-// Steps
-// --------------------------------------------------
-
-.docs-steps {
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
-}
-.step {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.step-title,
-.step-description {
-  font-weight: 300;
-}
-.step-title {
-  font-size: 18px
-}
-.step-title code {
-  font-size: 14px;
-}
-.step-description {
-  font-size: 14px;
-}
-
-// Desktop steps styles
-@media screen and (min-width: 768px) {
-  .step-title {
-    font-size: 24px;
-  }
-  .step-title code {
-    font-size: 18px;
-  }
-  .step-description {
-    font-size: 18px;
-  }
-
-  // Docs modules
   .docs-module {
     margin-top: 35px;
   }
@@ -514,9 +458,6 @@ body {
   .btn-block {
     margin-bottom: 0;
   }
-}
-.docs-module-title {
-  font-weight: 300;
 }
 .version {
   margin-top: 10px;
@@ -640,53 +581,27 @@ body {
 
 // Example devices
 // --------------------------------------------------
-
 .docs-examples {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.docs-example-group {
   margin-top: 30px;
-
-  .example-wrap {
-    display: inline-block;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: 10px;
-    }
-    .example {
-      display: block;
-      overflow: hidden;
-      padding: 3px;
-      width: 100%;
-      border: $border-default;
-      border-radius: 3px;
-    }
-    h5 {
-      margin-top: 10px;
-      font-weight: 300;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-  }
 }
-@media screen and (min-width: 768px) {
-  // Examples
-  .docs-example-group .example-wrap {
-    display: inline-block;
+.example-wrap {
+  margin-bottom: 30px;
 
-    .example {
-      width: 180px;
-    }
+  .example {
+    display: block;
+    overflow: hidden;
+    padding: 3px;
+    width: 100%;
+    border: $border-default;
+    border-radius: 3px;
   }
-}
-@media screen and (min-width: 1200px) {
-  .docs-example-group .example-wrap .example {
-    width: 220px;
+  .example-title {
+    margin-top: 10px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -714,13 +629,11 @@ code {
 .component-title {
   margin-bottom: 10px;
   font-size: 24px;
-  font-weight: 300;
   line-height: 34px;
 }
 .component-description {
   margin-bottom: 15px;
   font-size: 16px;
-  font-weight: 300;
 }
 .component-example {
   font-family: $font-family-default;
@@ -773,7 +686,6 @@ code {
   color: #fff;
   text-align: center;
   font-size: 24px;
-  font-weight: 300;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .component-example-fullbleed,
@@ -942,7 +854,6 @@ code {
     color: #fff;
     text-align: center;
     font-size: 24px;
-    font-weight: 300;
     text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 }
@@ -1074,15 +985,6 @@ hr {
     padding: 0;
     max-width: 940px;
   }
-  .column {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  // Lines nested grids up correctly.
-  .column .column-group {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
 
   // Override the mobile grid
   .units-1 { width: 50%; }
@@ -1123,15 +1025,6 @@ hr {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1170px;
-  }
-  .column {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  // Lines nested grids up correctly.
-  .column .column-group {
-    margin-left: -30px;
-    margin-right: -30px;
   }
 }
 
