@@ -34,7 +34,9 @@ FingerBlast.prototype = {
         return ancestor !== element && ancestor.contains(element);
       } else {
         for (descendants = ancestor.getElementsByTagName('*'), index = 0; descendant = descendants[index++];) {
-          if (descendant === element) return true;
+          if (descendant === element) {
+            return true;
+          }
         }
         return false;
       }
@@ -42,19 +44,25 @@ FingerBlast.prototype = {
 
     this.element.addEventListener('mouseover', function (e) {
       var target = e.relatedTarget;
-      if (target !== this && !contains(target, this)) activate();
+      if (target !== this && !contains(target, this)) {
+        activate();
+      }
     });
 
     this.element.addEventListener('mouseout', function (e) {
       var target = e.relatedTarget;
-      if (target !== this && !contains(target, this)) deactivate(e);
+      if (target !== this && !contains(target, this)) {
+        deactivate(e);
+      }
     });
   },
 
   activate: function () {
     'use strict';
 
-    if (this.active) return;
+    if (this.active) {
+      return;
+    }
     this.element.addEventListener('mousedown', (this.touchStart = this.touchStart.bind(this)), true);
     this.element.addEventListener('mousemove', (this.touchMove  = this.touchMove.bind(this)),  true);
     this.element.addEventListener('mouseup',   (this.touchEnd   = this.touchEnd.bind(this)),   true);
@@ -66,7 +74,9 @@ FingerBlast.prototype = {
     'use strict';
 
     this.active = false;
-    if (this.mouseIsDown) this.touchEnd(e);
+    if (this.mouseIsDown) {
+      this.touchEnd(e);
+    }
     this.element.removeEventListener('mousedown', this.touchStart, true);
     this.element.removeEventListener('mousemove', this.touchMove,  true);
     this.element.removeEventListener('mouseup',   this.touchEnd,   true);
@@ -76,7 +86,9 @@ FingerBlast.prototype = {
   click: function (e) {
     'use strict';
 
-    if (e.synthetic) return;
+    if (e.synthetic) {
+      return;
+    }
     e.preventDefault();
     e.stopPropagation();
   },
@@ -84,7 +96,9 @@ FingerBlast.prototype = {
   touchStart: function (e) {
     'use strict';
 
-    if (e.synthetic || /input|textarea/.test(e.target.tagName.toLowerCase())) return;
+    if (e.synthetic || /input|textarea/.test(e.target.tagName.toLowerCase())) {
+      return;
+    }
 
     this.mouseIsDown = true;
 
@@ -97,20 +111,26 @@ FingerBlast.prototype = {
   touchMove: function (e) {
     'use strict';
 
-    if (e.synthetic) return;
+    if (e.synthetic) {
+      return;
+    }
 
     e.preventDefault();
     e.stopPropagation();
 
     this.move(e.clientX, e.clientY);
 
-    if (this.mouseIsDown) this.fireTouchEvents('touchmove', e);
+    if (this.mouseIsDown) {
+      this.fireTouchEvents('touchmove', e);
+    }
   },
 
   touchEnd: function (e) {
     'use strict';
 
-    if (e.synthetic) return;
+    if (e.synthetic) {
+      return;
+    }
 
     this.mouseIsDown = false;
 
@@ -119,7 +139,9 @@ FingerBlast.prototype = {
 
     this.fireTouchEvents('touchend', e);
 
-    if (!this.target) return;
+    if (!this.target) {
+      return;
+    }
 
     // Mobile Safari moves all the mouse events to fire after the touchend event.
     this.target.dispatchEvent(this.createMouseEvent('mouseover', e));
@@ -133,7 +155,9 @@ FingerBlast.prototype = {
     var events   = [];
     var gestures = [];
 
-    if (!this.target) return;
+    if (!this.target) {
+      return;
+    }
 
     // Convert 'ontouch*' properties and attributes to listeners.
     var onEventName = 'on' + eventName;
@@ -172,7 +196,9 @@ FingerBlast.prototype = {
         this.startAngle = angle;
       }
 
-      if (eventName === 'touchend') gestureName = 'gestureend';
+      if (eventName === 'touchend') {
+        gestureName = 'gestureend';
+      }
 
       events.forEach(function(event) {
         var gesture = this.createMouseEvent.call(event._finger, gestureName, event);

@@ -53,7 +53,9 @@ $(function() {
     calculateScroll();
     calculateToggle();
 
-    if (!eventListeners) addEventListeners();
+    if (!eventListeners) {
+      addEventListeners();
+    }
   };
 
   var addEventListeners = function () {
@@ -119,7 +121,9 @@ $(function() {
 
   var calculateScroll = function() {
     // if small screen don't worry about this
-    if (windowWidth <= 768) return;
+    if (windowWidth <= 768) {
+      return;
+    }
 
     // Save scrollTop value
     var contentSectionItem;
@@ -136,12 +140,14 @@ $(function() {
     // Injection of components into device
     for (var l = contentSection.length; l--;) {
       if ((topCache[l] - currentTop) < windowHeight) {
-        if (currentActive === l) return;
+        if (currentActive === l) {
+          return;
+        }
         currentActive = l;
         bod.find('.component.active').removeClass('active');
         contentSectionItem = $(contentSection[l]);
         contentSectionItem.addClass('active');
-        if(contentSectionItem.attr('id')) {
+        if (contentSectionItem.attr('id')) {
           device.attr('id', contentSectionItem.attr('id') + 'InDevice');
         } else {
           device.attr('id', '');

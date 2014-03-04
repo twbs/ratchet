@@ -25,7 +25,11 @@
   var getSlider = function (target) {
     var i, sliders = document.querySelectorAll('.slider > .slide-group');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = sliders.length; i--;) { if (sliders[i] === target) return target; }
+      for (i = sliders.length; i--;) {
+        if (sliders[i] === target) {
+          return target;
+        }
+      }
     }
   };
 
@@ -46,7 +50,9 @@
   var onTouchStart = function (e) {
     slider = getSlider(e.target);
 
-    if (!slider) return;
+    if (!slider) {
+      return;
+    }
 
     var firstItem  = slider.querySelector('.slide');
 
@@ -67,7 +73,9 @@
   };
 
   var onTouchMove = function (e) {
-    if (e.touches.length > 1 || !slider) return; // Exit if a pinch || no slider
+    if (e.touches.length > 1 || !slider) {
+      return; // Exit if a pinch || no slider
+    }
 
     deltaX = e.touches[0].pageX - pageX;
     deltaY = e.touches[0].pageY - pageY;
@@ -78,7 +86,9 @@
       isScrolling = Math.abs(deltaY) > Math.abs(deltaX);
     }
 
-    if (isScrolling) return;
+    if (isScrolling) {
+      return;
+    }
 
     offsetX = (deltaX / resistance) + getScroll();
 
@@ -91,7 +101,9 @@
   };
 
   var onTouchEnd = function (e) {
-    if (!slider || isScrolling) return;
+    if (!slider || isScrolling) {
+      return;
+    }
 
     setSlideNumber(
       (+new Date()) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0

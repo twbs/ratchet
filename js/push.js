@@ -35,7 +35,9 @@
 
   var cacheReplace = function (data, updates) {
     PUSH.id = data.id;
-    if (updates) data = getCached(data.id);
+    if (updates) {
+      data = getCached(data.id);
+    }
     cacheMapping[data.id] = JSON.stringify(data);
     window.history.replaceState(data.id, data.title, data.url);
     domCache[data.id] = document.body.cloneNode(true);
@@ -49,8 +51,12 @@
 
     cacheBackStack.push(id);
 
-    while (cacheForwardStack.length)               delete cacheMapping[cacheForwardStack.shift()];
-    while (cacheBackStack.length > maxCacheLength) delete cacheMapping[cacheBackStack.shift()];
+    while (cacheForwardStack.length) {
+      delete cacheMapping[cacheForwardStack.shift()];
+    }
+    while (cacheBackStack.length > maxCacheLength) {
+      delete cacheMapping[cacheBackStack.shift()];
+    }
 
     window.history.pushState(null, '', cacheMapping[PUSH.id].url);
 
@@ -65,7 +71,9 @@
     var pushStack         = forward ? cacheBackStack    : cacheForwardStack;
     var popStack          = forward ? cacheForwardStack : cacheBackStack;
 
-    if (PUSH.id) pushStack.push(PUSH.id);
+    if (PUSH.id) {
+      pushStack.push(PUSH.id);
+    }
     popStack.pop();
 
     cacheMapping.cacheForwardStack = JSON.stringify(cacheForwardStack);
@@ -90,7 +98,7 @@
       || !target.hash && /#/.test(target.href)
       || target.hash && target.href.replace(target.hash, '') === location.href.replace(location.hash, '')
       || target.getAttribute('data-ignore') === 'push'
-    ) return;
+    ) { return; }
 
     return target;
   };
@@ -102,7 +110,9 @@
   var touchend = function (e) {
     var target = getTarget(e);
 
-    if (!target) return;
+    if (!target) {
+      return;
+    }
 
     e.preventDefault();
 
@@ -125,7 +135,9 @@
     var transitionFromObj;
     var id = e.state;
 
-    if (!id || !cacheMapping[id]) return;
+    if (!id || !cacheMapping[id]) {
+      return;
+    }
 
     direction = PUSH.id < id ? 'forward' : 'back';
 
@@ -134,7 +146,9 @@
     activeObj = getCached(id);
     activeDom = domCache[id];
 
-    if (activeObj.title) document.title = activeObj.title;
+    if (activeObj.title) {
+      document.title = activeObj.title;
+    }
 
     if (direction === 'back') {
       transitionFrom    = JSON.parse(direction === 'back' ? cacheMapping.cacheForwardStack : cacheMapping.cacheBackStack);
@@ -143,7 +157,9 @@
       transitionFromObj = activeObj;
     }
 
-    if (direction === 'back' && !transitionFromObj.id) return PUSH.id = id;
+    if (direction === 'back' && !transitionFromObj.id) {
+      return PUSH.id = id;
+    }
 
     transition = direction === 'back' ? transitionMap[transitionFromObj.transition] : transitionFromObj.transition;
 
@@ -162,8 +178,11 @@
       activeObj = extendWithDom(activeObj, '.content', activeDom.cloneNode(true));
       for (key in bars) {
         barElement = document.querySelector(bars[key]);
-        if (activeObj[key]) swapContent(activeObj[key], barElement);
-        else if (barElement) barElement.parentNode.removeChild(barElement);
+        if (activeObj[key]) {
+          swapContent(activeObj[key], barElement);
+        } else if (barElement) {
+          barElement.parentNode.removeChild(barElement);
+        }
       }
     }
 
@@ -202,8 +221,12 @@
     xhr.setRequestHeader('X-PUSH', 'true');
 
     xhr.onreadystatechange = function () {
-      if (options._timeout) clearTimeout(options._timeout);
-      if (xhr.readyState === 4) xhr.status === 200 ? success(xhr, options) : failure(options.url);
+      if (options._timeout) {
+        clearTimeout(options._timeout);
+      }
+      if (xhr.readyState === 4) {
+        xhr.status === 200 ? success(xhr, options) : failure(options.url);
+      }
     };
 
     if (!PUSH.id) {
@@ -222,7 +245,9 @@
 
     xhr.send();
 
-    if (xhr.readyState && !options.ignorePush) cachePush();
+    if (xhr.readyState && !options.ignorePush) {
+      cachePush();
+    }
   };
 
 
@@ -234,15 +259,22 @@
     var barElement;
     var data = parseXHR(xhr, options);
 
-    if (!data.contents) return locationReplace(options.url);
+    if (!data.contents) {
+      return locationReplace(options.url);
+    }
 
-    if (data.title) document.title = data.title;
+    if (data.title) {
+      document.title = data.title;
+    }
 
     if (options.transition) {
       for (key in bars) {
         barElement = document.querySelector(bars[key]);
-        if (data[key]) swapContent(data[key], barElement);
-        else if (barElement) barElement.parentNode.removeChild(barElement);
+        if (data[key]) {
+          swapContent(data[key], barElement);
+        } else if (barElement) {
+          barElement.parentNode.removeChild(barElement);
+        }
       }
     }
 
@@ -257,8 +289,12 @@
       triggerStateChange();
     });
 
-    if (!options.ignorePush && window._gaq) _gaq.push(['_trackPageview']); // google analytics
-    if (!options.hash) return;
+    if (!options.ignorePush && window._gaq) {
+      _gaq.push(['_trackPageview']); // google analytics
+    }
+    if (!options.hash) {
+      return;
+    }
   };
 
   var failure = function (url) {
@@ -275,9 +311,13 @@
     var swapDirection;
 
     if (!transition) {
-      if (container) container.innerHTML = swap.innerHTML;
-      else if (swap.classList.contains('content')) document.body.appendChild(swap);
-      else document.body.insertBefore(swap, document.querySelector('.content'));
+      if (container) {
+        container.innerHTML = swap.innerHTML;
+      } else if (swap.classList.contains('content')) {
+        document.body.appendChild(swap);
+      } else {
+        document.body.insertBefore(swap, document.querySelector('.content'));
+      }
     } else {
       enter  = /in$/.test(transition);
 
@@ -296,7 +336,9 @@
       container.parentNode.insertBefore(swap, container);
     }
 
-    if (!transition) complete && complete();
+    if (!transition) {
+      complete && complete();
+    }
 
     if (transition === 'fade') {
       container.offsetWidth; // force reflow
@@ -348,7 +390,11 @@
   var findTarget = function (target) {
     var i, toggles = document.querySelectorAll('a');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = toggles.length; i--;) { if (toggles[i] === target) return target; }
+      for (i = toggles.length; i--;) {
+        if (toggles[i] === target) {
+          return target;
+        }
+      }
     }
   };
 
@@ -361,11 +407,15 @@
     var i;
     var result = {};
 
-    for (i in obj) result[i] = obj[i];
+    for (i in obj) {
+      result[i] = obj[i];
+    }
 
     Object.keys(bars).forEach(function (key) {
       var el = dom.querySelector(bars[key]);
-      if (el) el.parentNode.removeChild(el);
+      if (el) {
+        el.parentNode.removeChild(el);
+      }
       result[key] = el;
     });
 
@@ -382,7 +432,9 @@
 
     data.url = options.url;
 
-    if (!responseText) return data;
+    if (!responseText) {
+      return data;
+    }
 
     if (/<html/i.test(responseText)) {
       head           = document.createElement('div');
@@ -397,8 +449,11 @@
     data.title = head.querySelector('title');
     data.title = data.title && data.title.innerText.trim();
 
-    if (options.transition) data = extendWithDom(data, '.content', body);
-    else data.contents = body;
+    if (options.transition) {
+      data = extendWithDom(data, '.content', body);
+    } else {
+      data.contents = body;
+    }
 
     return data;
   };
@@ -410,7 +465,7 @@
   window.addEventListener('touchstart', function () { isScrolling = false; });
   window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', touchend);
-  window.addEventListener('click', function (e) { if (getTarget(e)) e.preventDefault(); });
+  window.addEventListener('click', function (e) { if (getTarget(e)) {e.preventDefault();} });
   window.addEventListener('popstate', popstate);
   window.PUSH = PUSH;
 

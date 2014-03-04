@@ -15,7 +15,11 @@
   var findToggle = function (target) {
     var i, toggles = document.querySelectorAll('.toggle');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = toggles.length; i--;) { if (toggles[i] === target) return target; }
+      for (i = toggles.length; i--;) {
+        if (toggles[i] === target) {
+          return target;
+        }
+      }
     }
   };
 
@@ -24,7 +28,9 @@
 
     toggle = findToggle(e.target);
 
-    if (!toggle) return;
+    if (!toggle) {
+      return;
+    }
 
     var handle      = toggle.querySelector('.toggle-handle');
     var toggleWidth = toggle.clientWidth;
@@ -38,9 +44,13 @@
   window.addEventListener('touchmove', function (e) {
     e = e.originalEvent || e;
 
-    if (e.touches.length > 1) return; // Exit if a pinch
+    if (e.touches.length > 1) {
+      return; // Exit if a pinch
+    }
 
-    if (!toggle) return;
+    if (!toggle) {
+      return;
+    }
 
     var handle      = toggle.querySelector('.toggle-handle');
     var current     = e.touches[0];
@@ -51,12 +61,18 @@
     touchMove = true;
     distanceX = current.pageX - start.pageX;
 
-    if (Math.abs(distanceX) < Math.abs(current.pageY - start.pageY)) return;
+    if (Math.abs(distanceX) < Math.abs(current.pageY - start.pageY)) {
+      return;
+    }
 
     e.preventDefault();
 
-    if (distanceX < 0)      return handle.style.webkitTransform = 'translate3d(0,0,0)';
-    if (distanceX > offset) return handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
+    if (distanceX < 0) {
+      return handle.style.webkitTransform = 'translate3d(0,0,0)';
+    }
+    if (distanceX > offset) {
+      return handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
+    }
 
     handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
 
@@ -64,7 +80,9 @@
   });
 
   window.addEventListener('touchend', function (e) {
-    if (!toggle) return;
+    if (!toggle) {
+      return;
+    }
 
     var handle      = toggle.querySelector('.toggle-handle');
     var toggleWidth = toggle.clientWidth;
@@ -72,8 +90,11 @@
     var offset      = (toggleWidth - handleWidth);
     var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth/2 - handleWidth/2)));
 
-    if (slideOn) handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
-    else handle.style.webkitTransform = 'translate3d(0,0,0)';
+    if (slideOn) {
+      handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
+    } else {
+      handle.style.webkitTransform = 'translate3d(0,0,0)';
+    }
 
     toggle.classList[slideOn ? 'add' : 'remove']('active');
 

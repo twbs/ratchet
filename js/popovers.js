@@ -12,7 +12,11 @@
   var findPopovers = function (target) {
     var i, popovers = document.querySelectorAll('a');
     for (; target && target !== document; target = target.parentNode) {
-      for (i = popovers.length; i--;) { if (popovers[i] === target) return target; }
+      for (i = popovers.length; i--;) {
+        if (popovers[i] === target) {
+          return target;
+        }
+      }
     }
   };
 
@@ -38,7 +42,9 @@
   var getPopover = function (e) {
     var anchor = findPopovers(e.target);
 
-    if (!anchor || !anchor.hash || (anchor.hash.indexOf('/') > 0)) return;
+    if (!anchor || !anchor.hash || (anchor.hash.indexOf('/') > 0)) {
+      return;
+    }
 
     try {
       popover = document.querySelector(anchor.hash);
@@ -47,9 +53,13 @@
       popover = null;
     }
 
-    if (popover == null) return;
+    if (popover == null) {
+      return;
+    }
 
-    if (!popover || !popover.classList.contains('popover')) return;
+    if (!popover || !popover.classList.contains('popover')) {
+      return;
+    }
 
     return popover;
   };
@@ -57,7 +67,9 @@
   var showHidePopover = function (e) {
     var popover = getPopover(e);
 
-    if (!popover) return;
+    if (!popover) {
+      return;
+    }
 
     popover.style.display = 'block';
     popover.offsetHeight;

@@ -2,6 +2,7 @@
   "boss"      : true,
   "browser"   : true,
   "camelcase" : true,
+  "curly"     : true,
   "devel"     : true,
   "eqeqeq"    : true,
   "eqnull"    : true,
