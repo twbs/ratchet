@@ -393,8 +393,7 @@ body {
 .docs-sub-content {
   position: relative;
   overflow: hidden;
-  padding-top: 55px;
-  padding-bottom: 65px;
+  padding: 55px 15px 65px;
   color: #fff;
   text-align: center;
 }
