@@ -393,8 +393,7 @@ body {
 .docs-sub-content {
   position: relative;
   overflow: hidden;
-  padding-top: 55px;
-  padding-bottom: 65px;
+  padding: 55px 15px 65px;
   color: #fff;
   text-align: center;
 }
@@ -824,10 +823,10 @@ code {
   }
 }
 .device {
+  display: none;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
   line-height: 21px;
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -890,17 +889,10 @@ hr {
   clear: both;
 }
 
-.column-group {
-  *zoom: 1;
-}
-
-.column-group:before,
-.column-group:after {
+.column-group:before, .column-group:after {
+  content: " ";
   display: table;
-  line-height: 0;
-  content: "";
 }
-
 .column-group:after {
   clear: both;
 }
@@ -921,6 +913,7 @@ hr {
   padding-left: 15px;
   padding-right: 15px;
   float: left;
+  width: 100%;
 }
 .column.pull-right {
   float: right;
@@ -931,42 +924,10 @@ hr {
   margin-right: -15px;
 }
 
-.units-1 {
-  width: 50%;
-}
-
-.units-2 {
-  width: 100%;
-}
-
-.offset-1 {
-  margin-left: 50%;
-}
-
 @media screen and (min-width: 768px) {
   .container {
     padding: 0;
     max-width: 940px;
-  }
-
-  .units-1 {
-    width: 50%;
-  }
-
-  .units-2 {
-    width: 100%;
-  }
-
-  .lg-units-1 {
-    width: 8.333%;
-  }
-
-  .lg-units-2 {
-    width: 16.666%;
-  }
-
-  .lg-units-3 {
-    width: 25%;
   }
 
   .lg-units-4 {
@@ -977,76 +938,12 @@ hr {
     width: 41.666%;
   }
 
-  .lg-units-6 {
-    width: 50%;
-  }
-
   .lg-units-7 {
     width: 58.333%;
   }
 
   .lg-units-8 {
     width: 66.666%;
-  }
-
-  .lg-units-9 {
-    width: 75%;
-  }
-
-  .lg-units-10 {
-    width: 83.333%;
-  }
-
-  .lg-units-11 {
-    width: 91.666%;
-  }
-
-  .lg-units-12 {
-    width: 100%;
-  }
-
-  .lg-offset-1 {
-    margin-left: 8.333%;
-  }
-
-  .lg-offset-2 {
-    margin-left: 16.666%;
-  }
-
-  .lg-offset-3 {
-    margin-left: 25%;
-  }
-
-  .lg-offset-4 {
-    margin-left: 33.333%;
-  }
-
-  .lg-offset-5 {
-    margin-left: 41.666%;
-  }
-
-  .lg-offset-6 {
-    margin-left: 50%;
-  }
-
-  .lg-offset-7 {
-    margin-left: 58.333%;
-  }
-
-  .lg-offset-8 {
-    margin-left: 66.666%;
-  }
-
-  .lg-offset-9 {
-    margin-left: 75%;
-  }
-
-  .lg-offset-10 {
-    margin-left: 83.333%;
-  }
-
-  .lg-offset-11 {
-    margin-left: 91.666%;
   }
 }
 @media screen and (min-width: 1200px) {
