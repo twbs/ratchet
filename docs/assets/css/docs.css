@@ -823,10 +823,10 @@ code {
   }
 }
 .device {
+  display: none;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
   line-height: 21px;
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -915,6 +915,9 @@ hr {
   float: left;
   width: 100%;
 }
+.column.pull-right {
+  float: right;
+}
 
 .column .column-group {
   margin-left: -15px;
@@ -929,6 +932,14 @@ hr {
 
   .lg-units-4 {
     width: 33.333%;
+  }
+
+  .lg-units-5 {
+    width: 41.666%;
+  }
+
+  .lg-units-7 {
+    width: 58.333%;
   }
 
   .lg-units-8 {
