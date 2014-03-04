@@ -137,6 +137,10 @@ $(function() {
       device[0].setAttribute('style','');
     }
 
+    function updateContent(content) {
+      $('#iwindow').html(content);
+    }
+
     // Injection of components into device
     for (var l = contentSection.length; l--;) {
       if ((topCache[l] - currentTop) < windowHeight) {
@@ -159,9 +163,6 @@ $(function() {
       }
     }
 
-    function updateContent(content) {
-      $('#iwindow').html(content);
-    }
   };
 
   // Toolbar toggle

@@ -1,5 +1,5 @@
 {
-  "boss"      : true,
+  "bitwise"   : true,
   "browser"   : true,
   "camelcase" : true,
   "curly"     : true,
@@ -9,13 +9,14 @@
   "expr"      : true,
   "forin"     : true,
   "freeze"    : true,
+  "immed"     : true,
   "indent"    : 2,
-  "laxbreak"  : true,
+  "latedef"   : true,
+  "newcap"    : true,
   "nonbsp"    : true,
   "quotmark"  : "single",
   "strict"    : true,
   "trailing"  : true,
   "undef"     : true,
-  "unused"    : true,
-  "validthis" : true
+  "unused"    : true
 }

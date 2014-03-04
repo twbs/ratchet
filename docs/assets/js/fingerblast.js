@@ -2,6 +2,7 @@
 // --------------
 // Adapted from phantom limb by Brian Cartensen
 
+/* jshint bitwise: false */
 /* global GLOBAL: true */
 
 function FingerBlast(element) {
@@ -33,7 +34,7 @@ FingerBlast.prototype = {
       } else if ('contains' in ancestor) {
         return ancestor !== element && ancestor.contains(element);
       } else {
-        for (descendants = ancestor.getElementsByTagName('*'), index = 0; descendant = descendants[index++];) {
+        for ((descendants = ancestor.getElementsByTagName('*')), index = 0; (descendant = descendants[index++]);) {
           if (descendant === element) {
             return true;
           }

@@ -4,7 +4,7 @@
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
 
-!function () {
+!(function () {
   'use strict';
 
   var findModals = function (target) {
@@ -34,4 +34,4 @@
       event.preventDefault(); // prevents rewriting url (apps can still use hash values in url)
     }
   });
-}();
+}());

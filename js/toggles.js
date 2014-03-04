@@ -4,7 +4,7 @@
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
 
-!function () {
+!(function () {
   'use strict';
 
   var start     = {};
@@ -68,10 +68,10 @@
     e.preventDefault();
 
     if (distanceX < 0) {
-      return handle.style.webkitTransform = 'translate3d(0,0,0)';
+      return (handle.style.webkitTransform = 'translate3d(0,0,0)');
     }
     if (distanceX > offset) {
-      return handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
+      return (handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)');
     }
 
     handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
@@ -110,4 +110,4 @@
     toggle    = false;
   });
 
-}();
+}());

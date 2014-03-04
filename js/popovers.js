@@ -4,7 +4,7 @@
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
 
-!function () {
+!(function () {
   'use strict';
 
   var popover;
@@ -25,7 +25,7 @@
     popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
   };
 
-  var backdrop = function () {
+  var backdrop = (function () {
     var element = document.createElement('div');
 
     element.classList.add('backdrop');
@@ -37,7 +37,7 @@
     });
 
     return element;
-  }();
+  }());
 
   var getPopover = function (e) {
     var anchor = findPopovers(e.target);
@@ -81,4 +81,4 @@
   window.addEventListener('touchend', showHidePopover);
   window.addEventListener('click', showHidePopover);
 
-}();
+}());
