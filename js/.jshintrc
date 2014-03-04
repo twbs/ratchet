@@ -7,6 +7,8 @@
   "eqeqeq"    : true,
   "eqnull"    : true,
   "expr"      : true,
+  "forin"     : true,
+  "freeze"    : true,
   "indent"    : 2,
   "laxbreak"  : true,
   "nonbsp"    : true,
