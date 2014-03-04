@@ -61,7 +61,12 @@ body {
 }
 
 .docs-header {
-  height: 100vh;
+  position: fixed !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   min-height: 750px;
 }
 .docs-header .carbonad {
