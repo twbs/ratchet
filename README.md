@@ -10,6 +10,31 @@ Build mobile apps with simple HTML, CSS, and JS components.
 
 Take note that our master branch is our active, unstable development branch and that if you're looking to download a stable copy of the repo, check the [tagged downloads](https://github.com/twbs/ratchet/tags).
 
+### What's included
+
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+
+```
+ratchet/
+├── css/
+│   ├── ratchet.css
+│   ├── ratchet.min.css
+│   ├── ratchet-theme-android.css
+│   └── ratchet-theme-android.min.css
+│   ├── ratchet-theme-ios.css
+│   └── ratchet-theme-ios.min.css
+├── js/
+│   ├── ratchet.js
+│   └── ratchet.min.js
+└── fonts/
+    ├── ratchicons.eot
+    ├── ratchicons.svg
+    ├── ratchicons.ttf
+    └── ratchicons.woff
+```
+
+We provide compiled CSS and JS (`ratchet.*`), as well as compiled and minified CSS and JS (`ratchet.min.*`). The Ratchicon fonts are included, as are the optional Android and iOS platform themes.
+
 ## Documentation
 
 Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://goratchet.com>. The docs may also be run locally.
