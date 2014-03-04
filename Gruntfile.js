@@ -44,11 +44,11 @@ module.exports = function(grunt) {
           'js/sliders.js',
           'js/toggles.js'
         ],
-        dest: '<%= meta.distPath %><%= pkg.name %>.js'
+        dest: '<%= meta.distPath %>js/<%= pkg.name %>.js'
       },
       docs: {
-        src: '<%= meta.distPath %><%= pkg.name %>.js',
-        dest: '<%= meta.docsPath %><%= pkg.name %>.js'
+        src: '<%= meta.distPath %>js/<%= pkg.name %>.js',
+        dest: '<%= meta.docsPath %>js/<%= pkg.name %>.js'
       }
     },
 
@@ -60,9 +60,9 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= meta.distPath %><%= pkg.name %>.css': 'sass/ratchet.scss',
-          '<%= meta.distPath %><%= pkg.name %>-theme-ios.css': 'sass/theme-ios.scss',
-          '<%= meta.distPath %><%= pkg.name %>-theme-android.css': 'sass/theme-android.scss',
+          '<%= meta.distPath %>css/<%= pkg.name %>.css': 'sass/ratchet.scss',
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css': 'sass/theme-ios.scss',
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css': 'sass/theme-android.scss',
           '<%= meta.docsAssetsPath %>css/docs.css': 'sass/docs.scss'
         }
       }
@@ -92,13 +92,13 @@ module.exports = function(grunt) {
         report: 'min'
       },
       ratchet: {
-        src: '<%= meta.distPath %><%= pkg.name %>.css',
-        dest: '<%= meta.distPath %><%= pkg.name %>.min.css'
+        src: '<%= meta.distPath %>css/<%= pkg.name %>.css',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>.min.css'
       },
       theme: {
         files: {
-          '<%= meta.distPath %><%= pkg.name %>-theme-ios.min.css': '<%= meta.distPath %><%= pkg.name %>-theme-ios.css',
-          '<%= meta.distPath %><%= pkg.name %>-theme-android.min.css' : '<%= meta.distPath %><%= pkg.name %>-theme-android.css'
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.min.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css',
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.min.css' : '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css'
         }
       },
       docs: {
@@ -119,8 +119,8 @@ module.exports = function(grunt) {
         report: 'min'
       },
       ratchet: {
-        src: '<%= meta.distPath %><%= pkg.name %>.js',
-        dest: '<%= meta.distPath %><%= pkg.name %>.min.js'
+        src: '<%= meta.distPath %>js/<%= pkg.name %>.js',
+        dest: '<%= meta.distPath %>js/<%= pkg.name %>.min.js'
       },
       docs: {
         src: [
