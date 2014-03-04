@@ -67,7 +67,12 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a1855', endColorstr='#da0024', GradientType=0 );
 }
 .docs-header {
-  height: 100vh;
+  position: fixed !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   min-height: 750px;
 
   // Ad on the homepage
