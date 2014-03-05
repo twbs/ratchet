@@ -107,7 +107,7 @@ module.exports = function(grunt) {
       theme: {
         files: {
           '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.min.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.min.css' : '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css'
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.min.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css'
         }
       },
       docs: {
@@ -165,6 +165,23 @@ module.exports = function(grunt) {
       },
       docs: {
         src: ['docs/assets/js/docs.js', 'docs/assets/js/fingerblast.js']
+      }
+    },
+
+    csslint: {
+      options: {
+        csslintrc: 'sass/.csslintrc'
+      },
+      src: [
+        'dist/css/<%= pkg.name %>.css',
+        'dist/css/<%= pkg.name %>-theme-android.css',
+        'dist/css/<%= pkg.name %>-theme-ios.css'
+      ],
+      docs: {
+        options: {
+          'ids': false
+        },
+        src: ['docs/assets/css/docs.css']
       }
     },
 
