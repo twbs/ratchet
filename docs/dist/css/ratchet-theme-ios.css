@@ -131,18 +131,12 @@ p {
 .bar.bar-footer-secondary-tab {
   bottom: 50px;
 }
-.bar .bar-footer,
-.bar .bar-footer-secondary,
-.bar .bar-footer-secondary-tab {
+.bar.bar-footer, .bar.bar-footer-secondary, .bar.bar-footer-secondary-tab {
   border-top: 0;
-  -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
 
 .bar-tab {
   border-top: 0;
-  -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
 
 .tab-item {
