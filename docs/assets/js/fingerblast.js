@@ -1,9 +1,14 @@
 // FINGERBLAST.js
 // --------------
-// Adapted from phantom limb by brian cartensen
+// Adapted from phantom limb by Brian Cartensen
+
+/* jshint bitwise: false */
+/* global GLOBAL: true */
 
 function FingerBlast(element) {
-  this.element = typeof element == 'string' ? document.querySelector(element) : element;
+  'use strict';
+
+  this.element = typeof element === 'string' ? document.querySelector(element) : element;
   this.listen();
 }
 
@@ -17,19 +22,22 @@ FingerBlast.prototype = {
   mouseIsDown: false,
 
   listen: function () {
+    'use strict';
 
     var activate = this.activate.bind(this);
     var deactivate = this.deactivate.bind(this);
 
     function contains (element, ancestor) {
       var descendants, index, descendant;
-      if ("compareDocumentPosition" in ancestor) {
+      if ('compareDocumentPosition' in ancestor) {
         return !!(ancestor.compareDocumentPosition(element) & 16);
-      } else if ("contains" in ancestor) {
-        return ancestor != element && ancestor.contains(element);
+      } else if ('contains' in ancestor) {
+        return ancestor !== element && ancestor.contains(element);
       } else {
-        for (descendants = ancestor.getElementsByTagName("*"), index = 0; descendant = descendants[index++];) {
-          if (descendant == element) return true;
+        for ((descendants = ancestor.getElementsByTagName('*')), index = 0; (descendant = descendants[index++]);) {
+          if (descendant === element) {
+            return true;
+          }
         }
         return false;
       }
@@ -37,17 +45,25 @@ FingerBlast.prototype = {
 
     this.element.addEventListener('mouseover', function (e) {
       var target = e.relatedTarget;
-      if (target != this && !contains(target, this)) activate();
+      if (target !== this && !contains(target, this)) {
+        activate();
+      }
     });
 
-    this.element.addEventListener("mouseout", function (e) {
+    this.element.addEventListener('mouseout', function (e) {
       var target = e.relatedTarget;
-      if (target != this && !contains(target, this)) deactivate(e);
+      if (target !== this && !contains(target, this)) {
+        deactivate(e);
+      }
     });
   },
 
   activate: function () {
-    if (this.active) return;
+    'use strict';
+
+    if (this.active) {
+      return;
+    }
     this.element.addEventListener('mousedown', (this.touchStart = this.touchStart.bind(this)), true);
     this.element.addEventListener('mousemove', (this.touchMove  = this.touchMove.bind(this)),  true);
     this.element.addEventListener('mouseup',   (this.touchEnd   = this.touchEnd.bind(this)),   true);
@@ -56,8 +72,12 @@ FingerBlast.prototype = {
   },
 
   deactivate: function (e) {
+    'use strict';
+
     this.active = false;
-    if (this.mouseIsDown) this.touchEnd(e);
+    if (this.mouseIsDown) {
+      this.touchEnd(e);
+    }
     this.element.removeEventListener('mousedown', this.touchStart, true);
     this.element.removeEventListener('mousemove', this.touchMove,  true);
     this.element.removeEventListener('mouseup',   this.touchEnd,   true);
@@ -65,13 +85,21 @@ FingerBlast.prototype = {
   },
 
   click: function (e) {
-    if (e.synthetic) return;
+    'use strict';
+
+    if (e.synthetic) {
+      return;
+    }
     e.preventDefault();
     e.stopPropagation();
   },
 
   touchStart: function (e) {
-    if (e.synthetic || /input|textarea/.test(e.target.tagName.toLowerCase())) return;
+    'use strict';
+
+    if (e.synthetic || /input|textarea/.test(e.target.tagName.toLowerCase())) {
+      return;
+    }
 
     this.mouseIsDown = true;
 
@@ -82,18 +110,28 @@ FingerBlast.prototype = {
   },
 
   touchMove: function (e) {
-    if (e.synthetic) return;
+    'use strict';
+
+    if (e.synthetic) {
+      return;
+    }
 
     e.preventDefault();
     e.stopPropagation();
 
     this.move(e.clientX, e.clientY);
 
-    if (this.mouseIsDown) this.fireTouchEvents('touchmove', e);
+    if (this.mouseIsDown) {
+      this.fireTouchEvents('touchmove', e);
+    }
   },
 
   touchEnd: function (e) {
-    if (e.synthetic) return;
+    'use strict';
+
+    if (e.synthetic) {
+      return;
+    }
 
     this.mouseIsDown = false;
 
@@ -102,7 +140,9 @@ FingerBlast.prototype = {
 
     this.fireTouchEvents('touchend', e);
 
-    if (!this.target) return;
+    if (!this.target) {
+      return;
+    }
 
     // Mobile Safari moves all the mouse events to fire after the touchend event.
     this.target.dispatchEvent(this.createMouseEvent('mouseover', e));
@@ -111,12 +151,16 @@ FingerBlast.prototype = {
   },
 
   fireTouchEvents: function (eventName, originalEvent) {
+    'use strict';
+
     var events   = [];
     var gestures = [];
 
-    if (!this.target) return;
+    if (!this.target) {
+      return;
+    }
 
-    // Convert "ontouch*" properties and attributes to listeners.
+    // Convert 'ontouch*' properties and attributes to listeners.
     var onEventName = 'on' + eventName;
 
     if (onEventName in this.target) {
@@ -153,7 +197,9 @@ FingerBlast.prototype = {
         this.startAngle = angle;
       }
 
-      if (eventName === 'touchend') gestureName = 'gestureend';
+      if (eventName === 'touchend') {
+        gestureName = 'gestureend';
+      }
 
       events.forEach(function(event) {
         var gesture = this.createMouseEvent.call(event._finger, gestureName, event);
@@ -189,6 +235,8 @@ FingerBlast.prototype = {
   },
 
   createMouseEvent: function (eventName, originalEvent) {
+    'use strict';
+
     var e = document.createEvent('MouseEvent');
 
     e.initMouseEvent(eventName, true, true,
@@ -207,6 +255,8 @@ FingerBlast.prototype = {
   },
 
   move: function (x, y) {
+    'use strict';
+
     if (isNaN(x) || isNaN(y)) {
       this.target = null;
     } else {
