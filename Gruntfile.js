@@ -10,6 +10,10 @@ module.exports = function(grunt) {
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
 
+  RegExp.quote = function (string) {
+    return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
+  };
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
