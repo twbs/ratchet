@@ -1,0 +1,10 @@
+.slider {
+  margin-bottom: 0;
+}
+.slider img {
+  width: auto;
+  height: 150px;
+}
+.content-padded {
+  margin: 30px 15px 15px;
+}
