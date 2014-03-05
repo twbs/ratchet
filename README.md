@@ -1,4 +1,4 @@
-# Ratchet v2.0.0 [![Build Status](https://secure.travis-ci.org/twbs/ratchet.png)](http://travis-ci.org/twbs/ratchet) [![devDependencies](https://david-dm.org/twbs/ratchet/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/ratchet#info=devDependencies)
+# Ratchet v2.0.1 [![Build Status](https://secure.travis-ci.org/twbs/ratchet.png)](http://travis-ci.org/twbs/ratchet) [![devDependencies](https://david-dm.org/twbs/ratchet/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/ratchet#info=devDependencies)
 
 Build mobile apps with simple HTML, CSS, and JS components.
 
@@ -15,7 +15,7 @@ Build mobile apps with simple HTML, CSS, and JS components.
 
 ## Getting started
 
-- Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.0.zip) the bundled CSS and JS
+- Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.1.zip) the bundled CSS and JS
 - [Read the docs](http://goratchet.com) to learn about the components and how to get a prototype on your phone
 - [Check out examples](http://goratchet.com/examples/)
 
@@ -55,7 +55,7 @@ Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly
 1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation).
   - **Windows users:** Read [this unofficial guide](https://github.com/juthilo/run-jekyll-on-windows/) to get Jekyll up and running without problems. We use Pygments for syntax highlighting, so make sure to read the sections on installing Python and Pygments.
 2. From the root `/ratchet/docs` directory, run `jekyll serve` in the command line.
-  - **Windows users:** While we use Jekyll's `encoding` setting, you might still need to change the command prompt's character encoding ([code page](http://en.wikipedia.org/wiki/Windows_code_page)) to UTF-8 so Jekyll runs without errors. For Ruby 2.0.0, run `chcp 65001` first. For Ruby 1.9.3, you can alternatively do `SET LANG=en_EN.UTF-8`.
+  - **Windows users:** While we use Jekyll's `encoding` setting, you might still need to change the command prompt's character encoding ([code page](http://en.wikipedia.org/wiki/Windows_code_page)) to UTF-8 so Jekyll runs without errors. For Ruby 2.0.1, run `chcp 65001` first. For Ruby 1.9.3, you can alternatively do `SET LANG=en_EN.UTF-8`.
 3. Open <http://localhost:4000> in your browser, and boom!
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).

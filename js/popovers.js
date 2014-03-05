@@ -1,5 +1,5 @@
 /* ----------------------------------
- * POPOVER v2.0.0
+ * POPOVER v2.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */

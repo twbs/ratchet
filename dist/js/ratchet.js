@@ -1,14 +1,14 @@
 /*!
  * =====================================================
- * Ratchet v2.0.0 (http://goratchet.com)
+ * Ratchet v2.0.1 (http://goratchet.com)
  * Copyright 2014 Connor Sears
  * Licensed under MIT.
  *
- * v2.0.0 designed by @connors.
+ * v2.0.1 designed by @connors.
  * =====================================================
  */
 /* ----------------------------------
- * MODAL v2.0.0
+ * MODAL v2.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
@@ -46,7 +46,7 @@
 }());
 
 /* ----------------------------------
- * POPOVER v2.0.0
+ * POPOVER v2.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
@@ -131,7 +131,7 @@
 }());
 
 /* ----------------------------------
- * PUSH v2.0.0
+ * PUSH v2.0.1
  * Licensed under The MIT License
  * inspired by chris's jquery.pjax.js
  * http://opensource.org/licenses/MIT
@@ -610,7 +610,7 @@
 }());
 
 /* ----------------------------------
- * Segmented controls v2.0.0
+ * Segmented controls v2.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
@@ -671,7 +671,7 @@
   window.addEventListener('click', function (e) { if (getTarget(e.target)) {e.preventDefault();} });
 }());
 /* ----------------------------------
- * SLIDER v2.0.0
+ * SLIDER v2.0.1
  * Licensed under The MIT License
  * Adapted from Brad Birdsall's swipe
  * http://opensource.org/licenses/MIT
@@ -802,7 +802,7 @@
 }());
 
 /* ----------------------------------
- * TOGGLE v2.0.0
+ * TOGGLE v2.0.1
  * Licensed under The MIT License
  * http://opensource.org/licenses/MIT
  * ---------------------------------- */
