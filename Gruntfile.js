@@ -77,6 +77,24 @@ module.exports = function(grunt) {
       }
     },
 
+    csscomb: {
+      options: {
+        config: 'sass/.csscomb.json'
+      },
+      dist: {
+        files: {
+          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
+          'dist/css/<%= pkg.name %>-theme-android.css': 'dist/css/<%= pkg.name %>-theme-android.css',
+          'dist/css/<%= pkg.name %>-theme-ios.css': 'dist/css/<%= pkg.name %>-theme-ios.css'
+        }
+      },
+      docs: {
+        files: {
+          'docs/assets/css/docs.css': 'docs/assets/css/docs.css'
+        }
+      }
+    },
+
     copy: {
       fonts: {
         expand: true,
@@ -219,7 +237,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
 
   // Default task(s).
-  grunt.registerTask('dist-css', ['sass', 'cssmin']);
+  grunt.registerTask('dist-css', ['sass', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
