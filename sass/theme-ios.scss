@@ -477,9 +477,6 @@ textarea,
 
 .popover {
   border-radius: 12px;
-  -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
-     -moz-transition: -moz-transform .2s ease-in-out, opacity .2s ease-in-out;
-          transition: transform .2s ease-in-out, opacity .2s ease-in-out;
   @include transition(-webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
 
   &:before {
