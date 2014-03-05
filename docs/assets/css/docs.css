@@ -1078,17 +1078,11 @@ hr {
 .platform-ios .bar.bar-footer-secondary-tab {
   bottom: 50px;
 }
-.platform-ios .bar .bar-footer,
-.platform-ios .bar .bar-footer-secondary,
-.platform-ios .bar .bar-footer-secondary-tab {
+.platform-ios .bar.bar-footer, .platform-ios .bar.bar-footer-secondary, .platform-ios .bar.bar-footer-secondary-tab {
   border-top: 0;
-  -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
 .platform-ios .bar-tab {
   border-top: 0;
-  -webkit-box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 -1px rgba(0, 0, 0, 0.85);
 }
 .platform-ios .tab-item {
   color: #929292;
