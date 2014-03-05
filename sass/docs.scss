@@ -1116,9 +1116,12 @@ hr {
   margin-right: 10px;
   border-radius: 4px;
 }
+.list-group .team-member-info {
+  overflow: hidden;
+}
 .list-group .github-btn {
   float: right;
   margin-top: 6px;
-  width: 180px;
+  width: 121px;
   height: 20px;
 }
