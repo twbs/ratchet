@@ -1995,3 +1995,46 @@ hr {
 .bs-callout-info h4 {
   color: #5bc0de;
 }
+
+.list-group {
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.list-group-item:first-child {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.list-group .team-member {
+  color: #555;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.list-group img {
+  float: left;
+  width: 32px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.list-group .team-member-info {
+  overflow: hidden;
+}
+
+.list-group .github-btn {
+  float: right;
+  margin-top: 6px;
+  width: 121px;
+  height: 20px;
+}
