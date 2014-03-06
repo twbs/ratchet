@@ -38,14 +38,14 @@
 
 // Gradients
 @mixin gradient($color-form, $color-to) {
-  background: $color-form; // Old browsers
-  background: -moz-linear-gradient(top, $color-form 0%, $color-to 100%); // FF3.6+
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-form), color-stop(100%,$color-to)); // Chrome,Safari4+
-  background: -webkit-linear-gradient(top, $color-form 0%, $color-to 100%); // Chrome10+,Safari5.1+
-  background: -o-linear-gradient(top, $color-form 0%, $color-to 100%); // Opera 11.10+
-  background: -ms-linear-gradient(top, $color-form 0%, $color-to 100%); // IE10+
-  background: linear-gradient(to bottom, $color-form 0%, $color-to 100%); // W3C
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-form', endColorstr='$color-to',GradientType=0 ); // IE6-9
+  background-color: $color-form; // Old browsers
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-form), color-stop(100%,$color-to)); // Chrome,Safari4+
+  background-image: -webkit-linear-gradient(top, $color-form 0%, $color-to 100%); // Chrome10+,Safari5.1+
+  background-image: -moz-linear-gradient(top, $color-form 0%, $color-to 100%); // FF3.6+
+  background-image: -ms-linear-gradient(top, $color-form 0%, $color-to 100%); // IE10+
+  background-image: -o-linear-gradient(top, $color-form 0%, $color-to 100%); // Opera 11.10+
+  background-image: linear-gradient(to bottom, $color-form 0%, $color-to 100%); // W3C
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-form', endColorstr='$color-to', GradientType=0 ); // IE6-9
 
 }
 
