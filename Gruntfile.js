@@ -36,6 +36,10 @@ module.exports = function(grunt) {
             ' * =====================================================\n' +
             ' */\n',
 
+    clean: {
+      dist: ['dist', 'docs/dist']
+    },
+    
     concat: {
       ratchet: {
         options: {
@@ -200,7 +204,7 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('dist-css', ['sass', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
-  grunt.registerTask('dist', ['dist-css', 'dist-js', 'copy']);
+  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
