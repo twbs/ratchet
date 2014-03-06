@@ -383,12 +383,12 @@
 
   var triggerStateChange = function () {
     var e;
-    var options = {};
-    
-    options.detail = { state: getCached(PUSH.id) };
-    options.bubbles = true;
-    options.cancelable = true;
-    
+    var options = {
+      detail: { state: getCached(PUSH.id) },
+      bubbles: true,
+      cancelable: true
+    };
+
     if (typeof CustomEvent === 'function') {
       e = new CustomEvent('push', options);
     } else if (document.createEvent) {
