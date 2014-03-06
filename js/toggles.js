@@ -76,7 +76,7 @@
 
     handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
 
-    toggle.classList[(distanceX > (toggleWidth/2 - handleWidth/2)) ? 'add' : 'remove']('active');
+    toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
   });
 
   window.addEventListener('touchend', function (e) {
@@ -88,7 +88,7 @@
     var toggleWidth = toggle.clientWidth;
     var handleWidth = handle.clientWidth;
     var offset      = (toggleWidth - handleWidth);
-    var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth/2 - handleWidth/2)));
+    var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
 
     if (slideOn) {
       handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';

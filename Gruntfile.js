@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     clean: {
       dist: ['dist', 'docs/dist']
     },
-    
+
     concat: {
       ratchet: {
         options: {
