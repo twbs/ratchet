@@ -12,3 +12,4 @@ permalink:    pretty
 # Server
 source:       ./docs
 port:         4000
+url:          http://goratchet.com
