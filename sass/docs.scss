@@ -241,7 +241,7 @@ body {
     background-clip: padding-box;
     border: 1px solid rgba(0,0,0,.2);
     border-radius: 3px;
-    box-shadow: 0 0 8px rgba(0,0,0,.05);
+    @include box-shadow(0 0 8px rgba(0,0,0,.05));
 
     &.active {
       display: block;
