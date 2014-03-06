@@ -16,7 +16,7 @@ body {
 
 body {
   position: relative !important;
-  font: 300 14px/1.5 "Open Sans", sans-serif;
+  font: 400 14px/1.5 "Open Sans", sans-serif;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -32,7 +32,7 @@ body {
   }
 }
 .docs-content h1, .docs-content h2, .docs-content h3, .docs-content h4, .docs-content h5, .docs-content h6 {
-  font-weight: 300;
+  font-weight: 400;
   color: #222;
 }
 .docs-content h2 {
@@ -120,7 +120,7 @@ body {
   left: 50%;
   margin-bottom: 0;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 400;
   z-index: 20;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -403,7 +403,7 @@ body {
 .docs-sub-content .page-description {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 .docs-sub-content .page-title {
   font-size: 40px;

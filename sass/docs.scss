@@ -14,7 +14,7 @@ body {
 }
 body {
   position: relative !important; // Overrides the fixed positioning of body in Ratchet
-  font: 300 14px/1.5 "Open Sans", sans-serif;
+  font: 400 14px/1.5 "Open Sans", sans-serif;
   color: #333;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; // Fix for webkit rendering
@@ -34,7 +34,7 @@ body {
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 400;
     color: #222;
   }
   h2 {
@@ -125,7 +125,7 @@ body {
   left: 50%;
   margin-bottom: 0;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 400;
   z-index: 20;
   @include transform(translateX(-50%));
 }
@@ -406,7 +406,7 @@ body {
   .page-description {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 300;
+    font-weight: 400;
   }
   .page-title {
     font-size: 40px;
