@@ -564,7 +564,6 @@ body {
   @include transform(translate3d(0, -55px, 0));
 
   &.visible {
-    @include transform(translateY(0));
     @include transform(translate3d(0, 0, 0));
   }
 
