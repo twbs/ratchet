@@ -178,7 +178,7 @@ module.exports = function(grunt) {
         jshintrc: 'js/.jshintrc'
       },
       grunt: {
-        src: 'Gruntfile.js'
+        src: ['Gruntfile.js', 'grunt/*.js']
       },
       src: {
         src: 'js/*.js'

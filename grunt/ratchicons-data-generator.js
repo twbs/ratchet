@@ -4,6 +4,9 @@
  * Original script from Bootstrap (http://getbootstrap.com).
  * Bootstrap is copyright 2014 Twitter, Inc. and licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE).
  */
+
+/* jshint node: true */
+
 'use strict';
 var fs = require('fs');
 
