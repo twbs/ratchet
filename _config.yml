@@ -10,6 +10,6 @@ pygments:     true
 permalink:    pretty
 
 # Server
-source:       ./docs
+source:       docs
 port:         4000
 url:          http://goratchet.com
