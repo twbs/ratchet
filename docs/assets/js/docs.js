@@ -51,7 +51,7 @@ $(function() {
     if (windowWidth >= 768) {
       device.initialLeft   = device.offset().left;
       device.initialTop    = device.initialTop || device.offset().top;
-      device.dockingOffset = ($(window).height() - device.height())/2;
+      device.dockingOffset = ($(window).height() - device.height()) / 2;
     }
 
     checkDesktopContent();
@@ -134,7 +134,7 @@ $(function() {
     var contentSectionItem;
     var currentTop = win.scrollTop();
 
-    if((device.initialTop - currentTop) <= device.dockingOffset) {
+    if ((device.initialTop - currentTop) <= device.dockingOffset) {
       device[0].className = 'device device-fixed';
       device.css({top: device.dockingOffset});
     } else {
@@ -175,7 +175,7 @@ $(function() {
     var currentTop   = win.scrollTop();
     var headerHeight = $('.docs-sub-header').outerHeight();
 
-    if(currentTop >= headerHeight) {
+    if (currentTop >= headerHeight) {
       toolbarToggle.addClass('visible');
     } else if (currentTop <= headerHeight) {
       toolbarToggle.removeClass('visible');
