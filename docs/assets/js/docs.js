@@ -24,23 +24,28 @@ $(function() {
 
 
   var initialize = function () {
-    currentActive        = 0;
-    topCache             = [];
-    win                  = $(window);
-    doc                  = $(document);
-    bod                  = $(document.body);
-    device               = device || $('.js-device');
-    navComponentLinks    = $('.js-jump-menu');
-    componentsList       = $('.js-component-group');
-    componentLinks       = $('.component-example a');
-    contentSection       = $('.component');
-    topCache             = contentSection.map(function () { return $(this).offset().top; });
-    windowHeight         = $(window).height() / 3;
-    windowWidth          = $(window).width();
-    pageHeight           = $(document).height();
-    contentPadding       = parseInt($('.docs-content').css('padding-bottom'), 10);
-    footerHeight         = $('.docs-footer').outerHeight(false);
-    toolbarToggle        = $('.js-docs-component-toolbar');
+    currentActive          = 0;
+    topCache               = [];
+    win                    = $(window);
+    doc                    = $(document);
+    bod                    = $(document.body);
+    device                 = device || $('.js-device');
+    navComponentLinks      = $('.js-jump-menu');
+    componentsList         = $('.js-component-group');
+    componentLinks         = $('.component-example a');
+    contentSection         = $('.component');
+    topCache               = contentSection.map(function () { return $(this).offset().top; });
+    windowHeight           = $(window).height() / 3;
+    windowWidth            = $(window).width();
+    pageHeight             = $(document).height();
+    contentPadding         = parseInt($('.docs-content').css('padding-bottom'), 10);
+    footerHeight           = $('.docs-footer').outerHeight(false);
+    toolbarToggle          = $('.js-docs-component-toolbar');
+
+    // exit if no device
+    if (!device.length) {
+      return;
+    }
 
     // Device placement
     if (windowWidth >= 768) {
@@ -179,5 +184,7 @@ $(function() {
   };
 
   $(window).on('load resize', initialize);
-  $(window).on('load', function () { new FingerBlast('.device-content'); });
+  $(window).on('load', function () {
+    window.FingerBlast && (new FingerBlast('.device-content'));
+  });
 });
