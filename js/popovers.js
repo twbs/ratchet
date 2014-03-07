@@ -79,6 +79,5 @@
   };
 
   window.addEventListener('touchend', showHidePopover);
-  window.addEventListener('click', showHidePopover);
 
 }());
