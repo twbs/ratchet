@@ -809,6 +809,11 @@ code {
   margin: 10px auto;
 }
 
+.toggle,
+.toggle-handle {
+    cursor: pointer;
+}
+
 // Popovers
 #popoversInDevice {
   #iwindow:before {
