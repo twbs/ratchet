@@ -540,9 +540,6 @@ body {
   transform: translate3d(0, -55px, 0);
 }
 .docs-component-toolbar.visible {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -1136,7 +1133,7 @@ hr {
   border-top: 0;
   border-bottom: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%, 0 0%;
+  background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
 }
 .platform-ios .table-view .table-view-cell {
@@ -1152,7 +1149,7 @@ hr {
   border-top: 0;
   border-bottom: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%, 0 0%;
+  background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
 }
 .platform-ios select,
@@ -1195,7 +1192,7 @@ hr {
   padding: 0;
   border: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%, 0 0%;
+  background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
 }
 .platform-ios .input-group input {
@@ -1279,9 +1276,6 @@ hr {
 }
 .platform-ios .popover {
   border-radius: 12px;
-  -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
-  -moz-transition: -moz-transform .2s ease-in-out, opacity .2s ease-in-out;
-  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   -moz-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;

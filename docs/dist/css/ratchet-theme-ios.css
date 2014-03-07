@@ -198,7 +198,7 @@ p {
   border-top: 0;
   border-bottom: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%, 0 0%;
+  background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
 }
 .table-view .table-view-cell {
@@ -214,7 +214,7 @@ p {
   border-top: 0;
   border-bottom: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%, 0 0%;
+  background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
 }
 
@@ -262,7 +262,7 @@ textarea,
   padding: 0;
   border: 0;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>"), url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#c8c7cc' x='0' y='0' width='100%' height='0.5'/></svg>");
-  background-position: 0 100%, 0 0%;
+  background-position: 0 100%, 0 0;
   background-repeat: no-repeat;
 }
 
@@ -355,9 +355,6 @@ textarea,
 
 .popover {
   border-radius: 12px;
-  -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
-  -moz-transition: -moz-transform .2s ease-in-out, opacity .2s ease-in-out;
-  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   -moz-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
