@@ -41,7 +41,8 @@
     "grunt-jekyll": "~0.4.1",
     "grunt-jscs-checker": "~0.4.0",
     "grunt-sed": "~0.1.1",
-    "load-grunt-tasks": "~0.4.0"
+    "load-grunt-tasks": "~0.4.0",
+    "time-grunt": "~0.2.10"
   },
   "engines": {
     "node": "~0.10.1"
