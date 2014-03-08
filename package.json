@@ -11,8 +11,8 @@
   ],
   "homepage": "http://goratchet.com",
   "author": "Connor Sears",
-  "style": "./dist/css/ratchet.css",
-  "sass": "./sass/ratchet.scss",
+  "style": "dist/css/ratchet.css",
+  "sass": "sass/ratchet.scss",
   "repository": {
     "type": "git",
     "url": "https://github.com/twbs/ratchet.git"
