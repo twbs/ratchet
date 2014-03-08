@@ -1932,15 +1932,6 @@ hr {
     opacity: 1;
   }
 }
-
-/* Taken from Bootstrap docs */
-/*
- * Callouts
- *
- * Not quite alerts, but custom and helpful notes for folks reading the docs.
- * Requires a base and modifier class.
- */
-/* Common styles for all types */
 .bs-callout {
   padding: 20px;
   margin: 20px 0;
@@ -1961,7 +1952,6 @@ hr {
   border-radius: 3px;
 }
 
-/* Variations */
 .bs-callout-danger {
   background-color: #fdf7f7;
   border-color: #d9534f;
