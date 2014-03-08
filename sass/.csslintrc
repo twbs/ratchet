@@ -5,6 +5,7 @@
   "compatible-vendor-prefixes": false,
   "fallback-colors": false,
   "font-sizes": false,
+  "gradients": false,
   "important": false,
   "known-properties": false,
   "outline-none": false,

@@ -112,6 +112,48 @@ module.exports = function (grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        browsers: [
+          'Android 2.3',
+          'Android >= 4',
+          'Chrome >= 20',
+          'Firefox >= 24', // Firefox 24 is the latest ESR
+          'Explorer >= 9',
+          'iOS >= 6',
+          'Opera >= 12',
+          'Safari >= 6'
+        ]
+      },
+      core: {
+        src: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+      },
+      android_theme: {
+        options: {
+          browsers: [
+            'Android 2.3',
+            'Android >= 4',
+            'Chrome >= 20',
+            'Firefox >= 24', // Firefox 24 is the latest ESR
+            'Opera >= 12'
+          ]
+        },
+        src: '<%= sass.android_theme.dest %>'
+      },
+      ios_theme: {
+        options: {
+          browsers: ['iOS >= 6']
+        },
+        src: '<%= sass.ios_theme.dest %>'
+      },
+      docs: {
+        options: {
+          browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+        },
+        src: '<%= sass.docs.dest %>'
+      }
+    },
+
     cssmin: {
       options: {
         keepSpecialComments: '*' // set to '*' because we already add the banner in sass
@@ -248,7 +290,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Default task(s).
-  grunt.registerTask('dist-css', ['sass', 'csscomb', 'cssmin']);
+  grunt.registerTask('dist-css', ['sass', 'autoprefixer', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
