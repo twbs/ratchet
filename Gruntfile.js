@@ -261,7 +261,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 
