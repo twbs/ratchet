@@ -1276,10 +1276,8 @@ window.addEventListener('push', myFunction);
       </div>
 
 {% highlight html %}
-<div class="content-padded">
-{% for iconClassName in site.data.ratchicons %}
-  <span class="icon {{ iconClassName }}"></span>
-{% endfor %}
+<div class="content-padded">{% for iconClassName in site.data.ratchicons %}
+  <span class="icon {{ iconClassName }}"></span>{% endfor %}
 </div>
 {% endhighlight %}
 
