@@ -68,13 +68,21 @@ module.exports = function (grunt) {
         style: 'expanded',
         unixNewlines: true
       },
-      dist: {
-        files: {
-          '<%= meta.distPath %>css/<%= pkg.name %>.css': 'sass/ratchet.scss',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css': 'sass/theme-ios.scss',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css': 'sass/theme-android.scss',
-          '<%= meta.docsAssetsPath %>css/docs.css': 'sass/docs.scss'
-        }
+      core: {
+        src: 'sass/ratchet.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+      },
+      android: {
+        src: 'sass/theme-android.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css'
+      },
+      ios: {
+        src: 'sass/theme-ios.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css'
+      },
+      docs: {
+        src: 'sass/docs.scss',
+        dest: '<%= meta.docsAssetsPath %>css/docs.css'
       }
     },
 
@@ -82,16 +90,24 @@ module.exports = function (grunt) {
       options: {
         config: 'sass/.csscomb.json'
       },
-      dist: {
+      core: {
         files: {
-          '<%= meta.distPath %>css/<%= pkg.name %>.css': '<%= meta.distPath %>css/<%= pkg.name %>.css',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css'
+          '<%= sass.core.dest %>': '<%= sass.core.dest %>'
+        }
+      },
+      android: {
+        files: {
+          '<%= sass.android.dest %>': '<%= sass.android.dest %>'
+        }
+      },
+      ios: {
+        files: {
+          '<%= sass.ios.dest %>': '<%= sass.ios.dest %>'
         }
       },
       docs: {
         files: {
-          '<%= meta.docsAssetsPath %>css/docs.css': '<%= meta.docsAssetsPath %>css/docs.css'
+          '<%= sass.docs.dest %>': '<%= sass.docs.dest %>'
         }
       }
     },
@@ -126,9 +142,9 @@ module.exports = function (grunt) {
         ]
       },
       core: {
-        src: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+        src: '<%= sass.core.dest %>'
       },
-      android_theme: {
+      android: {
         options: {
           browsers: [
             'Android 2.3',
@@ -138,18 +154,15 @@ module.exports = function (grunt) {
             'Opera >= 12'
           ]
         },
-        src: '<%= sass.android_theme.dest %>'
+        src: '<%= sass.android.dest %>'
       },
-      ios_theme: {
+      ios: {
         options: {
           browsers: ['iOS >= 6']
         },
-        src: '<%= sass.ios_theme.dest %>'
+        src: '<%= sass.ios.dest %>'
       },
       docs: {
-        options: {
-          browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
-        },
         src: '<%= sass.docs.dest %>'
       }
     },
