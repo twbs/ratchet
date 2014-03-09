@@ -31,7 +31,10 @@
       var deactivate = this.deactivate.bind(this);
 
       function contains (element, ancestor) {
-        var descendants, index, descendant;
+        var descendants;
+        var index;
+        var descendant;
+
         if ('compareDocumentPosition' in ancestor) {
           return !!(ancestor.compareDocumentPosition(element) & 16);
         } else if ('contains' in ancestor) {

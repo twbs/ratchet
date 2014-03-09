@@ -10,7 +10,9 @@
   var popover;
 
   var findPopovers = function (target) {
-    var i, popovers = document.querySelectorAll('a');
+    var i;
+    var popovers = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = popovers.length; i--;) {
         if (popovers[i] === target) {

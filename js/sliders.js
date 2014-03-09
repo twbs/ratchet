@@ -23,7 +23,9 @@
   var scrollableArea;
 
   var getSlider = function (target) {
-    var i, sliders = document.querySelectorAll('.slider > .slide-group');
+    var i;
+    var sliders = document.querySelectorAll('.slider > .slide-group');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = sliders.length; i--;) {
         if (sliders[i] === target) {

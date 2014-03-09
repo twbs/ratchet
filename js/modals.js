@@ -8,7 +8,9 @@
   'use strict';
 
   var findModals = function (target) {
-    var i, modals = document.querySelectorAll('a');
+    var i;
+    var modals = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = modals.length; i--;) {
         if (modals[i] === target) {
