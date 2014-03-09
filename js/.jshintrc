@@ -3,7 +3,6 @@
   "browser" : true,
   "devel"   : true,
   "eqeqeq"  : true,
-  "eqnull"  : true,
   "expr"    : true,
   "forin"   : true,
   "freeze"  : true,

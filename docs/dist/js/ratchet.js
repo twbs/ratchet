@@ -104,7 +104,7 @@
       popover = null;
     }
 
-    if (popover == null) {
+    if (popover === null) {
       return;
     }
 
