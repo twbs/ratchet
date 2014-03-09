@@ -17,7 +17,9 @@
   'use strict';
 
   var findModals = function (target) {
-    var i, modals = document.querySelectorAll('a');
+    var i;
+    var modals = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = modals.length; i--;) {
         if (modals[i] === target) {
@@ -57,7 +59,9 @@
   var popover;
 
   var findPopovers = function (target) {
-    var i, popovers = document.querySelectorAll('a');
+    var i;
+    var popovers = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = popovers.length; i--;) {
         if (popovers[i] === target) {
@@ -523,7 +527,9 @@
   };
 
   var findTarget = function (target) {
-    var i, toggles = document.querySelectorAll('a');
+    var i;
+    var toggles = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = toggles.length; i--;) {
         if (toggles[i] === target) {
@@ -618,7 +624,9 @@
   'use strict';
 
   var getTarget = function (target) {
-    var i, segmentedControls = document.querySelectorAll('.segmented-control .control-item');
+    var i;
+    var segmentedControls = document.querySelectorAll('.segmented-control .control-item');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = segmentedControls.length; i--;) {
         if (segmentedControls[i] === target) {
@@ -695,7 +703,9 @@
   var scrollableArea;
 
   var getSlider = function (target) {
-    var i, sliders = document.querySelectorAll('.slider > .slide-group');
+    var i;
+    var sliders = document.querySelectorAll('.slider > .slide-group');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = sliders.length; i--;) {
         if (sliders[i] === target) {
@@ -816,7 +826,9 @@
   var toggle    = false;
 
   var findToggle = function (target) {
-    var i, toggles = document.querySelectorAll('.toggle');
+    var i;
+    var toggles = document.querySelectorAll('.toggle');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = toggles.length; i--;) {
         if (toggles[i] === target) {

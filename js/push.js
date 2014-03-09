@@ -392,7 +392,9 @@
   };
 
   var findTarget = function (target) {
-    var i, toggles = document.querySelectorAll('a');
+    var i;
+    var toggles = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = toggles.length; i--;) {
         if (toggles[i] === target) {
