@@ -212,7 +212,7 @@ module.exports = function(grunt) {
       ],
       docs: {
         options: {
-          'ids': false
+          ids: false
         },
         src: ['docs/assets/css/docs.css']
       }
