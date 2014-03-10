@@ -1393,6 +1393,10 @@ select {
   content: '\e81a';
 }
 
+.icon-sound:before {
+  content: '\e827';
+}
+
 .icon-sound2:before {
   content: '\e828';
 }
@@ -1403,10 +1407,6 @@ select {
 
 .icon-sound4:before {
   content: '\e80c';
-}
-
-.icon-sound:before {
-  content: '\e827';
 }
 
 .icon-star-filled:before {
