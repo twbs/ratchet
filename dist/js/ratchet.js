@@ -156,9 +156,9 @@
   var cacheMapping   = sessionStorage;
   var domCache       = {};
   var transitionMap  = {
-    'slide-in'  : 'slide-out',
-    'slide-out' : 'slide-in',
-    'fade'      : 'fade'
+    slideIn  : 'slide-out',
+    slideOut : 'slide-in',
+    fade     : 'fade'
   };
 
   var bars = {

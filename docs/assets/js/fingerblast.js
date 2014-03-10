@@ -232,20 +232,20 @@
 
     createMouseEvent: function (eventName, originalEvent) {
       var e = new MouseEvent(eventName, {
-        'view'       : window,
-        'detail'     : originalEvent.detail,
-        'bubbles'    : true,
-        'cancelable' : true,
-        'target'     : this.target || originalEvent.relatedTarget,
-        'clientX'    : this.x || originalEvent.clientX,
-        'clientY'    : this.y || originalEvent.clientY,
-        'screenX'    : this.x || originalEvent.screenX,
-        'screenY'    : this.y || originalEvent.screenY,
-        'ctrlKey'    : originalEvent.ctrlKey,
-        'shiftKey'   : originalEvent.shiftKey,
-        'altKey'     : originalEvent.altKey,
-        'metaKey'    : originalEvent.metaKey,
-        'button'     : originalEvent.button
+        view       : window,
+        detail     : originalEvent.detail,
+        bubbles    : true,
+        cancelable : true,
+        target     : this.target || originalEvent.relatedTarget,
+        clientX    : this.x || originalEvent.clientX,
+        clientY    : this.y || originalEvent.clientY,
+        screenX    : this.x || originalEvent.screenX,
+        screenY    : this.y || originalEvent.screenY,
+        ctrlKey    : originalEvent.ctrlKey,
+        shiftKey   : originalEvent.shiftKey,
+        altKey     : originalEvent.altKey,
+        metaKey    : originalEvent.metaKey,
+        button     : originalEvent.button
       });
 
       e.synthetic = true;
