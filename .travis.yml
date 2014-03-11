@@ -6,6 +6,6 @@ before_install:
 install:
   - npm install -g grunt-cli
   - npm install
-  - gem install --no-document jekyll sass
+  - gem install --no-document jekyll "sass:3.2.0"
 matrix:
   fast_finish: true
