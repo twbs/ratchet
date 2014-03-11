@@ -24,10 +24,10 @@ module.exports = function (grunt) {
 
     // Metadata.
     meta: {
-      srcPath:        'sass/',
       distPath:       'dist/',
+      docsAssetsPath: 'docs/assets/',
       docsPath:       'docs/dist/',
-      docsAssetsPath: 'docs/assets/'
+      srcPath:        'sass/'
     },
 
     banner: '/*!\n' +
@@ -83,6 +83,21 @@ module.exports = function (grunt) {
       docs: {
         src: 'sass/docs.scss',
         dest: '<%= meta.docsAssetsPath %>css/docs.css'
+      }
+    },
+
+    usebanner: {
+      dist: {
+        options: {
+          position: 'top',
+          banner: '<%= banner %>'
+        },
+        files: {
+          src: [
+            '<%= meta.distPath %>css/*.css',
+            '<%= meta.docsAssetsPath %>css/docs.css'
+          ]
+        }
       }
     },
 
@@ -303,7 +318,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Default task(s).
-  grunt.registerTask('dist-css', ['sass', 'autoprefixer', 'csscomb', 'cssmin']);
+  grunt.registerTask('dist-css', ['sass', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
