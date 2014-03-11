@@ -326,9 +326,9 @@
       enter  = /in$/.test(transition);
 
       if (transition === 'fade') {
-        container.classList.add('in');
-        container.classList.add('fade');
+        swap.classList.add('in');
         swap.classList.add('fade');
+        container.classList.add('fade');
       }
 
       if (/slide/.test(transition)) {
