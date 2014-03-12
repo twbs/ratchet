@@ -85,6 +85,9 @@ select {
   border-radius: 0;
   @include box-shadow(none);
 }
+.input-group input:last-child {
+  border-bottom: 0;
+}
 
 // Input groups with labels
 // --------------------------------------------------
