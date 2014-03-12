@@ -845,6 +845,11 @@ code {
 
 // Sliders
 @media screen and (min-width: 768px) {
+  .slider .slide {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+  }
   .slider .slide img {
     width: 100%;
     height: 570px; // Fullscreen fun times
