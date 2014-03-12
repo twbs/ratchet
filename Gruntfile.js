@@ -117,7 +117,6 @@ module.exports = function(grunt) {
       options: {
         banner: '', // set to empty; see bellow
         keepSpecialComments: '*', // set to '*' because we already add the banner in sass
-        noAdvanced: true, // disable advanced optimizations since it causes many issues
         report: 'min'
       },
       ratchet: {
@@ -261,7 +260,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 

@@ -580,7 +580,9 @@ textarea,
 }
 
 // Overlay animation for the slide transition
-@-webkit-keyframes fadeOverlay {
-  from { @include box-shadow(0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0)); }
-  to   { @include box-shadow(0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1)); }
+@at-root {
+  @-webkit-keyframes fadeOverlay {
+    from { @include box-shadow(0 0 10px rgba(0,0,0,0), -320px 0 0 rgba(0,0,0,0)); }
+    to   { @include box-shadow(0 0 10px rgba(0,0,0,.3), -320px 0 0 rgba(0,0,0,.1)); }
+  }
 }
