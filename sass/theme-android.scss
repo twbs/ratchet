@@ -11,31 +11,31 @@
 // --------------------------------------------------
 
 // Type
-$font-family-default: 'Roboto', sans-serif;
-$font-size-default: 18px;
-$font-weight: 500;
-$font-weight-light: 400;
-$line-height-default: 22px;
+$font-family-default: 'Roboto', sans-serif !global;
+$font-size-default: 18px !global;
+$font-weight: 500 !global;
+$font-weight-light: 400 !global;
+$line-height-default: 22px !global;
 
 // Colors
 //
 // Main theme colors
-$primary-color:  #33b5e5;
-$chrome-color:   #dddddd;
-$text-color:     #222;
+$primary-color:  #33b5e5 !global;
+$chrome-color:   #dddddd !global;
+$text-color:     #222 !global;
 
 // Action colors
-$default-color:  #999;
-$positive-color: #99cc00;
-$negative-color: #ff4444;
+$default-color:  #999 !global;
+$positive-color: #99cc00 !global;
+$negative-color: #ff4444 !global;
 
 // Bars
-$bar-base-height: 50px;
-$bar-tab-height:  50px;
+$bar-base-height: 50px !global;
+$bar-tab-height:  50px !global;
 
 // Borders
-$border-default: 1px solid #b1b1b1;
-$border-radius: 2px;
+$border-default: 1px solid #b1b1b1 !global;
+$border-radius: 2px !global;
 
 
 // Base

@@ -251,7 +251,7 @@ a {
   color: #428bca;
   text-decoration: none;
 
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 a:active {
   color: #3071a9;
@@ -1264,7 +1264,6 @@ select {
   src: url("../fonts/ratchicons.eot");
   src: url("../fonts/ratchicons.eot?#iefix") format("embedded-opentype"), url("../fonts/ratchicons.woff") format("woff"), url("../fonts/ratchicons.ttf") format("truetype"), url("../fonts/ratchicons.svg#svgFontName") format("svg");
 }
-
 .icon {
   display: inline-block;
   font-family: Ratchicons;

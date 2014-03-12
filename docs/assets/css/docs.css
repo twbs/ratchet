@@ -956,19 +956,6 @@ hr {
     max-width: 1170px;
   }
 }
-.platform-ios {
-  @-webkit-keyframes fadeOverlay {
-  from {
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0), -320px 0 0 rgba(0, 0, 0, 0);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0), -320px 0 0 rgba(0, 0, 0, 0);
-  }
-
-  to {
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
-            box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
-  }
-}
-}
 .platform-ios a {
   color: #007aff;
 }
@@ -1373,6 +1360,16 @@ hr {
   -webkit-transform: translate3d(-20%, 0, 0);
       -ms-transform: translate3d(-20%, 0, 0);
           transform: translate3d(-20%, 0, 0);
+}
+@-webkit-keyframes fadeOverlay {
+  .platform-ios from {
+    -webkit-box-shadow: 0 0 10px transparent, -320px 0 0 transparent;
+            box-shadow: 0 0 10px transparent, -320px 0 0 transparent;
+  }
+  .platform-ios to {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
+  }
 }
 .platform-ios .device {
   background-position: -395px 0;
@@ -1932,7 +1929,6 @@ hr {
     opacity: 1;
   }
 }
-
 .bs-callout {
   padding: 20px;
   margin: 20px 0;
