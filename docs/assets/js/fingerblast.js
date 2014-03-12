@@ -227,16 +227,22 @@
     },
 
     createMouseEvent: function (eventName, originalEvent) {
-      var e = document.createEvent('MouseEvent');
-
-      e.initMouseEvent(eventName, true, true,
-        originalEvent.view, originalEvent.detail,
-        this.x || originalEvent.screenX, this.y || originalEvent.screenY,
-        this.x || originalEvent.clientX, this.y || originalEvent.clientY,
-        originalEvent.ctrlKey, originalEvent.shiftKey,
-        originalEvent.altKey, originalEvent.metaKey,
-        originalEvent.button, this.target || originalEvent.relatedTarget
-      );
+      var e = new MouseEvent(eventName, {
+        'view'       : window,
+        'detail'     : originalEvent.detail,
+        'bubbles'    : true,
+        'cancelable' : true,
+        'target'     : this.target || originalEvent.relatedTarget,
+        'clientX'    : this.x || originalEvent.clientX,
+        'clientY'    : this.y || originalEvent.clientY,
+        'screenX'    : this.x || originalEvent.screenX,
+        'screenY'    : this.y || originalEvent.screenY,
+        'ctrlKey'    : originalEvent.ctrlKey,
+        'shiftKey'   : originalEvent.shiftKey,
+        'altKey'     : originalEvent.altKey,
+        'metaKey'    : originalEvent.metaKey,
+        'button'     : originalEvent.button
+      });
 
       e.synthetic = true;
       e._finger   = this;
