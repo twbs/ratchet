@@ -15,6 +15,21 @@
   var distanceX = false;
   var toggle    = false;
 
+  // Original script from http://davidwalsh.name/vendor-prefix
+  var getBrowserCapabilities = (function () {
+    var styles = window.getComputedStyle(document.documentElement, '');
+    var pre = (Array.prototype.slice
+        .call(styles)
+        .join('')
+        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+      )[1];
+    return {
+      transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
+    };
+  })();
+
+  var transformProperty = getBrowserCapabilities.transform;
+
   var findToggle = function (target) {
     var i;
     var toggles = document.querySelectorAll('.toggle');
@@ -73,13 +88,13 @@
     e.preventDefault();
 
     if (distanceX < 0) {
-      return (handle.style.webkitTransform = 'translate3d(0,0,0)');
+      return (handle.style[transformProperty] = 'translate3d(0,0,0)');
     }
     if (distanceX > offset) {
-      return (handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)');
+      return (handle.style[transformProperty] = 'translate3d(' + offset + 'px,0,0)');
     }
 
-    handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
+    handle.style[transformProperty] = 'translate3d(' + distanceX + 'px,0,0)';
 
     toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
   });
@@ -96,9 +111,9 @@
     var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
 
     if (slideOn) {
-      handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
+      handle.style[transformProperty] = 'translate3d(' + offset + 'px,0,0)';
     } else {
-      handle.style.webkitTransform = 'translate3d(0,0,0)';
+      handle.style[transformProperty] = 'translate3d(0,0,0)';
     }
 
     toggle.classList[slideOn ? 'add' : 'remove']('active');
