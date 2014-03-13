@@ -117,6 +117,7 @@ module.exports = function(grunt) {
       options: {
         banner: '', // set to empty; see bellow
         keepSpecialComments: '*', // set to '*' because we already add the banner in sass
+        noAdvanced: true, // disable advanced optimizations since it causes many issues
         report: 'min'
       },
       ratchet: {
