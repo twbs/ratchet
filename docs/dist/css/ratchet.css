@@ -1123,9 +1123,9 @@ select {
   position: relative;
   font-size: 0;
   white-space: nowrap;
-  -webkit-transition: all 0 linear;
-     -moz-transition: all 0 linear;
-          transition: all 0 linear;
+  -webkit-transition: all 0s linear;
+     -moz-transition: all 0s linear;
+          transition: all 0s linear;
 }
 .slider .slide-group .slide {
   display: inline-block;
