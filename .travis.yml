@@ -6,6 +6,6 @@ before_install:
 install:
   - npm install -g grunt-cli
   - npm install
-  - gem install --no-document "jekyll:1.4.2" "sass:3.3.2"
+  - gem install --no-document "jekyll:1.4.2" "sass:~>3.3.0"
 matrix:
   fast_finish: true
