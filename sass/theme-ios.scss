@@ -541,7 +541,7 @@ textarea,
     @include box-shadow(inset 0 0 0 13px $positive-color);
 
     .toggle-handle {
-      @include transform(translate3d(17px,0,0));
+      @include transform(translate3d(17px, 0, 0));
     }
 
     .toggle-handle {

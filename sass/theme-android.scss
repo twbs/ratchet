@@ -688,7 +688,7 @@ textarea,
       margin-right: 2px;
       background-color: $primary-color;
       border-color: $primary-color;
-      @include transform(translate3d(50px,0,0));
+      @include transform(translate3d(50px, 0, 0));
     }
     &:before {
       left: auto;
