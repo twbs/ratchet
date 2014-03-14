@@ -87,7 +87,7 @@
     position: absolute;
     top: 50%;
     right: 15px;
-    @include transform(translateY(-50%));
+    @include transform(translate3d(0, -50%, 0));
   }
 
   // If the cell has a chevron, give some more room.

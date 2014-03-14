@@ -48,7 +48,7 @@
     text-decoration: none;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
-    @include transform(translateY(-50%));
+    @include transform(translate3d(0, -50%, 0));
   }
 }
 .navigate-left:after,
