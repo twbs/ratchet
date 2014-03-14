@@ -104,9 +104,9 @@ body {
     top: 50% !important;
     right: 15px !important;
     margin-top: 0 !important;
-    -webkit-transform: translateY(-50%) !important;
-        -ms-transform: translateY(-50%) !important;
-            transform: translateY(-50%) !important;
+    -webkit-transform: translate3d(0, -50%, 0) !important;
+        -ms-transform: translate3d(0, -50%, 0) !important;
+            transform: translate3d(0, -50%, 0) !important;
   }
 }
 .docs-masthead {
@@ -123,9 +123,9 @@ body {
   margin-bottom: 0;
   font-size: 22px;
   font-weight: 400;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate3d(-50%, 0, 0);
+      -ms-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
 }
 
 .docs-nav .docs-nav-trigger {
@@ -179,9 +179,9 @@ body {
   .docs-title {
     position: static;
     float: left;
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 
   .docs-nav {
@@ -325,9 +325,9 @@ body {
 @media screen and (min-width: 768px) {
   .docs-header-content {
     top: 30%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -webkit-transform: translate3d(0, -50%, 0);
+        -ms-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
   }
   .docs-header-content .btn {
     display: inline-block;
