@@ -1,6 +1,15 @@
 {
   "name": "ratchet",
   "version": "2.0.1",
+  "keywords": [
+    "css",
+    "js",
+    "fonts",
+    "ios",
+    "android",
+    "mobile",
+    "prototype"
+  ],
   "main": [
     "./dist/css/ratchet.css",
     "./dist/js/ratchet.js"
