@@ -179,6 +179,7 @@ body {
   .docs-title {
     position: static;
     float: left;
+    font-weight: 300;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
@@ -318,6 +319,7 @@ body {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 28px;
+  font-weight: 300;
   line-height: 38px;
   color: #fff;
 }
@@ -404,7 +406,7 @@ body {
 .docs-sub-content .page-description {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 400;
+  font-weight: 300;
 }
 .docs-sub-content .page-title {
   margin-bottom: 5px;

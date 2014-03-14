@@ -181,6 +181,7 @@ body {
   .docs-title {
     position: static;
     float: left;
+    font-weight: 300;
     @include transform(translateX(0));
   }
 
@@ -321,6 +322,7 @@ body {
   font-size: 28px;
   color: #fff;
   line-height: 38px;
+  font-weight: 300;
 }
 
 // Desktop header content
@@ -406,7 +408,7 @@ body {
   .page-description {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 400;
+    font-weight: 300;
   }
   .page-title {
     font-size: 40px;
