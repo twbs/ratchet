@@ -109,7 +109,7 @@ body {
     top: 50% !important;
     right: 15px !important;
     margin-top: 0 !important;
-    @include transform(translateY(-50%) !important);
+    @include transform(translate3d(0, -50%, 0) !important);
   }
 }
 
@@ -127,7 +127,7 @@ body {
   font-size: 22px;
   font-weight: 400;
   z-index: 20;
-  @include transform(translateX(-50%));
+  @include transform(translate3d(-50%, 0, 0));
 }
 .docs-nav {
   .docs-nav-trigger {
@@ -181,7 +181,7 @@ body {
   .docs-title {
     position: static;
     float: left;
-    @include transform(translateX(0));
+    @include transform(translate3d(0, 0, 0));
   }
 
   // Docs nav
@@ -327,7 +327,7 @@ body {
 @media screen and (min-width: 768px) {
   .docs-header-content {
     top: 30%;
-    @include transform(translateY(-50%));
+    @include transform(translate3d(0, -50%, 0));
 
     .btn {
       display: inline-block;

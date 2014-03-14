@@ -784,9 +784,9 @@ input[type="button"] {
   position: absolute;
   top: 50%;
   right: 15px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate3d(0, -50%, 0);
+      -ms-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
 }
 .table-view-cell .navigate-left > .btn,
 .table-view-cell .navigate-left > .badge,
@@ -1237,9 +1237,9 @@ select {
   line-height: 1;
   color: #bbb;
   text-decoration: none;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate3d(0, -50%, 0);
+      -ms-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
 
   -webkit-font-smoothing: antialiased;
 }
