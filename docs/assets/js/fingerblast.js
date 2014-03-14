@@ -35,6 +35,10 @@
         var index;
         var descendant;
 
+        if (!element) {
+          return;
+        }
+
         if ('compareDocumentPosition' in ancestor) {
           return !!(ancestor.compareDocumentPosition(element) & 16);
         } else if ('contains' in ancestor) {
