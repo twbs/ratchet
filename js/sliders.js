@@ -43,7 +43,7 @@
 
   var setSlideNumber = function (offset) {
     var round = offset ? (deltaX < 0 ? 'ceil' : 'floor') : 'round';
-    slideNumber = Math[round](getScroll() / ( scrollableArea / slider.children.length) );
+    slideNumber = Math[round](getScroll() / (scrollableArea / slider.children.length));
     slideNumber += offset;
     slideNumber = Math.min(slideNumber, 0);
     slideNumber = Math.max(-(slider.children.length - 1), slideNumber);

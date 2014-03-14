@@ -136,7 +136,7 @@ $(function() {
 
     if ((device.initialTop - currentTop) <= device.dockingOffset) {
       device[0].className = 'device device-fixed';
-      device.css({top: device.dockingOffset});
+      device.css({ top: device.dockingOffset });
     } else {
       device[0].className = 'device';
       device[0].setAttribute('style','');

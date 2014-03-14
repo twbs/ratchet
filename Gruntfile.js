@@ -251,7 +251,7 @@ module.exports = function(grunt) {
   });
 
   // Load the plugins
-  require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
+  require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
   require('time-grunt')(grunt);
 
   // Default task(s).
