@@ -1,7 +1,7 @@
 # Meta data
 name:         Ratchet
 authors:      Connor Sears
-description:  Prototype mobile apps with simple HTML, CSS, and JS components.
+description:  Build mobile apps with simple HTML, CSS, and JS components.
 
 # Dependencies
 pygments:     true
