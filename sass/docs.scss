@@ -709,6 +709,9 @@ code {
   white-space: pre;
   word-wrap: normal;
 }
+.highlight pre code {
+  padding: 0;
+}
 @media screen and (min-width: 768px) {
   .component,
   .component-example-fullbleed,
