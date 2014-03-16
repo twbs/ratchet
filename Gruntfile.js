@@ -39,7 +39,7 @@ module.exports = function(grunt) {
             ' */\n',
 
     clean: {
-      dist: ['dist', 'docs/dist']
+      dist: ['<%= meta.distPath %>', '<%= meta.docsPath %>']
     },
 
     concat: {
@@ -85,14 +85,14 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
-          'dist/css/<%= pkg.name %>-theme-android.css': 'dist/css/<%= pkg.name %>-theme-android.css',
-          'dist/css/<%= pkg.name %>-theme-ios.css': 'dist/css/<%= pkg.name %>-theme-ios.css'
+          '<%= meta.distPath %>/css/<%= pkg.name %>.css': '<%= meta.distPath %>/css/<%= pkg.name %>.css',
+          '<%= meta.distPath %>/css/<%= pkg.name %>-theme-android.css': '<%= meta.distPath %>/css/<%= pkg.name %>-theme-android.css',
+          '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ios.css': '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ios.css'
         }
       },
       docs: {
         files: {
-          'docs/assets/css/docs.css': 'docs/assets/css/docs.css'
+          '<%= meta.docsAssetsPath %>/css/docs.css': '<%= meta.docsAssetsPath %>/css/docs.css'
         }
       }
     },
@@ -101,15 +101,15 @@ module.exports = function(grunt) {
       fonts: {
         expand: true,
         src: 'fonts/*',
-        dest: 'dist/'
+        dest: '<%= meta.distPath %>/'
       },
       docs: {
         expand: true,
-        cwd: 'dist',
+        cwd: '<%= meta.distPath %>',
         src: [
           '**/*'
         ],
-        dest: 'docs/dist'
+        dest: '<%= meta.docsPath %>'
       }
     },
 
@@ -184,7 +184,7 @@ module.exports = function(grunt) {
         src: 'js/*.js'
       },
       docs: {
-        src: ['docs/assets/js/docs.js', 'docs/assets/js/fingerblast.js']
+        src: ['<%= meta.docsAssetsPath %>/js/docs.js', '<%= meta.docsAssetsPath %>/js/fingerblast.js']
       }
     },
 
@@ -208,15 +208,15 @@ module.exports = function(grunt) {
         csslintrc: 'sass/.csslintrc'
       },
       src: [
-        'dist/css/<%= pkg.name %>.css',
-        'dist/css/<%= pkg.name %>-theme-android.css',
-        'dist/css/<%= pkg.name %>-theme-ios.css'
+        '<%= meta.distPath %>/css/<%= pkg.name %>.css',
+        '<%= meta.distPath %>/css/<%= pkg.name %>-theme-android.css',
+        '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ios.css'
       ],
       docs: {
         options: {
           ids: false
         },
-        src: ['docs/assets/css/docs.css']
+        src: ['<%= meta.docsAssetsPath %>/css/docs.css']
       }
     },
 
