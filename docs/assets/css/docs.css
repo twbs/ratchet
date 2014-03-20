@@ -597,6 +597,11 @@ code {
   border-bottom: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .component {
+    border-bottom: 0;
+  }
+}
 .component-title {
   margin-bottom: 10px;
   font-size: 24px;

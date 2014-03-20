@@ -623,7 +623,14 @@ code {
   margin-right: -15px;
   border-bottom: 1px solid #ddd;
 
+  // Added to the last component so the footer
+  // doesn't create a double border.
   &.no-border {
+    border-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .component {
     border-bottom: 0;
   }
 }
