@@ -148,7 +148,7 @@
   var noop = function () {};
 
 
-  // Pushstate cacheing
+  // Pushstate caching
   // ==================
 
   var isScrolling;
