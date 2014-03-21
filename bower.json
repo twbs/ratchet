@@ -17,7 +17,7 @@
   ],
   "ignore": [
     "_config.yml",
-    ".travis.yml"
+    ".travis.yml",
     "CNAME",
     "CONTRIBUTING.md",
     "docs"
