@@ -4,8 +4,8 @@ node_js:
 before_install:
   - rvm use 1.9.3
 install:
-  - npm install -g grunt-cli
-  - npm install
-  - gem install --no-document "jekyll:1.4.2" "sass:~>3.3.0"
+  - travis_retry npm install -g grunt-cli
+  - travis_retry npm install
+  - travis_retry gem install --no-document "jekyll:1.4.2" "sass:~>3.3.0"
 matrix:
   fast_finish: true
