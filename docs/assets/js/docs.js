@@ -185,6 +185,8 @@ $(function () {
 
   $(window).on('load resize', initialize);
   $(window).on('load', function () {
-    window.FingerBlast && (new FingerBlast('.device-content'));
+    if (window.FingerBlast) {
+      new FingerBlast('.device-content');
+    }
   });
 });
