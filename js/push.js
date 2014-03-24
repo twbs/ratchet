@@ -262,7 +262,7 @@
     }
   };
 
-  function cacheCurrentContent() {
+  function cacheCurrentContent () {
     domCache[PUSH.id] = document.body.cloneNode(true);
   }
 
@@ -337,7 +337,7 @@
         document.body.insertBefore(swap, document.querySelector('.content'));
       }
     } else {
-      enter  = /in$/.test(transition);
+      enter = /in$/.test(transition);
 
       if (transition === 'fade') {
         container.classList.add('in');
@@ -494,7 +494,11 @@
   window.addEventListener('touchstart', function () { isScrolling = false; });
   window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', touchend);
-  window.addEventListener('click', function (e) { if (getTarget(e)) {e.preventDefault();} });
+  window.addEventListener('click', function (e) {
+    if (getTarget(e)) {
+      e.preventDefault();
+    }
+  });
   window.addEventListener('popstate', popstate);
   window.PUSH = PUSH;
 

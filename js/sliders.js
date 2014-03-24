@@ -123,9 +123,7 @@
     // we're done moving
     startedMoving = false;
 
-    setSlideNumber(
-      (+new Date()) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0
-    );
+    setSlideNumber((+new Date()) - startTime < 1000 && Math.abs(deltaX) > 15 ? (deltaX < 0 ? -1 : 1) : 0);
 
     offsetX = slideNumber * sliderWidth;
 
