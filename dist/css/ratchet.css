@@ -765,7 +765,6 @@ input[type="button"] {
 .table-view .media,
 .table-view .media-body {
   overflow: hidden;
-  zoom: 1;
 }
 
 .table-view .media-object.pull-left {
