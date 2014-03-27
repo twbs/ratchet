@@ -895,10 +895,6 @@ select {
           box-shadow: none;
 }
 
-.input-group input:last-child {
-  border-bottom: 0;
-}
-
 .input-row {
   overflow: hidden;
   border-bottom: 1px solid #ddd;
