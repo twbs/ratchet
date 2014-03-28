@@ -8,7 +8,7 @@
  * =====================================================
  */
 
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -765,7 +765,6 @@ input[type="button"] {
 .table-view .media,
 .table-view .media-body {
   overflow: hidden;
-  zoom: 1;
 }
 
 .table-view .media-object.pull-left {

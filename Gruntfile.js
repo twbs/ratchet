@@ -117,8 +117,7 @@ module.exports = function(grunt) {
       options: {
         banner: '', // set to empty; see bellow
         keepSpecialComments: '*', // set to '*' because we already add the banner in sass
-        noAdvanced: true, // disable advanced optimizations since it causes many issues
-        report: 'min'
+        noAdvanced: true // disable advanced optimizations since it causes many issues
       },
       ratchet: {
         src: '<%= meta.distPath %>css/<%= pkg.name %>.css',
@@ -144,8 +143,7 @@ module.exports = function(grunt) {
         banner: '<%= banner %>',
         compress: true,
         mangle: true,
-        preserveComments: false,
-        report: 'min'
+        preserveComments: false
       },
       ratchet: {
         src: '<%= meta.distPath %>js/<%= pkg.name %>.js',
