@@ -113,8 +113,7 @@ module.exports = function(grunt) {
     cssmin: {
       options: {
         banner: '', // set to empty; see bellow
-        keepSpecialComments: '*', // set to '*' because we already add the banner in sass
-        noAdvanced: true // disable advanced optimizations since it causes many issues
+        keepSpecialComments: '*' // set to '*' because we already add the banner in sass
       },
       ratchet: {
         src: '<%= meta.distPath %>css/<%= pkg.name %>.css',
