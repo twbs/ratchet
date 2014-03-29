@@ -5,6 +5,7 @@
   "disallowMixedSpacesAndTabs": true,
   "disallowMultipleLineStrings": true,
   "disallowMultipleVarDecl": true,
+  "disallowQuotedKeysInObjects": "allButReserved",
   "disallowRightStickedOperators": ["?", "/", "*", ":", "=", "==", "===", "!=", "!==", ">", ">=", "<", "<="],
   "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"],
   "disallowSpaceBeforePostfixUnaryOperators": ["++", "--"],
