@@ -42,13 +42,8 @@ $(function() {
     footerHeight           = $('.docs-footer').outerHeight(false);
     toolbarToggle          = $('.js-docs-component-toolbar');
 
-    // exit if no device
-    if (!device.length) {
-      return;
-    }
-
     // Device placement
-    if (windowWidth >= 768) {
+    if (windowWidth >= 768 && device.offset()) {
       device.initialLeft   = device.offset().left;
       device.initialTop    = device.initialTop || device.offset().top;
       device.dockingOffset = ($(window).height() - device.height()) / 2;
@@ -133,6 +128,11 @@ $(function() {
     // Save scrollTop value
     var contentSectionItem;
     var currentTop = win.scrollTop();
+
+    // exit if no device
+    if (!device.length) {
+      return;
+    }
 
     if ((device.initialTop - currentTop) <= device.dockingOffset) {
       device[0].className = 'device device-fixed';
