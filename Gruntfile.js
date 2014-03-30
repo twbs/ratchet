@@ -56,10 +56,6 @@ module.exports = function(grunt) {
           'js/toggles.js'
         ],
         dest: '<%= meta.distPath %>js/<%= pkg.name %>.js'
-      },
-      docs: {
-        src: '<%= meta.distPath %>js/<%= pkg.name %>.js',
-        dest: '<%= meta.docsPath %>js/<%= pkg.name %>.js'
       }
     },
 
@@ -146,7 +142,7 @@ module.exports = function(grunt) {
         preserveComments: false
       },
       ratchet: {
-        src: '<%= meta.distPath %>js/<%= pkg.name %>.js',
+        src: '<%= concat.ratchet.dest %>',
         dest: '<%= meta.distPath %>js/<%= pkg.name %>.min.js'
       },
       docs: {
