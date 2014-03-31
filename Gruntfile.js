@@ -1,8 +1,9 @@
-/* ----------------------------------
+/*!
  * Ratchet's Gruntfile
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+ * http://goratchet.com
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ */
 
 /* jshint node: true */
 module.exports = function(grunt) {
@@ -32,7 +33,7 @@ module.exports = function(grunt) {
             ' * =====================================================\n' +
             ' * Ratchet v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license %>.\n' +
+            ' * Licensed under <%= pkg.license %> (https://github.com/twbs/ratchet/blob/master/LICENSE)\n' +
             ' *\n' +
             ' * v<%= pkg.version %> designed by @connors.\n' +
             ' * =====================================================\n' +

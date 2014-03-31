@@ -2,16 +2,18 @@
  * =====================================================
  * Ratchet v2.0.1 (http://goratchet.com)
  * Copyright 2014 Connor Sears
- * Licensed under MIT.
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  *
  * v2.0.1 designed by @connors.
  * =====================================================
  */
-/* ----------------------------------
- * MODAL v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: modals.js v2.0.1
+ * http://goratchet.com/components#modals
+ * ========================================================================
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
@@ -47,11 +49,13 @@
   });
 }());
 
-/* ----------------------------------
- * POPOVER v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: popovers.js v2.0.1
+ * http://goratchet.com/components#popovers
+ * ========================================================================
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
@@ -133,12 +137,14 @@
 
 }());
 
-/* ----------------------------------
- * PUSH v2.0.1
- * Licensed under The MIT License
- * inspired by chris's jquery.pjax.js
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: push.js v2.0.1
+ * http://goratchet.com/components#push
+ * ========================================================================
+ * inspired by @defunkt's jquery.pjax.js
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 /* global _gaq: true */
 
@@ -614,11 +620,13 @@
 
 }());
 
-/* ----------------------------------
- * Segmented controls v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: segmented-controllers.js v2.0.1
+ * http://goratchet.com/components#segmentedControls
+ * ========================================================================
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
@@ -678,12 +686,14 @@
   window.addEventListener('click', function (e) { if (getTarget(e.target)) {e.preventDefault();} });
 }());
 
-/* ----------------------------------
- * SLIDER v2.0.1
- * Licensed under The MIT License
- * Adapted from Brad Birdsall's swipe
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: sliders.js v2.0.1
+ * http://goratchet.com/components#sliders
+ * ========================================================================
+   Adapted from Brad Birdsall's swipe
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
@@ -813,11 +823,14 @@
 
 }());
 
-/* ----------------------------------
- * TOGGLE v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: toggles.js v2.0.1
+ * http://goratchet.com/components#toggles
+ * ========================================================================
+   Adapted from Brad Birdsall's swipe
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';

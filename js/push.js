@@ -1,9 +1,11 @@
-/* ----------------------------------
- * PUSH v2.0.1
- * Licensed under The MIT License
- * inspired by chris's jquery.pjax.js
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: push.js v2.0.1
+ * http://goratchet.com/components#push
+ * ========================================================================
+ * inspired by @defunkt's jquery.pjax.js
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 /* global _gaq: true */
 
