@@ -1,9 +1,11 @@
-/* ----------------------------------
- * SLIDER v2.0.1
- * Licensed under The MIT License
- * Adapted from Brad Birdsall's swipe
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: sliders.js v2.0.1
+ * http://goratchet.com/components#sliders
+ * ========================================================================
+   Adapted from Brad Birdsall's swipe
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';

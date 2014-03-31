@@ -1,8 +1,10 @@
-/* ----------------------------------
- * Segmented controls v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: segmented-controllers.js v2.0.1
+ * http://goratchet.com/components#segmentedControls
+ * ========================================================================
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
