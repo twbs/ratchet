@@ -22,7 +22,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.icon-and-up                { &:before { content: '\e809'; } }
 .icon-back                  { &:before { content: '\e80a'; } }
 .icon-bars                  { &:before { content: '\e80e'; } }
 .icon-caret                 { &:before { content: '\e80f'; } }
@@ -30,16 +29,12 @@
 .icon-close                 { &:before { content: '\e811'; } }
 .icon-code                  { &:before { content: '\e812'; } }
 .icon-compose               { &:before { content: '\e813'; } }
-.icon-down-nav              { &:before { content: '\e814'; } }
-.icon-down                  { &:before { content: '\e820'; } }
 .icon-download              { &:before { content: '\e815'; } }
 .icon-edit                  { &:before { content: '\e829'; } }
 .icon-forward               { &:before { content: '\e82a'; } }
 .icon-gear                  { &:before { content: '\e821'; } }
 .icon-home                  { &:before { content: '\e82b'; } }
 .icon-info                  { &:before { content: '\e82c'; } }
-.icon-left-nav              { &:before { content: '\e82d'; } }
-.icon-left                  { &:before { content: '\e822'; } }
 .icon-list                  { &:before { content: '\e823'; } }
 .icon-more-vertical         { &:before { content: '\e82e'; } }
 .icon-more                  { &:before { content: '\e82f'; } }
@@ -49,8 +44,6 @@
 .icon-play                  { &:before { content: '\e816'; } }
 .icon-plus                  { &:before { content: '\e817'; } }
 .icon-refresh               { &:before { content: '\e825'; } }
-.icon-right-nav             { &:before { content: '\e818'; } }
-.icon-right                 { &:before { content: '\e826'; } }
 .icon-search                { &:before { content: '\e819'; } }
 .icon-share                 { &:before { content: '\e81a'; } }
 .icon-sound                 { &:before { content: '\e827'; } }
@@ -63,3 +56,9 @@
 .icon-trash                 { &:before { content: '\e81e'; } }
 .icon-up-nav                { &:before { content: '\e81f'; } }
 .icon-up                    { &:before { content: '\e80d'; } }
+.icon-right-nav             { &:before { content: '\e818'; } }
+.icon-right                 { &:before { content: '\e826'; } }
+.icon-down-nav              { &:before { content: '\e814'; } }
+.icon-down                  { &:before { content: '\e820'; } }
+.icon-left-nav              { &:before { content: '\e82d'; } }
+.icon-left                  { &:before { content: '\e822'; } }

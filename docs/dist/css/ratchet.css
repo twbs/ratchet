@@ -1270,10 +1270,6 @@ select {
   -webkit-font-smoothing: antialiased;
 }
 
-.icon-and-up:before {
-  content: '\e809';
-}
-
 .icon-back:before {
   content: '\e80a';
 }
@@ -1302,14 +1298,6 @@ select {
   content: '\e813';
 }
 
-.icon-down-nav:before {
-  content: '\e814';
-}
-
-.icon-down:before {
-  content: '\e820';
-}
-
 .icon-download:before {
   content: '\e815';
 }
@@ -1332,14 +1320,6 @@ select {
 
 .icon-info:before {
   content: '\e82c';
-}
-
-.icon-left-nav:before {
-  content: '\e82d';
-}
-
-.icon-left:before {
-  content: '\e822';
 }
 
 .icon-list:before {
@@ -1376,14 +1356,6 @@ select {
 
 .icon-refresh:before {
   content: '\e825';
-}
-
-.icon-right-nav:before {
-  content: '\e818';
-}
-
-.icon-right:before {
-  content: '\e826';
 }
 
 .icon-search:before {
@@ -1432,4 +1404,28 @@ select {
 
 .icon-up:before {
   content: '\e80d';
+}
+
+.icon-right-nav:before {
+  content: '\e818';
+}
+
+.icon-right:before {
+  content: '\e826';
+}
+
+.icon-down-nav:before {
+  content: '\e814';
+}
+
+.icon-down:before {
+  content: '\e820';
+}
+
+.icon-left-nav:before {
+  content: '\e82d';
+}
+
+.icon-left:before {
+  content: '\e822';
 }
