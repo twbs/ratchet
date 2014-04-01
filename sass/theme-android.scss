@@ -455,6 +455,23 @@ a {
   }
 }
 
+// Table-views with buttons, badges and toggles
+// --------------------------------------------------
+.table-view-cell,
+.table-view-cell > a {
+  // Android has no cheverons so don't bump the buttons, badges, or toggles over.
+  .navigate-left,
+  .navigate-right,
+  .push-left,
+  .push-right {
+    > .btn,
+    > .badge,
+    > .toggle {
+      right: 15px;
+    }
+  }
+}
+
 // Forms
 // --------------------------------------------------
 
