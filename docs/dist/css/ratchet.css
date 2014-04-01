@@ -896,6 +896,7 @@ select {
 }
 
 .input-row {
+  height: 35px;
   overflow: hidden;
   border-bottom: 1px solid #ddd;
 }
@@ -903,7 +904,7 @@ select {
 .input-row label {
   float: left;
   width: 35%;
-  padding: 10px 15px;
+  padding: 8px 15px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.1;
 }
