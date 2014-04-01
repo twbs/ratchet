@@ -4,21 +4,21 @@
 
 @font-face {
   font-family: Ratchicons;
+  font-weight: normal;
+  font-style: normal;
   src: url('../fonts/ratchicons.eot');
   src: url('../fonts/ratchicons.eot?#iefix') format('embedded-opentype'),
        url('../fonts/ratchicons.woff') format('woff'),
        url('../fonts/ratchicons.ttf') format('truetype'),
        url('../fonts/ratchicons.svg#svgFontName') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
 .icon {
   display: inline-block;
   font-family: Ratchicons;
   font-size: 24px;
-  text-decoration: none;
   line-height: 1;
+  text-decoration: none;
   -webkit-font-smoothing: antialiased;
 }
 

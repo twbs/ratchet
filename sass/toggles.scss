@@ -3,8 +3,8 @@
 // --------------------------------------------------
 
 .toggle {
-  display: block;
   position: relative;
+  display: block;
   width: 74px;
   height: 30px;
   background-color: #fff;
@@ -33,16 +33,16 @@
     position: absolute;
     top: 3px;
     right: 11px;
-    color: #999;
     font-size: 13px;
+    color: #999;
     text-transform: uppercase;
     content: "Off";
   }
 
   // Active state for toggle
   &.active {
-    border: 2px solid $positive-color;
     background-color: $positive-color;
+    border: 2px solid $positive-color;
 
     .toggle-handle {
       border-color: $positive-color;
