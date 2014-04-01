@@ -210,7 +210,7 @@ body {
   // Component jump menu
   .docs-jump-menu {
     position: absolute;
-    left: 20px;
+    left: 15px;
     display: block;
     color: #777;
     cursor: pointer;
@@ -279,12 +279,6 @@ body {
         background-color: $primary-color;
       }
     }
-  }
-}
-// Account for extra margin on large screens
-@media screen and (min-width: 1200px) {
-  .docs-jump-menu {
-    left: 30px;
   }
 }
 
