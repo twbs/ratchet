@@ -100,9 +100,9 @@ body {
   }
   .docs-header .carbonad {
     left: 50% !important;
-    width: 300px !important;
+    width: 330px !important;
     margin-bottom: 60px !important;
-    margin-left: -150px !important;
+    margin-left: -165px !important;
   }
 
   .docs-sub-header .carbonad {
@@ -297,7 +297,7 @@ body {
 }
 .docs-header-content .btn {
   display: block;
-  padding: 15px 75px 16px;
+  padding: 15px 60px 16px;
   margin-bottom: 0;
   font-size: 18px;
   color: #0a1855;
