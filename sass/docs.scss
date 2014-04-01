@@ -16,9 +16,9 @@ body {
   position: relative !important; // Overrides the fixed positioning of body in Ratchet
   font: 400 14px/1.5 "Open Sans", sans-serif;
   color: #333;
+  -webkit-text-size-adjust: 100%;
   background-color: #fff;
   -webkit-font-smoothing: antialiased; // Fix for webkit rendering
-  -webkit-text-size-adjust: 100%;
 }
 
 // Typography
@@ -91,9 +91,9 @@ body {
 }
 .docs-header-bottom {
   position: absolute;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
 }
 // Desktop jumbotron
 @media screen and (min-width: 768px) {
@@ -104,8 +104,8 @@ body {
     .carbonad {
       left: 50% !important;
       width: 330px !important;
-      margin-left: -165px !important;
       margin-bottom: 60px !important;
+      margin-left: -165px !important;
     }
   }
 
@@ -129,10 +129,10 @@ body {
 .docs-title {
   position: absolute;
   left: 50%;
+  z-index: 20;
   margin-bottom: 0;
   font-size: 22px;
   font-weight: 400;
-  z-index: 20;
   @include transform(translateX(-50%));
 }
 .docs-nav {
@@ -147,11 +147,11 @@ body {
   .docs-nav-group {
     position: absolute;
     top: 40px;
-    left: 0;
     right: 0;
+    left: 0;
     z-index: 20;
-    overflow: hidden;
     height: 0;
+    overflow: hidden;
     background-color: rgba(0,0,0,.9);
     opacity: 0;
 
@@ -229,8 +229,8 @@ body {
       opacity: .5;
     }
     .icon-list {
-      font-size: 16px;
       margin-right: 3px;
+      font-size: 16px;
     }
     .icon-caret {
       position: relative;
@@ -292,16 +292,16 @@ body {
 // "Build mobile apps using simple..."
 .docs-header-content {
   position: relative;
-  text-align: center;
   padding: 50px 10px;
+  text-align: center;
   @include animation-name(fadeintext);
   @include animation-duration(2s);
 
   .btn {
     display: block;
     padding: 15px 60px 16px; // Creates a button that's 330px wide.
-    font-size: 18px;
     margin-bottom: 0;
+    font-size: 18px;
     color: #0a1855;
     background-color: #fff;
     border: 0;
@@ -320,9 +320,9 @@ body {
   max-width: 750px;
   margin: 0 auto 20px;
   font-size: 28px;
-  color: #fff;
-  line-height: 38px;
   font-weight: 300;
+  line-height: 38px;
+  color: #fff;
 }
 
 // Desktop header content
@@ -411,12 +411,12 @@ body {
     font-weight: 300;
   }
   .page-title {
-    font-size: 40px;
     margin-bottom: 5px;
+    font-size: 40px;
   }
   .page-description {
-    color: #fff;
     font-size: 24px;
+    color: #fff;
     opacity: .7;
   }
 }
@@ -452,8 +452,8 @@ body {
 
 // Docs modules
 .docs-module {
-  margin-top: 20px;
   padding: 20px;
+  margin-top: 20px;
   border: $border-default;
   border-radius: 3px;
 
@@ -464,8 +464,8 @@ body {
 .version {
   margin-top: 10px;
   margin-bottom: 0;
-  color: #777;
   font-size: 90%;
+  color: #777;
 }
 
 
@@ -474,11 +474,11 @@ body {
 
 .docs-footer {
   border-top: 1px solid #ddd;
-  margin-top: 50px;
   padding: 30px 20px;
-  color: #777;
+  margin-top: 50px;
   font-size: 14px;
   text-align: center;
+  color: #777;
 
   .social {
     padding: 0 0 20px;
@@ -486,8 +486,8 @@ body {
     list-style: none;
 
     li {
-      height: 20px;
       display: inline-block;
+      height: 20px;
       vertical-align: top;
     }
     .twitter-follow-button {
@@ -508,9 +508,9 @@ body {
 @media screen and (min-width: 768px) {
   .docs-footer-text {
     width: 550px;
-    margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
+    margin: 0 auto;
   }
 }
 .docs-footer-links {
@@ -549,8 +549,6 @@ body {
 // --------------------------------------------------
 
 .docs-component-toolbar {
-  padding-top: 8px;
-  padding-bottom: 8px;
   position: fixed;
   top: 0;
   bottom: auto;
@@ -558,6 +556,8 @@ body {
   right: 0;
   z-index: 20;
   height: 44px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   -webkit-transition: -webkit-transform .5s;
@@ -590,9 +590,9 @@ body {
 
   .example {
     display: block;
-    overflow: hidden;
-    padding: 3px;
     width: 100%;
+    padding: 3px;
+    overflow: hidden;
     border: $border-default;
     border-radius: 3px;
   }
@@ -644,8 +644,8 @@ code {
   font-size: 16px;
 }
 .component-example {
-  font-family: $font-family-default;
   font-size: $font-size-default;
+  font-family: $font-family-default;
   line-height: $line-height-default;
 }
 .component-example,
@@ -691,10 +691,10 @@ code {
   top: 45%;
   left: 0;
   width: 100%;
-  color: #fff;
   text-align: center;
   font-size: 24px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
 }
 .component-example-fullbleed,
 .highlight {
@@ -705,10 +705,10 @@ code {
   padding: 0;
 }
 .highlight pre {
-  margin-top: 15px;
   padding: 15px;
-  font-size: 13px;
+  margin-top: 15px;
   overflow-x: auto;
+  font-size: 13px;
   color: #777;
   background-color: #fafafa;
   border-top: 1px solid #ddd;
@@ -858,8 +858,8 @@ code {
 @media screen and (min-width: 768px) {
   .slider .slide {
     cursor: -webkit-grab;
-    cursor: -moz-grab;
-    cursor: grab;
+    cursor:    -moz-grab;
+    cursor:         grab;
   }
   .slider .slide img {
     width: 100%;
@@ -884,8 +884,8 @@ code {
 
 .device {
   display: none;
-  font-family: $font-family-default;
   font-size: $font-size-default;
+  font-family: $font-family-default;
   line-height: $line-height-default;
 }
 @media screen and (min-width: 768px) {
