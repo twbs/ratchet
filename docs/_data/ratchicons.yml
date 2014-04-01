@@ -1,7 +1,6 @@
 # This file is generated via Grunt task. **Do not edit directly.**
 # See the 'build-ratchicons-data' task in Gruntfile.js.
 
-- icon-and-up
 - icon-back
 - icon-bars
 - icon-caret
@@ -9,16 +8,12 @@
 - icon-close
 - icon-code
 - icon-compose
-- icon-down-nav
-- icon-down
 - icon-download
 - icon-edit
 - icon-forward
 - icon-gear
 - icon-home
 - icon-info
-- icon-left-nav
-- icon-left
 - icon-list
 - icon-more-vertical
 - icon-more
@@ -28,8 +23,6 @@
 - icon-play
 - icon-plus
 - icon-refresh
-- icon-right-nav
-- icon-right
 - icon-search
 - icon-share
 - icon-sound
@@ -42,3 +35,9 @@
 - icon-trash
 - icon-up-nav
 - icon-up
+- icon-right-nav
+- icon-right
+- icon-down-nav
+- icon-down
+- icon-left-nav
+- icon-left
