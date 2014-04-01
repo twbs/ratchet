@@ -64,12 +64,12 @@ body {
 .docs-sub-header {
   position: relative;
   background-color: #0a1855;
-  background-image: -moz-linear-gradient(45deg,  #0a1855 0%, #da0024 100%);
+  background-image:    -moz-linear-gradient(45deg,  #0a1855 0%, #da0024 100%);
   background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0a1855), color-stop(100%,#da0024));
   background-image: -webkit-linear-gradient(45deg,  #0a1855 0%,#da0024 100%);
-  background-image: -o-linear-gradient(45deg,  #0a1855 0%,#da0024 100%);
-  background-image: -ms-linear-gradient(45deg,  #0a1855 0%,#da0024 100%);
-  background-image: linear-gradient(45deg,  #0a1855 0%,#da0024 100%);
+  background-image:      -o-linear-gradient(45deg,  #0a1855 0%,#da0024 100%);
+  background-image:     -ms-linear-gradient(45deg,  #0a1855 0%,#da0024 100%);
+  background-image:         linear-gradient(45deg,  #0a1855 0%,#da0024 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a1855', endColorstr='#da0024',GradientType=1 );
 }
 .docs-header {
