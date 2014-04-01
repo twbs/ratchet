@@ -317,6 +317,7 @@ a:active {
   background-image: none;
 }
 .table-view .table-view-cell > a:not(.btn):active {
+  color: inherit;
   background-color: #e0e0e0;
 }
 .table-view .table-view-cell > a:not(.btn):active .icon {
