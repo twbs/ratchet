@@ -1690,6 +1690,32 @@ hr {
   border-top: 0;
   border-bottom: 2px solid #a9a9a9;
 }
+.platform-android .table-view-cell .navigate-left > .btn,
+.platform-android .table-view-cell .navigate-left > .badge,
+.platform-android .table-view-cell .navigate-left > .toggle,
+.platform-android .table-view-cell .navigate-right > .btn,
+.platform-android .table-view-cell .navigate-right > .badge,
+.platform-android .table-view-cell .navigate-right > .toggle,
+.platform-android .table-view-cell .push-left > .btn,
+.platform-android .table-view-cell .push-left > .badge,
+.platform-android .table-view-cell .push-left > .toggle,
+.platform-android .table-view-cell .push-right > .btn,
+.platform-android .table-view-cell .push-right > .badge,
+.platform-android .table-view-cell .push-right > .toggle,
+.platform-android .table-view-cell > a .navigate-left > .btn,
+.platform-android .table-view-cell > a .navigate-left > .badge,
+.platform-android .table-view-cell > a .navigate-left > .toggle,
+.platform-android .table-view-cell > a .navigate-right > .btn,
+.platform-android .table-view-cell > a .navigate-right > .badge,
+.platform-android .table-view-cell > a .navigate-right > .toggle,
+.platform-android .table-view-cell > a .push-left > .btn,
+.platform-android .table-view-cell > a .push-left > .badge,
+.platform-android .table-view-cell > a .push-left > .toggle,
+.platform-android .table-view-cell > a .push-right > .btn,
+.platform-android .table-view-cell > a .push-right > .badge,
+.platform-android .table-view-cell > a .push-right > .toggle {
+  right: 15px;
+}
 .platform-android select,
 .platform-android textarea,
 .platform-android input[type="text"],
