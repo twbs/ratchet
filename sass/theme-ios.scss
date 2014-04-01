@@ -66,9 +66,9 @@ p {
 // --------------------------------------------------
 
 .btn {
-  border: 1px solid $default-color;
   color: $default-color;
   background-color: $chrome-color;
+  border: 1px solid $default-color;
   @include transition(all);
   @include transition-duration(.2s);
   @include transition-timing-function(linear);
@@ -88,39 +88,39 @@ p {
 // Primary button (Default color is blue)
 .btn-primary {
   color: #fff;
-  border: 1px solid $primary-color;
   background-color: $primary-color;
+  border: 1px solid $primary-color;
 
   &:active,
   &.active {
-    border: 1px solid darken($primary-color, 10%);
     background-color: darken($primary-color, 10%);
+    border: 1px solid darken($primary-color, 10%);
   }
 }
 
 // Positive button (Default color is green)
 .btn-positive {
   color: #fff;
-  border: 1px solid $positive-color;
   background-color: $positive-color;
+  border: 1px solid $positive-color;
 
   &:active,
   &.active {
-    border: 1px solid darken($positive-color, 10%);
     background-color: darken($positive-color, 10%);
+    border: 1px solid darken($positive-color, 10%);
   }
 }
 
 // Negative button (Default color is red)
 .btn-negative {
   color: #fff;
-  border: 1px solid $negative-color;
   background-color: $negative-color;
+  border: 1px solid $negative-color;
 
   &:active,
   &.active {
-    border: 1px solid darken($negative-color, 10%);
     background-color: darken($negative-color, 10%);
+    border: 1px solid darken($negative-color, 10%);
   }
 }
 
@@ -180,8 +180,8 @@ p {
 
 // Default bar
 .bar {
-  border-bottom: 0;
   background-color: $chrome-color;
+  border-bottom: 0;
   @include box-shadow(0 0 1px rgba(0,0,0,.85));
 
   // Modifier class to dock any bar below .bar-nav
@@ -497,10 +497,10 @@ textarea,
   border-bottom: 1px solid rgba(0,0,0,.15);
 }
 
-// Popovers with `table-views1
+// Popovers with `table-views`
 .popover .table-view {
-  border-radius: 12px;
   background-image: none;
+  border-radius: 12px;
 }
 
 
@@ -539,8 +539,8 @@ textarea,
   }
   // Active state for toggle
   &.active {
-    border: 2px solid $positive-color;
     background-color: transparent;
+    border: 2px solid $positive-color;
     @include box-shadow(inset 0 0 0 13px $positive-color);
 
     .toggle-handle {
