@@ -435,6 +435,7 @@ a {
       background-image: none;
     }
     > a:not(.btn):active {
+      color: inherit;
       background-color: #e0e0e0;
 
       .icon {

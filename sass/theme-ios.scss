@@ -309,6 +309,9 @@ p {
     &:last-child {
       background-image: none;
     }
+    > a:not(.btn):active {
+      color: inherit;
+    }
   }
 
   // Table view dividers
