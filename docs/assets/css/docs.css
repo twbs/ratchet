@@ -57,8 +57,14 @@ body {
 .docs-header,
 .docs-sub-header {
   position: relative;
-  background-image: linear-gradient(45deg, #0a1855 0%, #da0024 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a1855', endColorstr='#da0024', GradientType=0 );
+  background-color: #0a1855;
+  background-image:    -moz-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #0a1855), color-stop(100%, #da0024));
+  background-image: -webkit-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
+  background-image:      -o-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
+  background-image:     -ms-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
+  background-image:         linear-gradient(45deg, #0a1855 0%, #da0024 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a1855', endColorstr='#da0024',GradientType=1 );
 }
 
 .docs-header {
@@ -94,9 +100,9 @@ body {
   }
   .docs-header .carbonad {
     left: 50% !important;
-    width: 300px !important;
+    width: 330px !important;
     margin-bottom: 60px !important;
-    margin-left: -150px !important;
+    margin-left: -165px !important;
   }
 
   .docs-sub-header .carbonad {
@@ -207,7 +213,7 @@ body {
 
   .docs-jump-menu {
     position: absolute;
-    left: 20px;
+    left: 15px;
     display: block;
     color: #777;
     cursor: pointer;
@@ -234,7 +240,7 @@ body {
   .docs-component-group {
     position: absolute;
     top: 35px;
-    left: 30px;
+    left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #fff;
@@ -278,11 +284,6 @@ body {
     background-color: #428bca;
   }
 }
-@media screen and (min-width: 1200px) {
-  .docs-jump-menu {
-    left: 30px;
-  }
-}
 .docs-header-content {
   position: relative;
   padding: 50px 10px;
@@ -296,7 +297,7 @@ body {
 }
 .docs-header-content .btn {
   display: block;
-  padding: 15px 75px 16px;
+  padding: 15px 60px 16px;
   margin-bottom: 0;
   font-size: 18px;
   color: #0a1855;
@@ -1689,6 +1690,32 @@ hr {
   background-color: transparent;
   border-top: 0;
   border-bottom: 2px solid #a9a9a9;
+}
+.platform-android .table-view-cell .navigate-left > .btn,
+.platform-android .table-view-cell .navigate-left > .badge,
+.platform-android .table-view-cell .navigate-left > .toggle,
+.platform-android .table-view-cell .navigate-right > .btn,
+.platform-android .table-view-cell .navigate-right > .badge,
+.platform-android .table-view-cell .navigate-right > .toggle,
+.platform-android .table-view-cell .push-left > .btn,
+.platform-android .table-view-cell .push-left > .badge,
+.platform-android .table-view-cell .push-left > .toggle,
+.platform-android .table-view-cell .push-right > .btn,
+.platform-android .table-view-cell .push-right > .badge,
+.platform-android .table-view-cell .push-right > .toggle,
+.platform-android .table-view-cell > a .navigate-left > .btn,
+.platform-android .table-view-cell > a .navigate-left > .badge,
+.platform-android .table-view-cell > a .navigate-left > .toggle,
+.platform-android .table-view-cell > a .navigate-right > .btn,
+.platform-android .table-view-cell > a .navigate-right > .badge,
+.platform-android .table-view-cell > a .navigate-right > .toggle,
+.platform-android .table-view-cell > a .push-left > .btn,
+.platform-android .table-view-cell > a .push-left > .badge,
+.platform-android .table-view-cell > a .push-left > .toggle,
+.platform-android .table-view-cell > a .push-right > .btn,
+.platform-android .table-view-cell > a .push-right > .badge,
+.platform-android .table-view-cell > a .push-right > .toggle {
+  right: 15px;
 }
 .platform-android select,
 .platform-android textarea,
