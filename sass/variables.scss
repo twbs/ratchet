@@ -5,54 +5,54 @@
 
 // Type
 // --------------------------------------------------
-$font-family-default: "Helvetica Neue", Helvetica, sans-serif;
-$font-size-default: 17px;
-$font-weight: 500;
-$font-weight-light: 400;
-$line-height-default: 21px;
+$font-family-default: "Helvetica Neue", Helvetica, sans-serif !default;
+$font-size-default: 17px !default;
+$font-weight: 500 !default;
+$font-weight-light: 400 !default;
+$line-height-default: 21px !default;
 
 
 // Colors
 // --------------------------------------------------
 
 // Main theme colors
-$primary-color: #428bca;
-$chrome-color:  #fff;
+$primary-color: #428bca !default;
+$chrome-color:  #fff !default;
 
 // Action colors
-$default-color:  #fff;
-$positive-color: #5cb85c;
-$negative-color: #d9534f;
+$default-color:  #fff !default;
+$positive-color: #5cb85c !default;
+$negative-color: #d9534f !default;
 
 
 // Bars
 // --------------------------------------------------
 
-$bar-base-height:  44px;
-$bar-tab-height:   50px;
-$bar-side-spacing: 10px;
+$bar-base-height:  44px !default;
+$bar-tab-height:   50px !default;
+$bar-side-spacing: 10px !default;
 
 
 // Cards
 // --------------------------------------------------
 
-$card-bg: #fff;
+$card-bg: #fff !default;
 
 
 // Buttons
 // --------------------------------------------------
 
-$button-font-size: 12px;
+$button-font-size: 12px !default;
 
 
 // Transitions
 // --------------------------------------------------
 
-$timing-fuction: cubic-bezier(.1,.5,.1,1); // Inspired by @c2prods
+$timing-fuction: cubic-bezier(.1,.5,.1,1) !default; // Inspired by @c2prods
 
 
 // Borders
 // --------------------------------------------------
 
-$border-default: 1px solid #ddd;
-$border-radius: 6px;
+$border-default: 1px solid #ddd !default;
+$border-radius: 6px !default;
