@@ -92,6 +92,7 @@ select {
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
   overflow: hidden;
+  height: 35px; // Matches the height of inputs.
   border-bottom: $border-default;
 }
 
@@ -99,7 +100,7 @@ select {
 .input-row label {
   float: left;
   width: 35%;
-  padding: 10px 15px;
+  padding: 8px 15px;
   font-family: $font-family-default;
   line-height: 1.1; // Put the text on the baseline.
 }
