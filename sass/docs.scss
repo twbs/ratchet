@@ -216,7 +216,7 @@ body {
   // Component jump menu
   .docs-jump-menu {
     position: absolute;
-    left: 20px;
+    left: 15px;
     display: block;
     color: #777;
     cursor: pointer;
@@ -241,7 +241,7 @@ body {
   .docs-component-group {
     position: absolute;
     top: 35px;
-    left: 30px;
+    left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #fff;
@@ -285,12 +285,6 @@ body {
         background-color: $primary-color;
       }
     }
-  }
-}
-// Account for extra margin on large screens
-@media screen and (min-width: 1200px) {
-  .docs-jump-menu {
-    left: 30px;
   }
 }
 

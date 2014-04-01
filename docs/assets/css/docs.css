@@ -213,7 +213,7 @@ body {
 
   .docs-jump-menu {
     position: absolute;
-    left: 20px;
+    left: 15px;
     display: block;
     color: #777;
     cursor: pointer;
@@ -240,7 +240,7 @@ body {
   .docs-component-group {
     position: absolute;
     top: 35px;
-    left: 30px;
+    left: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #fff;
@@ -282,11 +282,6 @@ body {
   .docs-component-group .docs-component-item:hover {
     color: #fff;
     background-color: #428bca;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .docs-jump-menu {
-    left: 30px;
   }
 }
 .docs-header-content {
