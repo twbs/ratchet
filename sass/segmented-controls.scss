@@ -15,15 +15,15 @@
   // Section within controller
   .control-item {
     display: table-cell;
-    overflow: hidden;
     width: 1%;
     padding-top: 6px;
     padding-bottom: 7px;
+    overflow: hidden;
     line-height: 1;
     color: #333;
     text-align: center;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    white-space: nowrap;
     border-left: 1px solid #ccc;
 
     // Remove border-left and shadow from first section

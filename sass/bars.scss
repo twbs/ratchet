@@ -10,8 +10,8 @@
   height: $bar-base-height;
   padding-right: $bar-side-spacing;
   padding-left: $bar-side-spacing;
-  border-bottom: $border-default;
   background-color: $chrome-color;
+  border-bottom: $border-default;
 }
 
 // Modifier class to dock any bar below .bar-nav
@@ -38,8 +38,8 @@
 .bar-footer,
 .bar-footer-secondary,
 .bar-footer-secondary-tab {
-  border-bottom: 0;
   border-top: $border-default;
+  border-bottom: 0;
 }
 
 
@@ -83,18 +83,18 @@
   width: 100%;
   height: $bar-tab-height;
   padding: 0;
+  table-layout: fixed;
   border-top: $border-default;
   border-bottom: 0;
-  table-layout: fixed;
 
   // Navigational tab (Nested to be more specific for the icons in tab-items)
   .tab-item {
     display: table-cell;
     width: 1%;
     height: $bar-tab-height;
-    vertical-align: middle;
     color: #929292;
     text-align: center;
+    vertical-align: middle;
 
     // Active states for the tab bar
     &.active,
@@ -144,8 +144,8 @@
   top: 0;
   padding: 0;
   font-size: 16px;
-  color: $primary-color;
   line-height: $bar-base-height;
+  color: $primary-color;
   border: 0;
 
   &:active,

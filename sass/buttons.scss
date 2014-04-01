@@ -12,8 +12,8 @@
   line-height: 1;
   color: #333;
   text-align: center;
-  vertical-align: top;
   white-space: nowrap;
+  vertical-align: top;
   cursor: pointer;
   background-color: $chrome-color;
   border: 1px solid #ccc;
@@ -40,42 +40,42 @@
 // Primary button (Default color is blue)
 .btn-primary {
   color: #fff;
-  border: 1px solid $primary-color;
   background-color: $primary-color;
+  border: 1px solid $primary-color;
 
   &:active,
   &.active {
     color: #fff;
-    border: 1px solid darken($primary-color, 10%);
     background-color: darken($primary-color, 10%);
+    border: 1px solid darken($primary-color, 10%);
   }
 }
 
 // Positive button (Default color is green)
 .btn-positive {
   color: #fff;
-  border: 1px solid $positive-color;
   background-color: $positive-color;
+  border: 1px solid $positive-color;
 
   &:active,
   &.active {
     color: #fff;
-    border: 1px solid darken($positive-color, 10%);
     background-color: darken($positive-color, 10%);
+    border: 1px solid darken($positive-color, 10%);
   }
 }
 
 // Negative button (Default color is red)
 .btn-negative {
   color: #fff;
-  border: 1px solid $negative-color;
   background-color: $negative-color;
+  border: 1px solid $negative-color;
 
   &:active,
   &.active {
     color: #fff;
-    border: 1px solid darken($negative-color, 10%);
     background-color: darken($negative-color, 10%);
+    border: 1px solid darken($negative-color, 10%);
   }
 }
 
@@ -140,8 +140,8 @@ input[type="button"] {
 
 // Generic styles for all badges within default buttons
 .btn .badge {
-  font-size: 12px;
   margin: -2px -4px -2px 4px;
+  font-size: 12px;
   background-color: rgba(0,0,0,.15);
 }
 

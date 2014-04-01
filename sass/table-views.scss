@@ -15,8 +15,8 @@
 // Pad each table view item and add dividers
 .table-view-cell {
   position: relative;
-  overflow: hidden;
   padding: 11px 65px 11px 15px;
+  overflow: hidden;
   border-bottom: $border-default;
 
   // Remove the border from the last table view item
@@ -27,9 +27,9 @@
   > a:not(.btn) {
     position: relative;
     display: block;
-    overflow: hidden;
     padding: inherit;
     margin: -11px -65px -11px -15px; // Make the entire list item tappable.
+    overflow: hidden;
     color: inherit;
 
     &:active {
@@ -51,11 +51,11 @@
   padding-left: 15px;
   margin-top: -1px; // Hides the border of the previous list item
   margin-left: 0;
-  color: #999;
   font-weight: $font-weight;
+  color: #999;
+  background-color: #fafafa;
   border-top: $border-default;
   border-bottom: $border-default;
-  background-color: #fafafa;
 }
 
 

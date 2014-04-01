@@ -42,11 +42,11 @@
     position: absolute;
     top: 50%;
     display: inline-block;
-    color: #bbb;
     font-family: Ratchicons;
     font-size: inherit;
-    text-decoration: none;
     line-height: 1;
+    color: #bbb;
+    text-decoration: none;
     -webkit-font-smoothing: antialiased;
     @include transform(translateY(-50%));
   }
