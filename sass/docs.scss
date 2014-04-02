@@ -63,7 +63,7 @@ body {
 .docs-header,
 .docs-sub-header {
   position: relative;
-  @include directional-gradient(#0a1855,#da0024)
+  @include directional-gradient(#0a1855, #da0024)
 }
 .docs-header {
   height: 100vh;
