@@ -1,5 +1,5 @@
 /* ========================================================================
- * Ratchet: modals.js v2.0.1
+ * Ratchet: modals.js v2.0.2
  * http://goratchet.com/components#modals
  * ========================================================================
  * Copyright 2014 Connor Sears

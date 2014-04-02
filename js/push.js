@@ -1,5 +1,5 @@
 /* ========================================================================
- * Ratchet: push.js v2.0.1
+ * Ratchet: push.js v2.0.2
  * http://goratchet.com/components#push
  * ========================================================================
  * inspired by @defunkt's jquery.pjax.js

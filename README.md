@@ -1,4 +1,4 @@
-# Ratchet v2.0.1 [![Build Status](https://secure.travis-ci.org/twbs/ratchet.png)](http://travis-ci.org/twbs/ratchet) [![devDependencies](https://david-dm.org/twbs/ratchet/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/ratchet#info=devDependencies)
+# Ratchet v2.0.2 [![Build Status](https://secure.travis-ci.org/twbs/ratchet.png)](http://travis-ci.org/twbs/ratchet) [![devDependencies](https://david-dm.org/twbs/ratchet/dev-status.png?theme=shields.io)](https://david-dm.org/twbs/ratchet#info=devDependencies)
 
 Build mobile apps with simple HTML, CSS, and JS components.
 
@@ -15,7 +15,7 @@ Build mobile apps with simple HTML, CSS, and JS components.
 
 ## Getting started
 
-- Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.1.zip) the bundled CSS and JS
+- Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.2.zip) the bundled CSS and JS
 - [Read the docs](http://goratchet.com) to learn about the components and how to get a prototype on your phone
 - [Check out examples](http://goratchet.com/examples/)
 

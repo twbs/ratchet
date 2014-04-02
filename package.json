@@ -1,7 +1,7 @@
 {
   "name": "ratchet",
   "description": "Build mobile apps with simple HTML, CSS, and JS components.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "keywords": [
     "css",
     "fonts",
@@ -37,7 +37,7 @@
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-csscomb": "~2.0.1",
+    "grunt-csscomb": "~2.0.2",
     "grunt-html-validation": "~0.1.14",
     "grunt-jekyll": "~0.4.1",
     "grunt-jscs-checker": "~0.4.1",

@@ -1,5 +1,5 @@
 /* ========================================================================
- * Ratchet: toggles.js v2.0.1
+ * Ratchet: toggles.js v2.0.2
  * http://goratchet.com/components#toggles
  * ========================================================================
    Adapted from Brad Birdsall's swipe

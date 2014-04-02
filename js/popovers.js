@@ -1,5 +1,5 @@
 /* ========================================================================
- * Ratchet: popovers.js v2.0.1
+ * Ratchet: popovers.js v2.0.2
  * http://goratchet.com/components#popovers
  * ========================================================================
  * Copyright 2014 Connor Sears

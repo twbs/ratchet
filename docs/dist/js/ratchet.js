@@ -1,14 +1,14 @@
 /*!
  * =====================================================
- * Ratchet v2.0.1 (http://goratchet.com)
+ * Ratchet v2.0.2 (http://goratchet.com)
  * Copyright 2014 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  *
- * v2.0.1 designed by @connors.
+ * v2.0.2 designed by @connors.
  * =====================================================
  */
 /* ========================================================================
- * Ratchet: modals.js v2.0.1
+ * Ratchet: modals.js v2.0.2
  * http://goratchet.com/components#modals
  * ========================================================================
  * Copyright 2014 Connor Sears
@@ -50,7 +50,7 @@
 }());
 
 /* ========================================================================
- * Ratchet: popovers.js v2.0.1
+ * Ratchet: popovers.js v2.0.2
  * http://goratchet.com/components#popovers
  * ========================================================================
  * Copyright 2014 Connor Sears
@@ -138,7 +138,7 @@
 }());
 
 /* ========================================================================
- * Ratchet: push.js v2.0.1
+ * Ratchet: push.js v2.0.2
  * http://goratchet.com/components#push
  * ========================================================================
  * inspired by @defunkt's jquery.pjax.js
@@ -622,7 +622,7 @@
 }());
 
 /* ========================================================================
- * Ratchet: segmented-controllers.js v2.0.1
+ * Ratchet: segmented-controllers.js v2.0.2
  * http://goratchet.com/components#segmentedControls
  * ========================================================================
  * Copyright 2014 Connor Sears
@@ -688,7 +688,7 @@
 }());
 
 /* ========================================================================
- * Ratchet: sliders.js v2.0.1
+ * Ratchet: sliders.js v2.0.2
  * http://goratchet.com/components#sliders
  * ========================================================================
    Adapted from Brad Birdsall's swipe
@@ -825,7 +825,7 @@
 }());
 
 /* ========================================================================
- * Ratchet: toggles.js v2.0.1
+ * Ratchet: toggles.js v2.0.2
  * http://goratchet.com/components#toggles
  * ========================================================================
    Adapted from Brad Birdsall's swipe

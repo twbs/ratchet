@@ -1,5 +1,5 @@
 /* ========================================================================
- * Ratchet: sliders.js v2.0.1
+ * Ratchet: sliders.js v2.0.2
  * http://goratchet.com/components#sliders
  * ========================================================================
    Adapted from Brad Birdsall's swipe

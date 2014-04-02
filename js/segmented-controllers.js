@@ -1,5 +1,5 @@
 /* ========================================================================
- * Ratchet: segmented-controllers.js v2.0.1
+ * Ratchet: segmented-controllers.js v2.0.2
  * http://goratchet.com/components#segmentedControls
  * ========================================================================
  * Copyright 2014 Connor Sears
