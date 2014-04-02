@@ -1,23 +1,27 @@
 /*!
  * =====================================================
- * Ratchet v2.0.1 (http://goratchet.com)
+ * Ratchet v2.0.2 (http://goratchet.com)
  * Copyright 2014 Connor Sears
- * Licensed under MIT.
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  *
- * v2.0.1 designed by @connors.
+ * v2.0.2 designed by @connors.
  * =====================================================
  */
-/* ----------------------------------
- * MODAL v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: modals.js v2.0.2
+ * http://goratchet.com/components#modals
+ * ========================================================================
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
 
   var findModals = function (target) {
-    var i, modals = document.querySelectorAll('a');
+    var i;
+    var modals = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = modals.length; i--;) {
         if (modals[i] === target) {
@@ -45,11 +49,13 @@
   });
 }());
 
-/* ----------------------------------
- * POPOVER v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: popovers.js v2.0.2
+ * http://goratchet.com/components#popovers
+ * ========================================================================
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
@@ -57,7 +63,9 @@
   var popover;
 
   var findPopovers = function (target) {
-    var i, popovers = document.querySelectorAll('a');
+    var i;
+    var popovers = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = popovers.length; i--;) {
         if (popovers[i] === target) {
@@ -100,7 +108,7 @@
       popover = null;
     }
 
-    if (popover == null) {
+    if (popover === null) {
       return;
     }
 
@@ -126,16 +134,17 @@
   };
 
   window.addEventListener('touchend', showHidePopover);
-  window.addEventListener('click', showHidePopover);
 
 }());
 
-/* ----------------------------------
- * PUSH v2.0.1
- * Licensed under The MIT License
- * inspired by chris's jquery.pjax.js
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: push.js v2.0.2
+ * http://goratchet.com/components#push
+ * ========================================================================
+ * inspired by @defunkt's jquery.pjax.js
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 /* global _gaq: true */
 
@@ -145,7 +154,7 @@
   var noop = function () {};
 
 
-  // Pushstate cacheing
+  // Pushstate caching
   // ==================
 
   var isScrolling;
@@ -153,9 +162,9 @@
   var cacheMapping   = sessionStorage;
   var domCache       = {};
   var transitionMap  = {
-    'slide-in'  : 'slide-out',
-    'slide-out' : 'slide-in',
-    'fade'      : 'fade'
+    slideIn  : 'slide-out',
+    slideOut : 'slide-in',
+    fade     : 'fade'
   };
 
   var bars = {
@@ -524,7 +533,9 @@
   };
 
   var findTarget = function (target) {
-    var i, toggles = document.querySelectorAll('a');
+    var i;
+    var toggles = document.querySelectorAll('a');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = toggles.length; i--;) {
         if (toggles[i] === target) {
@@ -585,7 +596,8 @@
     }
 
     data.title = head.querySelector('title');
-    data.title = data.title && data.title.innerText.trim();
+    var text = 'innerText' in data.title ? 'innerText' : 'textContent';
+    data.title = data.title && data.title[text].trim();
 
     if (options.transition) {
       data = extendWithDom(data, '.content', body);
@@ -609,17 +621,21 @@
 
 }());
 
-/* ----------------------------------
- * Segmented controls v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: segmented-controllers.js v2.0.2
+ * http://goratchet.com/components#segmentedControls
+ * ========================================================================
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
 
   var getTarget = function (target) {
-    var i, segmentedControls = document.querySelectorAll('.segmented-control .control-item');
+    var i;
+    var segmentedControls = document.querySelectorAll('.segmented-control .control-item');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = segmentedControls.length; i--;) {
         if (segmentedControls[i] === target) {
@@ -670,12 +686,15 @@
 
   window.addEventListener('click', function (e) { if (getTarget(e.target)) {e.preventDefault();} });
 }());
-/* ----------------------------------
- * SLIDER v2.0.1
- * Licensed under The MIT License
- * Adapted from Brad Birdsall's swipe
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+
+/* ========================================================================
+ * Ratchet: sliders.js v2.0.2
+ * http://goratchet.com/components#sliders
+ * ========================================================================
+   Adapted from Brad Birdsall's swipe
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
@@ -695,7 +714,9 @@
   var scrollableArea;
 
   var getSlider = function (target) {
-    var i, sliders = document.querySelectorAll('.slider > .slide-group');
+    var i;
+    var sliders = document.querySelectorAll('.slider > .slide-group');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = sliders.length; i--;) {
         if (sliders[i] === target) {
@@ -706,14 +727,16 @@
   };
 
   var getScroll = function () {
-    var translate3d = slider.style.webkitTransform.match(/translate3d\(([^,]*)/);
-    var ret = translate3d ? translate3d[1] : 0;
-    return parseInt(ret, 10);
+    if ('webkitTransform' in slider.style) {
+      var translate3d = slider.style.webkitTransform.match(/translate3d\(([^,]*)/);
+      var ret = translate3d ? translate3d[1] : 0;
+      return parseInt(ret, 10);
+    }
   };
 
   var setSlideNumber = function (offset) {
     var round = offset ? (deltaX < 0 ? 'ceil' : 'floor') : 'round';
-    slideNumber = Math[round](getScroll() / ( scrollableArea / slider.children.length) );
+    slideNumber = Math[round](getScroll() / (scrollableArea / slider.children.length));
     slideNumber += offset;
     slideNumber = Math.min(slideNumber, 0);
     slideNumber = Math.max(-(slider.children.length - 1), slideNumber);
@@ -801,11 +824,14 @@
 
 }());
 
-/* ----------------------------------
- * TOGGLE v2.0.1
- * Licensed under The MIT License
- * http://opensource.org/licenses/MIT
- * ---------------------------------- */
+/* ========================================================================
+ * Ratchet: toggles.js v2.0.2
+ * http://goratchet.com/components#toggles
+ * ========================================================================
+   Adapted from Brad Birdsall's swipe
+ * Copyright 2014 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
 
 !(function () {
   'use strict';
@@ -816,7 +842,9 @@
   var toggle    = false;
 
   var findToggle = function (target) {
-    var i, toggles = document.querySelectorAll('.toggle');
+    var i;
+    var toggles = document.querySelectorAll('.toggle');
+
     for (; target && target !== document; target = target.parentNode) {
       for (i = toggles.length; i--;) {
         if (toggles[i] === target) {
@@ -879,7 +907,7 @@
 
     handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
 
-    toggle.classList[(distanceX > (toggleWidth/2 - handleWidth/2)) ? 'add' : 'remove']('active');
+    toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
   });
 
   window.addEventListener('touchend', function (e) {
@@ -891,7 +919,7 @@
     var toggleWidth = toggle.clientWidth;
     var handleWidth = handle.clientWidth;
     var offset      = (toggleWidth - handleWidth);
-    var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth/2 - handleWidth/2)));
+    var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
 
     if (slideOn) {
       handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';

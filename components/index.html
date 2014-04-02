@@ -4,15 +4,15 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Components &middot; Ratchet</title>
-<meta name="description" content="Ratchet: Prototype mobile apps with simple HTML, CSS, and JS components.">
+<meta name="description" content="Ratchet: Build mobile apps with simple HTML, CSS, and JS components.">
 <meta name="author" content="Connor Sears">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" href="/favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <!-- Google Web Fonts -->
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700|Open+Sans:300">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700%7COpen+Sans:400,300">
 
 <link rel="stylesheet" href="/dist/css/ratchet.min.css">
 <link rel="stylesheet" href="/assets/css/docs.min.css">
@@ -78,7 +78,7 @@
     <div class="column units-2">
       <span class="docs-jump-menu pull-left js-jump-menu">
   <span class="icon icon-list"></span>
-  Jump to 
+  Jump to
   <span class="icon icon-caret"></span>
 </span>
 
@@ -1285,7 +1285,7 @@
           <div class="card">
             <ul class="table-view">
               <li class="table-view-cell">
-                <a class="navigate-right" href="../two.html" data-transition="slide-in">
+                <a class="navigate-right" href="/two.html" data-transition="slide-in">
                   Load new page with push
                 </a>
               </li>
@@ -1324,81 +1324,121 @@
 
       </article>
 
-      <!-- Ratchicons -->
+    <!-- Ratchicons -->
     <article class="component no-border" id="ratchicons">
       <h3 class="component-title">Ratchicons</h3>
       <p class="component-description">Use Ratchicons in your application to help inform interactions.</p>
 
       <div class="component-example">
         <div class="content-padded">
-          <span class="icon icon-home"></span>
-          <span class="icon icon-person"></span>
-          <span class="icon icon-bars"></span>
-          <span class="icon icon-caret"></span>
-          <span class="icon icon-check"></span>
-          <span class="icon icon-close"></span>
-          <span class="icon icon-code"></span>
-          <span class="icon icon-compose"></span>
-          <span class="icon icon-edit"></span>
-          <span class="icon icon-gear"></span>
-          <span class="icon icon-info"></span>
-          <span class="icon icon-list"></span>
-          <span class="icon icon-more"></span>
-          <span class="icon icon-more-vertical"></span>
-          <span class="icon icon-pages"></span>
-          <span class="icon icon-play"></span>
-          <span class="icon icon-pause"></span>
-          <span class="icon icon-stop"></span>
+        
           <span class="icon icon-back"></span>
-          <span class="icon icon-forward"></span>
-          <span class="icon icon-plus"></span>
-          <span class="icon icon-refresh"></span>
-          <span class="icon icon-search"></span>
+        
+          <span class="icon icon-bars"></span>
+        
+          <span class="icon icon-caret"></span>
+        
+          <span class="icon icon-check"></span>
+        
+          <span class="icon icon-close"></span>
+        
+          <span class="icon icon-code"></span>
+        
+          <span class="icon icon-compose"></span>
+        
           <span class="icon icon-download"></span>
+        
+          <span class="icon icon-edit"></span>
+        
+          <span class="icon icon-forward"></span>
+        
+          <span class="icon icon-gear"></span>
+        
+          <span class="icon icon-home"></span>
+        
+          <span class="icon icon-info"></span>
+        
+          <span class="icon icon-list"></span>
+        
+          <span class="icon icon-more-vertical"></span>
+        
+          <span class="icon icon-more"></span>
+        
+          <span class="icon icon-pages"></span>
+        
+          <span class="icon icon-pause"></span>
+        
+          <span class="icon icon-person"></span>
+        
+          <span class="icon icon-play"></span>
+        
+          <span class="icon icon-plus"></span>
+        
+          <span class="icon icon-refresh"></span>
+        
+          <span class="icon icon-search"></span>
+        
           <span class="icon icon-share"></span>
+        
           <span class="icon icon-sound"></span>
+        
           <span class="icon icon-sound2"></span>
+        
           <span class="icon icon-sound3"></span>
+        
           <span class="icon icon-sound4"></span>
+        
           <span class="icon icon-star-filled"></span>
+        
           <span class="icon icon-star"></span>
+        
+          <span class="icon icon-stop"></span>
+        
           <span class="icon icon-trash"></span>
-          <span class="icon icon-down-nav"></span>
-          <span class="icon icon-down"></span>
-          <span class="icon icon-left-nav"></span>
-          <span class="icon icon-left"></span>
-          <span class="icon icon-right-nav"></span>
-          <span class="icon icon-right"></span>
+        
           <span class="icon icon-up-nav"></span>
+        
           <span class="icon icon-up"></span>
+        
+          <span class="icon icon-right-nav"></span>
+        
+          <span class="icon icon-right"></span>
+        
+          <span class="icon icon-down-nav"></span>
+        
+          <span class="icon icon-down"></span>
+        
+          <span class="icon icon-left-nav"></span>
+        
+          <span class="icon icon-left"></span>
+        
         </div>
       </div>
 
 <div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;content-padded&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-home&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-person&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-back&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-bars&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-caret&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-check&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-close&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-code&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-compose&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-download&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-edit&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-forward&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-gear&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-home&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-info&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-list&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-more&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-more-vertical&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-more&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-pages&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-play&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-pause&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-stop&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-back&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-forward&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-person&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-play&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-plus&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-refresh&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-search&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-download&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-share&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-sound&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-sound2&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -1406,15 +1446,16 @@
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-sound4&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-star-filled&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-star&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-stop&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-trash&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-up-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-up&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-right-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-down-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-down&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-left-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-left&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-right-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-right&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-up-nav&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon icon-up&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
 
@@ -1438,7 +1479,7 @@
   <p class="docs-footer-text">Code licensed under the <a href="https://github.com/twbs/ratchet/blob/master/LICENSE" data-ignore="push">MIT License</a> and the docs are licensed under <a href="https://github.com/twbs/ratchet/blob/master/docs/LICENSE" data-ignore="push">CC BY 3.0</a>. Ratchet was lovingly crafted by <a href="https://twitter.com/connors" data-ignore="push">Connor Sears</a>.</p>
 
   <ul class="docs-footer-links">
-    <li>Currently v2.0.1</li>
+    <li>Currently v2.0.2</li>
     <li>&middot;</li>
     <li><a href="https://github.com/twbs/ratchet/issues" data-ignore="push">Issues</a></li>
     <li>&middot;</li>

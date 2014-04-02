@@ -24,29 +24,29 @@ $(function() {
 
 
   var initialize = function () {
-    currentActive        = 0;
-    topCache             = [];
-    win                  = $(window);
-    doc                  = $(document);
-    bod                  = $(document.body);
-    device               = device || $('.js-device');
-    navComponentLinks    = $('.js-jump-menu');
-    componentsList       = $('.js-component-group');
-    componentLinks       = $('.component-example a');
-    contentSection       = $('.component');
-    topCache             = contentSection.map(function () { return $(this).offset().top; });
-    windowHeight         = $(window).height() / 3;
-    windowWidth          = $(window).width();
-    pageHeight           = $(document).height();
-    contentPadding       = parseInt($('.docs-content').css('padding-bottom'), 10);
-    footerHeight         = $('.docs-footer').outerHeight(false);
-    toolbarToggle        = $('.js-docs-component-toolbar');
+    currentActive          = 0;
+    topCache               = [];
+    win                    = $(window);
+    doc                    = $(document);
+    bod                    = $(document.body);
+    device                 = device || $('.js-device');
+    navComponentLinks      = $('.js-jump-menu');
+    componentsList         = $('.js-component-group');
+    componentLinks         = $('.component-example a');
+    contentSection         = $('.component');
+    topCache               = contentSection.map(function () { return $(this).offset().top; });
+    windowHeight           = $(window).height() / 3;
+    windowWidth            = $(window).width();
+    pageHeight             = $(document).height();
+    contentPadding         = parseInt($('.docs-content').css('padding-bottom'), 10);
+    footerHeight           = $('.docs-footer').outerHeight(false);
+    toolbarToggle          = $('.js-docs-component-toolbar');
 
     // Device placement
-    if (windowWidth >= 768) {
+    if (windowWidth >= 768 && device.offset()) {
       device.initialLeft   = device.offset().left;
       device.initialTop    = device.initialTop || device.offset().top;
-      device.dockingOffset = ($(window).height() - device.height())/2;
+      device.dockingOffset = ($(window).height() - device.height()) / 2;
     }
 
     checkDesktopContent();
@@ -129,9 +129,14 @@ $(function() {
     var contentSectionItem;
     var currentTop = win.scrollTop();
 
-    if((device.initialTop - currentTop) <= device.dockingOffset) {
+    // exit if no device
+    if (!device.length) {
+      return;
+    }
+
+    if ((device.initialTop - currentTop) <= device.dockingOffset) {
       device[0].className = 'device device-fixed';
-      device.css({top: device.dockingOffset});
+      device.css({ top: device.dockingOffset });
     } else {
       device[0].className = 'device';
       device[0].setAttribute('style','');
@@ -170,7 +175,7 @@ $(function() {
     var currentTop   = win.scrollTop();
     var headerHeight = $('.docs-sub-header').outerHeight();
 
-    if(currentTop >= headerHeight) {
+    if (currentTop >= headerHeight) {
       toolbarToggle.addClass('visible');
     } else if (currentTop <= headerHeight) {
       toolbarToggle.removeClass('visible');
@@ -179,5 +184,7 @@ $(function() {
   };
 
   $(window).on('load resize', initialize);
-  $(window).on('load', function () { new FingerBlast('.device-content'); });
+  $(window).on('load', function () {
+    window.FingerBlast && (new FingerBlast('.device-content'));
+  });
 });
