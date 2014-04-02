@@ -495,8 +495,8 @@ input[type="button"] {
   background-color: white;
   border-bottom: 1px solid #ddd;
 
-          backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .bar-header-secondary {
