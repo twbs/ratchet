@@ -1766,7 +1766,12 @@ hr {
   background-image: none;
 }
 .platform-android .input-row {
+  height: 40px;
   border-bottom: 1px solid #d9d9d9;
+}
+.platform-android .input-row label {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .platform-android .input-row label + input {
   background-image: none;
