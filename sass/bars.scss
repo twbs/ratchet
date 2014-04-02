@@ -12,6 +12,8 @@
   padding-left: $bar-side-spacing;
   background-color: $chrome-color;
   border-bottom: $border-default;
+  -webkit-backface-visibility: hidden; // Make sure the bar is visible when a modal animates in.
+          backface-visibility: hidden;
 }
 
 // Modifier class to dock any bar below .bar-nav
