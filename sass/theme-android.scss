@@ -530,7 +530,12 @@ textarea,
 
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
+  height: 40px; // Matches the height of inputs.
   border-bottom: 1px solid #d9d9d9;
+}
+.input-row label {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 // Remove bottom border on last input-row to avoid double bottom border
 .input-row label + input {
