@@ -191,7 +191,9 @@
     swapContent(
       (activeObj.contents || activeDom).cloneNode(true),
       document.querySelector('.content'),
-      transition
+      transition, function() {
+        triggerStateChange();
+      }
     );
 
     PUSH.id = id;
