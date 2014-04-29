@@ -83,9 +83,9 @@
     if (e.touches.length > 1 || !slider) {
       return; // Exit if a pinch || no slider
     }
-    
+
     // adjust the starting position if we just started to avoid jumpage
-    if(!startedMoving) {
+    if (!startedMoving) {
       pageX += (e.touches[0].pageX - pageX) - 1;
     }
 
@@ -96,7 +96,7 @@
 
     if (typeof isScrolling === 'undefined' && startedMoving) {
       isScrolling = Math.abs(deltaY) > Math.abs(deltaX);
-    } 
+    }
 
     if (isScrolling) {
       return;
@@ -110,7 +110,7 @@
                  slideNumber === lastSlide && deltaX < 0 ? (Math.abs(pageX) / sliderWidth) + 1.25 : 1;
 
     slider.style.webkitTransform = 'translate3d(' + offsetX + 'px,0,0)';
-    
+
     // started moving
     startedMoving = true;
   };
@@ -119,7 +119,7 @@
     if (!slider || isScrolling) {
       return;
     }
-    
+
     // were done moving
     startedMoving = false;
 
