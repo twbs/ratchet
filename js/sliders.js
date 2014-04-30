@@ -120,7 +120,7 @@
       return;
     }
 
-    // were done moving
+    // we're done moving
     startedMoving = false;
 
     setSlideNumber(
