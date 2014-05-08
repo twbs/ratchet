@@ -9,3 +9,6 @@ install:
   - travis_retry gem install --no-document "jekyll:~>1.5.0" "sass:~>3.3.0"
 matrix:
   fast_finish: true
+notifications:
+  slack: heybb:51atQXKR2rpnbohAZ0X1vNbE
+  
