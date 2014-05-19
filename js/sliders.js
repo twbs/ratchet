@@ -47,10 +47,10 @@
 
   var setSlideNumber = function (offset) {
     var round = offset ? (deltaX < 0 ? 'ceil' : 'floor') : 'round';
-    slideNumber = Math[round](getScroll() / (scrollableArea / slider.children.length));
+    slideNumber = Math[round](getScroll() / (scrollableArea / slider.querySelectorAll('.slide').length));
     slideNumber += offset;
     slideNumber = Math.min(slideNumber, 0);
-    slideNumber = Math.max(-(slider.children.length - 1), slideNumber);
+    slideNumber = Math.max(-(slider.querySelectorAll('.slide').length - 1), slideNumber);
   };
 
   var onTouchStart = function (e) {
@@ -62,11 +62,11 @@
 
     var firstItem  = slider.querySelector('.slide');
 
-    scrollableArea = firstItem.offsetWidth * slider.children.length;
+    scrollableArea = firstItem.offsetWidth * slider.querySelectorAll('.slide').length;
     isScrolling    = undefined;
     sliderWidth    = slider.offsetWidth;
     resistance     = 1;
-    lastSlide      = -(slider.children.length - 1);
+    lastSlide      = -(slider.querySelectorAll('.slide').length - 1);
     startTime      = +new Date();
     pageX          = e.touches[0].pageX;
     pageY          = e.touches[0].pageY;
