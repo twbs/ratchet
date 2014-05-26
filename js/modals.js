@@ -24,7 +24,7 @@
 
   var getModal = function (event) {
     var modalToggle = findModals(event.target);
-    if (modalToggle && modalToggle.hash) {
+    if (modalToggle && modalToggle.hash && modalToggle.hash.indexOf('/') < 0) {
       return document.querySelector(modalToggle.hash);
     }
   };
