@@ -355,7 +355,7 @@
         container.removeEventListener('transitionend', fadeContainerEnd);
         swap.classList.add('in');
         swap.addEventListener('webkitTransitionEnd', fadeSwapEnd);
-        swap.addEventListener('transitionend', fadeSwapEnd);'s'
+        swap.addEventListener('transitionend', fadeSwapEnd);
       };
       var fadeSwapEnd = function () {
         swap.removeEventListener('webkitTransitionEnd', fadeSwapEnd);
