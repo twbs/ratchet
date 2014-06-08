@@ -222,7 +222,8 @@ module.exports = function(grunt) {
         reset: true,
         relaxerror: [
           'Attribute ontouchstart not allowed on element body at this point.',
-          'Bad value X-UA-Compatible for attribute http-equiv on element meta.'
+          'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
+          'Consider using the h1 element as a top-level heading only \\(all h1 elements are treated as top-level headings by many screen readers and other tools\\)\\.'
         ]
       },
       files: {
