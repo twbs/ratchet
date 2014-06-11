@@ -40,6 +40,7 @@
     "grunt-html-validation": "~0.1.17",
     "grunt-jekyll": "~0.4.2",
     "grunt-jscs-checker": "~0.4.4",
+    "grunt-scss-lint": "^0.1.11",
     "grunt-sed": "~0.1.1",
     "load-grunt-tasks": "~0.4.0",
     "time-grunt": "~0.3.1"
