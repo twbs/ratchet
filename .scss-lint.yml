@@ -4,13 +4,13 @@ linters:
     enabled: true
 
   CapitalizationInSelector:
-    enabled: true
+    enabled: false
 
   ColorKeyword:
     enabled: true
 
   Comment:
-    enabled: true
+    enabled: false
 
   DebugStatement:
     enabled: true
@@ -22,8 +22,7 @@ linters:
     enabled: true
 
   EmptyLineBetweenBlocks:
-    enabled: true
-    ignore_single_line_blocks: true
+    enabled: false
 
   EmptyRule:
     enabled: true
@@ -47,16 +46,14 @@ linters:
     enabled: true
 
   Indentation:
-    enabled: true
-    width: 2
+    enabled: false
 
   LeadingZero:
     enabled: true
     style: exclude_zero # or 'include_zero'
 
   MergeableSelector:
-    enabled: true
-    force_nesting: true
+    enabled: false
 
   NameFormat:
     enabled: true
@@ -66,7 +63,7 @@ linters:
     enabled: true
 
   PropertySortOrder:
-    enabled: true
+    enabled: false
 
   PropertySpelling:
     enabled: true
@@ -74,26 +71,25 @@ linters:
 
   SelectorDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 4
 
   Shorthand:
     enabled: true
 
   SingleLinePerSelector:
-    enabled: true
+    enabled: false
 
   SpaceAfterComma:
     enabled: true
 
   SpaceAfterPropertyColon:
-    enabled: true
+    enabled: false
 
   SpaceAfterPropertyName:
     enabled: true
 
   SpaceBeforeBrace:
-    enabled: true
-    allow_single_line_padding: false
+    enabled: false
 
   SpaceBetweenParens:
     enabled: true
