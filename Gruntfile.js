@@ -24,6 +24,7 @@ module.exports = function(grunt) {
 
     // Metadata.
     meta: {
+      srcPath:        'sass/',
       distPath:       'dist/',
       docsPath:       'docs/dist/',
       docsAssetsPath: 'docs/assets/'
@@ -82,14 +83,14 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= meta.distPath %>/css/<%= pkg.name %>.css': '<%= meta.distPath %>/css/<%= pkg.name %>.css',
-          '<%= meta.distPath %>/css/<%= pkg.name %>-theme-android.css': '<%= meta.distPath %>/css/<%= pkg.name %>-theme-android.css',
-          '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ios.css': '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ios.css'
+          '<%= meta.distPath %>css/<%= pkg.name %>.css': '<%= meta.distPath %>css/<%= pkg.name %>.css',
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css',
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css'
         }
       },
       docs: {
         files: {
-          '<%= meta.docsAssetsPath %>/css/docs.css': '<%= meta.docsAssetsPath %>/css/docs.css'
+          '<%= meta.docsAssetsPath %>css/docs.css': '<%= meta.docsAssetsPath %>css/docs.css'
         }
       }
     },
@@ -98,7 +99,7 @@ module.exports = function(grunt) {
       fonts: {
         expand: true,
         src: 'fonts/*',
-        dest: '<%= meta.distPath %>/'
+        dest: '<%= meta.distPath %>'
       },
       docs: {
         expand: true,
@@ -157,7 +158,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: [
-          '<%= meta.srcPath %>/**/*.scss'
+          '<%= meta.srcPath %>**/*.scss'
         ],
         tasks: ['sass']
       }
