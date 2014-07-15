@@ -74,6 +74,18 @@
   color: inherit;
 }
 
+// multiple titles in bar
+.titles {
+    .title {
+      font-size: $font-size-default - 4px;
+      margin-top: -0.75em;
+    }
+    .title + .title {
+      padding-top: 1em;
+      font-size: $font-size-default + 2px;
+    }
+}
+
 
 // Tab bar
 // --------------------------------------------------
