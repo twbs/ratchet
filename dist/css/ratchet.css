@@ -9,6 +9,13 @@
  */
 
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/*! Changes 
+ * Fix scroll for same devices, e.g. Motorola Defy
+ * Author: Romulo Pereira (romuloccomp)
+ *         https://github.com/romuloccomp/ratchet
+ */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -257,15 +264,20 @@ a:active {
   color: #3071a9;
 }
 
+body, .content { position: static; } 
+
 .content {
-  position: absolute;
+  position: static;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  /*-webkit-overflow-scrolling: touch;*/
+  -webkit-overflow-scrolling: auto; /* @romuloccomp */
+  padding-top: 44px;  /* @romuloccomp */
   background-color: #fff;
+  min-height: 400px;
 }
 
 .content > * {
@@ -449,6 +461,7 @@ p {
   padding: 15px 0;
   margin-bottom: 10px;
   font-size: 18px;
+    text-align: center;
 }
 
 input[type="submit"],
