@@ -28,13 +28,13 @@
       return document.querySelector(modalToggle.hash);
     }
   };
-  
+
   var dragging = false;
-  
+
   window.addEventListener('touchmove', function () {
     dragging = true;
   });
-    
+
   window.addEventListener('touchstart', function () {
     dragging = false;
   });
@@ -43,7 +43,7 @@
     if (dragging) {
       return;
     }
-        
+
     var modal = getModal(event);
     if (modal) {
       if (modal && modal.classList.contains('modal')) {
