@@ -256,7 +256,7 @@
     xhr.send();
 
     if (isFileProtocol) {
-      if (xhr.status === 0) {
+      if (xhr.status === 0 || xhr.status === 200) {
         success(xhr, options);
       } else {
         failure(options.url);
