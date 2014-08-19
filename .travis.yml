@@ -6,7 +6,7 @@ before_install:
 install:
   - travis_retry npm install -g grunt-cli
   - travis_retry npm install
-  - travis_retry gem install --no-document "jekyll:~>2.2.0" "sass:~>3.3.12"
+  - travis_retry gem install --no-document "jekyll:~>2.3.0" "sass:~>3.4.0"
 matrix:
   fast_finish: true
 notifications:
