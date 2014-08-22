@@ -131,7 +131,7 @@ dfn {
 //
 
 h1 {
-  margin: 0.67em 0;
+  margin: .67em 0;
   font-size: 2em;
 }
 
@@ -355,7 +355,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-box-sizing: content-box; // 2
      -moz-box-sizing: content-box;
-          box-sizing: content-box;         
+          box-sizing: content-box;
   -webkit-appearance: textfield; // 1
 }
 

@@ -76,6 +76,14 @@ module.exports = function(grunt) {
       }
     },
 
+    scsslint: {
+      scss: 'sass/*.scss',
+      options: {
+        config: '.scss-lint.yml',
+        colorizeOutput: true
+      }
+    },
+
     csscomb: {
       options: {
         config: 'sass/.csscomb.json'
@@ -222,7 +230,8 @@ module.exports = function(grunt) {
         reset: true,
         relaxerror: [
           'Attribute ontouchstart not allowed on element body at this point.',
-          'Bad value X-UA-Compatible for attribute http-equiv on element meta.'
+          'Bad value X-UA-Compatible for attribute http-equiv on element meta.',
+          'Consider using the h1 element as a top-level heading only \\(all h1 elements are treated as top-level headings by many screen readers and other tools\\)\\.'
         ]
       },
       files: {
@@ -253,7 +262,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('test', ['dist', 'scsslint', 'csslint', 'jshint', 'jscs', 'validate-html']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 

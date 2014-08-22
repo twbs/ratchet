@@ -64,7 +64,7 @@ body {
   background-image:     -ms-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
   background-image:      -o-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
   background-image:         linear-gradient(45deg, #0a1855 0%, #da0024 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a1855', endColorstr='#da0024', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a1855", endColorstr="#da0024", GradientType=1 );
 }
 
 .docs-header {
@@ -258,7 +258,7 @@ body {
     left: 30px;
     width: 0;
     height: 0;
-    content: '';
+    content: "";
   }
   .docs-component-group:before {
     top: -11px;
@@ -804,7 +804,7 @@ code {
   bottom: 0;
   left: 0;
   z-index: 11;
-  content: '';
+  content: "";
   background-color: rgba(0, 0, 0, .3);
 }
 
@@ -1055,7 +1055,7 @@ hr {
 .platform-ios .btn-link {
   color: #007aff;
   background-color: transparent;
-  border: none;
+  border: 0;
 }
 .platform-ios .btn-link:active, .platform-ios .btn-link.active {
   color: #0062cc;
@@ -1521,7 +1521,7 @@ hr {
 .platform-android .btn-link {
   color: #33b5e5;
   background-color: transparent;
-  border: none;
+  border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -1912,45 +1912,45 @@ hr {
 }
 .platform-android .navigate-left:after,
 .platform-android .push-left:after {
-  content: '';
+  content: "";
 }
 .platform-android .navigate-right:after,
 .platform-android .push-right:after {
-  content: '';
+  content: "";
 }
 .platform-android .icon-caret:before {
-  content: '\e800';
+  content: "\e800";
 }
 .platform-android .icon-down:before,
 .platform-android .icon-down-nav:before {
-  content: '\e801';
+  content: "\e801";
 }
 .platform-android .icon-download:before {
-  content: '\e802';
+  content: "\e802";
 }
 .platform-android .icon-left:before,
 .platform-android .icon-left-nav:before {
-  content: '\e803';
+  content: "\e803";
 }
 .platform-android .icon-more-vertical:before {
-  content: '\e804';
+  content: "\e804";
 }
 .platform-android .icon-more:before {
-  content: '\e805';
+  content: "\e805";
 }
 .platform-android .icon-right:before,
 .platform-android .icon-right-nav:before {
-  content: '\e806';
+  content: "\e806";
 }
 .platform-android .icon-search:before {
-  content: '\e807';
+  content: "\e807";
 }
 .platform-android .icon-share:before {
-  content: '\e808';
+  content: "\e808";
 }
 .platform-android .icon-up:before,
 .platform-android .icon-up-nav:before {
-  content: '\e809';
+  content: "\e809";
 }
 .platform-android .device {
   font-family: 'Roboto', sans-serif;
