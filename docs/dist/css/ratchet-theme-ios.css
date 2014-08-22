@@ -99,7 +99,7 @@ p {
 .btn-link {
   color: #007aff;
   background-color: transparent;
-  border: none;
+  border: 0;
 }
 .btn-link:active, .btn-link.active {
   color: #0062cc;

@@ -312,7 +312,7 @@ a:active {
 
 .clearfix:before, .clearfix:after {
   display: table;
-  content: " ";
+  content: ' ';
 }
 .clearfix:after {
   clear: both;
@@ -1173,7 +1173,7 @@ select {
   font-size: 13px;
   color: #999;
   text-transform: uppercase;
-  content: "Off";
+  content: 'Off';
 }
 .toggle.active {
   background-color: #5cb85c;
@@ -1189,7 +1189,7 @@ select {
   right: auto;
   left: 15px;
   color: #fff;
-  content: "On";
+  content: 'On';
 }
 .toggle input[type="checkbox"] {
   display: none;
