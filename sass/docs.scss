@@ -1,5 +1,5 @@
-@import 'variables.scss';
-@import 'mixins.scss';
+@import "variables.scss";
+@import "mixins.scss";
 
 // Clearfix mixin for docs
 
@@ -78,7 +78,7 @@ body {
   }
   .version {
     margin-top: 15px;
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255,255,255,.5);
     text-align: center;
   }
 }
@@ -117,7 +117,7 @@ body {
   position: relative;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .docs-title {
   position: absolute;
@@ -145,7 +145,7 @@ body {
     z-index: 20;
     height: 0;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0,0,0,.9);
     opacity: 0;
 
     &.active {
@@ -239,9 +239,9 @@ body {
     padding-bottom: 10px;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0,0,0,.2);
     border-radius: 3px;
-    @include box-shadow(0 0 8px rgba(0, 0, 0, .05));
+    @include box-shadow(0 0 8px rgba(0,0,0,.05));
 
     &.active {
       display: block;
@@ -252,13 +252,13 @@ body {
       left: 30px;
       width: 0;
       height: 0;
-      content: '';
+      content: "";
     }
     &:before {
       top: -11px;
       margin-left: -11px;
       border-right: 11px solid transparent;
-      border-bottom: 11px solid rgba(0, 0, 0, .3);
+      border-bottom: 11px solid rgba(0,0,0,.3);
       border-left: 11px solid transparent;
     }
     &:after {
@@ -302,7 +302,7 @@ body {
 
     &:hover {
       background-color: #fff;
-      @include box-shadow(0 0 50px rgba(255, 255, 255, .3));
+      @include box-shadow(0 0 50px rgba(255,255,255,.3));
     }
     &:active {
       opacity: .5;
@@ -343,7 +343,7 @@ body {
   font-size: 13px !important;
   line-height: 18px !important;
   background: transparent !important;
-  border-top: 1px solid rgba(255, 255, 255, .1) !important;
+  border-top: 1px solid rgba(255,255,255,.1) !important;
   border-right: 0 !important;
   border-bottom: 0 !important;
   border-left: 0 !important;
@@ -358,7 +358,7 @@ body {
   width: auto !important;
   height: auto !important;
   margin-left: 145px !important;
-  color: rgba(255, 255, 255, .65) !important;
+  color: rgba(255,255,255,.65) !important;
   font-family: "Open Sans", sans-serif !important;
 }
 .carbonad-text {
@@ -379,9 +379,9 @@ body {
 @media screen and (min-width: 768px) {
   .carbonad {
     width: 360px !important;
-    border-right: 1px solid rgba(255, 255, 255, .1) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, .1) !important;
-    border-left: 1px solid rgba(255, 255, 255, .1) !important;
+    border-right: 1px solid rgba(255,255,255,.1) !important;
+    border-bottom: 1px solid rgba(255,255,255,.1) !important;
+    border-left: 1px solid rgba(255,255,255,.1) !important;
     border-radius: 3px !important;
   }
 }
@@ -519,14 +519,14 @@ body {
 // Overrides for the homepage's footer
 .docs-header .docs-footer {
   margin-top: 0;
-  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-top: 1px solid rgba(255,255,255,.1);
 
   .docs-footer-text,
   .docs-footer-links {
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255,255,255,.5);
 
     a {
-      color: rgba(255, 255, 255, .8);
+      color: rgba(255,255,255,.8);
     }
   }
 }
@@ -686,7 +686,7 @@ code {
   width: 100%;
   text-align: center;
   font-size: 24px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  text-shadow: 0 0 10px rgba(0,0,0,.5);
   color: #fff;
 }
 .component-example-fullbleed,
@@ -827,8 +827,8 @@ code {
     bottom: 0;
     left: 0;
     z-index: 11;
-    background-color: rgba(0, 0, 0, .3);
-    content: '';
+    background-color: rgba(0,0,0,.3);
+    content: "";
   }
 }
 @media screen and (min-width: 768px) {
@@ -867,7 +867,7 @@ code {
     color: #fff;
     text-align: center;
     font-size: 24px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
   }
 }
 
@@ -890,7 +890,7 @@ code {
     height: 813px;
     margin-left: -20px;
     font-family: "Helvetica Neue", sans-serif;
-    background-image: url('../img/device-sprite.png');
+    background-image: url("../img/device-sprite.png");
     background-size: 300%;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1008,7 +1008,7 @@ hr {
 // --------------------------------------------------
 
 .platform-ios {
-  @import 'theme-ios.scss';
+  @import "theme-ios.scss";
 
   .device {
     background-position: -395px 0;
@@ -1019,7 +1019,7 @@ hr {
   }
 }
 .platform-android {
-  @import 'theme-android.scss';
+  @import "theme-android.scss";
 
   .device {
     font-family: 'Roboto', sans-serif;

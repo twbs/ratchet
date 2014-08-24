@@ -80,7 +80,7 @@ linters:
     enabled: false
 
   SpaceAfterComma:
-    enabled: true
+    enabled: false
 
   SpaceAfterPropertyColon:
     enabled: false
@@ -97,7 +97,7 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: single_quotes # or double_quotes
+    style: double_quotes
 
   TrailingSemicolonAfterPropertyValue:
     enabled: true

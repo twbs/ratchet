@@ -13,8 +13,8 @@
   background-color: $chrome-color;
   border-radius: $border-radius;
   opacity: 0;
-  @include box-shadow(0 0 15px rgba(0, 0, 0, .1));
-  @include transform(translate3d(0, -15px, 0));
+  @include box-shadow(0 0 15px rgba(0,0,0,.1));
+  @include transform(translate3d(0,-15px,0));
   @include transition(all .25s linear);
 
   // Caret on top of popover using CSS triangles (thanks to @chriscoyier for solution)
@@ -25,7 +25,7 @@
     width: 0;
     height: 0;
     margin-left: -15px;
-    content: '';
+    content: "";
     border-right: 15px solid transparent;
     border-bottom: 15px solid $chrome-color;
     border-left: 15px solid transparent;
@@ -36,7 +36,7 @@
 
   &.visible {
     opacity: 1;
-    @include transform(translate3d(0, 0, 0));
+    @include transform(translate3d(0,0,0));
   }
 
   // Give correct spacing to the content if there is a bar inside the popover.
@@ -55,7 +55,7 @@
   bottom: 0;
   left: 0;
   z-index: 15;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0,0,0,.3);
 }
 
 // Block level buttons in popovers

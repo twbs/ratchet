@@ -36,7 +36,7 @@
     font-size: 13px;
     color: #999;
     text-transform: uppercase;
-    content: 'Off';
+    content: "Off";
   }
 
   // Active state for toggle
@@ -46,13 +46,13 @@
 
     .toggle-handle {
       border-color: $positive-color;
-      @include transform(translate3d(44px, 0, 0));
+      @include transform(translate3d(44px,0,0));
     }
     &:before {
       right: auto;
       left: 15px;
       color: #fff;
-      content: 'On';
+      content: "On";
     }
   }
   // Hide the checkbox
