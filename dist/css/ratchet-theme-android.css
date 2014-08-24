@@ -569,54 +569,54 @@ textarea,
 
 .navigate-left:after,
 .push-left:after {
-  content: '';
+  content: "";
 }
 
 .navigate-right:after,
 .push-right:after {
-  content: '';
+  content: "";
 }
 
 .icon-caret:before {
-  content: '\e800';
+  content: "\e800";
 }
 
 .icon-down:before,
 .icon-down-nav:before {
-  content: '\e801';
+  content: "\e801";
 }
 
 .icon-download:before {
-  content: '\e802';
+  content: "\e802";
 }
 
 .icon-left:before,
 .icon-left-nav:before {
-  content: '\e803';
+  content: "\e803";
 }
 
 .icon-more-vertical:before {
-  content: '\e804';
+  content: "\e804";
 }
 
 .icon-more:before {
-  content: '\e805';
+  content: "\e805";
 }
 
 .icon-right:before,
 .icon-right-nav:before {
-  content: '\e806';
+  content: "\e806";
 }
 
 .icon-search:before {
-  content: '\e807';
+  content: "\e807";
 }
 
 .icon-share:before {
-  content: '\e808';
+  content: "\e808";
 }
 
 .icon-up:before,
 .icon-up-nav:before {
-  content: '\e809';
+  content: "\e809";
 }
