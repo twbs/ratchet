@@ -96,7 +96,7 @@ linters:
     spaces: 0
 
   StringQuotes:
-    enabled: true
+    enabled: false
     style: double_quotes
 
   TrailingSemicolonAfterPropertyValue:
