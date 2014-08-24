@@ -45,7 +45,7 @@
   background-image:     -ms-linear-gradient(top, $color-from 0%, $color-to 100%);           // IE10+
   background-image:      -o-linear-gradient(top, $color-from 0%, $color-to 100%);           // Opera 11.10+
   background-image:         linear-gradient(to bottom, $color-from 0%, $color-to 100%);     // W3C
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color-from}",endColorstr="#{$color-to}",GradientType=0; // IE6-9
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$color-from}",endColorstr="#{$color-to}",GradientType=0); // IE6-9
 }
 @mixin directional-gradient($color-from, $color-to, $deg: 45deg) {
   background-color: $color-from; // Old browsers
@@ -119,7 +119,8 @@
     background-position: $offset 100%;
 
   } @else if $type == double {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>"),
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10gem update --system
+0%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>"),
                       url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='1'><rect fill='#{$color}' x='0' y='0' width='100%' height='0.5'/></svg>");
     background-position: $offset 100%, $offset 0;
   }
