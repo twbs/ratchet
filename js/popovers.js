@@ -29,16 +29,18 @@
     popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
   };
 
+  var hide = function(){
+      popover.addEventListener('webkitTransitionEnd', onPopoverHidden);
+      popover.classList.remove('visible');
+      popover.parentNode.removeChild(backdrop);
+    });
+
   var backdrop = (function () {
     var element = document.createElement('div');
 
     element.classList.add('backdrop');
 
-    element.addEventListener('touchend', function () {
-      popover.addEventListener('webkitTransitionEnd', onPopoverHidden);
-      popover.classList.remove('visible');
-      popover.parentNode.removeChild(backdrop);
-    });
+    element.addEventListener('touchend', hide());
 
     return element;
   }());
@@ -69,9 +71,14 @@
   };
 
   var showHidePopover = function (e) {
-    var popover = getPopover(e);
+      var oldPopover = popover;
+    popover = getPopover(e);
 
     if (!popover) {
+        if (oldPopover && oldPopover.hasClass('visible')){
+            popover = oldPopover;
+            hide();
+        }
       return;
     }
 

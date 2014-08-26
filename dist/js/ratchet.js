@@ -33,7 +33,7 @@
 
   var getModal = function (event) {
     var modalToggle = findModals(event.target);
-    if (modalToggle && modalToggle.hash) {
+    if (modalToggle && modalToggle.hash && -1 === modalToggle.hash.indexOf('/')) {
       return document.querySelector(modalToggle.hash);
     }
   };
@@ -161,10 +161,9 @@
   var maxCacheLength = 20;
   var cacheMapping   = sessionStorage;
   var domCache       = {};
-  // Change these to unquoted camelcase in the next major version bump
   var transitionMap  = {
-    'slide-in'  : 'slide-out',
-    'slide-out' : 'slide-in',
+    slideIn  : 'slide-out',
+    slideOut : 'slide-in',
     fade     : 'fade'
   };
 
@@ -379,7 +378,7 @@
         url        : window.location.href,
         title      : document.title,
         timeout    : options.timeout,
-        transition : options.transition
+        transition : null
       });
     }
 
@@ -595,10 +594,12 @@
       head           = body = document.createElement('div');
       head.innerHTML = responseText;
     }
+    
+    if (window.pico)
+        pico.embedJS(Array.prototype.slice.call(body.getElementsByTagName('script')));
 
     data.title = head.querySelector('title');
-    var text = 'innerText' in data.title ? 'innerText' : 'textContent';
-    data.title = data.title && data.title[text].trim();
+    data.title = data.title && data.title['innerText' in data.title ? 'innerText' : 'textContent'].trim();
 
     if (options.transition) {
       data = extendWithDom(data, '.content', body);
