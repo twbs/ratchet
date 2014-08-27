@@ -370,7 +370,7 @@ p {
   white-space: nowrap;
   vertical-align: top;
   cursor: pointer;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -492,7 +492,7 @@ input[type="button"] {
   height: 44px;
   padding-right: 10px;
   padding-left: 10px;
-  background-color: white;
+  background-color: #fff;
   border-bottom: 1px solid #ddd;
 
   -webkit-backface-visibility: hidden;
@@ -694,7 +694,7 @@ input[type="button"] {
 .card {
   margin: 10px;
   overflow: hidden;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
 }
@@ -926,7 +926,7 @@ select {
   overflow: hidden;
   font-size: 12px;
   font-weight: 400;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -1013,7 +1013,7 @@ select {
   display: none;
   width: 280px;
   margin-left: -140px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 6px;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
           box-shadow: 0 0 15px rgba(0, 0, 0, .1);
@@ -1034,7 +1034,7 @@ select {
   margin-left: -15px;
   content: '';
   border-right: 15px solid transparent;
-  border-bottom: 15px solid white;
+  border-bottom: 15px solid #fff;
   border-left: 15px solid transparent;
 }
 .popover.visible {

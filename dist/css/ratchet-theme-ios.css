@@ -463,7 +463,6 @@ textarea,
     -webkit-box-shadow: 0 0 10px transparent, -320px 0 0 transparent;
             box-shadow: 0 0 10px transparent, -320px 0 0 transparent;
   }
-
   to {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
             box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
