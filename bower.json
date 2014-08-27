@@ -12,8 +12,8 @@
     "prototype"
   ],
   "main": [
-    "./dist/css/ratchet.css",
-    "./dist/js/ratchet.js"
+    "dist/css/ratchet.css",
+    "dist/js/ratchet.js"
   ],
   "ignore": [
     "_config.yml",
