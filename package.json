@@ -39,6 +39,7 @@
     "grunt-csscomb": "~3.0.0",
     "grunt-html-validation": "~0.1.18",
     "grunt-jekyll": "~0.4.2",
+    "grunt-scss-lint": "^0.1.11",
     "grunt-jscs": "~0.6.2",
     "grunt-sed": "~0.1.1",
     "load-grunt-tasks": "~0.6.0",

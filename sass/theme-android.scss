@@ -21,13 +21,13 @@ $line-height-default: 22px !global;
 //
 // Main theme colors
 $primary-color:  #33b5e5 !global;
-$chrome-color:   #dddddd !global;
+$chrome-color:   #ddd !global;
 $text-color:     #222 !global;
 
 // Action colors
 $default-color:  #999 !global;
-$positive-color: #99cc00 !global;
-$negative-color: #ff4444 !global;
+$positive-color: #9c0 !global;
+$negative-color: #f44 !global;
 
 // Bars
 $bar-base-height: 50px !global;
@@ -200,7 +200,7 @@ a {
 .btn-link {
   color: $primary-color;
   background-color: transparent;
-  border: none;
+  border: 0;
   @include box-shadow(none);
 
   &:active,
@@ -728,28 +728,28 @@ textarea,
 // Deprecated `push-left` and `push-right` as of 2.0.1
 .navigate-left:after,
 .push-left:after {
-  content: '';
+  content: "";
 }
 .navigate-right:after,
 .push-right:after {
-  content: '';
+  content: "";
 }
 
 
 // Ratchicons for Android
 // --------------------------------------------------
 
-.icon-caret:before         { content: '\e800'; }
+.icon-caret:before         { content: "\e800"; }
 .icon-down:before,
-.icon-down-nav:before      { content: '\e801'; }
-.icon-download:before      { content: '\e802'; }
+.icon-down-nav:before      { content: "\e801"; }
+.icon-download:before      { content: "\e802"; }
 .icon-left:before,
-.icon-left-nav:before      { content: '\e803'; }
-.icon-more-vertical:before { content: '\e804'; }
-.icon-more:before          { content: '\e805'; }
+.icon-left-nav:before      { content: "\e803"; }
+.icon-more-vertical:before { content: "\e804"; }
+.icon-more:before          { content: "\e805"; }
 .icon-right:before,
-.icon-right-nav:before     { content: '\e806'; }
-.icon-search:before        { content: '\e807'; }
-.icon-share:before         { content: '\e808'; }
+.icon-right-nav:before     { content: "\e806"; }
+.icon-search:before        { content: "\e807"; }
+.icon-share:before         { content: "\e808"; }
 .icon-up:before,
-.icon-up-nav:before        { content: '\e809'; }
+.icon-up-nav:before        { content: "\e809"; }

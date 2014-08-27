@@ -77,6 +77,14 @@ module.exports = function(grunt) {
       }
     },
 
+    scsslint: {
+      scss: 'sass/*.scss',
+      options: {
+        config: '.scss-lint.yml',
+        colorizeOutput: true
+      }
+    },
+
     csscomb: {
       options: {
         config: 'sass/.csscomb.json'
@@ -255,7 +263,7 @@ module.exports = function(grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('test', ['dist', 'scsslint', 'csslint', 'jshint', 'jscs', 'validate-html']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 
