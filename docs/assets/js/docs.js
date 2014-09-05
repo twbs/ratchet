@@ -162,7 +162,7 @@ $(function() {
           device.attr('id', '');
         }
         if (!contentSectionItem.hasClass('informational')) {
-          updateContent(contentSectionItem.find('.highlight .html').text());
+          updateContent(contentSectionItem.find('.highlight .language-html').text());
         }
         break;
       }
