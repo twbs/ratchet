@@ -30,7 +30,7 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-concat": "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-contrib-csslint": "~0.3.1",
     "grunt-contrib-cssmin": "~0.10.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-sass": "~0.8.1",
