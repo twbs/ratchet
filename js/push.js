@@ -120,8 +120,6 @@
   };
 
   var popstate = function (e) {
-    var key;
-    var barElement;
     var activeObj;
     var activeDom;
     var direction;
@@ -185,7 +183,6 @@
   // =======================
 
   var PUSH = function (options) {
-    var key;
     var xhr = PUSH.xhr;
 
     if (xhr && xhr.readyState < 4) {
@@ -242,8 +239,6 @@
   // =================
 
   var success = function (xhr, options) {
-    var key;
-    var barElement;
     var data = parseXHR(xhr, options);
 
     if (!data.contents) {
