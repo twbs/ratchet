@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 //
 // 1. Set default font family to sans-serif.
@@ -25,7 +25,8 @@ body {
 
 //
 // Correct `block` display not defined for any HTML5 element in IE 8/9.
-// Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+// Correct `block` display not defined for `details` or `summary` in IE 10/11
+// and Firefox.
 // Correct `block` display not defined for `main` in IE 11.
 //
 
@@ -38,6 +39,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -85,7 +87,7 @@ template {
 //
 
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 //
@@ -131,8 +133,8 @@ dfn {
 //
 
 h1 {
-  margin: 0.67em 0;
   font-size: 2em;
+  margin: 0.67em 0;
 }
 
 //
@@ -140,8 +142,8 @@ h1 {
 //
 
 mark {
-  color: #000;
   background: #ff0;
+  color: #000;
 }
 
 //
@@ -158,18 +160,18 @@ small {
 
 sub,
 sup {
-  position: relative;
   font-size: 75%;
   line-height: 0;
+  position: relative;
   vertical-align: baseline;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 // Embedded content
@@ -207,9 +209,9 @@ figure {
 //
 
 hr {
-  height: 0;
   -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
 }
 
 //
@@ -252,9 +254,9 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0; // 3
   color: inherit; // 1
   font: inherit; // 2
+  margin: 0; // 3
 }
 
 //
@@ -308,8 +310,8 @@ html input[disabled] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  padding: 0;
   border: 0;
+  padding: 0;
 }
 
 //
@@ -331,8 +333,8 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  padding: 0; // 2
   box-sizing: border-box; // 1
+  padding: 0; // 2
 }
 
 //
@@ -353,10 +355,10 @@ input[type="number"]::-webkit-outer-spin-button {
 //
 
 input[type="search"] {
-  -webkit-box-sizing: content-box; // 2
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;         
   -webkit-appearance: textfield; // 1
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; // 2
+  box-sizing: content-box;
 }
 
 //
@@ -375,9 +377,9 @@ input[type="search"]::-webkit-search-decoration {
 //
 
 fieldset {
-  padding: .35em .625em .75em;
-  margin: 0 2px;
   border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
 }
 
 //
@@ -386,8 +388,8 @@ fieldset {
 //
 
 legend {
-  padding: 0; // 2
   border: 0; // 1
+  padding: 0; // 2
 }
 
 //
@@ -415,8 +417,8 @@ optgroup {
 //
 
 table {
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 td,
