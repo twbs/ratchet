@@ -7,7 +7,7 @@
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
-/* global _gaq: true */
+/* global _gaq, TRANSITION */
 
 !(function () {
   'use strict';
