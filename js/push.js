@@ -170,7 +170,7 @@
     TRANSITION(activeDom.cloneNode(true),
                transitionFromObj.transition,
                function() {
-                triggerStateChange();
+                 triggerStateChange();
                });
 
     PUSH.id = id;

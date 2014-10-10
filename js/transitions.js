@@ -24,7 +24,7 @@
   //   * add new bar elements when an existing one isn't present
   //   * remove any bar elements not found in `newMarkup`
   var updateBars = function (newMarkup) {
-    for (var i=0; i < barSelectors.length; i++ ) {
+    for (var i = 0; i < barSelectors.length; i++) {
       var selector = barSelectors[i];
       var newBar = newMarkup.querySelector(selector);
       var existingBar = document.querySelector(selector);
