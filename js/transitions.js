@@ -67,7 +67,6 @@
     }
 
     container.parentNode.insertBefore(swap, container);
-    complete && complete();
 
     if (transition === 'fade') {
       container.offsetWidth; // force reflow
