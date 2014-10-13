@@ -17,7 +17,7 @@
   "requireCamelCaseOrUpperCaseIdentifiers": true,
   "requireCapitalizedConstructors": true,
   "requireCommaBeforeLineBreak": true,
-  "requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch", "case", "default"],
+  "requireCurlyBraces": true,
   "requireDotNotation": true,
   "requireLineFeedAtFileEnd": true,
   "requireParenthesesAroundIIFE": true,
