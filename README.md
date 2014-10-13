@@ -52,10 +52,11 @@ Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly
 
 ### Running documentation locally
 
-1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation).
-  - **Windows users:** Read [this unofficial guide](https://github.com/juthilo/run-jekyll-on-windows/) to get Jekyll up and running without problems. We use Pygments for syntax highlighting, so make sure to read the sections on installing Python and Pygments.
-2. From the root `/ratchet/docs` directory, run `jekyll serve` in the command line.
-3. Open <http://localhost:4000> in your browser, and boom!
+1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.4.x).
+  - **Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.
+2. Install the Ruby-based syntax highlighter, [Rouge](https://github.com/jneen/rouge), with `gem install rouge`.
+3. From the root `/ratchet/docs` directory, run `jekyll serve` in the command line.
+4. Open <http://localhost:4000> in your browser, and boom!
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
@@ -82,7 +83,7 @@ A small list of "gotchas" is provided below for designers and developers startin
   - Use a JavaScript library like fingerblast.js to emulate touch events (ideally only loaded from desktop devices)
 - Script tags containing JavaScript will not be executed on pages that are loaded with push.js. If you would like to attach event handlers to elements on other pages, document-level event delegation is a common solution.
 - Ratchet uses XHR requests to fetch additional pages inside the application. Due to security concerns, modern browsers prevent XHR requests when opening files locally (aka using the file:// protocol); consequently, Ratchet does not work when opened directly as a file.
-  - A common solution to this is to simply serve the files from a local server. One convenient way to achieve this is to run ```python -m SimpleHTTPServer <port>``` to serve up the files in the current directory to ```http://localhost:<port>```
+  - A common solution to this is to simply serve the files from a local server. One convenient way to achieve this is to run `python -m SimpleHTTPServer <port>` to serve up the files in the current directory to `http://localhost:<port>`
 
 ## Versioning
 

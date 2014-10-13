@@ -4,7 +4,7 @@ authors:      Connor Sears
 description:  Build mobile apps with simple HTML, CSS, and JS components.
 
 # Dependencies
-highlighter:  pygments
+highlighter:  rouge
 
 # Permalinks
 permalink:    pretty
