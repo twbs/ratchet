@@ -39,7 +39,8 @@
 
   var displayBar = function (bar, container) {
     if (container) {
-      container.innerHTML = bar.innerHTML;
+      container.innerHTML = '';
+      container.appendChild(bar);
     } else {
       // per Ratchet's CSS, bar elements must be the first thing in <body>
       // here we assume `.content` is an immediate child of <body>
@@ -115,7 +116,8 @@
       transitionContent(newContentDiv, existingContentDiv,
                         transition, complete);
     } else {
-      document.body.innerHTML = contents.innerHTML;
+      document.body.innerHTML = '';
+      document.body.appendChild(contents);
       complete && complete();
     }
   };
