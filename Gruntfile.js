@@ -6,7 +6,7 @@
  */
 
 /* jshint node: true */
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   'use strict';
 
   // Force use of Unix newlines

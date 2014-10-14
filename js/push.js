@@ -191,7 +191,7 @@
     swapContent(
       (activeObj.contents || activeDom).cloneNode(true),
       document.querySelector('.content'),
-      transition, function() {
+      transition, function () {
         triggerStateChange();
       }
     );

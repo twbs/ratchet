@@ -1,7 +1,7 @@
 /* jshint jquery: true */
 /* global FingerBlast: true */
 
-$(function() {
+$(function () {
   'use strict';
 
   var doc;
@@ -74,7 +74,7 @@ $(function() {
       nav.toggleClass('active');
     });
 
-    navComponentLinks.click(function(e) {
+    navComponentLinks.click(function (e) {
       e.stopPropagation();
       e.preventDefault();
       componentsList.toggleClass('active');
@@ -119,7 +119,7 @@ $(function() {
     }
   };
 
-  var calculateScroll = function() {
+  var calculateScroll = function () {
     // if small screen don't worry about this
     if (windowWidth <= 768) {
       return;
@@ -139,7 +139,7 @@ $(function() {
       device.css({ top: device.dockingOffset });
     } else {
       device[0].className = 'device';
-      device[0].setAttribute('style','');
+      device[0].setAttribute('style', '');
     }
 
     function updateContent(content) {
