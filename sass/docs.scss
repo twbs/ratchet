@@ -847,6 +847,13 @@ code {
   }
 }
 
+// Drawer
+#drawersInDevice {
+  #iwindow > .btn {
+    margin: 10px;
+  }
+}
+
 // Sliders
 @media screen and (min-width: 768px) {
   .slider .slide {
