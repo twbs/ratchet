@@ -13,8 +13,13 @@
   ],
   "homepage": "http://goratchet.com",
   "main": [
+    "sass/ratchet.scss",
     "dist/css/ratchet.css",
-    "dist/js/ratchet.js"
+    "dist/js/ratchet.js",
+    "dist/fonts/ratchicons.eot",
+    "dist/fonts/ratchicons.svg",
+    "dist/fonts/ratchicons.ttf",
+    "dist/fonts/ratchicons.woff"
   ],
   "ignore": [
     "_config.yml",
