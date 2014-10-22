@@ -11,6 +11,7 @@
     "mobile",
     "prototype"
   ],
+  "homepage": "http://goratchet.com",
   "main": [
     "dist/css/ratchet.css",
     "dist/js/ratchet.js"
