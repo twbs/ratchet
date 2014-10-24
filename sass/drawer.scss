@@ -1,0 +1,38 @@
+//
+// DRAWER
+// --------------------------------------------------
+
+
+.drawer {
+  position: absolute;
+  padding: inherit;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0);
+
+  // wait for the drawer-inner animation to finish before hiding the backdrop
+  @include transition(background-color .25s linear, left 0 linear .25s);
+}
+
+.drawer.active {
+  left: 0;
+  background-color: rgba(0,0,0,.3);
+  @include transition(background-color .25s linear);
+}
+
+.drawer > .drawer-inner {
+  position: relative;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: white;
+  overflow: hidden;
+  @include box-shadow(1px 0 2px rgba(0,0,0,.3));
+  @include transition(left .25s linear);
+}
+
+.drawer.active > .drawer-inner {
+  left: 0;
+}
