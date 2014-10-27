@@ -2069,3 +2069,22 @@ hr {
   height: 20px;
   margin-top: 6px;
 }
+
+.browser-support-table td,
+.browser-support-table th {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.browser-support-maybe {
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+.browser-support-yes {
+  background-color: #9c0;
+}
+
+.browser-support-no {
+  background-color: #f44;
+}
