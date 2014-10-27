@@ -64,7 +64,7 @@ body {
   background-image:     -ms-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
   background-image:      -o-linear-gradient(45deg, #0a1855 0%, #da0024 100%);
   background-image:         linear-gradient(45deg, #0a1855 0%, #da0024 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0a1855', endColorstr='#da0024', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a1855', endColorstr='#da0024', GradientType=1 );
 }
 
 .docs-header {
@@ -1386,7 +1386,6 @@ hr {
     -webkit-box-shadow: 0 0 10px transparent, -320px 0 0 transparent;
             box-shadow: 0 0 10px transparent, -320px 0 0 transparent;
   }
-
   to {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
             box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
@@ -1977,7 +1976,6 @@ hr {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
@@ -2070,4 +2068,23 @@ hr {
   width: 121px;
   height: 20px;
   margin-top: 6px;
+}
+
+.browser-support-table td,
+.browser-support-table th {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.browser-support-maybe {
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+.browser-support-yes {
+  background-color: #9c0;
+}
+
+.browser-support-no {
+  background-color: #f44;
 }

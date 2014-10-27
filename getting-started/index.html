@@ -6,8 +6,8 @@
 <title>Getting started &middot; Ratchet</title>
 <meta name="description" content="Ratchet: Build mobile apps with simple HTML, CSS, and JS components.">
 <meta name="author" content="Connor Sears">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-<link rel="icon" href="/favicon.ico">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
@@ -93,14 +93,14 @@
       </div>
 
       <div class="docs-section">
-        <h2>What&#8217;s included</h2>
+        <h2>What's included</h2>
         <p class="lead">Ratchet is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
 
         <h3>Precompiled Ratchet</h3>
         <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Ratchet. You'll see something like this:</p>
 <!-- NOTE: This info is intentionally duplicated in the README.
 Copy any changes made here over to the README too. -->
-<div class="highlight"><pre><code class="bash">ratchet/
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ratchet/
 ├── css/
 │   ├── ratchet.css
 │   ├── ratchet.min.css
@@ -115,14 +115,13 @@ Copy any changes made here over to the README too. -->
     ├── ratchicons.eot
     ├── ratchicons.svg
     ├── ratchicons.ttf
-    └── ratchicons.woff
-</code></pre></div>
+    └── ratchicons.woff</code></pre></div>
 
         <p>This is the most basic form of Ratchet: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>ratchet.*</code>), as well as compiled and minified CSS and JS (<code>ratchet.min.*</code>). The Ratchicon fonts are included, as are the Android and iOS platform themes.</p>
 
         <h3>Ratchet source code</h3>
         <p>The Ratchet source code download includes the precompiled CSS, JavaScript, and font assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:</p>
-<div class="highlight"><pre><code class="bash">ratchet/
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">ratchet/
 ├── sass/
 ├── js/
 ├── fonts/
@@ -131,8 +130,7 @@ Copy any changes made here over to the README too. -->
 │   ├── js/
 │   └── fonts/
 └── docs/
-    └── examples/
-</code></pre></div>
+    └── examples/</code></pre></div>
 
         <p>The <code>sass/</code>, <code>js/</code>, and <code>fonts/</code> are the source code for our CSS, JS, and icon fonts (respectively). The <code>dist/</code> folder includes everything listed in the precompiled download section above. The <code>docs/</code> folder includes the source code for our documentation, and <code>examples/</code> of Ratchet usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
       </div>
@@ -149,7 +147,7 @@ Copy any changes made here over to the README too. -->
         <p>Anything that's not a <code>.bar</code> should be put in a div with the class <code>.content</code>. Put this div after the bars in the <code>&lt;body&gt;</code> tag. The <code>.content</code> div is what actually scrolls in a Ratchet prototype.</p>
 
         <h3>3. Don't forget your meta tags</h3>
-        <p>They're included in the template.html page included in the download, but make sure they stay in the page. They are important to Ratchet working just right.</p>
+        <p>They're included in the template.html page included in the download, but make sure they stay in the page. They are important for Ratchet to work just right.</p>
       </div>
 
 
@@ -157,54 +155,54 @@ Copy any changes made here over to the README too. -->
       <div class="docs-section">
         <h2 id="pageLayout">Basic template</h2>
         <p class="lead">Use this basic template to get your app started.</p>
-<div class="highlight"><pre><code class="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
   <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;title&gt;</span>Ratchet template page<span class="nt">&lt;/title&gt;</span>
 
     <span class="c">&lt;!-- Sets initial viewport load and disables zooming  --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"initial-scale=1, maximum-scale=1"</span><span class="nt">&gt;</span>
 
-    <span class="c">&lt;!-- Makes your prototype chrome-less once bookmarked to your phone&#39;s home screen --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-capable&quot;</span> <span class="na">content=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="na">content=</span><span class="s">&quot;black&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Makes your prototype chrome-less once bookmarked to your phone's home screen --&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-capable"</span> <span class="na">content=</span><span class="s">"yes"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"apple-mobile-web-app-status-bar-style"</span> <span class="na">content=</span><span class="s">"black"</span><span class="nt">&gt;</span>
 
     <span class="c">&lt;!-- Include the compiled Ratchet CSS --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;ratchet.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"ratchet.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 
     <span class="c">&lt;!-- Include the compiled Ratchet JS --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;ratchet.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"ratchet.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
   <span class="nt">&lt;body&gt;</span>
 
     <span class="c">&lt;!-- Make sure all your bars are the first things in your &lt;body&gt; --&gt;</span>
-    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;bar bar-nav&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>Ratchet<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"bar bar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Ratchet<span class="nt">&lt;/h1&gt;</span>
     <span class="nt">&lt;/header&gt;</span>
 
     <span class="c">&lt;!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;content&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;content-padded&quot;</span><span class="nt">&gt;</span>Thanks for downloading Ratchet. This is an example HTML page that&#39;s linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;card&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;table-view&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;table-view-cell&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;push-right&quot;</span> <span class="na">href=</span><span class="s">&quot;http://goratchet.com&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"content-padded"</span><span class="nt">&gt;</span>Thanks for downloading Ratchet. This is an example HTML page that's linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"http://goratchet.com"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;strong&gt;</span>Ratchet documentation<span class="nt">&lt;/strong&gt;</span>
             <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;table-view-cell&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;push-right&quot;</span> <span class="na">href=</span><span class="s">&quot;https://github.com/twbs/ratchet/&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"https://github.com/twbs/ratchet/"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;strong&gt;</span>Ratchet on Github<span class="nt">&lt;/strong&gt;</span>
             <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;table-view-cell&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;push-right&quot;</span> <span class="na">href=</span><span class="s">&quot;https://groups.google.com/forum/#!forum/goratchet&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"https://groups.google.com/forum/#!forum/goratchet"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;strong&gt;</span>Ratchet Google group<span class="nt">&lt;/strong&gt;</span>
             <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;table-view-cell&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;push-right&quot;</span> <span class="na">href=</span><span class="s">&quot;https://twitter.com/goratchet&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"push-right"</span> <span class="na">href=</span><span class="s">"https://twitter.com/goratchet"</span><span class="nt">&gt;</span>
               <span class="nt">&lt;strong&gt;</span>Ratchet on Twitter<span class="nt">&lt;/strong&gt;</span>
             <span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;/li&gt;</span>
@@ -213,8 +211,7 @@ Copy any changes made here over to the README too. -->
     <span class="nt">&lt;/div&gt;</span>
 
   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</code></pre></div>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
       </div>
 
 
@@ -234,6 +231,61 @@ Copy any changes made here over to the README too. -->
           </li>
         </ol>
         <p>You can also follow <a href="https://twitter.com/goratchet">@goratchet</a> on Twitter for the latest news.</p>
+      </div>
+
+      <div class="docs-section">
+        <h2>Browser and OS support</h2>
+        <table class="browser-support-table">
+          <thead>
+            <tr>
+              <th scope="col">OS</th>
+              <th scope="col">Browser</th>
+              <th scope="col" class="text-center">Supported?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Android (minimum version To Be Decided)</td>
+              <td>Android stock Browser</td>
+              <td class="text-center browser-support-yes"><span class="icon icon-check"></span></td>
+            </tr>
+            <tr>
+              <td>Android (minimum version To Be Decided)</td>
+              <td>Chrome</td>
+              <td class="text-center browser-support-yes"><span class="icon icon-check"></span></td>
+            </tr>
+            <tr>
+              <td>Android (minimum version To Be Decided)</td>
+              <td>Firefox</td>
+              <td class="text-center browser-support-maybe">To Be Decided</td>
+            </tr>
+            <tr>
+              <td>iOS v7.1+</td>
+              <td>Safari</td>
+              <td class="text-center browser-support-yes"><span class="icon icon-check"></span></td>
+            </tr>
+            <tr>
+              <td>iOS v7.1+</td>
+              <td>Chrome</td>
+              <td class="text-center browser-support-maybe">To Be Decided</td>
+            </tr>
+            <tr>
+              <td>Windows Phone</td>
+              <td>IE Mobile</td>
+              <td class="text-center browser-support-maybe">To Be Decided</td>
+            </tr>
+            <tr>
+              <td>&mdash;</td>
+              <td>Opera Mini</td>
+              <td class="text-center browser-support-maybe">To Be Decided</td>
+            </tr>
+            <tr>
+              <td>&mdash;</td>
+              <td>Opera Mobile</td>
+              <td class="text-center browser-support-maybe">To Be Decided</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -293,7 +345,7 @@ Copy any changes made here over to the README too. -->
   }(document, "script", "twitter-wjs"));
 </script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/dist/js/ratchet.min.js"></script>
 <script src="/assets/js/docs.min.js"></script>
 
