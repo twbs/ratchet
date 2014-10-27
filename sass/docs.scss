@@ -1137,3 +1137,20 @@ hr {
   width: 121px;
   height: 20px;
 }
+
+// Browser support table
+.browser-support-table td,
+.browser-support-table th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+.browser-support-maybe {
+  color: #fff;
+  background-color: #f0ad4e;
+}
+.browser-support-yes {
+  background-color: $positive-color;
+}
+.browser-support-no {
+  background-color: $negative-color;
+}
