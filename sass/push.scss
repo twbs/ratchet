@@ -7,6 +7,7 @@
   &.fade {
     left: 0;
     opacity: 0;
+    @include transition(opacity .4s);
 
     &.in {
       opacity: 1;
