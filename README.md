@@ -31,7 +31,7 @@ ratchet/
 │   ├── ratchet.css
 │   ├── ratchet.min.css
 │   ├── ratchet-theme-android.css
-│   └── ratchet-theme-android.min.css
+│   ├── ratchet-theme-android.min.css
 │   ├── ratchet-theme-ios.css
 │   └── ratchet-theme-ios.min.css
 ├── js/
