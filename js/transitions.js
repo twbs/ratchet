@@ -105,9 +105,26 @@
     }
   };
 
-  // `contents` must include an element with the class 'content' and can
-  // optionally include a number of Ratchet bar elements (see `barSelectors`)
+  // `contents` can either be a string of HTML or a DOM object.
+  // Either way, `contents` must include:
+  //   * bar elements (optional -- see `barSelectors`)
+  //   * a single content element
+  // All as children of a single parent.
+  //
+  // For example:
+  // <div>
+  //   <div class="bar-tab"></div>
+  //   <div class="bar-nav"></div>
+  //   <div class="contents"></div>
+  // </div>
   var TRANSITION = function (contents, transition, complete) {
+
+    if(typeof(contents) === 'string' || contents instanceof String) {
+      var div = document.createElement('div');
+      div.innerHTML = contents;
+      contents = div.childNodes[0];
+    }
+
     if (transition) {
       updateBars(contents);
 
