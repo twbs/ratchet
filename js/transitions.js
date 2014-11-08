@@ -123,6 +123,8 @@
       var div = document.createElement('div');
       div.innerHTML = contents;
       contents = div.childNodes[0];
+    } else {
+      contents = contents.cloneNode(true)
     }
 
     if (transition) {
