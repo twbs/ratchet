@@ -47,11 +47,12 @@
   };
 
   var setSlideNumber = function (offset) {
+    var slideCount = slider.querySelectorAll('.slide').length;
     var round = offset ? (deltaX < 0 ? 'ceil' : 'floor') : 'round';
-    slideNumber = Math[round](getScroll() / (scrollableArea / slider.children.length));
+    slideNumber = Math[round](getScroll() / (scrollableArea / slideCount));
     slideNumber += offset;
     slideNumber = Math.min(slideNumber, 0);
-    slideNumber = Math.max(-(slider.children.length - 1), slideNumber);
+    slideNumber = Math.max(-(slideCount - 1), slideNumber);
   };
 
   var onTouchStart = function (e) {
@@ -60,14 +61,15 @@
     if (!slider) {
       return;
     }
+    var slideCount = slider.querySelectorAll('.slide').length;
 
     var firstItem  = slider.querySelector('.slide');
 
-    scrollableArea = firstItem.offsetWidth * slider.children.length;
+    scrollableArea = firstItem.offsetWidth * slideCount;
     isScrolling    = undefined;
     sliderWidth    = slider.offsetWidth;
     resistance     = 1;
-    lastSlide      = -(slider.children.length - 1);
+    lastSlide      = -(slideCount - 1);
     startTime      = +new Date();
     pageX          = e.touches[0].pageX;
     pageY          = e.touches[0].pageY;
