@@ -9,7 +9,7 @@
 !(function () {
   'use strict';
 
-  var popover;
+  var popover, listener;
 
   var findPopovers = function (target) {
     var i;
@@ -25,14 +25,14 @@
   };
 
   var hidePopover = function(e) {
-      popover.addEventListener('webkitTransitionEnd', onPopoverHidden);
+      popover.addEventListener('webkitTransitionEnd', (listener = onPopoverHidden));
       popover.classList.remove('visible');
       popover.parentNode.removeChild(backdrop);
   }
 
   var onPopoverHidden = function () {
     popover.style.display = 'none';
-    popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
+    listener = popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
   };
 
   var backdrop = (function () {
@@ -74,7 +74,7 @@
   var showHidePopover = function (e) {
     var popover = getPopover(e);
 
-    if (!popover) {
+    if (!popover || !!listener) {
       return;
     }
 
