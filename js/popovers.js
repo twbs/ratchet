@@ -24,11 +24,11 @@
     }
   };
 
-  var hidePopover = function(e) {
+  var hidePopover = function() {
       popover.addEventListener('webkitTransitionEnd', (listener = onPopoverHidden));
       popover.classList.remove('visible');
       popover.parentNode.removeChild(backdrop);
-  }
+  };
 
   var onPopoverHidden = function () {
     popover.style.display = 'none';
