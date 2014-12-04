@@ -9,7 +9,8 @@
 !(function () {
   'use strict';
 
-  var popover, listener;
+  var popover;
+  var listener;
 
   var findPopovers = function (target) {
     var i;
@@ -24,10 +25,10 @@
     }
   };
 
-  var hidePopover = function() {
-      popover.addEventListener('webkitTransitionEnd', (listener = onPopoverHidden));
-      popover.classList.remove('visible');
-      popover.parentNode.removeChild(backdrop);
+  var hidePopover = function () {
+    popover.addEventListener('webkitTransitionEnd', (listener = onPopoverHidden));
+    popover.classList.remove('visible');
+    popover.parentNode.removeChild(backdrop);
   };
 
   var onPopoverHidden = function () {
@@ -78,8 +79,9 @@
       return;
     }
 
-    if(popover.classList.contains('visible'))
-        return hidePopover();
+    if (popover.classList.contains('visible')) {
+      return hidePopover();
+    }
 
     popover.style.display = 'block';
     popover.offsetHeight;
