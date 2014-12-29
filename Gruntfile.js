@@ -114,7 +114,6 @@ module.exports = function (grunt) {
 
     cssmin: {
       options: {
-        banner: '', // set to empty; see bellow
         keepSpecialComments: '*' // set to '*' because we already add the banner in sass
       },
       ratchet: {
