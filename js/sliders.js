@@ -3,7 +3,7 @@
  * http://goratchet.com/components#sliders
  * ========================================================================
    Adapted from Brad Birdsall's swipe
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 

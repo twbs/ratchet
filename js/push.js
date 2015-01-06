@@ -3,7 +3,7 @@
  * http://goratchet.com/components#push
  * ========================================================================
  * inspired by @defunkt's jquery.pjax.js
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
