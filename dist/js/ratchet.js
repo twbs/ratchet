@@ -11,7 +11,7 @@
  * Ratchet: modals.js v2.0.2
  * http://goratchet.com/components#modals
  * ========================================================================
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -53,7 +53,7 @@
  * Ratchet: popovers.js v2.0.2
  * http://goratchet.com/components#popovers
  * ========================================================================
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -141,7 +141,7 @@
  * http://goratchet.com/components#push
  * ========================================================================
  * inspired by @defunkt's jquery.pjax.js
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -646,7 +646,7 @@
  * Ratchet: segmented-controllers.js v2.0.2
  * http://goratchet.com/components#segmentedControls
  * ========================================================================
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -718,7 +718,7 @@
  * http://goratchet.com/components#sliders
  * ========================================================================
    Adapted from Brad Birdsall's swipe
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -865,7 +865,7 @@
  * http://goratchet.com/components#toggles
  * ========================================================================
    Adapted from Brad Birdsall's swipe
- * Copyright 2014 Connor Sears
+ * Copyright 2015 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
