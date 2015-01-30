@@ -104,7 +104,9 @@
     toggle.classList[slideOn ? 'add' : 'remove']('active');
 
     e = new CustomEvent('toggle', {
-      detail: { isActive: slideOn },
+      detail: {
+        isActive: slideOn
+      },
       bubbles: true,
       cancelable: true
     });

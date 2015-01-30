@@ -9,7 +9,7 @@
 
   'use strict';
 
-  function FingerBlast(element) {
+  function FingerBlast (element) {
     this.element = typeof element === 'string' ? document.querySelector(element) : element;
 
     if (this.element) {

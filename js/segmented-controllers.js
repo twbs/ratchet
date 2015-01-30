@@ -61,5 +61,10 @@
     targetBody.classList.add(className);
   });
 
-  window.addEventListener('click', function (e) { if (getTarget(e.target)) {e.preventDefault();} });
+  window.addEventListener('click', function (e) {
+    if (getTarget(e.target)) {
+      e.preventDefault();
+    }
+  });
+
 }());
