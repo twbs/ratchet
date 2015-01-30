@@ -52,7 +52,7 @@ Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly
 
 ### Running documentation locally
 
-1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.4.x).
+1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.x).
   - **Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.
 2. Install the Ruby-based syntax highlighter, [Rouge](https://github.com/jneen/rouge), with `gem install rouge`.
 3. From the root `/ratchet/docs` directory, run `jekyll serve` in the command line.
