@@ -14,21 +14,7 @@
   var touchMove = false;
   var distanceX = false;
   var toggle    = false;
-
-  // Original script from http://davidwalsh.name/vendor-prefix
-  var getBrowserCapabilities = (function () {
-    var styles = window.getComputedStyle(document.documentElement, '');
-    var pre = (Array.prototype.slice
-        .call(styles)
-        .join('')
-        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-      )[1];
-    return {
-      transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
-    };
-  })();
-
-  var transformProperty = getBrowserCapabilities.transform;
+  var transformProperty = window.getBrowserCapabilities.transform;
 
   var findToggle = function (target) {
     var i;
