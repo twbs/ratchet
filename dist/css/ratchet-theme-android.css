@@ -494,10 +494,10 @@ textarea,
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
           box-shadow: 0 0 3px rgba(0, 0, 0, .2);
   -webkit-transition: -webkit-transform .1s ease-in-out, opacity .2s ease-in-out;
-     -moz-transition:    -moz-transform .1s ease-in-out, opacity .2s ease-in-out;
+       -o-transition:      -o-transform .1s ease-in-out, opacity .2s ease-in-out;
           transition:         transform .1s ease-in-out, opacity .2s ease-in-out;
   -webkit-transform: scale(.75);
-      -ms-transform: scale(.75);
+       -o-transform: scale(.75);
           transform: scale(.75);
 }
 .popover:before {
@@ -505,7 +505,7 @@ textarea,
 }
 .popover.visible {
   -webkit-transform: scale(1);
-      -ms-transform: scale(1);
+       -o-transform: scale(1);
           transform: scale(1);
 }
 
@@ -558,7 +558,6 @@ textarea,
   background-color: #33b5e5;
   border-color: #33b5e5;
   -webkit-transform: translate3d(50px, 0, 0);
-      -ms-transform: translate3d(50px, 0, 0);
           transform: translate3d(50px, 0, 0);
 }
 .toggle.active:before {
