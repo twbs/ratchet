@@ -367,11 +367,14 @@
       container.classList.remove('in');
       var fadeContainerEnd = function () {
         container.removeEventListener('webkitTransitionEnd', fadeContainerEnd);
+        container.removeEventListener('transitionend', fadeContainerEnd);
         swap.classList.add('in');
         swap.addEventListener('webkitTransitionEnd', fadeSwapEnd);
+        swap.addEventListener('transitionend', fadeSwapEnd);
       };
       var fadeSwapEnd = function () {
         swap.removeEventListener('webkitTransitionEnd', fadeSwapEnd);
+        swap.removeEventListener('transitionend', fadeSwapEnd);
         container.parentNode.removeChild(container);
         swap.classList.remove('fade');
         swap.classList.remove('in');
@@ -380,12 +383,14 @@
         }
       };
       container.addEventListener('webkitTransitionEnd', fadeContainerEnd);
+      container.addEventListener('transitionend', fadeContainerEnd);
 
     }
 
     if (/slide/.test(transition)) {
       var slideEnd = function () {
         swap.removeEventListener('webkitTransitionEnd', slideEnd);
+        swap.removeEventListener('transitionend', slideEnd);
         swap.classList.remove('sliding', 'sliding-in');
         swap.classList.remove(swapDirection);
         container.parentNode.removeChild(container);
@@ -400,6 +405,7 @@
       container.classList.add(containerDirection);
       swap.classList.remove(swapDirection);
       swap.addEventListener('webkitTransitionEnd', slideEnd);
+      swap.addEventListener('transitionend', slideEnd);
     }
   };
 
