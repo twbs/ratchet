@@ -60,7 +60,9 @@
       delete cacheMapping[cacheBackStack.shift()];
     }
 
-    window.history.pushState(null, '', getCached(PUSH.id).url);
+    if (getCached(PUSH.id).url) {
+      window.history.pushState(null, '', getCached(PUSH.id).url);
+    }
 
     cacheMapping.cacheForwardStack = JSON.stringify(cacheForwardStack);
     cacheMapping.cacheBackStack    = JSON.stringify(cacheBackStack);
