@@ -14,7 +14,7 @@
   var touchMove = false;
   var distanceX = false;
   var toggle    = false;
-  var transformProperty = window.getBrowserCapabilities.transform;
+  var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
 
   var findToggle = function (target) {
     var i;

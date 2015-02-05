@@ -25,8 +25,8 @@
   var scrollableArea;
   var startedMoving;
 
-  var transformPrefix   = window.getBrowserCapabilities.prefix;
-  var transformProperty = window.getBrowserCapabilities.transform;
+  var transformPrefix   = window.RATCHET.getBrowserCapabilities.prefix;
+  var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
 
   var getSlider = function (target) {
     var i;

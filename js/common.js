@@ -9,8 +9,13 @@
 !(function () {
   'use strict';
 
+  // Create Ratchet namespace
+  if (typeof window.RATCHET === 'undefined') {
+    window.RATCHET = {};
+  }
+
   // Original script from http://davidwalsh.name/vendor-prefix
-  var getBrowserCapabilities = (function () {
+  window.RATCHET.getBrowserCapabilities = (function () {
     var styles = window.getComputedStyle(document.documentElement, '');
     var pre = (Array.prototype.slice
         .call(styles)
@@ -22,6 +27,4 @@
       transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
     };
   })();
-
-  window.getBrowserCapabilities = getBrowserCapabilities;
 }());
