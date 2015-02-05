@@ -36,7 +36,7 @@
         var descendant;
 
         if (!element) {
-          return;
+          return false;
         }
 
         if ('compareDocumentPosition' in ancestor) {

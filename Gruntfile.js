@@ -6,8 +6,11 @@
  */
 
 /* jshint node: true */
+/* eslint-env node */
+
+'use strict';
+
 module.exports = function (grunt) {
-  'use strict';
 
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
@@ -153,7 +156,7 @@ module.exports = function (grunt) {
           'Android 2.3',
           'Android >= 4',
           'Chrome >= 20',
-          'Firefox >= 24', // Firefox 24 is the latest ESR
+          'Firefox >= 24',  // Firefox 24 is the latest ESR
           'Explorer >= 9',
           'iOS >= 6',
           'Opera >= 12',
@@ -169,7 +172,7 @@ module.exports = function (grunt) {
             'Android 2.3',
             'Android >= 4',
             'Chrome >= 20',
-            'Firefox >= 24', // Firefox 24 is the latest ESR
+            'Firefox >= 24',    // Firefox 24 is the latest ESR
             'Opera >= 12'
           ]
         },
@@ -188,7 +191,7 @@ module.exports = function (grunt) {
 
     cssmin: {
       options: {
-        keepSpecialComments: '*' // keep all important comments
+        keepSpecialComments: '*'    // keep all important comments
       },
       ratchet: {
         src: '<%= meta.distPath %>css/<%= pkg.name %>.css',
@@ -295,7 +298,7 @@ module.exports = function (grunt) {
       options: {
         jshintrc: 'js/.jshintrc'
       },
-      grunt: {
+      gruntfile: {
         src: ['Gruntfile.js', 'grunt/*.js']
       },
       src: {
@@ -310,8 +313,23 @@ module.exports = function (grunt) {
       options: {
         config: 'js/.jscsrc'
       },
-      grunt: {
-        src: '<%= jshint.grunt.src %>'
+      gruntfile: {
+        src: '<%= jshint.gruntfile.src %>'
+      },
+      src: {
+        src: '<%= jshint.src.src %>'
+      },
+      docs: {
+        src: '<%= jshint.docs.src %>'
+      }
+    },
+
+    eslint: {
+      options: {
+        config: 'js/.eslintrc'
+      },
+      gruntfile: {
+        src: '<%= jshint.gruntfile.src %>'
       },
       src: {
         src: '<%= jshint.src.src %>'
@@ -408,11 +426,13 @@ module.exports = function (grunt) {
   grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('test', ['dist', 'csslint', 'eslint', 'jshint', 'jscs', 'validate-html']);
   grunt.registerTask('server', ['dist', 'jekyll:docs', 'connect', 'watch']);
   grunt.registerTask('prep-release', ['dist', 'jekyll:github', 'htmlmin', 'compress']);
 
-  grunt.registerTask('build-ratchicons-data', function () { generateRatchiconsData.call(this, grunt); });
+  grunt.registerTask('build-ratchicons-data', function () {
+    generateRatchiconsData.call(this, grunt);
+  });
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z

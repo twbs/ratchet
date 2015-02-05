@@ -41,6 +41,7 @@
     "grunt-contrib-uglify": "~0.11.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-csscomb": "~3.1.0",
+    "grunt-eslint": "~17.3.1",
     "grunt-html": "~5.0.0",
     "grunt-jekyll": "~0.4.2",
     "grunt-jscs": "~2.5.0",

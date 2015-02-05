@@ -1,4 +1,5 @@
 /* jshint jquery: true */
+/* eslint-env jquery */
 /* global FingerBlast: true */
 
 $(function () {
@@ -8,12 +9,8 @@ $(function () {
   var device;
   var windowWidth;
   var windowHeight;
-  var pageHeight;
-  var contentPadding;
-  var footerHeight;
   var navComponentLinks;
   var componentsList;
-  var componentLinks;
   var contentSection;
   var currentActive;
   var topCache;
@@ -32,14 +29,10 @@ $(function () {
     device                 = device || $('.js-device');
     navComponentLinks      = $('.js-jump-menu');
     componentsList         = $('.js-component-group');
-    componentLinks         = $('.component-example a');
     contentSection         = $('.component');
     topCache               = contentSection.map(function () { return $(this).offset().top; });
     windowHeight           = $(window).height() / 3;
     windowWidth            = $(window).width();
-    pageHeight             = $(document).height();
-    contentPadding         = parseInt($('.docs-content').css('padding-bottom'), 10);
-    footerHeight           = $('.docs-footer').outerHeight(false);
     toolbarToggle          = $('.js-docs-component-toolbar');
 
     // Device placement
