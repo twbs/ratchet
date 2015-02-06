@@ -64,7 +64,6 @@ module.exports = function (grunt) {
 
     sass: {
       options: {
-        banner: '<%= banner %>',
         sourcemap: 'none',
         style: 'expanded',
         unixNewlines: true
