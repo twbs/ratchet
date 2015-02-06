@@ -149,7 +149,7 @@ p {
 .btn-link {
   color: $primary-color;
   background-color: transparent;
-  border: none;
+  border: 0;
 
   &:active,
   &.active {
@@ -480,7 +480,7 @@ textarea,
 
 .popover {
   border-radius: 12px;
-  @include transition(-webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out);
+  @include transition(-webkit-transform .2s ease-in-out, opacity .2s ease-in-out);
 
   &:before {
     border-bottom: 15px solid $chrome-color;

@@ -1059,7 +1059,7 @@ hr {
 .platform-ios .btn-link {
   color: #007aff;
   background-color: transparent;
-  border: none;
+  border: 0;
 }
 .platform-ios .btn-link:active, .platform-ios .btn-link.active {
   color: #0062cc;
@@ -1523,7 +1523,7 @@ hr {
 .platform-android .btn-link {
   color: #33b5e5;
   background-color: transparent;
-  border: none;
+  border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }

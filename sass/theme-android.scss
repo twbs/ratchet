@@ -21,13 +21,13 @@ $line-height-default: 22px !global;
 //
 // Main theme colors
 $primary-color:  #33b5e5 !global;
-$chrome-color:   #dddddd !global;
+$chrome-color:   #ddd !global;
 $text-color:     #222 !global;
 
 // Action colors
 $default-color:  #999 !global;
-$positive-color: #99cc00 !global;
-$negative-color: #ff4444 !global;
+$positive-color: #9c0 !global;
+$negative-color: #f44 !global;
 
 // Bars
 $bar-base-height: 50px !global;
@@ -200,7 +200,7 @@ a {
 .btn-link {
   color: $primary-color;
   background-color: transparent;
-  border: none;
+  border: 0;
   @include box-shadow(none);
 
   &:active,

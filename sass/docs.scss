@@ -266,7 +266,7 @@ body {
       margin-left: -10px;
       border-right: 10px solid transparent;
       border-bottom: 10px solid #fff;
-      border-left: 10px solid transparent
+      border-left: 10px solid transparent;
     }
     .docs-component-item {
       display: block;
@@ -686,7 +686,7 @@ code {
   width: 100%;
   text-align: center;
   font-size: 24px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, .5);
   color: #fff;
 }
 .component-example-fullbleed,
