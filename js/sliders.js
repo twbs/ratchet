@@ -25,22 +25,8 @@
   var scrollableArea;
   var startedMoving;
 
-  // Original script from http://davidwalsh.name/vendor-prefix
-  var getBrowserCapabilities = (function () {
-    var styles = window.getComputedStyle(document.documentElement, '');
-    var pre = (Array.prototype.slice
-        .call(styles)
-        .join('')
-        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-      )[1];
-    return {
-      prefix: '-' + pre + '-',
-      transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
-    };
-  })();
-
-  var transformPrefix   = getBrowserCapabilities.prefix;
-  var transformProperty = getBrowserCapabilities.transform;
+  var transformPrefix   = window.RATCHET.getBrowserCapabilities.prefix;
+  var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
 
   var getSlider = function (target) {
     var i;
