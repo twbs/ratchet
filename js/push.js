@@ -366,12 +366,12 @@
       container.offsetWidth; // force reflow
       container.classList.remove('in');
       var fadeContainerEnd = function () {
-        container.removeEventListener('webkitTransitionEnd', fadeContainerEnd);
+        container.removeEventListener(window.RATCHET.getTransitionEnd, fadeContainerEnd);
         swap.classList.add('in');
-        swap.addEventListener('webkitTransitionEnd', fadeSwapEnd);
+        swap.addEventListener(window.RATCHET.getTransitionEnd, fadeSwapEnd);
       };
       var fadeSwapEnd = function () {
-        swap.removeEventListener('webkitTransitionEnd', fadeSwapEnd);
+        swap.removeEventListener(window.RATCHET.getTransitionEnd, fadeSwapEnd);
         container.parentNode.removeChild(container);
         swap.classList.remove('fade');
         swap.classList.remove('in');
@@ -379,13 +379,13 @@
           complete();
         }
       };
-      container.addEventListener('webkitTransitionEnd', fadeContainerEnd);
+      container.addEventListener(window.RATCHET.getTransitionEnd, fadeContainerEnd);
 
     }
 
     if (/slide/.test(transition)) {
       var slideEnd = function () {
-        swap.removeEventListener('webkitTransitionEnd', slideEnd);
+        swap.removeEventListener(window.RATCHET.getTransitionEnd, slideEnd);
         swap.classList.remove('sliding', 'sliding-in');
         swap.classList.remove(swapDirection);
         container.parentNode.removeChild(container);
@@ -399,7 +399,7 @@
       containerDirection = enter ? 'left' : 'right';
       container.classList.add(containerDirection);
       swap.classList.remove(swapDirection);
-      swap.addEventListener('webkitTransitionEnd', slideEnd);
+      swap.addEventListener(window.RATCHET.getTransitionEnd, slideEnd);
     }
   };
 
