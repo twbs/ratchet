@@ -8,6 +8,37 @@
  * =====================================================
  */
 /* ========================================================================
+ * Ratchet: common.js v2.0.2
+ * http://goratchet.com/
+ * ========================================================================
+ * Copyright 2015 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
+
+!(function () {
+  'use strict';
+
+  // Create Ratchet namespace
+  if (typeof window.RATCHET === 'undefined') {
+    window.RATCHET = {};
+  }
+
+  // Original script from http://davidwalsh.name/vendor-prefix
+  window.RATCHET.getBrowserCapabilities = (function () {
+    var styles = window.getComputedStyle(document.documentElement, '');
+    var pre = (Array.prototype.slice
+        .call(styles)
+        .join('')
+        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+      )[1];
+    return {
+      prefix: '-' + pre + '-',
+      transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
+    };
+  })();
+}());
+
+/* ========================================================================
  * Ratchet: modals.js v2.0.2
  * http://goratchet.com/components#modals
  * ========================================================================
@@ -640,7 +671,10 @@
     }
   });
   window.addEventListener('popstate', popstate);
+
+  // TODO : Remove this line in the next major version
   window.PUSH = PUSH;
+  window.RATCHET.push = PUSH;
 
 }());
 
@@ -742,22 +776,8 @@
   var scrollableArea;
   var startedMoving;
 
-  // Original script from http://davidwalsh.name/vendor-prefix
-  var getBrowserCapabilities = (function () {
-    var styles = window.getComputedStyle(document.documentElement, '');
-    var pre = (Array.prototype.slice
-        .call(styles)
-        .join('')
-        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-      )[1];
-    return {
-      prefix: '-' + pre + '-',
-      transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
-    };
-  })();
-
-  var transformPrefix   = getBrowserCapabilities.prefix;
-  var transformProperty = getBrowserCapabilities.transform;
+  var transformPrefix   = window.RATCHET.getBrowserCapabilities.prefix;
+  var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
 
   var getSlider = function (target) {
     var i;
@@ -893,21 +913,7 @@
   var touchMove = false;
   var distanceX = false;
   var toggle    = false;
-
-  // Original script from http://davidwalsh.name/vendor-prefix
-  var getBrowserCapabilities = (function () {
-    var styles = window.getComputedStyle(document.documentElement, '');
-    var pre = (Array.prototype.slice
-        .call(styles)
-        .join('')
-        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-      )[1];
-    return {
-      transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
-    };
-  })();
-
-  var transformProperty = getBrowserCapabilities.transform;
+  var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
 
   var findToggle = function (target) {
     var i;
