@@ -91,6 +91,7 @@
 
   // Navigational tab (Nested to be more specific for the icons in tab-items)
   .tab-item {
+    position: relative;
     display: table-cell;
     width: 1%;
     height: $bar-tab-height;
@@ -102,6 +103,14 @@
     &.active,
     &:active {
       color: $primary-color;
+    }
+
+    // Activity badge on an icon
+    .badge {
+      vertical-align: top;
+      position: absolute;
+      top: 3px;
+      left: 50%;
     }
 
     // Tab icon

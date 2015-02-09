@@ -563,6 +563,7 @@ input[type="button"] {
   border-bottom: 0;
 }
 .bar-tab .tab-item {
+  position: relative;
   display: table-cell;
   width: 1%;
   height: 50px;
@@ -572,6 +573,12 @@ input[type="button"] {
 }
 .bar-tab .tab-item.active, .bar-tab .tab-item:active {
   color: #428bca;
+}
+.bar-tab .tab-item .badge {
+  vertical-align: top;
+  position: absolute;
+  top: 3px;
+  left: 50%;
 }
 .bar-tab .tab-item .icon {
   top: 3px;
