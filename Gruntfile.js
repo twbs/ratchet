@@ -26,7 +26,9 @@ module.exports = function (grunt) {
     meta: {
       distPath:       'dist/',
       docsAssetsPath: 'docs/assets/',
-      docsPath:       'docs/dist/',
+      docsDistPath:   'docs/dist/',
+      docsPath:       'docs/',
+      jsPath:         'js/',
       srcPath:        'sass/'
     },
 
@@ -41,7 +43,7 @@ module.exports = function (grunt) {
             ' */\n',
 
     clean: {
-      dist: ['<%= meta.distPath %>', '<%= meta.docsPath %>']
+      dist: ['<%= meta.distPath %>', '<%= meta.docsDistPath %>']
     },
 
     concat: {
@@ -139,7 +141,7 @@ module.exports = function (grunt) {
         src: [
           '**/*'
         ],
-        dest: '<%= meta.docsPath %>'
+        dest: '<%= meta.docsDistPath %>'
       }
     },
 
@@ -226,11 +228,22 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      scripts: {
-        files: [
-          '<%= meta.srcPath %>**/*.scss'
-        ],
-        tasks: ['sass']
+      options: {
+        hostname: 'localhost',
+        livereload: true,
+        port: 8000
+      },
+      js: {
+        files: '<%= meta.jsPath %>**/*.js',
+        tasks: ['dist-js', 'copy']
+      },
+      css: {
+        files: '<%= meta.srcPath %>**/*.scss',
+        tasks: ['dist-css', 'copy']
+      },
+      html: {
+        files: '<%= meta.docsPath %>**',
+        tasks: ['jekyll']
       }
     },
 
@@ -310,6 +323,18 @@ module.exports = function (grunt) {
         replacement: grunt.option('newver'),
         recursive: true
       }
+    },
+
+    connect: {
+      site: {
+        options: {
+          base: '_site/',
+          hostname: 'localhost',
+          livereload: true,
+          open: true,
+          port: 8000
+        }
+      }
     }
   });
 
@@ -325,6 +350,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('server', ['dist', 'jekyll', 'connect', 'watch']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 
