@@ -30,13 +30,13 @@ a:active {
   padding-top: 50px;
 }
 
+.bar-header-secondary ~ .content {
+  padding-top: 100px;
+}
+
 .bar-tab ~ .content {
   padding-top: 50px;
   padding-bottom: 0;
-}
-
-.bar-header-secondary ~ .content {
-  padding-top: 100px;
 }
 
 .bar-footer ~ .content {

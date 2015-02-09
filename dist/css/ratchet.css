@@ -1214,6 +1214,9 @@ select {
 .content.fade {
   left: 0;
   opacity: 0;
+  -webkit-transition: opacity .4s;
+       -o-transition: opacity .4s;
+          transition: opacity .4s;
 }
 .content.fade.in {
   opacity: 1;
