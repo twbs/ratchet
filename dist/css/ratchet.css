@@ -575,10 +575,10 @@ input[type="button"] {
   color: #428bca;
 }
 .bar-tab .tab-item .badge {
-  vertical-align: top;
   position: absolute;
   top: 3px;
   left: 50%;
+  vertical-align: top;
 }
 .bar-tab .tab-item .icon {
   top: 3px;

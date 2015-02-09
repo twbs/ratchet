@@ -18,6 +18,15 @@
 !(function () {
   'use strict';
 
+  // Compatible With CustomEvent
+  if (!window.CustomEvent) {
+    window.CustomEvent = function (type, config) {
+      var e = document.createEvent('CustomEvent');
+      e.initCustomEvent(type, config.bubbles, config.cancelable, config.detail);
+      return e;
+    };
+  }
+
   // Create Ratchet namespace
   if (typeof window.RATCHET === 'undefined') {
     window.RATCHET = {};
@@ -35,6 +44,24 @@
       prefix: '-' + pre + '-',
       transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
     };
+  })();
+
+  window.RATCHET.getTransitionEnd = (function () {
+    var el = document.createElement('ratchet');
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition : 'transitionend',
+      OTransition : 'oTransitionEnd otransitionend',
+      transition : 'transitionend'
+    };
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return transEndEventNames[name];
+      }
+    }
+
+    return transEndEventNames.transition;
   })();
 }());
 
@@ -108,7 +135,7 @@
 
   var onPopoverHidden = function () {
     popover.style.display = 'none';
-    popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
+    popover.removeEventListener(window.RATCHET.getTransitionEnd, onPopoverHidden);
   };
 
   var backdrop = (function () {
@@ -117,7 +144,7 @@
     element.classList.add('backdrop');
 
     element.addEventListener('touchend', function () {
-      popover.addEventListener('webkitTransitionEnd', onPopoverHidden);
+      popover.addEventListener(window.RATCHET.getTransitionEnd, onPopoverHidden);
       popover.classList.remove('visible');
       popover.parentNode.removeChild(backdrop);
     });
@@ -535,12 +562,12 @@
       container.offsetWidth; // force reflow
       container.classList.remove('in');
       var fadeContainerEnd = function () {
-        container.removeEventListener('webkitTransitionEnd', fadeContainerEnd);
+        container.removeEventListener(window.RATCHET.getTransitionEnd, fadeContainerEnd);
         swap.classList.add('in');
-        swap.addEventListener('webkitTransitionEnd', fadeSwapEnd);
+        swap.addEventListener(window.RATCHET.getTransitionEnd, fadeSwapEnd);
       };
       var fadeSwapEnd = function () {
-        swap.removeEventListener('webkitTransitionEnd', fadeSwapEnd);
+        swap.removeEventListener(window.RATCHET.getTransitionEnd, fadeSwapEnd);
         container.parentNode.removeChild(container);
         swap.classList.remove('fade');
         swap.classList.remove('in');
@@ -548,13 +575,13 @@
           complete();
         }
       };
-      container.addEventListener('webkitTransitionEnd', fadeContainerEnd);
+      container.addEventListener(window.RATCHET.getTransitionEnd, fadeContainerEnd);
 
     }
 
     if (/slide/.test(transition)) {
       var slideEnd = function () {
-        swap.removeEventListener('webkitTransitionEnd', slideEnd);
+        swap.removeEventListener(window.RATCHET.getTransitionEnd, slideEnd);
         swap.classList.remove('sliding', 'sliding-in');
         swap.classList.remove(swapDirection);
         container.parentNode.removeChild(container);
@@ -568,7 +595,7 @@
       containerDirection = enter ? 'left' : 'right';
       container.classList.add(containerDirection);
       swap.classList.remove(swapDirection);
-      swap.addEventListener('webkitTransitionEnd', slideEnd);
+      swap.addEventListener(window.RATCHET.getTransitionEnd, slideEnd);
     }
   };
 
