@@ -26,7 +26,7 @@
 
   var onPopoverHidden = function () {
     popover.style.display = 'none';
-    popover.removeEventListener('webkitTransitionEnd', onPopoverHidden);
+    popover.removeEventListener(window.RATCHET.getTransitionEnd, onPopoverHidden);
   };
 
   var backdrop = (function () {
@@ -35,7 +35,7 @@
     element.classList.add('backdrop');
 
     element.addEventListener('touchend', function () {
-      popover.addEventListener('webkitTransitionEnd', onPopoverHidden);
+      popover.addEventListener(window.RATCHET.getTransitionEnd, onPopoverHidden);
       popover.classList.remove('visible');
       popover.parentNode.removeChild(backdrop);
     });

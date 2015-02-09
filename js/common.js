@@ -27,4 +27,22 @@
       transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
     };
   })();
+
+  window.RATCHET.getTransitionEnd = (function () {
+    var el = document.createElement('ratchet');
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition : 'transitionend',
+      OTransition : 'oTransitionEnd otransitionend',
+      transition : 'transitionend'
+    };
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return transEndEventNames[name];
+      }
+    }
+
+    return transEndEventNames.transition;
+  })();
 }());
