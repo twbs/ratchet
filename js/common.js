@@ -9,6 +9,15 @@
 !(function () {
   'use strict';
 
+  // Compatible With CustomEvent
+  if (!window.CustomEvent) {
+    window.CustomEvent = function (type, config) {
+      var e = document.createEvent('CustomEvent');
+      e.initCustomEvent(type, config.bubbles, config.cancelable, config.detail);
+      return e;
+    };
+  }
+
   // Create Ratchet namespace
   if (typeof window.RATCHET === 'undefined') {
     window.RATCHET = {};
