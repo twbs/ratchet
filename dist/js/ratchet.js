@@ -672,7 +672,7 @@
       head.innerHTML = responseText;
     }
 
-    data.title = head.querySelector('title');
+    data.title = head.querySelector('title') || document.querySelector('title');
     var text = 'innerText' in data.title ? 'innerText' : 'textContent';
     data.title = data.title && data.title[text].trim();
 
