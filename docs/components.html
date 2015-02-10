@@ -1261,6 +1261,13 @@ document
 window.addEventListener('push', myFunction);
 {% endhighlight %}
 
+        <p class="component-description">Push.js can be triggered manually by using the PUSH(options) function. When passing options, url is reqired, container, transition and timeout are optional. As of version 2.1.0 Ratchet has his own namespace and can also be called with RATCHET.push(options).</p>
+
+{% highlight js %}
+PUSH({url: "/signin"});
+RATCHET.push({url: "/signin"});
+{% endhighlight %}
+
       </article>
 
     <!-- Ratchicons -->
