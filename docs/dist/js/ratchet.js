@@ -76,6 +76,14 @@
 !(function () {
   'use strict';
 
+  var eventModalOpen = new CustomEvent('modalOpen', {
+    bubbles: true,
+    cancelable: true
+  });
+  var eventModalClose = new CustomEvent('modalClose', {
+    bubbles: true,
+    cancelable: true
+  });
   var findModals = function (target) {
     var i;
     var modals = document.querySelectorAll('a');
@@ -98,12 +106,15 @@
 
   window.addEventListener('touchend', function (event) {
     var modal = getModal(event);
-    if (modal) {
-      if (modal && modal.classList.contains('modal')) {
-        modal.classList.toggle('active');
+    if (modal && modal.classList.contains('modal')) {
+      var eventToDispatch = eventModalOpen;
+      if (modal.classList.contains('active')) {
+        eventToDispatch = eventModalClose;
       }
-      event.preventDefault(); // prevents rewriting url (apps can still use hash values in url)
+      modal.dispatchEvent(eventToDispatch);
+      modal.classList.toggle('active');
     }
+    event.preventDefault(); // prevents rewriting url (apps can still use hash values in url)
   });
 }());
 
