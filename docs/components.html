@@ -1107,7 +1107,7 @@ document
     <h3 class="component-title">Modals</h3>
 
     <div class="component-example">
-      <a href="#myModalexample" class="btn">Open modal</a>
+      <a href="#" class="btn" data-modal="myModalExample">Open modal</a>
       <div id="myModalexample" class="modal">
         <header class="bar bar-nav">
           <a class="icon icon-close pull-right" href="#myModalexample"></a>
@@ -1118,8 +1118,10 @@ document
       </div>
     </div>
 
+    <p class="component-description">Modals are designed to only fire from links. Set the value of the toggle link's data-modal attribute to a selector that will produce the desired modal.</p>
+
 {% highlight html %}
-<a href="#myModalexample" class="btn">Open modal</a>
+<a href="#" class="btn" data-modal="#myModalExample">Open modal</a>
 <div id="myModalexample" class="modal">
   <header class="bar bar-nav">
     <a class="icon icon-close pull-right" href="#myModalexample"></a>
@@ -1132,7 +1134,7 @@ document
 </div>
 {% endhighlight %}
 
-    <p class="component-description">Modals are designed to only fire from links. Set the value of the toggle links href to the id of a modal.</p>
+    <p class="component-description">DEPRECATED: Alternatively you can specify the selector of the desired modal in the href attribute of the link. This will fail without a warning if a modal is not found.</p>
 
   </article>
 
