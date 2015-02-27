@@ -186,7 +186,7 @@ module.exports = function (grunt) {
 
     cssmin: {
       options: {
-        keepSpecialComments: '*' // set to '*' because we already add the banner in sass
+        keepSpecialComments: '*' // keep all important comments
       },
       ratchet: {
         src: '<%= meta.distPath %>css/<%= pkg.name %>.css',
