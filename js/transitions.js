@@ -141,5 +141,5 @@
     }
   };
 
-  window.TRANSITION = TRANSITION;
+  window.RATCHET.transition = TRANSITION;
 }());

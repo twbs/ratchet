@@ -7,7 +7,7 @@
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
-/* global _gaq, TRANSITION */
+/* global _gaq */
 
 !(function () {
   'use strict';
@@ -167,11 +167,11 @@
       });
     }
 
-    TRANSITION(activeDom.cloneNode(true),
-               transitionFromObj.transition,
-               function() {
-                 triggerStateChange();
-               });
+    window.RATCHET.transition(activeDom.cloneNode(true),
+                              transitionFromObj.transition,
+                              function() {
+                                triggerStateChange();
+                              });
 
     PUSH.id = id;
 
@@ -249,7 +249,7 @@
       document.title = data.title;
     }
 
-    TRANSITION(data.contents, options.transition, function () {
+    window.RATCHET.transition(data.contents, options.transition, function () {
       cacheReplace({
         id         : options.id || +new Date(),
         url        : data.url,
