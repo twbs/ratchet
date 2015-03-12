@@ -169,7 +169,7 @@
 
     window.RATCHET.transition(activeDom.cloneNode(true),
                               transitionFromObj.transition,
-                              function() {
+                              function () {
                                 triggerStateChange();
                               });
 

@@ -119,12 +119,12 @@
   // </div>
   var TRANSITION = function (contents, transition, complete) {
 
-    if(typeof(contents) === 'string' || contents instanceof String) {
+    if (typeof(contents) === 'string' || contents instanceof String) {
       var div = document.createElement('div');
       div.innerHTML = contents;
       contents = div.childNodes[0];
     } else {
-      contents = contents.cloneNode(true)
+      contents = contents.cloneNode(true);
     }
 
     if (transition) {
