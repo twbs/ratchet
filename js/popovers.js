@@ -34,10 +34,11 @@
 
     element.classList.add('backdrop');
 
-    element.addEventListener('touchend', function () {
+    element.addEventListener('touchend', function (event) {
       popover.addEventListener(window.RATCHET.getTransitionEnd, onPopoverHidden);
       popover.classList.remove('visible');
       popover.parentNode.removeChild(backdrop);
+      event.preventDefault(); 
     });
 
     return element;
