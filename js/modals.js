@@ -32,8 +32,21 @@
 
   var getModal = function (event) {
     var modalToggle = findModals(event.target);
-    if (modalToggle && modalToggle.hash) {
-      return document.querySelector(modalToggle.hash);
+    if (modalToggle) {
+      var modalSelector = modalToggle.getAttribute('data-modal');
+      if (modalSelector) {
+        return document.querySelector(modalSelector);
+      }
+      else if (modalToggle.hash) {
+        try {
+          return document.querySelector(modalToggle.hash);
+        }
+        catch (error) {
+          if (error.name !== 'SyntaxError') {
+            throw error;
+          }
+        }
+      }
     }
   };
 
