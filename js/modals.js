@@ -37,7 +37,7 @@
       if (modalSelector) {
         return document.querySelector(modalSelector);
       }
-      if (modalToggle.hash) {
+      else if (modalToggle.hash) {
         try {
           return document.querySelector(modalToggle.hash);
         }
