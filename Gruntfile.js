@@ -394,11 +394,11 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['sass', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
-  grunt.registerTask('validate-html', ['jekyll', 'htmllint']);
+  grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
-  grunt.registerTask('server', ['dist', 'jekyll', 'connect', 'watch']);
+  grunt.registerTask('server', ['dist', 'jekyll:docs', 'connect', 'watch']);
   grunt.registerTask('prep-release', ['dist', 'jekyll:github', 'htmlmin', 'compress']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
