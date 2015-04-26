@@ -250,7 +250,34 @@ module.exports = function (grunt) {
     },
 
     jekyll: {
-      docs: {}
+      options: {
+        config: '_config.yml'
+      },
+      docs: {},
+      github: {
+        options: {
+          raw: 'github: true'
+        }
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          minifyCSS: true,
+          minifyJS: true,
+          removeAttributeQuotes: true,
+          removeComments: true
+        },
+        expand: true,
+        cwd: '_site',
+        dest: '_site',
+        src: [
+          '**/*.html'
+        ]
+      }
     },
 
     jshint: {
@@ -337,6 +364,25 @@ module.exports = function (grunt) {
           port: 8000
         }
       }
+    },
+
+    compress: {
+      main: {
+        options: {
+          archive: 'ratchet-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: 'ratchet-<%= pkg.version %>-dist'
+          }
+        ]
+      }
     }
   });
 
@@ -353,6 +399,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['dist']);
   grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
   grunt.registerTask('server', ['dist', 'jekyll', 'connect', 'watch']);
+  grunt.registerTask('prep-release', ['dist', 'jekyll:github', 'htmlmin', 'compress']);
 
   grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
 
