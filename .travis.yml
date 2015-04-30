@@ -1,14 +1,23 @@
 language: node_js
+
+sudo: false
+
+git:
+  depth: 10
+
 node_js:
-  - "0.10"
   - "0.12"
+
 before_install:
   - rvm use 1.9.3
+
 install:
   - travis_retry npm install -g grunt-cli
   - travis_retry npm install
-  - travis_retry gem install --no-document "jekyll:~>2.5.3" "rouge:~>1.8.0" "sass:~>3.4.11"
+  - travis_retry gem install --no-ri --no-rdoc "jekyll:~>2.5.3" "rouge:~>1.8" "sass:~>3.4"
+
 matrix:
   fast_finish: true
+
 notifications:
   slack: heybb:51atQXKR2rpnbohAZ0X1vNbE
