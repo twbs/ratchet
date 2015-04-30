@@ -8,9 +8,10 @@
 /* jshint node: true */
 
 'use strict';
+
 var fs = require('fs');
 
-module.exports = function generateRatchiconsData() {
+module.exports = function generateRatchiconsData(grunt) {
   // Pass encoding, utf8, so `readFileSync` will return a string instead of a
   // buffer
   var ratchiconsFile = fs.readFileSync('sass/ratchicons.scss', 'utf8');
@@ -20,6 +21,7 @@ module.exports = function generateRatchiconsData() {
   var iconClassName = /^\.(icon-[^\s]+)/;
   var ratchiconsData = '# This file is generated via Grunt task. **Do not edit directly.**\n' +
                        '# See the \'build-ratchicons-data\' task in Gruntfile.js.\n\n';
+  var ratchiconsYml = 'docs/_data/ratchicons.yml';
   for (var i = 0, len = ratchiconsLines.length; i < len; i++) {
     var match = ratchiconsLines[i].match(iconClassName);
 
@@ -33,5 +35,10 @@ module.exports = function generateRatchiconsData() {
     fs.mkdirSync('docs/_data');
   }
 
-  fs.writeFileSync('docs/_data/ratchicons.yml', ratchiconsData);
+  try {
+    fs.writeFileSync(ratchiconsYml, ratchiconsData);
+  } catch (err) {
+    grunt.fail.warn(err);
+  }
+  grunt.log.writeln('File ' + ratchiconsYml.cyan + ' created.');
 };

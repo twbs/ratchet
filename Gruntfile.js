@@ -401,7 +401,7 @@ module.exports = function (grunt) {
   grunt.registerTask('server', ['dist', 'jekyll:docs', 'connect', 'watch']);
   grunt.registerTask('prep-release', ['dist', 'jekyll:github', 'htmlmin', 'compress']);
 
-  grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
+  grunt.registerTask('build-ratchicons-data', function () { generateRatchiconsData.call(this, grunt); });
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
