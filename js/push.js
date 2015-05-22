@@ -237,8 +237,9 @@
         if (options._timeout) {
           clearTimeout(options._timeout);
         }
+
         if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
+          if (xhr.status === 200 || (isFileProtocol && xhr.status === 0)) {
             success(xhr, options);
           } else {
             failure(options.url);
@@ -264,14 +265,6 @@
     }
 
     xhr.send();
-
-    if (isFileProtocol) {
-      if (xhr.status === 0 || xhr.status === 200) {
-        success(xhr, options);
-      } else {
-        failure(options.url);
-      }
-    }
 
     if (xhr.readyState && !options.ignorePush) {
       cachePush();
