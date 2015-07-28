@@ -115,6 +115,20 @@
   }
 }
 
+// Inline button group (multiple buttons that take up the entire width)
+.btn-inline-group {
+  display: flex;
+  width: 100%;
+}
+
+// Individual buttons for inline button group
+.btn-inline {
+  font-size:18px;
+  flex-basis: 100%;
+  padding:10px 10px;
+  margin:0px 5px 10px 5px;
+}
+
 // Block level buttons (full width buttons)
 .btn-block {
   display: block;
