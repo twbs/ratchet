@@ -192,7 +192,10 @@ module.exports = function (grunt) {
       },
       ratchet: {
         src: '<%= meta.distPath %>css/<%= pkg.name %>.css',
-        dest: '<%= meta.distPath %>css/<%= pkg.name %>.min.css'
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>.min.css',
+        options: {
+          sourceMap: true
+        }
       },
       theme: {
         files: {
@@ -205,7 +208,10 @@ module.exports = function (grunt) {
           '<%= meta.docsAssetsPath %>css/docs.css',
           '<%= meta.docsAssetsPath %>css/pygments-manni.css'
         ],
-        dest: '<%= meta.docsAssetsPath %>css/docs.min.css'
+        dest: '<%= meta.docsAssetsPath %>css/docs.min.css',
+        options: {
+          sourceMap: true
+        }
       }
     },
 
@@ -220,7 +226,10 @@ module.exports = function (grunt) {
       },
       ratchet: {
         src: '<%= concat.ratchet.dest %>',
-        dest: '<%= meta.distPath %>js/<%= pkg.name %>.min.js'
+        dest: '<%= meta.distPath %>js/<%= pkg.name %>.min.js',
+        options: {
+          sourceMap: true
+        }
       },
       docs: {
         src: [
