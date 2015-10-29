@@ -34,6 +34,9 @@ nbproject
 *.komodoproject
 .komodotools
 
+# Jekyll metadata
+docs/.jekyll-metadata
+
 # Folders to ignore
 node_modules
 bower_components
