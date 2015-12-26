@@ -113,8 +113,8 @@
       }
       modal.dispatchEvent(eventToDispatch);
       modal.classList.toggle('active');
+      event.preventDefault(); // prevents rewriting url (apps can still use hash values in url)
     }
-    event.preventDefault(); // prevents rewriting url (apps can still use hash values in url)
   });
 }());
 
