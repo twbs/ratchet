@@ -66,9 +66,11 @@ module.exports = function (grunt) {
 
     sass: {
       options: {
-        sourcemap: 'none',
-        style: 'expanded',
-        unixNewlines: true
+        outputStyle: 'expanded',
+        precision: 6,
+        sourceComments: false,
+        sourcemap: false,
+        style: 'expanded'
       },
       core: {
         src: 'sass/ratchet.scss',
