@@ -1,7 +1,7 @@
 /*!
  * =====================================================
  * Ratchet v2.0.2 (http://goratchet.com)
- * Copyright 2015 Connor Sears
+ * Copyright 2016 Connor Sears
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  *
  * v2.0.2 designed by @connors.
