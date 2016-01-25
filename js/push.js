@@ -26,7 +26,7 @@
   var transitionMap  = {
     'slide-in'  : 'slide-out',
     'slide-out' : 'slide-in',
-    fade     : 'fade'
+    fade        : 'fade'
   };
 
   var bars = {
