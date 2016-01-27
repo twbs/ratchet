@@ -1,0 +1,5 @@
+{
+  "devel"   : true,
+  "es3"     : false,
+  "jasmine" : true
+}

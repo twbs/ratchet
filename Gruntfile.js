@@ -29,6 +29,7 @@ module.exports = function (grunt) {
       docsDistPath:   'docs/dist/',
       docsPath:       'docs/',
       jsPath:         'js/',
+      jsTestPath:     'js/tests/',
       srcPath:        'sass/'
     },
 
@@ -303,6 +304,12 @@ module.exports = function (grunt) {
       },
       docs: {
         src: ['<%= meta.docsAssetsPath %>/js/docs.js', '<%= meta.docsAssetsPath %>/js/fingerblast.js']
+      },
+      tests: {
+        options: {
+          jshintrc: 'js/tests/.jshintrc'
+        },
+        src: 'js/tests/*.js'
       }
     },
 
@@ -318,6 +325,9 @@ module.exports = function (grunt) {
       },
       docs: {
         src: '<%= jshint.docs.src %>'
+      },
+      tests: {
+        src: '<%= jshint.tests.src %>'
       }
     },
 
@@ -394,6 +404,22 @@ module.exports = function (grunt) {
           }
         ]
       }
+    },
+
+    jasmine: {
+      src: '<%= jshint.src.src %>',
+      options: {
+        specs: '<%= jshint.tests.src %>',
+        styles: 'dist/ratchet.min.css',
+        display: 'short',
+        vendor: [
+          '<%= meta.docsAssetsPath %>js/fingerblast.js',
+          '<%= jshint.src.src %>',
+          '<%= meta.jsTestPath %>vendor/touchfaker.min.js'
+          ],
+        outfile: 'js/tests/SpecRunner.html',
+        keepRunner: true
+      }
     }
   });
 
@@ -408,7 +434,7 @@ module.exports = function (grunt) {
   grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
+  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'jasmine', 'validate-html']);
   grunt.registerTask('server', ['dist', 'jekyll:docs', 'connect', 'watch']);
   grunt.registerTask('prep-release', ['dist', 'jekyll:github', 'htmlmin', 'compress']);
 
