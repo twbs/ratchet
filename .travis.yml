@@ -21,7 +21,7 @@ before_install:
 install:
   - travis_retry npm install -g grunt-cli
   - travis_retry npm install
-  - travis_retry gem install --no-document "jekyll:~>3.1" "rouge:~>1.10"
+  - travis_retry gem install --no-document "jekyll:~>3.1"
 
 matrix:
   fast_finish: true
