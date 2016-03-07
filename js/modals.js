@@ -9,14 +9,6 @@
 !(function () {
   'use strict';
 
-  var eventModalOpen = new CustomEvent('modalOpen', {
-    bubbles: true,
-    cancelable: true
-  });
-  var eventModalClose = new CustomEvent('modalClose', {
-    bubbles: true,
-    cancelable: true
-  });
   var findModals = function (target) {
     var i;
     var modals = document.querySelectorAll('a');
@@ -40,9 +32,18 @@
   window.addEventListener('touchend', function (event) {
     var modal = getModal(event);
     if (modal && modal.classList.contains('modal')) {
-      var eventToDispatch = eventModalOpen;
+      var eventToDispatch = null;
       if (modal.classList.contains('active')) {
-        eventToDispatch = eventModalClose;
+        eventToDispatch = new CustomEvent('modalClose', {
+          bubbles: true,
+          cancelable: true
+        });
+      }
+      else {
+        eventToDispatch = new CustomEvent('modalOpen', {
+          bubbles: true,
+          cancelable: true
+        });
       }
       modal.dispatchEvent(eventToDispatch);
       modal.classList.toggle('active');
