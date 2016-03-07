@@ -1,4 +1,7 @@
-# Ratchet v2.0.2 [![Build Status](https://secure.travis-ci.org/twbs/ratchet.svg?branch=master)](http://travis-ci.org/twbs/ratchet) [![devDependencies](https://david-dm.org/twbs/ratchet/dev-status.svg?theme=shields.io)](https://david-dm.org/twbs/ratchet#info=devDependencies)
+# [Ratchet](http://goratchet.com)
+[![GitHub Release](https://img.shields.io/github/release/twbs/ratchet.svg)](https://github.com/twbs/ratchet/releases)
+[![Build Status](https://img.shields.io/travis/twbs/ratchet/master.svg)](https://travis-ci.org/twbs/ratchet)
+[![devDependency Status](https://img.shields.io/david/dev/twbs/ratchet.svg)](https://david-dm.org/twbs/ratchet#info=devDependencies)
 
 Build mobile apps with simple HTML, CSS, and JS components.
 
@@ -52,7 +55,7 @@ Ratchet's documentation is built with [Jekyll](http://jekyllrb.com) and publicly
 
 ### Running documentation locally
 
-1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v2.5.x).
+1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v3.0.x).
   * **Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.
 2. Install the Ruby-based syntax highlighter, [Rouge](https://github.com/jneen/rouge), with `gem install rouge`.
 3. From the root `/ratchet` directory, run `jekyll serve` in the command line.

@@ -29,6 +29,7 @@ module.exports = function (grunt) {
       docsDistPath:   'docs/dist/',
       docsPath:       'docs/',
       jsPath:         'js/',
+      jsTestPath:     'js/tests/',
       srcPath:        'sass/'
     },
 
@@ -66,9 +67,11 @@ module.exports = function (grunt) {
 
     sass: {
       options: {
-        sourcemap: 'none',
-        style: 'expanded',
-        unixNewlines: true
+        outputStyle: 'expanded',
+        precision: 6,
+        sourceComments: false,
+        sourcemap: false,
+        style: 'expanded'
       },
       core: {
         src: 'sass/ratchet.scss',
@@ -190,7 +193,10 @@ module.exports = function (grunt) {
       },
       ratchet: {
         src: '<%= meta.distPath %>css/<%= pkg.name %>.css',
-        dest: '<%= meta.distPath %>css/<%= pkg.name %>.min.css'
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>.min.css',
+        options: {
+          sourceMap: true
+        }
       },
       theme: {
         files: {
@@ -203,7 +209,10 @@ module.exports = function (grunt) {
           '<%= meta.docsAssetsPath %>css/docs.css',
           '<%= meta.docsAssetsPath %>css/pygments-manni.css'
         ],
-        dest: '<%= meta.docsAssetsPath %>css/docs.min.css'
+        dest: '<%= meta.docsAssetsPath %>css/docs.min.css',
+        options: {
+          sourceMap: true
+        }
       }
     },
 
@@ -218,7 +227,10 @@ module.exports = function (grunt) {
       },
       ratchet: {
         src: '<%= concat.ratchet.dest %>',
-        dest: '<%= meta.distPath %>js/<%= pkg.name %>.min.js'
+        dest: '<%= meta.distPath %>js/<%= pkg.name %>.min.js',
+        options: {
+          sourceMap: true
+        }
       },
       docs: {
         src: [
@@ -250,7 +262,34 @@ module.exports = function (grunt) {
     },
 
     jekyll: {
-      docs: {}
+      options: {
+        config: '_config.yml'
+      },
+      docs: {},
+      github: {
+        options: {
+          raw: 'github: true'
+        }
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          minifyCSS: true,
+          minifyJS: true,
+          removeAttributeQuotes: true,
+          removeComments: true
+        },
+        expand: true,
+        cwd: '_site',
+        dest: '_site',
+        src: [
+          '**/*.html'
+        ]
+      }
     },
 
     jshint: {
@@ -265,6 +304,12 @@ module.exports = function (grunt) {
       },
       docs: {
         src: ['<%= meta.docsAssetsPath %>/js/docs.js', '<%= meta.docsAssetsPath %>/js/fingerblast.js']
+      },
+      tests: {
+        options: {
+          jshintrc: 'js/tests/.jshintrc'
+        },
+        src: 'js/tests/*.js'
       }
     },
 
@@ -280,6 +325,9 @@ module.exports = function (grunt) {
       },
       docs: {
         src: '<%= jshint.docs.src %>'
+      },
+      tests: {
+        src: '<%= jshint.tests.src %>'
       }
     },
 
@@ -317,6 +365,12 @@ module.exports = function (grunt) {
           return old ? RegExp.quote(old) : old;
         })(),
         replacement: grunt.option('newver'),
+        exclude: [
+          'dist/fonts',
+          'docs/assets',
+          'fonts',
+          'node_modules'
+        ],
         recursive: true
       }
     },
@@ -331,6 +385,41 @@ module.exports = function (grunt) {
           port: 8000
         }
       }
+    },
+
+    compress: {
+      main: {
+        options: {
+          archive: 'ratchet-<%= pkg.version %>-dist.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'dist/',
+            src: ['**'],
+            dest: 'ratchet-<%= pkg.version %>-dist'
+          }
+        ]
+      }
+    },
+
+    jasmine: {
+      src: '<%= jshint.src.src %>',
+      options: {
+        specs: '<%= jshint.tests.src %>',
+        styles: 'dist/ratchet.min.css',
+        display: 'short',
+        vendor: [
+          '<%= meta.docsAssetsPath %>js/fingerblast.js',
+          '<%= jshint.src.src %>',
+          '<%= meta.jsTestPath %>vendor/touchfaker.min.js'
+          ],
+        outfile: 'js/tests/SpecRunner.html',
+        keepRunner: true
+      }
     }
   });
 
@@ -342,13 +431,14 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['sass', 'autoprefixer', 'usebanner', 'csscomb', 'cssmin']);
   grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-js', 'copy', 'build-ratchicons-data']);
-  grunt.registerTask('validate-html', ['jekyll', 'htmllint']);
+  grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint']);
   grunt.registerTask('build', ['dist']);
   grunt.registerTask('default', ['dist']);
-  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'validate-html']);
-  grunt.registerTask('server', ['dist', 'jekyll', 'connect', 'watch']);
+  grunt.registerTask('test', ['dist', 'csslint', 'jshint', 'jscs', 'jasmine', 'validate-html']);
+  grunt.registerTask('server', ['dist', 'jekyll:docs', 'connect', 'watch']);
+  grunt.registerTask('prep-release', ['dist', 'jekyll:github', 'htmlmin', 'compress']);
 
-  grunt.registerTask('build-ratchicons-data', generateRatchiconsData);
+  grunt.registerTask('build-ratchicons-data', function () { generateRatchiconsData.call(this, grunt); });
 
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z

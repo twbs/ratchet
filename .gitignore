@@ -2,7 +2,6 @@
 _gh_pages
 _site
 .ruby-version
-.sass-cache
 
 # Numerous always-ignore extensions
 *.diff
@@ -34,6 +33,10 @@ nbproject
 *.komodoproject
 .komodotools
 
+# Jekyll metadata
+docs/.jekyll-metadata
+
 # Folders to ignore
 node_modules
 bower_components
+.grunt
