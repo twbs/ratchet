@@ -94,7 +94,8 @@
     var toggleWidth = toggle.clientWidth;
     var handleWidth = handle.clientWidth;
     var offset      = (toggleWidth - handleWidth);
-    var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
+    var originOn    = toggle.classList.contains('active');
+    var slideOn     = (!touchMove && !originOn) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
 
     if (slideOn) {
       handle.style[transformProperty] = 'translate3d(' + offset + 'px,0,0)';
@@ -104,15 +105,17 @@
 
     toggle.classList[slideOn ? 'add' : 'remove']('active');
 
-    e = new CustomEvent('toggle', {
-      detail: {
-        isActive: slideOn
-      },
-      bubbles: true,
-      cancelable: true
-    });
+    if (originOn != slideOn) {
+      e = new CustomEvent('toggle', {
+        detail: {
+          isActive: slideOn
+        },
+        bubbles: true,
+        cancelable: true
+      });
 
-    toggle.dispatchEvent(e);
+      toggle.dispatchEvent(e);
+    }
 
     touchMove = false;
     toggle    = false;
