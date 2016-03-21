@@ -10,6 +10,7 @@
   'use strict';
 
   var popover;
+  var popoverDuration = 250;
 
   var findPopovers = function (target) {
     var i;
@@ -36,6 +37,7 @@
 
     element.addEventListener('touchend', function () {
       popover.addEventListener(window.RATCHET.getTransitionEnd, onPopoverHidden);
+      window.RATCHET.emulateTransitionEnd(popoverDuration, popover);
       popover.classList.remove('visible');
       popover.parentNode.removeChild(backdrop);
     });

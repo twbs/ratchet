@@ -13,7 +13,7 @@
   'use strict';
 
   var noop = function () {};
-
+  var pushDuration = 400;
 
   // Pushstate caching
   // ==================
@@ -383,6 +383,7 @@
         container.removeEventListener(window.RATCHET.getTransitionEnd, fadeContainerEnd);
         swap.classList.add('in');
         swap.addEventListener(window.RATCHET.getTransitionEnd, fadeSwapEnd);
+        window.RATCHET.emulateTransitionEnd(pushDuration, swap);
       };
       var fadeSwapEnd = function () {
         swap.removeEventListener(window.RATCHET.getTransitionEnd, fadeSwapEnd);
@@ -394,7 +395,7 @@
         }
       };
       container.addEventListener(window.RATCHET.getTransitionEnd, fadeContainerEnd);
-
+      window.RATCHET.emulateTransitionEnd(pushDuration, swap);
     }
 
     if (/slide/.test(transition)) {
@@ -414,6 +415,7 @@
       container.classList.add(containerDirection);
       swap.classList.remove(swapDirection);
       swap.addEventListener(window.RATCHET.getTransitionEnd, slideEnd);
+      window.RATCHET.emulateTransitionEnd(pushDuration, swap);
     }
   };
 

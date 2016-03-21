@@ -54,4 +54,21 @@
 
     return transEndEventNames.transition;
   })();
+
+  window.RATCHET.emulateTransitionEnd = function (duration, target) {
+    var called = false;
+    target.addEventListener(window.RATCHET.getTransitionEnd, function () {
+      called = true;
+    });
+    var callback = function () {
+      if (!called) {
+        var e = new CustomEvent(window.RATCHET.getTransitionEnd, {
+          bubbles: true,
+          cancelable: true
+        });
+        target.dispatchEvent(e);
+      }
+    };
+    setTimeout(callback, duration);
+  };
 }());
