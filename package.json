@@ -39,7 +39,7 @@
     "grunt-contrib-htmlmin": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-watch": "^1.0.0",
     "grunt-csscomb": "^3.1.0",
     "grunt-html": "^6.0.0",
     "grunt-contrib-jasmine": "^1.0.0",
