@@ -92,7 +92,7 @@ select {
 // To use labels with input groups, wrap a label and an input in an .input-row
 .input-row {
   overflow: hidden;
-  height: 35px; // Matches the height of inputs.
+  min-height: 35px; // Matches the height of inputs.
   border-bottom: $border-default;
 }
 
@@ -106,10 +106,15 @@ select {
 }
 
 // Actual inputs float to right of labels and also have a set percentage
-.input-row input {
+.input-row input,
+.input-row textarea {
   float: right;
   width: 65%;
   padding-left: 0;
   margin-bottom: 0;
   border: 0;
+}
+
+.input-row textarea {
+  padding-top: 7px;
 }
