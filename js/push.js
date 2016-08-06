@@ -418,11 +418,19 @@
   };
 
   var triggerStateChange = function () {
-    var e = new CustomEvent('push', {
+    var e;
+    var options = {
       detail: { state: getCached(PUSH.id) },
       bubbles: true,
       cancelable: true
-    });
+    };
+
+    if (typeof CustomEvent === 'function') {
+      e = new CustomEvent('push', options);
+    } else if (document.createEvent) {
+      e = document.createEvent('CustomEvent');
+      e.initCustomEvent('push', options.bubbles, options.cancelable, options.detail);
+    }
 
     window.dispatchEvent(e);
   };
