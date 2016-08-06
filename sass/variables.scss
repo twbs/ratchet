@@ -12,6 +12,15 @@ $font-weight-light: 400 !default;
 $line-height-default: 21px !default;
 
 
+// Iconography
+// --------------------------------------------------
+//## Specify custom location and filename of the included Ratchicons icon font. Useful for those including Ratchet via Bower.
+
+$icon-font-path: "../fonts/";
+$icon-font-name: "ratchicons";
+$icon-font-svg-id: "svgFontName";
+
+
 // Colors
 // --------------------------------------------------
 
