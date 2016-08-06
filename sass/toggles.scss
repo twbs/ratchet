@@ -36,7 +36,7 @@
     font-size: 13px;
     color: #999;
     text-transform: uppercase;
-    content: "Off";
+    content: $toggle-before;
   }
 
   // Active state for toggle
@@ -52,7 +52,7 @@
       right: auto;
       left: 15px;
       color: #fff;
-      content: "On";
+      content: $toggle-active-before;
     }
   }
   // Hide the checkbox
