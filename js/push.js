@@ -179,13 +179,11 @@
     if (transitionFromObj.transition) {
       activeObj = extendWithDom(activeObj, '.content', activeDom.cloneNode(true));
       for (key in bars) {
-        if (bars.hasOwnProperty(key)) {
-          barElement = document.querySelector(bars[key]);
-          if (activeObj[key]) {
-            swapContent(activeObj[key], barElement);
-          } else if (barElement) {
-            barElement.parentNode.removeChild(barElement);
-          }
+        barElement = document.querySelector(bars[key]);
+        if (activeObj[key]) {
+          swapContent(activeObj[key], barElement);
+        } else if (barElement) {
+          barElement.parentNode.removeChild(barElement);
         }
       }
     }
@@ -216,9 +214,7 @@
     var isFileProtocol = /^file:/.test(window.location.protocol);
 
     for (key in bars) {
-      if (bars.hasOwnProperty(key)) {
-        options[key] = options[key] || document.querySelector(bars[key]);
-      }
+      options[key] = options[key] || document.querySelector(bars[key]);
     }
 
     if (xhr && xhr.readyState < 4) {
@@ -301,13 +297,11 @@
 
     if (options.transition) {
       for (key in bars) {
-        if (bars.hasOwnProperty(key)) {
-          barElement = document.querySelector(bars[key]);
-          if (data[key]) {
-            swapContent(data[key], barElement);
-          } else if (barElement) {
-            barElement.parentNode.removeChild(barElement);
-          }
+        barElement = document.querySelector(bars[key]);
+        if (data[key]) {
+          swapContent(data[key], barElement);
+        } else if (barElement) {
+          barElement.parentNode.removeChild(barElement);
         }
       }
     }
@@ -450,9 +444,7 @@
     var result = {};
 
     for (i in obj) {
-      if (obj.hasOwnProperty(i)) {
-        result[i] = obj[i];
-      }
+      result[i] = obj[i];
     }
 
     Object.keys(bars).forEach(function (key) {
