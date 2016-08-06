@@ -1,0 +1,19 @@
+body {
+	background:black;
+}
+.scrollable {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+header.bar-title {
+	border-radius: 7px 7px 0 0;
+}
+
+.content {
+	position:absolute;
+	border-radius: 0 0 5px 5px;
+	overflow: auto;
+	bottom: 0px;
+    left: 0px;
+}
