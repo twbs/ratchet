@@ -6,11 +6,11 @@
   font-family: Ratchicons;
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/ratchicons.eot');
-  src: url('../fonts/ratchicons.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/ratchicons.woff') format('woff'),
-       url('../fonts/ratchicons.ttf') format('truetype'),
-       url('../fonts/ratchicons.svg#svgFontName') format('svg');
+  src: url($ratchicons-directory + '/ratchicons.eot');
+  src: url($ratchicons-directory + '/ratchicons.eot?#iefix') format('embedded-opentype'),
+       url($ratchicons-directory + '/ratchicons.woff') format('woff'),
+       url($ratchicons-directory + '/ratchicons.ttf') format('truetype'),
+       url($ratchicons-directory + '/ratchicons.svg#svgFontName') format('svg');
 }
 
 .icon {
