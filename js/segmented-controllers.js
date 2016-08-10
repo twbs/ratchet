@@ -7,61 +7,64 @@
  * ======================================================================== */
 
 !(function () {
-    'use strict';
+  'use strict';
 
-    var getTarget = function (target) {
-        var i;
-        var segmentedControls = document.querySelectorAll('.segmented-control .control-item');
+  var getTarget = function (target) {
+    var i;
+    var segmentedControls = document.querySelectorAll('.segmented-control .control-item');
 
-        for (; target && target !== document; target = target.parentNode) {
-            for (i = segmentedControls.length; i--;) {
-                if (segmentedControls[i] === target) {
-                    return target;
-                }
-            }
+    for (; target && target !== document; target = target.parentNode) {
+      for (i = segmentedControls.length; i--;) {
+        if (segmentedControls[i] === target) {
+          return target;
         }
-    };
-    var tabTouchEnd = function (e) {
-        var activeTab;
-        var activeBodies;
-        var targetBody;
-        var targetTab = getTarget(e.target);
-        var className = 'active';
-        var classSelector = '.control-content.active';
-        var tabClassSelector = '.control-item.active';
+      }
+    }
+  };
 
-        if (!targetTab) {
-            return;
-        }
+  window.addEventListener('touchend', function (e) {
+    var activeTab;
+    var activeBodies;
+    var targetBody;
+    var targetTab     = getTarget(e.target);
+    var className     = 'active';
+    var classSelector = '.' + className;
 
-        activeTab = targetTab.parentNode.querySelector(tabClassSelector);
+    if (!targetTab) {
+      return;
+    }
 
-        if (activeTab) {
-            activeTab.classList.remove(className);
-        }
+    activeTab = targetTab.parentNode.querySelector(classSelector);
 
-        targetTab.classList.add(className);
+    if (activeTab) {
+      activeTab.classList.remove(className);
+    }
 
-        if (!targetTab.hash) {
-            return;
-        }
+    targetTab.classList.add(className);
 
-        targetBody = document.querySelector(targetTab.hash);
+    if (!targetTab.hash) {
+      return;
+    }
 
-        if (!targetBody) {
-            return;
-        }
+    targetBody = document.querySelector(targetTab.hash);
 
-        activeBodies = targetBody.parentNode.querySelectorAll(classSelector);
+    if (!targetBody) {
+      return;
+    }
 
-        for (var i = 0; i < activeBodies.length; i++) {
-            activeBodies[i].classList.remove(className);
-        }
+    activeBodies = targetBody.parentNode.querySelectorAll(classSelector);
 
-        targetBody.classList.add(className);
-    };
-    window.addEventListener('touchend', tabTouchEnd);
-    window.addEventListener("MSPointerUp", tabTouchEnd);
+    for (var i = 0; i < activeBodies.length; i++) {
+      activeBodies[i].classList.remove(className);
+    }
 
-    window.addEventListener('click', function (e) { if (getTarget(e.target)) { preventDef(e); } });
+    targetBody.classList.add(className);
+  });
+
+  window.addEventListener('click', function (e) {
+    if (getTarget(e.target)) {
+      e.preventDefault();
+    }
+  });
+
 }());
