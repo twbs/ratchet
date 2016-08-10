@@ -28,13 +28,14 @@
     var targetBody;
     var targetTab     = getTarget(e.target);
     var className     = 'active';
-    var classSelector = '.' + className;
+    var classSelector = '.control-content.' + className;
+    var tabClassSelector = '.control-item.' + className;
 
     if (!targetTab) {
       return;
     }
 
-    activeTab = targetTab.parentNode.querySelector(classSelector);
+    activeTab = targetTab.parentNode.querySelector(tabClassSelector);
 
     if (activeTab) {
       activeTab.classList.remove(className);
