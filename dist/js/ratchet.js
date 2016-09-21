@@ -989,6 +989,9 @@
     if (!toggle) {
       return;
     }
+    if(toggle.classList.contains('disabled')) {
+      return;
+    }
 
     var handle      = toggle.querySelector('.toggle-handle');
     var toggleWidth = toggle.clientWidth;
@@ -1007,6 +1010,9 @@
     }
 
     if (!toggle) {
+      return;
+    }
+    if(toggle.classList.contains('disabled')) {
       return;
     }
 
@@ -1039,6 +1045,9 @@
 
   window.addEventListener('touchend', function (e) {
     if (!toggle) {
+      return;
+    }
+    if(toggle.classList.contains('disabled')) {
       return;
     }
 
