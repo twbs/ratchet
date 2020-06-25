@@ -7,8 +7,6 @@
  * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
  * ======================================================================== */
 
-/* global _gaq: true */
-
 !(function () {
   'use strict';
 
@@ -323,9 +321,6 @@
       triggerStateChange();
     });
 
-    if (!options.ignorePush && window._gaq) {
-      _gaq.push(['_trackPageview']); // google analytics
-    }
     if (!options.hash) {
       return;
     }
