@@ -3,65 +3,97 @@ layout: default
 title: About &middot; Ratchet
 ---
 
-<div class="docs-sub-header">
-  {% include masthead.html %}
-  <div class="container">
-    <div class="docs-sub-content">
-      <h2 class="page-title">About</h2>
-      <p class="page-description">Learn about the project's history and meet the maintaining team.</p>
-    </div>
-    {% include ad.html %}
-  </div>
-</div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
 
-<div class="container">
-  <div class="column-group">
-    <div class="column lg-units-8 docs-content">
-      <div class="docs-section">
-        <h2>History</h2>
-        <p>The idea for Ratchet was developed by <a href="https://twitter.com/connors">@connors</a>, <a href="https://twitter.com/dhg">@dhg</a>, and <a href="https://twitter.com/fat">@fat</a> in mid-2012. Before it became a full fledged framework, Ratchet began as a series of HTML/CSS prototypes of the Twitter for iPhone app. These prototypes became invaluable to the process of testing new feature designs that ended up being shipped as part of the native mobile app.</p>
-        <p>As it became clear that this was the quickest and most effective way to design mobile apps, components were abstracted from these prototypes and became the framework you know today.</p>
-        <p>Released in November 2012, Ratchet quickly became one of the most popular prototyping tools on GitHub. Following that initial launch, we released v2 &#8211; a complete rewrite. With v2 we've abstracted the platform specific styles into their own theme CSS files, added an icon set called Ratchicons, and offically became part of the Bootstrap family.</p>
+  body {
+    background-color: black;
+  }
+
+  h2,
+  p {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+  }
+</style>
+<header>
+  <div class="docs-sub-header">
+    {% include masthead.html %}
+    <div class="container">
+      <div class="docs-sub-content">
+        <h2 class="page-title"><strong>About</strong></h2>
+        <p class="page-description">Learn about the project's history and meet the maintaining team 🙌</p>
+        <hr />
       </div>
+      {% include ad.html %}
+    </div>
+  </div>
+</header>
 
-      <div class="docs-section">
-        <h2>Team</h2>
-        <p class="lead">Ratchet is maintained by one of its creators, a couple of core contributors, and its awesome community.</p>
 
-        <div class="list-group">
-          <div class="list-group-item">
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=connors&amp;type=follow"></iframe>
-            <a class="team-member" href="https://github.com/connors">
-              <img src="http://www.gravatar.com/avatar/53d633ae4622de17906338910085275a" alt="@connors">
-              <div class="team-member-info">
-                <strong>Connor Sears</strong>
-                @connors
-              </div>
-            </a>
-          </div>
-          <div class="list-group-item">
-            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=mdo&amp;type=follow"></iframe>
-            <a class="team-member" href="https://github.com/mdo">
-              <img src="http://www.gravatar.com/avatar/bc4ab438f7a4ce1c406aadc688427f2c" alt="@mdo">
-              <div class="team-member-info">
-                <strong>Mark Otto</strong>
-                @mdo
-              </div>
-            </a>
-          </div>
+<body>
+  <div class="container">
+    <div class="column-group">
+      <div class="column lg-units-8 docs-content">
+        <div class="docs-section">
+          <h2>History</h2>
+          <p>The idea for Ratchet was developed by <a href="https://twitter.com/connors">@connors</a>, <a
+              href="https://twitter.com/dhg">@dhg</a>, and <a href="https://twitter.com/fat">@fat</a> in mid-2012.
+            Before it became a full fledged framework, Ratchet began as a series of HTML/CSS prototypes of the Twitter
+            for iPhone app. These prototypes became invaluable to the process of testing new feature designs that ended
+            up being shipped as part of the native mobile app.</p>
+          <p>As it became clear that this was the quickest and most effective way to design mobile apps, components were
+            abstracted from these prototypes and became the framework you know today.</p>
+          <p>Released in November 2012, Ratchet quickly became one of the most popular prototyping tools on GitHub.
+            Following that initial launch, we released v2 &#8211; a complete rewrite. With v2 we've abstracted the
+            platform specific styles into their own theme CSS files, added an icon set called Ratchicons, and offically
+            became part of the Bootstrap family.</p>
         </div>
 
-        <p>Get involved with Ratchet development by <a href="https://github.com/twbs/ratchet/issues/new">opening an issue</a> or submitting a pull request. Read our <a href="https://github.com/twbs/ratchet/blob/master/CONTRIBUTING.md">contributing guidelines</a> for information on how we develop.</p>
+        <div class="docs-section">
+          <h2>Team</h2>
+          <p class="lead">Ratchet is maintained by one of its creators, a couple of core contributors, and its awesome
+            community.</p>
+
+          <div class="list-group" align="center">
+            <div class="list-group-item">
+              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=connors&amp;type=follow"></iframe>
+              <a class="team-member" href="https://github.com/connors">
+                <img src="http://www.gravatar.com/avatar/53d633ae4622de17906338910085275a" alt="@connors">
+                <div class="team-member-info">
+                  <strong>Connor Sears</strong>
+                  @connors
+                </div>
+              </a>
+            </div>
+            <div class="list-group-item">
+              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=mdo&amp;type=follow"></iframe>
+              <a class="team-member" href="https://github.com/mdo">
+                <img src="http://www.gravatar.com/avatar/bc4ab438f7a4ce1c406aadc688427f2c" alt="@mdo">
+                <div class="team-member-info">
+                  <strong>Mark Otto</strong>
+                  @mdo
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <p>🗣Get involved with Ratchet development by <a href="https://github.com/twbs/ratchet/issues/new">opening an
+              issue</a> or submitting a pull request. Read our <a
+              href="https://github.com/twbs/ratchet/blob/master/CONTRIBUTING.md">contributing guidelines</a> for
+            information on how we develop.✨</p>
+        </div>
+      </div>
+
+      <div class="column lg-units-4">
+        {% include download-module.html %}
       </div>
     </div>
+</body>
 
-    <div class="column lg-units-4">
-      {% include download-module.html %}
-    </div>
-  </div>
-
-  <div class="column">
-    <!-- Footer -->
-    {% include footer.html %}
-  </div>
+<div class="column">
+  <!-- Footer -->
+  {% include footer.html %}
+</div>
 </div>
