@@ -1,6 +1,6 @@
 # [Ratchet](http://goratchet.com)
 [![GitHub Release](https://img.shields.io/github/release/twbs/ratchet.svg)](https://github.com/twbs/ratchet/releases)
-[![Build Status](https://img.shields.io/travis/twbs/ratchet/master.svg)](https://travis-ci.org/twbs/ratchet)
+[![Build Status](https://github.com/twbs/ratchet/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/twbs/ratchet/actions/workflows/dependabot/dependabot-updates)
 [![devDependency Status](https://img.shields.io/david/dev/twbs/ratchet.svg)](https://david-dm.org/twbs/ratchet#info=devDependencies)
 
 Build mobile apps with simple HTML, CSS, and JS components.
